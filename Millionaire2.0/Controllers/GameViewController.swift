@@ -10,8 +10,6 @@ protocol GameViewControllerDelegate: class {
 
 class GameViewController: UIViewController {
     
-    weak var delegate: GameViewControllerDelegate?
-    
     // Labels & view
     @IBOutlet weak var questionCounter: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -28,6 +26,7 @@ class GameViewController: UIViewController {
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
+    weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,7 @@ class GameViewController: UIViewController {
             score += 1
         } else {
             /// Ответили неверно
-            self.delegate?.didEndGame(score, allQuestions.count)
+            delegate?.didEndGame(score, allQuestions.count)
             showAlert(title: "Вы проиграли, ваш счет", message: "Хотите начать сначала?")
         }
         if questionNumber < allQuestions.count {
@@ -69,7 +68,7 @@ class GameViewController: UIViewController {
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
             /// Если закончились - вызываем алерт
-            self.delegate?.didEndGame(score, allQuestions.count)
+            delegate?.didEndGame(score, allQuestions.count)
             showAlert(title: "Отлично! Ваш счет", message: "Хотите начать сначала?")
         }
         updateUI()

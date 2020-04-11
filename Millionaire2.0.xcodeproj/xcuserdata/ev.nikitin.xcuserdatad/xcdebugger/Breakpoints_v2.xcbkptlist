@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F6A373F6-09A4-4DF7-9217-32D736BCA795"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8EDCDD87-A991-4987-986C-B1FFB74F420C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millionaire2.0/Controllers/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "answerPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C33E075-CC87-4476-BA94-9AD064F83795"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millionaire2.0/Controllers/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "answerPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millionaire2.0/Controllers/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "GameViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C - ffa85ec04d451668"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Millionaire2_0.GameViewController.delegate.didset : Swift.Optional&lt;Millionaire2_0.GameViewControllerDelegate&gt;"
+                  moduleName = "Millionaire2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ev.nikitin/Desktop/Millionaire%202.0/Millionaire2.0/Controllers/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C - 8ff7702d021cff65"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Millionaire2_0.GameViewController.delegate.modify : Swift.Optional&lt;Millionaire2_0.GameViewControllerDelegate&gt;"
+                  moduleName = "Millionaire2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ev.nikitin/Desktop/Millionaire%202.0/Millionaire2.0/Controllers/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C - cba0b6a3e6e32885"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Millionaire2_0.GameViewController.delegate.modify : Swift.Optional&lt;Millionaire2_0.GameViewControllerDelegate&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Millionaire2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ev.nikitin/Desktop/Millionaire%202.0/Millionaire2.0/Controllers/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C - 633da5c3b10c32c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Millionaire2_0.GameViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Millionaire2_0.GameViewController"
+                  moduleName = "Millionaire2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ev.nikitin/Desktop/Millionaire%202.0/Millionaire2.0/Controllers/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+               <Location
+                  uuid = "CED1188D-A6DE-4764-B7F4-7E87CD35300C - 2563d81427ec586e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Millionaire2_0.GameViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Millionaire2_0.GameViewController&gt;"
+                  moduleName = "Millionaire2.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ev.nikitin/Desktop/Millionaire%202.0/Millionaire2.0/Controllers/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
