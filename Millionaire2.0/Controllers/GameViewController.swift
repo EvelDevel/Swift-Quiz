@@ -4,7 +4,13 @@
 
 import UIKit
 
+protocol GameViewControllerDelegate: class {
+    func didEndGame(_ result: Int, _ totalQuestion: Int)
+}
+
 class GameViewController: UIViewController {
+    
+    weak var delegate: GameViewControllerDelegate?
     
     // Labels & view
     @IBOutlet weak var questionCounter: UILabel!
@@ -32,22 +38,13 @@ class GameViewController: UIViewController {
     
     // MARK: Нажали на кнопку ответа
     @IBAction func answerPressed(_ sender: UIButton) {
-        /// Ответили верно
         if sender.tag == selectedAnswer {
-            print("correct")
+            /// Ответили верно
             score += 1
         } else {
-            print("wrong")
             /// Ответили неверно
-            let alert = UIAlertController(      title: "Вы проиграли, ваш счет: \(score)",
-                                                message: "Хотите начать сначала?",
-                                                preferredStyle: .alert)
-            let restartAction = UIAlertAction(  title: "Перезапустить",
-                                                style: .default,
-                                                handler: { action in self.restartGame() })
-            alert.addAction(restartAction)
-            present(alert, animated: true, completion: nil)
-            questionNumber -= 1
+            self.delegate?.didEndGame(score, allQuestions.count)
+            showAlert(title: "Вы проиграли, ваш счет", message: "Хотите начать сначала?")
         }
         if questionNumber < allQuestions.count {
             questionNumber += 1
@@ -72,15 +69,8 @@ class GameViewController: UIViewController {
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
             /// Если закончились - вызываем алерт
-            let alert = UIAlertController(      title: "Отлично! Ваш счет: \(score)!",
-                                                message: "Хотите начать сначала?",
-                                                preferredStyle: .alert)
-            let restartAction = UIAlertAction(  title: "Перезапустить",
-                                                style: .default,
-                                                handler: { action in self.restartGame() })
-            alert.addAction(restartAction)
-            present(alert, animated: true, completion: nil)
-            questionNumber -= 1
+            self.delegate?.didEndGame(score, allQuestions.count)
+            showAlert(title: "Отлично! Ваш счет", message: "Хотите начать сначала?")
         }
         updateUI()
     }
@@ -100,5 +90,24 @@ class GameViewController: UIViewController {
         questionNumber = 0
         updateQuestion()
     }
+    
+    
+    // MARK: Show Alert
+    func showAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(      title: "\(title): \(score)",
+                                            message: "\(message)",
+                                            preferredStyle: .alert)
+        let restartAction = UIAlertAction(  title: "Перезапустить",
+                                            style: .default,
+                                            handler: { action in self.restartGame() })
+        let quitAction = UIAlertAction(     title: "Выйти",
+                                            style: .default,
+                                            handler: { action in self.dismiss(animated: true, completion: nil) })
+        
+        alert.addAction(restartAction)
+        alert.addAction(quitAction)
+        present(alert, animated: true, completion: nil)
+        questionNumber -= 1
+    }
 }
-
