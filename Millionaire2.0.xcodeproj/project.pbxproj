@@ -68,9 +68,12 @@
 		FB2EAC92243EEE0F0098FAC3 /* Millionaire2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */,
+				FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */,
 				FBECDC5C243F30D700BD5583 /* Model */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
 				FBECDC59243F259900BD5583 /* View and Storyboards */,
+				FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
 			path = Millionaire2.0;
@@ -79,8 +82,6 @@
 		FBECDC58243F241B00BD5583 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */,
-				FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */,
 				FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FB8606AC24431A9300A692AD /* ResultsViewController.swift */,
@@ -93,7 +94,6 @@
 			children = (
 				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
 				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
-				FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */,
 			);
 			path = "View and Storyboards";
 			sourceTree = "<group>";

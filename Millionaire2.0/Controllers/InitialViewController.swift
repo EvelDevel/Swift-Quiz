@@ -6,13 +6,10 @@ import UIKit
 
 class InitialViewController: UIViewController {
     
-    let newGameSession = Record()
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     
-    @IBAction func startGame(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toGameViewController", sender: self)
-    }
+    @IBAction func startGame(_ sender: UIButton) { }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "toGameViewController" {
