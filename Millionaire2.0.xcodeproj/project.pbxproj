@@ -14,8 +14,9 @@
 		FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */; };
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
-		FB8606A92441CF7300A692AD /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* GameSession.swift */; };
+		FB8606A92441CF7300A692AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* Record.swift */; };
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
+		FB8606AD24431A9300A692AD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606AC24431A9300A692AD /* ResultsViewController.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +31,8 @@
 		FB2EAC9F243EEE130098FAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB2EACA1243EEE130098FAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB8606A62441CF1C00A692AD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		FB8606A82441CF7300A692AD /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		FB8606A82441CF7300A692AD /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		FB8606AC24431A9300A692AD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDatabase.swift; sourceTree = "<group>"; };
@@ -67,11 +69,21 @@
 			isa = PBXGroup;
 			children = (
 				FBECDC5C243F30D700BD5583 /* Model */,
+				FB8606AB24431A6100A692AD /* Models */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
 				FBECDC59243F259900BD5583 /* View and Storyboards */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
 			path = Millionaire2.0;
+			sourceTree = "<group>";
+		};
+		FB8606AB24431A6100A692AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB8606A62441CF1C00A692AD /* Game.swift */,
+				FB8606A82441CF7300A692AD /* Record.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FBECDC58243F241B00BD5583 /* Controllers */ = {
@@ -80,9 +92,8 @@
 				FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */,
 				FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */,
 				FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */,
-				FB8606A62441CF1C00A692AD /* Game.swift */,
-				FB8606A82441CF7300A692AD /* GameSession.swift */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
+				FB8606AC24431A9300A692AD /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,9 +190,10 @@
 			files = (
 				FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */,
 				FBECDC5E243F310800BD5583 /* Question.swift in Sources */,
-				FB8606A92441CF7300A692AD /* GameSession.swift in Sources */,
+				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
+				FB8606AD24431A9300A692AD /* ResultsViewController.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,

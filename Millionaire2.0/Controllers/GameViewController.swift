@@ -91,9 +91,12 @@ class GameViewController: UIViewController {
     }
     
     
-    // MARK: Show Alert
+    // MARK: End of the game / Show Alert
     func showAlert(title: String, message: String) {
         
+        let record = Record(date: Date(), score: score, totalQuestion: allQuestions.count)
+        Game.shared.addRecord(record)
+
         let alert = UIAlertController(      title: "\(title): \(score)",
                                             message: "\(message)",
                                             preferredStyle: .alert)
