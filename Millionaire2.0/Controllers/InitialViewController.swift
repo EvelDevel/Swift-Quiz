@@ -12,16 +12,18 @@ class InitialViewController: UIViewController {
     
     @IBAction func startGame(_ sender: UIButton) {
         Game.gameSession = newGameSession
+        self.performSegue(withIdentifier: "toGameViewController", sender: self)
     }
         
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let game = GameViewController()
-        game.delegate = self
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "toGameViewController" {
+            let gameView = segue.destination as! GameViewController
+            gameView.delegate = self
+        }
     }
     
-    deinit {
-        print()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
 
