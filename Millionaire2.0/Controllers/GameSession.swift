@@ -7,5 +7,5 @@ import Foundation
 
 class GameSession {
     var correctAnswers: Int = 0
-    var totalQuestions: Int = 0 
+    var totalQuestions: Int = 0
 }

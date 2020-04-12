@@ -13,11 +13,15 @@ class InitialViewController: UIViewController {
     @IBAction func startGame(_ sender: UIButton) {
         Game.gameSession = newGameSession
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gameView = GameViewController()
-        gameView.delegate = self
+        let game = GameViewController()
+        game.delegate = self
+    }
+    
+    deinit {
+        print()
     }
 }
 

@@ -24,7 +24,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="08f-Ce-Siq"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="BZ9-zs-ywG"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="BZ9-zs-ywG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT">
@@ -77,13 +77,13 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Millionaire2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="Millionaire2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-p6-lv0" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-r9-Tfa" userLabel="ProgressBarView">
                                         <rect key="frame" x="0.0" y="70" width="25" height="10"/>
@@ -114,13 +114,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Nq-j32">
-                                <rect key="frame" x="0.0" y="80" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WV1-s6-FrL" userLabel="QuestionView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="381"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRg-39-Xa9" userLabel="Question">
-                                                <rect key="frame" x="15" y="15" width="384" height="351"/>
+                                                <rect key="frame" x="15" y="15" width="384" height="356"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -135,13 +135,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView">
-                                        <rect key="frame" x="0.0" y="381" width="414" height="381"/>
+                                        <rect key="frame" x="0.0" y="386" width="414" height="386"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
-                                                <rect key="frame" x="20" y="5" width="374" height="341"/>
+                                                <rect key="frame" x="20" y="5" width="374" height="346"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="77.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="79"/>
                                                         <color key="backgroundColor" red="0.35828967855104377" green="0.62299485934317766" blue="0.92365958121827407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="А. Первый вариант ответа">
@@ -152,7 +152,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX">
-                                                        <rect key="frame" x="0.0" y="87.666666666666629" width="374" height="78"/>
+                                                        <rect key="frame" x="0.0" y="89" width="374" height="79"/>
                                                         <color key="backgroundColor" red="0.35828967855104377" green="0.62299485934317766" blue="0.92365958121827407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="В. Второй вариант ответа">
@@ -163,7 +163,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH">
-                                                        <rect key="frame" x="0.0" y="175.66666666666663" width="374" height="77.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="178" width="374" height="79"/>
                                                         <color key="backgroundColor" red="0.35828967855104377" green="0.62299485934317766" blue="0.92365958121827407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Г. Третий вариант ответа">
@@ -174,7 +174,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq">
-                                                        <rect key="frame" x="0.0" y="263.33333333333337" width="374" height="77.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="267" width="374" height="79"/>
                                                         <color key="backgroundColor" red="0.35828967855104377" green="0.62299485934317766" blue="0.92365958121827407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Д. Четвертый вариант ответа">

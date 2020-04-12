@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
+    
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -33,7 +34,6 @@ class GameViewController: UIViewController {
         updateQuestion()
         updateUI()
     }
-    
     
     // MARK: Нажали на кнопку ответа
     @IBAction func answerPressed(_ sender: UIButton) {
