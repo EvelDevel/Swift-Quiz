@@ -26,7 +26,6 @@ class GameViewController: UIViewController {
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
-    
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -38,12 +37,11 @@ class GameViewController: UIViewController {
     // MARK: Нажали на кнопку ответа
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == selectedAnswer {
-            /// Ответили верно
             score += 1
         } else {
-            /// Ответили неверно
             delegate?.didEndGame(score, allQuestions.count)
-            showAlert(title: "Вы проиграли, ваш счет", message: "Хотите начать сначала?")
+            /// Если будет необходимость вернуть "выход после неправильного ответа"
+            /// showAlert(title: "Неверно, ваш счет", message: "")
         }
         if questionNumber < allQuestions.count {
             questionNumber += 1
@@ -54,22 +52,18 @@ class GameViewController: UIViewController {
     
     // MARK: Обновляем вопрос и ответы или выводим алёрт
     func updateQuestion() {
-        /// Назначим изначальное значение для счетчика вопросов
         questionCounter.text = "1 / \(allQuestions.count)"
-        /// Проверка перед следующим ходом
+        
         if questionNumber <= allQuestions.count - 1 {
-            /// Обновляем вопрос
             questionLabel.text = allQuestions[questionNumber].question
-            /// Обновляем варианты ответов
             optionA.setTitle(allQuestions[questionNumber].optionA, for: .normal)
             optionB.setTitle(allQuestions[questionNumber].optionB, for: .normal)
             optionC.setTitle(allQuestions[questionNumber].optionC, for: .normal)
             optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
-            /// Если закончились - вызываем алерт
             delegate?.didEndGame(score, allQuestions.count)
-            showAlert(title: "Отлично! Ваш счет", message: "Хотите начать сначала?")
+            showAlert(title: "Отлично! Ваш счет", message: "")
         }
         updateUI()
     }
@@ -87,6 +81,13 @@ class GameViewController: UIViewController {
     func restartGame() {
         score = 0
         questionNumber = 0
+        updateQuestion()
+    }
+    
+    
+    // MARK: Продолжаем игру
+    func continueGame() {
+        questionNumber += 1
         updateQuestion()
     }
     

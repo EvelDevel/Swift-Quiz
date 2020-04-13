@@ -4,15 +4,22 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class RecordsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cleanRecords: UIButton!
+    
+    @IBAction func cleanRecords(_ sender: UIButton) {
+        Game.shared.clearRecords()
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
-extension ResultsViewController: UITableViewDataSource {
+extension RecordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Game.shared.records.count
@@ -27,7 +34,6 @@ extension ResultsViewController: UITableViewDataSource {
         cell.textLabel?.text =  "\(dateFormatter.string(from: record.date ?? Date())). " +
                                 "Вопросов: \(record.totalQuestion ?? 0). " +
                                 "Набрано очков: \(record.score ?? 0)"
-                                
         return cell
     }
 }

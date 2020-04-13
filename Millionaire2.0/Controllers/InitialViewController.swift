@@ -26,6 +26,6 @@ class InitialViewController: UIViewController {
 extension InitialViewController: GameViewControllerDelegate {
     func didEndGame(_ result: Int, _ totalQuestion: Int) {
         lastScore.text = "Ваш последний счет: \(result)"
-        totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
+        totalQuestions.text = "Всего вопросов: \(totalQuestion)"
     }
 }

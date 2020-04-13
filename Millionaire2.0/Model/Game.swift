@@ -4,17 +4,26 @@
 
 import Foundation
 
+// MARK: Singleton
+
 class Game {
+    
     static let shared = Game()
+    private let recordCaretaker = RecordsCaretaker()
     
-    private(set) var records: [Record] = []
+    private(set) var records: [Record] = [] {
+        didSet {
+            recordCaretaker.saveRecordsList(records: self.records)
+        }
+    }
     
-    private init() { }
+    private init() {
+        self.records = self.recordCaretaker.getRecordsList()
+    }
     
     func addRecord(_ record: Record) {
         self.records.append(record)
     }
-    
     func clearRecords() {
         self.records = []
     }
