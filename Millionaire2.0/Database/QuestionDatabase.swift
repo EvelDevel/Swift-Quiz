@@ -6,79 +6,343 @@
 import Foundation
 
 class QuestionDatabase {
-    static func getQuestion() -> [Question] {
+    
+    /// Здесь будет полная база данных для всех тем вопросов
+    
+    // MARK: Типы данных
+    static func getQuestionsTypesOfData() -> [Question] {
         return [
-            Question(question: "Как переводится имя паттерна Memento?",
-                     optionA: "Наблюдатель",
-                     optionB: "Момент",
-                     optionC: "Хранитель",
-                     optionD: "Склад",
-                     correctAnswer: 3),
-            
-            Question(question: "Как переводится имя паттерна Singleton?",
-                     optionA: "Односолодовый",
-                     optionB: "Один",
-                     optionC: "Единоличник",
-                     optionD: "Одиночка",
-                     correctAnswer: 4),
-            
-            Question(question: "Как переводится имя паттерна Observer?",
-                     optionA: "Блюдящий",
-                     optionB: "Наблюдатель",
-                     optionC: "Обзёрвер",
-                     optionD: "Смотрящий",
-                     correctAnswer: 2),
-            
-            Question(question: "Самый популярный паттерн в iOS?",
-                     optionA: "Delegate",
-                     optionB: "Memento",
-                     optionC: "Observer",
-                     optionD: "Singleton",
-                     correctAnswer: 1),
-            
-            Question(question: "Произвольная текстовая информация, коллекция символов",
-                     optionA: "Character",
-                     optionB: "Double",
-                     optionC: "String",
-                     optionD: "Float",
-                     correctAnswer: 3),
-            
-            ///
-            
-            Question(question: "Минимальная автономная единица, выполняющая команду?",
-                     optionA: "Оператор",
-                     optionB: "Величина",
-                     optionC: "Единица",
-                     optionD: "Операнд",
-                     correctAnswer: 1),
-            
-            Question(question: "Значение, которое операторы затрагивают в своей работе?",
-                     optionA: "Величина",
-                     optionB: "Операнд",
-                     optionC: "Оператор",
-                     optionD: "Источник",
-                     correctAnswer: 2),
-            
-            Question(question: "Операторы, применяемые к одной величине?",
-                     optionA: "Инфиксные",
-                     optionB: "Тренарные",
-                     optionC: "Унарные",
-                     optionD: "Бинарные",
-                     correctAnswer: 3),
-            
-            Question(question: "Операторы, применяемые к двум величинам?",
-                     optionA: "Постфиксные",
-                     optionB: "Бинарные",
-                     optionC: "Тренарные",
-                     optionD: "Префиксные",
-                     correctAnswer: 2),
-            
-            Question(question: "Математическая функция модуля числа?",
-                     optionA: "abs()",
-                     optionB: "sqrt()",
-                     optionC: "floor()",
-                     optionD: "ceil()",
-                     correctAnswer: 1)
+            Question(question: "1?",
+                     optionA: "1",
+                     optionB: "1",
+                     optionC: "1",
+                     optionD: "1",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Операторы
+    static func getQuestionsOperators() -> [Question] {
+        return [
+            Question(question: "2?",
+                     optionA: "2",
+                     optionB: "2",
+                     optionC: "2",
+                     optionD: "2",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Строки
+    static func getQuestionsStrings() -> [Question] {
+        return [
+            Question(question: "3?",
+                     optionA: "3",
+                     optionB: "3",
+                     optionC: "3",
+                     optionD: "3",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Коллекции
+    static func getQuestionsCollections() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Потоки
+    static func getQuestionsQueues() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Функции
+    static func getQuestionsFunctions() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Замыкания
+    static func getQuestionsClosures() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Перечисления
+    static func getQuestionsEnums() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Структуры
+    static func getQuestionsStructures() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Классы
+    static func getQuestionsClasses() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Свойства
+    static func getQuestionsProperties() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Методы
+    static func getQuestionsMethods() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Сабскрипты
+    static func getQuestionsSubscripts() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Наследование
+    static func getQuestionsInheritance() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Инициализация
+    static func getQuestionsInitialization() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Деинициализация
+    static func getQuestionsDeinitialization() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Обработка ошибок
+    static func getQuestionsErrorProcessing() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Опционалы
+    static func getQuestionsOptionals() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Приведение типов
+    static func getQuestionsTypeCasting() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Расширения
+    static func getQuestionsExtensions() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Вложенные типы
+    static func getQuestionsNestedTypes() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Протоколы
+    static func getQuestionsProtocols() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Шаблоны
+    static func getQuestionsGenerics() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Паттерны
+    static func getQuestionsPatterns() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: Алгоритмы
+    static func getQuestionsAlgorithms() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
+        ]
+    }
+    
+    
+    // MARK: ARC Автоматический подсчет ссылок
+    static func getQuestionsARC() -> [Question] {
+        return [
+            Question(question: "4?",
+                     optionA: "4",
+                     optionB: "4",
+                     optionC: "4",
+                     optionD: "4",
+                     correctAnswer: 3)
         ]
     }
 }

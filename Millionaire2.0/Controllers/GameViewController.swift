@@ -22,7 +22,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
-    let allQuestions = QuestionDatabase.getQuestion()
+    // TODO: Отредактировать наполнение массива для работы из синглтона с вопросами
+    let allQuestions = PickedTopic.shared.questions
+    
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
