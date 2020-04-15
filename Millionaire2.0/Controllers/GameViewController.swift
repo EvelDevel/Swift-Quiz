@@ -111,11 +111,15 @@ extension GameViewController {
 }
 
 
-// MARK: Всплывающий алерт по окончанию игры
+// MARK: Обработка завершения игры
 extension GameViewController {
 
     func showAlert(title: String, message: String) {
-        let record = Record(date: Date(), score: score, totalQuestion: allQuestions.count)
+        let record = Record(date: Date(),
+                            score: score,
+                            topic: PickedTopic.shared.topic,
+                            totalQuestion: allQuestions.count)
+        
         Game.shared.addRecord(record)
 
         let alert = UIAlertController(      title: "\(title): \(score)",

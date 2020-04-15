@@ -7,5 +7,6 @@ import Foundation
 struct Record: Codable {
     var date: Date?
     var score: Int?
+    var topic: String?
     var totalQuestion: Int?
 }

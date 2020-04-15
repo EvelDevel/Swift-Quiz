@@ -565,6 +565,32 @@
                     <connections>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
+                        <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>
+                        <outletCollection property="topicButtonOutlets" destination="Agy-ir-8ri" collectionClass="NSMutableArray" id="DO7-rD-czO"/>
+                        <outletCollection property="topicButtonOutlets" destination="ABb-RY-q5U" collectionClass="NSMutableArray" id="U20-9y-rAi"/>
+                        <outletCollection property="topicButtonOutlets" destination="Lra-Um-39f" collectionClass="NSMutableArray" id="Kpe-RL-PTH"/>
+                        <outletCollection property="topicButtonOutlets" destination="JBG-1j-Iy6" collectionClass="NSMutableArray" id="yme-bK-rHT"/>
+                        <outletCollection property="topicButtonOutlets" destination="n8D-xO-3sV" collectionClass="NSMutableArray" id="8nU-Hg-UdK"/>
+                        <outletCollection property="topicButtonOutlets" destination="uh5-8a-Txy" collectionClass="NSMutableArray" id="FEm-UP-gAa"/>
+                        <outletCollection property="topicButtonOutlets" destination="Mzg-nu-RUr" collectionClass="NSMutableArray" id="7Cq-2d-K1z"/>
+                        <outletCollection property="topicButtonOutlets" destination="JpY-ND-ukW" collectionClass="NSMutableArray" id="WXe-m4-zb9"/>
+                        <outletCollection property="topicButtonOutlets" destination="HbG-MS-A6g" collectionClass="NSMutableArray" id="RwN-Xi-QcJ"/>
+                        <outletCollection property="topicButtonOutlets" destination="Fl9-oG-AUF" collectionClass="NSMutableArray" id="g9w-kp-56P"/>
+                        <outletCollection property="topicButtonOutlets" destination="6Vs-5w-KcA" collectionClass="NSMutableArray" id="hNY-R3-Ud7"/>
+                        <outletCollection property="topicButtonOutlets" destination="HaB-sR-FfF" collectionClass="NSMutableArray" id="jpg-f6-Bch"/>
+                        <outletCollection property="topicButtonOutlets" destination="r94-Iq-imt" collectionClass="NSMutableArray" id="g9x-8h-Jxe"/>
+                        <outletCollection property="topicButtonOutlets" destination="9s1-D4-KeY" collectionClass="NSMutableArray" id="Vhc-L6-ctp"/>
+                        <outletCollection property="topicButtonOutlets" destination="h9j-48-59n" collectionClass="NSMutableArray" id="qnX-OU-Eac"/>
+                        <outletCollection property="topicButtonOutlets" destination="KwV-1m-iD4" collectionClass="NSMutableArray" id="biw-hn-p3R"/>
+                        <outletCollection property="topicButtonOutlets" destination="Ys0-Re-G2d" collectionClass="NSMutableArray" id="hJ0-Ug-438"/>
+                        <outletCollection property="topicButtonOutlets" destination="ork-09-hIC" collectionClass="NSMutableArray" id="gfO-c7-Ymr"/>
+                        <outletCollection property="topicButtonOutlets" destination="6qc-jJ-XHf" collectionClass="NSMutableArray" id="PZn-7u-I1G"/>
+                        <outletCollection property="topicButtonOutlets" destination="cBq-qH-nfb" collectionClass="NSMutableArray" id="e8v-Nn-Jj2"/>
+                        <outletCollection property="topicButtonOutlets" destination="gux-xj-mfb" collectionClass="NSMutableArray" id="s2q-f1-F19"/>
+                        <outletCollection property="topicButtonOutlets" destination="KTK-NX-imu" collectionClass="NSMutableArray" id="hhi-kQ-zS9"/>
+                        <outletCollection property="topicButtonOutlets" destination="Pco-fB-HVm" collectionClass="NSMutableArray" id="FOo-iF-Twn"/>
+                        <outletCollection property="topicButtonOutlets" destination="RDJ-oD-MzN" collectionClass="NSMutableArray" id="OFM-2G-bMH"/>
+                        <outletCollection property="topicButtonOutlets" destination="bux-5u-f73" collectionClass="NSMutableArray" id="7dl-GT-Bmi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-MD-aOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
