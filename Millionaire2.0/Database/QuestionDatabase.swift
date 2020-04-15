@@ -11,27 +11,13 @@ class QuestionDatabase {
     
     // MARK: Типы данных
     static func getQuestionsTypesOfData() -> [Question] {
-        return [
-            Question(question: "1?",
-                     optionA: "1",
-                     optionB: "1",
-                     optionC: "1",
-                     optionD: "1",
-                     correctAnswer: 3)
-        ]
+        return TypesOfDataSet.getQuestions()
     }
     
     
     // MARK: Операторы
     static func getQuestionsOperators() -> [Question] {
-        return [
-            Question(question: "2?",
-                     optionA: "2",
-                     optionB: "2",
-                     optionC: "2",
-                     optionD: "2",
-                     correctAnswer: 3)
-        ]
+        return OperatorsSet.getQuestions()
     }
     
     

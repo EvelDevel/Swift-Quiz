@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1D0B972446E7A600E9C56D /* TypesOfDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */; };
+		FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */; };
 		FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */; };
 		FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */; };
 		FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfDataSet.swift; sourceTree = "<group>"; };
+		FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsSet.swift; sourceTree = "<group>"; };
 		FB2EAC90243EEE0F0098FAC3 /* Millionaire2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB1D0B952446E76F00E9C56D /* Question Sets */ = {
+			isa = PBXGroup;
+			children = (
+				FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */,
+				FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */,
+			);
+			path = "Question Sets";
+			sourceTree = "<group>";
+		};
 		FB2EAC87243EEE0F0098FAC3 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		FB8606B0244458E300A692AD /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				FB1D0B952446E76F00E9C56D /* Question Sets */,
 				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
 			);
@@ -206,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */,
+				FB1D0B972446E7A600E9C56D /* TypesOfDataSet.swift in Sources */,
 				FBECDC5E243F310800BD5583 /* Question.swift in Sources */,
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
@@ -214,6 +229,7 @@
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* PickedTopic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
+				FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,

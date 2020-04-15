@@ -6,6 +6,7 @@ import UIKit
 
 class InitialViewController: UIViewController {
     
+    @IBOutlet weak var selectedTopicInformation: UILabel!
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
@@ -64,9 +65,11 @@ extension InitialViewController {
         case 1:
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
+            selectedTopicInformation.text = "Категория: “Типы данных“. Вопросов: \(newQuestionSet.count)"
         case 2:
             let newQuestionSet = QuestionDatabase.getQuestionsOperators()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы")
+            selectedTopicInformation.text = "Категория: “Операторы“. Вопросов: \(newQuestionSet.count)"
         case 3:
             let newQuestionSet = QuestionDatabase.getQuestionsStrings()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Строки")
@@ -167,6 +170,7 @@ extension InitialViewController {
             topicButtonOutlets[0].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
+            selectedTopicInformation.text = "Категория: “Типы данных“. Вопросов: \(newQuestionSet.count)"
         }
     }
 }

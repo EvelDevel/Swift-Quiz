@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                <rect key="frame" x="100" y="338" width="120" height="45"/>
+                                <rect key="frame" x="100" y="348" width="120" height="45"/>
                                 <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="V0e-5p-x6C"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                <rect key="frame" x="100" y="391" width="120" height="30"/>
+                                <rect key="frame" x="100" y="401" width="120" height="30"/>
                                 <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0XC-b4-TK4"/>
@@ -56,19 +56,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
-                                <rect key="frame" x="82.5" y="441" width="155.5" height="17"/>
+                                <rect key="frame" x="82.5" y="451" width="155.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего вопросов: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
-                                <rect key="frame" x="98" y="466" width="124" height="17"/>
+                                <rect key="frame" x="98" y="476" width="124" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о выбранной категории" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
+                                <rect key="frame" x="25" y="21" width="270" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="26m-px-9Qp" userLabel="First Row">
-                                <rect key="frame" x="20" y="40" width="280" height="24"/>
+                                <rect key="frame" x="20" y="50" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-2c-UJJ" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="24"/>
@@ -137,7 +143,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-1F-zmT" userLabel="Second Row">
-                                <rect key="frame" x="20" y="72" width="280" height="24"/>
+                                <rect key="frame" x="20" y="82" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBG-1j-Iy6" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="24"/>
@@ -206,7 +212,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OXe-GC-LXF" userLabel="Third Row">
-                                <rect key="frame" x="20" y="104" width="280" height="24"/>
+                                <rect key="frame" x="20" y="114" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-ND-ukW" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="24"/>
@@ -275,7 +281,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Gi-CJ-7y6" userLabel="Fourth Row">
-                                <rect key="frame" x="20" y="136" width="280" height="24"/>
+                                <rect key="frame" x="20" y="146" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-sR-FfF" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="24"/>
@@ -328,7 +334,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-A0-g3J" userLabel="Fifth Row">
-                                <rect key="frame" x="20" y="168" width="280" height="24"/>
+                                <rect key="frame" x="20" y="178" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-48-59n" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="24"/>
@@ -365,7 +371,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-Gl-dlu" userLabel="Sixth Row">
-                                <rect key="frame" x="20" y="200" width="280" height="24"/>
+                                <rect key="frame" x="20" y="210" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys0-Re-G2d" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="71" height="24"/>
@@ -418,7 +424,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Xbv-ez-OxH" userLabel="Seventh Row">
-                                <rect key="frame" x="20" y="232" width="280" height="24"/>
+                                <rect key="frame" x="20" y="242" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-qH-nfb" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="118.5" height="24"/>
@@ -471,7 +477,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="JDt-HZ-fZg" userLabel="Eighth Row">
-                                <rect key="frame" x="20" y="264" width="280" height="24"/>
+                                <rect key="frame" x="20" y="274" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bux-5u-f73" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="24"/>
@@ -529,6 +535,7 @@
                             <constraint firstItem="pq9-9e-V5c" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="1Jy-0b-aVa"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="8jB-1F-zmT" secondAttribute="trailing" constant="20" id="5wP-fk-iUx"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="JDt-HZ-fZg" secondAttribute="trailing" constant="20" id="6AE-7m-xkb"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="mKv-or-Ad3" secondAttribute="trailing" constant="25" id="7uU-PZ-ycE"/>
                             <constraint firstItem="FUf-Gl-dlu" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="8Ni-SH-pZc"/>
                             <constraint firstItem="8jB-1F-zmT" firstAttribute="top" secondItem="26m-px-9Qp" secondAttribute="bottom" constant="8" id="96v-TY-9mI"/>
                             <constraint firstItem="Hij-A0-g3J" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="Bkq-PE-kRg"/>
@@ -540,16 +547,18 @@
                             <constraint firstItem="8jB-1F-zmT" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="LYB-GM-9Tv"/>
                             <constraint firstItem="Rx9-6v-JaH" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="MCb-bM-X05"/>
                             <constraint firstItem="SXd-ZC-ZJT" firstAttribute="centerX" secondItem="pq9-9e-V5c" secondAttribute="centerX" id="MU5-FQ-CAK"/>
+                            <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="21" id="Pbq-aK-6Ce"/>
                             <constraint firstItem="1Gi-CJ-7y6" firstAttribute="top" secondItem="OXe-GC-LXF" secondAttribute="bottom" constant="8" id="Qew-Dv-YGk"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="1Gi-CJ-7y6" secondAttribute="trailing" constant="20" id="TXJ-ay-cXl"/>
                             <constraint firstItem="JDt-HZ-fZg" firstAttribute="top" secondItem="Xbv-ez-OxH" secondAttribute="bottom" constant="8" id="XBM-AT-X46"/>
                             <constraint firstItem="DRB-G0-Ac5" firstAttribute="top" secondItem="Rx9-6v-JaH" secondAttribute="bottom" constant="8" id="ZRV-IZ-hjT"/>
                             <constraint firstItem="FUf-Gl-dlu" firstAttribute="top" secondItem="Hij-A0-g3J" secondAttribute="bottom" constant="8" id="dgg-5n-UAU"/>
-                            <constraint firstItem="26m-px-9Qp" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="40" id="fZb-pA-PJg"/>
+                            <constraint firstItem="26m-px-9Qp" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="50" id="fZb-pA-PJg"/>
                             <constraint firstItem="OXe-GC-LXF" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="fes-2T-pXi"/>
                             <constraint firstItem="SXd-ZC-ZJT" firstAttribute="top" secondItem="pq9-9e-V5c" secondAttribute="bottom" constant="8" id="fgB-Ob-F4I"/>
                             <constraint firstItem="Xbv-ez-OxH" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="ghf-FV-AeH"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="FUf-Gl-dlu" secondAttribute="trailing" constant="20" id="hND-eE-J6d"/>
+                            <constraint firstItem="mKv-or-Ad3" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="25" id="hTJ-Yf-Md1"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="26m-px-9Qp" secondAttribute="trailing" constant="20" id="haj-Q0-gDT"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="OXe-GC-LXF" secondAttribute="trailing" constant="20" id="htd-DN-2iv"/>
                             <constraint firstItem="Hij-A0-g3J" firstAttribute="top" secondItem="1Gi-CJ-7y6" secondAttribute="bottom" constant="8" id="i41-qN-Yl9"/>
@@ -564,6 +573,7 @@
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
                     <connections>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
+                        <outlet property="selectedTopicInformation" destination="mKv-or-Ad3" id="MMh-hT-dIz"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
                         <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>
                         <outletCollection property="topicButtonOutlets" destination="Agy-ir-8ri" collectionClass="NSMutableArray" id="DO7-rD-czO"/>
@@ -729,7 +739,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
                                                 <rect key="frame" x="20" y="5" width="280" height="194"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
                                                         <color key="backgroundColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -745,7 +755,7 @@
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A0-pE-T1W"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="51" width="280" height="41"/>
                                                         <color key="backgroundColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -761,7 +771,7 @@
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaH-wk-Rnn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="102" width="280" height="41"/>
                                                         <color key="backgroundColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -777,7 +787,7 @@
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ID6-Tp-mdU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="153" width="280" height="41"/>
                                                         <color key="backgroundColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

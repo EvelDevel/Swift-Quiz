@@ -30,7 +30,7 @@ extension RecordsViewController: UITableViewDataSource {
         let record = Game.shared.records[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        cell.textLabel?.font = UIFont(name:"Avenir", size:14)
+        cell.textLabel?.font = UIFont(name:"Avenir", size:12)
         cell.textLabel?.text =  "\(dateFormatter.string(from: record.date ?? Date())). " +
                                 "Тема: \(record.topic ?? ""). " +
                                 "Вопросов: \(record.totalQuestion ?? 0). " +
