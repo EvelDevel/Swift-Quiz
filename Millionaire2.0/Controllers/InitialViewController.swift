@@ -22,6 +22,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addQuestionsToArray(sender: UIButton())
     }
 }
 
@@ -141,7 +142,8 @@ extension InitialViewController {
             PickedTopic.shared.addQuestionSet(newQuestionSet)
             
         default:
-            print("Error with categories on initial screen")
+            let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
+            PickedTopic.shared.addQuestionSet(newQuestionSet)
         }
     }
 }
