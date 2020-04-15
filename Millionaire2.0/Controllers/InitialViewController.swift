@@ -65,104 +65,124 @@ extension InitialViewController {
         case 1:
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
-            selectedTopicInformation.text = "Категория: “Типы данных“. Вопросов: \(newQuestionSet.count)"
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 2:
             let newQuestionSet = QuestionDatabase.getQuestionsOperators()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы")
-            selectedTopicInformation.text = "Категория: “Операторы“. Вопросов: \(newQuestionSet.count)"
-        case 3:
-            let newQuestionSet = QuestionDatabase.getQuestionsStrings()
-            PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Строки")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 4:
             let newQuestionSet = QuestionDatabase.getQuestionsCollections()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Коллекции")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 2-ой ряд
             
         case 5:
             let newQuestionSet = QuestionDatabase.getQuestionsQueues()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Потоки")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 6:
             let newQuestionSet = QuestionDatabase.getQuestionsFunctions()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Функции")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 7:
             let newQuestionSet = QuestionDatabase.getQuestionsClosures()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Замыкания")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 8:
             let newQuestionSet = QuestionDatabase.getQuestionsEnums()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Перечисления")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 3-ий ряд
             
         case 9:
             let newQuestionSet = QuestionDatabase.getQuestionsStructures()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Структуры")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 10:
             let newQuestionSet = QuestionDatabase.getQuestionsClasses()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Классы")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 11:
             let newQuestionSet = QuestionDatabase.getQuestionsProperties()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Свойства")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 12:
             let newQuestionSet = QuestionDatabase.getQuestionsMethods()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Методы")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 4-ый ряд
             
         case 13:
             let newQuestionSet = QuestionDatabase.getQuestionsSubscripts()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Сабскрипты")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 14:
             let newQuestionSet = QuestionDatabase.getQuestionsInheritance()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Наследование")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 15:
             let newQuestionSet = QuestionDatabase.getQuestionsInitialization()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Инициализация")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 5-ый ряд
             
         case 16:
             let newQuestionSet = QuestionDatabase.getQuestionsDeinitialization()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Деинициализация")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 17:
             let newQuestionSet = QuestionDatabase.getQuestionsErrorProcessing()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Обработка ошибок")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 6-ой ряд
             
         case 18:
             let newQuestionSet = QuestionDatabase.getQuestionsOptionals()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Опционалы")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 19:
             let newQuestionSet = QuestionDatabase.getQuestionsTypeCasting()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Приведение типов")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 20:
             let newQuestionSet = QuestionDatabase.getQuestionsExtensions()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Расширения")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 7-ой ряд
             
         case 21:
             let newQuestionSet = QuestionDatabase.getQuestionsNestedTypes()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Вложенные типа")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 22:
             let newQuestionSet = QuestionDatabase.getQuestionsProtocols()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Протоколы")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 23:
             let newQuestionSet = QuestionDatabase.getQuestionsGenerics()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Шаблоны")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
             /// 8-ой ряд
             
         case 24:
             let newQuestionSet = QuestionDatabase.getQuestionsPatterns()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 25:
             let newQuestionSet = QuestionDatabase.getQuestionsAlgorithms()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Алгоритмы")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         case 26:
             let newQuestionSet = QuestionDatabase.getQuestionsARC()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "ARC")
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
         default:
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
@@ -170,7 +190,7 @@ extension InitialViewController {
             topicButtonOutlets[0].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             PickedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
-            selectedTopicInformation.text = "Категория: “Типы данных“. Вопросов: \(newQuestionSet.count)"
+            selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
         }
     }
 }

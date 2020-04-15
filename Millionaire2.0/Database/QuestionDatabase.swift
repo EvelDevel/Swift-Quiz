@@ -21,19 +21,6 @@ class QuestionDatabase {
     }
     
     
-    // MARK: Строки
-    static func getQuestionsStrings() -> [Question] {
-        return [
-            Question(question: "3?",
-                     optionA: "3",
-                     optionB: "3",
-                     optionC: "3",
-                     optionD: "3",
-                     correctAnswer: 3)
-        ]
-    }
-    
-    
     // MARK: Коллекции
     static func getQuestionsCollections() -> [Question] {
         return [

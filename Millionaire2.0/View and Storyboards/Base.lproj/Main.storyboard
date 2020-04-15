@@ -77,7 +77,7 @@
                                 <rect key="frame" x="20" y="50" width="280" height="24"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-2c-UJJ" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="24"/>
                                         <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Типы данных">
@@ -93,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-ir-8ri" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="85.5" y="0.0" width="67.5" height="24"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="83" height="24"/>
                                         <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Операторы">
@@ -108,24 +108,8 @@
                                             <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="lHD-VN-JNT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-RY-q5U" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="0.0" width="44" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Строки">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rRt-HZ-TTC"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Um-39f" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="211" y="0.0" width="69" height="24"/>
+                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="24"/>
                                         <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Коллекции">
@@ -577,7 +561,6 @@
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
                         <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>
                         <outletCollection property="topicButtonOutlets" destination="Agy-ir-8ri" collectionClass="NSMutableArray" id="DO7-rD-czO"/>
-                        <outletCollection property="topicButtonOutlets" destination="ABb-RY-q5U" collectionClass="NSMutableArray" id="U20-9y-rAi"/>
                         <outletCollection property="topicButtonOutlets" destination="Lra-Um-39f" collectionClass="NSMutableArray" id="Kpe-RL-PTH"/>
                         <outletCollection property="topicButtonOutlets" destination="JBG-1j-Iy6" collectionClass="NSMutableArray" id="yme-bK-rHT"/>
                         <outletCollection property="topicButtonOutlets" destination="n8D-xO-3sV" collectionClass="NSMutableArray" id="8nU-Hg-UdK"/>
