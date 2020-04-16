@@ -55,18 +55,6 @@
                                     <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
-                                <rect key="frame" x="82.5" y="451" width="155.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего вопросов: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
-                                <rect key="frame" x="98" y="476" width="124" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о выбранной категории" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
                                 <rect key="frame" x="25" y="21" width="270" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -513,6 +501,41 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XjC-5I-4ct" userLabel="Game Information">
+                                <rect key="frame" x="62" y="451" width="196" height="84.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о последней игре" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWi-6k-ilE">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKW-XW-9Qq">
+                                        <rect key="frame" x="0.0" y="17.5" width="64" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
+                                        <rect key="frame" x="0.0" y="35" width="124" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Процент правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-PK-ZfW">
+                                        <rect key="frame" x="0.0" y="52.5" width="176.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общее количество вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
+                                        <rect key="frame" x="0.0" y="70" width="174" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -520,22 +543,20 @@
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="8jB-1F-zmT" secondAttribute="trailing" constant="20" id="5wP-fk-iUx"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="JDt-HZ-fZg" secondAttribute="trailing" constant="20" id="6AE-7m-xkb"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="mKv-or-Ad3" secondAttribute="trailing" constant="25" id="7uU-PZ-ycE"/>
+                            <constraint firstItem="XjC-5I-4ct" firstAttribute="top" secondItem="SXd-ZC-ZJT" secondAttribute="bottom" constant="20" id="883-eN-ONe"/>
                             <constraint firstItem="FUf-Gl-dlu" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="8Ni-SH-pZc"/>
                             <constraint firstItem="8jB-1F-zmT" firstAttribute="top" secondItem="26m-px-9Qp" secondAttribute="bottom" constant="8" id="96v-TY-9mI"/>
                             <constraint firstItem="Hij-A0-g3J" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="Bkq-PE-kRg"/>
                             <constraint firstItem="JDt-HZ-fZg" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="Db7-B3-Xxi"/>
                             <constraint firstItem="Xbv-ez-OxH" firstAttribute="top" secondItem="FUf-Gl-dlu" secondAttribute="bottom" constant="8" id="FAG-dW-niN"/>
-                            <constraint firstItem="Rx9-6v-JaH" firstAttribute="top" secondItem="SXd-ZC-ZJT" secondAttribute="bottom" constant="19.999999999999943" id="Gks-dS-NB2"/>
                             <constraint firstItem="26m-px-9Qp" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="KIM-MQ-5K9"/>
                             <constraint firstItem="OXe-GC-LXF" firstAttribute="top" secondItem="8jB-1F-zmT" secondAttribute="bottom" constant="8" id="LVL-mZ-ras"/>
                             <constraint firstItem="8jB-1F-zmT" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="LYB-GM-9Tv"/>
-                            <constraint firstItem="Rx9-6v-JaH" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="MCb-bM-X05"/>
                             <constraint firstItem="SXd-ZC-ZJT" firstAttribute="centerX" secondItem="pq9-9e-V5c" secondAttribute="centerX" id="MU5-FQ-CAK"/>
                             <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="21" id="Pbq-aK-6Ce"/>
                             <constraint firstItem="1Gi-CJ-7y6" firstAttribute="top" secondItem="OXe-GC-LXF" secondAttribute="bottom" constant="8" id="Qew-Dv-YGk"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="1Gi-CJ-7y6" secondAttribute="trailing" constant="20" id="TXJ-ay-cXl"/>
                             <constraint firstItem="JDt-HZ-fZg" firstAttribute="top" secondItem="Xbv-ez-OxH" secondAttribute="bottom" constant="8" id="XBM-AT-X46"/>
-                            <constraint firstItem="DRB-G0-Ac5" firstAttribute="top" secondItem="Rx9-6v-JaH" secondAttribute="bottom" constant="8" id="ZRV-IZ-hjT"/>
                             <constraint firstItem="FUf-Gl-dlu" firstAttribute="top" secondItem="Hij-A0-g3J" secondAttribute="bottom" constant="8" id="dgg-5n-UAU"/>
                             <constraint firstItem="26m-px-9Qp" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="50" id="fZb-pA-PJg"/>
                             <constraint firstItem="OXe-GC-LXF" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="fes-2T-pXi"/>
@@ -546,7 +567,7 @@
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="26m-px-9Qp" secondAttribute="trailing" constant="20" id="haj-Q0-gDT"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="OXe-GC-LXF" secondAttribute="trailing" constant="20" id="htd-DN-2iv"/>
                             <constraint firstItem="Hij-A0-g3J" firstAttribute="top" secondItem="1Gi-CJ-7y6" secondAttribute="bottom" constant="8" id="i41-qN-Yl9"/>
-                            <constraint firstItem="DRB-G0-Ac5" firstAttribute="centerX" secondItem="Rx9-6v-JaH" secondAttribute="centerX" id="jkl-1e-F6O"/>
+                            <constraint firstItem="XjC-5I-4ct" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="r58-8Z-3LU"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="Xbv-ez-OxH" secondAttribute="trailing" constant="20" id="slv-OI-1j2"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="Hij-A0-g3J" secondAttribute="trailing" constant="20" id="zB7-Oq-bTc"/>
                             <constraint firstItem="pq9-9e-V5c" firstAttribute="top" secondItem="JDt-HZ-fZg" secondAttribute="bottom" constant="50" id="zKg-vV-Bvn"/>
@@ -557,6 +578,8 @@
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
                     <connections>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
+                        <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
+                        <outlet property="percent" destination="gOh-PK-ZfW" id="4sx-yA-M6u"/>
                         <outlet property="selectedTopicInformation" destination="mKv-or-Ad3" id="MMh-hT-dIz"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
                         <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>

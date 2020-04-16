@@ -5,7 +5,7 @@
 import UIKit
 
 protocol GameViewControllerDelegate: class {
-    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double)
+    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double, _ topic: String)
 }
 
 class GameViewController: UIViewController {
@@ -68,8 +68,8 @@ extension GameViewController {
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            self.percent = Double(self.score) / Double(self.allQuestions.count) * 100
-            delegate?.didEndGame(score, allQuestions.count, percent)
+            self.percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
+            delegate?.didEndGame(score, allQuestions.count, percent, SelectedTopic.shared.topic)
             /// showAlert(title: "Неверно, ваш счет", message: "")
         }
         
@@ -105,8 +105,8 @@ extension GameViewController {
             optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
-            self.percent = Double(self.score) / Double(self.allQuestions.count) * 100
-            delegate?.didEndGame(score, allQuestions.count, percent)
+            self.percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
+            delegate?.didEndGame(score, allQuestions.count, percent, SelectedTopic.shared.topic)
             showAlert(title: "Отлично! Ваш счет", message: "")
         }
         updateUI()

@@ -22,7 +22,7 @@ class Game {
     }
     
     func addRecord(_ record: Record) {
-        self.records.append(record)
+        self.records.insert(record, at: 0)
     }
     func clearRecords() {
         self.records = []

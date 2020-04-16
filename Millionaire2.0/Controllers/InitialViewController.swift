@@ -7,10 +7,14 @@ import UIKit
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var selectedTopicInformation: UILabel!
+    @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
+    @IBOutlet weak var percent: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet var topicButtonOutlets: [UIButton]!
+    
+    private let recordCaretaker = RecordsCaretaker()
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
         updateTopicButtons()
@@ -29,16 +33,39 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addQuestionsToArray(sender: UIButton())
+        showLastGameInfo()
     }
 }
 
+
 ///
+
+
+// MARK: Загружаем информацию о последней игре при входе
+extension InitialViewController {
+    func showLastGameInfo() {
+        let records: [Record] = recordCaretaker.getRecordsList()
+        let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+        
+        lastTopic.text = "Категория: \(records[0].topic ?? "")"
+        lastScore.text = "Правильных ответов: \(records[0].score ?? 0)"
+        percent.text = "Процент правильных ответов: \(roundedPercents)%"
+        totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
+    }
+}
+
 
 // MARK: Работа с делегатом
 extension InitialViewController: GameViewControllerDelegate {
-    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double) {
-        lastScore.text = "Ваш последний счет: \(result)"
-        totalQuestions.text = "Всего вопросов: \(totalQuestion) (\(percentOfCorrect)%)"
+    func didEndGame(_ result: Int,
+                    _ totalQuestion: Int,
+                    _ percentOfCorrect: Double,
+                    _ topic: String) {
+        
+        lastTopic.text = "Категория: \(topic)"
+        lastScore.text = "Правильных ответов: \(result)"
+        percent.text = "Процент правильных ответов: \(percentOfCorrect)%"
+        totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
     }
 }
 
