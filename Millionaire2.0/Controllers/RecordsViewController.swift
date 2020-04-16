@@ -34,7 +34,7 @@ extension RecordsViewController: UITableViewDataSource {
         cell.textLabel?.text =  "\(dateFormatter.string(from: record.date ?? Date())). " +
                                 "Тема: \(record.topic ?? ""). " +
                                 "Вопросов: \(record.totalQuestion ?? 0). " +
-                                "Очки: \(record.score ?? 0)"
+                                "Очки: \(record.score ?? 0) (\(record.percentOfCorrectAnswer ?? 0)%)"
         return cell
     }
 }

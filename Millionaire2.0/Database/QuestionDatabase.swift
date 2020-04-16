@@ -14,7 +14,6 @@ class QuestionDatabase {
         return TypesOfDataSet.getQuestions()
     }
     
-    
     // MARK: Операторы
     static func getQuestionsOperators() -> [Question] {
         return OperatorsSet.getQuestions()

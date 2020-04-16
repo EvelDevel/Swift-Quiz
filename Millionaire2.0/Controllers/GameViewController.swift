@@ -5,7 +5,7 @@
 import UIKit
 
 protocol GameViewControllerDelegate: class {
-    func didEndGame(_ result: Int, _ totalQuestion: Int)
+    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double)
 }
 
 class GameViewController: UIViewController {
@@ -23,12 +23,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionD: UIButton!
     
     // TODO: Отредактировать наполнение массива для работы из синглтона с вопросами
-    let allQuestions = PickedTopic.shared.questions
+    let allQuestions = SelectedTopic.shared.questions
     
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
     weak var delegate: GameViewControllerDelegate?
+    var percent: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,8 @@ extension GameViewController {
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            delegate?.didEndGame(score, allQuestions.count)
+            self.percent = Double(self.score) / Double(self.allQuestions.count) * 100
+            delegate?.didEndGame(score, allQuestions.count, percent)
             /// showAlert(title: "Неверно, ваш счет", message: "")
         }
         
@@ -103,7 +105,8 @@ extension GameViewController {
             optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
-            delegate?.didEndGame(score, allQuestions.count)
+            self.percent = Double(self.score) / Double(self.allQuestions.count) * 100
+            delegate?.didEndGame(score, allQuestions.count, percent)
             showAlert(title: "Отлично! Ваш счет", message: "")
         }
         updateUI()
@@ -117,8 +120,9 @@ extension GameViewController {
     func showAlert(title: String, message: String) {
         let record = Record(date: Date(),
                             score: score,
-                            topic: PickedTopic.shared.topic,
-                            totalQuestion: allQuestions.count)
+                            topic: SelectedTopic.shared.topic,
+                            totalQuestion: allQuestions.count,
+                            percentOfCorrectAnswer: Double(score) / Double(allQuestions.count) * 100) 
         
         Game.shared.addRecord(record)
 

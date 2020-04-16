@@ -9,4 +9,5 @@ struct Record: Codable {
     var score: Int?
     var topic: String?
     var totalQuestion: Int?
+    var percentOfCorrectAnswer: Double?
 }

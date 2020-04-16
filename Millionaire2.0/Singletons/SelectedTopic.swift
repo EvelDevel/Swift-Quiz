@@ -6,9 +6,9 @@ import Foundation
 
 // MARK: Singleton
 
-class PickedTopic {
+class SelectedTopic {
     
-    static let shared = PickedTopic()
+    static let shared = SelectedTopic()
     
     private(set) var questions: [Question] = []
     private(set) var topic: String = ""
