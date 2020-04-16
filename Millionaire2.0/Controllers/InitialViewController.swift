@@ -9,9 +9,9 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var selectedTopicInformation: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
-    @IBOutlet weak var percent: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
+    @IBOutlet weak var firstTopic: HalfRoundButton!
     @IBOutlet var topicButtonOutlets: [UIButton]!
     
     private let recordCaretaker = RecordsCaretaker()
@@ -45,12 +45,12 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
     func showLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
-        let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
-        
-        lastTopic.text = "Категория: \(records[0].topic ?? "")"
-        lastScore.text = "Правильных ответов: \(records[0].score ?? 0)"
-        percent.text = "Процент правильных ответов: \(roundedPercents)%"
-        totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
+        if records.count != 0 {
+            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+            lastTopic.text = "Категория: \(records[0].topic ?? "")"
+            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
+            totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
+        }
     }
 }
 
@@ -63,8 +63,7 @@ extension InitialViewController: GameViewControllerDelegate {
                     _ topic: String) {
         
         lastTopic.text = "Категория: \(topic)"
-        lastScore.text = "Правильных ответов: \(result)"
-        percent.text = "Процент правильных ответов: \(percentOfCorrect)%"
+        lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
         totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
     }
 }
@@ -83,6 +82,8 @@ extension InitialViewController {
 
 // MARK: Обработка выбора категории вопросов
 extension InitialViewController {
+    
+    /// Номера tag-ов удаленных кнопок: 3
     
     /// Загружаем пачку вопросов в наш синглтон массив по нажатию на тему
     func addQuestionsToArray(sender: UIButton) {
@@ -211,8 +212,8 @@ extension InitialViewController {
             
         default:
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
-            topicButtonOutlets[0].setTitleColor(.white, for: .normal)
-            topicButtonOutlets[0].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
+            firstTopic.setTitleColor(.white, for: .normal)
+            firstTopic.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"

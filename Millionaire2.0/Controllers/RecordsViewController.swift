@@ -19,6 +19,11 @@ class RecordsViewController: UIViewController {
     }
 }
 
+
+///
+
+
+// MARK: Настройка таблицы
 extension RecordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

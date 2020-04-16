@@ -15,494 +15,484 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                <rect key="frame" x="100" y="348" width="120" height="45"/>
-                                <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="V0e-5p-x6C"/>
-                                    <constraint firstAttribute="height" constant="45" id="WzW-ao-emq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="ИГРАТЬ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="08f-Ce-Siq"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toGameViewController" id="BZ9-zs-ywG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                <rect key="frame" x="100" y="401" width="120" height="30"/>
-                                <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0XC-b4-TK4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Jea-yS-5eJ"/>
-                                </constraints>
-                                <state key="normal" title="Результаты">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о выбранной категории" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
                                 <rect key="frame" x="25" y="21" width="270" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="26m-px-9Qp" userLabel="First Row">
-                                <rect key="frame" x="20" y="50" width="280" height="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kAd-77-GP1" userLabel="Topics">
+                                <rect key="frame" x="20" y="50" width="280" height="275"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-2c-UJJ" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Типы данных">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="kfi-eH-fnA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-ir-8ri" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="103.5" y="0.0" width="83" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Операторы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="lHD-VN-JNT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Um-39f" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Коллекции">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Uvw-Hb-mae"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="26m-px-9Qp" userLabel="First Row">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-2c-UJJ" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Типы данных">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="kfi-eH-fnA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-ir-8ri" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="103.5" y="0.0" width="83" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Операторы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="lHD-VN-JNT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Um-39f" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="193.5" y="0.0" width="86.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Коллекции">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Uvw-Hb-mae"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tlQ-ET-PXo"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-1F-zmT" userLabel="Second Row">
+                                        <rect key="frame" x="0.0" y="35" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBG-1j-Iy6" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Потоки">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="qw5-q4-akk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-xO-3sV" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="51.5" y="0.0" width="54.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Функции">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="ZUC-NL-8xg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-8a-Txy" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="113" y="0.0" width="67.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Замыкания">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="jcK-H0-8hh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-nu-RUr" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="187.5" y="0.0" width="92.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Перечисления">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="IKQ-R2-pdB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7RA-uS-ZY9"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OXe-GC-LXF" userLabel="Third Row">
+                                        <rect key="frame" x="0.0" y="70" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-ND-ukW" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Структуры">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y5n-gJ-eR4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-MS-A6g" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="82" y="0.0" width="53" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Классы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tZL-yr-eZg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl9-oG-AUF" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="142" y="0.0" width="67" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Свойства">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="8BC-1Z-RCW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vs-5w-KcA" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="64" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Методы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tom-Kc-MaC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="P6k-Y2-b1n"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Gi-CJ-7y6" userLabel="Fourth Row">
+                                        <rect key="frame" x="0.0" y="105" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-sR-FfF" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Сабскрипты">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="vYM-Ez-fxZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r94-Iq-imt" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="89" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Наследование">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="M7w-lL-b7q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-D4-KeY" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Инициализация">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="kiF-20-Ya6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="if3-qZ-oIl"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-A0-g3J" userLabel="Fifth Row">
+                                        <rect key="frame" x="0.0" y="140" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-48-59n" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Деинициализация">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="DYu-jE-85h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwV-1m-iD4" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="139" y="0.0" width="141" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Обработка ошибок">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="HyT-Qk-ntJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ty1-UR-ylW"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-Gl-dlu" userLabel="Sixth Row">
+                                        <rect key="frame" x="0.0" y="175" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys0-Re-G2d" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Опционалы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="cK7-cH-wFp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ork-09-hIC" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="78" y="0.0" width="115" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Приведение типов">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="FZU-a2-sXs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qc-jJ-XHf" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Расширения">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Jii-Yx-0sX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0CC-il-jo2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Xbv-ez-OxH" userLabel="Seventh Row">
+                                        <rect key="frame" x="0.0" y="210" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-qH-nfb" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Вложенные типы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="EcY-VG-qfl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gux-xj-mfb" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="125.5" y="0.0" width="77.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Протоколы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="0YX-vv-ye4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTK-NX-imu" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="70" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Шаблоны">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="gKw-lw-hy8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="wm3-bv-vPP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JDt-HZ-fZg" userLabel="Eighth Row">
+                                        <rect key="frame" x="0.0" y="245" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bux-5u-f73" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Паттерны">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="hyk-TN-90G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-oD-MzN" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="99" y="0.0" width="109.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Алгоритмы">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="I3i-au-Ajm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pco-fB-HVm" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                                <rect key="frame" x="213.5" y="0.0" width="66.5" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="ARC">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="YqH-EP-tJt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="vem-X7-zbf"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-1F-zmT" userLabel="Second Row">
-                                <rect key="frame" x="20" y="82" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBG-1j-Iy6" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Потоки">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="qw5-q4-akk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-xO-3sV" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="51.5" y="0.0" width="54.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Функции">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="ZUC-NL-8xg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-8a-Txy" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="113" y="0.0" width="67.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Замыкания">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="jcK-H0-8hh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-nu-RUr" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="187.5" y="0.0" width="92.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Перечисления">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="IKQ-R2-pdB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OXe-GC-LXF" userLabel="Third Row">
-                                <rect key="frame" x="20" y="114" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-ND-ukW" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Структуры">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y5n-gJ-eR4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-MS-A6g" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="82" y="0.0" width="53" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Классы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tZL-yr-eZg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl9-oG-AUF" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="0.0" width="67" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Свойства">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="8BC-1Z-RCW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vs-5w-KcA" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="216" y="0.0" width="64" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Методы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tom-Kc-MaC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Gi-CJ-7y6" userLabel="Fourth Row">
-                                <rect key="frame" x="20" y="146" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaB-sR-FfF" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Сабскрипты">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="vYM-Ez-fxZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r94-Iq-imt" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="83" y="0.0" width="89" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Наследование">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="M7w-lL-b7q"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s1-D4-KeY" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="179" y="0.0" width="101" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Инициализация">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="kiF-20-Ya6"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-A0-g3J" userLabel="Fifth Row">
-                                <rect key="frame" x="20" y="178" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-48-59n" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Деинициализация">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="DYu-jE-85h"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwV-1m-iD4" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="139" y="0.0" width="141" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Обработка ошибок">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="HyT-Qk-ntJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="FUf-Gl-dlu" userLabel="Sixth Row">
-                                <rect key="frame" x="20" y="210" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys0-Re-G2d" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="71" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Опционалы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="cK7-cH-wFp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ork-09-hIC" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="78" y="0.0" width="115" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Приведение типов">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="FZU-a2-sXs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qc-jJ-XHf" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="0.0" width="80" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Расширения">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Jii-Yx-0sX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Xbv-ez-OxH" userLabel="Seventh Row">
-                                <rect key="frame" x="20" y="242" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBq-qH-nfb" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Вложенные типы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="EcY-VG-qfl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gux-xj-mfb" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="125.5" y="0.0" width="77.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Протоколы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="0YX-vv-ye4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTK-NX-imu" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="210" y="0.0" width="70" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Шаблоны">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="gKw-lw-hy8"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="JDt-HZ-fZg" userLabel="Eighth Row">
-                                <rect key="frame" x="20" y="274" width="280" height="24"/>
-                                <subviews>
-                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bux-5u-f73" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Паттерны">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="hyk-TN-90G"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-oD-MzN" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="98.5" y="0.0" width="106.5" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Алгоритмы">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="I3i-au-Ajm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pco-fB-HVm" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                        <rect key="frame" x="212" y="0.0" width="68" height="24"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="ARC">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="YqH-EP-tJt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XjC-5I-4ct" userLabel="Game Information">
-                                <rect key="frame" x="62" y="451" width="196" height="84.5"/>
+                                <rect key="frame" x="62" y="355" width="196" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о последней игре" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWi-6k-ilE">
                                         <rect key="frame" x="0.0" y="0.0" width="196" height="14.5"/>
@@ -516,94 +506,112 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
-                                        <rect key="frame" x="0.0" y="35" width="124" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Процент правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOh-PK-ZfW">
-                                        <rect key="frame" x="0.0" y="52.5" width="176.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общее количество вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
-                                        <rect key="frame" x="0.0" y="70" width="174" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="35" width="174" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
+                                        <rect key="frame" x="0.0" y="52.5" width="124" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WTE-VV-ica" userLabel="Buttons">
+                                <rect key="frame" x="85" y="442" width="150" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="duI-ro-HHv"/>
+                                            <constraint firstAttribute="height" constant="40" id="j3f-Fb-vE6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Результаты">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="150" height="40"/>
+                                        <color key="backgroundColor" red="0.28804424410000001" green="0.50090664630000004" blue="0.74589657779999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="erE-mq-tju"/>
+                                            <constraint firstAttribute="height" constant="40" id="u18-MC-pOa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="ИГРАТЬ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="08f-Ce-Siq"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="toGameViewController" id="BZ9-zs-ywG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pq9-9e-V5c" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="1Jy-0b-aVa"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="8jB-1F-zmT" secondAttribute="trailing" constant="20" id="5wP-fk-iUx"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="JDt-HZ-fZg" secondAttribute="trailing" constant="20" id="6AE-7m-xkb"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="mKv-or-Ad3" secondAttribute="trailing" constant="25" id="7uU-PZ-ycE"/>
-                            <constraint firstItem="XjC-5I-4ct" firstAttribute="top" secondItem="SXd-ZC-ZJT" secondAttribute="bottom" constant="20" id="883-eN-ONe"/>
-                            <constraint firstItem="FUf-Gl-dlu" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="8Ni-SH-pZc"/>
-                            <constraint firstItem="8jB-1F-zmT" firstAttribute="top" secondItem="26m-px-9Qp" secondAttribute="bottom" constant="8" id="96v-TY-9mI"/>
-                            <constraint firstItem="Hij-A0-g3J" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="Bkq-PE-kRg"/>
-                            <constraint firstItem="JDt-HZ-fZg" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="Db7-B3-Xxi"/>
-                            <constraint firstItem="Xbv-ez-OxH" firstAttribute="top" secondItem="FUf-Gl-dlu" secondAttribute="bottom" constant="8" id="FAG-dW-niN"/>
-                            <constraint firstItem="26m-px-9Qp" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="KIM-MQ-5K9"/>
-                            <constraint firstItem="OXe-GC-LXF" firstAttribute="top" secondItem="8jB-1F-zmT" secondAttribute="bottom" constant="8" id="LVL-mZ-ras"/>
-                            <constraint firstItem="8jB-1F-zmT" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="LYB-GM-9Tv"/>
-                            <constraint firstItem="SXd-ZC-ZJT" firstAttribute="centerX" secondItem="pq9-9e-V5c" secondAttribute="centerX" id="MU5-FQ-CAK"/>
+                            <constraint firstItem="WTE-VV-ica" firstAttribute="top" secondItem="XjC-5I-4ct" secondAttribute="bottom" constant="20" id="E0X-Tp-Ehm"/>
+                            <constraint firstItem="WTE-VV-ica" firstAttribute="centerX" secondItem="XjC-5I-4ct" secondAttribute="centerX" id="Hgp-9w-l82"/>
+                            <constraint firstItem="XjC-5I-4ct" firstAttribute="centerX" secondItem="kAd-77-GP1" secondAttribute="centerX" id="Jc6-JY-0P3"/>
+                            <constraint firstItem="kAd-77-GP1" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="LLd-tN-5ZA"/>
                             <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="21" id="Pbq-aK-6Ce"/>
-                            <constraint firstItem="1Gi-CJ-7y6" firstAttribute="top" secondItem="OXe-GC-LXF" secondAttribute="bottom" constant="8" id="Qew-Dv-YGk"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="1Gi-CJ-7y6" secondAttribute="trailing" constant="20" id="TXJ-ay-cXl"/>
-                            <constraint firstItem="JDt-HZ-fZg" firstAttribute="top" secondItem="Xbv-ez-OxH" secondAttribute="bottom" constant="8" id="XBM-AT-X46"/>
-                            <constraint firstItem="FUf-Gl-dlu" firstAttribute="top" secondItem="Hij-A0-g3J" secondAttribute="bottom" constant="8" id="dgg-5n-UAU"/>
-                            <constraint firstItem="26m-px-9Qp" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="50" id="fZb-pA-PJg"/>
-                            <constraint firstItem="OXe-GC-LXF" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="fes-2T-pXi"/>
-                            <constraint firstItem="SXd-ZC-ZJT" firstAttribute="top" secondItem="pq9-9e-V5c" secondAttribute="bottom" constant="8" id="fgB-Ob-F4I"/>
-                            <constraint firstItem="Xbv-ez-OxH" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="ghf-FV-AeH"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="FUf-Gl-dlu" secondAttribute="trailing" constant="20" id="hND-eE-J6d"/>
                             <constraint firstItem="mKv-or-Ad3" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="25" id="hTJ-Yf-Md1"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="26m-px-9Qp" secondAttribute="trailing" constant="20" id="haj-Q0-gDT"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="OXe-GC-LXF" secondAttribute="trailing" constant="20" id="htd-DN-2iv"/>
-                            <constraint firstItem="Hij-A0-g3J" firstAttribute="top" secondItem="1Gi-CJ-7y6" secondAttribute="bottom" constant="8" id="i41-qN-Yl9"/>
+                            <constraint firstItem="kAd-77-GP1" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="50" id="mfj-ke-kND"/>
+                            <constraint firstItem="XjC-5I-4ct" firstAttribute="top" secondItem="kAd-77-GP1" secondAttribute="bottom" constant="30" id="pdH-nl-JzH"/>
                             <constraint firstItem="XjC-5I-4ct" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="r58-8Z-3LU"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="Xbv-ez-OxH" secondAttribute="trailing" constant="20" id="slv-OI-1j2"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="Hij-A0-g3J" secondAttribute="trailing" constant="20" id="zB7-Oq-bTc"/>
-                            <constraint firstItem="pq9-9e-V5c" firstAttribute="top" secondItem="JDt-HZ-fZg" secondAttribute="bottom" constant="50" id="zKg-vV-Bvn"/>
-                            <constraint firstItem="1Gi-CJ-7y6" firstAttribute="leading" secondItem="WHM-zc-GgI" secondAttribute="leading" constant="20" id="zvh-Su-RmU"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="trailing" secondItem="kAd-77-GP1" secondAttribute="trailing" constant="20" id="sV3-BG-JA9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                     </view>
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
                     <connections>
+                        <outlet property="firstTopic" destination="EE5-2c-UJJ" id="X08-LM-1we"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
-                        <outlet property="percent" destination="gOh-PK-ZfW" id="4sx-yA-M6u"/>
                         <outlet property="selectedTopicInformation" destination="mKv-or-Ad3" id="MMh-hT-dIz"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
-                        <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>
                         <outletCollection property="topicButtonOutlets" destination="Agy-ir-8ri" collectionClass="NSMutableArray" id="DO7-rD-czO"/>
                         <outletCollection property="topicButtonOutlets" destination="Lra-Um-39f" collectionClass="NSMutableArray" id="Kpe-RL-PTH"/>
+                        <outletCollection property="topicButtonOutlets" destination="EE5-2c-UJJ" collectionClass="NSMutableArray" id="7mD-5W-hgD"/>
+                        <outletCollection property="topicButtonOutlets" destination="Mzg-nu-RUr" collectionClass="NSMutableArray" id="7Cq-2d-K1z"/>
+                        <outletCollection property="topicButtonOutlets" destination="uh5-8a-Txy" collectionClass="NSMutableArray" id="FEm-UP-gAa"/>
                         <outletCollection property="topicButtonOutlets" destination="JBG-1j-Iy6" collectionClass="NSMutableArray" id="yme-bK-rHT"/>
                         <outletCollection property="topicButtonOutlets" destination="n8D-xO-3sV" collectionClass="NSMutableArray" id="8nU-Hg-UdK"/>
-                        <outletCollection property="topicButtonOutlets" destination="uh5-8a-Txy" collectionClass="NSMutableArray" id="FEm-UP-gAa"/>
-                        <outletCollection property="topicButtonOutlets" destination="Mzg-nu-RUr" collectionClass="NSMutableArray" id="7Cq-2d-K1z"/>
-                        <outletCollection property="topicButtonOutlets" destination="JpY-ND-ukW" collectionClass="NSMutableArray" id="WXe-m4-zb9"/>
-                        <outletCollection property="topicButtonOutlets" destination="HbG-MS-A6g" collectionClass="NSMutableArray" id="RwN-Xi-QcJ"/>
                         <outletCollection property="topicButtonOutlets" destination="Fl9-oG-AUF" collectionClass="NSMutableArray" id="g9w-kp-56P"/>
+                        <outletCollection property="topicButtonOutlets" destination="HbG-MS-A6g" collectionClass="NSMutableArray" id="RwN-Xi-QcJ"/>
+                        <outletCollection property="topicButtonOutlets" destination="JpY-ND-ukW" collectionClass="NSMutableArray" id="WXe-m4-zb9"/>
                         <outletCollection property="topicButtonOutlets" destination="6Vs-5w-KcA" collectionClass="NSMutableArray" id="hNY-R3-Ud7"/>
-                        <outletCollection property="topicButtonOutlets" destination="HaB-sR-FfF" collectionClass="NSMutableArray" id="jpg-f6-Bch"/>
                         <outletCollection property="topicButtonOutlets" destination="r94-Iq-imt" collectionClass="NSMutableArray" id="g9x-8h-Jxe"/>
                         <outletCollection property="topicButtonOutlets" destination="9s1-D4-KeY" collectionClass="NSMutableArray" id="Vhc-L6-ctp"/>
+                        <outletCollection property="topicButtonOutlets" destination="HaB-sR-FfF" collectionClass="NSMutableArray" id="jpg-f6-Bch"/>
                         <outletCollection property="topicButtonOutlets" destination="h9j-48-59n" collectionClass="NSMutableArray" id="qnX-OU-Eac"/>
                         <outletCollection property="topicButtonOutlets" destination="KwV-1m-iD4" collectionClass="NSMutableArray" id="biw-hn-p3R"/>
                         <outletCollection property="topicButtonOutlets" destination="Ys0-Re-G2d" collectionClass="NSMutableArray" id="hJ0-Ug-438"/>
-                        <outletCollection property="topicButtonOutlets" destination="ork-09-hIC" collectionClass="NSMutableArray" id="gfO-c7-Ymr"/>
                         <outletCollection property="topicButtonOutlets" destination="6qc-jJ-XHf" collectionClass="NSMutableArray" id="PZn-7u-I1G"/>
-                        <outletCollection property="topicButtonOutlets" destination="cBq-qH-nfb" collectionClass="NSMutableArray" id="e8v-Nn-Jj2"/>
-                        <outletCollection property="topicButtonOutlets" destination="gux-xj-mfb" collectionClass="NSMutableArray" id="s2q-f1-F19"/>
+                        <outletCollection property="topicButtonOutlets" destination="ork-09-hIC" collectionClass="NSMutableArray" id="gfO-c7-Ymr"/>
                         <outletCollection property="topicButtonOutlets" destination="KTK-NX-imu" collectionClass="NSMutableArray" id="hhi-kQ-zS9"/>
+                        <outletCollection property="topicButtonOutlets" destination="gux-xj-mfb" collectionClass="NSMutableArray" id="s2q-f1-F19"/>
+                        <outletCollection property="topicButtonOutlets" destination="cBq-qH-nfb" collectionClass="NSMutableArray" id="e8v-Nn-Jj2"/>
                         <outletCollection property="topicButtonOutlets" destination="Pco-fB-HVm" collectionClass="NSMutableArray" id="FOo-iF-Twn"/>
                         <outletCollection property="topicButtonOutlets" destination="RDJ-oD-MzN" collectionClass="NSMutableArray" id="OFM-2G-bMH"/>
                         <outletCollection property="topicButtonOutlets" destination="bux-5u-f73" collectionClass="NSMutableArray" id="7dl-GT-Bmi"/>
@@ -611,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-MD-aOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="112.50000000000001"/>
+            <point key="canvasLocation" x="300" y="111.97183098591549"/>
         </scene>
         <!--Records View Controller-->
         <scene sceneID="AUf-56-Jv7">
@@ -645,7 +653,7 @@
                                 <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QMY-o0-VI2"/>
-                                    <constraint firstAttribute="width" constant="150" id="asJ-rq-oxd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="asJ-rq-oxd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -664,6 +672,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ZeY-xX-Faf" firstAttribute="leading" secondItem="6VH-zc-nbY" secondAttribute="leading" constant="150" id="Uda-Qe-ZYp"/>
                             <constraint firstItem="6VH-zc-nbY" firstAttribute="trailing" secondItem="ZeY-xX-Faf" secondAttribute="trailing" constant="20" id="VlV-V1-L4A"/>
                             <constraint firstItem="ZeY-xX-Faf" firstAttribute="top" secondItem="6VH-zc-nbY" secondAttribute="top" constant="20" id="cHq-FO-qMN"/>
                         </constraints>

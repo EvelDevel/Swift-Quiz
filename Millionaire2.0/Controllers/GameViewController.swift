@@ -59,6 +59,9 @@ class GameViewController: UIViewController {
 }
 
 
+///
+
+
 // MARK: Нажали на кнопку ответа
 extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
