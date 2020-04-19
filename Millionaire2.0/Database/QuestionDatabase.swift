@@ -7,7 +7,7 @@ import Foundation
 
 class QuestionDatabase {
     
-    /// Здесь будет полная база данных для всех тем вопросов
+    /// Здесь мы оперируем question-set-ами
     
     // MARK: Типы данных
     static func getQuestionsTypesOfData() -> [Question] {

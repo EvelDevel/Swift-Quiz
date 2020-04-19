@@ -22,8 +22,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
-    // TODO: Отредактировать наполнение массива для работы из синглтона с вопросами
-    let allQuestions = SelectedTopic.shared.questions
+    var allQuestions: [Question] = []
+    var selectedOrder: QuestionOrder?
     
     var questionNumber: Int = 0
     var score: Int = 0
@@ -33,8 +33,19 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setArrayAndOrder()
         updateQuestion()
         updateUI()
+    }
+    
+    // Устанавливаем сет вопросов и их порядок
+    func setArrayAndOrder() {
+        selectedOrder = Game.shared.getQuestionOrderSatus()
+        if selectedOrder == .straight {
+            allQuestions = SelectedTopic.shared.questions
+        } else {
+            allQuestions = SelectedTopic.shared.questions.shuffled()
+        }
     }
     
     // Обновляем показатели

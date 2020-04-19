@@ -140,7 +140,7 @@ class TypesOfDataSet {
                      optionD: "По 4",
                      correctAnswer: 3),
             
-            Question(question: "Каким символом(ами) осуществляется перенос строки?",
+            Question(question: "Каким символом(ами) осуществляется перенос строки в многострочном строковом литерале?",
                      optionA: "Звездочка",
                      optionB: "Обратный слеш",
                      optionC: "Нажимаем Enter",
@@ -180,7 +180,7 @@ class TypesOfDataSet {
                      optionB: "String",
                      optionC: "Character",
                      optionD: "+ или -",
-                     correctAnswer: 4)
+                     correctAnswer: 1)
         ]
     }
 }
