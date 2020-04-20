@@ -4,6 +4,10 @@
 
 import UIKit
 
+// MARK: TODO
+/// Интерфейс:
+/// Подумать как сделать кнопки выбора тем через лэйаут
+
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var selectedTopic: UILabel!

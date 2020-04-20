@@ -125,7 +125,7 @@ extension GameViewController {
         } else {
             self.percent = updatePercentage()
             delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
-            showAlert(title: "Отлично! Ваш счет", message: "")
+            showAlert(title: "Вопросы закончились, ваш счет", message: "")
         }
         updateUI()
     }

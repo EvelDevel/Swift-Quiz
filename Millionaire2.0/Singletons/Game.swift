@@ -7,14 +7,15 @@ import Foundation
 // MARK: Singleton
 
 class Game {
-    
     static let shared = Game()
+    
     private let recordCaretaker = RecordsCaretaker()
     private var currentQyestionOrder: QuestionOrder?
     
     private(set) var records: [Record] = [] {
         didSet { recordCaretaker.saveRecordsList(records: self.records) }
     }
+    
     private init() {
         self.records = self.recordCaretaker.getRecordsList()
     }
