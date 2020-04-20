@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jty-Zp-18d" userLabel="GrayBackground">
-                                <rect key="frame" x="30" y="46.5" width="260" height="136"/>
+                                <rect key="frame" x="30" y="39" width="260" height="136"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lqI-Fz-sy4" userLabel="Record-Settings">
                                         <rect key="frame" x="7" y="10" width="245" height="40"/>
@@ -116,7 +116,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WTE-VV-ica" userLabel="Game-Topic">
-                                <rect key="frame" x="60" y="222.5" width="200" height="123"/>
+                                <rect key="frame" x="60" y="205" width="200" height="158"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
@@ -131,7 +131,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -141,40 +141,68 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="200" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Uru-8e-Slf"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dU1-oW-gwY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="Выбрать категорию">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="S6G-sS-x0J" kind="show" identifier="toTopicSelection" id="s5Q-vq-GaG"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбрана категория:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
-                                        <rect key="frame" x="0.0" y="98" width="200" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-5e-qkn">
+                                        <rect key="frame" x="0.0" y="98" width="200" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЕЙЧАС ВЫБРАНО:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3m-ip-ljx">
+                                                <rect key="frame" x="32.5" y="10" width="135.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название категории" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
+                                                <rect key="frame" x="0.0" y="28" width="200" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="DFh-GA-6kY"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Nep-CJ-dY3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="DFh-GA-6kY"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Nep-CJ-dY3"/>
+                                            <constraint firstItem="V3m-ip-ljx" firstAttribute="centerX" secondItem="O4g-5e-qkn" secondAttribute="centerX" id="5mZ-k3-0wq"/>
+                                            <constraint firstItem="mKv-or-Ad3" firstAttribute="centerX" secondItem="O4g-5e-qkn" secondAttribute="centerX" id="DBc-bi-PwC"/>
+                                            <constraint firstItem="V3m-ip-ljx" firstAttribute="top" secondItem="O4g-5e-qkn" secondAttribute="top" constant="10" id="iPn-35-fXc"/>
+                                            <constraint firstAttribute="width" constant="200" id="qJD-22-JCj"/>
+                                            <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="V3m-ip-ljx" secondAttribute="bottom" id="trf-f0-39K"/>
+                                            <constraint firstAttribute="height" constant="60" id="zQW-dT-9ZJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="O4g-5e-qkn" firstAttribute="top" secondItem="T1V-ld-fKj" secondAttribute="bottom" constant="4" id="99k-mF-uX5"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WTE-VV-ica" firstAttribute="top" secondItem="Jty-Zp-18d" secondAttribute="bottom" constant="40" id="5zK-QY-IGK"/>
+                            <constraint firstItem="WTE-VV-ica" firstAttribute="top" secondItem="Jty-Zp-18d" secondAttribute="bottom" constant="30" id="5zK-QY-IGK"/>
                             <constraint firstItem="Jty-Zp-18d" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="7yd-Qz-X1D"/>
                             <constraint firstItem="WTE-VV-ica" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="S7J-4p-ycK"/>
                             <constraint firstItem="WTE-VV-ica" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="TNK-xt-Wi8"/>

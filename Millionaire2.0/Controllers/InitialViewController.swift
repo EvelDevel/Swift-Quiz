@@ -30,7 +30,7 @@ class InitialViewController: UIViewController {
     func addDefaultQuestionSet() {
         let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
         SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
-        selectedTopic.text = "Выбрана категория: \(SelectedTopic.shared.topic)"
+        selectedTopic.text = "\(SelectedTopic.shared.topic)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,7 +77,7 @@ extension InitialViewController: GameViewControllerDelegate {
 // MARK: Работа с делегатом TopicViewController
 extension InitialViewController: TopicViewControllerDelegate {
     func selectedCategory(tag: Int) {
-        selectedTopic.text = "Выбрана категория: \(SelectedTopic.shared.topic)"
+        selectedTopic.text = "\(SelectedTopic.shared.topic)"
         self.selectedTopicTag = tag
     }
 }
