@@ -16,6 +16,11 @@ class RecordsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cellRegistration()
+    }
+    
+    func cellRegistration() {
+        tableView.register(UINib(nibName: "RecordCell", bundle: nil), forCellReuseIdentifier: "RecordCell")
     }
 }
 
@@ -31,15 +36,28 @@ extension RecordsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as? RecordCell
+            else { return UITableViewCell() }
+        
         let record = Game.shared.records[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        cell.textLabel?.font = UIFont(name:"Avenir", size:12)
-        cell.textLabel?.text =  "\(dateFormatter.string(from: record.date ?? Date())). " +
-                                "Тема: \(record.topic ?? ""). " +
-                                "Вопросов: \(record.totalQuestion ?? 0). " +
-                                "Очки: \(record.score ?? 0) (\(record.percentOfCorrectAnswer ?? 0)%)"
+        
+        if record.percentOfCorrectAnswer! < 30 {
+            cell.colorBackground.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        } else if record.percentOfCorrectAnswer! < 70 {
+            cell.colorBackground.backgroundColor = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
+        } else {
+            cell.colorBackground.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        }
+            
+        cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
+        cell.topicLabel.text = "\(record.topic ?? "")"
+        cell.dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"
+        cell.totalQuestionLabel.text = "Всего вопросов: \(record.totalQuestion ?? 0)"
+        cell.scoreLabel.text = "Очки: \(record.score ?? 0)"
+        
         return cell
     }
 }

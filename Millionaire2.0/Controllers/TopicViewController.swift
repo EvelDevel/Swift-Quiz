@@ -203,7 +203,7 @@ extension TopicViewController {
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
             topicButtonOutlets[updatedTag].setTitleColor(.white, for: .normal)
             topicButtonOutlets[updatedTag].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
-            updatedTag = 0
+            selectedTopicInformation.text = "Количество вопросов: \(SelectedTopic.shared.questions.count)"
         }
         
         delegate?.selectedCategory(tag: updatedTag)

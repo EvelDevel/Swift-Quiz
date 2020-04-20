@@ -148,11 +148,11 @@ class TypesOfDataSet {
                      correctAnswer: 2),
             
             Question(question: "Как можно инициализировать пустую строку?",
-                     optionA: "Пустые кавычка после =",
-                     optionB: "= String()",
-                     optionC: "Оба варианта верны",
+                     optionA: "Пустые кавычки после =",
+                     optionB: "= [String]",
+                     optionC: "Первые два варианта",
                      optionD: "Оба варианта неверны",
-                     correctAnswer: 3),
+                     correctAnswer: 1),
             
             Question(question: "Способ создать новое значение типа String из разных констант, переменных, литералов и выражений, включая их значения в строковый литерал",
                      optionA: "Конкатенация",

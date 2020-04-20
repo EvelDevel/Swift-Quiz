@@ -69,14 +69,12 @@ class GameViewController: UIViewController {
     }
 }
 
-
 ///
 
-
+// MARK: Расчет процента правильных ответов
 extension GameViewController {
     func updatePercentage() -> Double {
-        percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
-        return percent
+        return Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
     }
 }
 
@@ -125,7 +123,11 @@ extension GameViewController {
         } else {
             self.percent = updatePercentage()
             delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
-            showAlert(title: "Вопросы закончились, ваш счет", message: "")
+            let title = """
+                        Вопросы закончились
+                        Ваш счет
+                        """
+            showAlert(title: title, message: "")
         }
         updateUI()
     }
@@ -134,19 +136,19 @@ extension GameViewController {
 
 // MARK: Обработка завершения игры
 extension GameViewController {
-
+    
     func showAlert(title: String, message: String) {
         let record = Record(date: Date(),
                             score: score,
                             topic: SelectedTopic.shared.topic,
                             totalQuestion: allQuestions.count,
-                            percentOfCorrectAnswer: Double(score) / Double(allQuestions.count) * 100) 
+                            percentOfCorrectAnswer: percent)
         
         Game.shared.addRecord(record)
-
+        
         let alert = UIAlertController(      title: "\(title): \(score)",
-                                            message: "\(message)",
-                                            preferredStyle: .alert)
+            message: "\(message)",
+            preferredStyle: .alert)
         let restartAction = UIAlertAction(  title: "Перезапустить",
                                             style: .default,
                                             handler: { action in self.restartGame() })
