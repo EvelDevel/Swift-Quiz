@@ -50,7 +50,7 @@ class GameViewController: UIViewController {
     
     // Обновляем показатели
     func updateUI() {
-        scoreLabel.text = "Счет: \(score)"
+        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
         questionCounter.text = "\(questionNumber + 1) / \(allQuestions.count)"
         progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.count)) * CGFloat(questionNumber + 1)
     }
@@ -73,6 +73,13 @@ class GameViewController: UIViewController {
 ///
 
 
+extension GameViewController {
+    func updatePercentage() -> Double {
+        percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
+        return percent
+    }
+}
+
 // MARK: Нажали на кнопку ответа
 extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
@@ -82,9 +89,7 @@ extension GameViewController {
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            self.percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
-            delegate?.didEndGame(score, allQuestions.count, percent, SelectedTopic.shared.topic)
-            /// showAlert(title: "Неверно, ваш счет", message: "")
+            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
         }
         
         if questionNumber < allQuestions.count {
@@ -101,7 +106,6 @@ extension GameViewController {
 
 // MARK: Обновляем вопрос и ответы или выводим алёрт
 extension GameViewController {
-    
     func updateQuestion() {
         questionCounter.text = "1 / \(allQuestions.count)"
         
@@ -119,8 +123,8 @@ extension GameViewController {
             optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
             selectedAnswer = allQuestions[questionNumber].correctAnswer
         } else {
-            self.percent = Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
-            delegate?.didEndGame(score, allQuestions.count, percent, SelectedTopic.shared.topic)
+            self.percent = updatePercentage()
+            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
             showAlert(title: "Отлично! Ваш счет", message: "")
         }
         updateUI()
