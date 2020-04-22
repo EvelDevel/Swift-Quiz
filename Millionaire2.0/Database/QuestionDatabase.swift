@@ -24,6 +24,7 @@ class QuestionDatabase {
     static func getQuestionsCollections() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -39,6 +40,7 @@ class QuestionDatabase {
     static func getQuestionsQueues() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -54,6 +56,7 @@ class QuestionDatabase {
     static func getQuestionsFunctions() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -69,6 +72,7 @@ class QuestionDatabase {
     static func getQuestionsClosures() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -84,6 +88,7 @@ class QuestionDatabase {
     static func getQuestionsEnums() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -99,6 +104,7 @@ class QuestionDatabase {
     static func getQuestionsStructures() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -114,6 +120,7 @@ class QuestionDatabase {
     static func getQuestionsClasses() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -129,6 +136,7 @@ class QuestionDatabase {
     static func getQuestionsProperties() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -144,6 +152,7 @@ class QuestionDatabase {
     static func getQuestionsMethods() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -159,6 +168,7 @@ class QuestionDatabase {
     static func getQuestionsSubscripts() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -174,6 +184,7 @@ class QuestionDatabase {
     static func getQuestionsInheritance() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -189,6 +200,7 @@ class QuestionDatabase {
     static func getQuestionsInitialization() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -204,6 +216,7 @@ class QuestionDatabase {
     static func getQuestionsDeinitialization() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -219,6 +232,7 @@ class QuestionDatabase {
     static func getQuestionsErrorProcessing() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -234,6 +248,7 @@ class QuestionDatabase {
     static func getQuestionsOptionals() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -249,6 +264,7 @@ class QuestionDatabase {
     static func getQuestionsTypeCasting() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -264,6 +280,7 @@ class QuestionDatabase {
     static func getQuestionsExtensions() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -279,6 +296,7 @@ class QuestionDatabase {
     static func getQuestionsNestedTypes() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -294,6 +312,7 @@ class QuestionDatabase {
     static func getQuestionsProtocols() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -309,6 +328,7 @@ class QuestionDatabase {
     static func getQuestionsGenerics() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -324,6 +344,7 @@ class QuestionDatabase {
     static func getQuestionsPatterns() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -339,6 +360,7 @@ class QuestionDatabase {
     static func getQuestionsAlgorithms() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",
@@ -354,6 +376,7 @@ class QuestionDatabase {
     static func getQuestionsARC() -> [Question] {
         return [
             Question(question: "4?",
+                     image: "",
                      optionA: "4",
                      optionB: "4",
                      optionC: "4",

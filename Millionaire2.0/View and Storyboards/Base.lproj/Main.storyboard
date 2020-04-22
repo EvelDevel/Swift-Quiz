@@ -960,22 +960,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-p6-lv0" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-r9-Tfa" userLabel="ProgressBarView">
                                         <rect key="frame" x="0.0" y="70" width="25" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-iY-9P3" userLabel="ScoreCounter">
-                                        <rect key="frame" x="236.5" y="29.5" width="60.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atk-Fk-RiH" userLabel="QuestionCounter">
+                                        <rect key="frame" x="21" y="14.5" width="48" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atk-Fk-RiH" userLabel="QuestionCounter">
-                                        <rect key="frame" x="21" y="27.5" width="55" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="HelpButton" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
+                                        <rect key="frame" x="290" y="25" width="40" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.80351027397260277" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="G3G-ST-1Rx"/>
+                                            <constraint firstAttribute="width" constant="40" id="ejh-0h-q1I"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="info.circle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" id="xzC-Ih-f4Q"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-iY-9P3" userLabel="ScoreCounter">
+                                        <rect key="frame" x="21" y="36.5" width="60.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -983,56 +1004,56 @@
                                 <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="atk-Fk-RiH" firstAttribute="leading" secondItem="B6F-p6-lv0" secondAttribute="leading" constant="21" id="7uG-yg-DSt"/>
-                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="baseline" secondItem="atk-Fk-RiH" secondAttribute="baseline" id="8hG-Wl-1FH"/>
-                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="atk-Fk-RiH" secondAttribute="trailing" constant="8" symbolic="YES" id="EtD-3f-XVW"/>
-                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="centerY" secondItem="B6F-p6-lv0" secondAttribute="centerY" id="Hb8-Iv-BTN"/>
-                                    <constraint firstAttribute="height" constant="80" id="Jl8-Bl-tMu"/>
-                                    <constraint firstAttribute="trailing" secondItem="w2b-iY-9P3" secondAttribute="trailing" constant="23" id="rfm-ei-1qy"/>
+                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="baseline" secondItem="atk-Fk-RiH" secondAttribute="baseline" constant="22" id="8hG-Wl-1FH"/>
+                                    <constraint firstAttribute="trailing" secondItem="2hl-kx-2hD" secondAttribute="trailing" constant="-10" id="BEh-Gb-kco"/>
+                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="leading" secondItem="B6F-p6-lv0" secondAttribute="leading" constant="21" id="ENj-2Y-y5B"/>
+                                    <constraint firstItem="w2b-iY-9P3" firstAttribute="centerY" secondItem="B6F-p6-lv0" secondAttribute="centerY" constant="9.75" id="Hb8-Iv-BTN"/>
+                                    <constraint firstAttribute="height" constant="75" id="Jl8-Bl-tMu"/>
+                                    <constraint firstItem="2hl-kx-2hD" firstAttribute="top" secondItem="B6F-p6-lv0" secondAttribute="top" constant="25" id="MXq-xo-mwo"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="atk-Fk-RiH" secondAttribute="trailing" constant="20" symbolic="YES" id="pvc-Dc-oIZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w2b-iY-9P3" secondAttribute="trailing" constant="20" symbolic="YES" id="rfm-ei-1qy"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-Nq-j32">
-                                <rect key="frame" x="0.0" y="80" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="75" width="320" height="473"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WV1-s6-FrL" userLabel="QuestionView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="236.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRg-39-Xa9" userLabel="Question">
-                                                <rect key="frame" x="15" y="15" width="290" height="204"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD">
-                                                <rect key="frame" x="278" y="15" width="22" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="2hl-kx-2hD" secondAttribute="height" multiplier="10:11" constant="3.8181818181818201" id="IS3-bV-1X4"/>
-                                                    <constraint firstAttribute="width" constant="22" id="UOq-tl-bou"/>
-                                                </constraints>
-                                                <color key="tintColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="info.circle.fill" catalog="system"/>
-                                                <connections>
-                                                    <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" id="xzC-Ih-f4Q"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d6X-Bm-isM">
+                                                <rect key="frame" x="20" y="15" width="280" height="216.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-H3-fwS" customClass="ScaledHeightImageView" customModule="Millionaire2_0" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="161.5"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRg-39-Xa9" userLabel="Question">
+                                                        <rect key="frame" x="0.0" y="166.5" width="280" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yfJ-bW-XQO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="vRg-39-Xa9" secondAttribute="bottom" constant="15" id="Aim-Cw-Uo0"/>
-                                            <constraint firstAttribute="trailing" secondItem="2hl-kx-2hD" secondAttribute="trailing" constant="20" id="KwZ-Oj-VSH"/>
-                                            <constraint firstAttribute="trailing" secondItem="vRg-39-Xa9" secondAttribute="trailing" constant="15" id="Vh3-nz-bUV"/>
-                                            <constraint firstItem="vRg-39-Xa9" firstAttribute="leading" secondItem="WV1-s6-FrL" secondAttribute="leading" constant="15" id="csp-Ls-AG8"/>
-                                            <constraint firstItem="vRg-39-Xa9" firstAttribute="top" secondItem="WV1-s6-FrL" secondAttribute="top" constant="15" id="gJ7-GZ-sy8"/>
-                                            <constraint firstItem="2hl-kx-2hD" firstAttribute="top" secondItem="WV1-s6-FrL" secondAttribute="top" constant="15" id="xg9-H2-yiM"/>
+                                            <constraint firstAttribute="bottom" secondItem="d6X-Bm-isM" secondAttribute="bottom" constant="5" id="IoQ-2O-iDI"/>
+                                            <constraint firstItem="d6X-Bm-isM" firstAttribute="top" secondItem="WV1-s6-FrL" secondAttribute="top" constant="15" id="Pgc-Bx-6WT"/>
+                                            <constraint firstItem="d6X-Bm-isM" firstAttribute="leading" secondItem="WV1-s6-FrL" secondAttribute="leading" constant="20" id="h3N-TQ-iN4"/>
+                                            <constraint firstAttribute="trailing" secondItem="d6X-Bm-isM" secondAttribute="trailing" constant="20" id="ojB-Jo-7gK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView">
-                                        <rect key="frame" x="0.0" y="234" width="320" height="234"/>
+                                        <rect key="frame" x="0.0" y="236.5" width="320" height="236.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
-                                                <rect key="frame" x="20" y="5" width="280" height="194"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
+                                                <rect key="frame" x="20" y="5" width="280" height="221.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="41"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="51.5"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="А. Первый вариант ответа">
@@ -1048,7 +1069,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="51" width="280" height="41"/>
+                                                        <rect key="frame" x="0.0" y="56.5" width="280" height="52"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="В. Второй вариант ответа">
@@ -1064,7 +1085,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="102" width="280" height="41"/>
+                                                        <rect key="frame" x="0.0" y="113.5" width="280" height="51.5"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="Г. Третий вариант ответа">
@@ -1080,7 +1101,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Millionaire2_0" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="153" width="280" height="41"/>
+                                                        <rect key="frame" x="0.0" y="170" width="280" height="51.5"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <state key="normal" title="Д. Четвертый вариант ответа">
@@ -1104,7 +1125,7 @@
                                             <constraint firstItem="vjR-Yi-cYW" firstAttribute="top" secondItem="GQU-UX-cgG" secondAttribute="top" constant="5" id="BTC-au-ie7"/>
                                             <constraint firstAttribute="trailing" secondItem="vjR-Yi-cYW" secondAttribute="trailing" constant="20" id="Ffn-Pf-sfD"/>
                                             <constraint firstItem="vjR-Yi-cYW" firstAttribute="centerX" secondItem="GQU-UX-cgG" secondAttribute="centerX" id="QSi-uQ-tVS"/>
-                                            <constraint firstAttribute="bottom" secondItem="vjR-Yi-cYW" secondAttribute="bottom" constant="35" id="Z9G-gm-Z1E"/>
+                                            <constraint firstAttribute="bottom" secondItem="vjR-Yi-cYW" secondAttribute="bottom" constant="10" id="Z9G-gm-Z1E"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1133,13 +1154,15 @@
                         <outlet property="optionD" destination="sAj-KE-UJq" id="da4-cA-fIz"/>
                         <outlet property="progressView" destination="CfG-r9-Tfa" id="80E-QL-tLH"/>
                         <outlet property="questionCounter" destination="atk-Fk-RiH" id="yhP-fn-TUg"/>
+                        <outlet property="questionImageView" destination="dSf-H3-fwS" id="jPB-67-5Uc"/>
                         <outlet property="questionLabel" destination="vRg-39-Xa9" id="tHP-mU-Srd"/>
+                        <outlet property="questionTopHalf" destination="WV1-s6-FrL" id="iyN-pA-Fu5"/>
                         <outlet property="scoreLabel" destination="w2b-iY-9P3" id="fu8-1M-Er0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="112"/>
+            <point key="canvasLocation" x="1036.875" y="111.97183098591549"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="wvl-AF-KOl">
@@ -1162,7 +1185,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-CA-430">
-                                        <rect key="frame" x="0.0" y="45" width="240" height="176"/>
+                                        <rect key="frame" x="0.0" y="45" width="240" height="140"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -1174,10 +1197,10 @@
                                     <constraint firstItem="cxL-CA-430" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="QNQ-4T-uNa"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="X1e-ed-UIb"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" id="aFg-pP-P6X"/>
-                                    <constraint firstAttribute="bottom" secondItem="cxL-CA-430" secondAttribute="bottom" id="aTr-0b-xJB"/>
                                     <constraint firstAttribute="trailing" secondItem="cxL-CA-430" secondAttribute="trailing" id="eJw-Mh-iGe"/>
                                     <constraint firstItem="cxL-CA-430" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="45" id="fNM-5p-Tpj"/>
                                     <constraint firstAttribute="trailing" secondItem="62r-a9-iQ5" secondAttribute="trailing" id="rCC-so-zei"/>
+                                    <constraint firstAttribute="bottom" secondItem="cxL-CA-430" secondAttribute="bottom" constant="36" id="tji-KA-C2A"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1205,7 +1228,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.70028895547945202" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Hf-C9-5fV" firstAttribute="trailing" secondItem="gBd-b4-JLA" secondAttribute="trailing" constant="40" id="3Sw-bO-9jP"/>
                             <constraint firstItem="ZLX-MH-VUT" firstAttribute="centerX" secondItem="2Hf-C9-5fV" secondAttribute="centerX" id="YHa-ob-OHi"/>
@@ -1227,6 +1250,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

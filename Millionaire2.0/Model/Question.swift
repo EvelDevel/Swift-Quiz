@@ -6,6 +6,7 @@ import Foundation
 
 struct Question {
     let question: String
+    let image: String
     let optionA: String
     let optionB: String
     let optionC: String

@@ -16,6 +16,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionImageView: UIImageView!
+    @IBOutlet weak var questionTopHalf: UIView!
+    //@IBOutlet weak var questionImageViewHeight: NSLayoutConstraint!
     
     // Outlets for buttons
     @IBOutlet weak var optionA: UIButton!
@@ -29,6 +32,7 @@ class GameViewController: UIViewController {
     private var score: Int = 0
     private var selectedAnswer: Int = 0
     private var percent: Double = 0
+    private var imageName = ""
     
     weak var delegate: GameViewControllerDelegate?
     
@@ -54,17 +58,68 @@ class GameViewController: UIViewController {
 // MARK: Две основные функции апдейта и перезапуска игры
 extension GameViewController {
     
-    /// Обновляем показатели
     func updateUI() {
         scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
         questionCounter.text = "\(questionNumber + 1) / \(allQuestions.count)"
         progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.count)) * CGFloat(questionNumber + 1)
+        
+       
     }
-    /// Перезапускаем игру
+    
     func restartGame() {
         score = 0
         questionNumber = 0
         updateQuestion()
+    }
+}
+
+// MARK: Обновляем вопрос и ответы или выводим алёрт
+extension GameViewController {
+    
+    func updateQuestion() {
+        questionCounter.text = "1 / \(allQuestions.count)"
+        
+        /// Возвращаем белый цвет ответов
+        optionA.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
+        optionB.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
+        optionC.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
+        optionD.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
+        
+        if questionNumber <= allQuestions.count - 1 {
+            
+            /// Устанавливаем фото
+            imageName = allQuestions[questionNumber].image
+            
+            print("Имя фотки: \(imageName)")
+            print("Номер объекта: \(questionNumber)")
+            print("----")
+            
+            if imageName == "" {
+                questionImageView.image = nil
+                //questionImageViewHeight.constant = 0
+                questionLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
+            } else {
+                //questionImageViewHeight.constant = 120
+                questionImageView.image = UIImage(named: imageName)
+                questionLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+            }
+            
+            questionLabel.text = allQuestions[questionNumber].question
+            optionA.setTitle(allQuestions[questionNumber].optionA, for: .normal)
+            optionB.setTitle(allQuestions[questionNumber].optionB, for: .normal)
+            optionC.setTitle(allQuestions[questionNumber].optionC, for: .normal)
+            optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
+            selectedAnswer = allQuestions[questionNumber].correctAnswer
+        } else {
+            self.percent = updatePercentage()
+            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
+            let title = """
+                        Вопросы закончились
+                        Ваш счет
+                        """
+            showAlert(title: title, message: "")
+        }
+        updateUI()
     }
 }
 
@@ -115,38 +170,6 @@ extension GameViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.updateQuestion()
         }
-    }
-}
-
-// MARK: Обновляем вопрос и ответы или выводим алёрт
-extension GameViewController {
-    
-    func updateQuestion() {
-        questionCounter.text = "1 / \(allQuestions.count)"
-        
-        /// Возвращаем белый цвет ответов
-        optionA.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
-        optionB.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
-        optionC.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
-        optionD.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
-        
-        if questionNumber <= allQuestions.count - 1 {
-            questionLabel.text = allQuestions[questionNumber].question
-            optionA.setTitle(allQuestions[questionNumber].optionA, for: .normal)
-            optionB.setTitle(allQuestions[questionNumber].optionB, for: .normal)
-            optionC.setTitle(allQuestions[questionNumber].optionC, for: .normal)
-            optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
-            selectedAnswer = allQuestions[questionNumber].correctAnswer
-        } else {
-            self.percent = updatePercentage()
-            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
-            let title = """
-                        Вопросы закончились
-                        Ваш счет
-                        """
-            showAlert(title: title, message: "")
-        }
-        updateUI()
     }
 }
 

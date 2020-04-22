@@ -8,6 +8,7 @@ class OperatorsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: "Минимальная автономная единица, выполняющая команду",
+                     image: "",
                      optionA: "Операнд",
                      optionB: "Оператор",
                      optionC: "Куратор",
@@ -17,6 +18,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Значение, которое операторы затрагивают в своей работе",
+                     image: "",
                      optionA: "Число",
                      optionB: "Оператор",
                      optionC: "Значение",
@@ -26,6 +28,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Операторы, которые ставятся непосредственно перед величиной",
+                     image: "",
                      optionA: "Унарные",
                      optionB: "Постфиксные",
                      optionC: "Префиксные",
@@ -35,6 +38,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Операторы, которые ставятся сразу за величиной",
+                     image: "",
                      optionA: "Унарные",
                      optionB: "Постфиксные",
                      optionC: "Префиксные",
@@ -44,6 +48,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Операторы, которые применяются к одной величине",
+                     image: "",
                      optionA: "Унарные",
                      optionB: "Постфиксные",
                      optionC: "Префиксные",
@@ -53,6 +58,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Операторы, которые применяются к двум величинам",
+                     image: "",
                      optionA: "Простые",
                      optionB: "Тренарные",
                      optionC: "Унарные",
@@ -62,6 +68,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Операторы, применяемые к трем величинам",
+                     image: "",
                      optionA: "Простые",
                      optionB: "Тренарные",
                      optionC: "Унарные",
@@ -71,6 +78,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой оператор инициализирует или изменяет значение переменной",
+                     image: "",
                      optionA: "=",
                      optionB: "==",
                      optionC: "!=",
@@ -80,6 +88,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой из этих операторов называется оператором присваивания?",
+                     image: "",
                      optionA: "=",
                      optionB: "==",
                      optionC: "!=",
@@ -89,6 +98,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Если левая часть выражения является кортежем с несколькими значениями, можем ли мы присвоить сразу несколько констант или переменных его значениям?",
+                     image: "",
                      optionA: "Да, можем сразу : (x, y) = (1, 2)",
                      optionB: "Можем, но поочередно",
                      optionC: "Нет, не можем",
@@ -98,6 +108,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Может ли оператор присваивания в Swift возвращать значение?",
+                     image: "",
                      optionA: "Да",
                      optionB: "Нет",
                      optionC: "Только булевое значение",
@@ -107,6 +118,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Сколько стандартных арифметических операторов поддерживает Swift?",
+                     image: "",
                      optionA: "3",
                      optionB: "4",
                      optionC: "5",
@@ -116,6 +128,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой арифметический оператор служит для конкатенации строковых значений?",
+                     image: "",
                      optionA: "Умножение",
                      optionB: "Деление",
                      optionC: "Сложение",
@@ -125,6 +138,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой оператор показывает, какое количество b помещается внутри a?",
+                     image: "",
                      optionA: "Присваивания",
                      optionB: "Целочисленного деления",
                      optionC: "Сложения",
@@ -134,6 +148,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой оператор возвращает остаток от деления a на b?",
+                     image: "",
                      optionA: "Деления",
                      optionB: "Целочисленного деления",
                      optionC: "Сложения",
@@ -143,6 +158,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой результат будет в выражении 9 % 4?",
+                     image: "",
                      optionA: "1",
                      optionB: "2",
                      optionC: "3",
@@ -152,6 +168,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой результат будет в выражении -9 % 4?",
+                     image: "",
                      optionA: "1",
                      optionB: "-1",
                      optionC: "2",
@@ -161,6 +178,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой результат будет в выражении 9 % -4?",
+                     image: "",
                      optionA: "2",
                      optionB: "1",
                      optionC: "4",
@@ -170,6 +188,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Как правильно поставить оператор унарного префиксного минуса?",
+                     image: "",
                      optionA: "- 2",
                      optionB: "-1",
                      optionC: "Первый и второй варианты",
@@ -179,6 +198,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Как называется подобный оператор: a += 2?",
+                     image: "",
                      optionA: "Сложения",
                      optionB: "Присваивания",
                      optionC: "Составного деления",
@@ -188,6 +208,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Сколько операторов сравнения поддерживает Swift?",
+                     image: "",
                      optionA: "4",
                      optionB: "8",
                      optionC: "6",
@@ -197,6 +218,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Как пишется оператор сравнения равно?",
+                     image: "",
                      optionA: "==",
                      optionB: "=",
                      optionC: "===",
@@ -206,6 +228,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Как пишется оператор сравнения больше либо равно?",
+                     image: "",
                      optionA: "=>",
                      optionB: "<=",
                      optionC: ">=",
@@ -215,6 +238,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Как пишется оператор проверки на идентичность / тождественность?",
+                     image: "",
                      optionA: "===",
                      optionB: "==",
                      optionC: "=",
@@ -224,6 +248,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Что возвращают выражения с использованием операторов сравнения?",
+                     image: "",
                      optionA: "Bool",
                      optionB: "Int",
                      optionC: "Double",
@@ -233,6 +258,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Синтаксис какого оператора выглядит следующим образом: выражение ? действие1 : действие2?",
+                     image: "",
                      optionA: "Унарный оператор",
                      optionB: "Бинарный инфиксный оператор",
                      optionC: "Оператор присваивания",
@@ -242,6 +268,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какие операторы диапазона есть в Swift?",
+                     image: "",
                      optionA: "Закрытого диапазона",
                      optionB: "Открытого диапазона",
                      optionC: "Два первых варианта верны",
@@ -251,6 +278,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Оператор этого диапазона задает диапазон от a до b, включая сами a и b. При этом значение a не должно превышать b",
+                     image: "",
                      optionA: "Закрытого",
                      optionB: "Замкнутого",
                      optionC: "Открытого",
@@ -260,6 +288,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Оператор этого диапазона задает диапазон от a до b, исключая значение b",
+                     image: "",
                      optionA: "Полузакрутого",
                      optionB: "Полуоткрытого",
                      optionC: "Полузамкнутого",
@@ -269,6 +298,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Диапазон, который продолжается насколько возможно, но только в одну сторону, например, диапазон, который включает все элементы массива, начиная от 2",
+                     image: "",
                      optionA: "Открытый",
                      optionB: "Односторонний",
                      optionC: "Бесконечный",
@@ -278,6 +308,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Сколько стандартных логических операторов поддерживает Swift?",
+                     image: "",
                      optionA: "2",
                      optionB: "4",
                      optionC: "6",
@@ -287,6 +318,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой логический оператор инвертирует булево значение — true меняется на false, а false становится true?",
+                     image: "",
                      optionA: "!",
                      optionB: "&&",
                      optionC: "||",
@@ -296,6 +328,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Какой логический оператор дает на выходе true тогда и только тогда, когда оба его операнда также равны true?",
+                     image: "",
                      optionA: "|| ИЛИ",
                      optionB: "&& И",
                      optionC: "! НЕ",
@@ -305,6 +338,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Если при использовании логического оператора И (&&), первое выражение будет false, будет ли проверяться второе выражение?",
+                     image: "",
                      optionA: "Да",
                      optionB: "Только если второе тоже false",
                      optionC: "Затрудняюсь ответить",
@@ -314,6 +348,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Сколько логических операторов являются инфиксными?",
+                     image: "",
                      optionA: "1",
                      optionB: "2",
                      optionC: "3",
@@ -323,6 +358,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "С помощью этого оператора можно создавать логические выражения, которые будут давать true, если хотя бы один из операндов равен true",
+                     image: "",
                      optionA: "Логическое НЕ !",
                      optionB: "Логическое ИЛИ ||",
                      optionC: "Логическое И &&",
@@ -332,6 +368,7 @@ class OperatorsSet {
                      helpText: ""),
             
             Question(question: "Если левая часть выражения с логическим ИЛИ равна true, будет ли анализироваться правая?",
+                     image: "",
                      optionA: "Обязательно будет",
                      optionB: "Затрудняюсь ответить",
                      optionC: "Не будет, это бессмысленно",

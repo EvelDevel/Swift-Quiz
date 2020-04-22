@@ -27,6 +27,7 @@
 		FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B124445E0600A692AD /* RecordsCaretaker.swift */; };
 		FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B42444773A00A692AD /* HalfRoundButton.swift */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
+		FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		FB8606B124445E0600A692AD /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		FB8606B42444773A00A692AD /* HalfRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRoundButton.swift; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
+		FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledImageHeight.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDatabase.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				FB1D0BAC244D915C00E9C56D /* Cells */,
 				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
+				FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */,
 			);
 			path = "Custom UI ";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
+				FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,

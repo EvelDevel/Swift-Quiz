@@ -8,6 +8,7 @@ class TypesOfDataSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: "Тип данных, отвечающий за хранение отдельных Unicode-символов",
+                     image: "screen",
                      optionA: "Bool",
                      optionB: "Float",
                      optionC: "Character",
@@ -17,6 +18,7 @@ class TypesOfDataSet {
                      helpText: "Первый"),
             
             Question(question: "Тип данных, отвечающий за хранение произвольной текстовой информации",
+                     image: "screen2",
                      optionA: "Float",
                      optionB: "String",
                      optionC: "Character",
@@ -26,6 +28,7 @@ class TypesOfDataSet {
                      helpText: "Второй"),
             
             Question(question: "Какой тип данных хранит числа, не содержащие дробной части (например 42 или -23)?",
+                     image: "",
                      optionA: "UInt",
                      optionB: "Int",
                      optionC: "Float",
@@ -35,6 +38,7 @@ class TypesOfDataSet {
                      helpText: "Третий"),
             
             Question(question: "Все типы в Swift пишутся с ...",
+                     image: "",
                      optionA: "Строчной буквы",
                      optionB: "Греческой цифры",
                      optionC: "Заглавной буквы",
@@ -44,6 +48,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Как получить доступ к минимальному и максимальному значению каждого типа целого числа?",
+                     image: "screen2",
                      optionA: "first и last",
                      optionB: "min и max",
                      optionC: "count",
@@ -53,6 +58,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Какой тип может хранить более длинные дробные числа?",
+                     image: "",
                      optionA: "Double",
                      optionB: "Float",
                      optionC: "Character",
@@ -62,6 +68,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Какой тип хранит только положительные целые числа?",
+                     image: "",
                      optionA: "Int",
                      optionB: "Int64",
                      optionC: "UInt",
@@ -71,6 +78,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Фиксированная последовательность символов, окруженная двойными кавычками",
+                     image: "",
                      optionA: "Числовой литерал",
                      optionB: "Строковый литерал",
                      optionC: "Литерал",
@@ -80,6 +88,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Фиксированная последовательность цифр, начинающаяся либо с цифры, либо с префиксного оператора «-» или «+»",
+                     image: "",
                      optionA: "Оператор",
                      optionB: "Числовой литерал",
                      optionC: "Строковый литерал",
@@ -89,6 +98,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Как можно объявлять тип данных?",
+                     image: "",
                      optionA: "Внятно",
                      optionB: "Неявно",
                      optionC: "Явно или Неявно",
@@ -98,6 +108,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Можно ли использовать переменную или константу, с явным типом данных, до ее инициализации?",
+                     image: "",
                      optionA: "Можно",
                      optionB: "Нельзя",
                      optionC: "Не совсем",
@@ -107,6 +118,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Какой тип может хранить любое целое число в пределах от -2 147 483 648 до 2 147 483 647?",
+                     image: "",
                      optionA: "Uint32",
                      optionB: "Decimal",
                      optionC: "Int32",
@@ -116,6 +128,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Если в коде не указать размер целого числа, каким оно будет?",
+                     image: "",
                      optionA: "Согласно разрядности системы",
                      optionB: "32",
                      optionC: "64",
@@ -125,6 +138,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Как называется объявление переменной с присваиванием ей значения?",
+                     image: "",
                      optionA: "Инаугурация",
                      optionB: "Возведение",
                      optionC: "Объявление",
@@ -134,6 +148,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Какую точность в десятичных цифрах имеет тип Double?",
+                     image: "",
                      optionA: "15 десятичных цифр",
                      optionB: "6 десятичных цифр",
                      optionC: "12 десятичных цифр",
@@ -143,6 +158,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Какую точность в десятичных цифрах имеет тип Float?",
+                     image: "",
                      optionA: "4 десятичных цифр",
                      optionB: "6 десятичных цифр",
                      optionC: "12 десятичных цифр",
@@ -152,6 +168,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Если равноценно использование обоих типов с плавающей точкой, использование какого предпочтительнее?",
+                     image: "",
                      optionA: "Double",
                      optionB: "Float",
                      optionC: "Decimal",
@@ -161,6 +178,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Можете ли вы передать тип Int, если некоторая часть кода ожидает тип String?",
+                     image: "",
                      optionA: "Да",
                      optionB: "Нет",
                      optionC: "В некоторых случаях",
@@ -170,6 +188,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "По сколько кавычек ставится при открытии и закрытии многострочного литерала?",
+                     image: "",
                      optionA: "По 1",
                      optionB: "По 2",
                      optionC: "По 3",
@@ -179,6 +198,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Каким символом(ами) осуществляется перенос строки в многострочном строковом литерале?",
+                     image: "",
                      optionA: "Звездочка",
                      optionB: "Обратный слеш",
                      optionC: "Нажимаем Enter",
@@ -188,6 +208,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Как можно инициализировать пустую строку?",
+                     image: "",
                      optionA: "Пустые кавычки после =",
                      optionB: "= [String]",
                      optionC: "Первые два варианта",
@@ -197,6 +218,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Способ создать новое значение типа String из разных констант, переменных, литералов и выражений, включая их значения в строковый литерал",
+                     image: "",
                      optionA: "Конкатенация",
                      optionB: "Интерполяция",
                      optionC: "Объединение строк",
@@ -206,6 +228,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Каким образом можно добавить значение типа Character к переменной типа String?",
+                     image: "",
                      optionA: "Комбинированные операторы",
                      optionB: "Конкатенация",
                      optionC: "Приведение типов",
@@ -215,6 +238,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Можно ли сравнивать две строки?",
+                     image: "",
                      optionA: "Нет",
                      optionB: "Можно, только на равенство",
                      optionC: "Можно, только на неравенство",
@@ -224,6 +248,7 @@ class TypesOfDataSet {
                      helpText: ""),
             
             Question(question: "Что вернется, при сравнении двух String?",
+                     image: "",
                      optionA: "Bool",
                      optionB: "String",
                      optionC: "Character",
