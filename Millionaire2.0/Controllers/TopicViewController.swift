@@ -14,8 +14,9 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var selectedTopicInformation: UILabel!
     @IBOutlet weak var firstTopic: HalfRoundButton!
     @IBOutlet var topicButtonOutlets: [UIButton]!
+    
+    private var updatedTag = 0
     weak var delegate: TopicViewControllerDelegate?
-    var updatedTag = 0
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
         updateTopicButtons()
@@ -27,13 +28,23 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addQuestionsToArray(sender: UIButton())
-        print(updatedTag)
     }
 }
 
+///
+
+// MARK: Обновление приватной переменной tag
+extension TopicViewController {
+    /// Каждый раз когда мы переходим сюда
+    /// Из InitialController передается номер категории
+    func updateTag(tag: Int) {
+        self.updatedTag = tag
+    }
+}
 
 // MARK: Приводим все кнопки к стоковому виду ("обнуляем")
 extension TopicViewController {
+    
     func updateTopicButtons() {
         for i in 0..<topicButtonOutlets.count {
             topicButtonOutlets[i].setTitleColor(.black, for: .normal)
@@ -41,7 +52,6 @@ extension TopicViewController {
         }
     }
 }
-
 
 // MARK: Обработка выбора категории вопросов
 extension TopicViewController {

@@ -24,9 +24,7 @@ class RecordsViewController: UIViewController {
     }
 }
 
-
 ///
-
 
 // MARK: Настройка таблицы
 extension RecordsViewController: UITableViewDataSource {

@@ -5,6 +5,7 @@
 import UIKit
 
 protocol GameViewControllerDelegate: class {
+    
     func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double, _ topic: String)
 }
 
@@ -22,14 +23,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
-    var allQuestions: [Question] = []
-    var selectedOrder: QuestionOrder?
+    private var allQuestions: [Question] = []
+    private var selectedOrder: QuestionOrder?
+    private var questionNumber: Int = 0
+    private var score: Int = 0
+    private var selectedAnswer: Int = 0
+    private var percent: Double = 0
     
-    var questionNumber: Int = 0
-    var score: Int = 0
-    var selectedAnswer: Int = 0
     weak var delegate: GameViewControllerDelegate?
-    var percent: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,41 +39,57 @@ class GameViewController: UIViewController {
         updateUI()
     }
     
-    // Устанавливаем сет вопросов и их порядок
+    /// Передаем информацию по подсказке при переходе
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "toHelpViewController" {
+            let helpView = segue.destination as! HelpViewController
+            helpView.delegate = self
+            helpView.questionID = allQuestions[questionNumber].questionId
+        }
+    }
+}
+
+///
+
+// MARK: Две основные функции апдейта и перезапуска игры
+extension GameViewController {
+    
+    /// Обновляем показатели
+    func updateUI() {
+        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
+        questionCounter.text = "\(questionNumber + 1) / \(allQuestions.count)"
+        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.count)) * CGFloat(questionNumber + 1)
+    }
+    /// Перезапускаем игру
+    func restartGame() {
+        score = 0
+        questionNumber = 0
+        updateQuestion()
+    }
+}
+
+// MARK: Заполняем массив вопросов в нужном порядке
+extension GameViewController {
+    
     func setArrayAndOrder() {
         selectedOrder = Game.shared.getQuestionOrderSatus()
+        
         if selectedOrder == .straight {
             allQuestions = SelectedTopic.shared.questions
         } else {
             allQuestions = SelectedTopic.shared.questions.shuffled()
         }
     }
-    
-    // Обновляем показатели
-    func updateUI() {
-        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
-        questionCounter.text = "\(questionNumber + 1) / \(allQuestions.count)"
-        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.count)) * CGFloat(questionNumber + 1)
-    }
-    
-    // Перезапускаем игру
-    func restartGame() {
-        score = 0
-        questionNumber = 0
-        updateQuestion()
-    }
-    
-    // Продолжаем игру
-    func continueGame() {
-        questionNumber += 1
-        updateQuestion()
-    }
 }
 
-///
+// MARK: Работа с делегатом HelpViewController
+extension GameViewController: HelpViewControllerDelegate {
+    
+}
 
 // MARK: Расчет процента правильных ответов
 extension GameViewController {
+    
     func updatePercentage() -> Double {
         return Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
     }
@@ -80,8 +97,8 @@ extension GameViewController {
 
 // MARK: Нажали на кнопку ответа
 extension GameViewController {
+    
     @IBAction func answerPressed(_ sender: UIButton) {
-        
         if sender.tag == selectedAnswer {
             score += 1
             changeButtonColor(sender: sender, answerIsCorrect: true)
@@ -101,9 +118,9 @@ extension GameViewController {
     }
 }
 
-
 // MARK: Обновляем вопрос и ответы или выводим алёрт
 extension GameViewController {
+    
     func updateQuestion() {
         questionCounter.text = "1 / \(allQuestions.count)"
         
@@ -133,7 +150,6 @@ extension GameViewController {
     }
 }
 
-
 // MARK: Обработка завершения игры
 extension GameViewController {
     
@@ -161,7 +177,6 @@ extension GameViewController {
         questionNumber -= 1
     }
 }
-
 
 // MARK: Изменение цвета кнопки после ответа
 extension GameViewController {

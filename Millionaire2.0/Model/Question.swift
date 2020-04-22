@@ -11,4 +11,6 @@ struct Question {
     let optionC: String
     let optionD: String
     let correctAnswer: Int
+    let questionId: Int
+    let helpText: String
 }

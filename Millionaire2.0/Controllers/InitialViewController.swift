@@ -6,7 +6,6 @@ import UIKit
 
 // MARK: TODO
 /// Подумать как сделать кнопки выбора тем через лэйаут
-/// Сделать подсказки (теория, ответ), которые можно открывать при ответе на вопрос (но тогда не засчитывается очко)
 /// Сделать возможность добавлять свои вопросы (это жопа, но надо разобраться)
 /// Сделать лэйбл выбранной категории на саму кнопку 
 
@@ -17,8 +16,9 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
+    
     private let recordCaretaker = RecordsCaretaker()
-    var selectedTopicTag = 0
+    private var selectedTopicTag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,14 @@ class InitialViewController: UIViewController {
         addDefaultQuestionSet()
     }
     
-    // Добавляем дефолтную категорию вопросов и загружаем сет
+    /// Добавляем дефолтную категорию вопросов и загружаем сет
     func addDefaultQuestionSet() {
         let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
         SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
         selectedTopic.text = "\(SelectedTopic.shared.topic)"
     }
     
+    /// Присваиваем делегаты во время вызова сигвея, и передаем информацию
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
@@ -40,14 +41,16 @@ class InitialViewController: UIViewController {
         } else if segue.identifier == "toTopicSelection" {
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
-            topicView.updatedTag = selectedTopicTag
+            topicView.updateTag(tag: selectedTopicTag)
         }
     }
 }
 
+///
 
 // MARK: Загружаем информацию о последней игре при входе
 extension InitialViewController {
+    
     func showLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
         if records.count != 0 {
@@ -59,9 +62,9 @@ extension InitialViewController {
     }
 }
 
-
 // MARK: Работа с делегатом GameViewController
 extension InitialViewController: GameViewControllerDelegate {
+    
     func didEndGame(_ result: Int,
                     _ totalQuestion: Int,
                     _ percentOfCorrect: Double,
@@ -73,9 +76,9 @@ extension InitialViewController: GameViewControllerDelegate {
     }
 }
 
-
 // MARK: Работа с делегатом TopicViewController
 extension InitialViewController: TopicViewControllerDelegate {
+    
     func selectedCategory(tag: Int) {
         selectedTopic.text = "\(SelectedTopic.shared.topic)"
         self.selectedTopicTag = tag

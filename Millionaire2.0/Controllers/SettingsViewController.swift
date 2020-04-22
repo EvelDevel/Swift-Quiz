@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
         questionOrderControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
     }
     
-    // Определяем текущее состояние (если меняли настройку последовательности)
+    /// Определяем текущее состояние (если меняли настройку последовательности)
     func questionOrderInitialValue() {
         if Game.shared.getQuestionOrderSatus() == QuestionOrder.straight {
             questionOrderControl.selectedSegmentIndex = 0
@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    // Меняем настройку последовательности при переключении
+    /// Меняем настройку последовательности при переключении
     @objc func selectedValue(target: UISegmentedControl) {
         if target == self.questionOrderControl {
             let segmentIndex = target.selectedSegmentIndex
