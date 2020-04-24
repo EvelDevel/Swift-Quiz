@@ -18,6 +18,7 @@ class HelpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setHelpLabelText()
+        dismissOnClick()
     }
     
     // Поиск нужной подсказки
@@ -29,7 +30,23 @@ class HelpViewController: UIViewController {
         }
     }
     
+    // Сворачиваем подсказку по клику на экран в любом месте
+    func dismissOnClick() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
+        gestureRecognizer.cancelsTouchesInView = false
+        gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func close() {
+        dismissing()
+    }
+    
     @IBAction func backInGameButton(_ sender: HalfRoundButton) {
+        dismissing()
+    }
+    
+    func dismissing() {
         dismiss(animated: true)
     }
 }

@@ -6,7 +6,7 @@ import Foundation
 
 class OperatorsSet {
     static func getQuestions() -> [Question] {
-        return [
+        return [/*
             Question(question: "Минимальная автономная единица, выполняющая команду",
                      image: "",
                      optionA: "Операнд",
@@ -376,6 +376,6 @@ class OperatorsSet {
                      correctAnswer: 3,
                      questionId: 37,
                      helpText: "")
-        ]
+        */]
     }
 }

@@ -19,7 +19,7 @@ class QuestionDatabase {
         return OperatorsSet.getQuestions()
     }
     
-    
+    /*
     // MARK: Коллекции
     static func getQuestionsCollections() -> [Question] {
         return [
@@ -385,5 +385,5 @@ class QuestionDatabase {
                      questionId: 5,
                      helpText: "")
         ]
-    }
+    }*/
 }

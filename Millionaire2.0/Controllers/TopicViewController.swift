@@ -72,6 +72,7 @@ extension TopicViewController {
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы")
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             updatedTag = 1
+            /*
         case 4:
             let newQuestionSet = QuestionDatabase.getQuestionsCollections()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Коллекции")
@@ -208,7 +209,7 @@ extension TopicViewController {
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "ARC")
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             updatedTag = 24
-            
+            */
         default:
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
             topicButtonOutlets[updatedTag].setTitleColor(.white, for: .normal)

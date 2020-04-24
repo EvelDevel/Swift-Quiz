@@ -5,165 +5,206 @@
 import UIKit
 
 protocol GameViewControllerDelegate: class {
-    
-    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double, _ topic: String)
+    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double, _ topic: String, _ helpCounter: Int)
 }
 
 class GameViewController: UIViewController {
-    
     // Labels & view
-    @IBOutlet weak var questionCounter: UILabel!
+    @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImageView: UIImageView!
-    @IBOutlet weak var questionTopHalf: UIView!
-    //@IBOutlet weak var questionImageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var pressHelpCounterLabel: UILabel!
     
-    // Outlets for buttons
+    // Outlets for answer buttons
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
-    private var allQuestions: [Question] = []
-    private var selectedOrder: QuestionOrder?
-    private var questionNumber: Int = 0
-    private var score: Int = 0
-    private var selectedAnswer: Int = 0
-    private var percent: Double = 0
-    private var imageName = ""
+    // Settings, порядок вопросов (случайный или по порядку)
+    private let questionOrder = Game.shared.getQuestionOrderSatus()
     
+    // Private properties
+    private var initialQuestionSet: [Question] = []     // Исходный массив вопросов (после выбора категории)
+    private var currentQuestionNumber: Int = 0          // Текущий номер вопроса в игре
+    private var score: Int = 0                          // Счет, или количество правильных ответов
+    private var correctAnswer: String = ""              // Строковый литерал правильного ответа
+    private var correctAnswerNewPosition = 0            // Новая позиция правильного ответа после shuffle()
+    private var percent: Double = 0                     // Процент правильных ответов
+    private var imageName = ""                          // Имя изображения
+    private var helpCounter = 0                         // Счетчик использованных подсказок
+    private var takeHelpFlag = false                    // Флаг использования подсказки (убираем повторное срабатывание)
+    private var shuffledAnswersArray: [String] = []     // Массив перемешанных вариантов ответа
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setArrayAndOrder()
+        addQuestionSet()
+        firstViewAppear()
         updateQuestion()
-        updateUI()
     }
     
-    /// Передаем информацию по подсказке при переходе
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier  == "toHelpViewController" {
-            let helpView = segue.destination as! HelpViewController
-            helpView.delegate = self
-            helpView.questionID = allQuestions[questionNumber].questionId
+    func addQuestionSet() {
+        if questionOrder == .straight {
+            initialQuestionSet = SelectedTopic.shared.questions
+        } else {
+            initialQuestionSet = SelectedTopic.shared.questions.shuffled()
         }
     }
+    
+    func firstViewAppear() {
+        questionCounterLabel.text = "1 / \(initialQuestionSet.count)"
+        if helpCounter == 0 {
+            pressHelpCounterLabel.text = ""
+        }
+    }
+    
+    func updateQuestion() {
+        resetHelpFlag()
+        setDafaultButtonsColor()
+        addQuestionContent()
+        updateUI()
+    }
 }
+
 
 ///
 
-// MARK: Две основные функции апдейта и перезапуска игры
-extension GameViewController {
-    
-    func updateUI() {
-        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
-        questionCounter.text = "\(questionNumber + 1) / \(allQuestions.count)"
-        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.count)) * CGFloat(questionNumber + 1)
-        
-       
-    }
-    
-    func restartGame() {
-        score = 0
-        questionNumber = 0
-        updateQuestion()
-    }
-}
 
-// MARK: Обновляем вопрос и ответы или выводим алёрт
+// MARK: Работа внутренних функций Update Question
 extension GameViewController {
     
-    func updateQuestion() {
-        questionCounter.text = "1 / \(allQuestions.count)"
-        
-        /// Возвращаем белый цвет ответов
+    func resetHelpFlag() {
+        takeHelpFlag = false
+    }
+    
+    func setDafaultButtonsColor() {
         optionA.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
         optionB.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
         optionC.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
         optionD.backgroundColor = #colorLiteral(red: 0.2880442441, green: 0.5009066463, blue: 0.7458965778, alpha: 1)
+    }
+   
+    func addQuestionContent() {
+        if currentQuestionNumber <= initialQuestionSet.count - 1 {
+            setQuestionImage()
+            setQuestionText()
+            saveCorrectAnswerText()
+            shuffleAnswersPositions()
+            placeShuffledAnswers()
+        } else {
+            endCurrentGame()
+        }
+    }
+    
+    func setQuestionImage() {
+        let imageName = initialQuestionSet[currentQuestionNumber].image
+        if  imageName == "" {
+            questionImageView.image = nil
+            questionLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .light)
+        } else {
+            questionImageView.image = UIImage(named: imageName)
+            questionLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+        }
+    }
+    
+    func setQuestionText() {
+        if Game.shared.getQuestionTextShuffelingStatus() == .random {
+            let shuffledArray = initialQuestionSet[currentQuestionNumber].question.shuffled()
+            questionLabel.text = shuffledArray[0]
+        } else {
+            questionLabel.text = initialQuestionSet[currentQuestionNumber].question[0]
+        }
+    }
+    
+    func saveCorrectAnswerText() {
+        switch initialQuestionSet[currentQuestionNumber].correctAnswer {
+        case 1: correctAnswer = initialQuestionSet[currentQuestionNumber].optionA
+        case 2: correctAnswer = initialQuestionSet[currentQuestionNumber].optionB
+        case 3: correctAnswer = initialQuestionSet[currentQuestionNumber].optionC
+        case 4: correctAnswer = initialQuestionSet[currentQuestionNumber].optionD
+        default: print("Error with correct placing answers")
+        }
+    }
+    
+    func shuffleAnswersPositions() {
+        var tempAnswersArray: [String] = []
+        tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionA)
+        tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionB)
+        tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionC)
+        tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionD)
+        shuffledAnswersArray = tempAnswersArray.shuffled()
         
-        if questionNumber <= allQuestions.count - 1 {
-            
-            /// Устанавливаем фото
-            imageName = allQuestions[questionNumber].image
-            
-            print("Имя фотки: \(imageName)")
-            print("Номер объекта: \(questionNumber)")
-            print("----")
-            
-            if imageName == "" {
-                questionImageView.image = nil
-                //questionImageViewHeight.constant = 0
-                questionLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
-            } else {
-                //questionImageViewHeight.constant = 120
-                questionImageView.image = UIImage(named: imageName)
-                questionLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+        for i in 0..<shuffledAnswersArray.count {
+            if shuffledAnswersArray[i] == correctAnswer {
+                correctAnswerNewPosition = i + 1
             }
-            
-            questionLabel.text = allQuestions[questionNumber].question
-            optionA.setTitle(allQuestions[questionNumber].optionA, for: .normal)
-            optionB.setTitle(allQuestions[questionNumber].optionB, for: .normal)
-            optionC.setTitle(allQuestions[questionNumber].optionC, for: .normal)
-            optionD.setTitle(allQuestions[questionNumber].optionD, for: .normal)
-            selectedAnswer = allQuestions[questionNumber].correctAnswer
-        } else {
-            self.percent = updatePercentage()
-            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
-            let title = """
-                        Вопросы закончились
-                        Ваш счет
-                        """
-            showAlert(title: title, message: "")
-        }
-        updateUI()
-    }
-}
-
-// MARK: Заполняем массив вопросов в нужном порядке
-extension GameViewController {
-    
-    func setArrayAndOrder() {
-        selectedOrder = Game.shared.getQuestionOrderSatus()
-        
-        if selectedOrder == .straight {
-            allQuestions = SelectedTopic.shared.questions
-        } else {
-            allQuestions = SelectedTopic.shared.questions.shuffled()
         }
     }
-}
-
-// MARK: Работа с делегатом HelpViewController
-extension GameViewController: HelpViewControllerDelegate {
     
-}
-
-// MARK: Расчет процента правильных ответов
-extension GameViewController {
+    func placeShuffledAnswers() {
+        optionA.setTitle(shuffledAnswersArray[0], for: .normal)
+        optionB.setTitle(shuffledAnswersArray[1], for: .normal)
+        optionC.setTitle(shuffledAnswersArray[2], for: .normal)
+        optionD.setTitle(shuffledAnswersArray[3], for: .normal)
+    }
     
-    func updatePercentage() -> Double {
-        return Double(String(format: "%.1f", (Double(self.score) / Double(self.allQuestions.count) * 100))) ?? 0
+    func endCurrentGame() {
+        self.percent = updatePercentage()
+        delegate?.didEndGame(score, initialQuestionSet.count, updatePercentage(), SelectedTopic.shared.topic, helpCounter)
+        showAlert(title: "Вопросы закончились", message: "Ваш счет")
+    }
+    
+    func updateUI() {
+        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
+        if currentQuestionNumber == 0 {
+            questionCounterLabel.text = "1 / \(initialQuestionSet.count)"
+        } else {
+            questionCounterLabel.text = "\(currentQuestionNumber + 1) / \(initialQuestionSet.count)"
+        }
+        progressView.frame.size.width = (view.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionNumber + 1)
+    }
+
+    func restartGame() {
+        score = 0
+        currentQuestionNumber = 0
+        updateQuestion()
     }
 }
+
+
+// MARK: Передаем информацию по необходимой подсказке (при переходе на HelpView)
+extension GameViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "toHelpViewController" {
+            let helpView = segue.destination as! HelpViewController
+            helpView.delegate = self
+            helpView.questionID = initialQuestionSet[currentQuestionNumber].questionId
+            if takeHelpFlag == false {
+                helpCounter += 1
+                takeHelpFlag = true
+            }
+            pressHelpCounterLabel.text = "\(helpCounter)"
+        }
+    }
+}
+
 
 // MARK: Нажали на кнопку ответа
 extension GameViewController {
-    
     @IBAction func answerPressed(_ sender: UIButton) {
-        if sender.tag == selectedAnswer {
+        if sender.tag == correctAnswerNewPosition {
             score += 1
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            delegate?.didEndGame(score, allQuestions.count, updatePercentage(), SelectedTopic.shared.topic)
+            delegate?.didEndGame(score, initialQuestionSet.count, updatePercentage(), SelectedTopic.shared.topic, helpCounter)
         }
         
-        if questionNumber < allQuestions.count {
-            questionNumber += 1
+        if currentQuestionNumber < initialQuestionSet.count {
+            currentQuestionNumber += 1
         }
         
         /// Делаем небольшую задержку на смену вопроса
@@ -173,21 +214,29 @@ extension GameViewController {
     }
 }
 
+
+// MARK: Расчет процента правильных ответов
+extension GameViewController {
+    func updatePercentage() -> Double {
+        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
+    }
+}
+
+
 // MARK: Обработка завершения игры
 extension GameViewController {
-    
     func showAlert(title: String, message: String) {
         let record = Record(date: Date(),
                             score: score,
                             topic: SelectedTopic.shared.topic,
-                            totalQuestion: allQuestions.count,
-                            percentOfCorrectAnswer: percent)
-        
+                            totalQuestion: initialQuestionSet.count,
+                            percentOfCorrectAnswer: percent,
+                            helpCounter: helpCounter)
         Game.shared.addRecord(record)
         
-        let alert = UIAlertController(      title: "\(title): \(score)",
-            message: "\(message)",
-            preferredStyle: .alert)
+        let alert = UIAlertController(      title: "\(title)",
+                                            message: "\(message): \(score)",
+                                            preferredStyle: .alert)
         let restartAction = UIAlertAction(  title: "Перезапустить",
                                             style: .default,
                                             handler: { action in self.restartGame() })
@@ -197,13 +246,13 @@ extension GameViewController {
         alert.addAction(restartAction)
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
-        questionNumber -= 1
+        currentQuestionNumber -= 1
     }
 }
 
+
 // MARK: Изменение цвета кнопки после ответа
 extension GameViewController {
-    
     func changeButtonColor(sender: UIButton, answerIsCorrect: Bool) {
         switch sender.tag {
         case 1: optionA.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
@@ -215,3 +264,7 @@ extension GameViewController {
         }
     }
 }
+
+
+// MARK: Работа с делегатом HelpViewController
+extension GameViewController: HelpViewControllerDelegate { }

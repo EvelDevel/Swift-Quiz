@@ -50,6 +50,7 @@ extension RecordsViewController: UITableViewDataSource {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         }
             
+        cell.helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
         cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
         cell.topicLabel.text = "\(record.topic ?? "")"
         cell.dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"

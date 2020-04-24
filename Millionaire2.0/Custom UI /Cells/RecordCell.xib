@@ -68,9 +68,16 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подсказки: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-rt-n09">
+                        <rect key="frame" x="300" y="51" width="60" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lNV-0e-ce0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="6pj-JU-HLv"/>
+                    <constraint firstAttribute="trailing" secondItem="GBc-rt-n09" secondAttribute="trailing" constant="20" id="6rW-It-YOP"/>
                     <constraint firstItem="okO-wb-xuE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="95" id="A71-xf-ceM"/>
                     <constraint firstItem="okO-wb-xuE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="BLy-cx-PL2"/>
                     <constraint firstItem="lNV-0e-ce0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="KUj-UP-VSS"/>
@@ -79,6 +86,7 @@
                     <constraint firstAttribute="bottom" secondItem="okO-wb-xuE" secondAttribute="bottom" constant="12" id="dDW-XG-WpO"/>
                     <constraint firstItem="wKb-de-6E7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gcM-G6-V4E"/>
                     <constraint firstAttribute="trailing" secondItem="okO-wb-xuE" secondAttribute="trailing" constant="13" id="tDZ-PD-t6D"/>
+                    <constraint firstItem="GBc-rt-n09" firstAttribute="bottom" secondItem="okO-wb-xuE" secondAttribute="bottom" id="zBj-DX-90W"/>
                     <constraint firstAttribute="bottom" secondItem="lNV-0e-ce0" secondAttribute="bottom" constant="18" id="zKb-NN-7ul"/>
                 </constraints>
             </tableViewCellContentView>
@@ -86,6 +94,7 @@
             <connections>
                 <outlet property="colorBackground" destination="wKb-de-6E7" id="m9z-JA-WoO"/>
                 <outlet property="dateLabel" destination="ysi-7y-8JZ" id="ato-Qp-iDZ"/>
+                <outlet property="helpCounterLabel" destination="GBc-rt-n09" id="wIg-95-2TD"/>
                 <outlet property="percentOfCorrect" destination="lNV-0e-ce0" id="cNa-UV-Re4"/>
                 <outlet property="scoreLabel" destination="YS0-bb-Hxu" id="3XN-fx-9xu"/>
                 <outlet property="topicLabel" destination="FcE-xq-s4t" id="FK5-au-iGZ"/>

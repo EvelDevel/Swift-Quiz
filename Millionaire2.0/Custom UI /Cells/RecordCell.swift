@@ -12,10 +12,10 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var totalQuestionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var helpCounterLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

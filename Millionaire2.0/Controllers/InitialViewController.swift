@@ -5,17 +5,19 @@
 import UIKit
 
 // MARK: TODO
+/// Добавить всплывающее окно "вы уверены?" на кнопку "очистить рекорды"
+/// Считать общее количество раз, сколько сыграна каждая категория
 /// Подумать как сделать кнопки выбора тем через лэйаут
 /// Сделать возможность добавлять свои вопросы (это жопа, но надо разобраться)
 /// Сделать лэйбл выбранной категории на саму кнопку 
 
 class InitialViewController: UIViewController {
-    
     @IBOutlet weak var selectedTopic: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
+    @IBOutlet weak var helpCounterLabel: UILabel!
     
     private let recordCaretaker = RecordsCaretaker()
     private var selectedTopicTag = 0
@@ -50,11 +52,11 @@ class InitialViewController: UIViewController {
 
 // MARK: Загружаем информацию о последней игре при входе
 extension InitialViewController {
-    
     func showLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
         if records.count != 0 {
             let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+            helpCounterLabel.text = "Использовано подсказок: \(records[0].helpCounter ?? 0)"
             lastTopic.text = "Категория: \(records[0].topic ?? "")"
             lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
             totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
@@ -64,12 +66,13 @@ extension InitialViewController {
 
 // MARK: Работа с делегатом GameViewController
 extension InitialViewController: GameViewControllerDelegate {
-    
     func didEndGame(_ result: Int,
                     _ totalQuestion: Int,
                     _ percentOfCorrect: Double,
-                    _ topic: String) {
+                    _ topic: String,
+                    _ helpCounter: Int) {
         
+        helpCounterLabel.text = "Использовано подсказок: \(helpCounter)"
         lastTopic.text = "Категория: \(topic)"
         lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
         totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
@@ -78,7 +81,6 @@ extension InitialViewController: GameViewControllerDelegate {
 
 // MARK: Работа с делегатом TopicViewController
 extension InitialViewController: TopicViewControllerDelegate {
-    
     func selectedCategory(tag: Int) {
         selectedTopic.text = "\(SelectedTopic.shared.topic)"
         self.selectedTopicTag = tag
