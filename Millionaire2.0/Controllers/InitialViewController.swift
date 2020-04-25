@@ -18,6 +18,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var totalQuestions: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var helpCounterLabel: UILabel!
+    @IBOutlet weak var playedNumberLabel: UILabel!
     
     private let recordCaretaker = RecordsCaretaker()
     private var selectedTopicTag = 0
@@ -60,18 +61,21 @@ extension InitialViewController {
             lastTopic.text = "Категория: \(records[0].topic ?? "")"
             lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
             totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
+            playedNumberLabel.text = "Пройдено вопросов: \(records[0].playedNum ?? 0)"
         }
     }
 }
 
 // MARK: Работа с делегатом GameViewController
 extension InitialViewController: GameViewControllerDelegate {
-    func didEndGame(_ result: Int,
-                    _ totalQuestion: Int,
-                    _ percentOfCorrect: Double,
-                    _ topic: String,
-                    _ helpCounter: Int) {
+    func didEndGame(result: Int,
+                    totalQuestion: Int,
+                    percentOfCorrect: Double,
+                    topic: String,
+                    helpCounter: Int,
+                    playedNum: Int) {
         
+        playedNumberLabel.text = "Пройдено вопросов: \(playedNum)"
         helpCounterLabel.text = "Использовано подсказок: \(helpCounter)"
         lastTopic.text = "Категория: \(topic)"
         lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"

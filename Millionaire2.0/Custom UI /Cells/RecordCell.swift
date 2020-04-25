@@ -13,6 +13,7 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var helpCounterLabel: UILabel!
+    @IBOutlet weak var playedCounterLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

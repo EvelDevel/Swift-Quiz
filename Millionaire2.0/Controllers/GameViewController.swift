@@ -5,7 +5,7 @@
 import UIKit
 
 protocol GameViewControllerDelegate: class {
-    func didEndGame(_ result: Int, _ totalQuestion: Int, _ percentOfCorrect: Double, _ topic: String, _ helpCounter: Int)
+    func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
 }
 
 class GameViewController: UIViewController {
@@ -44,6 +44,10 @@ class GameViewController: UIViewController {
         addQuestionSet()
         firstViewAppear()
         updateQuestion()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        callDelegate()
     }
     
     func addQuestionSet() {
@@ -95,7 +99,8 @@ extension GameViewController {
             shuffleAnswersPositions()
             placeShuffledAnswers()
         } else {
-            endCurrentGame()
+            callDelegate()
+            showAlert(title: "Вопросы закончились", message: "Ваш счет")
         }
     }
     
@@ -151,12 +156,6 @@ extension GameViewController {
         optionD.setTitle(shuffledAnswersArray[3], for: .normal)
     }
     
-    func endCurrentGame() {
-        self.percent = updatePercentage()
-        delegate?.didEndGame(score, initialQuestionSet.count, updatePercentage(), SelectedTopic.shared.topic, helpCounter)
-        showAlert(title: "Вопросы закончились", message: "Ваш счет")
-    }
-    
     func updateUI() {
         scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
         if currentQuestionNumber == 0 {
@@ -165,6 +164,16 @@ extension GameViewController {
             questionCounterLabel.text = "\(currentQuestionNumber + 1) / \(initialQuestionSet.count)"
         }
         progressView.frame.size.width = (view.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionNumber + 1)
+    }
+    
+    func callDelegate() {
+        saveRecord()
+        delegate?.didEndGame(result: score,
+                             totalQuestion: initialQuestionSet.count,
+                             percentOfCorrect: updatePercentage(),
+                             topic: SelectedTopic.shared.topic,
+                             helpCounter: helpCounter,
+                             playedNum: currentQuestionNumber)
     }
 
     func restartGame() {
@@ -200,7 +209,15 @@ extension GameViewController {
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            delegate?.didEndGame(score, initialQuestionSet.count, updatePercentage(), SelectedTopic.shared.topic, helpCounter)
+            if Game.shared.getEndGameStatus() == .endGame {
+                delegate?.didEndGame(result: score,
+                                     totalQuestion: initialQuestionSet.count,
+                                     percentOfCorrect: updatePercentage(),
+                                     topic: SelectedTopic.shared.topic,
+                                     helpCounter: helpCounter,
+                                     playedNum: currentQuestionNumber)
+                showAlert(title: "Ответ неверный", message: "Ваш счет")
+            }
         }
         
         if currentQuestionNumber < initialQuestionSet.count {
@@ -225,14 +242,19 @@ extension GameViewController {
 
 // MARK: Обработка завершения игры
 extension GameViewController {
-    func showAlert(title: String, message: String) {
+    
+    func saveRecord() {
         let record = Record(date: Date(),
                             score: score,
                             topic: SelectedTopic.shared.topic,
                             totalQuestion: initialQuestionSet.count,
                             percentOfCorrectAnswer: percent,
-                            helpCounter: helpCounter)
+                            helpCounter: helpCounter,
+                            playedNum: currentQuestionNumber)
         Game.shared.addRecord(record)
+    }
+    
+    func showAlert(title: String, message: String) {
         
         let alert = UIAlertController(      title: "\(title)",
                                             message: "\(message): \(score)",
@@ -243,6 +265,7 @@ extension GameViewController {
         let quitAction = UIAlertAction(     title: "Выйти",
                                             style: .default,
                                             handler: { action in self.dismiss(animated: true, completion: nil) })
+        
         alert.addAction(restartAction)
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
