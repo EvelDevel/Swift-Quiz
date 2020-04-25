@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionD: UIButton!
     
     // Settings, порядок вопросов (случайный или по порядку)
-    private let questionOrder = Game.shared.getQuestionOrderSatus()
+    private let questionOrder = Game.shared.settings.questionOrder 
     
     // Private properties
     private var initialQuestionSet: [Question] = []     // Исходный массив вопросов (после выбора категории)
@@ -51,10 +51,10 @@ class GameViewController: UIViewController {
     }
     
     func addQuestionSet() {
-        if questionOrder == .straight {
-            initialQuestionSet = SelectedTopic.shared.questions
+        if questionOrder == 0 {
+            initialQuestionSet = SelectedTopic.shared.topic.questionSet
         } else {
-            initialQuestionSet = SelectedTopic.shared.questions.shuffled()
+            initialQuestionSet = SelectedTopic.shared.topic.questionSet.shuffled()
         }
     }
     
@@ -116,7 +116,7 @@ extension GameViewController {
     }
     
     func setQuestionText() {
-        if Game.shared.getQuestionTextShuffelingStatus() == .random {
+        if Game.shared.settings.questionTextShuffeling == 1 {
             let shuffledArray = initialQuestionSet[currentQuestionNumber].question.shuffled()
             questionLabel.text = shuffledArray[0]
         } else {
@@ -167,11 +167,11 @@ extension GameViewController {
     }
     
     func callDelegate() {
-        saveRecord()
+        saveRecordAndSettings()
         delegate?.didEndGame(result: score,
                              totalQuestion: initialQuestionSet.count,
                              percentOfCorrect: updatePercentage(),
-                             topic: SelectedTopic.shared.topic,
+                             topic: SelectedTopic.shared.topic.topicName,
                              helpCounter: helpCounter,
                              playedNum: currentQuestionNumber)
     }
@@ -209,11 +209,11 @@ extension GameViewController {
             changeButtonColor(sender: sender, answerIsCorrect: true)
         } else {
             changeButtonColor(sender: sender, answerIsCorrect: false)
-            if Game.shared.getEndGameStatus() == .endGame {
+            if Game.shared.settings.endGame == 1 {
                 delegate?.didEndGame(result: score,
                                      totalQuestion: initialQuestionSet.count,
                                      percentOfCorrect: updatePercentage(),
-                                     topic: SelectedTopic.shared.topic,
+                                     topic: SelectedTopic.shared.topic.topicName,
                                      helpCounter: helpCounter,
                                      playedNum: currentQuestionNumber)
                 showAlert(title: "Ответ неверный", message: "Ваш счет")
@@ -243,18 +243,31 @@ extension GameViewController {
 // MARK: Обработка завершения игры
 extension GameViewController {
     
-    func saveRecord() {
+    func saveRecordAndSettings() {
         let record = Record(date: Date(),
                             score: score,
-                            topic: SelectedTopic.shared.topic,
+                            topic: SelectedTopic.shared.topic.topicName,
                             totalQuestion: initialQuestionSet.count,
                             percentOfCorrectAnswer: percent,
                             helpCounter: helpCounter,
                             playedNum: currentQuestionNumber)
+        
+        var shuffleToSave = 0
+        if Game.shared.settings.questionTextShuffeling == 1 { shuffleToSave = 1 }
+        var endGameToSave = 0
+        if Game.shared.settings.endGame == 1 { endGameToSave = 1 }
+        
+        let setting = Settings(questionOrder: questionOrder,
+                               questionTextShuffeling: shuffleToSave,
+                               endGame: endGameToSave)
+        
         Game.shared.addRecord(record)
+        Game.shared.saveSettings(setting)
     }
     
     func showAlert(title: String, message: String) {
+        
+        saveRecordAndSettings()
         
         let alert = UIAlertController(      title: "\(title)",
                                             message: "\(message): \(score)",

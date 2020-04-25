@@ -23,7 +23,7 @@ class HelpViewController: UIViewController {
     
     // Поиск нужной подсказки
     func setHelpLabelText() {
-        for question in SelectedTopic.shared.questions {
+        for question in SelectedTopic.shared.topic.questionSet {
             if question.questionId == questionID {
                 helpTextLabel.text = question.helpText
             }

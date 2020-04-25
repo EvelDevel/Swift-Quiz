@@ -5,6 +5,7 @@
 import UIKit
 
 // MARK: TODO
+/// Перебрать все функции гейм-контроллера и расставить их по порядку исходя из логики
 /// Добавить всплывающее окно "вы уверены?" на кнопку "очистить рекорды"
 /// Считать общее количество раз, сколько сыграна каждая категория
 /// Подумать как сделать кнопки выбора тем через лэйаут
@@ -21,7 +22,6 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var playedNumberLabel: UILabel!
     
     private let recordCaretaker = RecordsCaretaker()
-    private var selectedTopicTag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +31,13 @@ class InitialViewController: UIViewController {
     
     /// Добавляем дефолтную категорию вопросов и загружаем сет
     func addDefaultQuestionSet() {
-        let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
-        SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
-        selectedTopic.text = "\(SelectedTopic.shared.topic)"
+        if SelectedTopic.shared.topic.questionSet.count == 0 {
+            let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных", tag: 0)
+            selectedTopic.text = "Типы данных"
+        } else {
+            selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+        }
     }
     
     /// Присваиваем делегаты во время вызова сигвея, и передаем информацию
@@ -44,7 +48,6 @@ class InitialViewController: UIViewController {
         } else if segue.identifier == "toTopicSelection" {
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
-            topicView.updateTag(tag: selectedTopicTag)
         }
     }
 }
@@ -85,8 +88,7 @@ extension InitialViewController: GameViewControllerDelegate {
 
 // MARK: Работа с делегатом TopicViewController
 extension InitialViewController: TopicViewControllerDelegate {
-    func selectedCategory(tag: Int) {
-        selectedTopic.text = "\(SelectedTopic.shared.topic)"
-        self.selectedTopicTag = tag
+    func selectedCategory() {
+        selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
     }
 }

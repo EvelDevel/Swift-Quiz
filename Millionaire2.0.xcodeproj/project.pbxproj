@@ -20,6 +20,10 @@
 		FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */; };
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
+		FB66C04F24542587009FADDE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C04E24542587009FADDE /* Settings.swift */; };
+		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
+		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
+		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
 		FB8606A92441CF7300A692AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* Record.swift */; };
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
@@ -48,6 +52,10 @@
 		FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2EAC9F243EEE130098FAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB2EACA1243EEE130098FAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB66C04E24542587009FADDE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
+		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
 		FB8606A62441CF1C00A692AD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FB8606A82441CF7300A692AD /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 				FB1D0B952446E76F00E9C56D /* Question Sets */,
 				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
+				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
+				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -178,6 +188,8 @@
 			children = (
 				FBECDC5D243F310800BD5583 /* Question.swift */,
 				FB8606A82441CF7300A692AD /* Record.swift */,
+				FB66C04E24542587009FADDE /* Settings.swift */,
+				FB66C0522454782B009FADDE /* Topic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */,
 				FB1D0B972446E7A600E9C56D /* TypesOfDataSet.swift in Sources */,
 				FB1D0BAA244CADE700E9C56D /* TopicViewController.swift in Sources */,
@@ -266,12 +279,15 @@
 				FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
+				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
+				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
+				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

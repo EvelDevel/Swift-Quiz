@@ -7,9 +7,13 @@ import Foundation
 class Game {
     static let shared = Game()
     private let recordCaretaker = RecordsCaretaker()
-    private var currentQyestionOrder: QuestionOrder?
-    private var currentShuffelingQuestionTextStatus: QuestionText?
-    private var currentEndGameStatus: EndGame?
+    private let settingsCaretaker = SettingsCaretaker()
+    
+    private(set) var settings: Settings {
+        didSet {
+            settingsCaretaker.saveSettings(settings: self.settings)
+        }
+    }
     
     private(set) var records: [Record] = [] {
         didSet {
@@ -18,6 +22,7 @@ class Game {
     }
     private init() {
         self.records = self.recordCaretaker.getRecordsList()
+        self.settings = self.settingsCaretaker.getSettings()
     }
 }
 
@@ -27,7 +32,6 @@ class Game {
 
 // MARK: Сохранение рекордов
 extension Game {
-    /// Рекорды: Добавление и удаление рекордов в таблицу
     func addRecord(_ record: Record) {
         self.records.insert(record, at: 0)
     }
@@ -39,25 +43,37 @@ extension Game {
 
 // MARK: Сохранение настроек
 extension Game {
+    func saveSettings(_ settings: Settings) {
+        self.settings = settings
+    }
+}
+
+// MARK: Установка значений настроек
+extension Game {
     /// Настройки: Порядок вопросов в теме
     func setQuestionOrder(setting: QuestionOrder) {
-        self.currentQyestionOrder = setting
+        if setting == .random {
+            self.settings.questionOrder = 1
+        } else {
+            self.settings.questionOrder = 0
+        }
     }
-    func getQuestionOrderSatus() -> QuestionOrder {
-        return currentQyestionOrder ?? QuestionOrder.straight
-    }
+    
     /// Настройки: Смена формулировок вопроса
     func setQuestionTextShuffeling(setting: QuestionText) {
-        self.currentShuffelingQuestionTextStatus = setting
+        if setting == .random {
+            self.settings.questionTextShuffeling = 1
+        } else {
+            self.settings.questionTextShuffeling = 0
+        }
     }
-    func getQuestionTextShuffelingStatus() -> QuestionText {
-        return currentShuffelingQuestionTextStatus ?? QuestionText.same
-    }
+    
     /// Настройки: Поведение при неправильном ответе
     func setEndGame(setting: EndGame) {
-        self.currentEndGameStatus = setting
-    }
-    func getEndGameStatus() -> EndGame {
-        return currentEndGameStatus ?? EndGame.proceed
+        if setting == .endGame {
+            self.settings.endGame = 1
+        } else {
+            self.settings.endGame = 0
+        }
     }
 }

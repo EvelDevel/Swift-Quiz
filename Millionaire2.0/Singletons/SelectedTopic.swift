@@ -9,18 +9,27 @@ import Foundation
 class SelectedTopic {
     
     static let shared = SelectedTopic()
-    private(set) var questions: [Question] = []
-    private(set) var topic: String = ""
+    private let topicCaretaker = TopicCaretaker()
     
-    private init() { }
-    
-    /// Работа с сетом вопросов
-    func addQuestionSet(_ questionSet: [Question], topic: String) {
-        self.questions = questionSet
-        self.topic = topic
+    private(set) var topic: Topic {
+        didSet {
+            topicCaretaker.saveTopic(topic: self.topic)
+        }
     }
+    
+    private init() {
+        self.topic = self.topicCaretaker.getTopic()
+    }
+    
+    func addQuestionSet(_ questionSet: [Question], topic: String, tag: Int) {
+        self.topic.questionSet = questionSet
+        self.topic.topicName = topic
+        self.topic.topicTag = tag
+    }
+    
     func clearQuestions() {
-        self.questions = []
-        self.topic = ""
+        self.topic.questionSet = []
+        self.topic.topicName = ""
+        self.topic.topicTag = 0
     }
 }

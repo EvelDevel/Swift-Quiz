@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Codable {
     let question: [String]
     let image: String
     let optionA: String

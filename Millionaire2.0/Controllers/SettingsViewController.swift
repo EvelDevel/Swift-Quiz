@@ -23,7 +23,6 @@ enum EndGame {
     case endGame
 }
 
-
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var questionOrderControl: UISegmentedControl!
@@ -45,19 +44,21 @@ class SettingsViewController: UIViewController {
     /// Определяем текущее состояние (если меняли настройку последовательности)
     func settingsInitialValues() {
         /// Настройка порядка вопросов
-        if Game.shared.getQuestionOrderSatus() == QuestionOrder.straight {
+        if Game.shared.settings.questionOrder == 0 {
             questionOrderControl.selectedSegmentIndex = 0
         } else {
             questionOrderControl.selectedSegmentIndex = 1
         }
+        
         /// Настройка формулировок вопроса
-        if Game.shared.getQuestionTextShuffelingStatus() == QuestionText.same {
+        if Game.shared.settings.questionTextShuffeling == 0 {
             questionTextControl.selectedSegmentIndex = 0
         } else {
             questionTextControl.selectedSegmentIndex = 1
         }
+        
         /// Настройка поведения при неправильном ответе
-        if Game.shared.getEndGameStatus() == EndGame.proceed {
+        if Game.shared.settings.endGame == 0 {
             endGameControl.selectedSegmentIndex = 0
         } else {
             endGameControl.selectedSegmentIndex = 1

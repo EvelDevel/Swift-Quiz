@@ -3,20 +3,4 @@
    uuid = "F6A373F6-09A4-4DF7-9217-32D736BCA795"
    type = "1"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            uuid = "78DD3E39-1366-4A1B-96A0-488C858C012B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            condition = "Warning:"
-            continueAfterRunningActions = "No"
-            symbolName = ""
-            moduleName = "">
-            <Locations>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>

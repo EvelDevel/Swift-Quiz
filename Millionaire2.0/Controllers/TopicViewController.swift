@@ -6,7 +6,7 @@
 import UIKit
 
 protocol TopicViewControllerDelegate: class {
-    func selectedCategory(tag: Int)
+    func selectedCategory()
 }
 
 class TopicViewController: UIViewController {
@@ -14,8 +14,7 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var selectedTopicInformation: UILabel!
     @IBOutlet weak var firstTopic: HalfRoundButton!
     @IBOutlet var topicButtonOutlets: [UIButton]!
-    
-    private var updatedTag = 0
+
     weak var delegate: TopicViewControllerDelegate?
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
@@ -31,16 +30,9 @@ class TopicViewController: UIViewController {
     }
 }
 
+
 ///
 
-// MARK: Обновление приватной переменной tag
-extension TopicViewController {
-    /// Каждый раз когда мы переходим сюда
-    /// Из InitialController передается номер категории
-    func updateTag(tag: Int) {
-        self.updatedTag = tag
-    }
-}
 
 // MARK: Приводим все кнопки к стоковому виду ("обнуляем")
 extension TopicViewController {
@@ -64,14 +56,14 @@ extension TopicViewController {
         switch sender.tag {
         case 1:
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных", tag: 0)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 0
+            
         case 2:
             let newQuestionSet = QuestionDatabase.getQuestionsOperators()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы", tag: 1)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 1
+            
             /*
         case 4:
             let newQuestionSet = QuestionDatabase.getQuestionsCollections()
@@ -212,11 +204,11 @@ extension TopicViewController {
             */
         default:
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
-            topicButtonOutlets[updatedTag].setTitleColor(.white, for: .normal)
-            topicButtonOutlets[updatedTag].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
-            selectedTopicInformation.text = "Количество вопросов: \(SelectedTopic.shared.questions.count)"
+            topicButtonOutlets[SelectedTopic.shared.topic.topicTag].setTitleColor(.white, for: .normal)
+            topicButtonOutlets[SelectedTopic.shared.topic.topicTag].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
+            selectedTopicInformation.text = "Количество вопросов: \(SelectedTopic.shared.topic.questionSet.count)"
         }
         
-        delegate?.selectedCategory(tag: updatedTag)
+        delegate?.selectedCategory()
     }
 }
