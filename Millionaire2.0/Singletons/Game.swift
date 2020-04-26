@@ -17,6 +17,7 @@ class Game {
     
     private(set) var records: [Record] = [] {
         didSet {
+            print("recordCaretaker.saveRecordsList(records: self.records)")
             recordCaretaker.saveRecordsList(records: self.records)
         }
     }

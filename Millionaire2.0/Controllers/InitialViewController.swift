@@ -5,12 +5,8 @@
 import UIKit
 
 // MARK: TODO
-/// Перебрать все функции гейм-контроллера и расставить их по порядку исходя из логики
 /// Добавить всплывающее окно "вы уверены?" на кнопку "очистить рекорды"
 /// Считать общее количество раз, сколько сыграна каждая категория
-/// Подумать как сделать кнопки выбора тем через лэйаут
-/// Сделать возможность добавлять свои вопросы (это жопа, но надо разобраться)
-/// Сделать лэйбл выбранной категории на саму кнопку 
 
 class InitialViewController: UIViewController {
     @IBOutlet weak var selectedTopic: UILabel!
@@ -20,28 +16,57 @@ class InitialViewController: UIViewController {
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var playedNumberLabel: UILabel!
-    
     private let recordCaretaker = RecordsCaretaker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLastGameInfo()
         addDefaultQuestionSet()
+        showLastGameInfo()
     }
+}
+
+
+// MARK: Загрузка дефолтной категории
+extension InitialViewController {
     
-    /// Добавляем дефолтную категорию вопросов и загружаем сет
     func addDefaultQuestionSet() {
         if SelectedTopic.shared.topic.questionSet.count == 0 {
-            let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных", tag: 0)
+            /// Первый запуск: добавляем сет, обновлянем название
+            let newSet = QuestionDatabase.getQuestionsTypesOfData()
+            SelectedTopic.shared.addQuestionSet(newSet, topic: "Типы данных", tag: 0)
             selectedTopic.text = "Типы данных"
         } else {
+            /// При любом повторном: берем информацию из синглтона
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
         }
     }
+}
+
+
+// MARK: Загружаем информацию о последней игре при входе
+extension InitialViewController {
     
-    /// Присваиваем делегаты во время вызова сигвея, и передаем информацию
+    func showLastGameInfo() {
+        /// Получаем список рекордов
+        let records: [Record] = recordCaretaker.getRecordsList()
+        if records.count != 0 {
+            /// Если он не пуст, инициализируем необходимые значения
+            let roundedPercents = String(format: "%.1f", record[0].percentOfCorrectAnswer ?? 0)
+            helpCounterLabel.text = "Использовано подсказок: \(record[0].helpCounter ?? 0)"
+            lastTopic.text = "Категория: \(record[0].topic ?? "")"
+            lastScore.text = "Правильных ответов: \(record[0].score ?? 0) (\(roundedPercents)%)"
+            totalQuestions.text = "Общее количество вопросов: \(record[0].totalQuestion ?? 0)"
+            playedNumberLabel.text = "Пройдено вопросов: \(record[0].playedNum ?? 0)"
+        }
+    }
+}
+
+
+// MARK: Активация делегатов
+extension InitialViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /// Указываем себя в качестве делегата в момент перехода по нужным segue
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
@@ -52,25 +77,10 @@ class InitialViewController: UIViewController {
     }
 }
 
-///
-
-// MARK: Загружаем информацию о последней игре при входе
-extension InitialViewController {
-    func showLastGameInfo() {
-        let records: [Record] = recordCaretaker.getRecordsList()
-        if records.count != 0 {
-            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
-            helpCounterLabel.text = "Использовано подсказок: \(records[0].helpCounter ?? 0)"
-            lastTopic.text = "Категория: \(records[0].topic ?? "")"
-            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
-            totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
-            playedNumberLabel.text = "Пройдено вопросов: \(records[0].playedNum ?? 0)"
-        }
-    }
-}
 
 // MARK: Работа с делегатом GameViewController
 extension InitialViewController: GameViewControllerDelegate {
+    
     func didEndGame(result: Int,
                     totalQuestion: Int,
                     percentOfCorrect: Double,
@@ -86,8 +96,10 @@ extension InitialViewController: GameViewControllerDelegate {
     }
 }
 
+
 // MARK: Работа с делегатом TopicViewController
 extension InitialViewController: TopicViewControllerDelegate {
+    
     func selectedCategory() {
         selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
     }

@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: Singleton
-
 class SelectedTopic {
     
     static let shared = SelectedTopic()
@@ -13,6 +11,8 @@ class SelectedTopic {
     
     private(set) var topic: Topic {
         didSet {
+            print("Сохраняем обновленный топик в память телефона")
+            print("\(self.topic.questionSet.count)")
             topicCaretaker.saveTopic(topic: self.topic)
         }
     }

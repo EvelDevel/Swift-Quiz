@@ -167,7 +167,13 @@ extension GameViewController {
     }
     
     func callDelegate() {
-        saveRecordAndSettings()
+        
+        print(currentQuestionNumber)
+        print(SelectedTopic.shared.topic.questionSet.count)
+        
+        if currentQuestionNumber != SelectedTopic.shared.topic.questionSet.count {
+            saveRecordAndSettings()
+        }
         delegate?.didEndGame(result: score,
                              totalQuestion: initialQuestionSet.count,
                              percentOfCorrect: updatePercentage(),
@@ -216,6 +222,7 @@ extension GameViewController {
                                      topic: SelectedTopic.shared.topic.topicName,
                                      helpCounter: helpCounter,
                                      playedNum: currentQuestionNumber)
+                saveRecordAndSettings()
                 showAlert(title: "Ответ неверный", message: "Ваш счет")
             }
         }
@@ -250,7 +257,7 @@ extension GameViewController {
                             totalQuestion: initialQuestionSet.count,
                             percentOfCorrectAnswer: percent,
                             helpCounter: helpCounter,
-                            playedNum: currentQuestionNumber)
+                            playedNum: currentQuestionNumber + 1)
         
         var shuffleToSave = 0
         if Game.shared.settings.questionTextShuffeling == 1 { shuffleToSave = 1 }
@@ -266,8 +273,6 @@ extension GameViewController {
     }
     
     func showAlert(title: String, message: String) {
-        
-        saveRecordAndSettings()
         
         let alert = UIAlertController(      title: "\(title)",
                                             message: "\(message): \(score)",

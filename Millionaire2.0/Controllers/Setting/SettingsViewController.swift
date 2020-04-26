@@ -2,26 +2,7 @@
 //  Created by Евгений Никитин on 19.04.2020.
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
-
 import UIKit
-
-// MARK: Настройка последовательности вопросов
-enum QuestionOrder {
-    case straight
-    case random
-}
-
-// MARK: Настройка смены формулировок вопроса
-enum QuestionText {
-    case same
-    case random
-}
-
-// MARK: Настройка поведения при неправильном ответе
-enum EndGame {
-    case proceed
-    case endGame
-}
 
 class SettingsViewController: UIViewController {
     

@@ -24,6 +24,7 @@
 		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
+		FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C057245591AC009FADDE /* SettingEnums.swift */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
 		FB8606A92441CF7300A692AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* Record.swift */; };
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
@@ -56,6 +57,7 @@
 		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
+		FB66C057245591AC009FADDE /* SettingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnums.swift; sourceTree = "<group>"; };
 		FB8606A62441CF1C00A692AD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FB8606A82441CF7300A692AD /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
@@ -79,13 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB1D0B952446E76F00E9C56D /* Question Sets */ = {
+		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */,
 				FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */,
 			);
-			path = "Question Sets";
+			path = Questions;
 			sourceTree = "<group>";
 		};
 		FB1D0B9A2448235F00E9C56D /* Singletons */ = {
@@ -127,9 +130,9 @@
 			children = (
 				FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */,
 				FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */,
-				FBECDC58243F241B00BD5583 /* Controllers */,
 				FBECDC5C243F30D700BD5583 /* Model */,
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
+				FBECDC58243F241B00BD5583 /* Controllers */,
 				FB8606B0244458E300A692AD /* Database */,
 				FB8606B32444771300A692AD /* Custom UI  */,
 				FBECDC59243F259900BD5583 /* View and Storyboards */,
@@ -139,11 +142,19 @@
 			path = Millionaire2.0;
 			sourceTree = "<group>";
 		};
+		FB66C05624559197009FADDE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
+				FB66C057245591AC009FADDE /* SettingEnums.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		FB8606B0244458E300A692AD /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				FB1D0B952446E76F00E9C56D /* Question Sets */,
-				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
+				FB1D0B952446E76F00E9C56D /* Questions */,
 				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
 				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
@@ -168,8 +179,8 @@
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
-				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
 				FB1D0BA9244CADE700E9C56D /* TopicViewController.swift */,
+				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +296,7 @@
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */,
+				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
