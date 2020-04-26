@@ -9,7 +9,7 @@ protocol GameViewControllerDelegate: class {
 }
 
 class GameViewController: UIViewController {
-    // Labels & view
+    
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
@@ -17,16 +17,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var pressHelpCounterLabel: UILabel!
     
-    // Outlets for answer buttons
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
-    // Settings, порядок вопросов (случайный или по порядку)
-    private let questionOrder = Game.shared.settings.questionOrder 
+    private let questionOrder = Game.shared.settings.questionOrder
     
-    // Private properties
     private var initialQuestionSet: [Question] = []     // Исходный массив вопросов (после выбора категории)
     private var currentQuestionNumber: Int = 0          // Текущий номер вопроса в игре
     private var score: Int = 0                          // Счет, или количество правильных ответов
@@ -37,7 +34,7 @@ class GameViewController: UIViewController {
     private var helpCounter = 0                         // Счетчик использованных подсказок
     private var takeHelpFlag = false                    // Флаг использования подсказки (убираем повторное срабатывание)
     private var shuffledAnswersArray: [String] = []     // Массив перемешанных вариантов ответа
-    weak var delegate: GameViewControllerDelegate?
+    weak var delegate: GameViewControllerDelegate?      // Экземпляр делегата
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,20 +46,23 @@ class GameViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         callDelegate()
     }
+}
+
+
+// MARK: ViewDidLoad
+extension GameViewController {
     
     func addQuestionSet() {
+        /// Добавляем сет вопросов (настройки)
         if questionOrder == 0 {
             initialQuestionSet = SelectedTopic.shared.topic.questionSet
-        } else {
-            initialQuestionSet = SelectedTopic.shared.topic.questionSet.shuffled()
-        }
+        } else { initialQuestionSet = SelectedTopic.shared.topic.questionSet.shuffled() }
     }
     
     func firstViewAppear() {
+        /// Первое появление Game View, установка дефолтных лейблов
         questionCounterLabel.text = "1 / \(initialQuestionSet.count)"
-        if helpCounter == 0 {
-            pressHelpCounterLabel.text = ""
-        }
+        if helpCounter == 0 { pressHelpCounterLabel.text = "" }
     }
     
     func updateQuestion() {
@@ -74,10 +74,7 @@ class GameViewController: UIViewController {
 }
 
 
-///
-
-
-// MARK: Работа внутренних функций Update Question
+// MARK: UpdateQuestion
 extension GameViewController {
     
     func resetHelpFlag() {
@@ -104,6 +101,18 @@ extension GameViewController {
         }
     }
     
+    func updateUI() {
+        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
+        if currentQuestionNumber == 0 { questionCounterLabel.text = "1 / \(initialQuestionSet.count)"
+        } else { questionCounterLabel.text = "\(currentQuestionNumber + 1) / \(initialQuestionSet.count)" }
+        progressView.frame.size.width = (view.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionNumber + 1)
+    }
+}
+    
+    
+// MARK: addQuestionContent и updateUI
+extension GameViewController {
+    
     func setQuestionImage() {
         let imageName = initialQuestionSet[currentQuestionNumber].image
         if  imageName == "" {
@@ -116,6 +125,7 @@ extension GameViewController {
     }
     
     func setQuestionText() {
+        /// Загружаем либо первую формилуровку, либо рандомно (настройки)
         if Game.shared.settings.questionTextShuffeling == 1 {
             let shuffledArray = initialQuestionSet[currentQuestionNumber].question.shuffled()
             questionLabel.text = shuffledArray[0]
@@ -125,6 +135,7 @@ extension GameViewController {
     }
     
     func saveCorrectAnswerText() {
+        /// Сохраняем текст правильного ответа (их позиции могут перемешиваться)
         switch initialQuestionSet[currentQuestionNumber].correctAnswer {
         case 1: correctAnswer = initialQuestionSet[currentQuestionNumber].optionA
         case 2: correctAnswer = initialQuestionSet[currentQuestionNumber].optionB
@@ -135,13 +146,14 @@ extension GameViewController {
     }
     
     func shuffleAnswersPositions() {
+        /// Перемешиваем поизиции (настройки)
         var tempAnswersArray: [String] = []
         tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionA)
         tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionB)
         tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionC)
         tempAnswersArray.append(initialQuestionSet[currentQuestionNumber].optionD)
         shuffledAnswersArray = tempAnswersArray.shuffled()
-        
+        /// Находим новое положение правильного ответа
         for i in 0..<shuffledAnswersArray.count {
             if shuffledAnswersArray[i] == correctAnswer {
                 correctAnswerNewPosition = i + 1
@@ -150,65 +162,18 @@ extension GameViewController {
     }
     
     func placeShuffledAnswers() {
+        /// Располагаем ответы в новом порядке на кнопках
         optionA.setTitle(shuffledAnswersArray[0], for: .normal)
         optionB.setTitle(shuffledAnswersArray[1], for: .normal)
         optionC.setTitle(shuffledAnswersArray[2], for: .normal)
         optionD.setTitle(shuffledAnswersArray[3], for: .normal)
-    }
-    
-    func updateUI() {
-        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
-        if currentQuestionNumber == 0 {
-            questionCounterLabel.text = "1 / \(initialQuestionSet.count)"
-        } else {
-            questionCounterLabel.text = "\(currentQuestionNumber + 1) / \(initialQuestionSet.count)"
-        }
-        progressView.frame.size.width = (view.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionNumber + 1)
-    }
-    
-    func callDelegate() {
-        
-        print(currentQuestionNumber)
-        print(SelectedTopic.shared.topic.questionSet.count)
-        
-        if currentQuestionNumber != SelectedTopic.shared.topic.questionSet.count {
-            saveRecordAndSettings()
-        }
-        delegate?.didEndGame(result: score,
-                             totalQuestion: initialQuestionSet.count,
-                             percentOfCorrect: updatePercentage(),
-                             topic: SelectedTopic.shared.topic.topicName,
-                             helpCounter: helpCounter,
-                             playedNum: currentQuestionNumber)
-    }
-
-    func restartGame() {
-        score = 0
-        currentQuestionNumber = 0
-        updateQuestion()
-    }
-}
-
-
-// MARK: Передаем информацию по необходимой подсказке (при переходе на HelpView)
-extension GameViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier  == "toHelpViewController" {
-            let helpView = segue.destination as! HelpViewController
-            helpView.delegate = self
-            helpView.questionID = initialQuestionSet[currentQuestionNumber].questionId
-            if takeHelpFlag == false {
-                helpCounter += 1
-                takeHelpFlag = true
-            }
-            pressHelpCounterLabel.text = "\(helpCounter)"
-        }
     }
 }
 
 
 // MARK: Нажали на кнопку ответа
 extension GameViewController {
+    
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == correctAnswerNewPosition {
             score += 1
@@ -222,6 +187,7 @@ extension GameViewController {
                                      topic: SelectedTopic.shared.topic.topicName,
                                      helpCounter: helpCounter,
                                      playedNum: currentQuestionNumber)
+                
                 saveRecordAndSettings()
                 showAlert(title: "Ответ неверный", message: "Ваш счет")
             }
@@ -236,20 +202,24 @@ extension GameViewController {
             self.updateQuestion()
         }
     }
-}
-
-
-// MARK: Расчет процента правильных ответов
-extension GameViewController {
-    func updatePercentage() -> Double {
-        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
+    
+    func changeButtonColor(sender: UIButton, answerIsCorrect: Bool) {
+        switch sender.tag {
+        case 1: optionA.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        case 2: optionB.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        case 3: optionC.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        case 4: optionD.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        default:
+            print("We have error with answer batton tags")
+        }
     }
 }
 
 
-// MARK: Обработка завершения игры
+// MARK: Завершение игры
 extension GameViewController {
     
+    /// Сохранение рекорда и настроек игры
     func saveRecordAndSettings() {
         let record = Record(date: Date(),
                             score: score,
@@ -272,8 +242,8 @@ extension GameViewController {
         Game.shared.saveSettings(setting)
     }
     
+    /// Выводим alert
     func showAlert(title: String, message: String) {
-        
         let alert = UIAlertController(      title: "\(title)",
                                             message: "\(message): \(score)",
                                             preferredStyle: .alert)
@@ -289,23 +259,53 @@ extension GameViewController {
         present(alert, animated: true, completion: nil)
         currentQuestionNumber -= 1
     }
+    
+    /// Передача информации при выходе с экрана
+    func callDelegate() {
+        /// На случай свайп-дауна (сохраняем рекорд незавершенной игры)
+        if currentQuestionNumber != SelectedTopic.shared.topic.questionSet.count {
+            saveRecordAndSettings()
+        }
+        delegate?.didEndGame(result: score,
+                             totalQuestion: initialQuestionSet.count,
+                             percentOfCorrect: updatePercentage(),
+                             topic: SelectedTopic.shared.topic.topicName,
+                             helpCounter: helpCounter,
+                             playedNum: currentQuestionNumber)
+    }
+
+    /// Перезагрузка игры
+    func restartGame() {
+        score = 0
+        currentQuestionNumber = 0
+        updateQuestion()
+    }
+    
+    func updatePercentage() -> Double {
+        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
+    }
 }
 
 
-// MARK: Изменение цвета кнопки после ответа
+// MARK: Активация делегатов
 extension GameViewController {
-    func changeButtonColor(sender: UIButton, answerIsCorrect: Bool) {
-        switch sender.tag {
-        case 1: optionA.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        case 2: optionB.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        case 3: optionC.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        case 4: optionD.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.5725965062, green: 0.8207090736, blue: 0.4017996262, alpha: 1) : #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        default:
-            print("We have error with answer batton tags")
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "toHelpViewController" {
+            let helpView = segue.destination as! HelpViewController
+            helpView.delegate = self
+            helpView.questionID = initialQuestionSet[currentQuestionNumber].questionId
+            if takeHelpFlag == false {
+                helpCounter += 1
+                takeHelpFlag = true
+            }
+            pressHelpCounterLabel.text = "\(helpCounter)"
         }
     }
 }
 
 
 // MARK: Работа с делегатом HelpViewController
-extension GameViewController: HelpViewControllerDelegate { }
+extension GameViewController: HelpViewControllerDelegate {
+    
+}

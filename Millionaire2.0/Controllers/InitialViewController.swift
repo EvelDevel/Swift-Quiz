@@ -51,12 +51,12 @@ extension InitialViewController {
         let records: [Record] = recordCaretaker.getRecordsList()
         if records.count != 0 {
             /// Если он не пуст, инициализируем необходимые значения
-            let roundedPercents = String(format: "%.1f", record[0].percentOfCorrectAnswer ?? 0)
-            helpCounterLabel.text = "Использовано подсказок: \(record[0].helpCounter ?? 0)"
-            lastTopic.text = "Категория: \(record[0].topic ?? "")"
-            lastScore.text = "Правильных ответов: \(record[0].score ?? 0) (\(roundedPercents)%)"
-            totalQuestions.text = "Общее количество вопросов: \(record[0].totalQuestion ?? 0)"
-            playedNumberLabel.text = "Пройдено вопросов: \(record[0].playedNum ?? 0)"
+            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+            helpCounterLabel.text = "Использовано подсказок: \(records[0].helpCounter ?? 0)"
+            lastTopic.text = "Категория: \(records[0].topic ?? "")"
+            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
+            totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
+            playedNumberLabel.text = "Пройдено вопросов: \(records[0].playedNum ?? 0)"
         }
     }
 }
