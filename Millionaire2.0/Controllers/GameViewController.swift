@@ -107,6 +107,10 @@ extension GameViewController {
         } else { questionCounterLabel.text = "\(currentQuestionNumber + 1) / \(initialQuestionSet.count)" }
         progressView.frame.size.width = (view.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionNumber + 1)
     }
+    
+    func updatePercentage() -> Double {
+        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
+    }
 }
     
     
@@ -225,7 +229,7 @@ extension GameViewController {
                             score: score,
                             topic: SelectedTopic.shared.topic.topicName,
                             totalQuestion: initialQuestionSet.count,
-                            percentOfCorrectAnswer: percent,
+                            percentOfCorrectAnswer: updatePercentage(),
                             helpCounter: helpCounter,
                             playedNum: currentQuestionNumber + 1)
         
@@ -279,10 +283,6 @@ extension GameViewController {
         score = 0
         currentQuestionNumber = 0
         updateQuestion()
-    }
-    
-    func updatePercentage() -> Double {
-        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
     }
 }
 

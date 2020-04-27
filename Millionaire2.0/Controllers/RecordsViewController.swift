@@ -18,16 +18,15 @@ class RecordsViewController: UIViewController {
         super.viewDidLoad()
         cellRegistration()
     }
+}
+
+
+// MARK: Настройка таблицы
+extension RecordsViewController: UITableViewDataSource {
     
     func cellRegistration() {
         tableView.register(UINib(nibName: "RecordCell", bundle: nil), forCellReuseIdentifier: "RecordCell")
     }
-}
-
-///
-
-// MARK: Настройка таблицы
-extension RecordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Game.shared.records.count

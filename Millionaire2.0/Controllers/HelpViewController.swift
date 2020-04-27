@@ -5,8 +5,7 @@
 import UIKit
 
 protocol HelpViewControllerDelegate: class {
-    /// Дописать функцию
-    /// Если нужно будет передавать что-нибудь из подсказки обратно в игру
+    
 }
 
 class HelpViewController: UIViewController {
@@ -21,7 +20,7 @@ class HelpViewController: UIViewController {
         dismissOnClick()
     }
     
-    // Поиск нужной подсказки
+    /// Поиск нужной подсказки
     func setHelpLabelText() {
         for question in SelectedTopic.shared.topic.questionSet {
             if question.questionId == questionID {
@@ -30,12 +29,16 @@ class HelpViewController: UIViewController {
         }
     }
     
-    // Сворачиваем подсказку по клику на экран в любом месте
+    /// Сворачиваем подсказку по клику на экран в любом месте
     func dismissOnClick() {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
         gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
         view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func dismissing() {
+        dismiss(animated: true)
     }
     
     @objc func close() {
@@ -44,9 +47,5 @@ class HelpViewController: UIViewController {
     
     @IBAction func backInGameButton(_ sender: HalfRoundButton) {
         dismissing()
-    }
-    
-    func dismissing() {
-        dismiss(animated: true)
     }
 }
