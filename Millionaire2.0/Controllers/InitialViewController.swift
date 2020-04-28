@@ -7,6 +7,7 @@ import UIKit
 // MARK: TODO
 /// Добавить всплывающее окно "вы уверены?" на кнопку "очистить рекорды"
 /// Считать общее количество раз, сколько сыграна каждая категория
+/// Разобраться с размером картинок или их контент-модом
 
 class InitialViewController: UIViewController {
     @IBOutlet weak var selectedTopic: UILabel!

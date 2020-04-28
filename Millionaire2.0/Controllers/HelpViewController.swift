@@ -5,7 +5,7 @@
 import UIKit
 
 protocol HelpViewControllerDelegate: class {
-    
+    func updateAfterHelp()
 }
 
 class HelpViewController: UIViewController {
@@ -18,6 +18,10 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         setHelpLabelText()
         dismissOnClick()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.updateAfterHelp()
     }
     
     /// Поиск нужной подсказки
