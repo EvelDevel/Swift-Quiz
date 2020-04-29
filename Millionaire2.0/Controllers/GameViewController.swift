@@ -49,7 +49,6 @@ class GameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         if endGameFlag == false {
-            print("endGame(scenario: 1)")
             endGame(scenario: 1)
         }
     }
@@ -162,7 +161,6 @@ extension GameViewController {
             changeButtonColor(sender: sender, false)
     
             if endGameSettings == 1 {
-                print("endGame(scenario: 3)")
                 endGame(scenario: 3)
             }
         }
@@ -203,7 +201,7 @@ extension GameViewController {
             saveRecordAndSettings()
             showAlert(title: "Вопросы закончились", message: "Ваш счет")
         case 3:
-            /// Настройка "завершать игру"
+            /// Опция в настройках "завершать игру"
             callDelegate()
             saveRecordAndSettings()
             showAlert(title: "Ответ неверный", message: "Ваш счет")
@@ -214,22 +212,14 @@ extension GameViewController {
     
     func callDelegate() {
         endGameFlag = true
-        delegate?.didEndGame(result: score,
-                             totalQuestion: initialQuestionSet.count,
-                             percentOfCorrect: updatePercentage(),
-                             topic: SelectedTopic.shared.topic.topicName,
-                             helpCounter: helpCounter,
-                             playedNum: currentQuestionIndex)
+        delegate?.didEndGame(result: score, totalQuestion: initialQuestionSet.count, percentOfCorrect: updatePercentage(),
+                             topic: SelectedTopic.shared.topic.topicName, helpCounter: helpCounter, playedNum: currentQuestionIndex)
     }
     
     func saveRecordAndSettings() {
-        let record = Record(date: Date(),
-                            score: score,
-                            topic: SelectedTopic.shared.topic.topicName,
-                            totalQuestion: initialQuestionSet.count,
-                            percentOfCorrectAnswer: updatePercentage(),
-                            helpCounter: helpCounter,
-                            playedNum: currentQuestionIndex)
+        let record = Record(date: Date(), score: score, topic: SelectedTopic.shared.topic.topicName,
+                            totalQuestion: initialQuestionSet.count, percentOfCorrectAnswer: updatePercentage(),
+                            helpCounter: helpCounter, playedNum: currentQuestionIndex)
         
         var shuffleToSave = 0
         if shuffleSettings == 1 { shuffleToSave = 1 }
@@ -245,22 +235,13 @@ extension GameViewController {
     }
     
     func showAlert(title: String, message: String) {
-        let alert = UIAlertController(      title: "\(title)",
-                                            message: "\(message): \(score)",
-                                            preferredStyle: .alert)
-        let restartAction = UIAlertAction(  title: "Перезапустить",
-                                            style: .default,
-                                            handler: { action in self.restartGame() })
-        let quitAction = UIAlertAction(     title: "Выйти",
-                                            style: .default,
-                                            handler: { action in self.dismiss(animated: true, completion: nil) })
-        
+        let alert = UIAlertController(title: "\(title)", message: "\(message): \(score)", preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
+        let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.dismiss(animated: true, completion: nil) })
         alert.addAction(restartAction)
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
-        if currentQuestionNumber > initialQuestionSet.count {
-            currentQuestionNumber -= 1
-        }
+        currentQuestionNumber -= 1
     }
     
     func restartGame() {
