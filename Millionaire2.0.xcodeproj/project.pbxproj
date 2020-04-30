@@ -20,6 +20,7 @@
 		FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */; };
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
+		FB466D9C245A9EA500653ACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB466D9B245A9EA500653ACB /* GoogleService-Info.plist */; };
 		FB66C04F24542587009FADDE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C04E24542587009FADDE /* Settings.swift */; };
 		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
@@ -53,6 +54,7 @@
 		FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2EAC9F243EEE130098FAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB2EACA1243EEE130098FAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB466D9B245A9EA500653ACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB66C04E24542587009FADDE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				FB8606B32444771300A692AD /* Custom UI  */,
 				FBECDC59243F259900BD5583 /* View and Storyboards */,
 				FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */,
+				FB466D9B245A9EA500653ACB /* GoogleService-Info.plist */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
 			path = Millionaire2.0;
@@ -265,6 +268,7 @@
 			files = (
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
+				FB466D9C245A9EA500653ACB /* GoogleService-Info.plist in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */,
 			);
