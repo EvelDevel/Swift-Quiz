@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>30913724468-685gnuo5lagn5g2t50omp1sssbo2a1jo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.30913724468-685gnuo5lagn5g2t50omp1sssbo2a1jo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCXqi7oM2v4GsN0H4TNvQA3cqfu75WdV8A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>30913724468</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Evel-Devel.Swift-Quiz</string>
+	<key>PROJECT_ID</key>
+	<string>swift-quiz-7e8ae</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swift-quiz-7e8ae.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:30913724468:ios:cbc663ab97ba813a334a61</string>
+	<key>DATABASE_URL</key>
+	<string>https://swift-quiz-7e8ae.firebaseio.com</string>
+</dict>
+</plist>
