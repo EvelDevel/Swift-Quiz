@@ -6,6 +6,7 @@ target 'Swift-Quiz' do
   use_frameworks!
 
 pod 'Firebase/Analytics'
+pod 'Firebase/Database'
 
   # Pods for Swift-Quiz
 
