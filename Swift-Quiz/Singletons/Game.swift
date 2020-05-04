@@ -44,8 +44,6 @@ extension Game {
 }
 
 
-
-
 // MARK: Сохранение настроек
 extension Game {
     func saveSettings(_ settings: Settings) {
@@ -88,6 +86,15 @@ extension Game {
             self.settings.saveRecord = 1
         } else {
             self.settings.saveRecord = 0
+        }
+    }
+    
+    /// Настройки: Звук
+    func setSound(setting: Sound) {
+        if setting == .off {
+            self.settings.sound = 1
+        } else {
+            self.settings.sound = 0
         }
     }
 }

@@ -12,14 +12,6 @@ class RecordsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
     @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
-   
-    @IBAction func clearRecordSound(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on record view") }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +19,30 @@ class RecordsViewController: UIViewController {
     }
 }
 
+
+// MARK: Звуки нажатия кнопки и стирания рекордов
+extension RecordsViewController {
+    
+    @IBAction func clearRecordSound(_ sender: Any) {
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on record view") }
+        }
+    }
+    /// Звук стирания
+    func playTrashSound() {
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "trash", withExtension: "mp3") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on record view with trash sound") }
+        }
+    }
+}
 
 // MARK: Алерт на очистку рекордов и удаление по свайпу ячейки
 extension RecordsViewController {
@@ -55,14 +71,6 @@ extension RecordsViewController {
             tableView.reloadData()
             playTrashSound()
         }
-    }
-    /// Звук стирания
-    func playTrashSound() {
-        guard let url = Bundle.main.url(forResource: "trash", withExtension: "mp3") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on record view with trash sound") }
     }
 }
 

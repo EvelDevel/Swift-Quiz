@@ -1027,6 +1027,24 @@
                                     <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="OKV-89-KOv"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звуки в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8t-6r-3Rk">
+                                <rect key="frame" x="20" y="375" width="280" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fFq-ub-UCg">
+                                <rect key="frame" x="20" y="396" width="280" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Включены"/>
+                                    <segment title="Выключены"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="sht-xZ-4Iz"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1043,6 +1061,8 @@
                             <constraint firstItem="cQP-RU-K1A" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="EY9-CJ-8mx"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="pF7-zb-VIY" secondAttribute="trailing" constant="20" id="Ffi-KA-NhL"/>
                             <constraint firstItem="btd-Aq-lVl" firstAttribute="top" secondItem="cpJ-hq-hTi" secondAttribute="bottom" constant="5" id="GgP-Vp-QVc"/>
+                            <constraint firstItem="t8t-6r-3Rk" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="HAF-HO-IFQ"/>
+                            <constraint firstItem="fFq-ub-UCg" firstAttribute="top" secondItem="t8t-6r-3Rk" secondAttribute="bottom" constant="5" id="HbU-fz-tDE"/>
                             <constraint firstItem="oI0-v5-8TH" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="N8L-WL-2oh"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="1Wm-RF-lUd" secondAttribute="trailing" constant="50" id="O3B-Al-jho"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="X5Y-4O-V4N"/>
@@ -1057,8 +1077,12 @@
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="keU-kG-UYz"/>
                             <constraint firstItem="bur-lL-b4K" firstAttribute="top" secondItem="y09-f6-Yr6" secondAttribute="bottom" constant="5" id="l0x-19-385"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="25" id="njf-0E-ga3"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="t8t-6r-3Rk" secondAttribute="trailing" constant="20" id="rtw-Kr-RlD"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="y09-f6-Yr6" secondAttribute="trailing" constant="20" id="sSh-fx-RFf"/>
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="86" id="uNg-5L-CJd"/>
+                            <constraint firstItem="fFq-ub-UCg" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="xir-Vf-iAU"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="fFq-ub-UCg" secondAttribute="trailing" constant="20" id="xpe-Lk-vXp"/>
+                            <constraint firstItem="t8t-6r-3Rk" firstAttribute="top" secondItem="btd-Aq-lVl" secondAttribute="bottom" constant="15" id="yZk-SU-60F"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="cQP-RU-K1A" secondAttribute="trailing" constant="20" id="zFS-B1-59d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Ss-4y-W7V"/>
@@ -1069,6 +1093,7 @@
                         <outlet property="questionOrderControl" destination="oI0-v5-8TH" id="0uk-hI-NnJ"/>
                         <outlet property="questionTextControl" destination="bur-lL-b4K" id="DHx-pZ-qfN"/>
                         <outlet property="saveRecordControl" destination="btd-Aq-lVl" id="kHd-3s-0Sh"/>
+                        <outlet property="soundControl" destination="fFq-ub-UCg" id="XqF-07-Hgr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWG-TZ-jw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

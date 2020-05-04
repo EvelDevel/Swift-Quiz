@@ -28,6 +28,7 @@ class GameViewController: UIViewController {
     private let shuffleSettings = Game.shared.settings.questionTextShuffeling
     private let endGameSettings = Game.shared.settings.endGame
     private let saveRecordSettings = Game.shared.settings.saveRecord
+    private let soundSettings = Game.shared.settings.sound
     
     private var initialQuestionSet: [Question] = []     // Исходный массив вопросов (после выбора категории)
     private var currentQuestionNumber: Int = 1          // Текущий номер вопроса в игре
@@ -55,7 +56,6 @@ class GameViewController: UIViewController {
             endGame(scenario: 1)
         }
     }
-    
 }
 
 
@@ -63,19 +63,22 @@ class GameViewController: UIViewController {
 extension GameViewController {
     
     @IBAction func helpSound(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on game view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on game view") }
+        }
     }
-
     @IBAction func gameButtonTapped(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button3", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on game view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button3", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on game view") }
+        }
     }
 }
 
@@ -220,17 +223,17 @@ extension GameViewController {
             // Свернули игру не дойдя до конца
             if Game.shared.settings.saveRecord == 1 {
                 callDelegate()
-                saveRecordAndSettings()
+                saveRecord()
             }
         case 2:
             /// Кончились вопросы
             callDelegate()
-            saveRecordAndSettings()
+            saveRecord()
             showAlert(title: "Вопросы закончились", message: "Ваш счет")
         case 3:
             /// Опция в настройках "завершать игру"
             callDelegate()
-            saveRecordAndSettings()
+            saveRecord()
             showAlert(title: "Ответ неверный", message: "Ваш счет")
         default:
             print("we have a problem with scenarios of game ending")
@@ -243,23 +246,11 @@ extension GameViewController {
                              topic: SelectedTopic.shared.topic.topicName, helpCounter: helpCounter, playedNum: currentQuestionIndex)
     }
     
-    func saveRecordAndSettings() {
+    func saveRecord() {
         let record = Record(date: Date(), score: score, topic: SelectedTopic.shared.topic.topicName,
                             totalQuestion: initialQuestionSet.count, percentOfCorrectAnswer: updatePercentage(),
                             helpCounter: helpCounter, playedNum: currentQuestionIndex)
-        
-        var shuffleToSave = 0
-        if shuffleSettings == 1 { shuffleToSave = 1 }
-        var endGameToSave = 0
-        if endGameSettings == 1 { endGameToSave = 1 }
-        
-        let setting = Settings(questionOrder: orderSettings,
-                               questionTextShuffeling: shuffleToSave,
-                               endGame: endGameToSave,
-                               saveRecord: saveRecordSettings)
-        
         Game.shared.addRecord(record)
-        Game.shared.saveSettings(setting)
     }
     
     func showAlert(title: String, message: String) {

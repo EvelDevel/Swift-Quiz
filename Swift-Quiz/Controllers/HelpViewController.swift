@@ -28,11 +28,13 @@ class HelpViewController: UIViewController {
     
     /// Звук нажатия на "вернуться в игру"
     @IBAction func backButtonSound(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on initial view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on initial view") }
+        }
     }
     
     /// Поиск нужной подсказки

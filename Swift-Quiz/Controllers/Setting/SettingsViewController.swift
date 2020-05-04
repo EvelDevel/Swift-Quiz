@@ -11,6 +11,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var questionTextControl: UISegmentedControl!
     @IBOutlet weak var endGameControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
+    @IBOutlet weak var soundControl: UISegmentedControl!
     
     private var audioPlayer = AVAudioPlayer()
     
@@ -22,11 +23,13 @@ class SettingsViewController: UIViewController {
     
     /// Звуки смены положения пикеров
     @IBAction func settingSwitchSound(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on settings view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on settings view") }
+        }
     }
     
     func addingTargets() {
@@ -34,6 +37,7 @@ class SettingsViewController: UIViewController {
         questionTextControl.addTarget(self, action: #selector(questionTextShuffleValue), for: .valueChanged)
         endGameControl.addTarget(self, action: #selector(endGameValue), for: .valueChanged)
         saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
+        soundControl.addTarget(self, action: #selector(soundValue), for: .valueChanged)
     }
     
     /// Определяем текущее состояние (если меняли настройку последовательности)
@@ -61,6 +65,12 @@ class SettingsViewController: UIViewController {
             saveRecordControl.selectedSegmentIndex = 0
         } else {
             saveRecordControl.selectedSegmentIndex = 1
+        }
+        // Настройка звука
+        if Game.shared.settings.sound == 0 {
+            soundControl.selectedSegmentIndex = 0
+        } else {
+            soundControl.selectedSegmentIndex = 1
         }
     }
     
@@ -112,4 +122,15 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    /// Меняем настройку звука
+    @objc func soundValue(target: UISegmentedControl) {
+        if target == self.soundControl {
+            let segmentIndex = target.selectedSegmentIndex
+            if segmentIndex == 0 {
+                Game.shared.setSound(setting: .on)
+            } else {
+                Game.shared.setSound(setting: .off)
+            }
+        }
+    }
 }

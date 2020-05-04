@@ -11,4 +11,5 @@ struct Settings: Codable {
     var questionTextShuffeling: Int
     var endGame: Int
     var saveRecord: Int
+    var sound: Int
 }

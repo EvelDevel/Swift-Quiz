@@ -30,15 +30,17 @@ class InitialViewController: UIViewController {
 }
 
 
-// MARK: Звуки нажатия кнопок главного экрана
+// MARK: Звуки кнопок главного экрана
 extension InitialViewController {
     
     @IBAction func tapButtonSounds(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on initial view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on initial view") }
+        }
     }
 }
 

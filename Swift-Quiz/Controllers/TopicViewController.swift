@@ -25,12 +25,15 @@ class TopicViewController: UIViewController {
         sender.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
     }
     
+    /// Звуки
     @IBAction func tapTopicButtonSound(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch { print("Error witn button sound on topic view") }
+        if Game.shared.settings.sound == 0 {
+            guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+            } catch { print("Error witn button sound on topic view") }
+        }
     }
     
     

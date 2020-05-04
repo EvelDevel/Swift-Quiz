@@ -27,3 +27,9 @@ enum SaveRecord {
     case save
     case dontSave
 }
+
+// Звук
+enum Sound {
+    case on
+    case off
+}
