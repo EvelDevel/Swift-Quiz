@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
     private var helpCounter = 0                         // Счетчик использованных подсказок
     private var endGameFlag = false                     // Флаг для сценария конца игры
     
+    private var audioPlayer = AVAudioPlayer()           // Воспроизедение звуков кнопок
     private var shuffledAnswersArray: [String] = []     // Массив перемешанных вариантов ответа
     weak var delegate: GameViewControllerDelegate?      // Экземпляр делегата
     
@@ -53,6 +54,28 @@ class GameViewController: UIViewController {
         if endGameFlag == false {
             endGame(scenario: 1)
         }
+    }
+    
+}
+
+
+// MARK: Звуки нажатия кнопок игрового экрана
+extension GameViewController {
+    
+    @IBAction func helpSound(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on game view") }
+    }
+
+    @IBAction func gameButtonTapped(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button3", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on game view") }
     }
 }
 

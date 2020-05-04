@@ -3,6 +3,7 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 class SettingsViewController: UIViewController {
     
@@ -11,10 +12,21 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var endGameControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     
+    private var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addingTargets()
         settingsInitialValues()
+    }
+    
+    /// Звуки смены положения пикеров
+    @IBAction func settingSwitchSound(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on settings view") }
     }
     
     func addingTargets() {

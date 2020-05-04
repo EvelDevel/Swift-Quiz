@@ -21,20 +21,24 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var playedNumberLabel: UILabel!
     @IBAction func startGame(_ sender: UIButton) { }
-   
-    /// Buttons tapped sound
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addDefaultQuestionSet()
+        showLastGameInfo()
+    }
+}
+
+
+// MARK: Звуки нажатия кнопок главного экрана
+extension InitialViewController {
+    
     @IBAction func tapButtonSounds(_ sender: Any) {
         guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer.play()
         } catch { print("Error witn button sound on initial view") }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addDefaultQuestionSet()
-        showLastGameInfo()
     }
 }
 

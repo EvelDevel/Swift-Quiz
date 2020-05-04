@@ -12,6 +12,7 @@ protocol HelpViewControllerDelegate: class {
 class HelpViewController: UIViewController {
     
     @IBOutlet weak var helpTextLabel: UILabel!
+    private var audioPlayer = AVAudioPlayer()
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
     
@@ -23,6 +24,15 @@ class HelpViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.updateAfterHelp()
+    }
+    
+    /// Звук нажатия на "вернуться в игру"
+    @IBAction func backButtonSound(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on initial view") }
     }
     
     /// Поиск нужной подсказки

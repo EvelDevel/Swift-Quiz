@@ -969,6 +969,9 @@
                                     <segment title="Случайный"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="0qM-23-g3B"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменение формулировок вопроса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-f6-Yr6">
                                 <rect key="frame" x="20" y="155" width="280" height="18"/>
@@ -984,6 +987,9 @@
                                     <segment title="Менять"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="K9q-0E-8yb"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="После неправильного ответа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO1-Wi-Dxz">
                                 <rect key="frame" x="20" y="224" width="280" height="18"/>
@@ -999,6 +1005,9 @@
                                     <segment title="Завершать игру"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="KVr-4s-JxG"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сохранять рекорд при досрочном выходе?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-hq-hTi">
                                 <rect key="frame" x="20" y="308" width="280" height="16"/>
@@ -1014,6 +1023,9 @@
                                     <segment title="Сохранять"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="OKV-89-KOv"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1103,6 +1115,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="helpSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFE-tH-tE9"/>
                                             <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" id="xzC-Ih-f4Q"/>
                                         </connections>
                                     </button>
@@ -1190,6 +1203,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A0-pE-T1W"/>
+                                                            <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qjD-Vt-8U0"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
@@ -1206,6 +1220,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaH-wk-Rnn"/>
+                                                            <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR4-3E-Sbq"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
@@ -1222,6 +1237,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ID6-Tp-mdU"/>
+                                                            <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gco-zf-gjF"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
@@ -1238,6 +1254,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zo-1V-gOx"/>
+                                                            <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrl-yo-28a"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1312,6 +1329,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="backButtonSound:" destination="tce-xI-jYz" eventType="touchUpInside" id="mvd-zR-tLx"/>
                                     <action selector="backInGameButton:" destination="tce-xI-jYz" eventType="touchUpInside" id="Aee-2L-mWe"/>
                                 </connections>
                             </button>
