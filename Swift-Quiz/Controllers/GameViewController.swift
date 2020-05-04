@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
     private let orderSettings = Game.shared.settings.questionOrder
     private let shuffleSettings = Game.shared.settings.questionTextShuffeling
     private let endGameSettings = Game.shared.settings.endGame
+    private let saveRecordSettings = Game.shared.settings.saveRecord
     
     private var initialQuestionSet: [Question] = []     // Исходный массив вопросов (после выбора категории)
     private var currentQuestionNumber: Int = 1          // Текущий номер вопроса в игре
@@ -193,8 +194,10 @@ extension GameViewController {
         switch scenario {
         case 1:
             // Свернули игру не дойдя до конца
-            callDelegate()
-            saveRecordAndSettings()
+            if Game.shared.settings.saveRecord == 1 {
+                callDelegate()
+                saveRecordAndSettings()
+            }
         case 2:
             /// Кончились вопросы
             callDelegate()
@@ -228,7 +231,8 @@ extension GameViewController {
         
         let setting = Settings(questionOrder: orderSettings,
                                questionTextShuffeling: shuffleToSave,
-                               endGame: endGameToSave)
+                               endGame: endGameToSave,
+                               saveRecord: saveRecordSettings)
         
         Game.shared.addRecord(record)
         Game.shared.saveSettings(setting)

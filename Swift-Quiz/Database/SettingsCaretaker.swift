@@ -25,15 +25,17 @@ class SettingsCaretaker {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return Settings(questionOrder: 0,
                             questionTextShuffeling: 0,
-                            endGame: 0)
+                            endGame: 0,
+                            saveRecord: 0)
         }
         do {
             return try self.decoder.decode(Settings.self, from: data)
         } catch {
             print("We have some problems with retrieving settings from memory")
-            return Settings(questionOrder: 0,
+            return Settings(questionOrder: 0, 
                             questionTextShuffeling: 0,
-                            endGame: 0)
+                            endGame: 0,
+                            saveRecord: 0)
         }
     }
 }

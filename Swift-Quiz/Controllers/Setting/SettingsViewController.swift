@@ -9,6 +9,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var questionOrderControl: UISegmentedControl!
     @IBOutlet weak var questionTextControl: UISegmentedControl!
     @IBOutlet weak var endGameControl: UISegmentedControl!
+    @IBOutlet weak var saveRecordControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,29 +21,34 @@ class SettingsViewController: UIViewController {
         questionOrderControl.addTarget(self, action: #selector(questionOrderValue), for: .valueChanged)
         questionTextControl.addTarget(self, action: #selector(questionTextShuffleValue), for: .valueChanged)
         endGameControl.addTarget(self, action: #selector(endGameValue), for: .valueChanged)
+        saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
     }
     
     /// Определяем текущее состояние (если меняли настройку последовательности)
     func settingsInitialValues() {
-        /// Настройка порядка вопросов
+        // Настройка порядка вопросов
         if Game.shared.settings.questionOrder == 0 {
             questionOrderControl.selectedSegmentIndex = 0
         } else {
             questionOrderControl.selectedSegmentIndex = 1
         }
-        
-        /// Настройка формулировок вопроса
+        // Настройка формулировок вопроса
         if Game.shared.settings.questionTextShuffeling == 0 {
             questionTextControl.selectedSegmentIndex = 0
         } else {
             questionTextControl.selectedSegmentIndex = 1
         }
-        
-        /// Настройка поведения при неправильном ответе
+        // Настройка поведения при неправильном ответе
         if Game.shared.settings.endGame == 0 {
             endGameControl.selectedSegmentIndex = 0
         } else {
             endGameControl.selectedSegmentIndex = 1
+        }
+        // Настройка поведения при досрочном выходе из игры
+        if Game.shared.settings.saveRecord == 0 {
+            saveRecordControl.selectedSegmentIndex = 0
+        } else {
+            saveRecordControl.selectedSegmentIndex = 1
         }
     }
     
@@ -81,4 +87,17 @@ class SettingsViewController: UIViewController {
             }
         }
     }
+    
+    /// Меняем настройку сохранения рекорда при досрочном выходе
+    @objc func saveRecordValue(target: UISegmentedControl) {
+        if target == self.saveRecordControl {
+            let segmentIndex = target.selectedSegmentIndex
+            if segmentIndex == 0 {
+                Game.shared.setSaveRecord(setting: .dontSave)
+            } else {
+                Game.shared.setSaveRecord(setting: .save)
+            }
+        }
+    }
+    
 }

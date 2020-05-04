@@ -4,8 +4,11 @@
 
 import Foundation
 
+/// Все в Int - 0 (default) - 1 (changed)
+
 struct Settings: Codable {
     var questionOrder: Int
     var questionTextShuffeling: Int
     var endGame: Int
+    var saveRecord: Int
 }

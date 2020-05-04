@@ -4,20 +4,26 @@
 
 import Foundation
 
-// MARK: Последовательность вопросов
+// Последовательность вопросов
 enum QuestionOrder {
     case straight
     case random
 }
 
-// MARK: Смена формулировок вопроса
+// Смена формулировок вопроса
 enum QuestionText {
     case same
     case random
 }
 
-// MARK: Поведение при неправильном ответе
+// Поведение при неправильном ответе
 enum EndGame {
     case proceed
     case endGame
+}
+
+// Поведение при досрочном выходе
+enum SaveRecord {
+    case save
+    case dontSave
 }

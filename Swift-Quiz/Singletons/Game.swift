@@ -76,4 +76,13 @@ extension Game {
             self.settings.endGame = 0
         }
     }
+    
+    /// Настройки: Поведение при досрочном выходе из игры
+    func setSaveRecord(setting: SaveRecord) {
+        if setting == .save {
+            self.settings.saveRecord = 1
+        } else {
+            self.settings.saveRecord = 0
+        }
+    }
 }

@@ -928,7 +928,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="НАСТРОЙКИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wm-RF-lUd">
                                 <rect key="frame" x="25" y="25" width="245" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -939,7 +939,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oI0-v5-8TH">
-                                <rect key="frame" x="20" y="114" width="280" height="32"/>
+                                <rect key="frame" x="20" y="109" width="280" height="32"/>
                                 <color key="backgroundColor" red="0.88094860409999998" green="0.88094860409999998" blue="0.88094860409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Прямой"/>
@@ -948,13 +948,13 @@
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменение формулировок вопроса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-f6-Yr6">
-                                <rect key="frame" x="20" y="165" width="280" height="18"/>
+                                <rect key="frame" x="20" y="155" width="280" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bur-lL-b4K">
-                                <rect key="frame" x="20" y="193" width="280" height="32"/>
+                                <rect key="frame" x="20" y="178" width="280" height="32"/>
                                 <color key="backgroundColor" red="0.88094860409999998" green="0.88094860409999998" blue="0.88094860409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Не менять"/>
@@ -963,17 +963,32 @@
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="После неправильного ответа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO1-Wi-Dxz">
-                                <rect key="frame" x="20" y="245" width="280" height="18"/>
+                                <rect key="frame" x="20" y="224" width="280" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-RU-K1A">
-                                <rect key="frame" x="20" y="273" width="280" height="32"/>
+                                <rect key="frame" x="20" y="247" width="280" height="32"/>
                                 <color key="backgroundColor" red="0.88094860409999998" green="0.88094860409999998" blue="0.88094860409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Продолжать"/>
                                     <segment title="Завершать игру"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сохранять рекорд при досрочном выходе?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-hq-hTi">
+                                <rect key="frame" x="20" y="308" width="280" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="btd-Aq-lVl">
+                                <rect key="frame" x="20" y="329" width="280" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Не сохранять"/>
+                                    <segment title="Сохранять"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
@@ -982,24 +997,30 @@
                         <constraints>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" id="1H5-qk-qQ7"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="25" id="4n3-pQ-Z5t"/>
+                            <constraint firstItem="cpJ-hq-hTi" firstAttribute="top" secondItem="cQP-RU-K1A" secondAttribute="bottom" constant="30" id="55e-sh-mKk"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="CO1-Wi-Dxz" secondAttribute="trailing" constant="20" id="7e9-f5-7nJ"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="bur-lL-b4K" secondAttribute="trailing" constant="20" id="7eh-sz-cTe"/>
-                            <constraint firstItem="y09-f6-Yr6" firstAttribute="top" secondItem="oI0-v5-8TH" secondAttribute="bottom" constant="20" id="8lR-x0-sTO"/>
-                            <constraint firstItem="cQP-RU-K1A" firstAttribute="top" secondItem="CO1-Wi-Dxz" secondAttribute="bottom" constant="10" id="Amf-s9-Ndo"/>
+                            <constraint firstItem="btd-Aq-lVl" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="8OW-Js-uCl"/>
+                            <constraint firstItem="y09-f6-Yr6" firstAttribute="top" secondItem="oI0-v5-8TH" secondAttribute="bottom" constant="15" id="8lR-x0-sTO"/>
+                            <constraint firstItem="cQP-RU-K1A" firstAttribute="top" secondItem="CO1-Wi-Dxz" secondAttribute="bottom" constant="5" id="Amf-s9-Ndo"/>
                             <constraint firstItem="bur-lL-b4K" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="ByC-Wv-Lth"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="0JB-Nr-Ypt" secondAttribute="trailing" id="CuB-KM-Bh4"/>
                             <constraint firstItem="cQP-RU-K1A" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="EY9-CJ-8mx"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="pF7-zb-VIY" secondAttribute="trailing" constant="20" id="Ffi-KA-NhL"/>
+                            <constraint firstItem="btd-Aq-lVl" firstAttribute="top" secondItem="cpJ-hq-hTi" secondAttribute="bottom" constant="5" id="GgP-Vp-QVc"/>
                             <constraint firstItem="oI0-v5-8TH" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="N8L-WL-2oh"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="1Wm-RF-lUd" secondAttribute="trailing" constant="50" id="O3B-Al-jho"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="X5Y-4O-V4N"/>
-                            <constraint firstItem="CO1-Wi-Dxz" firstAttribute="top" secondItem="bur-lL-b4K" secondAttribute="bottom" constant="21" id="Ymp-b1-6pv"/>
+                            <constraint firstItem="CO1-Wi-Dxz" firstAttribute="top" secondItem="bur-lL-b4K" secondAttribute="bottom" constant="15" id="Ymp-b1-6pv"/>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" id="Zcv-ed-P8O"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="oI0-v5-8TH" secondAttribute="trailing" constant="20" id="Zw0-Gp-5RS"/>
+                            <constraint firstItem="cpJ-hq-hTi" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="aWB-9v-puE"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="btd-Aq-lVl" secondAttribute="trailing" constant="20" id="eNf-5M-QGm"/>
                             <constraint firstItem="CO1-Wi-Dxz" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="f7d-0r-nqy"/>
-                            <constraint firstItem="oI0-v5-8TH" firstAttribute="top" secondItem="pF7-zb-VIY" secondAttribute="bottom" constant="10" id="h6N-vC-Thu"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="cpJ-hq-hTi" secondAttribute="trailing" constant="20" id="gmA-4J-TrZ"/>
+                            <constraint firstItem="oI0-v5-8TH" firstAttribute="top" secondItem="pF7-zb-VIY" secondAttribute="bottom" constant="5" id="h6N-vC-Thu"/>
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="20" id="keU-kG-UYz"/>
-                            <constraint firstItem="bur-lL-b4K" firstAttribute="top" secondItem="y09-f6-Yr6" secondAttribute="bottom" constant="10" id="l0x-19-385"/>
+                            <constraint firstItem="bur-lL-b4K" firstAttribute="top" secondItem="y09-f6-Yr6" secondAttribute="bottom" constant="5" id="l0x-19-385"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="25" id="njf-0E-ga3"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="y09-f6-Yr6" secondAttribute="trailing" constant="20" id="sSh-fx-RFf"/>
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="86" id="uNg-5L-CJd"/>
@@ -1012,6 +1033,7 @@
                         <outlet property="endGameControl" destination="cQP-RU-K1A" id="zHX-n9-PlI"/>
                         <outlet property="questionOrderControl" destination="oI0-v5-8TH" id="0uk-hI-NnJ"/>
                         <outlet property="questionTextControl" destination="bur-lL-b4K" id="DHx-pZ-qfN"/>
+                        <outlet property="saveRecordControl" destination="btd-Aq-lVl" id="kHd-3s-0Sh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWG-TZ-jw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
