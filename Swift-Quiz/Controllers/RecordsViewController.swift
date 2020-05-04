@@ -10,13 +10,30 @@ class RecordsViewController: UIViewController {
     @IBOutlet weak var cleanRecords: UIButton!
     
     @IBAction func cleanRecords(_ sender: UIButton) {
-        Game.shared.clearRecords()
-        tableView.reloadData()
+        showAlert()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
+    }
+}
+
+
+// MARK: Алерт на удаление рекордов
+extension RecordsViewController {
+    func showAlert() {
+        let alert = UIAlertController(title: "Вы уверены?", message: "Рекорды нельзя будет восстановить", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Удалить", style: .default, handler: { action in self.deleteRecords() })
+        let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: { action in })
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteRecords() {
+        Game.shared.clearRecords()
+        tableView.reloadData()
     }
 }
 
