@@ -3,12 +3,23 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 class RecordsViewController: UIViewController {
+    
+    private var audioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
     @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
+   
+    @IBAction func clearRecordSound(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on record view") }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +46,24 @@ extension RecordsViewController {
     func deleteRecords() {
         Game.shared.clearRecords()
         tableView.reloadData()
+        playTrashSound()
     }
     /// Удаление одной ячейки по свайпу влево
-       func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-           if editingStyle == .delete {
-               Game.shared.deleteOneRecord(index: indexPath.row)
-               tableView.reloadData()
-           }
-       }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            Game.shared.deleteOneRecord(index: indexPath.row)
+            tableView.reloadData()
+            playTrashSound()
+        }
+    }
+    /// Звук стирания
+    func playTrashSound() {
+        guard let url = Bundle.main.url(forResource: "trash", withExtension: "mp3") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on record view with trash sound") }
+    }
 }
 
 

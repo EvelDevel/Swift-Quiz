@@ -31,6 +31,10 @@
 		FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606AC24431A9300A692AD /* RecordsViewController.swift */; };
 		FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B124445E0600A692AD /* RecordsCaretaker.swift */; };
 		FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B42444773A00A692AD /* HalfRoundButton.swift */; };
+		FB87420B24605BF500247923 /* button3.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420724605BF500247923 /* button3.wav */; };
+		FB87420C24605BF500247923 /* button2.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420824605BF500247923 /* button2.wav */; };
+		FB87420D24605BF500247923 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB87420924605BF500247923 /* trash.mp3 */; };
+		FB87420E24605BF500247923 /* button1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420A24605BF500247923 /* button1.wav */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
@@ -63,6 +67,10 @@
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		FB8606B124445E0600A692AD /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		FB8606B42444773A00A692AD /* HalfRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRoundButton.swift; sourceTree = "<group>"; };
+		FB87420724605BF500247923 /* button3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button3.wav; sourceTree = "<group>"; };
+		FB87420824605BF500247923 /* button2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button2.wav; sourceTree = "<group>"; };
+		FB87420924605BF500247923 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
+		FB87420A24605BF500247923 /* button1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button1.wav; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledImageHeight.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				FB8606B0244458E300A692AD /* Database */,
 				FB8606B32444771300A692AD /* Custom UI  */,
 				FBECDC59243F259900BD5583 /* View and Storyboards */,
+				FB87420624605B9C00247923 /* Sounds */,
 				FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
@@ -170,6 +179,17 @@
 				FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */,
 			);
 			path = "Custom UI ";
+			sourceTree = "<group>";
+		};
+		FB87420624605B9C00247923 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FB87420A24605BF500247923 /* button1.wav */,
+				FB87420824605BF500247923 /* button2.wav */,
+				FB87420724605BF500247923 /* button3.wav */,
+				FB87420924605BF500247923 /* trash.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		FBECDC58243F241B00BD5583 /* Controllers */ = {
@@ -264,9 +284,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
+				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
+				FB87420E24605BF500247923 /* button1.wav in Resources */,
 				FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */,
+				FB87420B24605BF500247923 /* button3.wav in Resources */,
+				FB87420C24605BF500247923 /* button2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

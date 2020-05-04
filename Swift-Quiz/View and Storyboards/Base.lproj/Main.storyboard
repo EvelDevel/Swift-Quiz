@@ -77,6 +77,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y03-Wu-b7m"/>
                                                     <segue destination="S6G-sS-x0J" kind="show" identifier="toTopicSelection" id="s5Q-vq-GaG"/>
                                                 </connections>
                                             </button>
@@ -162,6 +163,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wS7-pz-ute"/>
                                                     <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
                                                 </connections>
                                             </button>
@@ -182,6 +184,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="XWP-N3-PbW"/>
                                                     <segue destination="mCG-gu-aKe" kind="show" identifier="toSettingsViewController" id="Glg-Ao-mfx"/>
                                                 </connections>
                                             </button>
@@ -208,6 +211,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="08f-Ce-Siq"/>
+                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="hE6-Bb-3eY"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toGameViewController" id="AS6-ki-vnO"/>
                                                 </connections>
                                             </button>
@@ -288,7 +292,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cleanRecords:" destination="3kd-gf-GXa" eventType="touchUpInside" id="RsQ-Af-7QJ"/>
+                                    <action selector="cleanRecords:" destination="3kd-gf-GXa" eventType="touchUpInside" id="FL5-Zn-vxz"/>
+                                    <action selector="clearRecordSound:" destination="3kd-gf-GXa" eventType="touchUpInside" id="gt6-aC-6dB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РЕКОРДЫ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmK-rs-T9h">
@@ -353,6 +358,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="jEx-q0-LZa"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="rXv-8s-QWp"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tKO-Ax-hNp"/>
                                                 </connections>
@@ -370,6 +376,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="yD1-jx-mLU"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="1SC-OM-hSJ"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="c9c-bs-LPP"/>
                                                 </connections>
@@ -387,6 +394,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="eqf-MP-g6N"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="JhM-Wf-FhK"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tfd-6Y-aCD"/>
                                                 </connections>
@@ -412,6 +420,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="KUJ-GZ-NJ6"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="RJY-0g-P92"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="ee5-TN-WN7"/>
                                                 </connections>
@@ -429,6 +438,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="TjE-Er-ZkU"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="YGo-KU-7lK"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wym-nO-kmC"/>
                                                 </connections>
@@ -446,6 +456,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="Ikz-Ws-dqH"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="056-RE-ECQ"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="LkB-ct-cLa"/>
                                                 </connections>
@@ -463,6 +474,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="2LU-XP-S3A"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="UTm-Fq-iXY"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="lNo-xr-EQO"/>
                                                 </connections>
@@ -488,6 +500,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="X7f-dY-hL1"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="cnj-TB-Frq"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="phx-hu-Wzr"/>
                                                 </connections>
@@ -505,6 +518,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="8FO-bh-iis"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="mC6-2o-SP4"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="wFa-6a-K27"/>
                                                 </connections>
@@ -522,6 +536,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="ecD-fZ-VvW"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="NE7-r9-j81"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="sGb-Hy-yvC"/>
                                                 </connections>
@@ -539,6 +554,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="RQY-j7-g0J"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="M27-ws-My4"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="wMl-PP-1xu"/>
                                                 </connections>
@@ -564,6 +580,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="IBr-xQ-5GA"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="9N0-bP-HnE"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="iHs-MF-3LT"/>
                                                 </connections>
@@ -581,6 +598,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="uAe-wI-D9M"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="2RF-Xa-TdQ"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="BZq-Tj-gc1"/>
                                                 </connections>
@@ -598,6 +616,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="LcY-83-GGC"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Ba6-LU-W8N"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="rsx-AG-i8M"/>
                                                 </connections>
@@ -623,6 +642,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="ZDH-S3-2HE"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="UzO-6K-B3Y"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="xyT-V1-GMI"/>
                                                 </connections>
@@ -640,6 +660,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="07Q-bt-jcr"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="gNU-5R-rWX"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="stF-Uk-yTU"/>
                                                 </connections>
@@ -665,6 +686,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="mQL-zN-kSP"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="ZUD-Tu-mUw"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="gwG-pJ-kzA"/>
                                                 </connections>
@@ -682,6 +704,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="bSg-qg-4tI"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="6lp-ib-Jbw"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="dVf-Cm-2oN"/>
                                                 </connections>
@@ -699,6 +722,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="trV-D4-DYg"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="7UP-PL-EU2"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="xq3-Fm-pSr"/>
                                                 </connections>
@@ -724,6 +748,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="RbK-Ae-7Tv"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="7ft-D4-uCa"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="mAK-da-7LT"/>
                                                 </connections>
@@ -741,6 +766,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="g0d-6F-ByG"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="P67-pW-1lX"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="xrr-QD-RDD"/>
                                                 </connections>
@@ -758,6 +784,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="z2c-7w-aSV"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="sFI-ih-HB9"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="srd-Dk-HAA"/>
                                                 </connections>
@@ -783,6 +810,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="0dd-FX-51L"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="2Ns-Cx-rl1"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="XQz-t4-heV"/>
                                                 </connections>
@@ -800,6 +828,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="iy2-WO-iCP"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="N1Q-Ji-iP5"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wKz-xu-vl7"/>
                                                 </connections>
@@ -817,6 +846,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tapTopicButtonSound:" destination="S6G-sS-x0J" eventType="touchUpInside" id="KNZ-jg-wPy"/>
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="2ae-aA-LNl"/>
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="iYl-Hl-UiH"/>
                                                 </connections>

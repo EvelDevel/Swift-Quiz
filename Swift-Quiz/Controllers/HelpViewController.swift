@@ -3,6 +3,7 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 protocol HelpViewControllerDelegate: class {
     func updateAfterHelp()

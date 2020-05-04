@@ -3,6 +3,7 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 protocol GameViewControllerDelegate: class {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)

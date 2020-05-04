@@ -3,20 +3,33 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 // MARK: TODO
 /// Добавить звуки нажатия клавиш
 /// Считать общее количество раз, сколько сыграна каждая категория
 
 class InitialViewController: UIViewController {
+    
+    private var audioPlayer = AVAudioPlayer()
+    private let recordCaretaker = RecordsCaretaker()
+    
     @IBOutlet weak var selectedTopic: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
-    @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var playedNumberLabel: UILabel!
-    private let recordCaretaker = RecordsCaretaker()
+    @IBAction func startGame(_ sender: UIButton) { }
+   
+    /// Buttons tapped sound
+    @IBAction func tapButtonSounds(_ sender: Any) {
+        guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch { print("Error witn button sound on initial view") }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
