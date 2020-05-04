@@ -8,10 +8,7 @@ class RecordsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
-    
-    @IBAction func cleanRecords(_ sender: UIButton) {
-        showAlert()
-    }
+    @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,35 +17,47 @@ class RecordsViewController: UIViewController {
 }
 
 
-// MARK: Алерт на удаление рекордов
+// MARK: Алерт на очистку рекордов и удаление по свайпу ячейки
 extension RecordsViewController {
-    func showAlert() {
-        let alert = UIAlertController(title: "Вы уверены?", message: "Рекорды нельзя будет восстановить", preferredStyle: .alert)
-        let deleteAction = UIAlertAction(title: "Удалить", style: .default, handler: { action in self.deleteRecords() })
-        let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: { action in })
-        alert.addAction(deleteAction)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
-    }
     
+    /// Вызов алерта
+    func showAlert() {
+        if Game.shared.records.count != 0 {
+            let alert = UIAlertController(title: "Вы уверены?", message: "Рекорды нельзя будет восстановить", preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Удалить", style: .default, handler: { action in self.deleteRecords() })
+            let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: { action in })
+            alert.addAction(deleteAction)
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    /// Удаление всех рекордов (очистка)
     func deleteRecords() {
         Game.shared.clearRecords()
         tableView.reloadData()
     }
+    /// Удаление одной ячейки по свайпу влево
+       func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+           if editingStyle == .delete {
+               Game.shared.deleteOneRecord(index: indexPath.row)
+               tableView.reloadData()
+           }
+       }
 }
 
 
 // MARK: Настройка таблицы
 extension RecordsViewController: UITableViewDataSource {
     
+    /// Регистрация ячейки
     func cellRegistration() {
         tableView.register(UINib(nibName: "RecordCell", bundle: nil), forCellReuseIdentifier: "RecordCell")
     }
-    
+    /// Количество ячеек в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Game.shared.records.count
     }
-    
+    /// Настройка ячейки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as? RecordCell
@@ -65,7 +74,7 @@ extension RecordsViewController: UITableViewDataSource {
         } else {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         }
-            
+        
         cell.playedCounterLabel.text = "Пройдено вопросов: \(record.playedNum ?? 0)"
         cell.helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
         cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
