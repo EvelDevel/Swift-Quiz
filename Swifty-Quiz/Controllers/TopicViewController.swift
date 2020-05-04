@@ -44,9 +44,6 @@ class TopicViewController: UIViewController {
 }
 
 
-///
-
-
 // MARK: Приводим все кнопки к стоковому виду ("обнуляем")
 extension TopicViewController {
     

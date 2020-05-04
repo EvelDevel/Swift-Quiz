@@ -49,7 +49,7 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		FB2EAC90243EEE0F0098FAC3 /* Swift-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2EAC90243EEE0F0098FAC3 /* Swifty-Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty-Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		FB2EAC87243EEE0F0098FAC3 = {
 			isa = PBXGroup;
 			children = (
-				FB2EAC92243EEE0F0098FAC3 /* Swift-Quiz */,
+				FB2EAC92243EEE0F0098FAC3 /* Swifty-Quiz */,
 				FB2EAC91243EEE0F0098FAC3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,12 +128,12 @@
 		FB2EAC91243EEE0F0098FAC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB2EAC90243EEE0F0098FAC3 /* Swift-Quiz.app */,
+				FB2EAC90243EEE0F0098FAC3 /* Swifty-Quiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB2EAC92243EEE0F0098FAC3 /* Swift-Quiz */ = {
+		FB2EAC92243EEE0F0098FAC3 /* Swifty-Quiz */ = {
 			isa = PBXGroup;
 			children = (
 				FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */,
@@ -148,7 +148,7 @@
 				FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
-			path = "Swift-Quiz";
+			path = "Swifty-Quiz";
 			sourceTree = "<group>";
 		};
 		FB66C05624559197009FADDE /* Setting */ = {
@@ -228,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB2EAC8F243EEE0F0098FAC3 /* Swift-Quiz */ = {
+		FB2EAC8F243EEE0F0098FAC3 /* Swifty-Quiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB2EACA4243EEE130098FAC3 /* Build configuration list for PBXNativeTarget "Swift-Quiz" */;
+			buildConfigurationList = FB2EACA4243EEE130098FAC3 /* Build configuration list for PBXNativeTarget "Swifty-Quiz" */;
 			buildPhases = (
 				FB2EAC8C243EEE0F0098FAC3 /* Sources */,
 				FB2EAC8D243EEE0F0098FAC3 /* Frameworks */,
@@ -240,9 +240,9 @@
 			);
 			dependencies = (
 			);
-			name = "Swift-Quiz";
+			name = "Swifty-Quiz";
 			productName = Millionaire2.0;
-			productReference = FB2EAC90243EEE0F0098FAC3 /* Swift-Quiz.app */;
+			productReference = FB2EAC90243EEE0F0098FAC3 /* Swifty-Quiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB2EAC8B243EEE0F0098FAC3 /* Build configuration list for PBXProject "Swift-Quiz" */;
+			buildConfigurationList = FB2EAC8B243EEE0F0098FAC3 /* Build configuration list for PBXProject "Swifty-Quiz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -273,7 +273,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB2EAC8F243EEE0F0098FAC3 /* Swift-Quiz */,
+				FB2EAC8F243EEE0F0098FAC3 /* Swifty-Quiz */,
 			);
 		};
 /* End PBXProject section */
@@ -470,13 +470,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPBLB2422Y;
-				INFOPLIST_FILE = "Swift-Quiz/Info.plist";
+				INFOPLIST_FILE = "Swifty-Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swift-Quiz";
-				PRODUCT_NAME = "Swift-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
+				PRODUCT_NAME = "Swifty-Quiz";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -488,13 +488,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPBLB2422Y;
-				INFOPLIST_FILE = "Swift-Quiz/Info.plist";
+				INFOPLIST_FILE = "Swifty-Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swift-Quiz";
-				PRODUCT_NAME = "Swift-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
+				PRODUCT_NAME = "Swifty-Quiz";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -503,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB2EAC8B243EEE0F0098FAC3 /* Build configuration list for PBXProject "Swift-Quiz" */ = {
+		FB2EAC8B243EEE0F0098FAC3 /* Build configuration list for PBXProject "Swifty-Quiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB2EACA2243EEE130098FAC3 /* Debug */,
@@ -512,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB2EACA4243EEE130098FAC3 /* Build configuration list for PBXNativeTarget "Swift-Quiz" */ = {
+		FB2EACA4243EEE130098FAC3 /* Build configuration list for PBXNativeTarget "Swifty-Quiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB2EACA5243EEE130098FAC3 /* Debug */,

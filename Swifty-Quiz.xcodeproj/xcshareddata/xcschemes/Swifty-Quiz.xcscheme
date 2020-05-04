@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-               BuildableName = "Swift-Quiz.app"
-               BlueprintName = "Swift-Quiz"
-               ReferencedContainer = "container:Swift-Quiz.xcodeproj">
+               BuildableName = "Swifty-Quiz.app"
+               BlueprintName = "Swifty-Quiz"
+               ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-            BuildableName = "Swift-Quiz.app"
-            BlueprintName = "Swift-Quiz"
-            ReferencedContainer = "container:Swift-Quiz.xcodeproj">
+            BuildableName = "Swifty-Quiz.app"
+            BlueprintName = "Swifty-Quiz"
+            ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-            BuildableName = "Swift-Quiz.app"
-            BlueprintName = "Swift-Quiz"
-            ReferencedContainer = "container:Swift-Quiz.xcodeproj">
+            BuildableName = "Swifty-Quiz.app"
+            BlueprintName = "Swifty-Quiz"
+            ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
