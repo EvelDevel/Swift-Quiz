@@ -3,7 +3,6 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import AVFoundation
 
 // MARK: TODO
 /// Добавить звуки нажатия клавиш
@@ -11,9 +10,7 @@ import AVFoundation
 
 class InitialViewController: UIViewController {
     
-    private var audioPlayer = AVAudioPlayer()
     private let recordCaretaker = RecordsCaretaker()
-    
     @IBOutlet weak var selectedTopic: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
@@ -34,13 +31,7 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
     
     @IBAction func tapButtonSounds(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on initial view") }
-        }
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
 }
 

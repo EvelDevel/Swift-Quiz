@@ -3,7 +3,6 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import AVFoundation
 
 protocol GameViewControllerDelegate: class {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
@@ -41,7 +40,6 @@ class GameViewController: UIViewController {
     private var helpCounter = 0                         // Счетчик использованных подсказок
     private var endGameFlag = false                     // Флаг для сценария конца игры
     
-    private var audioPlayer = AVAudioPlayer()           // Воспроизедение звуков кнопок
     private var shuffledAnswersArray: [String] = []     // Массив перемешанных вариантов ответа
     weak var delegate: GameViewControllerDelegate?      // Экземпляр делегата
     
@@ -62,24 +60,8 @@ class GameViewController: UIViewController {
 // MARK: Звуки нажатия кнопок игрового экрана
 extension GameViewController {
     
-    @IBAction func helpSound(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on game view") }
-        }
-    }
-    @IBAction func gameButtonTapped(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button3", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on game view") }
-        }
-    }
+    @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+    @IBAction func gameButtonTapped(_ sender: Any) { SoundPlayer.shared.playSound(sound: .answerButtons) }
 }
 
 

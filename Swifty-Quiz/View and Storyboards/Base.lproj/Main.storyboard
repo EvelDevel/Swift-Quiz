@@ -10,7 +10,7 @@
         <!--Initial View Controller-->
         <scene sceneID="crJ-bM-xcy">
             <objects>
-                <viewController id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbL-mg-kmy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="210" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -146,7 +146,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-al-yFZ" userLabel="Record&amp;Setting">
                                         <rect key="frame" x="0.0" y="182" width="260" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -167,7 +167,7 @@
                                                     <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="133" y="0.0" width="127" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -193,7 +193,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WTE-VV-ica" userLabel="Game&amp;Topic">
                                         <rect key="frame" x="0.0" y="227" width="260" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -244,7 +244,7 @@
         <!--Records View Controller-->
         <scene sceneID="AUf-56-Jv7">
             <objects>
-                <viewController storyboardIdentifier="RecordsViewController" id="3kd-gf-GXa" customClass="RecordsViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordsViewController" id="3kd-gf-GXa" customClass="RecordsViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xqm-Am-DQd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +274,7 @@
                                     <outlet property="delegate" destination="3kd-gf-GXa" id="FJp-ne-i9i"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                 <rect key="frame" x="155" y="20" width="140" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -334,7 +334,7 @@
         <!--Topic View Controller-->
         <scene sceneID="rpP-Bm-meN">
             <objects>
-                <viewController id="S6G-sS-x0J" customClass="TopicViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S6G-sS-x0J" customClass="TopicViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMS-Ou-XQN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +345,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9Sb-2x-7kr" userLabel="First Row">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9w-Yf-d2c" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9w-Yf-d2c" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -363,7 +363,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="tKO-Ax-hNp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-zn-rAp" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-zn-rAp" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="103.5" y="0.0" width="83" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -381,7 +381,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="c9c-bs-LPP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-ig-dc0" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-ig-dc0" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="193.5" y="0.0" width="86.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -407,7 +407,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Wjl-qW-sBA" userLabel="Second Row">
                                         <rect key="frame" x="0.0" y="35" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a99-7x-Of1" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a99-7x-Of1" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -425,7 +425,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="ee5-TN-WN7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfq-XI-ZLa" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfq-XI-ZLa" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="51.5" y="0.0" width="54.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -443,7 +443,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wym-nO-kmC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3v-oW-EmS" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3v-oW-EmS" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="113" y="0.0" width="67.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -461,7 +461,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="LkB-ct-cLa"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpI-Zf-DGr" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpI-Zf-DGr" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="187.5" y="0.0" width="92.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -487,7 +487,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="U3H-HO-oNt" userLabel="Third Row">
                                         <rect key="frame" x="0.0" y="70" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcJ-cQ-IqY" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcJ-cQ-IqY" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -505,7 +505,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="phx-hu-Wzr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-r7-Z1o" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-r7-Z1o" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="82" y="0.0" width="53" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -523,7 +523,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="wFa-6a-K27"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eow-oz-3h3" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eow-oz-3h3" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="142" y="0.0" width="67" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -541,7 +541,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="sGb-Hy-yvC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYu-9a-A6N" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYu-9a-A6N" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="216" y="0.0" width="64" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -567,7 +567,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-us-uNQ" userLabel="Fourth Row">
                                         <rect key="frame" x="0.0" y="105" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-f1-lwA" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-f1-lwA" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -585,7 +585,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="iHs-MF-3LT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-FC-rK5" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-FC-rK5" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="83" y="0.0" width="89" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -603,7 +603,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="BZq-Tj-gc1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-jU-Ylz" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-jU-Ylz" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="179" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -629,7 +629,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xVi-jh-Pde" userLabel="Fifth Row">
                                         <rect key="frame" x="0.0" y="140" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFV-Wp-Wek" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFV-Wp-Wek" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="132" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -647,7 +647,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="xyT-V1-GMI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uj8-R8-hyL" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uj8-R8-hyL" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="139" y="0.0" width="141" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -673,7 +673,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pEa-cu-rTO" userLabel="Sixth Row">
                                         <rect key="frame" x="0.0" y="175" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-YT-CX8" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-YT-CX8" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -691,7 +691,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="gwG-pJ-kzA"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8W-D7-PrR" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8W-D7-PrR" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="78" y="0.0" width="115" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -709,7 +709,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="dVf-Cm-2oN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38u-3N-LtQ" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38u-3N-LtQ" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -735,7 +735,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="U5P-4M-lup" userLabel="Seventh Row">
                                         <rect key="frame" x="0.0" y="210" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-5R-JfC" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-5R-JfC" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="118.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -753,7 +753,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="mAK-da-7LT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttn-YM-pDn" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttn-YM-pDn" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="125.5" y="0.0" width="77.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -771,7 +771,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="xrr-QD-RDD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-We-Rp7" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-We-Rp7" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="210" y="0.0" width="70" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -797,7 +797,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DAT-pY-ieE" userLabel="Eighth Row">
                                         <rect key="frame" x="0.0" y="245" width="280" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCE-cC-BeO" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCE-cC-BeO" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -815,7 +815,7 @@
                                                     <action selector="topicButtonPressed:" destination="S6G-sS-x0J" eventType="touchUpInside" id="XQz-t4-heV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FK-4q-drx" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FK-4q-drx" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="99" y="0.0" width="109.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -833,7 +833,7 @@
                                                     <action selector="topicButtonPressed:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wKz-xu-vl7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXw-6b-Cg2" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXw-6b-Cg2" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                 <rect key="frame" x="213.5" y="0.0" width="66.5" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -937,7 +937,7 @@
         <!--Settings View Controller-->
         <scene sceneID="JT5-CO-yaY">
             <objects>
-                <viewController id="mCG-gu-aKe" customClass="SettingsViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mCG-gu-aKe" customClass="SettingsViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qie-bt-59L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1103,7 +1103,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1122,7 +1122,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="HelpButton" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="HelpButton" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="290" y="25" width="40" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1185,7 +1185,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d6X-Bm-isM">
                                                 <rect key="frame" x="20" y="15" width="280" height="216.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-H3-fwS" customClass="ScaledHeightImageView" customModule="Swift_Quiz" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-H3-fwS" customClass="ScaledHeightImageView" customModule="Swifty_Quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="161.5"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRg-39-Xa9" userLabel="Question">
@@ -1214,7 +1214,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
                                                 <rect key="frame" x="20" y="5" width="280" height="211.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-H9-k7K" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1231,7 +1231,7 @@
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qjD-Vt-8U0"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cGm-XU-csX" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="54" width="280" height="49.5"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1248,7 +1248,7 @@
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR4-3E-Sbq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3us-Ch-ovH" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="108.5" width="280" height="49"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1265,7 +1265,7 @@
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gco-zf-gjF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-KE-UJq" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="162.5" width="280" height="49"/>
                                                         <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1333,12 +1333,12 @@
         <!--Help View Controller-->
         <scene sceneID="wvl-AF-KOl">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Swift_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iA-3V-kie">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLX-MH-VUT" customClass="HalfRoundButton" customModule="Swift_Quiz" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLX-MH-VUT" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                 <rect key="frame" x="85" y="349" width="150" height="45"/>
                                 <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1354,7 +1354,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="backButtonSound:" destination="tce-xI-jYz" eventType="touchUpInside" id="mvd-zR-tLx"/>
                                     <action selector="backInGameButton:" destination="tce-xI-jYz" eventType="touchUpInside" id="Aee-2L-mWe"/>
                                 </connections>
                             </button>

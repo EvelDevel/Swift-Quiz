@@ -3,11 +3,8 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import AVFoundation
 
 class RecordsViewController: UIViewController {
-    
-    private var audioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
@@ -23,25 +20,8 @@ class RecordsViewController: UIViewController {
 // MARK: Звуки нажатия кнопки и стирания рекордов
 extension RecordsViewController {
     
-    @IBAction func clearRecordSound(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button1", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on record view") }
-        }
-    }
-    /// Звук стирания
-    func playTrashSound() {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "trash", withExtension: "mp3") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on record view with trash sound") }
-        }
-    }
+    @IBAction func clearRecordSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+    func playTrashSound() { SoundPlayer.shared.playSound(sound: .clearRecordsSound) }
 }
 
 // MARK: Алерт на очистку рекордов и удаление по свайпу ячейки

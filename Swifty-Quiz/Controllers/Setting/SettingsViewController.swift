@@ -3,7 +3,6 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import AVFoundation
 
 class SettingsViewController: UIViewController {
     
@@ -13,24 +12,25 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
     
-    private var audioPlayer = AVAudioPlayer()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addingTargets()
         settingsInitialValues()
     }
+}
+
+
+// MARK: Звук смены настроек
+extension SettingsViewController {
     
-    /// Звуки смены положения пикеров
     @IBAction func settingSwitchSound(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on settings view") }
-        }
+        SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
     }
+}
+
+
+// MARK: Добавляем таргеты и определяем дефолтное состояние
+extension SettingsViewController {
     
     func addingTargets() {
         questionOrderControl.addTarget(self, action: #selector(questionOrderValue), for: .valueChanged)
@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
         saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
         soundControl.addTarget(self, action: #selector(soundValue), for: .valueChanged)
     }
-    
+
     /// Определяем текущее состояние (если меняли настройку последовательности)
     func settingsInitialValues() {
         // Настройка порядка вопросов
@@ -73,6 +73,11 @@ class SettingsViewController: UIViewController {
             soundControl.selectedSegmentIndex = 1
         }
     }
+}
+
+
+// MARK: Отслеживание изменений и настройка
+extension SettingsViewController {
     
     /// Меняем настройку последовательности при переключении
     @objc func questionOrderValue(target: UISegmentedControl) {

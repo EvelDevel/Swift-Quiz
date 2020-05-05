@@ -3,7 +3,6 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import AVFoundation
 
 protocol TopicViewControllerDelegate: class {
     func selectedCategory()
@@ -14,8 +13,6 @@ class TopicViewController: UIViewController {
     @IBOutlet weak var selectedTopicInformation: UILabel!
     @IBOutlet weak var firstTopic: HalfRoundButton!
     @IBOutlet var topicButtonOutlets: [UIButton]!
-    
-    private var audioPlayer = AVAudioPlayer()
     weak var delegate: TopicViewControllerDelegate?
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
@@ -25,21 +22,17 @@ class TopicViewController: UIViewController {
         sender.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
     }
     
-    /// Звуки
-    @IBAction func tapTopicButtonSound(_ sender: Any) {
-        if Game.shared.settings.sound == 0 {
-            guard let url = Bundle.main.url(forResource: "button2", withExtension: "wav") else { return }
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
-            } catch { print("Error witn button sound on topic view") }
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addQuestionsToArray(sender: UIButton())
+    }
+}
+
+
+// MARK: Звук выбора
+extension TopicViewController {
+    @IBAction func tapTopicButtonSound(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
     }
 }
 
