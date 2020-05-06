@@ -177,8 +177,8 @@
 		FB8606B32444771300A692AD /* Custom UI  */ = {
 			isa = PBXGroup;
 			children = (
+				FBA764F62463293900D567D0 /* Buttons */,
 				FB1D0BAC244D915C00E9C56D /* Cells */,
-				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
 				FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */,
 			);
 			path = "Custom UI ";
@@ -193,6 +193,14 @@
 				FB87420924605BF500247923 /* trash.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FBA764F62463293900D567D0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		FBECDC58243F241B00BD5583 /* Controllers */ = {

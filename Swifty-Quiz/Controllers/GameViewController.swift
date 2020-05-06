@@ -52,6 +52,7 @@ class GameViewController: UIViewController {
         addQuestionSet()
         updateQuestion()
         addShadows()
+        addButtonShadows()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,6 +87,7 @@ extension GameViewController {
     }
     
     func setDafaultButtonsColor() {
+        addButtonShadows()
         for button in answerButtonsCollections {
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
             button.backgroundColor = #colorLiteral(red: 0.9964529872, green: 0.8487327695, blue: 0.225723803, alpha: 1)
@@ -105,7 +107,7 @@ extension GameViewController {
     }
     
     func updateUI() {
-        scoreLabel.text = "Счет: \(score) | \(updatePercentage())%"
+        scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(initialQuestionSet.count)"
         progressView.frame.size.width = (progressWhite.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionIndex)
     }
@@ -167,12 +169,19 @@ extension GameViewController {
         optionC.setTitle(shuffledAnswersArray[2], for: .normal)
         optionD.setTitle(shuffledAnswersArray[3], for: .normal)
     }
+}
+
+
+// MARK: Нажатие на кнопку ответа
+extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == correctAnswerNewPosition {
             score += 1
+            addGreenShadow(button: sender)
             changeButtonColor(sender: sender, true)
         } else {
+            addRedShadow(button: sender)
             changeButtonColor(sender: sender, false)
     
             if endGameSettings == 1 {
@@ -183,7 +192,7 @@ extension GameViewController {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.updateQuestion()
             }
         }
@@ -299,32 +308,50 @@ extension GameViewController: HelpViewControllerDelegate {
 // MARK: Настройка теней и скруглений
 extension GameViewController {
     
+    /// Черная тень
     func addShadows() {
-        for button in answerButtonsCollections {
-            
-            /// Тень
-            button.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-            button.layer.shadowOpacity = 1
-            button.layer.shadowRadius = 20
-            button.layer.shadowOffset = CGSize(width: 0, height: 5)
-            button.layer.position = button.center
-            
-            /// Задротское скругление
-            button.layer.cornerCurve = .continuous
-        }
-        
         /// Тень у блока вопросов
         questionArea.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
         questionArea.layer.shadowOpacity = 1
-        questionArea.layer.shadowRadius = 20
+        questionArea.layer.shadowRadius = 5
         questionArea.layer.shadowOffset = CGSize(width: 0, height: 5)
         questionArea.layer.position = questionArea.center
         
         /// Тень прогресс-бара (белого)
         progressWhite.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
         progressWhite.layer.shadowOpacity = 1
-        progressWhite.layer.shadowRadius = 20
+        progressWhite.layer.shadowRadius = 5
         progressWhite.layer.shadowOffset = CGSize(width: 0, height: 5)
         progressWhite.layer.position = progressWhite.center
+    }
+    
+    func addButtonShadows() {
+        for button in answerButtonsCollections {
+            /// Тень
+            button.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
+            button.layer.shadowOpacity = 1
+            button.layer.shadowRadius = 5
+            button.layer.shadowOffset = CGSize(width: 0, height: 5)
+            button.layer.position = button.center
+            
+            /// Задротское скругление
+            button.layer.cornerCurve = .continuous
+        }
+    }
+    
+    /// Цветные тени
+    func addRedShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor(red: 0.996, green: 0.353, blue: 0.224, alpha: 0.5).cgColor
+        button.layer.shadowOpacity = 1
+        button.layer.shadowRadius = 5
+        button.layer.shadowOffset = CGSize(width: 0, height: 5)
+        button.layer.position = button.center
+    }
+    func addGreenShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor(red: 0.055, green: 0.8, blue: 0.404, alpha: 0.5).cgColor
+        button.layer.shadowOpacity = 1
+        button.layer.shadowRadius = 5
+        button.layer.shadowOffset = CGSize(width: 0, height: 5)
+        button.layer.position = button.center
     }
 }
