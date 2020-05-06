@@ -26,6 +26,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
+    @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+    
     /// Settings
     private let orderSettings = Game.shared.settings.questionOrder
     private let shuffleSettings = Game.shared.settings.questionTextShuffeling
@@ -60,14 +62,6 @@ class GameViewController: UIViewController {
             endGame(scenario: 1)
         }
     }
-}
-
-
-// MARK: Звуки нажатия кнопок игрового экрана
-extension GameViewController {
-    
-    @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
-    @IBAction func gameButtonTapped(_ sender: Any) { SoundPlayer.shared.playSound(sound: .answerButtons) }
 }
 
 
@@ -180,9 +174,11 @@ extension GameViewController {
             score += 1
             addGreenShadow(button: sender)
             changeButtonColor(sender: sender, true)
+            SoundPlayer.shared.playSound(sound: .answerButtonRight)
         } else {
             addRedShadow(button: sender)
             changeButtonColor(sender: sender, false)
+            SoundPlayer.shared.playSound(sound: .answerButtonWrong)
     
             if endGameSettings == 1 {
                 endGame(scenario: 3)
