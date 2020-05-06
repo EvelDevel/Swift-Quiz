@@ -9,7 +9,6 @@ import UIKit
 /// Зафиксировать длину лаунч скрина, чтобы он либо не показывался вообще, либо показывался фиксированное время
 /// Поработать над главным экраном. Разместить логотип (Жека)
 
-
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()
