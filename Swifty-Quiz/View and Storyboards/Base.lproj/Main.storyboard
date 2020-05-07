@@ -1111,27 +1111,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-p6-lv0" userLabel="Header Stats View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
-                                        <rect key="frame" x="280" y="15.5" width="20" height="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
+                                        <rect key="frame" x="265" y="14.5" width="50" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Nqs-qb-q99"/>
-                                            <constraint firstAttribute="height" constant="20" id="sP7-Wj-Til"/>
+                                            <constraint firstAttribute="width" constant="50" id="Nqs-qb-q99"/>
+                                            <constraint firstAttribute="height" constant="22" id="sP7-Wj-Til"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="info.circle" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                            </preferredSymbolConfiguration>
-                                        </state>
+                                        <color key="tintColor" red="0.23610874726877762" green="0.27885135452246407" blue="0.33557069300000009" alpha="0.7010648544520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="info.circle" catalog="system"/>
                                         <connections>
                                             <action selector="helpSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFE-tH-tE9"/>
                                             <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" id="xzC-Ih-f4Q"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veA-zL-dzC" userLabel="Help Counter">
-                                        <rect key="frame" x="262" y="17.5" width="14" height="0.0"/>
+                                        <rect key="frame" x="262" y="17.5" width="13" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="12" id="7jA-hR-zMQ"/>
                                         </constraints>
@@ -1194,9 +1190,9 @@
                                     <constraint firstItem="lup-xN-Pbw" firstAttribute="leading" secondItem="B6F-p6-lv0" secondAttribute="leading" constant="20" id="Tln-5Z-j7o"/>
                                     <constraint firstAttribute="height" constant="56" id="UbX-hD-Rp3"/>
                                     <constraint firstItem="veA-zL-dzC" firstAttribute="firstBaseline" secondItem="atk-Fk-RiH" secondAttribute="firstBaseline" id="hgb-w8-lIc"/>
-                                    <constraint firstItem="2hl-kx-2hD" firstAttribute="leading" secondItem="veA-zL-dzC" secondAttribute="trailing" constant="4" id="ozG-6h-m12"/>
+                                    <constraint firstItem="2hl-kx-2hD" firstAttribute="leading" secondItem="veA-zL-dzC" secondAttribute="trailing" constant="-10" id="ozG-6h-m12"/>
                                     <constraint firstItem="atk-Fk-RiH" firstAttribute="centerX" secondItem="B6F-p6-lv0" secondAttribute="centerX" id="rnb-I7-FTr"/>
-                                    <constraint firstAttribute="trailing" secondItem="2hl-kx-2hD" secondAttribute="trailing" constant="20" id="uDT-ek-yjI"/>
+                                    <constraint firstAttribute="trailing" secondItem="2hl-kx-2hD" secondAttribute="trailing" constant="5" id="uDT-ek-yjI"/>
                                     <constraint firstItem="lup-xN-Pbw" firstAttribute="top" secondItem="atk-Fk-RiH" secondAttribute="bottom" constant="12" id="utN-tX-5hz"/>
                                 </constraints>
                             </view>

@@ -121,11 +121,19 @@ extension GameViewController {
         if  image == "" {
             questionImageView.image = nil
             questionImageHeight.constant = 0
-            questionLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
+            if view.frame.size.width <= 320 {
+                questionLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .light)
+            } else {
+                questionLabel.font = UIFont.systemFont(ofSize: 23.0, weight: .light)
+            }
         } else {
             questionImageHeight.constant = 160
             questionImageView.image = UIImage(named: image)
-            questionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+            if view.frame.size.width <= 320 {
+                questionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+            } else {
+                questionLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
+            }
         }
     }
     
