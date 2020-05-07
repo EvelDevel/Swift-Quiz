@@ -17,7 +17,6 @@
 		FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */; };
 		FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */; };
 		FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */; };
-		FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9C243EEE130098FAC3 /* Assets.xcassets */; };
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
 		FB66C04F24542587009FADDE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C04E24542587009FADDE /* Settings.swift */; };
@@ -38,6 +37,7 @@
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
+		FBDD37462464642F00B3E47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */; };
@@ -303,8 +303,8 @@
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
+				FBDD37462464642F00B3E47D /* Main.storyboard in Resources */,
 				FB87420E24605BF500247923 /* button1.wav in Resources */,
-				FB2EAC9B243EEE0F0098FAC3 /* Main.storyboard in Resources */,
 				FB87420C24605BF500247923 /* button2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

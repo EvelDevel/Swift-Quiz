@@ -1382,18 +1382,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLX-MH-VUT" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="85" y="349" width="150" height="45"/>
-                                <color key="backgroundColor" red="0.35828967859999999" green="0.62299485929999998" blue="0.92365958120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="339" width="288" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="B8N-1S-3ED"/>
-                                    <constraint firstAttribute="height" constant="45" id="hg0-Za-8LC"/>
+                                    <constraint firstAttribute="height" constant="54" id="hg0-Za-8LC"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Вернутья в игру">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1407,19 +1407,19 @@
                                         <rect key="frame" x="0.0" y="45" width="288" height="85"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-CA-430">
-                                                <rect key="frame" x="10" y="10" width="268" height="65"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="16" y="20" width="256" height="55"/>
+                                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.31480667000000001" green="0.54384368660000004" blue="0.80130952600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="cxL-CA-430" firstAttribute="leading" secondItem="ASa-ON-nfK" secondAttribute="leading" constant="10" id="DLx-JZ-xYA"/>
+                                            <constraint firstItem="cxL-CA-430" firstAttribute="leading" secondItem="ASa-ON-nfK" secondAttribute="leading" constant="16" id="DLx-JZ-xYA"/>
                                             <constraint firstAttribute="bottom" secondItem="cxL-CA-430" secondAttribute="bottom" constant="10" id="J5e-nZ-JBd"/>
-                                            <constraint firstAttribute="trailing" secondItem="cxL-CA-430" secondAttribute="trailing" constant="10" id="avT-4I-wq2"/>
-                                            <constraint firstItem="cxL-CA-430" firstAttribute="top" secondItem="ASa-ON-nfK" secondAttribute="top" constant="10" id="mXS-zd-MdU"/>
+                                            <constraint firstAttribute="trailing" secondItem="cxL-CA-430" secondAttribute="trailing" constant="16" id="avT-4I-wq2"/>
+                                            <constraint firstItem="cxL-CA-430" firstAttribute="top" secondItem="ASa-ON-nfK" secondAttribute="top" constant="20" id="mXS-zd-MdU"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теоретическая подсказка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62r-a9-iQ5">
@@ -1428,14 +1428,24 @@
                                             <constraint firstAttribute="height" constant="46" id="Y7V-9b-i56"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-QC-2V5" userLabel="Separator">
+                                        <rect key="frame" x="25" y="50" width="238" height="1"/>
+                                        <color key="backgroundColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="5IL-Jb-syF"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ASa-ON-nfK" secondAttribute="trailing" id="46F-EV-Q4c"/>
+                                    <constraint firstAttribute="trailing" secondItem="UhR-QC-2V5" secondAttribute="trailing" constant="25" id="4cn-J7-Qbq"/>
                                     <constraint firstItem="ASa-ON-nfK" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="7r8-PZ-QMd"/>
+                                    <constraint firstItem="UhR-QC-2V5" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" constant="25" id="ICd-5i-2d8"/>
+                                    <constraint firstItem="UhR-QC-2V5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="50" id="Nhu-de-buH"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="X1e-ed-UIb"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" id="aFg-pP-P6X"/>
                                     <constraint firstItem="ASa-ON-nfK" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="45" id="dWe-6G-tJ0"/>
@@ -1445,7 +1455,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -1454,20 +1464,24 @@
                         <constraints>
                             <constraint firstItem="2Hf-C9-5fV" firstAttribute="trailing" secondItem="gBd-b4-JLA" secondAttribute="trailing" constant="16" id="3Sw-bO-9jP"/>
                             <constraint firstItem="gBd-b4-JLA" firstAttribute="centerY" secondItem="2Hf-C9-5fV" secondAttribute="centerY" constant="-25" id="FOP-C7-34K"/>
-                            <constraint firstItem="ZLX-MH-VUT" firstAttribute="centerX" secondItem="2Hf-C9-5fV" secondAttribute="centerX" id="YHa-ob-OHi"/>
+                            <constraint firstItem="2Hf-C9-5fV" firstAttribute="trailing" secondItem="ZLX-MH-VUT" secondAttribute="trailing" constant="16" id="Mok-gD-npE"/>
+                            <constraint firstItem="ZLX-MH-VUT" firstAttribute="leading" secondItem="2Hf-C9-5fV" secondAttribute="leading" constant="16" id="VIB-1g-ujl"/>
                             <constraint firstItem="gBd-b4-JLA" firstAttribute="leading" secondItem="2Hf-C9-5fV" secondAttribute="leading" constant="16" id="qv4-aY-H2X"/>
-                            <constraint firstItem="ZLX-MH-VUT" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="bottom" constant="25" id="sqo-j8-kgQ"/>
+                            <constraint firstItem="ZLX-MH-VUT" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="bottom" constant="15" id="sqo-j8-kgQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Hf-C9-5fV"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hd6-LK-X2M"/>
                     <connections>
+                        <outlet property="backInGameButton" destination="ZLX-MH-VUT" id="2CR-cX-Nbn"/>
                         <outlet property="helpTextLabel" destination="cxL-CA-430" id="Uyv-fA-TWK"/>
+                        <outlet property="helpView" destination="gBd-b4-JLA" id="hEI-HP-cQx"/>
+                        <outlet property="separatorHeight" destination="5IL-Jb-syF" id="l3j-1p-ZaR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEo-4j-NCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="112"/>
+            <point key="canvasLocation" x="1882.5" y="111.97183098591549"/>
         </scene>
     </scenes>
     <resources>
