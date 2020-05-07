@@ -2,7 +2,7 @@
 //  Created by Евгений Никитин on 05.05.2020.
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
-import Foundation
+import UIKit
 import AVFoundation
 
 enum Sounds {
@@ -13,10 +13,10 @@ enum Sounds {
     case clearRecordsSound
 }
 
-
 class SoundPlayer {
+    
     static let shared = SoundPlayer()
-    private var player = AVAudioPlayer()
+    var player = AVAudioPlayer()
     
     func playSound(sound: Sounds) {
         if Game.shared.settings.sound == 0 {

@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var pressHelpCounterLabel: UILabel!
     @IBOutlet weak var questionArea: UIView!
     @IBOutlet weak var progressBarWhite: UIView!
+    @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
     
     @IBOutlet var answerButtonsCollections: [HalfRoundButton]!
     @IBOutlet weak var optionA: UIButton!
@@ -119,8 +120,10 @@ extension GameViewController {
         let image = initialQuestionSet[currentQuestionIndex].image
         if  image == "" {
             questionImageView.image = nil
+            questionImageHeight.constant = 0
             questionLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
         } else {
+            questionImageHeight.constant = 160
             questionImageView.image = UIImage(named: image)
             questionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
         }
