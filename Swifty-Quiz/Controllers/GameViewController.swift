@@ -45,6 +45,7 @@ class GameViewController: UIViewController {
     private var percent: Double = 0
     private var imageName = ""
     private var helpCounter = 0
+    private var helpFlag = false
     private var endGameFlag = false
     
     private var shuffledAnswersArray: [String] = []
@@ -102,6 +103,7 @@ extension GameViewController {
     }
     
     func updateUI() {
+        helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(initialQuestionSet.count)"
         progressView.frame.size.width = (progressWhite.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionIndex)
@@ -292,8 +294,12 @@ extension GameViewController {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
             helpView.questionID = initialQuestionSet[currentQuestionIndex].questionId
-            helpCounter += 1
+            /// Если не переходим к следующему - засчитываем только 1 подсказку
+            if helpFlag == false {
+                helpCounter += 1
+            }
             pressHelpCounterLabel.text = "\(helpCounter)"
+            helpFlag = true
         }
     }
 }
@@ -304,9 +310,11 @@ extension GameViewController: HelpViewControllerDelegate {
     
     func updateAfterHelp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            self.currentQuestionNumber += 1
-            self.currentQuestionIndex += 1
-            self.updateQuestion()
+            if Game.shared.settings.changeAfterHelp == 0 {
+                self.currentQuestionNumber += 1
+                self.currentQuestionIndex += 1
+                self.updateQuestion()
+            }
         }
     }
 }

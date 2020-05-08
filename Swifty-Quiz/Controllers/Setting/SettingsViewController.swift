@@ -11,6 +11,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var endGameControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
+    @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ extension SettingsViewController {
         endGameControl.addTarget(self, action: #selector(endGameValue), for: .valueChanged)
         saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
         soundControl.addTarget(self, action: #selector(soundValue), for: .valueChanged)
+        changeAfterHelpControl.addTarget(self, action: #selector(changeAfterHelpValue), for: .valueChanged)
     }
 
     /// Определяем текущее состояние (если меняли настройку последовательности)
@@ -71,6 +73,12 @@ extension SettingsViewController {
             soundControl.selectedSegmentIndex = 0
         } else {
             soundControl.selectedSegmentIndex = 1
+        }
+        // Смена вопроса после подсказки
+        if Game.shared.settings.changeAfterHelp == 0 {
+            changeAfterHelpControl.selectedSegmentIndex = 0
+        } else {
+            changeAfterHelpControl.selectedSegmentIndex = 1
         }
     }
 }
@@ -135,6 +143,18 @@ extension SettingsViewController {
                 Game.shared.setSound(setting: .on)
             } else {
                 Game.shared.setSound(setting: .off)
+            }
+        }
+    }
+    
+    /// Меняем настройку смены вопроса после подсказки
+    @objc func changeAfterHelpValue(target: UISegmentedControl) {
+        if target == self.changeAfterHelpControl {
+            let segmentIndex = target.selectedSegmentIndex
+            if segmentIndex == 0 {
+                Game.shared.setChangeAfterHelp(setting: .change)
+            } else {
+                Game.shared.setChangeAfterHelp(setting: .dontChange)
             }
         }
     }

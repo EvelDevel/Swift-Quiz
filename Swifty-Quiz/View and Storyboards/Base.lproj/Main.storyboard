@@ -1045,16 +1045,36 @@
                                     <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="sht-xZ-4Iz"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Переходить дальше после подсказки?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-L2-e0H">
+                                <rect key="frame" x="16" y="409" width="288" height="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-cO-Gc8">
+                                <rect key="frame" x="16" y="428" width="288" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Переходить "/>
+                                    <segment title="Оставаться"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="eC7-0y-A4E"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" id="1H5-qk-qQ7"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="25" id="4n3-pQ-Z5t"/>
                             <constraint firstItem="cpJ-hq-hTi" firstAttribute="top" secondItem="cQP-RU-K1A" secondAttribute="bottom" constant="15" id="55e-sh-mKk"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="Dw4-L2-e0H" secondAttribute="trailing" constant="16" id="6pn-jn-Ze4"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="CO1-Wi-Dxz" secondAttribute="trailing" constant="16" id="7e9-f5-7nJ"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="bur-lL-b4K" secondAttribute="trailing" constant="16" id="7eh-sz-cTe"/>
                             <constraint firstItem="btd-Aq-lVl" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="8OW-Js-uCl"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="top" secondItem="oI0-v5-8TH" secondAttribute="bottom" constant="15" id="8lR-x0-sTO"/>
+                            <constraint firstItem="Zq4-cO-Gc8" firstAttribute="top" secondItem="Dw4-L2-e0H" secondAttribute="bottom" constant="5" id="9na-ui-f5c"/>
                             <constraint firstItem="cQP-RU-K1A" firstAttribute="top" secondItem="CO1-Wi-Dxz" secondAttribute="bottom" constant="5" id="Amf-s9-Ndo"/>
                             <constraint firstItem="bur-lL-b4K" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="ByC-Wv-Lth"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="0JB-Nr-Ypt" secondAttribute="trailing" id="CuB-KM-Bh4"/>
@@ -1063,6 +1083,7 @@
                             <constraint firstItem="btd-Aq-lVl" firstAttribute="top" secondItem="cpJ-hq-hTi" secondAttribute="bottom" constant="5" id="GgP-Vp-QVc"/>
                             <constraint firstItem="t8t-6r-3Rk" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="HAF-HO-IFQ"/>
                             <constraint firstItem="fFq-ub-UCg" firstAttribute="top" secondItem="t8t-6r-3Rk" secondAttribute="bottom" constant="5" id="HbU-fz-tDE"/>
+                            <constraint firstItem="Dw4-L2-e0H" firstAttribute="top" secondItem="fFq-ub-UCg" secondAttribute="bottom" constant="15" id="Ifu-5P-SiB"/>
                             <constraint firstItem="oI0-v5-8TH" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="N8L-WL-2oh"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="1Wm-RF-lUd" secondAttribute="trailing" constant="50" id="O3B-Al-jho"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="X5Y-4O-V4N"/>
@@ -1070,7 +1091,9 @@
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" id="Zcv-ed-P8O"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="oI0-v5-8TH" secondAttribute="trailing" constant="16" id="Zw0-Gp-5RS"/>
                             <constraint firstItem="cpJ-hq-hTi" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="aWB-9v-puE"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="Zq4-cO-Gc8" secondAttribute="trailing" constant="16" id="d70-FQ-Cep"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="btd-Aq-lVl" secondAttribute="trailing" constant="16" id="eNf-5M-QGm"/>
+                            <constraint firstItem="Dw4-L2-e0H" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="epd-jx-I8L"/>
                             <constraint firstItem="CO1-Wi-Dxz" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="f7d-0r-nqy"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="cpJ-hq-hTi" secondAttribute="trailing" constant="16" id="gmA-4J-TrZ"/>
                             <constraint firstItem="oI0-v5-8TH" firstAttribute="top" secondItem="pF7-zb-VIY" secondAttribute="bottom" constant="5" id="h6N-vC-Thu"/>
@@ -1080,6 +1103,7 @@
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="t8t-6r-3Rk" secondAttribute="trailing" constant="16" id="rtw-Kr-RlD"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="y09-f6-Yr6" secondAttribute="trailing" constant="16" id="sSh-fx-RFf"/>
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="70" id="uNg-5L-CJd"/>
+                            <constraint firstItem="Zq4-cO-Gc8" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="vl2-0y-Rzw"/>
                             <constraint firstItem="fFq-ub-UCg" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="xir-Vf-iAU"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="fFq-ub-UCg" secondAttribute="trailing" constant="16" id="xpe-Lk-vXp"/>
                             <constraint firstItem="t8t-6r-3Rk" firstAttribute="top" secondItem="btd-Aq-lVl" secondAttribute="bottom" constant="15" id="yZk-SU-60F"/>
@@ -1089,6 +1113,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2Zl-hM-QTd"/>
                     <connections>
+                        <outlet property="changeAfterHelpControl" destination="Zq4-cO-Gc8" id="P5j-09-Z5G"/>
                         <outlet property="endGameControl" destination="cQP-RU-K1A" id="zHX-n9-PlI"/>
                         <outlet property="questionOrderControl" destination="oI0-v5-8TH" id="0uk-hI-NnJ"/>
                         <outlet property="questionTextControl" destination="bur-lL-b4K" id="DHx-pZ-qfN"/>
@@ -1112,11 +1137,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
-                                        <rect key="frame" x="265" y="14.5" width="50" height="22"/>
+                                        <rect key="frame" x="265" y="14" width="50" height="23"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Nqs-qb-q99"/>
-                                            <constraint firstAttribute="height" constant="22" id="sP7-Wj-Til"/>
+                                            <constraint firstAttribute="height" constant="23" id="sP7-Wj-Til"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="tintColor" red="0.23610874726877762" green="0.27885135452246407" blue="0.33557069300000009" alpha="0.7010648544520548" colorSpace="custom" customColorSpace="sRGB"/>

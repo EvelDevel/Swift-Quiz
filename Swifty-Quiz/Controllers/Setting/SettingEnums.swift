@@ -33,3 +33,9 @@ enum Sound {
     case on
     case off
 }
+
+// Смена после подсказки
+enum ChangeAfterHelp {
+    case change
+    case dontChange
+}

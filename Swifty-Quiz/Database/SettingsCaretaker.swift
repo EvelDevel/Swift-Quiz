@@ -27,7 +27,8 @@ class SettingsCaretaker {
                             questionTextShuffeling: 0,
                             endGame: 0,
                             saveRecord: 0,
-                            sound: 0)
+                            sound: 0,
+                            changeAfterHelp: 0)
         }
         do {
             return try self.decoder.decode(Settings.self, from: data)
@@ -37,7 +38,8 @@ class SettingsCaretaker {
                             questionTextShuffeling: 0,
                             endGame: 0,
                             saveRecord: 0,
-                            sound: 0)
+                            sound: 0,
+                            changeAfterHelp: 0)
         }
     }
 }

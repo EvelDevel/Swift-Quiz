@@ -12,4 +12,5 @@ struct Settings: Codable {
     var endGame: Int
     var saveRecord: Int
     var sound: Int
+    var changeAfterHelp: Int
 }

@@ -27,9 +27,6 @@ class Game {
 }
 
 
-///
-
-
 // MARK: Сохранение и удаление рекордов
 extension Game {
     func addRecord(_ record: Record) {
@@ -95,6 +92,15 @@ extension Game {
             self.settings.sound = 1
         } else {
             self.settings.sound = 0
+        }
+    }
+    
+    /// Настройки: Смена вопросов после подсказки
+    func setChangeAfterHelp(setting: ChangeAfterHelp) {
+        if setting == .dontChange {
+            self.settings.changeAfterHelp = 1
+        } else {
+            self.settings.changeAfterHelp = 0
         }
     }
 }
