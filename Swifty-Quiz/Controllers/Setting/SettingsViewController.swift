@@ -13,10 +13,13 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var soundControl: UISegmentedControl!
     @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
     
+    @IBOutlet var allControls: [UISegmentedControl]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addingTargets()
         settingsInitialValues()
+        setControlsTintColors()
     }
 }
 
@@ -32,6 +35,18 @@ extension SettingsViewController {
 
 // MARK: Добавляем таргеты и определяем дефолтное состояние
 extension SettingsViewController {
+    
+    func setControlsTintColors() {
+        let inactive: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 0.5)
+        let active: UIColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1)
+        let normalColor = [NSAttributedString.Key.foregroundColor: inactive]
+        let selectedColor = [NSAttributedString.Key.foregroundColor: active]
+        
+        for control in allControls {
+            control.setTitleTextAttributes(normalColor, for: .normal)
+            control.setTitleTextAttributes(selectedColor, for: .selected)
+        }
+    }
     
     func addingTargets() {
         questionOrderControl.addTarget(self, action: #selector(questionOrderValue), for: .valueChanged)
