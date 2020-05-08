@@ -80,7 +80,7 @@ extension HelpViewController {
         if view.frame.size.width <= 320 {
             helpTextLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
         } else {
-            helpTextLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .light)
+            helpTextLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
         }
     }
     

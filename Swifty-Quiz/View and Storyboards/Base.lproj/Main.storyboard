@@ -1148,7 +1148,7 @@
                                         <state key="normal" image="info.circle" catalog="system"/>
                                         <connections>
                                             <action selector="helpSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFE-tH-tE9"/>
-                                            <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" id="xzC-Ih-f4Q"/>
+                                            <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" modalTransitionStyle="crossDissolve" id="xzC-Ih-f4Q"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veA-zL-dzC" userLabel="Help Counter">
@@ -1412,7 +1412,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="hg0-Za-8LC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Вернутья в игру">
                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1428,25 +1428,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-b4-JLA">
                                 <rect key="frame" x="16" y="174" width="288" height="150"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-ON-nfK">
-                                        <rect key="frame" x="0.0" y="45" width="288" height="85"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-CA-430">
-                                                <rect key="frame" x="16" y="20" width="256" height="55"/>
-                                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-CA-430">
+                                        <rect key="frame" x="20" y="62" width="248" height="68"/>
                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="cxL-CA-430" firstAttribute="leading" secondItem="ASa-ON-nfK" secondAttribute="leading" constant="16" id="DLx-JZ-xYA"/>
-                                            <constraint firstAttribute="bottom" secondItem="cxL-CA-430" secondAttribute="bottom" constant="10" id="J5e-nZ-JBd"/>
-                                            <constraint firstAttribute="trailing" secondItem="cxL-CA-430" secondAttribute="trailing" constant="16" id="avT-4I-wq2"/>
-                                            <constraint firstItem="cxL-CA-430" firstAttribute="top" secondItem="ASa-ON-nfK" secondAttribute="top" constant="20" id="mXS-zd-MdU"/>
-                                        </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теоретическая подсказка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62r-a9-iQ5">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="46"/>
                                         <constraints>
@@ -1457,7 +1445,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-QC-2V5" userLabel="Separator">
-                                        <rect key="frame" x="25" y="50" width="238" height="1"/>
+                                        <rect key="frame" x="25" y="48" width="238" height="1"/>
                                         <color key="backgroundColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="5IL-Jb-syF"/>
@@ -1466,17 +1454,17 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ASa-ON-nfK" secondAttribute="trailing" id="46F-EV-Q4c"/>
+                                    <constraint firstAttribute="bottom" secondItem="cxL-CA-430" secondAttribute="bottom" constant="20" id="1FR-3b-hKt"/>
                                     <constraint firstAttribute="trailing" secondItem="UhR-QC-2V5" secondAttribute="trailing" constant="25" id="4cn-J7-Qbq"/>
-                                    <constraint firstItem="ASa-ON-nfK" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="7r8-PZ-QMd"/>
+                                    <constraint firstItem="cxL-CA-430" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" constant="20" id="GCF-A1-V10"/>
                                     <constraint firstItem="UhR-QC-2V5" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" constant="25" id="ICd-5i-2d8"/>
-                                    <constraint firstItem="UhR-QC-2V5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="50" id="Nhu-de-buH"/>
+                                    <constraint firstItem="UhR-QC-2V5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="48" id="Nhu-de-buH"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="leading" secondItem="gBd-b4-JLA" secondAttribute="leading" id="X1e-ed-UIb"/>
                                     <constraint firstItem="62r-a9-iQ5" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" id="aFg-pP-P6X"/>
-                                    <constraint firstItem="ASa-ON-nfK" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="45" id="dWe-6G-tJ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="cxL-CA-430" secondAttribute="trailing" constant="20" id="dMa-M0-ZHL"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="lpv-ft-zAP"/>
-                                    <constraint firstAttribute="bottom" secondItem="ASa-ON-nfK" secondAttribute="bottom" constant="20" id="nTw-uq-YMT"/>
                                     <constraint firstAttribute="trailing" secondItem="62r-a9-iQ5" secondAttribute="trailing" id="rCC-so-zei"/>
+                                    <constraint firstItem="cxL-CA-430" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="top" constant="62" id="txd-3x-tkD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1485,7 +1473,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2Hf-C9-5fV" firstAttribute="trailing" secondItem="gBd-b4-JLA" secondAttribute="trailing" constant="16" id="3Sw-bO-9jP"/>
                             <constraint firstItem="gBd-b4-JLA" firstAttribute="centerY" secondItem="2Hf-C9-5fV" secondAttribute="centerY" constant="-25" id="FOP-C7-34K"/>

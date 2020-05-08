@@ -120,21 +120,25 @@ extension GameViewController {
     
     func setQuestionImageAndTextSize() {
         let image = initialQuestionSet[currentQuestionIndex].image
+        
         if  image == "" {
             questionImageView.image = nil
             questionImageHeight.constant = 0
+            
             if view.frame.size.width <= 320 {
                 questionLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .light)
             } else {
                 questionLabel.font = UIFont.systemFont(ofSize: 23.0, weight: .light)
             }
         } else {
-            questionImageHeight.constant = 160
             questionImageView.image = UIImage(named: image)
+            
             if view.frame.size.width <= 320 {
                 questionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+                questionImageHeight.constant = 160
             } else {
                 questionLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
+                questionImageHeight.constant = 180
             }
         }
     }
@@ -142,7 +146,11 @@ extension GameViewController {
     func setQuestionText() {
         let normal = initialQuestionSet[currentQuestionIndex].question[0]
         let random = initialQuestionSet[currentQuestionIndex].question.shuffled()
-        if  shuffleSettings == 1 { questionLabel.text = random[0] } else { questionLabel.text = normal }
+        if  shuffleSettings == 1 {
+            questionLabel.text = random[0]
+        } else {
+            questionLabel.text = normal
+        }
     }
     
     func saveCorrectAnswerText() {
