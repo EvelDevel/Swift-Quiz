@@ -19,23 +19,14 @@ class QuestionDatabase {
         return OperatorsSet.getQuestions()
     }
     
-    /*
     // MARK: Коллекции
     static func getQuestionsCollections() -> [Question] {
-        return [
-            Question(question: "4?",
-                     image: "",
-                     optionA: "4",
-                     optionB: "4",
-                     optionC: "4",
-                     optionD: "4",
-                     correctAnswer: 3,
-                     questionId: 5,
-                     helpText: "")
-        ]
+        return CollectionsSet.getQuestions()
     }
     
     
+    
+    /*
     // MARK: Потоки
     static func getQuestionsQueues() -> [Question] {
         return [

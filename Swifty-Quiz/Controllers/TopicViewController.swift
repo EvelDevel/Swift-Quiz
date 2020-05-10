@@ -51,8 +51,6 @@ extension TopicViewController {
 // MARK: Обработка выбора категории вопросов
 extension TopicViewController {
     
-    /// Номера tag-ов удаленных кнопок: 3
-    
     /// Загружаем пачку вопросов в наш синглтон массив по нажатию на тему
     func addQuestionsToArray(sender: UIButton) {
         
@@ -67,15 +65,14 @@ extension TopicViewController {
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы", tag: 1)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
-            /*
-        case 4:
+        case 3:
             let newQuestionSet = QuestionDatabase.getQuestionsCollections()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Коллекции")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Коллекции", tag: 2)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 2
+            
             
             /// 2-ой ряд
-            
+            /*
         case 5:
             let newQuestionSet = QuestionDatabase.getQuestionsQueues()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Потоки")

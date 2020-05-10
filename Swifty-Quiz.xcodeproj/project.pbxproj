@@ -37,6 +37,7 @@
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
+		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBDD37462464642F00B3E47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
@@ -76,6 +77,7 @@
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
+		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBE724CC2450648400BC6227 /* ScaledImageHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledImageHeight.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */,
 				FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */,
+				FBADAAEE246825560014501E /* CollectionsSet.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
 				FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
+				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
 				FBE724CD2450648400BC6227 /* ScaledImageHeight.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
