@@ -9,42 +9,42 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecordCell" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="RecordCell" customModule="Millionaire2_0" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="380" height="113"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecordCell" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="RecordCell" customModule="Swifty_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="117"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="380" height="113"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="117"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-de-6E7">
-                        <rect key="frame" x="-15" y="5" width="95" height="103"/>
+                        <rect key="frame" x="-15" y="10" width="95" height="97"/>
                         <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="95" id="Hjr-xn-6Fy"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <integer key="value" value="10"/>
+                                <integer key="value" value="15"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-0e-ce0">
-                        <rect key="frame" x="9" y="17" width="62" height="78"/>
+                        <rect key="frame" x="9" y="17" width="62" height="82"/>
                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="okO-wb-xuE">
-                        <rect key="frame" x="95" y="8" width="272" height="93"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="okO-wb-xuE" userLabel="Information">
+                        <rect key="frame" x="95" y="14" width="272" height="89"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcE-xq-s4t">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="14"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yfd-VR-JVT">
-                                <rect key="frame" x="0.0" y="23" width="272" height="70"/>
+                                <rect key="frame" x="0.0" y="19" width="272" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysi-7y-8JZ">
                                         <rect key="frame" x="0.0" y="0.0" width="272" height="10"/>
@@ -87,12 +87,12 @@
                 <constraints>
                     <constraint firstItem="lNV-0e-ce0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="6pj-JU-HLv"/>
                     <constraint firstItem="okO-wb-xuE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="95" id="A71-xf-ceM"/>
-                    <constraint firstItem="okO-wb-xuE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="BLy-cx-PL2"/>
+                    <constraint firstItem="okO-wb-xuE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="BLy-cx-PL2"/>
                     <constraint firstItem="lNV-0e-ce0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="KUj-UP-VSS"/>
                     <constraint firstItem="wKb-de-6E7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-15" id="WWY-LO-E6R"/>
-                    <constraint firstAttribute="bottom" secondItem="wKb-de-6E7" secondAttribute="bottom" constant="5" id="bNR-Mz-nlw"/>
-                    <constraint firstAttribute="bottom" secondItem="okO-wb-xuE" secondAttribute="bottom" constant="12" id="dDW-XG-WpO"/>
-                    <constraint firstItem="wKb-de-6E7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gcM-G6-V4E"/>
+                    <constraint firstAttribute="bottom" secondItem="wKb-de-6E7" secondAttribute="bottom" constant="10" id="bNR-Mz-nlw"/>
+                    <constraint firstAttribute="bottom" secondItem="okO-wb-xuE" secondAttribute="bottom" constant="14" id="dDW-XG-WpO"/>
+                    <constraint firstItem="wKb-de-6E7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gcM-G6-V4E"/>
                     <constraint firstAttribute="trailing" secondItem="okO-wb-xuE" secondAttribute="trailing" constant="13" id="tDZ-PD-t6D"/>
                     <constraint firstAttribute="bottom" secondItem="lNV-0e-ce0" secondAttribute="bottom" constant="18" id="zKb-NN-7ul"/>
                 </constraints>
@@ -108,7 +108,7 @@
                 <outlet property="topicLabel" destination="FcE-xq-s4t" id="FK5-au-iGZ"/>
                 <outlet property="totalQuestionLabel" destination="0rP-Ie-Ogi" id="u5b-Q3-aBj"/>
             </connections>
-            <point key="canvasLocation" x="181.15942028985509" y="112.83482142857142"/>
+            <point key="canvasLocation" x="181.15942028985509" y="114.17410714285714"/>
         </tableViewCell>
     </objects>
 </document>

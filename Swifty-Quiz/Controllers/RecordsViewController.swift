@@ -84,12 +84,12 @@ extension RecordsViewController: UITableViewDataSource {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         }
         
-        cell.playedCounterLabel.text = "Пройдено вопросов: \(record.playedNum ?? 0)"
+        cell.playedCounterLabel.text = "Пройдено: \(record.playedNum ?? 0)"
         cell.helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
         cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
         cell.topicLabel.text = "\(record.topic ?? "")"
         cell.dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"
-        cell.totalQuestionLabel.text = "Всего вопросов: \(record.totalQuestion ?? 0)"
+        cell.totalQuestionLabel.text = "Число вопросов: \(record.totalQuestion ?? 0)"
         cell.scoreLabel.text = "Очки: \(record.score ?? 0)"
         
         return cell
