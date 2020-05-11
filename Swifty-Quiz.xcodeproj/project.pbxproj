@@ -98,7 +98,6 @@
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */,
 				FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */,
 				FBADAAEE246825560014501E /* CollectionsSet.swift */,
@@ -172,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1D0B952446E76F00E9C56D /* Questions */,
+				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
 				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
 				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,

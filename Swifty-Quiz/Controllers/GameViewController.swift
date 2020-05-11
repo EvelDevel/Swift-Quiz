@@ -57,8 +57,6 @@ class GameViewController: UIViewController {
         updateQuestion()
         addShadows()
         addButtonShadows()
-        
-        print(initialQuestionSet)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
