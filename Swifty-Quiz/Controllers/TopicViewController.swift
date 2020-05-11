@@ -72,30 +72,30 @@ extension TopicViewController {
             
             
             /// 2-ой ряд
-            /*
-        case 5:
+            
+        case 4:
             let newQuestionSet = QuestionDatabase.getQuestionsQueues()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Потоки")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Потоки", tag: 3)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 3
-        case 6:
+            
+        case 5:
             let newQuestionSet = QuestionDatabase.getQuestionsFunctions()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Функции")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Функции", tag: 4)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 4
-        case 7:
+            
+        case 6:
             let newQuestionSet = QuestionDatabase.getQuestionsClosures()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Замыкания")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Замыкания", tag: 5)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 5
-        case 8:
+            
+        case 7:
             let newQuestionSet = QuestionDatabase.getQuestionsEnums()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Перечисления")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Перечисления", tag: 6)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 6
+            
             
             /// 3-ий ряд
-            
+            /*
         case 9:
             let newQuestionSet = QuestionDatabase.getQuestionsStructures()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Структуры")

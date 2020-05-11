@@ -299,6 +299,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рекорды" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmK-rs-T9h">
                                 <rect key="frame" x="16" y="25" width="85" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="9l6-Wu-Nq4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -307,6 +310,7 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XJN-af-bwb" firstAttribute="top" secondItem="6VH-zc-nbY" secondAttribute="top" constant="55" id="3au-ct-l3P"/>
+                            <constraint firstItem="ZeY-xX-Faf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ZmK-rs-T9h" secondAttribute="trailing" constant="93" id="ANS-fi-M1U"/>
                             <constraint firstItem="Klu-XE-vdS" firstAttribute="top" secondItem="6VH-zc-nbY" secondAttribute="top" id="GTG-p8-OBm"/>
                             <constraint firstItem="6VH-zc-nbY" firstAttribute="trailing" secondItem="XJN-af-bwb" secondAttribute="trailing" id="S3h-5b-tuf"/>
                             <constraint firstItem="6VH-zc-nbY" firstAttribute="trailing" secondItem="ZeY-xX-Faf" secondAttribute="trailing" constant="16" id="WWT-Zy-lup"/>

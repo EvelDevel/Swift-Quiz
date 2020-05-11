@@ -7,90 +7,42 @@ import Foundation
 
 class QuestionDatabase {
     
-    /// Здесь мы оперируем question-set-ами
-    
-    // MARK: Типы данных
+    // Типы данных
     static func getQuestionsTypesOfData() -> [Question] {
         return TypesOfDataSet.getQuestions()
     }
-    
-    // MARK: Операторы
+    // Операторы
     static func getQuestionsOperators() -> [Question] {
         return OperatorsSet.getQuestions()
     }
-    
-    // MARK: Коллекции
+    // Коллекции
     static func getQuestionsCollections() -> [Question] {
         return CollectionsSet.getQuestions()
     }
     
+    /// 2 ряд
+    
+    // Потоки
+    static func getQuestionsQueues() -> [Question] {
+        return QueuesSet.getQuestions()
+    }
+    // Функции
+    static func getQuestionsFunctions() -> [Question] {
+        return FunctionsSet.getQuestions()
+    }
+    // Замыкания
+    static func getQuestionsClosures() -> [Question] {
+        return ClosuresSet.getQuestions()
+    }
+    // Перечисления
+    static func getQuestionsEnums() -> [Question] {
+        return EnumsSet.getQuestions()
+    }
+    
+    
     
     
     /*
-    // MARK: Потоки
-    static func getQuestionsQueues() -> [Question] {
-        return [
-            Question(question: "4?",
-                     image: "",
-                     optionA: "4",
-                     optionB: "4",
-                     optionC: "4",
-                     optionD: "4",
-                     correctAnswer: 3,
-                     questionId: 5,
-                     helpText: "")
-        ]
-    }
-    
-    
-    // MARK: Функции
-    static func getQuestionsFunctions() -> [Question] {
-        return [
-            Question(question: "4?",
-                     image: "",
-                     optionA: "4",
-                     optionB: "4",
-                     optionC: "4",
-                     optionD: "4",
-                     correctAnswer: 3,
-                     questionId: 5,
-                     helpText: "")
-        ]
-    }
-    
-    
-    // MARK: Замыкания
-    static func getQuestionsClosures() -> [Question] {
-        return [
-            Question(question: "4?",
-                     image: "",
-                     optionA: "4",
-                     optionB: "4",
-                     optionC: "4",
-                     optionD: "4",
-                     correctAnswer: 3,
-                     questionId: 5,
-                     helpText: "")
-        ]
-    }
-    
-    
-    // MARK: Перечисления
-    static func getQuestionsEnums() -> [Question] {
-        return [
-            Question(question: "4?",
-                     image: "",
-                     optionA: "4",
-                     optionB: "4",
-                     optionC: "4",
-                     optionD: "4",
-                     correctAnswer: 3,
-                     questionId: 5,
-                     helpText: "")
-        ]
-    }
-    
-    
     // MARK: Структуры
     static func getQuestionsStructures() -> [Question] {
         return [
