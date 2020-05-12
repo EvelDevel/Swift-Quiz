@@ -55,153 +55,131 @@ extension TopicViewController {
     func addQuestionsToArray(sender: UIButton) {
         
         switch sender.tag {
+            
+            /// 01 row
+            
         case 1:
             let newQuestionSet = QuestionDatabase.getQuestionsTypesOfData()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Типы данных", tag: 0)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            
         case 2:
             let newQuestionSet = QuestionDatabase.getQuestionsOperators()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Операторы", tag: 1)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            
         case 3:
             let newQuestionSet = QuestionDatabase.getQuestionsCollections()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Коллекции", tag: 2)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
-            
-            /// 2-ой ряд
+            /// 02 row
             
         case 4:
             let newQuestionSet = QuestionDatabase.getQuestionsQueues()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Потоки", tag: 3)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            
         case 5:
             let newQuestionSet = QuestionDatabase.getQuestionsFunctions()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Функции", tag: 4)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            
         case 6:
             let newQuestionSet = QuestionDatabase.getQuestionsClosures()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Замыкания", tag: 5)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            
         case 7:
             let newQuestionSet = QuestionDatabase.getQuestionsEnums()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Перечисления", tag: 6)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
             
+            /// 03 row
             
-            /// 3-ий ряд
-            /*
-        case 9:
+        case 8:
             let newQuestionSet = QuestionDatabase.getQuestionsStructures()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Структуры")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Структуры", tag: 7)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 7
-        case 10:
+        case 9:
             let newQuestionSet = QuestionDatabase.getQuestionsClasses()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Классы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Классы", tag: 8)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 8
-        case 11:
+        case 10:
             let newQuestionSet = QuestionDatabase.getQuestionsProperties()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Свойства")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Свойства", tag: 9)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 9
-        case 12:
+        case 11:
             let newQuestionSet = QuestionDatabase.getQuestionsMethods()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Методы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Методы", tag: 10)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 10
             
-            /// 4-ый ряд
-            
-        case 13:
+            /// 04 row
+        
+        case 12:
             let newQuestionSet = QuestionDatabase.getQuestionsSubscripts()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Сабскрипты")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Сабскрипты", tag: 11)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 11
-        case 14:
+        case 13:
             let newQuestionSet = QuestionDatabase.getQuestionsInheritance()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Наследование")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Наследование", tag: 12)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 12
-        case 15:
+        case 14:
             let newQuestionSet = QuestionDatabase.getQuestionsInitialization()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Инициализация")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Инициализация", tag: 13)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 13
             
-            /// 5-ый ряд
+            /// 05 row
             
-        case 16:
+        case 15:
             let newQuestionSet = QuestionDatabase.getQuestionsDeinitialization()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Деинициализация")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Деинициализация", tag: 14)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 14
-        case 17:
+        case 16:
             let newQuestionSet = QuestionDatabase.getQuestionsErrorProcessing()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Обработка ошибок")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Обработка ошибок", tag: 115)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 15
             
-            /// 6-ой ряд
+            /// 06 row
             
-        case 18:
+        case 17:
             let newQuestionSet = QuestionDatabase.getQuestionsOptionals()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Опционалы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Опционалы", tag: 16)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 16
-        case 19:
+        case 18:
             let newQuestionSet = QuestionDatabase.getQuestionsTypeCasting()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Приведение типов")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Приведение типов", tag: 17)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 17
-        case 20:
+        case 19:
             let newQuestionSet = QuestionDatabase.getQuestionsExtensions()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Расширения")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Расширения", tag: 18)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 18
             
-            /// 7-ой ряд
+            /// 07 row
             
-        case 21:
+        case 20:
             let newQuestionSet = QuestionDatabase.getQuestionsNestedTypes()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Вложенные типы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Вложенные типы", tag: 19)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 19
-        case 22:
+        case 21:
             let newQuestionSet = QuestionDatabase.getQuestionsProtocols()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Протоколы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Протоколы", tag: 20)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 20
-        case 23:
+        case 22:
             let newQuestionSet = QuestionDatabase.getQuestionsGenerics()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Шаблоны")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Шаблоны", tag: 21)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 21
             
-            /// 8-ой ряд
+            /// 08 row
             
-        case 24:
+        case 23:
             let newQuestionSet = QuestionDatabase.getQuestionsPatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны", tag: 22)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 22
-        case 25:
+        case 24:
             let newQuestionSet = QuestionDatabase.getQuestionsAlgorithms()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Алгоритмы")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Алгоритмы", tag: 23)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 23
-        case 26:
+        case 25:
             let newQuestionSet = QuestionDatabase.getQuestionsARC()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "ARC")
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "ARC", tag: 24)
             selectedTopicInformation.text = "Количество вопросов: \(newQuestionSet.count)"
-            updatedTag = 24
-            */
+    
         default:
             /// "Выделяем" дефолтную первую категорию, и загружаем вопросы
             topicButtonOutlets[SelectedTopic.shared.topic.topicTag].setTitleColor(.white, for: .normal)
