@@ -74,7 +74,7 @@ extension RecordsViewController: UITableViewDataSource {
         
         let record = Game.shared.records[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
+        dateFormatter.dateStyle = .short
         
         if record.percentOfCorrectAnswer! < 30 {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
@@ -84,12 +84,11 @@ extension RecordsViewController: UITableViewDataSource {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1)
         }
         
-        cell.playedCounterLabel.text = "Пройдено: \(record.playedNum ?? 0)"
         cell.helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
         cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
         cell.topicLabel.text = "\(record.topic ?? "")"
         cell.dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"
-        cell.totalQuestionLabel.text = "Число вопросов: \(record.totalQuestion ?? 0)"
+        cell.totalQuestionLabel.text = "Вопросы: \(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)"
         cell.scoreLabel.text = "Очки: \(record.score ?? 0)"
         
         return cell

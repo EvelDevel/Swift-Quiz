@@ -13,10 +13,11 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var helpCounterLabel: UILabel!
-    @IBOutlet weak var playedCounterLabel: UILabel!
+    @IBOutlet weak var graySeparatorHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        graySeparatorHeight.constant = 1.0 / UIScreen.main.scale
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
