@@ -137,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB0E0290246CF334005CA792 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
+				FB1D0BAC244D915C00E9C56D /* Cells */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
 		FB119C12246A52E1005F5289 /* 01 row */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,8 +319,7 @@
 		FB8606B32444771300A692AD /* Custom UI  */ = {
 			isa = PBXGroup;
 			children = (
-				FBA764F62463293900D567D0 /* Buttons */,
-				FB1D0BAC244D915C00E9C56D /* Cells */,
+				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
 			);
 			path = "Custom UI ";
 			sourceTree = "<group>";
@@ -328,22 +336,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		FBA764F62463293900D567D0 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
 		FBECDC58243F241B00BD5583 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
-				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
 				FB1D0BA9244CADE700E9C56D /* TopicViewController.swift */,
+				FB0E0290246CF334005CA792 /* Records */,
 				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;
