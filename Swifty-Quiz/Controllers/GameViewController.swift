@@ -242,7 +242,7 @@ extension GameViewController {
         switch scenario {
         case 1:
             // Свернули игру не дойдя до конца
-            if Game.shared.settings.saveRecord == 1 {
+            if Game.shared.settings.saveRecord == 1 && currentQuestionIndex > 0 {
                 callDelegate()
                 saveRecord()
             }
