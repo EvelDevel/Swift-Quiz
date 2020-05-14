@@ -84,8 +84,13 @@ extension RecordsViewController: UITableViewDataSource {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1)
         }
         
+        if record.percentOfCorrectAnswer! < 99 {
+            cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
+        } else {
+            cell.percentOfCorrect.text = "100%"
+        }
+        
         cell.helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
-        cell.percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
         cell.topicLabel.text = "\(record.topic ?? "")"
         cell.dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"
         cell.totalQuestionLabel.text = "Вопросы: \(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)"
