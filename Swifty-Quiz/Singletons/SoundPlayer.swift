@@ -32,11 +32,11 @@ class SoundPlayer {
                 name = "button2"
                 soundExtension = "wav"
             case .answerButtonRight:
-                name = "button3"
-                soundExtension = "mp3"
+                name = "button1"
+                soundExtension = "wav"
             case .answerButtonWrong:
-                name = "button4"
-                soundExtension = "mp3"
+                name = "button2"
+                soundExtension = "wav"
             case .clearRecordsSound:
                 name = "trash"
                 soundExtension = "mp3"
