@@ -78,7 +78,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y03-Wu-b7m"/>
-                                                    <segue destination="S6G-sS-x0J" kind="show" identifier="toTopicSelection" id="s5Q-vq-GaG"/>
+                                                    <segue destination="uSs-gR-mOM" kind="show" identifier="toTopicSelection" id="5Bw-8E-m1y"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -276,7 +276,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="214" y="28" width="90" height="26"/>
+                                <rect key="frame" x="214" y="27.5" width="90" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="QMY-o0-VI2"/>
                                 </constraints>
@@ -336,7 +336,7 @@
             <objects>
                 <viewController id="S6G-sS-x0J" customClass="TopicViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMS-Ou-XQN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-Sb-Iew" userLabel="Topics">
@@ -932,7 +932,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sd0-Ed-1Jc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-504" y="931"/>
+            <point key="canvasLocation" x="-1239" y="931"/>
+        </scene>
+        <!--Topic Names View Controller-->
+        <scene sceneID="uFF-a5-ESS">
+            <objects>
+                <viewController id="uSs-gR-mOM" customClass="TopicNamesViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZG-cv-995">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-wd-tpT" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="1" width="320" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzd-Z9-2lU">
+                                        <rect key="frame" x="16" y="25" width="288" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о категории: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbR-6y-F6c">
+                                        <rect key="frame" x="16" y="57" width="288" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="zqm-Wv-p1M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="BbR-6y-F6c" firstAttribute="top" secondItem="Kzd-Z9-2lU" secondAttribute="bottom" constant="8" id="B2b-lZ-dt4"/>
+                                    <constraint firstItem="BbR-6y-F6c" firstAttribute="leading" secondItem="bSd-wd-tpT" secondAttribute="leading" constant="16" id="Orp-b9-1RM"/>
+                                    <constraint firstItem="Kzd-Z9-2lU" firstAttribute="top" secondItem="bSd-wd-tpT" secondAttribute="top" constant="25" id="RfR-tg-Tko"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kzd-Z9-2lU" secondAttribute="trailing" constant="16" id="UfV-9f-SA9"/>
+                                    <constraint firstItem="Kzd-Z9-2lU" firstAttribute="leading" secondItem="bSd-wd-tpT" secondAttribute="leading" constant="16" id="hxN-0c-YoX"/>
+                                    <constraint firstAttribute="height" constant="90" id="lap-k2-xV8"/>
+                                    <constraint firstAttribute="trailing" secondItem="BbR-6y-F6c" secondAttribute="trailing" constant="16" id="rWJ-pH-4b1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-82-s85" userLabel="Categories">
+                                <rect key="frame" x="0.0" y="90" width="320" height="458"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCategory" id="6kS-vR-sQt">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6kS-vR-sQt" id="Ic6-Zk-Qhm">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uSs-gR-mOM" id="lpi-Ma-toj"/>
+                                    <outlet property="delegate" destination="uSs-gR-mOM" id="VAl-Er-EKa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bSd-wd-tpT" firstAttribute="top" secondItem="Nu4-HW-vhf" secondAttribute="top" constant="1" id="NMt-0A-jkd"/>
+                            <constraint firstItem="Nu4-HW-vhf" firstAttribute="trailing" secondItem="bSd-wd-tpT" secondAttribute="trailing" id="PHj-mK-5Op"/>
+                            <constraint firstItem="Vtv-82-s85" firstAttribute="leading" secondItem="Nu4-HW-vhf" secondAttribute="leading" id="PUG-ib-bom"/>
+                            <constraint firstItem="Vtv-82-s85" firstAttribute="top" secondItem="bSd-wd-tpT" secondAttribute="bottom" constant="-1" id="dVw-9F-Ltd"/>
+                            <constraint firstItem="Nu4-HW-vhf" firstAttribute="trailing" secondItem="Vtv-82-s85" secondAttribute="trailing" id="qTF-rX-84Y"/>
+                            <constraint firstItem="Nu4-HW-vhf" firstAttribute="bottom" secondItem="Vtv-82-s85" secondAttribute="bottom" id="taR-ql-Nx9"/>
+                            <constraint firstItem="bSd-wd-tpT" firstAttribute="leading" secondItem="Nu4-HW-vhf" secondAttribute="leading" id="wub-R4-q6w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nu4-HW-vhf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4p5-4c-wBa"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vtv-82-s85" id="fxG-KZ-kWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sop-C3-7c8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480" y="930.63380281690138"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="JT5-CO-yaY">

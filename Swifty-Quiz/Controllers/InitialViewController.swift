@@ -71,16 +71,16 @@ extension InitialViewController {
 // MARK: Активация делегатов
 extension InitialViewController {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /// Указываем себя в качестве делегата в момент перехода по нужным segue
-        if segue.identifier  == "toGameViewController" {
-            let gameView = segue.destination as! GameViewController
-            gameView.delegate = self
-        } else if segue.identifier == "toTopicSelection" {
-            let topicView = segue.destination as! TopicViewController
-            topicView.delegate = self
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        /// Указываем себя в качестве делегата в момент перехода по нужным segue
+//        if segue.identifier  == "toGameViewController" {
+//            let gameView = segue.destination as! GameViewController
+//            gameView.delegate = self
+//        } else if segue.identifier == "toTopicSelection" {
+//            let topicView = segue.destination as! TopicViewController
+//            topicView.delegate = self
+//        }
+//    }
 }
 
 
