@@ -4,7 +4,7 @@
 
 import Foundation
 
-class CollectionsSet {
+class CollectionTypesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Сколько основных типов коллекций обеспечивает Swift?",

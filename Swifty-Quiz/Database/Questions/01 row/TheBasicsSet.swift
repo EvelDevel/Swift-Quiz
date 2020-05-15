@@ -4,7 +4,7 @@
 
 import Foundation
 
-class TypesOfDataSet {
+class TheBasicsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["С какой буквы должно начинаться имя переменной в Swift?",

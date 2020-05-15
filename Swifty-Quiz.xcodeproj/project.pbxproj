@@ -7,26 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB119C16246A54BC005F5289 /* StructuresSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresSet.swift */; };
-		FB119C18246A54F4005F5289 /* ClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C17246A54F4005F5289 /* ClassesSet.swift */; };
+		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
 		FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C1B246A554B005F5289 /* MethodsSet.swift */; };
 		FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C22246A5AB3005F5289 /* SubscriptsSet.swift */; };
 		FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C24246A5AC2005F5289 /* InheritanceSet.swift */; };
 		FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C26246A5ACC005F5289 /* InitializationSet.swift */; };
 		FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C28246A5AD7005F5289 /* DeinitializationSet.swift */; };
-		FB119C2B246A5AE4005F5289 /* ErrorProcessingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C2A246A5AE4005F5289 /* ErrorProcessingSet.swift */; };
-		FB119C2D246A5AF0005F5289 /* OptionalsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C2C246A5AF0005F5289 /* OptionalsSet.swift */; };
+		FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C2A246A5AE4005F5289 /* ErrorHandlingSet.swift */; };
+		FB119C2D246A5AF0005F5289 /* OptionalChainingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C2C246A5AF0005F5289 /* OptionalChainingSet.swift */; };
 		FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */; };
 		FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C31246A5B12005F5289 /* ExtensionsSet.swift */; };
 		FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C33246A5B23005F5289 /* NestedTypesSet.swift */; };
 		FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */; };
 		FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C37246A5B3C005F5289 /* GenericsSet.swift */; };
-		FB119C3A246A5B46005F5289 /* PatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C39246A5B46005F5289 /* PatternsSet.swift */; };
-		FB119C3C246A5B52005F5289 /* AlgorithmsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C3B246A5B52005F5289 /* AlgorithmsSet.swift */; };
 		FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C3D246A5B63005F5289 /* ARCSet.swift */; };
-		FB1D0B972446E7A600E9C56D /* TypesOfDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */; };
-		FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */; };
+		FB1D0B972446E7A600E9C56D /* TheBasicsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */; };
+		FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */; };
 		FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */; };
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
@@ -50,44 +47,45 @@
 		FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606AC24431A9300A692AD /* RecordsViewController.swift */; };
 		FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B124445E0600A692AD /* RecordsCaretaker.swift */; };
 		FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B42444773A00A692AD /* HalfRoundButton.swift */; };
-		FB86ACA02469A3E9002BA8B3 /* QueuesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86AC9F2469A3E9002BA8B3 /* QueuesSet.swift */; };
+		FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86AC9F2469A3E9002BA8B3 /* ControlFlowSet.swift */; };
 		FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */; };
 		FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */; };
-		FB86ACA82469A424002BA8B3 /* EnumsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA72469A424002BA8B3 /* EnumsSet.swift */; };
+		FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA72469A424002BA8B3 /* EnumerationsSet.swift */; };
 		FB87420C24605BF500247923 /* button2.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420824605BF500247923 /* button2.wav */; };
 		FB87420D24605BF500247923 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB87420924605BF500247923 /* trash.mp3 */; };
 		FB87420E24605BF500247923 /* button1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420A24605BF500247923 /* button1.wav */; };
 		FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8742112461ABA600247923 /* SoundPlayer.swift */; };
+		FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */; };
+		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
+		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
+		FB96628D246E6E85000B82B9 /* AdvancedOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */; };
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
-		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
+		FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionTypesSet.swift */; };
 		FBDD37462464642F00B3E47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
-		FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */; };
+		FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* TopicOperator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB119C15246A54BC005F5289 /* StructuresSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresSet.swift; sourceTree = "<group>"; };
-		FB119C17246A54F4005F5289 /* ClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesSet.swift; sourceTree = "<group>"; };
+		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
 		FB119C1B246A554B005F5289 /* MethodsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsSet.swift; sourceTree = "<group>"; };
 		FB119C22246A5AB3005F5289 /* SubscriptsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptsSet.swift; sourceTree = "<group>"; };
 		FB119C24246A5AC2005F5289 /* InheritanceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceSet.swift; sourceTree = "<group>"; };
 		FB119C26246A5ACC005F5289 /* InitializationSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationSet.swift; sourceTree = "<group>"; };
 		FB119C28246A5AD7005F5289 /* DeinitializationSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeinitializationSet.swift; sourceTree = "<group>"; };
-		FB119C2A246A5AE4005F5289 /* ErrorProcessingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProcessingSet.swift; sourceTree = "<group>"; };
-		FB119C2C246A5AF0005F5289 /* OptionalsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalsSet.swift; sourceTree = "<group>"; };
+		FB119C2A246A5AE4005F5289 /* ErrorHandlingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingSet.swift; sourceTree = "<group>"; };
+		FB119C2C246A5AF0005F5289 /* OptionalChainingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalChainingSet.swift; sourceTree = "<group>"; };
 		FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCastingSet.swift; sourceTree = "<group>"; };
 		FB119C31246A5B12005F5289 /* ExtensionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsSet.swift; sourceTree = "<group>"; };
 		FB119C33246A5B23005F5289 /* NestedTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTypesSet.swift; sourceTree = "<group>"; };
 		FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsSet.swift; sourceTree = "<group>"; };
 		FB119C37246A5B3C005F5289 /* GenericsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsSet.swift; sourceTree = "<group>"; };
-		FB119C39246A5B46005F5289 /* PatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsSet.swift; sourceTree = "<group>"; };
-		FB119C3B246A5B52005F5289 /* AlgorithmsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsSet.swift; sourceTree = "<group>"; };
 		FB119C3D246A5B63005F5289 /* ARCSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCSet.swift; sourceTree = "<group>"; };
-		FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesOfDataSet.swift; sourceTree = "<group>"; };
-		FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsSet.swift; sourceTree = "<group>"; };
+		FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBasicsSet.swift; sourceTree = "<group>"; };
+		FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicOperatorsSet.swift; sourceTree = "<group>"; };
 		FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
@@ -113,21 +111,25 @@
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		FB8606B124445E0600A692AD /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		FB8606B42444773A00A692AD /* HalfRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRoundButton.swift; sourceTree = "<group>"; };
-		FB86AC9F2469A3E9002BA8B3 /* QueuesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuesSet.swift; sourceTree = "<group>"; };
+		FB86AC9F2469A3E9002BA8B3 /* ControlFlowSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFlowSet.swift; sourceTree = "<group>"; };
 		FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsSet.swift; sourceTree = "<group>"; };
 		FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresSet.swift; sourceTree = "<group>"; };
-		FB86ACA72469A424002BA8B3 /* EnumsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsSet.swift; sourceTree = "<group>"; };
+		FB86ACA72469A424002BA8B3 /* EnumerationsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumerationsSet.swift; sourceTree = "<group>"; };
 		FB87420824605BF500247923 /* button2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button2.wav; sourceTree = "<group>"; };
 		FB87420924605BF500247923 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
 		FB87420A24605BF500247923 /* button1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button1.wav; sourceTree = "<group>"; };
 		FB8742112461ABA600247923 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
+		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
+		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
+		FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedOperatorsSet.swift; sourceTree = "<group>"; };
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
-		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
+		FBADAAEE246825560014501E /* CollectionTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTypesSet.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDatabase.swift; sourceTree = "<group>"; };
+		FBECDC5F243F352D00BD5583 /* TopicOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicOperator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +164,9 @@
 		FB119C12246A52E1005F5289 /* 01 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB1D0B962446E7A600E9C56D /* TypesOfDataSet.swift */,
-				FB1D0B9824470D7E00E9C56D /* OperatorsSet.swift */,
-				FBADAAEE246825560014501E /* CollectionsSet.swift */,
+				FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */,
+				FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */,
+				FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */,
 			);
 			path = "01 row";
 			sourceTree = "<group>";
@@ -172,10 +174,8 @@
 		FB119C13246A5305005F5289 /* 02 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB86AC9F2469A3E9002BA8B3 /* QueuesSet.swift */,
-				FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */,
-				FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */,
-				FB86ACA72469A424002BA8B3 /* EnumsSet.swift */,
+				FBADAAEE246825560014501E /* CollectionTypesSet.swift */,
+				FB86AC9F2469A3E9002BA8B3 /* ControlFlowSet.swift */,
 			);
 			path = "02 row";
 			sourceTree = "<group>";
@@ -183,10 +183,9 @@
 		FB119C14246A54AE005F5289 /* 03 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C15246A54BC005F5289 /* StructuresSet.swift */,
-				FB119C17246A54F4005F5289 /* ClassesSet.swift */,
-				FB119C19246A5522005F5289 /* PropertiesSet.swift */,
-				FB119C1B246A554B005F5289 /* MethodsSet.swift */,
+				FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */,
+				FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */,
+				FB86ACA72469A424002BA8B3 /* EnumerationsSet.swift */,
 			);
 			path = "03 row";
 			sourceTree = "<group>";
@@ -194,9 +193,9 @@
 		FB119C1D246A586E005F5289 /* 04 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C22246A5AB3005F5289 /* SubscriptsSet.swift */,
-				FB119C24246A5AC2005F5289 /* InheritanceSet.swift */,
-				FB119C26246A5ACC005F5289 /* InitializationSet.swift */,
+				FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */,
+				FB119C19246A5522005F5289 /* PropertiesSet.swift */,
+				FB119C1B246A554B005F5289 /* MethodsSet.swift */,
 			);
 			path = "04 row";
 			sourceTree = "<group>";
@@ -204,8 +203,9 @@
 		FB119C1E246A5873005F5289 /* 05 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C28246A5AD7005F5289 /* DeinitializationSet.swift */,
-				FB119C2A246A5AE4005F5289 /* ErrorProcessingSet.swift */,
+				FB119C22246A5AB3005F5289 /* SubscriptsSet.swift */,
+				FB119C24246A5AC2005F5289 /* InheritanceSet.swift */,
+				FB119C26246A5ACC005F5289 /* InitializationSet.swift */,
 			);
 			path = "05 row";
 			sourceTree = "<group>";
@@ -213,9 +213,8 @@
 		FB119C1F246A5879005F5289 /* 06 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C2C246A5AF0005F5289 /* OptionalsSet.swift */,
-				FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */,
-				FB119C31246A5B12005F5289 /* ExtensionsSet.swift */,
+				FB119C28246A5AD7005F5289 /* DeinitializationSet.swift */,
+				FB119C2A246A5AE4005F5289 /* ErrorHandlingSet.swift */,
 			);
 			path = "06 row";
 			sourceTree = "<group>";
@@ -223,9 +222,8 @@
 		FB119C20246A587D005F5289 /* 07 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C33246A5B23005F5289 /* NestedTypesSet.swift */,
-				FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */,
-				FB119C37246A5B3C005F5289 /* GenericsSet.swift */,
+				FB119C2C246A5AF0005F5289 /* OptionalChainingSet.swift */,
+				FB119C3D246A5B63005F5289 /* ARCSet.swift */,
 			);
 			path = "07 row";
 			sourceTree = "<group>";
@@ -233,9 +231,9 @@
 		FB119C21246A5884005F5289 /* 08 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB119C39246A5B46005F5289 /* PatternsSet.swift */,
-				FB119C3B246A5B52005F5289 /* AlgorithmsSet.swift */,
-				FB119C3D246A5B63005F5289 /* ARCSet.swift */,
+				FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */,
+				FB119C33246A5B23005F5289 /* NestedTypesSet.swift */,
+				FB119C31246A5B12005F5289 /* ExtensionsSet.swift */,
 			);
 			path = "08 row";
 			sourceTree = "<group>";
@@ -251,6 +249,9 @@
 				FB119C1F246A5879005F5289 /* 06 row */,
 				FB119C20246A587D005F5289 /* 07 row */,
 				FB119C21246A5884005F5289 /* 08 row */,
+				FB966285246E6B21000B82B9 /* 09 row */,
+				FB966286246E6B29000B82B9 /* 10 row */,
+				FB966287246E6B35000B82B9 /* 11 row */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -330,7 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1D0B952446E76F00E9C56D /* Questions */,
-				FBECDC5F243F352D00BD5583 /* QuestionDatabase.swift */,
+				FBECDC5F243F352D00BD5583 /* TopicOperator.swift */,
 				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
 				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
@@ -356,6 +357,32 @@
 				FB87420924605BF500247923 /* trash.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FB966285246E6B21000B82B9 /* 09 row */ = {
+			isa = PBXGroup;
+			children = (
+				FB119C37246A5B3C005F5289 /* GenericsSet.swift */,
+				FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */,
+			);
+			path = "09 row";
+			sourceTree = "<group>";
+		};
+		FB966286246E6B29000B82B9 /* 10 row */ = {
+			isa = PBXGroup;
+			children = (
+				FB966288246E6D8C000B82B9 /* AccessControlSet.swift */,
+				FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */,
+			);
+			path = "10 row";
+			sourceTree = "<group>";
+		};
+		FB966287246E6B35000B82B9 /* 11 row */ = {
+			isa = PBXGroup;
+			children = (
+				FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */,
+			);
+			path = "11 row";
 			sourceTree = "<group>";
 		};
 		FBECDC58243F241B00BD5583 /* Controllers */ = {
@@ -471,23 +498,24 @@
 			files = (
 				FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */,
 				FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */,
-				FB119C2D246A5AF0005F5289 /* OptionalsSet.swift in Sources */,
+				FB119C2D246A5AF0005F5289 /* OptionalChainingSet.swift in Sources */,
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
-				FBECDC60243F352D00BD5583 /* QuestionDatabase.swift in Sources */,
-				FB1D0B972446E7A600E9C56D /* TypesOfDataSet.swift in Sources */,
-				FB119C18246A54F4005F5289 /* ClassesSet.swift in Sources */,
+				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
+				FB96628D246E6E85000B82B9 /* AdvancedOperatorsSet.swift in Sources */,
+				FB1D0B972446E7A600E9C56D /* TheBasicsSet.swift in Sources */,
 				FBECDC5E243F310800BD5583 /* Question.swift in Sources */,
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
-				FB86ACA82469A424002BA8B3 /* EnumsSet.swift in Sources */,
+				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
 				FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */,
 				FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */,
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
 				FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
-				FB119C3C246A5B52005F5289 /* AlgorithmsSet.swift in Sources */,
-				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
+				FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */,
+				FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */,
+				FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */,
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
@@ -495,26 +523,26 @@
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
-				FB119C2B246A5AE4005F5289 /* ErrorProcessingSet.swift in Sources */,
+				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
-				FB119C16246A54BC005F5289 /* StructuresSet.swift in Sources */,
+				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
-				FB119C3A246A5B46005F5289 /* PatternsSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
-				FB86ACA02469A3E9002BA8B3 /* QueuesSet.swift in Sources */,
-				FB1D0B9924470D7E00E9C56D /* OperatorsSet.swift in Sources */,
+				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
+				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
+				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,
 			);

@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ErrorProcessingSet {
+class StructuresAndClassesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

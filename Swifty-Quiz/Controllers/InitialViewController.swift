@@ -38,7 +38,7 @@ extension InitialViewController {
     func addDefaultQuestionSet() {
         if SelectedTopic.shared.topic.questionSet.isEmpty {
             /// Первый запуск: добавляем сет, обновлянем название
-            let newSet = QuestionDatabase.getQuestionsTypesOfData()
+            let newSet = TopicOperator.getQuestionsTheBasics()
             SelectedTopic.shared.addQuestionSet(newSet, topic: "Типы данных", tag: 0)
             selectedTopic.text = "Типы данных"
         } else {

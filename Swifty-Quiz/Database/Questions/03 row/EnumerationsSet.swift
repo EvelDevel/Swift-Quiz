@@ -4,7 +4,7 @@
 
 import Foundation
 
-class QueuesSet {
+class EnumerationsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

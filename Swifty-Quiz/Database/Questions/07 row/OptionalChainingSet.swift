@@ -4,7 +4,7 @@
 
 import Foundation
 
-class AlgorithmsSet {
+class OptionalChainingSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

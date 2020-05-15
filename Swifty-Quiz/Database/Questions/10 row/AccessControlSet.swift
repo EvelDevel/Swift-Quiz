@@ -4,7 +4,7 @@
 
 import Foundation
 
-class PatternsSet {
+class AccessControlSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",
