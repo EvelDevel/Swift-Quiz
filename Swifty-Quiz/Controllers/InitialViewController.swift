@@ -4,6 +4,8 @@
 
 import UIKit
 
+// MARK: TODO - Добавить настройку, чтобы после неправильного ответа всплывала подсказка
+
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()
