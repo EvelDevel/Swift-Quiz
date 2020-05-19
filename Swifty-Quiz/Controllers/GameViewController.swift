@@ -77,9 +77,19 @@ extension GameViewController {
     }
     
     func updateQuestion() {
+        refreshButtonsVisibility()
         setDafaultButtonsColor()
         addQuestionContent()
         updateUI()
+    }
+    
+    func refreshButtonsVisibility() {
+        if currentQuestionIndex < initialQuestionSet.count {
+            self.optionA.isHidden = false
+            self.optionB.isHidden = false
+            self.optionC.isHidden = false
+            self.optionD.isHidden = false
+        }
     }
     
     func setDafaultButtonsColor() {
@@ -183,6 +193,19 @@ extension GameViewController {
         optionB.setTitle(shuffledAnswersArray[1], for: .normal)
         optionC.setTitle(shuffledAnswersArray[2], for: .normal)
         optionD.setTitle(shuffledAnswersArray[3], for: .normal)
+        
+        if shuffledAnswersArray[0] == "" {
+            optionA.isHidden = true
+        }
+        if shuffledAnswersArray[1] == "" {
+            optionB.isHidden = true
+        }
+        if shuffledAnswersArray[2] == "" {
+            optionC.isHidden = true
+        }
+        if shuffledAnswersArray[3] == "" {
+            optionD.isHidden = true
+        }
     }
 }
 
@@ -205,11 +228,20 @@ extension GameViewController {
                 endGame(scenario: 3)
             }
         }
+        
+        if currentQuestionIndex < initialQuestionSet.count - 1 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                for button in self.answerButtonsCollections {
+                    button.setTitle("", for: .normal)
+                }
+            }
+        }
+        
         if currentQuestionIndex < initialQuestionSet.count {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.updateQuestion()
             }
         }
