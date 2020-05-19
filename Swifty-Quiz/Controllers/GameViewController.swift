@@ -106,7 +106,7 @@ extension GameViewController {
             setQuestionText()
             saveCorrectAnswerText()
             shuffleAnswersPositions()
-            placeShuffledAnswers()
+            settingShuffledAnswers()
         } else if endGameFlag == false {
             endGame(scenario: 2)
         }
@@ -188,24 +188,25 @@ extension GameViewController {
         }
     }
     
-    func placeShuffledAnswers() {
-        optionA.setTitle(shuffledAnswersArray[0], for: .normal)
-        optionB.setTitle(shuffledAnswersArray[1], for: .normal)
-        optionC.setTitle(shuffledAnswersArray[2], for: .normal)
-        optionD.setTitle(shuffledAnswersArray[3], for: .normal)
+    func settingShuffledAnswers() {
         
-        if shuffledAnswersArray[0] == "" {
-            optionA.isHidden = true
-        }
-        if shuffledAnswersArray[1] == "" {
-            optionB.isHidden = true
-        }
-        if shuffledAnswersArray[2] == "" {
-            optionC.isHidden = true
-        }
-        if shuffledAnswersArray[3] == "" {
-            optionD.isHidden = true
-        }
+        /// Установка ответов без анимации и скрытие пустых кнопок
+        
+        optionA.titleLabel?.text = shuffledAnswersArray[0]
+        optionA.setTitle(shuffledAnswersArray[0], for: .normal)
+        if shuffledAnswersArray[0] == "" { optionA.isHidden = true }
+        
+        optionB.titleLabel?.text = shuffledAnswersArray[1]
+        optionB.setTitle(shuffledAnswersArray[1], for: .normal)
+        if shuffledAnswersArray[1] == "" { optionB.isHidden = true }
+        
+        optionC.titleLabel?.text = shuffledAnswersArray[2]
+        optionC.setTitle(shuffledAnswersArray[2], for: .normal)
+        if shuffledAnswersArray[2] == "" { optionC.isHidden = true }
+        
+        optionD.titleLabel?.text = shuffledAnswersArray[3]
+        optionD.setTitle(shuffledAnswersArray[3], for: .normal)
+        if shuffledAnswersArray[3] == "" { optionD.isHidden = true }
     }
 }
 
@@ -229,19 +230,11 @@ extension GameViewController {
             }
         }
         
-        if currentQuestionIndex < initialQuestionSet.count - 1 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                for button in self.answerButtonsCollections {
-                    button.setTitle("", for: .normal)
-                }
-            }
-        }
-        
         if currentQuestionIndex < initialQuestionSet.count {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.updateQuestion()
             }
         }
