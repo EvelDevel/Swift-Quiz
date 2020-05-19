@@ -77,6 +77,15 @@ extension Game {
         }
     }
     
+    /// Настройки: Помощь после неправильного ответа
+    func setHelpAfterWrong(setting: HelpAfterWrong) {
+        if setting == .help {
+            self.settings.helpAfterWrong = 1
+        } else {
+            self.settings.helpAfterWrong = 0
+        }
+    }
+    
     /// Настройки: Поведение при досрочном выходе из игры
     func setSaveRecord(setting: SaveRecord) {
         if setting == .save {

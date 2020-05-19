@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
     private let endGameSettings = Game.shared.settings.endGame
     private let saveRecordSettings = Game.shared.settings.saveRecord
     private let soundSettings = Game.shared.settings.sound
+    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
@@ -46,6 +47,7 @@ class GameViewController: UIViewController {
     private var imageName = ""
     private var helpCounter = 0
     private var helpFlag = false
+    private var helpAfterWrongAnswerFlag = false
     private var endGameFlag = false
     
     private var shuffledAnswersArray: [String] = []
@@ -113,6 +115,7 @@ extension GameViewController {
     }
     
     func updateUI() {
+        helpAfterWrongAnswerFlag = false
         helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(initialQuestionSet.count)"
@@ -217,6 +220,7 @@ extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == correctAnswerNewPosition {
             score += 1
+            helpAfterWrongAnswerFlag = false
             addGreenShadow(button: sender)
             changeButtonColor(sender: sender, true)
             SoundPlayer.shared.playSound(sound: .answerButtonRight)
@@ -224,13 +228,21 @@ extension GameViewController {
             addRedShadow(button: sender)
             changeButtonColor(sender: sender, false)
             SoundPlayer.shared.playSound(sound: .answerButtonWrong)
-    
+            
+            /// Запуск подсказки после неправильного ответа (настройки)
+            if helpAfterWrongAnswerSetting == 1 {
+                showHelpAfterWrongAnswer()
+                helpAfterWrongAnswerFlag = true
+                helpFlag = true
+            }
+            
+            /// Завершение игры после неправильного ответа (настройки)
             if endGameSettings == 1 {
                 endGame(scenario: 3)
             }
         }
         
-        if currentQuestionIndex < initialQuestionSet.count {
+        if currentQuestionIndex < initialQuestionSet.count && helpAfterWrongAnswerFlag == false {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
@@ -238,6 +250,22 @@ extension GameViewController {
                 self.updateQuestion()
             }
         }
+    }
+    
+    func showHelpAfterWrongAnswer() {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        helpView.delegate = self
+        helpView.questionID = initialQuestionSet[currentQuestionIndex].questionId
+        
+        /// Если не переходим к следующему - засчитываем только 1 подсказку
+        if helpFlag == false {
+            helpCounter += 1
+        }
+        pressHelpCounterLabel.text = "\(helpCounter)"
+        helpFlag = true
+        self.present(helpView, animated: true, completion: nil)
+        updateUI()
     }
     
     func changeButtonColor(sender: UIButton, _ answerIsCorrect: Bool) {

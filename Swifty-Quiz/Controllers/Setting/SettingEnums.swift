@@ -22,6 +22,12 @@ enum EndGame {
     case endGame
 }
 
+// Подсказка после неправильного ответа
+enum HelpAfterWrong {
+    case proceed
+    case help
+}
+
 // Поведение при досрочном выходе
 enum SaveRecord {
     case save

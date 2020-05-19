@@ -11,4 +11,5 @@ struct Settings: Codable {
     var saveRecord: Int
     var sound: Int
     var changeAfterHelp: Int
+    var helpAfterWrong: Int
 }

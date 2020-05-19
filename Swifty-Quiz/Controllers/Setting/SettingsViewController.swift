@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
     @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
+    @IBOutlet weak var helpAfterWrongAnswerControl: UISegmentedControl!
     
     @IBOutlet var allControls: [UISegmentedControl]!
     
@@ -55,6 +56,7 @@ extension SettingsViewController {
         saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
         soundControl.addTarget(self, action: #selector(soundValue), for: .valueChanged)
         changeAfterHelpControl.addTarget(self, action: #selector(changeAfterHelpValue), for: .valueChanged)
+        helpAfterWrongAnswerControl.addTarget(self, action: #selector(helpAfterWrongValue), for: .valueChanged)
     }
 
     /// Определяем текущее состояние (если меняли настройку последовательности)
@@ -76,6 +78,12 @@ extension SettingsViewController {
             endGameControl.selectedSegmentIndex = 0
         } else {
             endGameControl.selectedSegmentIndex = 1
+        }
+        // Настройка поведения подсказки при неправильном ответе
+        if Game.shared.settings.helpAfterWrong == 0 {
+            helpAfterWrongAnswerControl.selectedSegmentIndex = 0
+        } else {
+            helpAfterWrongAnswerControl.selectedSegmentIndex = 1
         }
         // Настройка поведения при досрочном выходе из игры
         if Game.shared.settings.saveRecord == 0 {
@@ -134,6 +142,18 @@ extension SettingsViewController {
                 Game.shared.setEndGame(setting: .proceed)
             } else {
                 Game.shared.setEndGame(setting: .endGame)
+            }
+        }
+    }
+    
+    /// Меняем настройку поведения подсказки при неправильном ответе
+    @objc func helpAfterWrongValue(target: UISegmentedControl) {
+        if target == self.helpAfterWrongAnswerControl {
+            let segmentIndex = target.selectedSegmentIndex
+            if segmentIndex == 0 {
+                Game.shared.setHelpAfterWrong(setting: .proceed)
+            } else {
+                Game.shared.setHelpAfterWrong(setting: .help)
             }
         }
     }

@@ -28,7 +28,9 @@ class HelpViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        delegate?.updateAfterHelp()
+        if Game.shared.settings.helpAfterWrong == 1 || Game.shared.settings.changeAfterHelp == 0 {
+            delegate?.updateAfterHelp()
+        }
     }
 }
 

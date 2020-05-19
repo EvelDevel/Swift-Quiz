@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: Memento
-
 class SettingsCaretaker {
     
     private let encoder = JSONEncoder()
@@ -28,7 +26,8 @@ class SettingsCaretaker {
                             endGame: 0,
                             saveRecord: 0,
                             sound: 0,
-                            changeAfterHelp: 0)
+                            changeAfterHelp: 0,
+                            helpAfterWrong: 0)
         }
         do {
             return try self.decoder.decode(Settings.self, from: data)
@@ -39,7 +38,8 @@ class SettingsCaretaker {
                             endGame: 0,
                             saveRecord: 0,
                             sound: 0,
-                            changeAfterHelp: 0)
+                            changeAfterHelp: 0,
+                            helpAfterWrong: 0)
         }
     }
 }

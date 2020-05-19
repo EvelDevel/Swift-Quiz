@@ -419,14 +419,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите порядок вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF7-zb-VIY">
-                                <rect key="frame" x="16" y="70" width="288" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <rect key="frame" x="16" y="70" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oI0-v5-8TH">
-                                <rect key="frame" x="16" y="98" width="288" height="32"/>
+                                <rect key="frame" x="16" y="96" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="hBu-X4-KGm"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Прямой"/>
                                     <segment title="Случайный"/>
@@ -437,14 +440,17 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменение формулировок вопроса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y09-f6-Yr6">
-                                <rect key="frame" x="16" y="144" width="288" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <rect key="frame" x="16" y="139" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bur-lL-b4K">
-                                <rect key="frame" x="16" y="172" width="288" height="32"/>
+                                <rect key="frame" x="16" y="165" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="QJP-jL-bkN"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Не менять"/>
                                     <segment title="Менять"/>
@@ -455,14 +461,17 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="После неправильного ответа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO1-Wi-Dxz">
-                                <rect key="frame" x="16" y="218" width="288" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <rect key="frame" x="16" y="208" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-RU-K1A">
-                                <rect key="frame" x="16" y="246" width="288" height="32"/>
+                                <rect key="frame" x="16" y="229" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Pj4-4J-PlP"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Продолжать"/>
                                     <segment title="Завершать игру"/>
@@ -473,14 +482,17 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сохранять рекорд при досрочном выходе?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-hq-hTi">
-                                <rect key="frame" x="16" y="292" width="288" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <rect key="frame" x="16" y="379" width="288" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="btd-Aq-lVl">
-                                <rect key="frame" x="16" y="319" width="288" height="32"/>
+                                <rect key="frame" x="16" y="403.5" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="BHZ-qB-qk0"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Не сохранять"/>
                                     <segment title="Сохранять"/>
@@ -491,14 +503,17 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Переходить дальше после подсказки?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-L2-e0H">
-                                <rect key="frame" x="16" y="365" width="288" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <rect key="frame" x="16" y="310" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-cO-Gc8">
-                                <rect key="frame" x="16" y="393" width="288" height="32"/>
+                                <rect key="frame" x="16" y="336" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="sTI-Il-8fG"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Переходить "/>
                                     <segment title="Оставаться"/>
@@ -508,15 +523,33 @@
                                     <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="eC7-0y-A4E"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-x1-11S">
+                                <rect key="frame" x="16" y="267" width="288" height="29"/>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Dng-PH-SiD"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Продолжать"/>
+                                    <segment title="Вывести подсказку"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="settingSwitchSound:" destination="mCG-gu-aKe" eventType="valueChanged" id="ogW-Lc-V1C"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звуки в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8t-6r-3Rk">
-                                <rect key="frame" x="16" y="439" width="288" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <rect key="frame" x="16" y="446.5" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fFq-ub-UCg">
-                                <rect key="frame" x="16" y="467" width="288" height="32"/>
+                                <rect key="frame" x="16" y="472.5" width="288" height="29"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="HJx-06-ugx"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Включены"/>
                                     <segment title="Выключены"/>
@@ -530,26 +563,28 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" id="1H5-qk-qQ7"/>
+                            <constraint firstItem="rnC-x1-11S" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="1P7-Qe-nsw"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="25" id="4n3-pQ-Z5t"/>
-                            <constraint firstItem="cpJ-hq-hTi" firstAttribute="top" secondItem="cQP-RU-K1A" secondAttribute="bottom" constant="15" id="55e-sh-mKk"/>
+                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="rnC-x1-11S" secondAttribute="trailing" constant="16" id="5z1-3T-Bap"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="Dw4-L2-e0H" secondAttribute="trailing" constant="16" id="6pn-jn-Ze4"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="CO1-Wi-Dxz" secondAttribute="trailing" constant="16" id="7e9-f5-7nJ"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="bur-lL-b4K" secondAttribute="trailing" constant="16" id="7eh-sz-cTe"/>
+                            <constraint firstItem="cpJ-hq-hTi" firstAttribute="top" secondItem="Zq4-cO-Gc8" secondAttribute="bottom" constant="15" id="8MF-Zk-IR9"/>
                             <constraint firstItem="btd-Aq-lVl" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="8OW-Js-uCl"/>
+                            <constraint firstItem="rnC-x1-11S" firstAttribute="top" secondItem="cQP-RU-K1A" secondAttribute="bottom" constant="10" id="8f8-U9-oQf"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="top" secondItem="oI0-v5-8TH" secondAttribute="bottom" constant="15" id="8lR-x0-sTO"/>
                             <constraint firstItem="Zq4-cO-Gc8" firstAttribute="top" secondItem="Dw4-L2-e0H" secondAttribute="bottom" constant="10" id="9na-ui-f5c"/>
-                            <constraint firstItem="cQP-RU-K1A" firstAttribute="top" secondItem="CO1-Wi-Dxz" secondAttribute="bottom" constant="10" id="Amf-s9-Ndo"/>
+                            <constraint firstItem="cQP-RU-K1A" firstAttribute="top" secondItem="CO1-Wi-Dxz" secondAttribute="bottom" constant="5" id="Amf-s9-Ndo"/>
                             <constraint firstItem="bur-lL-b4K" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="ByC-Wv-Lth"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="0JB-Nr-Ypt" secondAttribute="trailing" id="CuB-KM-Bh4"/>
                             <constraint firstItem="cQP-RU-K1A" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="EY9-CJ-8mx"/>
-                            <constraint firstItem="Dw4-L2-e0H" firstAttribute="top" secondItem="btd-Aq-lVl" secondAttribute="bottom" constant="15" id="Ei8-fb-sh5"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="pF7-zb-VIY" secondAttribute="trailing" constant="16" id="Ffi-KA-NhL"/>
                             <constraint firstItem="btd-Aq-lVl" firstAttribute="top" secondItem="cpJ-hq-hTi" secondAttribute="bottom" constant="10" id="GgP-Vp-QVc"/>
                             <constraint firstItem="t8t-6r-3Rk" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="HAF-HO-IFQ"/>
                             <constraint firstItem="fFq-ub-UCg" firstAttribute="top" secondItem="t8t-6r-3Rk" secondAttribute="bottom" constant="10" id="HbU-fz-tDE"/>
+                            <constraint firstItem="Dw4-L2-e0H" firstAttribute="top" secondItem="rnC-x1-11S" secondAttribute="bottom" constant="15" id="I9X-1s-Lcf"/>
                             <constraint firstItem="oI0-v5-8TH" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="N8L-WL-2oh"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="1Wm-RF-lUd" secondAttribute="trailing" constant="50" id="O3B-Al-jho"/>
-                            <constraint firstItem="t8t-6r-3Rk" firstAttribute="top" secondItem="Zq4-cO-Gc8" secondAttribute="bottom" constant="15" id="QYn-XZ-JjW"/>
                             <constraint firstItem="y09-f6-Yr6" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="X5Y-4O-V4N"/>
                             <constraint firstItem="CO1-Wi-Dxz" firstAttribute="top" secondItem="bur-lL-b4K" secondAttribute="bottom" constant="15" id="Ymp-b1-6pv"/>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" id="Zcv-ed-P8O"/>
@@ -567,6 +602,7 @@
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="t8t-6r-3Rk" secondAttribute="trailing" constant="16" id="rtw-Kr-RlD"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="y09-f6-Yr6" secondAttribute="trailing" constant="16" id="sSh-fx-RFf"/>
                             <constraint firstItem="pF7-zb-VIY" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="70" id="uNg-5L-CJd"/>
+                            <constraint firstItem="t8t-6r-3Rk" firstAttribute="top" secondItem="btd-Aq-lVl" secondAttribute="bottom" constant="15" id="uzp-wn-CUa"/>
                             <constraint firstItem="Zq4-cO-Gc8" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="vl2-0y-Rzw"/>
                             <constraint firstItem="fFq-ub-UCg" firstAttribute="leading" secondItem="2Ss-4y-W7V" secondAttribute="leading" constant="16" id="xir-Vf-iAU"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="fFq-ub-UCg" secondAttribute="trailing" constant="16" id="xpe-Lk-vXp"/>
@@ -578,6 +614,7 @@
                     <connections>
                         <outlet property="changeAfterHelpControl" destination="Zq4-cO-Gc8" id="P5j-09-Z5G"/>
                         <outlet property="endGameControl" destination="cQP-RU-K1A" id="zHX-n9-PlI"/>
+                        <outlet property="helpAfterWrongAnswerControl" destination="rnC-x1-11S" id="TZq-K9-gbW"/>
                         <outlet property="questionOrderControl" destination="oI0-v5-8TH" id="0uk-hI-NnJ"/>
                         <outlet property="questionTextControl" destination="bur-lL-b4K" id="DHx-pZ-qfN"/>
                         <outlet property="saveRecordControl" destination="btd-Aq-lVl" id="kHd-3s-0Sh"/>
@@ -588,11 +625,12 @@
                         <outletCollection property="allControls" destination="btd-Aq-lVl" collectionClass="NSMutableArray" id="glR-lc-ONa"/>
                         <outletCollection property="allControls" destination="fFq-ub-UCg" collectionClass="NSMutableArray" id="GWQ-42-pw4"/>
                         <outletCollection property="allControls" destination="Zq4-cO-Gc8" collectionClass="NSMutableArray" id="cEy-9f-ME1"/>
+                        <outletCollection property="allControls" destination="rnC-x1-11S" collectionClass="NSMutableArray" id="gp7-FZ-JMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWG-TZ-jw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="931"/>
+            <point key="canvasLocation" x="1087.5" y="930.63380281690138"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -870,7 +908,7 @@
         <!--Help View Controller-->
         <scene sceneID="wvl-AF-KOl">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iA-3V-kie">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
