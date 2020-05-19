@@ -16,12 +16,6 @@ enum QuestionText {
     case random
 }
 
-// Поведение при неправильном ответе
-enum EndGame {
-    case proceed
-    case endGame
-}
-
 // Подсказка после неправильного ответа
 enum HelpAfterWrong {
     case proceed

@@ -8,7 +8,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var questionOrderControl: UISegmentedControl!
     @IBOutlet weak var questionTextControl: UISegmentedControl!
-    @IBOutlet weak var endGameControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
     @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
@@ -52,7 +51,6 @@ extension SettingsViewController {
     func addingTargets() {
         questionOrderControl.addTarget(self, action: #selector(questionOrderValue), for: .valueChanged)
         questionTextControl.addTarget(self, action: #selector(questionTextShuffleValue), for: .valueChanged)
-        endGameControl.addTarget(self, action: #selector(endGameValue), for: .valueChanged)
         saveRecordControl.addTarget(self, action: #selector(saveRecordValue), for: .valueChanged)
         soundControl.addTarget(self, action: #selector(soundValue), for: .valueChanged)
         changeAfterHelpControl.addTarget(self, action: #selector(changeAfterHelpValue), for: .valueChanged)
@@ -72,12 +70,6 @@ extension SettingsViewController {
             questionTextControl.selectedSegmentIndex = 0
         } else {
             questionTextControl.selectedSegmentIndex = 1
-        }
-        // Настройка поведения при неправильном ответе
-        if Game.shared.settings.endGame == 0 {
-            endGameControl.selectedSegmentIndex = 0
-        } else {
-            endGameControl.selectedSegmentIndex = 1
         }
         // Настройка поведения подсказки при неправильном ответе
         if Game.shared.settings.helpAfterWrong == 0 {
@@ -130,18 +122,6 @@ extension SettingsViewController {
                 Game.shared.setQuestionTextShuffeling(setting: .same)
             } else {
                 Game.shared.setQuestionTextShuffeling(setting: .random)
-            }
-        }
-    }
-    
-    /// Меняем настройку поведения при неправильном ответе
-    @objc func endGameValue(target: UISegmentedControl) {
-        if target == self.endGameControl {
-            let segmentIndex = target.selectedSegmentIndex
-            if segmentIndex == 0 {
-                Game.shared.setEndGame(setting: .proceed)
-            } else {
-                Game.shared.setEndGame(setting: .endGame)
             }
         }
     }

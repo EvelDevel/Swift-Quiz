@@ -7,7 +7,6 @@ import Foundation
 struct Settings: Codable {
     var questionOrder: Int
     var questionTextShuffeling: Int
-    var endGame: Int
     var saveRecord: Int
     var sound: Int
     var changeAfterHelp: Int

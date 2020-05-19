@@ -32,7 +32,6 @@ class GameViewController: UIViewController {
     /// Settings
     private let orderSettings = Game.shared.settings.questionOrder
     private let shuffleSettings = Game.shared.settings.questionTextShuffeling
-    private let endGameSettings = Game.shared.settings.endGame
     private let saveRecordSettings = Game.shared.settings.saveRecord
     private let soundSettings = Game.shared.settings.sound
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
@@ -63,6 +62,7 @@ class GameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         if endGameFlag == false {
+            /// Свернули игру не дойдя до конца
             endGame(scenario: 1)
         }
     }
@@ -110,6 +110,7 @@ extension GameViewController {
             shuffleAnswersPositions()
             settingShuffledAnswers()
         } else if endGameFlag == false {
+            /// Кончились вопросы
             endGame(scenario: 2)
         }
     }
@@ -230,15 +231,9 @@ extension GameViewController {
             SoundPlayer.shared.playSound(sound: .answerButtonWrong)
             
             /// Запуск подсказки после неправильного ответа (настройки)
-            if helpAfterWrongAnswerSetting == 1 {
+            if helpAfterWrongAnswerSetting == 1 && helpFlag == false  {
                 showHelpAfterWrongAnswer()
                 helpAfterWrongAnswerFlag = true
-                helpFlag = true
-            }
-            
-            /// Завершение игры после неправильного ответа (настройки)
-            if endGameSettings == 1 {
-                endGame(scenario: 3)
             }
         }
         
@@ -265,7 +260,6 @@ extension GameViewController {
         pressHelpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)
-        updateUI()
     }
     
     func changeButtonColor(sender: UIButton, _ answerIsCorrect: Bool) {
@@ -294,36 +288,32 @@ extension GameViewController {
     func endGame(scenario: Int) {
         switch scenario {
         case 1:
-            // Свернули игру не дойдя до конца
-            if Game.shared.settings.saveRecord == 1 && currentQuestionIndex > 0 {
-                callDelegate()
-                saveRecord()
+            if saveRecordSettings == 1 && currentQuestionIndex > 0 {
+                callDelegateAndSaveRecord()
             }
         case 2:
-            /// Кончились вопросы
-            callDelegate()
-            saveRecord()
+            callDelegateAndSaveRecord()
             showAlert(title: "Вопросы закончились", message: "Ваш счет")
-        case 3:
-            /// Опция в настройках "завершать игру"
-            callDelegate()
-            saveRecord()
-            showAlert(title: "Ответ неверный", message: "Ваш счет")
         default:
-            print("we have a problem with scenarios of game ending")
+            print("endGame error")
         }
     }
     
-    func callDelegate() {
+    func callDelegateAndSaveRecord() {
         endGameFlag = true
-        delegate?.didEndGame(result: score, totalQuestion: initialQuestionSet.count, percentOfCorrect: updatePercentage(),
-                             topic: SelectedTopic.shared.topic.topicName, helpCounter: helpCounter, playedNum: currentQuestionIndex)
-    }
-    
-    func saveRecord() {
-        let record = Record(date: Date(), score: score, topic: SelectedTopic.shared.topic.topicName,
-                            totalQuestion: initialQuestionSet.count, percentOfCorrectAnswer: updatePercentage(),
-                            helpCounter: helpCounter, playedNum: currentQuestionIndex)
+        delegate?.didEndGame(result: score,
+                             totalQuestion: initialQuestionSet.count,
+                             percentOfCorrect: updatePercentage(),
+                             topic: SelectedTopic.shared.topic.topicName,
+                             helpCounter: helpCounter,
+                             playedNum: currentQuestionIndex)
+        let record = Record(date: Date(),
+                            score: score,
+                            topic: SelectedTopic.shared.topic.topicName,
+                            totalQuestion: initialQuestionSet.count,
+                            percentOfCorrectAnswer: updatePercentage(),
+                            helpCounter: helpCounter,
+                            playedNum: currentQuestionIndex)
         Game.shared.addRecord(record)
     }
     

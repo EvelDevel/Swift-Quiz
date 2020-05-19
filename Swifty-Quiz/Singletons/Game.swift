@@ -68,15 +68,6 @@ extension Game {
         }
     }
     
-    /// Настройки: Поведение при неправильном ответе
-    func setEndGame(setting: EndGame) {
-        if setting == .endGame {
-            self.settings.endGame = 1
-        } else {
-            self.settings.endGame = 0
-        }
-    }
-    
     /// Настройки: Помощь после неправильного ответа
     func setHelpAfterWrong(setting: HelpAfterWrong) {
         if setting == .help {
