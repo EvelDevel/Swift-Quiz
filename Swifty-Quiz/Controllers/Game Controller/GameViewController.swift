@@ -22,20 +22,20 @@ class GameViewController: UIViewController {
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
-    
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var pressHelpCounterLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var progressWhite: UIView!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionImageView: UIImageView!
-    @IBOutlet weak var pressHelpCounterLabel: UILabel!
     @IBOutlet weak var questionArea: UIView!
     @IBOutlet weak var progressBarWhite: UIView!
+    @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
     private let buttonsView = AnswerButtonsView()
+    private let shadows = GameViewShadows()
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
@@ -55,8 +55,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         addQuestionSet()
         updateQuestion()
-        buttonsView.addShadows(questionArea, progressWhite)
-        buttonsView.addButtonShadows(answerButtonsCollection)
+        shadows.addStaticShadows(questionArea, progressWhite)
+        shadows.addButtonShadows(answerButtonsCollection)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,7 +83,7 @@ extension GameViewController {
     func updateQuestion() {
         buttonsView.refreshButtonsVisibility(currentQuestionIndex, initialQuestionSet.count, answerButtonsCollection)
         buttonsView.setDefaultButtonsColor(answerButtonsCollection)
-        buttonsView.addButtonShadows(answerButtonsCollection)
+        shadows.addButtonShadows(answerButtonsCollection)
         addQuestionContent()
         updateUI()
     }
@@ -155,19 +155,18 @@ extension GameViewController {
 }
 
 
-// MARK: Нажатие на кнопку ответа
+// MARK: Нажатие на ответ
 extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == buttonsView.showCorrectPosition() {
             score += 1
             dontUpdateQuestionFlag = false
-            buttonsView.addGreenShadow(button: sender)
+            shadows.addGreenShadow(button: sender)
             buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonRight)
-        
         } else {
-            buttonsView.addRedShadow(button: sender)
+            shadows.addRedShadow(button: sender)
             buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonWrong)
             
@@ -229,19 +228,20 @@ extension GameViewController {
     
     func callDelegateAndSaveRecord() {
         endGameFlag = true
-        delegate?.didEndGame(result: score,
-                             totalQuestion: initialQuestionSet.count,
-                             percentOfCorrect: updatePercentage(),
-                             topic: SelectedTopic.shared.topic.topicName,
-                             helpCounter: helpCounter,
-                             playedNum: currentQuestionIndex)
-        let record = Record(date: Date(),
-                            score: score,
-                            topic: SelectedTopic.shared.topic.topicName,
-                            totalQuestion: initialQuestionSet.count,
-                            percentOfCorrectAnswer: updatePercentage(),
-                            helpCounter: helpCounter,
-                            playedNum: currentQuestionIndex)
+        delegate?.didEndGame(   result: score,
+                                totalQuestion: initialQuestionSet.count,
+                                percentOfCorrect: updatePercentage(),
+                                topic: SelectedTopic.shared.topic.topicName,
+                                helpCounter: helpCounter,
+                                playedNum: currentQuestionIndex)
+        
+        let record = Record(    date: Date(),
+                                score: score,
+                                topic: SelectedTopic.shared.topic.topicName,
+                                totalQuestion: initialQuestionSet.count,
+                                percentOfCorrectAnswer: updatePercentage(),
+                                helpCounter: helpCounter,
+                                playedNum: currentQuestionIndex)
         Game.shared.addRecord(record)
     }
     
