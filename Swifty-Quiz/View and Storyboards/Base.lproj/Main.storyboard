@@ -759,7 +759,7 @@
                                             <constraint firstItem="mHw-dw-Ztz" firstAttribute="leading" secondItem="WV1-s6-FrL" secondAttribute="leading" constant="16" id="zrn-aE-qoa"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView" customClass="AnswerButtonsView" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="246" width="320" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
@@ -861,10 +861,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="COY-Na-zyC"/>
                     <connections>
-                        <outlet property="optionA" destination="lcg-H9-k7K" id="ieY-wa-tMk"/>
-                        <outlet property="optionB" destination="cGm-XU-csX" id="OW0-0d-5Pm"/>
-                        <outlet property="optionC" destination="3us-Ch-ovH" id="USf-OI-yCZ"/>
-                        <outlet property="optionD" destination="sAj-KE-UJq" id="da4-cA-fIz"/>
+                        <outlet property="optionA" destination="lcg-H9-k7K" id="Gtw-Eb-Gg0"/>
+                        <outlet property="optionB" destination="cGm-XU-csX" id="Suk-B0-udo"/>
+                        <outlet property="optionC" destination="3us-Ch-ovH" id="hMe-yS-czi"/>
+                        <outlet property="optionD" destination="sAj-KE-UJq" id="aLc-Z6-Y9H"/>
                         <outlet property="pressHelpCounterLabel" destination="veA-zL-dzC" id="bRs-Ph-u8L"/>
                         <outlet property="progressBarWhite" destination="lup-xN-Pbw" id="BcT-I6-whA"/>
                         <outlet property="progressView" destination="CfG-r9-Tfa" id="80E-QL-tLH"/>
@@ -875,10 +875,10 @@
                         <outlet property="questionImageView" destination="dSf-H3-fwS" id="jPB-67-5Uc"/>
                         <outlet property="questionLabel" destination="vRg-39-Xa9" id="tHP-mU-Srd"/>
                         <outlet property="scoreLabel" destination="w2b-iY-9P3" id="fu8-1M-Er0"/>
-                        <outletCollection property="answerButtonsCollections" destination="lcg-H9-k7K" collectionClass="NSMutableArray" id="fuQ-gK-hQ6"/>
-                        <outletCollection property="answerButtonsCollections" destination="cGm-XU-csX" collectionClass="NSMutableArray" id="9z4-Zw-m64"/>
-                        <outletCollection property="answerButtonsCollections" destination="3us-Ch-ovH" collectionClass="NSMutableArray" id="pYy-ny-Na3"/>
-                        <outletCollection property="answerButtonsCollections" destination="sAj-KE-UJq" collectionClass="NSMutableArray" id="GIy-ie-zU8"/>
+                        <outletCollection property="answerButtonsCollection" destination="lcg-H9-k7K" collectionClass="NSMutableArray" id="pyn-cG-d9S"/>
+                        <outletCollection property="answerButtonsCollection" destination="cGm-XU-csX" collectionClass="NSMutableArray" id="nPu-1k-ilQ"/>
+                        <outletCollection property="answerButtonsCollection" destination="3us-Ch-ovH" collectionClass="NSMutableArray" id="vTH-gc-JGK"/>
+                        <outletCollection property="answerButtonsCollection" destination="sAj-KE-UJq" collectionClass="NSMutableArray" id="fz4-Ch-LgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,12 @@ protocol GameViewControllerDelegate: class {
 
 class GameViewController: UIViewController {
     
+    @IBOutlet var answerButtonsCollection: [HalfRoundButton]!
+    @IBOutlet weak var optionA: UIButton!
+    @IBOutlet weak var optionB: UIButton!
+    @IBOutlet weak var optionC: UIButton!
+    @IBOutlet weak var optionD: UIButton!
+    
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
@@ -20,13 +26,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionArea: UIView!
     @IBOutlet weak var progressBarWhite: UIView!
     @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
-    
-    @IBOutlet var answerButtonsCollections: [HalfRoundButton]!
-    @IBOutlet weak var optionA: UIButton!
-    @IBOutlet weak var optionB: UIButton!
-    @IBOutlet weak var optionC: UIButton!
-    @IBOutlet weak var optionD: UIButton!
-    
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
     /// Settings
@@ -36,28 +35,27 @@ class GameViewController: UIViewController {
     private let soundSettings = Game.shared.settings.sound
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     
+    private let buttonsView = AnswerButtonsView()
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
     private var score: Int = 0
-    private var correctAnswer: String = ""
-    private var correctAnswerNewPosition = 0
     private var percent: Double = 0
     private var imageName = ""
     private var helpCounter = 0
     private var helpFlag = false
     private var helpAfterWrongAnswerFlag = false
     private var endGameFlag = false
-    
-    private var shuffledAnswersArray: [String] = []
+
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addQuestionSet()
         updateQuestion()
         addShadows()
-        addButtonShadows()
+        buttonsView.addButtonShadows(answerButtonsCollection)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,39 +77,30 @@ extension GameViewController {
     }
     
     func updateQuestion() {
-        refreshButtonsVisibility()
-        setDafaultButtonsColor()
+        /// Восстановление видимости всех кнопок
+        buttonsView.refreshButtonsVisibility(currentQuestionIndex, initialQuestionSet.count, answerButtonsCollection)
+        /// Устанавливаем дефолтный цвет и тени
+        buttonsView.setDefaultButtonsColor(answerButtonsCollection)
+        buttonsView.addButtonShadows(answerButtonsCollection)
+        
         addQuestionContent()
         updateUI()
-    }
-    
-    func refreshButtonsVisibility() {
-        if currentQuestionIndex < initialQuestionSet.count {
-            self.optionA.isHidden = false
-            self.optionB.isHidden = false
-            self.optionC.isHidden = false
-            self.optionD.isHidden = false
-        }
-    }
-    
-    func setDafaultButtonsColor() {
-        addButtonShadows()
-        for button in answerButtonsCollections {
-            button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.9964529872, green: 0.8487327695, blue: 0.225723803, alpha: 1)
-        }
     }
     
     func addQuestionContent() {
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
             setQuestionImageAndTextSize()
             setQuestionText()
-            saveCorrectAnswerText()
-            shuffleAnswersPositions()
-            settingShuffledAnswers()
+            
+            /// Фиксируем правильный ответ
+            buttonsView.saveCorrectAnswerText(currentQuestionIndex, initialQuestionSet)
+            /// Перемешиваем позиции вариантов ответа
+            buttonsView.shuffleAnswersPositions(currentQuestionIndex, initialQuestionSet)
+            /// Устанавливаем ответы на новые позиции
+            buttonsView.settingShuffledAnswers(optionA, optionB, optionC, optionD)
+            
         } else if endGameFlag == false {
-            /// Кончились вопросы
-            endGame(scenario: 2)
+            endGame(scenario: 2) /// Кончились вопросы
         }
     }
     
@@ -166,52 +155,6 @@ extension GameViewController {
             questionLabel.text = normal
         }
     }
-    
-    func saveCorrectAnswerText() {
-        switch initialQuestionSet[currentQuestionIndex].correctAnswer {
-        case 1: correctAnswer = initialQuestionSet[currentQuestionIndex].optionA
-        case 2: correctAnswer = initialQuestionSet[currentQuestionIndex].optionB
-        case 3: correctAnswer = initialQuestionSet[currentQuestionIndex].optionC
-        case 4: correctAnswer = initialQuestionSet[currentQuestionIndex].optionD
-        default: print("Error with correct placing answers")
-        }
-    }
-    
-    func shuffleAnswersPositions() {
-        var tempAnswersArray: [String] = []
-        tempAnswersArray.append(initialQuestionSet[currentQuestionIndex].optionA)
-        tempAnswersArray.append(initialQuestionSet[currentQuestionIndex].optionB)
-        tempAnswersArray.append(initialQuestionSet[currentQuestionIndex].optionC)
-        tempAnswersArray.append(initialQuestionSet[currentQuestionIndex].optionD)
-        shuffledAnswersArray = tempAnswersArray.shuffled()
-        
-        for i in 0..<shuffledAnswersArray.count {
-            if shuffledAnswersArray[i] == correctAnswer {
-                correctAnswerNewPosition = i + 1
-            }
-        }
-    }
-    
-    func settingShuffledAnswers() {
-        
-        /// Установка ответов без анимации и скрытие пустых кнопок
-        
-        optionA.titleLabel?.text = shuffledAnswersArray[0]
-        optionA.setTitle(shuffledAnswersArray[0], for: .normal)
-        if shuffledAnswersArray[0] == "" { optionA.isHidden = true }
-        
-        optionB.titleLabel?.text = shuffledAnswersArray[1]
-        optionB.setTitle(shuffledAnswersArray[1], for: .normal)
-        if shuffledAnswersArray[1] == "" { optionB.isHidden = true }
-        
-        optionC.titleLabel?.text = shuffledAnswersArray[2]
-        optionC.setTitle(shuffledAnswersArray[2], for: .normal)
-        if shuffledAnswersArray[2] == "" { optionC.isHidden = true }
-        
-        optionD.titleLabel?.text = shuffledAnswersArray[3]
-        optionD.setTitle(shuffledAnswersArray[3], for: .normal)
-        if shuffledAnswersArray[3] == "" { optionD.isHidden = true }
-    }
 }
 
 
@@ -219,15 +162,15 @@ extension GameViewController {
 extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        if sender.tag == correctAnswerNewPosition {
+        if sender.tag == buttonsView.showCorrectPosition() {
             score += 1
             helpAfterWrongAnswerFlag = false
-            addGreenShadow(button: sender)
-            changeButtonColor(sender: sender, true)
+            buttonsView.addGreenShadow(button: sender)
+            buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonRight)
         } else {
-            addRedShadow(button: sender)
-            changeButtonColor(sender: sender, false)
+            buttonsView.addRedShadow(button: sender)
+            buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonWrong)
             
             /// Запуск подсказки после неправильного ответа (настройки)
@@ -260,25 +203,6 @@ extension GameViewController {
         pressHelpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)
-    }
-    
-    func changeButtonColor(sender: UIButton, _ answerIsCorrect: Bool) {
-        switch sender.tag {
-        case 1:
-            optionA.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1) : #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
-            optionA.setTitleColor(.white, for: .normal)
-        case 2:
-            optionB.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1) : #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
-            optionB.setTitleColor(.white, for: .normal)
-        case 3:
-            optionC.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1) : #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
-            optionC.setTitleColor(.white, for: .normal)
-        case 4:
-            optionD.backgroundColor = answerIsCorrect ? #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1) : #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
-            optionD.setTitleColor(.white, for: .normal)
-        default:
-            print("We have error with answer button tags")
-        }
     }
 }
 
@@ -389,35 +313,5 @@ extension GameViewController {
         progressWhite.layer.shadowRadius = 5
         progressWhite.layer.shadowOffset = CGSize(width: 0, height: 5)
         progressWhite.layer.position = progressWhite.center
-    }
-    
-    func addButtonShadows() {
-        for button in answerButtonsCollections {
-            /// Тень
-            button.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-            button.layer.shadowOpacity = 1
-            button.layer.shadowRadius = 5
-            button.layer.shadowOffset = CGSize(width: 0, height: 5)
-            button.layer.position = button.center
-            
-            /// Задротское скругление
-            button.layer.cornerCurve = .continuous
-        }
-    }
-    
-    /// Цветные тени
-    func addRedShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor(red: 0.996, green: 0.353, blue: 0.224, alpha: 0.5).cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 5
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.position = button.center
-    }
-    func addGreenShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor(red: 0.055, green: 0.8, blue: 0.404, alpha: 0.5).cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 5
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.position = button.center
     }
 }
