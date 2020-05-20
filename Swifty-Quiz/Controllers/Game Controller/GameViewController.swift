@@ -46,7 +46,7 @@ class GameViewController: UIViewController {
     
     /// Flags
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
-    private var helpAfterWrongAnswerFlag = false //
+    private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
 
     weak var delegate: GameViewControllerDelegate?
@@ -105,7 +105,7 @@ extension GameViewController {
     }
     
     func updateUI() {
-        helpAfterWrongAnswerFlag = false
+        dontUpdateQuestionFlag = false
         helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(initialQuestionSet.count)"
@@ -164,23 +164,30 @@ extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == buttonsView.showCorrectPosition() {
             score += 1
-            helpAfterWrongAnswerFlag = false
+            dontUpdateQuestionFlag = false
             buttonsView.addGreenShadow(button: sender)
             buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonRight)
+        
         } else {
             buttonsView.addRedShadow(button: sender)
             buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
             SoundPlayer.shared.playSound(sound: .answerButtonWrong)
             
             /// Запуск подсказки после неправильного ответа (настройки)
-            if helpAfterWrongAnswerSetting == 1 && helpFlag == false  {
+            /// - запускаем функцию вызова подсказки
+            /// - запрещаем фоном обновлять вопрос и переходить дальше
+            /// - (это произойдет после ухода с экрана подсказки, если активирована такая настройка)
+            if helpAfterWrongAnswerSetting == 1 {
                 showHelpAfterWrongAnswer()
-                helpAfterWrongAnswerFlag = true
+                dontUpdateQuestionFlag = true
             }
         }
-        
-        if currentQuestionIndex < initialQuestionSet.count && helpAfterWrongAnswerFlag == false {
+        /// Обновляем вопрос, показатели, и переходим дальше, если:
+        /// - еще остались вопросы в массиве
+        /// - мы не выводили подсказку "после неправильного ответа" (настройки)
+        /// - или, мы ответили правильно
+        if currentQuestionIndex < initialQuestionSet.count && dontUpdateQuestionFlag == false {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
@@ -200,6 +207,7 @@ extension GameViewController {
         if helpFlag == false {
             helpCounter += 1
         }
+        
         pressHelpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)

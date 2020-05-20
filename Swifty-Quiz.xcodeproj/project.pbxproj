@@ -400,8 +400,8 @@
 			isa = PBXGroup;
 			children = (
 				FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */,
-				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
+				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
 				FB0E0290246CF334005CA792 /* Records */,
 				FB66C05624559197009FADDE /* Setting */,
