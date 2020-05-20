@@ -43,15 +43,16 @@ class GameViewController: UIViewController {
     private var percent: Double = 0
     private var imageName = ""
     private var helpCounter = 0
-    private var helpFlag = false
-    private var helpAfterWrongAnswerFlag = false
-    private var endGameFlag = false
+    
+    /// Flags
+    private var helpFlag = false // Предотвращает повторное засчитывание подсказки
+    private var helpAfterWrongAnswerFlag = false //
+    private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
 
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addQuestionSet()
         updateQuestion()
         addShadows()
@@ -60,8 +61,7 @@ class GameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         if endGameFlag == false {
-            /// Свернули игру не дойдя до конца
-            endGame(scenario: 1)
+            endGame(scenario: 1) /// Свернули игру не доиграв
         }
     }
 }
