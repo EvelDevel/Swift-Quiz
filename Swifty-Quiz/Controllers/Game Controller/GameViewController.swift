@@ -10,6 +10,13 @@ protocol GameViewControllerDelegate: class {
 
 class GameViewController: UIViewController {
     
+    /// Settings
+    private let orderSettings = Game.shared.settings.questionOrder
+    private let shuffleSettings = Game.shared.settings.questionTextShuffeling
+    private let saveRecordSettings = Game.shared.settings.saveRecord
+    private let soundSettings = Game.shared.settings.sound
+    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
+    
     @IBOutlet var answerButtonsCollection: [HalfRoundButton]!
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
@@ -27,13 +34,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var progressBarWhite: UIView!
     @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
-    
-    /// Settings
-    private let orderSettings = Game.shared.settings.questionOrder
-    private let shuffleSettings = Game.shared.settings.questionTextShuffeling
-    private let saveRecordSettings = Game.shared.settings.saveRecord
-    private let soundSettings = Game.shared.settings.sound
-    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     
     private let buttonsView = AnswerButtonsView()
     private var initialQuestionSet: [Question] = []
@@ -55,7 +55,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         addQuestionSet()
         updateQuestion()
-        addShadows()
+        buttonsView.addShadows(questionArea, progressWhite)
         buttonsView.addButtonShadows(answerButtonsCollection)
     }
     
@@ -73,16 +73,17 @@ extension GameViewController {
     func addQuestionSet() {
         let normal = SelectedTopic.shared.topic.questionSet
         let random = SelectedTopic.shared.topic.questionSet.shuffled()
-        if orderSettings == 0 {  initialQuestionSet = normal } else { initialQuestionSet = random }
+        if orderSettings == 0 {
+            initialQuestionSet = normal
+        } else {
+            initialQuestionSet = random
+        }
     }
     
     func updateQuestion() {
-        /// Восстановление видимости всех кнопок
         buttonsView.refreshButtonsVisibility(currentQuestionIndex, initialQuestionSet.count, answerButtonsCollection)
-        /// Устанавливаем дефолтный цвет и тени
         buttonsView.setDefaultButtonsColor(answerButtonsCollection)
         buttonsView.addButtonShadows(answerButtonsCollection)
-        
         addQuestionContent()
         updateUI()
     }
@@ -91,14 +92,9 @@ extension GameViewController {
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
             setQuestionImageAndTextSize()
             setQuestionText()
-            
-            /// Фиксируем правильный ответ
             buttonsView.saveCorrectAnswerText(currentQuestionIndex, initialQuestionSet)
-            /// Перемешиваем позиции вариантов ответа
             buttonsView.shuffleAnswersPositions(currentQuestionIndex, initialQuestionSet)
-            /// Устанавливаем ответы на новые позиции
-            buttonsView.settingShuffledAnswers(optionA, optionB, optionC, optionD)
-            
+            buttonsView.setShuffledAnswers(optionA, optionB, optionC, optionD)
         } else if endGameFlag == false {
             endGame(scenario: 2) /// Кончились вопросы
         }
@@ -149,6 +145,7 @@ extension GameViewController {
     func setQuestionText() {
         let normal = initialQuestionSet[currentQuestionIndex].question[0]
         let random = initialQuestionSet[currentQuestionIndex].question.shuffled()
+        
         if  shuffleSettings == 1 {
             questionLabel.text = random[0]
         } else {
@@ -186,7 +183,6 @@ extension GameViewController {
         /// Обновляем вопрос, показатели, и переходим дальше, если:
         /// - еще остались вопросы в массиве
         /// - мы не выводили подсказку "после неправильного ответа" (настройки)
-        /// - или, мы ответили правильно
         if currentQuestionIndex < initialQuestionSet.count && dontUpdateQuestionFlag == false {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
@@ -197,17 +193,17 @@ extension GameViewController {
         }
     }
     
+    /// Запускаем подсказку после неправильного ответа
+    /// Попадаем сюда, только если активирована такая настройка
     func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
         helpView.questionID = initialQuestionSet[currentQuestionIndex].questionId
-        
-        /// Если не переходим к следующему - засчитываем только 1 подсказку
-        if helpFlag == false {
+    
+        if helpFlag == false { // отключаем многократное засчитывание
             helpCounter += 1
         }
-        
         pressHelpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)
@@ -299,27 +295,5 @@ extension GameViewController: HelpViewControllerDelegate {
                 self.updateQuestion()
             }
         }
-    }
-}
-
-
-// MARK: Настройка теней и скруглений
-extension GameViewController {
-    
-    /// Черная тень
-    func addShadows() {
-        /// Тень у блока вопросов
-        questionArea.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        questionArea.layer.shadowOpacity = 1
-        questionArea.layer.shadowRadius = 5
-        questionArea.layer.shadowOffset = CGSize(width: 0, height: 5)
-        questionArea.layer.position = questionArea.center
-        
-        /// Тень прогресс-бара (белого)
-        progressWhite.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        progressWhite.layer.shadowOpacity = 1
-        progressWhite.layer.shadowRadius = 5
-        progressWhite.layer.shadowOffset = CGSize(width: 0, height: 5)
-        progressWhite.layer.position = progressWhite.center
     }
 }

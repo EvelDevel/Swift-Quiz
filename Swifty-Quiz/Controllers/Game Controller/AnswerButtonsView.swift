@@ -10,6 +10,7 @@ class AnswerButtonsView: UIView {
     private var shuffledAnswersArray: [String] = []
     private var correctAnswerNewPosition = 0
     
+    /// Восстановление видимости всех кнопок
     func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [HalfRoundButton]) {
         if index < count {
             for button in buttons {
@@ -18,6 +19,7 @@ class AnswerButtonsView: UIView {
         }
     }
     
+    /// Устанавливаем дефолтный цвет кнопок
     func setDefaultButtonsColor(_ buttons: [HalfRoundButton]) {
         for button in buttons {
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
@@ -25,6 +27,7 @@ class AnswerButtonsView: UIView {
         }
     }
     
+    /// Фиксируем правильный ответ
     func saveCorrectAnswerText(_ index: Int, _ array: [Question]) {
         switch array[index].correctAnswer {
         case 1: correctAnswer = array[index].optionA
@@ -35,6 +38,7 @@ class AnswerButtonsView: UIView {
         }
     }
     
+    /// Перемешиваем позиции вариантов ответа
     func shuffleAnswersPositions(_ index: Int, _ array: [Question]) {
         var tempAnswersArray: [String] = []
         tempAnswersArray.append(array[index].optionA)
@@ -54,10 +58,10 @@ class AnswerButtonsView: UIView {
         return correctAnswerNewPosition
     }
     
-    func settingShuffledAnswers(_ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
+    /// Устанавливаем ответы на новые позиции
+    func setShuffledAnswers(_ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
         
         /// Установка ответов без анимации и скрытие пустых кнопок
-        
         optionA.titleLabel?.text = shuffledAnswersArray[0]
         optionA.setTitle(shuffledAnswersArray[0], for: .normal)
         if shuffledAnswersArray[0] == "" { optionA.isHidden = true }
@@ -128,5 +132,28 @@ extension AnswerButtonsView {
         button.layer.shadowRadius = 5
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
+    }
+}
+
+
+// MARK: Настройка теней и скруглений у статичных блоков GameViewController
+// Знаю, что сюда это по логике мало подходит, но в основном контроллере еще меньше
+extension AnswerButtonsView {
+    
+    /// Черная тень
+    func addShadows(_ questionArea: UIView, _ progressBar: UIView) {
+        /// Тень у блока вопросов
+        questionArea.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
+        questionArea.layer.shadowOpacity = 1
+        questionArea.layer.shadowRadius = 5
+        questionArea.layer.shadowOffset = CGSize(width: 0, height: 5)
+        questionArea.layer.position = questionArea.center
+        
+        /// Тень прогресс-бара (белого)
+        progressBar.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
+        progressBar.layer.shadowOpacity = 1
+        progressBar.layer.shadowRadius = 5
+        progressBar.layer.shadowOffset = CGSize(width: 0, height: 5)
+        progressBar.layer.position = progressBar.center
     }
 }
