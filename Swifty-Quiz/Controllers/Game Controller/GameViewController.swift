@@ -234,7 +234,6 @@ extension GameViewController {
                                 topic: SelectedTopic.shared.topic.topicName,
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex)
-        
         let record = Record(    date: Date(),
                                 score: score,
                                 topic: SelectedTopic.shared.topic.topicName,
