@@ -40,9 +40,9 @@ class GameViewController: UIViewController {
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
     private var score: Int = 0
-    private var percent: Double = 0
     private var imageName = ""
     private var helpCounter = 0
+    private var message = ""
     
     /// Flags
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
@@ -215,15 +215,20 @@ extension GameViewController {
     func endGame(scenario: Int) {
         switch scenario {
         case 1:
-            if saveRecordSettings == 1 && currentQuestionIndex > 0 {
-                callDelegateAndSaveRecord()
-            }
+            if saveRecordSettings == 1 && currentQuestionIndex > 0 { callDelegateAndSaveRecord() }
         case 2:
             callDelegateAndSaveRecord()
-            showAlert(title: "Вопросы закончились", message: "Ваш счет")
-        default:
-            print("endGame error")
+            updateMessageAndShowAlert()
+        default: print("endGame error")
         }
+    }
+    
+    func updateMessageAndShowAlert() {
+        if updatePercentage() < 35 { message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
+        } else if updatePercentage() < 55 { message = "Достойный результат, но нужно продолжать работать!"
+        } else if updatePercentage() < 75 { message = "Уже хорошо! Но вы можете постараться еще лучше!"
+        } else { message = "Превосходно! Продолжайте в том же духе и по остальным темам!" }
+        showAlert(title: "Ваш счет", message: "\(message)")
     }
     
     func callDelegateAndSaveRecord() {
@@ -245,7 +250,7 @@ extension GameViewController {
     }
     
     func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: "\(title)", message: "\(message): \(score)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)
         let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
         let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.dismiss(animated: true, completion: nil) })
         alert.addAction(restartAction)
