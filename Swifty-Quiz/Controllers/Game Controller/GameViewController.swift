@@ -160,7 +160,9 @@ extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == buttonsView.showCorrectPosition() {
-            score += 1
+            if helpFlag == false {
+                score += 1
+            }
             dontUpdateQuestionFlag = false
             shadows.addGreenShadow(button: sender)
             buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
