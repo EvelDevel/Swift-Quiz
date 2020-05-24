@@ -12,6 +12,7 @@ class CategoriesCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         addQuestionsToArray(sender: UIButton())
+        setFontSize()
     }
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
@@ -25,11 +26,6 @@ class CategoriesCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-}
-
-
-// MARK: Обнуляем кнопки
-extension CategoriesCell {
     
     func updateTopicButtons() {
         for i in 0..<topicButtonOutlets.count {
@@ -37,7 +33,18 @@ extension CategoriesCell {
             topicButtonOutlets[i].backgroundColor = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
         }
     }
+    
+    func setFontSize() {
+        for button in topicButtonOutlets {
+            if UIScreen.main.bounds.size.width > 320 {
+                button.titleLabel?.font =  .systemFont(ofSize: 12)
+            } else {
+                button.titleLabel?.font =  .systemFont(ofSize: 10)
+            }
+        }
+    }
 }
+
 
 // MARK: Выбор категории
 extension CategoriesCell {
