@@ -17,14 +17,14 @@ class TopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
-        setTopicAndNumberOfQuestions()
+        setDefaultNumberOfQuestions()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.selectedCategory()
     }
     
-    func setTopicAndNumberOfQuestions() {
+    func setDefaultNumberOfQuestions() {
         numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
     }
 }
@@ -41,7 +41,8 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as? CategoriesCell else { return UITableViewCell() }
-        cell.delegate = self 
+        /// Активация делегата
+        cell.delegate = self
         return cell
     }
 }
