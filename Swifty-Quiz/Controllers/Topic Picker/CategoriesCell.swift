@@ -4,11 +4,14 @@
 
 import UIKit
 
+protocol CategoriesCellDelegate: class {
+    func updateNumberOfQuestions()
+}
+
 class CategoriesCell: UITableViewCell {
-    
-    @IBOutlet weak var basicsNumberOfQuestion: UILabel!
-    @IBOutlet weak var patternsNumberOfQuestion: UILabel!
+
     @IBOutlet var topicButtonOutlets: [HalfRoundButton]!
+    weak var delegate: CategoriesCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +22,7 @@ class CategoriesCell: UITableViewCell {
     @IBAction func topicButtonPressed(_ sender: UIButton) {
         updateTopicButtons()
         addQuestionsToArray(sender: sender)
+        delegate?.updateNumberOfQuestions()
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
         sender.setTitleColor(.white, for: .normal)
         sender.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
@@ -252,10 +256,6 @@ extension CategoriesCell {
             /// Последнюю выбранную категорию делаем "активной"
             topicButtonOutlets[position].setTitleColor(.white, for: .normal)
             topicButtonOutlets[position].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
-        }
-        
-        if SelectedTopic.shared.topic.topicTag >= 0 && SelectedTopic.shared.topic.topicTag <= 25 {
-            basicsNumberOfQuestion.text = "Количество вопросов категории: \(newQuestionSet.count)"
         }
     }
 }
