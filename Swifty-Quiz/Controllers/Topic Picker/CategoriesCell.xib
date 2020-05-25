@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="537" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="537"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="931" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="931"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="537"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="931"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Раздел: Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
-                        <rect key="frame" x="16" y="15" width="208.5" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
+                        <rect key="frame" x="16" y="15" width="143" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -28,8 +28,8 @@
                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="01 : The Basics">
-                        <rect key="frame" x="16" y="70" width="288" height="410"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
+                        <rect key="frame" x="16" y="73.5" width="288" height="410"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-RY-saU" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -537,23 +537,474 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : The Basics">
+                        <rect key="frame" x="16" y="516.5" width="288" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество вопросов категории: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-1i-n6k">
+                        <rect key="frame" x="16" y="539" width="288" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-8m-84D" userLabel="Patterns">
+                        <rect key="frame" x="16" y="575" width="288" height="334"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-W0-nCM" userLabel="01 Row">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EE-qQ-BEr" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Фабричный метод">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uxw-az-k8Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-Eu-Kjd" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="134" y="0.0" width="154" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Абстрактная фабрика">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rWp-Lo-ePg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Wo-4j-avf"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NOy-Hr-VFH" userLabel="02 Row">
+                                <rect key="frame" x="0.0" y="38" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePD-0W-Wt5" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Строитель">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hUv-fE-Dfs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-kX-loM" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="99.5" y="0.0" width="82.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Прототип">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Abu-Yh-jBr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE5-9w-Jzo" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="0.0" width="98" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Одиночка">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EDS-wy-BIe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zfR-xz-g4a"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-Dn-kq2" userLabel="03 Row">
+                                <rect key="frame" x="0.0" y="76" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEl-pD-zJf" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Адаптер">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I8x-Xw-gFv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrW-y9-Ct5" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="85.5" y="0.0" width="54" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Мост">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zis-YT-RLB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgM-bJ-pDL" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="147.5" y="0.0" width="140.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Компоновщик">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="91e-4F-qjX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ebb-xH-Cux"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nyo-QH-wB0" userLabel="04 Row">
+                                <rect key="frame" x="0.0" y="114" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3w-68-YSf" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Декоратор">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HbD-xq-V7a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEb-hi-XHF" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="113.5" y="0.0" width="61.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Фасад">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="baY-fc-zmq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f0-tb-cc2" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="183" y="0.0" width="105" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Легковес">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5QY-P6-y9q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EbL-y8-YnE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ObY-dU-mo0" userLabel="05 Row">
+                                <rect key="frame" x="0.0" y="152" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZL-0d-wcd" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Заместитель">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SmH-qA-gj5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QR-qN-38k" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="107" y="0.0" width="181" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Цепочка обязанностей">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="76b-9B-FwN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qlg-1D-69e"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-BH-6p0" userLabel="06 Row">
+                                <rect key="frame" x="0.0" y="190" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtn-d2-HLp" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Команда">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qKI-fi-zdz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-Br-P77" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="85.5" y="0.0" width="84" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Итератор">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xvv-rd-CmM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaK-X1-1Xi" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="177.5" y="0.0" width="110.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Посредник">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pbp-i9-N4m"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xE6-NY-0Ih"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y7Q-6H-g1L" userLabel="07 Row">
+                                <rect key="frame" x="0.0" y="228" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD3-5V-kOB" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Хранитель">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aTh-o2-lDj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryT-i0-7tt" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="127.5" y="0.0" width="160.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Наблюдатель">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LVu-7u-Eu7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3de-8q-tC1"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-iX-ylO" userLabel="08 Row">
+                                <rect key="frame" x="0.0" y="266" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-i9-wdX" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Состояние">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="u0I-U8-xpf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFM-Ab-J3G" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="80.5" y="0.0" width="69.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Стратегия">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uzJ-5M-Nq6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eal-cC-feL" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="158" y="0.0" width="130" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Шаблонный метод">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FdJ-eA-cPQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wgK-jO-mky"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EWs-mL-0NJ" userLabel="09 Row">
+                                <rect key="frame" x="0.0" y="304" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="48" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrZ-fs-FW6" customClass="HalfRoundButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.80707521209999999" blue="0.17389024989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Посетитель">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4jp-pr-Tik"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n7k-YD-hqw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="q2S-4G-Cuz" secondAttribute="trailing" constant="53" id="0Zs-qN-B8B"/>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Nb-Hc-BOM"/>
-                    <constraint firstAttribute="bottom" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="16" id="Sxg-Cc-e2g"/>
+                    <constraint firstItem="pLn-8m-84D" firstAttribute="top" secondItem="3EH-1i-n6k" secondAttribute="bottom" constant="20" id="2O9-ty-YUY"/>
+                    <constraint firstAttribute="trailing" secondItem="3EH-1i-n6k" secondAttribute="trailing" constant="16" id="4T8-t2-Mhj"/>
+                    <constraint firstItem="UdD-H9-Pu8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Reu-s7-rdt"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pLn-8m-84D" secondAttribute="bottom" constant="22" id="S5a-3v-9fU"/>
+                    <constraint firstItem="pLn-8m-84D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SSf-2a-uT8"/>
+                    <constraint firstItem="3EH-1i-n6k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="USo-w3-AJe"/>
                     <constraint firstItem="q2S-4G-Cuz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YwM-Nl-ZDN"/>
                     <constraint firstItem="q2S-4G-Cuz" firstAttribute="top" secondItem="RS1-Wq-feW" secondAttribute="bottom" constant="2" id="bHf-ih-6I0"/>
                     <constraint firstItem="RS1-Wq-feW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bna-Kq-cLs"/>
                     <constraint firstItem="RS1-Wq-feW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="c3I-H1-gAa"/>
-                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="70" id="ctl-Qo-bF1"/>
+                    <constraint firstAttribute="trailing" secondItem="UdD-H9-Pu8" secondAttribute="trailing" constant="16" id="dvo-lB-6uh"/>
                     <constraint firstAttribute="trailing" secondItem="d0p-ZD-gEa" secondAttribute="trailing" constant="16" id="jgA-Kn-7V8"/>
+                    <constraint firstAttribute="trailing" secondItem="pLn-8m-84D" secondAttribute="trailing" constant="16" id="mP1-Eo-OZB"/>
+                    <constraint firstItem="UdD-H9-Pu8" firstAttribute="top" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="33" id="tRH-b3-ILq"/>
+                    <constraint firstItem="3EH-1i-n6k" firstAttribute="top" secondItem="UdD-H9-Pu8" secondAttribute="bottom" constant="2" id="w6s-cu-zUu"/>
+                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="q2S-4G-Cuz" secondAttribute="bottom" constant="20" id="zc3-VT-QEV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="basicsNumberOfQuestion" destination="q2S-4G-Cuz" id="ROb-Do-2VB"/>
+                <outlet property="patternsNumberOfQuestion" destination="3EH-1i-n6k" id="zPe-0e-ec1"/>
                 <outletCollection property="topicButtonOutlets" destination="wcJ-TJ-Cn5" collectionClass="NSMutableArray" id="2ql-HY-8pO"/>
                 <outletCollection property="topicButtonOutlets" destination="fTQ-Ap-1US" collectionClass="NSMutableArray" id="8mu-cp-VBr"/>
                 <outletCollection property="topicButtonOutlets" destination="ia1-P9-vXa" collectionClass="NSMutableArray" id="xVn-og-Die"/>
@@ -580,8 +1031,30 @@
                 <outletCollection property="topicButtonOutlets" destination="sf5-r1-kg8" collectionClass="NSMutableArray" id="8Al-PE-ETf"/>
                 <outletCollection property="topicButtonOutlets" destination="jet-al-ahe" collectionClass="NSMutableArray" id="JUL-tf-I1f"/>
                 <outletCollection property="topicButtonOutlets" destination="ZuT-3w-aPC" collectionClass="NSMutableArray" id="tXf-cN-4EO"/>
+                <outletCollection property="topicButtonOutlets" destination="1EE-qQ-BEr" collectionClass="NSMutableArray" id="STH-Ba-pyV"/>
+                <outletCollection property="topicButtonOutlets" destination="fgV-Eu-Kjd" collectionClass="NSMutableArray" id="poY-BG-9vj"/>
+                <outletCollection property="topicButtonOutlets" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="l2k-sT-Wm7"/>
+                <outletCollection property="topicButtonOutlets" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="XaC-rk-IHq"/>
+                <outletCollection property="topicButtonOutlets" destination="WE5-9w-Jzo" collectionClass="NSMutableArray" id="vrH-n9-JQX"/>
+                <outletCollection property="topicButtonOutlets" destination="MEl-pD-zJf" collectionClass="NSMutableArray" id="rtl-DD-6bq"/>
+                <outletCollection property="topicButtonOutlets" destination="qrW-y9-Ct5" collectionClass="NSMutableArray" id="tex-EM-ATT"/>
+                <outletCollection property="topicButtonOutlets" destination="cgM-bJ-pDL" collectionClass="NSMutableArray" id="Dmu-Vw-auD"/>
+                <outletCollection property="topicButtonOutlets" destination="p3w-68-YSf" collectionClass="NSMutableArray" id="JqN-W4-NGE"/>
+                <outletCollection property="topicButtonOutlets" destination="HEb-hi-XHF" collectionClass="NSMutableArray" id="7MQ-U9-BHl"/>
+                <outletCollection property="topicButtonOutlets" destination="3f0-tb-cc2" collectionClass="NSMutableArray" id="D4z-AS-n3d"/>
+                <outletCollection property="topicButtonOutlets" destination="FZL-0d-wcd" collectionClass="NSMutableArray" id="C2U-QF-efa"/>
+                <outletCollection property="topicButtonOutlets" destination="2QR-qN-38k" collectionClass="NSMutableArray" id="Lku-o8-rS8"/>
+                <outletCollection property="topicButtonOutlets" destination="gtn-d2-HLp" collectionClass="NSMutableArray" id="NBV-Lp-7Jb"/>
+                <outletCollection property="topicButtonOutlets" destination="mtx-Br-P77" collectionClass="NSMutableArray" id="dGc-XN-2kl"/>
+                <outletCollection property="topicButtonOutlets" destination="DaK-X1-1Xi" collectionClass="NSMutableArray" id="aA0-Mt-joU"/>
+                <outletCollection property="topicButtonOutlets" destination="mD3-5V-kOB" collectionClass="NSMutableArray" id="TAk-No-j2s"/>
+                <outletCollection property="topicButtonOutlets" destination="ryT-i0-7tt" collectionClass="NSMutableArray" id="rFN-5S-qXO"/>
+                <outletCollection property="topicButtonOutlets" destination="brZ-i9-wdX" collectionClass="NSMutableArray" id="Quf-Lz-d5p"/>
+                <outletCollection property="topicButtonOutlets" destination="DFM-Ab-J3G" collectionClass="NSMutableArray" id="Uw2-oR-X5H"/>
+                <outletCollection property="topicButtonOutlets" destination="Eal-cC-feL" collectionClass="NSMutableArray" id="e3e-7j-E5Q"/>
+                <outletCollection property="topicButtonOutlets" destination="xrZ-fs-FW6" collectionClass="NSMutableArray" id="YwD-ht-alb"/>
             </connections>
-            <point key="canvasLocation" x="-71.014492753623188" y="196.54017857142856"/>
+            <point key="canvasLocation" x="-120.28985507246378" y="230.02232142857142"/>
         </tableViewCell>
     </objects>
 </document>

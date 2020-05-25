@@ -160,6 +160,7 @@ extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == buttonsView.showCorrectPosition() {
+            /// Увеличиваем счет только если не брали подсказку
             if helpFlag == false {
                 score += 1
             }

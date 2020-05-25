@@ -7,98 +7,115 @@ import Foundation
 
 class TopicOperator {
     
-    // MARK: 01 row
+    // MARK: THE BASICS
     
-    // Основы
+    // MARK: 01 row
+    // Основы, Операторы, Строки и символы
     static func getQuestionsTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }
-    // Операторы
     static func getQuestionsBasicOperators() -> [Question] { return BasicOperatorsSet.getQuestions() }
-    // Строки и символы
     static func getQuestionsStringAndCharacters() -> [Question] { return StringAndCharactersSet.getQuestions() }
     
-    
     // MARK: 02 row
-    
-    // Коллекции
+    // Коллекции, Управление потоком
     static func getQuestionsCollectionTypes() -> [Question] { return CollectionTypesSet.getQuestions() }
-    // Управление потоком
     static func getQuestionsControlFlow() -> [Question] { return ControlFlowSet.getQuestions() }
     
-    
     // MARK: 03 row
-    
-    // Функции
+    // Функции, Замыкания, Перечисления
     static func getQuestionsFunctions() -> [Question] { return FunctionsSet.getQuestions() }
-    // Замыкания
     static func getQuestionsClosures() -> [Question] { return ClosuresSet.getQuestions() }
-    // Перечисления
     static func getQuestionsEnums() -> [Question] { return EnumerationsSet.getQuestions() }
     
-    
     // MARK: 04 row
-    
-    // Структуры и классы
+    // Структуры и классы, Свойства, Методы
     static func getQuestionsStructuresAndClasses() -> [Question] { return StructuresAndClassesSet.getQuestions() }
-    // Свойства
     static func getQuestionsProperties() -> [Question] { return PropertiesSet.getQuestions() }
-    // Методы
     static func getQuestionsMethods() -> [Question] { return MethodsSet.getQuestions() }
     
-    
     // MARK: 05 row
-    
-    // Сабскрипты
+    // Сабскрипты, Наследование, Инициализация
     static func getQuestionsSubscripts() -> [Question] { return SubscriptsSet.getQuestions() }
-    // Наследование
     static func getQuestionsInheritance() -> [Question] { return InheritanceSet.getQuestions() }
-    // Инициализация
     static func getQuestionsInitialization() -> [Question] { return InitializationSet.getQuestions() }
     
-    
     // MARK: 06 row
-    
-    // Деинициализация
+    // Деинициализация, Обработка ошибок
     static func getQuestionsDeinitialization() -> [Question] { return DeinitializationSet.getQuestions() }
-    // Обработка ошибок
     static func getQuestionsErrorHandling() -> [Question] { return ErrorHandlingSet.getQuestions() }
     
-    
     // MARK: 07 row
-    
-    // Опционалы
+    // Опциональное связывание, ARC - Автоматический подсчет ссылок
     static func getQuestionsOptionalChaining() -> [Question] { return OptionalChainingSet.getQuestions() }
-    // ARC - Автоматический подсчет ссылок
     static func getQuestionsARC() -> [Question] { return ARCSet.getQuestions() }
     
-    
     // MARK: 08 row
-    
-    // Приведение типов
+    // Приведение типов, Вложенные типы, Расширения
     static func getQuestionsTypeCasting() -> [Question] { return TypeCastingSet.getQuestions() }
-    // Вложенные типы
     static func getQuestionsNestedTypes() -> [Question] { return NestedTypesSet.getQuestions() }
-    // Расширения
     static func getQuestionsExtensions() -> [Question] { return ExtensionsSet.getQuestions() }
     
-    
-     // MARK: 09 row
-    
-    // Шаблоны
+    // MARK: 09 row
+    // Шаблоны, Протоколы
     static func getQuestionsGenerics() -> [Question] { return GenericsSet.getQuestions() }
-    // Протоколы
     static func getQuestionsProtocols() -> [Question] { return ProtocolsSet.getQuestions() }
     
-    
     // MARK: 10 row
-    
-    // Контроль доступа
+    // Контроль доступа, Безопасность хранения
     static func getQuestionsAccessControl() -> [Question] { return AccessControlSet.getQuestions() }
-    // Безопасность хранения
     static func getQuestionsMemorySafety() -> [Question] { return MemorySafetySet.getQuestions() }
     
-    
     // MARK: 11 row
-    
     // Продвинутые операторы
     static func getQuestionsAdvancedOperators() -> [Question] { return AdvancedOperatorsSet.getQuestions() }
+    
+    
+    // MARK: PATTERNS
+    
+    // MARK: 01 row
+    // Фабричный метод, Абстрактная фабрика
+    static func getQuestionsFactoryMethod() -> [Question] { return FactoryMethodSet.getQuestions() }
+    static func getQuestionsAbstractFactory() -> [Question] { return AbstractFactorySet.getQuestions() } 
+    
+    // MARK: 02 row
+    // Строитель, Прототип, Одиночка
+    static func getQuestionsBuilder() -> [Question] { return BuilderSet.getQuestions() }
+    static func getQuestionsPrototype() -> [Question] { return PrototypeSet.getQuestions() }
+    static func getQuestionsSingleton() -> [Question] { return SingletonSet.getQuestions() } 
+    
+    // MARK: 03 row
+    // Адаптер, Мост, Компоновщик
+    static func getQuestionsAdapter() -> [Question] { return AdapterSet.getQuestions() }
+    static func getQuestionsBridge() -> [Question] { return BridgeSet.getQuestions() }
+    static func getQuestionsComposite() -> [Question] { return CompositeSet.getQuestions() }
+    
+    // MARK: 04 row
+    // Декоратор, Фасад, Легковес
+    static func getQuestionsDecorator() -> [Question] { return DecoratorSet.getQuestions() }
+    static func getQuestionsFacade() -> [Question] { return FacadeSet.getQuestions() }
+    static func getQuestionsFlyweight() -> [Question] { return FlyweightSet.getQuestions() } 
+    
+    // MARK: 05 row
+    // Заместитель, Цепочка обязанностей
+    static func getQuestionsProxy() -> [Question] { return ProxySet.getQuestions() }
+    static func getQuestionsChainOfCommand() -> [Question] { return ChainOfCommandSet.getQuestions() } 
+    
+    // MARK: 06 row
+    // Команда, Итератор, Посредник
+    static func getQuestionsCommand() -> [Question] { return CommandSet.getQuestions() }
+    static func getQuestionsIterator() -> [Question] { return IteratorSet.getQuestions() }
+    static func getQuestionsMediator() -> [Question] { return MediatorSet.getQuestions() }
+    
+    // MARK: 07 row
+    // Хранитель, Наблюдатель
+    static func getQuestionsMemento() -> [Question] { return MementoSet.getQuestions() }
+    static func getQuestionsObserver() -> [Question] { return ObserverSet.getQuestions() }
+    
+    // MARK: 08 row
+    // Состояние, Стратегия, Шаблонный метод
+    static func getQuestionsState() -> [Question] { return StateSet.getQuestions() }
+    static func getQuestionsStrategy() -> [Question] { return StrategySet.getQuestions() }
+    static func getQuestionsTemplateMethod() -> [Question] { return TemplateMethodSet.getQuestions() }
+    
+    // MARK: 09 row
+    static func getQuestionsVisitor() -> [Question] { return VisitorSet.getQuestions() } 
 }
