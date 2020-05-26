@@ -81,10 +81,10 @@
 		FB99F8BC247BA2870053166C /* TemplateMethodSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8BB247BA2870053166C /* TemplateMethodSet.swift */; };
 		FB99F8BF247BA3DF0053166C /* VisitorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8BE247BA3DF0053166C /* VisitorSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
-		FB99F8C5247C19F90053166C /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8C3247C19F90053166C /* SettingsCell.swift */; };
-		FB99F8C6247C19F90053166C /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB99F8C4247C19F90053166C /* SettingsCell.xib */; };
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
+		FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA97902247CF43200228FB5 /* SettingCell.swift */; };
+		FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA97903247CF43200228FB5 /* SettingCell.xib */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionTypesSet.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
@@ -171,10 +171,10 @@
 		FB99F8B9247BA27A0053166C /* StrategySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategySet.swift; sourceTree = "<group>"; };
 		FB99F8BB247BA2870053166C /* TemplateMethodSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMethodSet.swift; sourceTree = "<group>"; };
 		FB99F8BE247BA3DF0053166C /* VisitorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorSet.swift; sourceTree = "<group>"; };
-		FB99F8C3247C19F90053166C /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		FB99F8C4247C19F90053166C /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
+		FBA97902247CF43200228FB5 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		FBA97903247CF43200228FB5 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTypesSet.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
@@ -358,8 +358,8 @@
 			children = (
 				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
 				FB66C057245591AC009FADDE /* SettingEnums.swift */,
-				FB99F8C3247C19F90053166C /* SettingsCell.swift */,
-				FB99F8C4247C19F90053166C /* SettingsCell.xib */,
+				FBA97902247CF43200228FB5 /* SettingCell.swift */,
+				FBA97903247CF43200228FB5 /* SettingCell.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -645,13 +645,13 @@
 				FBA764FB246331E400D567D0 /* button3.mp3 in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
-				FB99F8C6247C19F90053166C /* SettingsCell.xib in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
 				FBDD37462464642F00B3E47D /* Main.storyboard in Resources */,
 				FB87420E24605BF500247923 /* button1.wav in Resources */,
+				FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */,
 				FB87420C24605BF500247923 /* button2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +667,6 @@
 				FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */,
 				FB119C2D246A5AF0005F5289 /* OptionalChainingSet.swift in Sources */,
 				FB99F8BC247BA2870053166C /* TemplateMethodSet.swift in Sources */,
-				FB99F8C5247C19F90053166C /* SettingsCell.swift in Sources */,
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
@@ -731,6 +730,7 @@
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,
+				FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB99F894247B99190053166C /* SingletonSet.swift in Sources */,

@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
         shadows.addButtonShadows(answerButtonsCollection)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         if endGameFlag == false {
             endGame(scenario: 1) /// Свернули игру не доиграв
         }

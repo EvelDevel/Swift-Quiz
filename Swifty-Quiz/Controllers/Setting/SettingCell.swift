@@ -4,14 +4,16 @@
 
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class SettingCell: UITableViewCell {
 
     @IBOutlet weak var questionOrderControl: UISegmentedControl!
     @IBOutlet weak var questionTextControl: UISegmentedControl!
+    @IBOutlet weak var helpAfterWrongAnswerControl: UISegmentedControl!
+    @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
-    @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
-    @IBOutlet weak var helpAfterWrongAnswerControl: UISegmentedControl!
+    
+    
     @IBOutlet var allControls: [UISegmentedControl]!
     
     @IBAction func settingSwitchSound(_ sender: Any) {
@@ -22,7 +24,7 @@ class SettingsCell: UITableViewCell {
         super.awakeFromNib()
         setControlsTintColors()
         addingTargets()
-        settingsInitialValues() 
+        settingsInitialValues()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,7 +35,7 @@ class SettingsCell: UITableViewCell {
 
 
 // MARK: Добавляем таргеты и определяем дефолтное состояние
-extension SettingsCell {
+extension SettingCell {
     
     func setControlsTintColors() {
         let inactive: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 0.5)
@@ -99,7 +101,7 @@ extension SettingsCell {
 
 
 // MARK: Отслеживание изменений и настройка
-extension SettingsCell {
+extension SettingCell {
     
     /// Меняем настройку последовательности при переключении
     @objc func questionOrderValue(target: UISegmentedControl) {
