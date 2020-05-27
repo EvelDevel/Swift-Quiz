@@ -58,28 +58,10 @@
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
 		FB96628D246E6E85000B82B9 /* AdvancedOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */; };
-		FB99F88B247B95430053166C /* FactoryMethodSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88A247B95430053166C /* FactoryMethodSet.swift */; };
-		FB99F88D247B978C0053166C /* AbstractFactorySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88C247B978C0053166C /* AbstractFactorySet.swift */; };
-		FB99F890247B98AE0053166C /* BuildeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88F247B98AE0053166C /* BuildeSet.swift */; };
-		FB99F892247B98E40053166C /* PrototypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* PrototypeSet.swift */; };
-		FB99F894247B99190053166C /* SingletonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F893247B99190053166C /* SingletonSet.swift */; };
-		FB99F897247B9B440053166C /* AdapterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F896247B9B440053166C /* AdapterSet.swift */; };
-		FB99F899247B9B4F0053166C /* BridgeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F898247B9B4F0053166C /* BridgeSet.swift */; };
-		FB99F89D247B9B6C0053166C /* CompositeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F89C247B9B6C0053166C /* CompositeSet.swift */; };
-		FB99F8A0247B9D830053166C /* DecoratorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F89F247B9D830053166C /* DecoratorSet.swift */; };
-		FB99F8A2247B9D8E0053166C /* FacadeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8A1247B9D8E0053166C /* FacadeSet.swift */; };
-		FB99F8A4247B9D9C0053166C /* FlyweightSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8A3247B9D9C0053166C /* FlyweightSet.swift */; };
-		FB99F8A7247B9EC40053166C /* ProxySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8A6247B9EC40053166C /* ProxySet.swift */; };
-		FB99F8A9247B9ED20053166C /* ChainOfCommandSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8A8247B9ED20053166C /* ChainOfCommandSet.swift */; };
-		FB99F8AC247B9FCE0053166C /* CommandSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8AB247B9FCE0053166C /* CommandSet.swift */; };
-		FB99F8AE247B9FD70053166C /* IteratorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8AD247B9FD70053166C /* IteratorSet.swift */; };
-		FB99F8B0247B9FE20053166C /* MediatorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8AF247B9FE20053166C /* MediatorSet.swift */; };
-		FB99F8B3247BA1C40053166C /* MementoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8B2247BA1C40053166C /* MementoSet.swift */; };
-		FB99F8B5247BA1D20053166C /* ObserverSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8B4247BA1D20053166C /* ObserverSet.swift */; };
-		FB99F8B8247BA2700053166C /* StateSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8B7247BA2700053166C /* StateSet.swift */; };
-		FB99F8BA247BA27A0053166C /* StrategySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8B9247BA27A0053166C /* StrategySet.swift */; };
-		FB99F8BC247BA2870053166C /* TemplateMethodSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8BB247BA2870053166C /* TemplateMethodSet.swift */; };
-		FB99F8BF247BA3DF0053166C /* VisitorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F8BE247BA3DF0053166C /* VisitorSet.swift */; };
+		FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88A247B95430053166C /* BasicPatternsSet.swift */; };
+		FB99F88D247B978C0053166C /* AdvancedPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */; };
+		FB99F890247B98AE0053166C /* ArchitecturalPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */; };
+		FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* AntipatternsSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
@@ -149,28 +131,10 @@
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
 		FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedOperatorsSet.swift; sourceTree = "<group>"; };
-		FB99F88A247B95430053166C /* FactoryMethodSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryMethodSet.swift; sourceTree = "<group>"; };
-		FB99F88C247B978C0053166C /* AbstractFactorySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactorySet.swift; sourceTree = "<group>"; };
-		FB99F88F247B98AE0053166C /* BuildeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildeSet.swift; sourceTree = "<group>"; };
-		FB99F891247B98E40053166C /* PrototypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeSet.swift; sourceTree = "<group>"; };
-		FB99F893247B99190053166C /* SingletonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonSet.swift; sourceTree = "<group>"; };
-		FB99F896247B9B440053166C /* AdapterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterSet.swift; sourceTree = "<group>"; };
-		FB99F898247B9B4F0053166C /* BridgeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeSet.swift; sourceTree = "<group>"; };
-		FB99F89C247B9B6C0053166C /* CompositeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSet.swift; sourceTree = "<group>"; };
-		FB99F89F247B9D830053166C /* DecoratorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorSet.swift; sourceTree = "<group>"; };
-		FB99F8A1247B9D8E0053166C /* FacadeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacadeSet.swift; sourceTree = "<group>"; };
-		FB99F8A3247B9D9C0053166C /* FlyweightSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyweightSet.swift; sourceTree = "<group>"; };
-		FB99F8A6247B9EC40053166C /* ProxySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxySet.swift; sourceTree = "<group>"; };
-		FB99F8A8247B9ED20053166C /* ChainOfCommandSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOfCommandSet.swift; sourceTree = "<group>"; };
-		FB99F8AB247B9FCE0053166C /* CommandSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandSet.swift; sourceTree = "<group>"; };
-		FB99F8AD247B9FD70053166C /* IteratorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratorSet.swift; sourceTree = "<group>"; };
-		FB99F8AF247B9FE20053166C /* MediatorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorSet.swift; sourceTree = "<group>"; };
-		FB99F8B2247BA1C40053166C /* MementoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoSet.swift; sourceTree = "<group>"; };
-		FB99F8B4247BA1D20053166C /* ObserverSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverSet.swift; sourceTree = "<group>"; };
-		FB99F8B7247BA2700053166C /* StateSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSet.swift; sourceTree = "<group>"; };
-		FB99F8B9247BA27A0053166C /* StrategySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategySet.swift; sourceTree = "<group>"; };
-		FB99F8BB247BA2870053166C /* TemplateMethodSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMethodSet.swift; sourceTree = "<group>"; };
-		FB99F8BE247BA3DF0053166C /* VisitorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorSet.swift; sourceTree = "<group>"; };
+		FB99F88A247B95430053166C /* BasicPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitecturalPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
 		FBA97902247CF43200228FB5 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
@@ -445,13 +409,6 @@
 			children = (
 				FB99F889247B95280053166C /* 01 row */,
 				FB99F88E247B97C90053166C /* 02 row */,
-				FB99F895247B9A620053166C /* 03 row */,
-				FB99F89E247B9D730053166C /* 04 row */,
-				FB99F8A5247B9EAF0053166C /* 05 row */,
-				FB99F8AA247B9FBD0053166C /* 06 row */,
-				FB99F8B1247BA1B40053166C /* 07 row */,
-				FB99F8B6247BA2600053166C /* 08 row */,
-				FB99F8BD247BA3D10053166C /* 09 row */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -459,8 +416,8 @@
 		FB99F889247B95280053166C /* 01 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB99F88A247B95430053166C /* FactoryMethodSet.swift */,
-				FB99F88C247B978C0053166C /* AbstractFactorySet.swift */,
+				FB99F88A247B95430053166C /* BasicPatternsSet.swift */,
+				FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */,
 			);
 			path = "01 row";
 			sourceTree = "<group>";
@@ -468,77 +425,10 @@
 		FB99F88E247B97C90053166C /* 02 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB99F88F247B98AE0053166C /* BuildeSet.swift */,
-				FB99F891247B98E40053166C /* PrototypeSet.swift */,
-				FB99F893247B99190053166C /* SingletonSet.swift */,
+				FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */,
+				FB99F891247B98E40053166C /* AntipatternsSet.swift */,
 			);
 			path = "02 row";
-			sourceTree = "<group>";
-		};
-		FB99F895247B9A620053166C /* 03 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F896247B9B440053166C /* AdapterSet.swift */,
-				FB99F898247B9B4F0053166C /* BridgeSet.swift */,
-				FB99F89C247B9B6C0053166C /* CompositeSet.swift */,
-			);
-			path = "03 row";
-			sourceTree = "<group>";
-		};
-		FB99F89E247B9D730053166C /* 04 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F89F247B9D830053166C /* DecoratorSet.swift */,
-				FB99F8A1247B9D8E0053166C /* FacadeSet.swift */,
-				FB99F8A3247B9D9C0053166C /* FlyweightSet.swift */,
-			);
-			path = "04 row";
-			sourceTree = "<group>";
-		};
-		FB99F8A5247B9EAF0053166C /* 05 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F8A6247B9EC40053166C /* ProxySet.swift */,
-				FB99F8A8247B9ED20053166C /* ChainOfCommandSet.swift */,
-			);
-			path = "05 row";
-			sourceTree = "<group>";
-		};
-		FB99F8AA247B9FBD0053166C /* 06 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F8AB247B9FCE0053166C /* CommandSet.swift */,
-				FB99F8AD247B9FD70053166C /* IteratorSet.swift */,
-				FB99F8AF247B9FE20053166C /* MediatorSet.swift */,
-			);
-			path = "06 row";
-			sourceTree = "<group>";
-		};
-		FB99F8B1247BA1B40053166C /* 07 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F8B2247BA1C40053166C /* MementoSet.swift */,
-				FB99F8B4247BA1D20053166C /* ObserverSet.swift */,
-			);
-			path = "07 row";
-			sourceTree = "<group>";
-		};
-		FB99F8B6247BA2600053166C /* 08 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F8B7247BA2700053166C /* StateSet.swift */,
-				FB99F8B9247BA27A0053166C /* StrategySet.swift */,
-				FB99F8BB247BA2870053166C /* TemplateMethodSet.swift */,
-			);
-			path = "08 row";
-			sourceTree = "<group>";
-		};
-		FB99F8BD247BA3D10053166C /* 09 row */ = {
-			isa = PBXGroup;
-			children = (
-				FB99F8BE247BA3DF0053166C /* VisitorSet.swift */,
-			);
-			path = "09 row";
 			sourceTree = "<group>";
 		};
 		FBC1D4822474EDCD0055FF62 /* Game Controller */ = {
@@ -666,7 +556,6 @@
 				FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */,
 				FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */,
 				FB119C2D246A5AF0005F5289 /* OptionalChainingSet.swift in Sources */,
-				FB99F8BC247BA2870053166C /* TemplateMethodSet.swift in Sources */,
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
@@ -674,22 +563,17 @@
 				FB96628D246E6E85000B82B9 /* AdvancedOperatorsSet.swift in Sources */,
 				FB1D0B972446E7A600E9C56D /* TheBasicsSet.swift in Sources */,
 				FBECDC5E243F310800BD5583 /* Question.swift in Sources */,
-				FB99F8BF247BA3DF0053166C /* VisitorSet.swift in Sources */,
-				FB99F8B8247BA2700053166C /* StateSet.swift in Sources */,
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
 				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
 				FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */,
-				FB99F88B247B95430053166C /* FactoryMethodSet.swift in Sources */,
+				FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */,
 				FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */,
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
-				FB99F899247B9B4F0053166C /* BridgeSet.swift in Sources */,
 				FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
-				FB99F8B3247BA1C40053166C /* MementoSet.swift in Sources */,
-				FB99F892247B98E40053166C /* PrototypeSet.swift in Sources */,
+				FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */,
-				FB99F8AE247B9FD70053166C /* IteratorSet.swift in Sources */,
 				FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */,
 				FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */,
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
@@ -697,25 +581,15 @@
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* GameViewShadows.swift in Sources */,
-				FB99F89D247B9B6C0053166C /* CompositeSet.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
-				FB99F8A4247B9D9C0053166C /* FlyweightSet.swift in Sources */,
-				FB99F8B0247B9FE20053166C /* MediatorSet.swift in Sources */,
-				FB99F8A2247B9D8E0053166C /* FacadeSet.swift in Sources */,
-				FB99F8A7247B9EC40053166C /* ProxySet.swift in Sources */,
-				FB99F8A0247B9D830053166C /* DecoratorSet.swift in Sources */,
-				FB99F8AC247B9FCE0053166C /* CommandSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
-				FB99F88D247B978C0053166C /* AbstractFactorySet.swift in Sources */,
-				FB99F8B5247BA1D20053166C /* ObserverSet.swift in Sources */,
+				FB99F88D247B978C0053166C /* AdvancedPatternsSet.swift in Sources */,
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
-				FB99F8BA247BA27A0053166C /* StrategySet.swift in Sources */,
-				FB99F897247B9B440053166C /* AdapterSet.swift in Sources */,
-				FB99F890247B98AE0053166C /* BuildeSet.swift in Sources */,
+				FB99F890247B98AE0053166C /* ArchitecturalPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
@@ -725,7 +599,6 @@
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
-				FB99F8A9247B9ED20053166C /* ChainOfCommandSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
@@ -733,7 +606,6 @@
 				FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
-				FB99F894247B99190053166C /* SingletonSet.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,

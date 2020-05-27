@@ -4,7 +4,7 @@
 
 import Foundation
 
-class CommandSet {
+class AntipatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

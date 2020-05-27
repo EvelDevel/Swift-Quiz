@@ -73,49 +73,11 @@ class TopicOperator {
     
     // MARK: 01 row
     // Фабричный метод, Абстрактная фабрика
-    static func getQuestionsFactoryMethod() -> [Question] { return FactoryMethodSet.getQuestions() }
-    static func getQuestionsAbstractFactory() -> [Question] { return AbstractFactorySet.getQuestions() } 
+    static func getQuestionsBasicPatterns() -> [Question] { return BasicPatternsSet.getQuestions() }  
+    static func getQuestionsAdvancedPatterns() -> [Question] { return AdvancedPatternsSet.getQuestions() }
     
     // MARK: 02 row
     // Строитель, Прототип, Одиночка
-    static func getQuestionsBuilder() -> [Question] { return BuilderSet.getQuestions() }
-    static func getQuestionsPrototype() -> [Question] { return PrototypeSet.getQuestions() }
-    static func getQuestionsSingleton() -> [Question] { return SingletonSet.getQuestions() } 
-    
-    // MARK: 03 row
-    // Адаптер, Мост, Компоновщик
-    static func getQuestionsAdapter() -> [Question] { return AdapterSet.getQuestions() }
-    static func getQuestionsBridge() -> [Question] { return BridgeSet.getQuestions() }
-    static func getQuestionsComposite() -> [Question] { return CompositeSet.getQuestions() }
-    
-    // MARK: 04 row
-    // Декоратор, Фасад, Легковес
-    static func getQuestionsDecorator() -> [Question] { return DecoratorSet.getQuestions() }
-    static func getQuestionsFacade() -> [Question] { return FacadeSet.getQuestions() }
-    static func getQuestionsFlyweight() -> [Question] { return FlyweightSet.getQuestions() } 
-    
-    // MARK: 05 row
-    // Заместитель, Цепочка обязанностей
-    static func getQuestionsProxy() -> [Question] { return ProxySet.getQuestions() }
-    static func getQuestionsChainOfCommand() -> [Question] { return ChainOfCommandSet.getQuestions() } 
-    
-    // MARK: 06 row
-    // Команда, Итератор, Посредник
-    static func getQuestionsCommand() -> [Question] { return CommandSet.getQuestions() }
-    static func getQuestionsIterator() -> [Question] { return IteratorSet.getQuestions() }
-    static func getQuestionsMediator() -> [Question] { return MediatorSet.getQuestions() }
-    
-    // MARK: 07 row
-    // Хранитель, Наблюдатель
-    static func getQuestionsMemento() -> [Question] { return MementoSet.getQuestions() }
-    static func getQuestionsObserver() -> [Question] { return ObserverSet.getQuestions() }
-    
-    // MARK: 08 row
-    // Состояние, Стратегия, Шаблонный метод
-    static func getQuestionsState() -> [Question] { return StateSet.getQuestions() }
-    static func getQuestionsStrategy() -> [Question] { return StrategySet.getQuestions() }
-    static func getQuestionsTemplateMethod() -> [Question] { return TemplateMethodSet.getQuestions() }
-    
-    // MARK: 09 row
-    static func getQuestionsVisitor() -> [Question] { return VisitorSet.getQuestions() } 
+    static func getQuestionsArchitecturalPatterns() -> [Question] { return ArchitecturalPatternsSet.getQuestions() }
+    static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
 }

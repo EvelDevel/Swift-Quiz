@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ObserverSet {
+class AdvancedPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

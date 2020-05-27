@@ -4,7 +4,7 @@
 
 import Foundation
 
-class MediatorSet {
+class BasicPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

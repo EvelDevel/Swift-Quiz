@@ -4,7 +4,7 @@
 
 import Foundation
 
-class SingletonSet {
+class ArchitecturalPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["",

@@ -10,7 +10,7 @@ protocol CategoriesCellDelegate: class {
 
 class CategoriesCell: UITableViewCell {
 
-    @IBOutlet var topicButtonOutlets: [HalfRoundButton]!
+    @IBOutlet var buttonOutlets: [HalfRoundButton]!
     weak var delegate: CategoriesCellDelegate?
     
     override func awakeFromNib() {
@@ -33,14 +33,14 @@ class CategoriesCell: UITableViewCell {
     }
     
     func updateTopicButtons() {
-        for i in 0..<topicButtonOutlets.count {
-            topicButtonOutlets[i].setTitleColor(.black, for: .normal)
-            topicButtonOutlets[i].backgroundColor = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
+        for i in 0..<buttonOutlets.count {
+            buttonOutlets[i].setTitleColor(.black, for: .normal)
+            buttonOutlets[i].backgroundColor = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
         }
     }
     
     func setFontSize() {
-        for button in topicButtonOutlets {
+        for button in buttonOutlets {
             if UIScreen.main.bounds.size.width > 320 {
                 button.titleLabel?.font =  .systemFont(ofSize: 12)
             } else {
@@ -169,93 +169,25 @@ extension CategoriesCell {
             
         // MARK: 01 row
         case 27:
-            newQuestionSet = TopicOperator.getQuestionsFactoryMethod()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Фабричный метод", tag: 26)
+            newQuestionSet = TopicOperator.getQuestionsBasicPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Базовые паттерны", tag: 26)
         case 28:
-            newQuestionSet = TopicOperator.getQuestionsAbstractFactory()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Абстрактная фабрика", tag: 27)
+            newQuestionSet = TopicOperator.getQuestionsAdvancedPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Продвинутые паттерны", tag: 27)
             
             
         // MARK: 02 row
         case 29:
-            newQuestionSet = TopicOperator.getQuestionsBuilder()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Строитель", tag: 28)
+            newQuestionSet = TopicOperator.getQuestionsArchitecturalPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Архитектурные паттерны", tag: 28)
         case 30:
-            newQuestionSet = TopicOperator.getQuestionsPrototype()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Прототип", tag: 29)
-        case 31:
-            newQuestionSet = TopicOperator.getQuestionsSingleton()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Одиночка", tag: 30)
-        
-        // MARK: 03 row
-        case 32:
-            newQuestionSet = TopicOperator.getQuestionsAdapter()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Адаптер", tag: 31)
-        case 33:
-            newQuestionSet = TopicOperator.getQuestionsBridge()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Мост", tag: 32)
-        case 34:
-            newQuestionSet = TopicOperator.getQuestionsComposite()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Компоновщик", tag: 33)
-        
-        // MARK: 04 row
-        case 35:
-            newQuestionSet = TopicOperator.getQuestionsComposite()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Декоратор", tag: 34)
-        case 36:
-            newQuestionSet = TopicOperator.getQuestionsComposite()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Фасад", tag: 35)
-        case 37:
-            newQuestionSet = TopicOperator.getQuestionsComposite()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Легковес", tag: 36)
-        
-        // MARK: 05 row
-        case 38:
-            newQuestionSet = TopicOperator.getQuestionsProxy()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Заместитель", tag: 37)
-        case 39:
-            newQuestionSet = TopicOperator.getQuestionsChainOfCommand()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Цепочка обязанностей", tag: 38)
-        
-        // MARK: 06 row
-        case 40:
-            newQuestionSet = TopicOperator.getQuestionsCommand()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Команда", tag: 39)
-        case 41:
-            newQuestionSet = TopicOperator.getQuestionsIterator()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Итератор", tag: 40)
-        case 42:
-            newQuestionSet = TopicOperator.getQuestionsMediator()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Посредник", tag: 41)
-        
-        // MARK: 07 row
-        case 43:
-            newQuestionSet = TopicOperator.getQuestionsMemento()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Хранитель", tag: 42)
-        case 44:
-            newQuestionSet = TopicOperator.getQuestionsObserver()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Наблюдатель", tag: 43)
-        
-        // MARK: 08 row
-        case 45:
-            newQuestionSet = TopicOperator.getQuestionsState()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Состояние", tag: 44)
-        case 46:
-            newQuestionSet = TopicOperator.getQuestionsStrategy()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Стратегия", tag: 45)
-        case 47:
-            newQuestionSet = TopicOperator.getQuestionsTemplateMethod()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Шаблонный метод", tag: 46)
-        
-        // MARK: 09 row
-        case 48:
-            newQuestionSet = TopicOperator.getQuestionsVisitor()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Посетитель", tag: 47)
+            newQuestionSet = TopicOperator.getQuestionsAntipatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 29)
             
         default:
             /// Последнюю выбранную категорию делаем "активной"
-            topicButtonOutlets[position].setTitleColor(.white, for: .normal)
-            topicButtonOutlets[position].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
+            buttonOutlets[position].setTitleColor(.white, for: .normal)
+            buttonOutlets[position].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
         }
     }
 }
