@@ -4,38 +4,27 @@
 
 import Foundation
 
-// Последовательность вопросов
-enum QuestionOrder {
+enum QuestionOrder {    // Последовательность вопросов
     case straight
     case random
 }
-
-// Смена формулировок вопроса
-enum QuestionText {
+enum QuestionText {     // Смена формулировок вопроса
     case same
     case random
 }
-
-// Подсказка после неправильного ответа
-enum HelpAfterWrong {
+enum HelpAfterWrong {   // Подсказка после неправильного ответа
     case proceed
     case help
 }
-
-// Поведение при досрочном выходе
-enum SaveRecord {
+enum SaveRecord {       // Поведение при досрочном выходе
     case save
     case dontSave
 }
-
-// Звук
-enum Sound {
+enum Sound {            // Звук
     case on
     case off
 }
-
-// Смена после подсказки
-enum ChangeAfterHelp {
+enum ChangeAfterHelp {  // Смена после подсказки
     case change
     case dontChange
 }

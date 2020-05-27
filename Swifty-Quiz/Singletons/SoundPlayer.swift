@@ -11,6 +11,7 @@ enum Sounds {
     case answerButtonRight
     case answerButtonWrong
     case clearRecordsSound
+    case infoAboutSetting
 }
 
 class SoundPlayer {
@@ -40,6 +41,9 @@ class SoundPlayer {
             case .clearRecordsSound:
                 name = "trash"
                 soundExtension = "mp3"
+            case .infoAboutSetting:
+                name = "button1"
+                soundExtension = "wav"
             }
             
             guard let url = Bundle.main.url(forResource: name, withExtension: soundExtension) else {

@@ -26,6 +26,18 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingCell else { return UITableViewCell() }
+        cell.delegate = self
         return cell
+    }
+}
+
+
+// MARK: Работа с делегатом SettingCellDelegate
+extension SettingsViewController: SettingCellDelegate {
+    func showInformationAlert(_ title: String, _ message: String) {
+        let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: .alert)
+        let quitAction = UIAlertAction(title: "Вернуться", style: .default, handler: { action in })
+        alert.addAction(quitAction)
+        present(alert, animated: true, completion: nil)
     }
 }

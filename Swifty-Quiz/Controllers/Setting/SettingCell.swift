@@ -4,6 +4,10 @@
 
 import UIKit
 
+protocol SettingCellDelegate: class {
+    func showInformationAlert(_ title: String, _ message: String)
+}
+
 class SettingCell: UITableViewCell {
 
     @IBOutlet weak var questionOrderControl: UISegmentedControl!
@@ -12,9 +16,8 @@ class SettingCell: UITableViewCell {
     @IBOutlet weak var changeAfterHelpControl: UISegmentedControl!
     @IBOutlet weak var saveRecordControl: UISegmentedControl!
     @IBOutlet weak var soundControl: UISegmentedControl!
-    
-    
     @IBOutlet var allControls: [UISegmentedControl]!
+    weak var delegate: SettingCellDelegate?
     
     @IBAction func settingSwitchSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
@@ -29,7 +32,6 @@ class SettingCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
 }
 
@@ -173,5 +175,40 @@ extension SettingCell {
                 Game.shared.setChangeAfterHelp(setting: .dontChange)
             }
         }
+    }
+}
+
+
+// MARK: Работа с подсказками по настройкам
+extension SettingCell {
+    
+    @IBAction func informationAboutSettingPressed(_ sender: UIButton) {
+        var title = ""
+        var message = ""
+        SoundPlayer.shared.playSound(sound: .infoAboutSetting)
+        
+        switch sender.tag {
+        case 1:
+            title = "Последовательность вопросов"
+            message = "В случае прямой последовательности - вопросы каждую игру будут идти в одном порядке. Если вы выберете случайную последовательность, порядок вопросов никогда не повториться дважды."
+        case 2:
+            title = "Формулировка текста вопроса"
+            message = "У каждого вопроса в игре есть несколько формулировок вопроса, от одной - до трех. Если вы хотите сделать игру посложнее - включите изменение настроек, тогда глазу будет труднее бегло вспомнить вопрос."
+        case 3:
+            title = "При неправильном ответе"
+            message = "После неправильного ответа вы можете просто идти дальше, а можете получать теоритическую подсказку, которая поможет понимать сразу, какой ответ был правильным. Это замедляет ход игры, но делает ее более информативной."
+        case 4:
+            title = "Переход после подсказки"
+            message = "После каждой подсказки вы можете автоматически переходить к следующему вопросу. А можете оставаться, чтобы еще раз внимательно прочитать вопрос и выбрать правильный ответ. В текущей версии - после подсказки вам не будут засчитаны очки в счет."
+        case 5:
+            title = "Сохранение рекорда при досрочном выходе"
+            message = "Вы можете включить функцию сохранения всех незавершенных игр, если посреди игры вы выйдете в настройки или на выбор темы - ваш рекорд сохраниться. Не работает, если вы свернули приложение, а потом смахнули его (закрыли)."
+        case 6:
+            title = "Звуки"
+            message = "Тут в целом все понятно, но со звуками повеселее :)"
+        default:
+            print("Error with information about setting")
+        }
+        delegate?.showInformationAlert(title, message)
     }
 }

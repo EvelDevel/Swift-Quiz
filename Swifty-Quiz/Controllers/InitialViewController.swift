@@ -5,7 +5,7 @@
 import UIKit
 
 // MARK: TODO
-/// Сделать настройки через таблицу (для возможности расширения)
+/// Сделать вывод подсказок по нажатию на настройки 
 
 class InitialViewController: UIViewController {
     
