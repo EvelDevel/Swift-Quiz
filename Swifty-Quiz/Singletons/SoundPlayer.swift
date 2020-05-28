@@ -18,6 +18,7 @@ class SoundPlayer {
     
     static let shared = SoundPlayer()
     var player = AVAudioPlayer()
+    private init() { }
     
     func playSound(sound: Sounds) {
         if Game.shared.settings.sound == 0 {
