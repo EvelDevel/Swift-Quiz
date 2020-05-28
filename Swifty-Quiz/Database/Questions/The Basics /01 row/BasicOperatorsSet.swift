@@ -259,7 +259,7 @@ class BasicOperatorsSet {
             
             Question(question: ["Какое значение будет присвоено константе anotherMinusOne?",
                                 "Константе anotherMinusOne присвоится именно это значение"],
-                     image: "Operators22",
+                     image: "BasicOperators22",
                      optionA: "1",
                      optionB: "-1",
                      optionC: "-2",
@@ -364,7 +364,7 @@ class BasicOperatorsSet {
             
             Question(question: ["Какое значение будет присвоено константе colorToUse?",
                                 "Какое значение получит colorToUse?"],
-                     image: "Operators31",
+                     image: "BasicOperators31",
                      optionA: "Столкнемся с ошибкой",
                      optionB: "Значение colorSetByUser",
                      optionC: "yellow",
@@ -376,7 +376,7 @@ class BasicOperatorsSet {
             Question(question: ["Какое значение присвоится константе test, если мы пройдем компиляцию?",
                                 "Если константе test будет присвоено значение, каким оно будет?",
                                 "Каким значение получит константа test?"],
-                     image: "Operators32",
+                     image: "BasicOperators32",
                      optionA: "Столкнемся с ошибкой",
                      optionB: "nil",
                      optionC: "К",
@@ -525,7 +525,29 @@ class BasicOperatorsSet {
                      optionD: "Столкнемся с ошибкой",
                      correctAnswer: 1,
                      questionId: 44,
-                     helpText: "Когда мы инициализируем несколько переменных через ссылку на один и тот же UIColor.color, все переменные становятся ссылками на один экземпляр цвета, то есть они тождественны.")
+                     helpText: "Когда мы инициализируем несколько переменных через ссылку на один и тот же UIColor.color, все переменные становятся ссылками на один экземпляр цвета, то есть они тождественны."),
+            
+            Question(question: ["Какой оператор вернет true при сравнении, если объекты ссылаются на одно и тоже место в памяти?",
+                                "Если две перменные ссылаются на одно место в памяти, какой оператор вернет true при их сравнении?",
+                                "Этим оператором мы можем сравнить две переменные, и он вернет true, если они ссылаются на одно и то же место в памяти"],
+                     image: "",
+                     optionA: "===",
+                     optionB: "==",
+                     optionC: "=",
+                     optionD: "&&",
+                     correctAnswer: 1,
+                     questionId: 45,
+                     helpText: "Оператор проверки на тождественность (===) в Swift возвращает true, если переменные ссылаются на одно и то же место в памяти."),
+            
+            Question(question: ["Что выведется в консоль?"],
+                     image: "BasicOperators46",
+                     optionA: "true",
+                     optionB: "false",
+                     optionC: ".red",
+                     optionD: "",
+                     correctAnswer: 1,
+                     questionId: 46,
+                     helpText: "В консоль выведется true. UIColor.red не создает каждый раз новый объект, а всегда возвращает один и тот же, поэтому оператор сравнения на тождественность возвращает true (переменные ссылаются на одно и то же место в памяти)."),
         ]
     }
 }
