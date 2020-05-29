@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     private let saveRecordSettings = Game.shared.settings.saveRecord
     private let soundSettings = Game.shared.settings.sound
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
+    var continueStatus: Bool?
     
     @IBOutlet var answerButtonsCollection: [HalfRoundButton]!
     @IBOutlet weak var optionA: UIButton!
@@ -37,6 +38,7 @@ class GameViewController: UIViewController {
     
     private let buttonsView = AnswerButtonsView()
     private let shadows = GameViewShadows()
+    
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
@@ -54,6 +56,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ViewDidLoad")
+        setValuesIfWeContinue()
         addQuestionSet()
         updateQuestion()
         shadows.addStaticShadows(questionArea, progressWhite)
@@ -61,6 +65,7 @@ class GameViewController: UIViewController {
     }
 
     override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear")
         if endGameFlag == false {
             endGame(scenario: 1) /// Свернули игру не доиграв
         }
@@ -71,17 +76,45 @@ class GameViewController: UIViewController {
 // MARK: Установка и обновление основных игровых параметров
 extension GameViewController {
     
+    func setValuesIfWeContinue() {
+        print("setValuesIfWeContinue")
+        print("Game.shared.records.count \(Game.shared.records.count)")
+        print("continueStatus \(continueStatus)")
+        
+        if Game.shared.records.count != 0 {
+            print("Game.shared.records.count != 0")
+            if continueStatus != nil && continueStatus == true {
+                print("continueStatus == true")
+                self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
+                print("currentQuestionNumber = \(Game.shared.records[0].playedNum! + 1)")
+                self.currentQuestionIndex = Game.shared.records[0].playedNum!
+                print("currentQuestionIndex = \(Game.shared.records[0].playedNum!)")
+                self.score = Game.shared.records[0].score!
+                print("score = \(Game.shared.records[0].score!)")
+                self.helpCounter = Game.shared.records[0].playedNum! + 1
+                print("helpCounter = \(Game.shared.records[0].playedNum! + 1)")
+                self.initialQuestionSet = SelectedTopic.shared.topic.questionSet
+                print("initialQuestionSet = \(SelectedTopic.shared.topic.questionSet)")
+            }
+        }
+    }
+    
     func addQuestionSet() {
+        print("addQuestionSet")
         let normal = SelectedTopic.shared.topic.questionSet
         let random = SelectedTopic.shared.topic.questionSet.shuffled()
-        if orderSettings == 0 {
-            initialQuestionSet = normal
-        } else {
-            initialQuestionSet = random
+        
+        if continueStatus != nil && continueStatus == false {
+            if orderSettings == 0 {
+                initialQuestionSet = normal
+            } else {
+                initialQuestionSet = random
+            }
         }
     }
     
     func updateQuestion() {
+        print("updateQuestion")
         buttonsView.refreshButtonsVisibility(currentQuestionIndex, initialQuestionSet.count, answerButtonsCollection)
         buttonsView.setDefaultButtonsColor(answerButtonsCollection)
         shadows.addButtonShadows(answerButtonsCollection)
@@ -90,6 +123,9 @@ extension GameViewController {
     }
     
     func addQuestionContent() {
+        print("addQuestionContent")
+        print("currentQuestionIndex = \(currentQuestionIndex)")
+        print("initialQuestionSet.count - 1 = \(initialQuestionSet.count - 1)")
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
             setQuestionImageAndTextSize()
             setQuestionText()
@@ -102,6 +138,7 @@ extension GameViewController {
     }
     
     func updateUI() {
+        print("updateUI")
         dontUpdateQuestionFlag = false
         helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
@@ -119,6 +156,7 @@ extension GameViewController {
 extension GameViewController {
     
     func setQuestionImageAndTextSize() {
+        print("setQuestionImageAndTextSize")
         let image = initialQuestionSet[currentQuestionIndex].image
         
         if  image == "" {
@@ -144,6 +182,7 @@ extension GameViewController {
     }
     
     func setQuestionText() {
+        print("setQuestionText")
         let normal = initialQuestionSet[currentQuestionIndex].question[0]
         let random = initialQuestionSet[currentQuestionIndex].question.shuffled()
         
@@ -160,6 +199,7 @@ extension GameViewController {
 extension GameViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
+        print("answerPressed")
         if sender.tag == buttonsView.showCorrectPosition() {
             /// Увеличиваем счет только если не брали подсказку
             if helpFlag == false {
@@ -199,6 +239,7 @@ extension GameViewController {
     /// Запускаем подсказку после неправильного ответа
     /// Попадаем сюда, только если активирована такая настройка
     func showHelpAfterWrongAnswer() {
+        print("showHelpAfterWrongAnswer")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
@@ -217,9 +258,10 @@ extension GameViewController {
 // MARK: Завершение игры
 extension GameViewController {
     func endGame(scenario: Int) {
+        print("endGame with scenario: \(scenario)")
         switch scenario {
         case 1:
-            if saveRecordSettings == 1 && currentQuestionIndex > 0 {
+            if saveRecordSettings == 1 {
                 callDelegateAndSaveRecord(gameEnded: false)
             }
         case 2:
@@ -229,15 +271,8 @@ extension GameViewController {
         }
     }
     
-    func updateMessageAndShowAlert() {
-        if updatePercentage() < 35 { message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
-        } else if updatePercentage() < 55 { message = "Достойный результат, но нужно продолжать работать!"
-        } else if updatePercentage() < 75 { message = "Уже хорошо! Но вы можете постараться еще лучше!"
-        } else { message = "Превосходно! Продолжайте в том же духе и по остальным темам!" }
-        showAlert(title: "Ваш счет", message: "\(message)")
-    }
-    
     func callDelegateAndSaveRecord(gameEnded: Bool) {
+        print("callDelegateAndSaveRecord with: \(gameEnded)")
         endGameFlag = true
         delegate?.didEndGame(   result: score,
                                 totalQuestion: initialQuestionSet.count,
@@ -246,32 +281,44 @@ extension GameViewController {
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex)
         
-        var record = Record()
         if gameEnded {
-            record = Record(    date: Date(),
-                                score: score,
-                                topic: SelectedTopic.shared.topic.topicName,
-                                totalQuestion: initialQuestionSet.count,
-                                percentOfCorrectAnswer: updatePercentage(),
-                                helpCounter: helpCounter,
-                                playedNum: currentQuestionIndex)
+            let record = Record(    date: Date(),
+                                    score: score,
+                                    topic: SelectedTopic.shared.topic.topicName,
+                                    totalQuestion: initialQuestionSet.count,
+                                    percentOfCorrectAnswer: updatePercentage(),
+                                    helpCounter: helpCounter,
+                                    playedNum: currentQuestionIndex,
+                                    gameContinuationStatus: 0)
+            Game.shared.addRecord(record)
         } else {
-            record = Record(    date: Date(),
-                                score: score,
-                                topic: SelectedTopic.shared.topic.topicName,
-                                totalQuestion: initialQuestionSet.count,
-                                percentOfCorrectAnswer: updatePercentage(),
-                                helpCounter: helpCounter,
-                                playedNum: currentQuestionIndex,
-                                gameContinuationStatus: 1,
-                                arrayOfQuestions: initialQuestionSet)
+            let record = Record(    date: Date(),
+                                    score: score,
+                                    topic: SelectedTopic.shared.topic.topicName,
+                                    totalQuestion: initialQuestionSet.count,
+                                    percentOfCorrectAnswer: updatePercentage(),
+                                    helpCounter: helpCounter,
+                                    playedNum: currentQuestionIndex,
+                                    gameContinuationStatus: 1)
+            Game.shared.replaceRecord(record)
         }
-        Game.shared.addRecord(record)
+        SelectedTopic.shared.addQuestionSet(initialQuestionSet,
+                                            topic: SelectedTopic.shared.topic.topicName,
+                                            tag: SelectedTopic.shared.topic.topicTag)
         delegate?.updateInitialFromGameView()
     }
     
+    func updateMessageAndShowAlert() {
+        print("updateMessageAndShowAlert")
+        if updatePercentage() < 35 { message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
+        } else if updatePercentage() < 55 { message = "Достойный результат, но нужно продолжать работать!"
+        } else if updatePercentage() < 75 { message = "Уже хорошо! Но вы можете постараться еще лучше!"
+        } else { message = "Превосходно! Продолжайте в том же духе и по остальным темам!" }
+        showAlert(title: "Ваш счет", message: "\(message)")
+    }
     
     func showAlert(title: String, message: String) {
+        print("showAlert")
         let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)
         let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
         let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.dismiss(animated: true, completion: nil) })
@@ -282,6 +329,7 @@ extension GameViewController {
     }
     
     func restartGame() {
+        print("restartGame")
         endGameFlag = false
         score = 0
         currentQuestionNumber = 1
@@ -295,6 +343,7 @@ extension GameViewController {
 extension GameViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("override func prepare for HelpViewController")
         if segue.identifier  == "toHelpViewController" {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
@@ -314,6 +363,7 @@ extension GameViewController {
 extension GameViewController: HelpViewControllerDelegate {
     
     func updateAfterHelp() {
+        print("updateAfterHelp")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             if Game.shared.settings.changeAfterHelp == 0 {
                 self.currentQuestionNumber += 1

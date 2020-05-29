@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
-                                <rect key="frame" x="30" y="120" width="260" height="352"/>
+                                <rect key="frame" x="30" y="108" width="260" height="352"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5De-it-OQy" userLabel="TopicPicker">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
@@ -201,7 +201,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="u18-MC-pOa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                <state key="normal" title="ИГРАТЬ">
+                                                <state key="normal" title="Играть">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -222,8 +222,8 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="di5-VP-oWZ"/>
                                                     <constraint firstAttribute="height" constant="60" id="zg8-CA-eai"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                <state key="normal" title="ПРОДОЛЖИТЬ ИГРУ">
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                                <state key="normal" title="Продолжить">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -244,7 +244,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="120" id="TJQ-eT-47P"/>
+                            <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="85H-EK-qpu"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="Uwy-mN-r6z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>

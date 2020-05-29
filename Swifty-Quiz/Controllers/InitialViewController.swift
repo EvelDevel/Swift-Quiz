@@ -30,12 +30,13 @@ class InitialViewController: UIViewController {
     }
     
     func updateContinueButton() {
+        /// Показываем или убираем кнопку "продолжить игру"
         if Game.shared.records.count != 0 && Game.shared.records[0].gameContinuationStatus == 1 {
             UIView.animate(withDuration: 0.3, animations: {
                 self.continueGameButton.isHidden = false
             })
         } else {
-            self.continueGameButton.isHidden = true
+            continueGameButton.isHidden = true
         }
     }
 }
@@ -94,12 +95,14 @@ extension InitialViewController {
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
+            gameView.continueStatus = false
         } else if segue.identifier == "toTopicSelection" {
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
         } else if segue.identifier == "continueGame" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
+            gameView.continueStatus = true
         } else if segue.identifier == "toResultsViewController" {
             let recordView = segue.destination as! RecordsViewController
             recordView.delegate = self

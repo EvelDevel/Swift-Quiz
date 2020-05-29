@@ -15,5 +15,4 @@ struct Record: Codable {
     
     // Свойства для продолжения незавершенной игры 
     var gameContinuationStatus: Int?
-    var arrayOfQuestions: [Question]?
 }

@@ -33,6 +33,10 @@ extension Game {
     func addRecord(_ record: Record) {
         self.records.insert(record, at: 0)
     }
+    func replaceRecord(_ record: Record) {
+        self.records.remove(at: 0)
+        self.records.insert(record, at: 0)
+    }
     func clearRecords() {
         self.records = []
     }
