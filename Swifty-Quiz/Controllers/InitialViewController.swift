@@ -9,6 +9,7 @@ import UIKit
 /// Если есть недоигранная игра, сделать так, чтобы ее можно было доиграть
 /// - Как только человек меняет настройки, начинает новую игру, возможность пропадает
 /// - Сохранять массив вопросов, настройки, и основные показатели
+/// - При изменении темы вопросов или смене настроек - 
 
 class InitialViewController: UIViewController {
     
@@ -31,8 +32,8 @@ class InitialViewController: UIViewController {
     
     func updateContinueButton() {
         /// Показываем или убираем кнопку "продолжить игру"
-        if Game.shared.records.count != 0 && Game.shared.records[0].gameContinuationStatus == 1 {
-            UIView.animate(withDuration: 0.3, animations: {
+        if Game.shared.records.count != 0 && Game.shared.records[0].gameContinuationStatus == true {
+            UIView.animate(withDuration: 0.22, animations: {
                 self.continueGameButton.isHidden = false
             })
         } else {
@@ -95,14 +96,14 @@ extension InitialViewController {
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
-            gameView.continueStatus = false
+            gameView.weContinueLastGame = false
         } else if segue.identifier == "toTopicSelection" {
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
         } else if segue.identifier == "continueGame" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
-            gameView.continueStatus = true
+            gameView.weContinueLastGame = true
         } else if segue.identifier == "toResultsViewController" {
             let recordView = segue.destination as! RecordsViewController
             recordView.delegate = self

@@ -74,8 +74,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "didEndGame(result:totalQuestion:percentOfCorrect:topic:helpCounter:playedNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,8 +90,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "updateInitialFromSettingView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,8 +106,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "updateInitialFromRecordView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,8 +122,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "updateInitialFromTopicView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,8 +138,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "updateInitialFromGameView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,8 +170,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "setValuesIfWeContinue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,8 +186,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "setValuesIfWeContinue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,9 +202,9 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
-            landmarkName = "callDelegateAndSaveRecord(gameEnded:)"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "callDelegateAndSaveRecord(weHaveRunOutOfQuestions:continueStatus:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,9 +218,9 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "callDelegateAndSaveRecord(gameEnded:)"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "callDelegateAndSaveRecord(weHaveRunOutOfQuestions:continueStatus:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -250,24 +250,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "addQuestionContent()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7D79E7D8-053C-4C37-B01C-039CE980AD81"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "addQuestionContent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,8 +266,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "addQuestionContent()"
             landmarkType = "7">
          </BreakpointContent>

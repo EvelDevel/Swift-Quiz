@@ -12,7 +12,5 @@ struct Record: Codable {
     var percentOfCorrectAnswer: Double?
     var helpCounter: Int?
     var playedNum: Int?
-    
-    // Свойства для продолжения незавершенной игры 
-    var gameContinuationStatus: Int?
+    var gameContinuationStatus: Bool?
 }
