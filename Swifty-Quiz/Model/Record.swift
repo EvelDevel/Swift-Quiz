@@ -12,5 +12,5 @@ struct Record: Codable {
     var percentOfCorrectAnswer: Double?
     var helpCounter: Int?
     var playedNum: Int?
-    var gameContinuationStatus: Bool?
+    var continueGameStatus: Bool?
 }

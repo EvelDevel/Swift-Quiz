@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
-                                <rect key="frame" x="30" y="108" width="260" height="352"/>
+                                <rect key="frame" x="30" y="75" width="260" height="352"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5De-it-OQy" userLabel="TopicPicker">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
@@ -244,8 +244,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="85H-EK-qpu"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="Uwy-mN-r6z"/>
+                            <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" multiplier="3" constant="75" id="v0Q-qL-OI6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                     </view>
@@ -743,11 +743,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="COY-Na-zyC"/>
                     <connections>
+                        <outlet property="helpCounterLabel" destination="veA-zL-dzC" id="bRs-Ph-u8L"/>
                         <outlet property="optionA" destination="lcg-H9-k7K" id="Gtw-Eb-Gg0"/>
                         <outlet property="optionB" destination="cGm-XU-csX" id="Suk-B0-udo"/>
                         <outlet property="optionC" destination="3us-Ch-ovH" id="hMe-yS-czi"/>
                         <outlet property="optionD" destination="sAj-KE-UJq" id="aLc-Z6-Y9H"/>
-                        <outlet property="pressHelpCounterLabel" destination="veA-zL-dzC" id="bRs-Ph-u8L"/>
                         <outlet property="progressBarWhite" destination="lup-xN-Pbw" id="BcT-I6-whA"/>
                         <outlet property="progressView" destination="CfG-r9-Tfa" id="80E-QL-tLH"/>
                         <outlet property="progressWhite" destination="lup-xN-Pbw" id="rtT-ff-wxg"/>

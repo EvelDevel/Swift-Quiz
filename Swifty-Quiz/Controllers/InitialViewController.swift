@@ -9,7 +9,8 @@ import UIKit
 /// Если есть недоигранная игра, сделать так, чтобы ее можно было доиграть
 /// - Как только человек меняет настройки, начинает новую игру, возможность пропадает
 /// - Сохранять массив вопросов, настройки, и основные показатели
-/// - При изменении темы вопросов или смене настроек - 
+/// - При изменении темы вопросов или смене настроек
+/// - Сделать изменяемый по высоте элемент сверху на главном экране, чтобы положение стака при появлении кнопки продолжить не скакало
 
 class InitialViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var playedNumberLabel: UILabel!
     @IBOutlet weak var continueGameButton: HalfRoundButton!
     @IBAction func startGame(_ sender: UIButton) { }
+    private var continueStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class InitialViewController: UIViewController {
     
     func updateContinueButton() {
         /// Показываем или убираем кнопку "продолжить игру"
-        if Game.shared.records.count != 0 && Game.shared.records[0].gameContinuationStatus == true {
+        if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             UIView.animate(withDuration: 0.22, animations: {
                 self.continueGameButton.isHidden = false
             })

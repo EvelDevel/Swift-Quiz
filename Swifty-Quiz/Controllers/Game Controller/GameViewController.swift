@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var pressHelpCounterLabel: UILabel!
+    @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var progressWhite: UIView!
     @IBOutlet weak var questionArea: UIView!
@@ -64,8 +64,10 @@ class GameViewController: UIViewController {
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        if endGameFlag == false {
+        if endGameFlag == false && saveRecordSettings == 1 {
             /// Свернули игру не доиграв
+            /// Сохраняем, если еще не прошло сохранение текущей игры
+            /// И если настройка сохранения незавершенных - активна
             gameEnding(path: 2)
         }
     }
@@ -81,8 +83,9 @@ extension GameViewController {
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
                 self.currentQuestionIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
-                self.helpCounter = Game.shared.records[0].playedNum! + 1
+                self.helpCounter = Game.shared.records[0].helpCounter!
                 self.initialQuestionSet = SelectedTopic.shared.topic.questionSet
+                if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
             }
         }
     }
@@ -226,7 +229,7 @@ extension GameViewController {
         if helpFlag == false { // отключаем многократное засчитывание
             helpCounter += 1
         }
-        pressHelpCounterLabel.text = "\(helpCounter)"
+        helpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)
     }
@@ -239,19 +242,16 @@ extension GameViewController {
     func gameEnding(path: Int) {
         switch path {
         case 1:
-            callDelegateAndSaveRecord(weHaveRunOutOfQuestions: true, continueStatus: 0)
+            callDelegateAndSaveRecord(continueStatus: false)
             updateMessageAndShowAlert()
         case 2:
-            if saveRecordSettings == 1 {
-                callDelegateAndSaveRecord(weHaveRunOutOfQuestions: false, continueStatus: 1)
-            }
+            callDelegateAndSaveRecord(continueStatus: true)
         default:
             print("gameEnding error")
         }
     }
     
-    func callDelegateAndSaveRecord(weHaveRunOutOfQuestions: Bool,
-                                   continueStatus: Int) {
+    func callDelegateAndSaveRecord(continueStatus: Bool) {
         endGameFlag = true
         delegate?.didEndGame(   result: score,
                                 totalQuestion: initialQuestionSet.count,
@@ -259,29 +259,15 @@ extension GameViewController {
                                 topic: SelectedTopic.shared.topic.topicName,
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex)
-    
-        var record = Record()
-        if weHaveRunOutOfQuestions {
-            /// Закончились вопросы
-            record = Record(    date: Date(),
+
+        let record = Record(    date: Date(),
                                 score: score,
                                 topic: SelectedTopic.shared.topic.topicName,
                                 totalQuestion: initialQuestionSet.count,
                                 percentOfCorrectAnswer: updatePercentage(),
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex,
-                                gameContinuationStatus: false)
-        } else {
-            /// Вопросы не закончились, можно продолжить
-            record = Record(    date: Date(),
-                                score: score,
-                                topic: SelectedTopic.shared.topic.topicName,
-                                totalQuestion: initialQuestionSet.count,
-                                percentOfCorrectAnswer: updatePercentage(),
-                                helpCounter: helpCounter,
-                                playedNum: currentQuestionIndex,
-                                gameContinuationStatus: true)
-        }
+                                continueGameStatus: continueStatus)
         
         if weContinueLastGame {
             Game.shared.replaceRecord(record)
@@ -334,7 +320,7 @@ extension GameViewController {
             if helpFlag == false {
                 helpCounter += 1
             }
-            pressHelpCounterLabel.text = "\(helpCounter)"
+            helpCounterLabel.text = "\(helpCounter)"
             helpFlag = true
         }
     }

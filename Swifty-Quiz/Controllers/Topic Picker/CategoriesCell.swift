@@ -24,6 +24,7 @@ class CategoriesCell: UITableViewCell {
         addQuestionsToArray(sender: sender)
         delegate?.updateNumberOfQuestions()
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
+        Game.shared.changeContinueStatus()
         sender.setTitleColor(.white, for: .normal)
         sender.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
     }

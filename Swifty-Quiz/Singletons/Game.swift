@@ -28,7 +28,7 @@ class Game {
 }
 
 
-// MARK: Сохранение и удаление рекордов
+// MARK: Сохранение, удаление, редактирование рекордов
 extension Game {
     func addRecord(_ record: Record) {
         self.records.insert(record, at: 0)
@@ -42,6 +42,14 @@ extension Game {
     }
     func deleteOneRecord(index: Int) {
         self.records.remove(at: index)
+    }
+    func changeContinueStatus() {
+        if self.records.count != 0 {
+            var lastRecord = self.records[0]
+            lastRecord.continueGameStatus = false
+            self.records.remove(at: 0)
+            self.records.insert(lastRecord, at: 0)
+        }
     }
 }
 
