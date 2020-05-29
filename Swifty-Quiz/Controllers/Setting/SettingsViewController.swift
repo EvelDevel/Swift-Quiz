@@ -4,13 +4,22 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate: class {
+    func updateInitialFromSettingView()
+}
+
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: SettingsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.updateInitialFromSettingView()
     }
 }
 

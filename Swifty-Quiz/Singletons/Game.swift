@@ -20,6 +20,7 @@ class Game {
             recordCaretaker.saveRecordsList(records: self.records)
         }
     }
+    
     private init() {
         self.records = self.recordCaretaker.getRecordsList()
         self.settings = self.settingsCaretaker.getSettings()

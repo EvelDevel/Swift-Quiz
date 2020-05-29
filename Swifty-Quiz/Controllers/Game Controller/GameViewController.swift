@@ -6,6 +6,7 @@ import UIKit
 
 protocol GameViewControllerDelegate: class {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
+    func updateInitialFromGameView()
 }
 
 class GameViewController: UIViewController {
@@ -58,7 +59,7 @@ class GameViewController: UIViewController {
         shadows.addStaticShadows(questionArea, progressWhite)
         shadows.addButtonShadows(answerButtonsCollection)
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         if endGameFlag == false {
             endGame(scenario: 1) /// Свернули игру не доиграв
@@ -218,9 +219,11 @@ extension GameViewController {
     func endGame(scenario: Int) {
         switch scenario {
         case 1:
-            if saveRecordSettings == 1 && currentQuestionIndex > 0 { callDelegateAndSaveRecord() }
+            if saveRecordSettings == 1 && currentQuestionIndex > 0 {
+                callDelegateAndSaveRecord(gameEnded: false)
+            }
         case 2:
-            callDelegateAndSaveRecord()
+            callDelegateAndSaveRecord(gameEnded: true)
             updateMessageAndShowAlert()
         default: print("endGame error")
         }
@@ -234,7 +237,7 @@ extension GameViewController {
         showAlert(title: "Ваш счет", message: "\(message)")
     }
     
-    func callDelegateAndSaveRecord() {
+    func callDelegateAndSaveRecord(gameEnded: Bool) {
         endGameFlag = true
         delegate?.didEndGame(   result: score,
                                 totalQuestion: initialQuestionSet.count,
@@ -242,15 +245,31 @@ extension GameViewController {
                                 topic: SelectedTopic.shared.topic.topicName,
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex)
-        let record = Record(    date: Date(),
+        
+        var record = Record()
+        if gameEnded {
+            record = Record(    date: Date(),
                                 score: score,
                                 topic: SelectedTopic.shared.topic.topicName,
                                 totalQuestion: initialQuestionSet.count,
                                 percentOfCorrectAnswer: updatePercentage(),
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex)
+        } else {
+            record = Record(    date: Date(),
+                                score: score,
+                                topic: SelectedTopic.shared.topic.topicName,
+                                totalQuestion: initialQuestionSet.count,
+                                percentOfCorrectAnswer: updatePercentage(),
+                                helpCounter: helpCounter,
+                                playedNum: currentQuestionIndex,
+                                gameContinuationStatus: 1,
+                                arrayOfQuestions: initialQuestionSet)
+        }
         Game.shared.addRecord(record)
+        delegate?.updateInitialFromGameView()
     }
+    
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)

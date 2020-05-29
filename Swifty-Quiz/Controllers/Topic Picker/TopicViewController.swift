@@ -6,6 +6,7 @@ import UIKit
 
 protocol TopicViewControllerDelegate: class {
     func selectedCategory()
+    func updateInitialFromTopicView()
 }
 
 class TopicViewController: UIViewController {
@@ -22,6 +23,7 @@ class TopicViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.selectedCategory()
+        delegate?.updateInitialFromTopicView()
     }
     
     func setDefaultNumberOfQuestions() {

@@ -5,7 +5,10 @@
 import UIKit
 
 // MARK: TODO
-/// Сделать вывод подсказок по нажатию на настройки 
+/// Сделать вывод подсказок по нажатию на настройки
+/// Если есть недоигранная игра, сделать так, чтобы ее можно было доиграть
+/// - Как только человек меняет настройки, начинает новую игру, возможность пропадает
+/// - Сохранять массив вопросов, настройки, и основные показатели
 
 class InitialViewController: UIViewController {
     
@@ -16,12 +19,24 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var totalQuestions: UILabel!
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var playedNumberLabel: UILabel!
+    @IBOutlet weak var continueGameButton: HalfRoundButton!
     @IBAction func startGame(_ sender: UIButton) { }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addDefaultQuestionSet()
         showLastGameInfo()
+        updateContinueButton()
+    }
+    
+    func updateContinueButton() {
+        if Game.shared.records.count != 0 && Game.shared.records[0].gameContinuationStatus == 1 {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.continueGameButton.isHidden = false
+            })
+        } else {
+            self.continueGameButton.isHidden = true
+        }
     }
 }
 
@@ -82,6 +97,15 @@ extension InitialViewController {
         } else if segue.identifier == "toTopicSelection" {
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
+        } else if segue.identifier == "continueGame" {
+            let gameView = segue.destination as! GameViewController
+            gameView.delegate = self
+        } else if segue.identifier == "toResultsViewController" {
+            let recordView = segue.destination as! RecordsViewController
+            recordView.delegate = self
+        } else if segue.identifier == "toSettingsViewController" {
+            let settingView = segue.destination as! SettingsViewController
+            settingView.delegate = self
         }
     }
 }
@@ -103,13 +127,38 @@ extension InitialViewController: GameViewControllerDelegate {
         lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
         totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
     }
+    
+    func updateInitialFromGameView() {
+        updateContinueButton()
+    }
 }
 
 
-// MARK: Работа с делегатом TopicViewController
+// MARK: Работа с делегатом TopicViewControllerDelegate
 extension InitialViewController: TopicViewControllerDelegate {
     
     func selectedCategory() {
         selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+    }
+    func updateInitialFromTopicView() {
+        updateContinueButton()
+    }
+}
+
+
+// MARK: Работа с делегатом RecordsViewControllerDelegate
+extension InitialViewController: RecordsViewControllerDelegate {
+    
+    func updateInitialFromRecordView() {
+        updateContinueButton()
+    }
+}
+
+
+// MARK: Работа с делегатом SettingsViewControllerDelegate
+extension InitialViewController: SettingsViewControllerDelegate {
+    
+    func updateInitialFromSettingView() {
+        updateContinueButton()
     }
 }

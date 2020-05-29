@@ -4,15 +4,24 @@
 
 import UIKit
 
+protocol RecordsViewControllerDelegate: class {
+    func updateInitialFromRecordView()
+}
+
 class RecordsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
     @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
+    weak var delegate: RecordsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.updateInitialFromRecordView()
     }
 }
 
