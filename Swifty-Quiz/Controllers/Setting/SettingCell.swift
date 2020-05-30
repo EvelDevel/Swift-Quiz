@@ -6,6 +6,7 @@ import UIKit
 
 protocol SettingCellDelegate: class {
     func showInformationAlert(_ title: String, _ message: String)
+    func showAlert()
 }
 
 class SettingCell: UITableViewCell {
@@ -29,6 +30,10 @@ class SettingCell: UITableViewCell {
         setControlsTintColors()
         addingTargets()
         settingsInitialValues()
+    }
+    
+    override func layoutSubviews() {
+        delegate?.showAlert()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -64,11 +64,13 @@ class GameViewController: UIViewController {
     }
 
     override func viewDidDisappear(_ animated: Bool) {
+        /// Свернули игру не доиграв
+        /// Сохраняем, если еще не прошло сохранение текущей игры
+        /// И если настройка сохранения незавершенных - активна (и ответили хотя бы на 1 вопрос)
         if endGameFlag == false && saveRecordSettings == 1 {
-            /// Свернули игру не доиграв
-            /// Сохраняем, если еще не прошло сохранение текущей игры
-            /// И если настройка сохранения незавершенных - активна
-            gameEnding(path: 2)
+            if currentQuestionIndex > 0 {
+                gameEnding(path: 2)
+            }
         }
     }
 }

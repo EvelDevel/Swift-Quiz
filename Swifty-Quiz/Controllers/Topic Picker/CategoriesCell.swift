@@ -6,6 +6,7 @@ import UIKit
 
 protocol CategoriesCellDelegate: class {
     func updateNumberOfQuestions()
+    func showAlert()
 }
 
 class CategoriesCell: UITableViewCell {
@@ -17,6 +18,10 @@ class CategoriesCell: UITableViewCell {
         super.awakeFromNib()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
+    }
+    
+    override func layoutSubviews() {
+        delegate?.showAlert()
     }
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {

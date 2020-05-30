@@ -30,8 +30,8 @@
             filePath = "Swifty-Quiz/Controllers/Topic Picker/CategoriesCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "addQuestionsToArray(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,10 +74,10 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "InitialViewController"
-            landmarkType = "21">
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "didEndGame(result:totalQuestion:percentOfCorrect:topic:helpCounter:playedNum:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,8 +90,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "updateInitialFromSettingView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,8 +106,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "updateInitialFromRecordView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,8 +122,8 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "updateInitialFromTopicView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,25 +138,9 @@
             filePath = "Swifty-Quiz/Controllers/InitialViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "updateInitialFromGameView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B385DD38-80EF-4447-8351-D99D1F157D86"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,8 +154,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "setValuesIfWeContinue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,8 +170,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "setValuesIfWeContinue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,9 +186,9 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "callDelegateAndSaveRecord(continueStatus:)"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "callDelegateAndSaveRecord()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,8 +202,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "GameViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -250,8 +234,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "addQuestionContent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,8 +250,8 @@
             filePath = "Swifty-Quiz/Controllers/Game Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "addQuestionContent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,6 +302,22 @@
                   offsetFromSymbolStart = "543">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "326F081B-9AB5-41E8-9A6D-C38184D70A5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swifty-Quiz/Controllers/Topic Picker/TopicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "showAlert()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

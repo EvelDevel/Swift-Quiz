@@ -21,6 +21,15 @@ class SettingsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.updateInitialFromSettingView()
     }
+    
+    func showAlertIfNeeded() {
+        if Game.shared.records[0].continueGameStatus == true {
+            let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете настройки игры, вы потеряете возможность завершить последнюю игру с прежними настройками до конца", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 
@@ -43,10 +52,15 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: Работа с делегатом SettingCellDelegate
 extension SettingsViewController: SettingCellDelegate {
+    
     func showInformationAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: .alert)
         let quitAction = UIAlertAction(title: "Вернуться", style: .default, handler: { action in })
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlert() {
+        self.showAlertIfNeeded()
     }
 }

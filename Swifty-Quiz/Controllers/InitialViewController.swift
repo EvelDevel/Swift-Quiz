@@ -23,7 +23,6 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var playedNumberLabel: UILabel!
     @IBOutlet weak var continueGameButton: HalfRoundButton!
     @IBAction func startGame(_ sender: UIButton) { }
-    private var continueStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
