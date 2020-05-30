@@ -9,6 +9,9 @@ class Game {
     private let recordCaretaker = RecordsCaretaker()
     private let settingsCaretaker = SettingsCaretaker()
     
+    private var weShowedSettingAlert: Bool = false
+    private var weShowedTopicAlert: Bool = false
+    
     private(set) var settings: Settings {
         didSet {
             settingsCaretaker.saveSettings(settings: self.settings)
@@ -24,6 +27,23 @@ class Game {
     private init() {
         self.records = self.recordCaretaker.getRecordsList()
         self.settings = self.settingsCaretaker.getSettings()
+    }
+}
+
+
+// MARK: Сохранение, удаление, редактирование рекордов
+extension Game {
+    func showSettingsAlertStatus() -> Bool {
+        return self.weShowedSettingAlert
+    }
+    func setThatWeShowedSettingsAlert() {
+        self.weShowedSettingAlert = true
+    }
+    func showTopicAlertStatus() -> Bool {
+        return self.weShowedTopicAlert
+    }
+    func setThatWeShowedTopicAlert() {
+        self.weShowedTopicAlert = true
     }
 }
 

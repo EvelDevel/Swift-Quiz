@@ -23,11 +23,17 @@ class SettingsViewController: UIViewController {
     }
     
     func showAlertIfNeeded() {
+        /// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
+        /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете настройки игры, вы потеряете возможность завершить последнюю игру с прежними настройками до конца", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            if Game.shared.showSettingsAlertStatus() != true {
+                let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете настройки игры, вы потеряете возможность завершить последнюю игру с прежними настройками до конца", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            }
+            /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
+            Game.shared.setThatWeShowedSettingsAlert()
         }
     }
 }

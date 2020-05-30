@@ -31,11 +31,17 @@ class TopicViewController: UIViewController {
     }
     
     func showAlertIfNeeded() {
+        /// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
+        /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете тему игры, вы потеряете возможность завершить последнюю игру по предыдущей теме до конца", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            if Game.shared.showTopicAlertStatus() != true {
+                let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете тему игры, вы потеряете возможность завершить последнюю игру по предыдущей теме до конца", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            }
+            /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
+            Game.shared.setThatWeShowedTopicAlert()
         }
     }
 }
