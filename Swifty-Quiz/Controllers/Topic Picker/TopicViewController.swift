@@ -31,7 +31,7 @@ class TopicViewController: UIViewController {
     }
     
     func showAlertIfNeeded() {
-        if Game.shared.records[0].continueGameStatus == true {
+        if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы поменяете тему игры, вы потеряете возможность завершить последнюю игру по предыдущей теме до конца", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
             alert.addAction(okAction)
