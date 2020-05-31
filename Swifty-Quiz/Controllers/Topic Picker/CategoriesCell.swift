@@ -11,13 +11,15 @@ protocol CategoriesCellDelegate: class {
 
 class CategoriesCell: UITableViewCell {
 
-    @IBOutlet var buttonOutlets: [HalfRoundButton]!
+    @IBOutlet var allButtons: [UIButton]!
     weak var delegate: CategoriesCellDelegate?
+    private let shadows = ShadowsHelper()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
+        shadows.addButtonShadows(allButtons)
     }
     
     override func layoutSubviews() {
@@ -30,8 +32,7 @@ class CategoriesCell: UITableViewCell {
         delegate?.updateNumberOfQuestions()
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
         Game.shared.changeContinueStatus()
-        sender.setTitleColor(.white, for: .normal)
-        sender.backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
+        sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,14 +40,14 @@ class CategoriesCell: UITableViewCell {
     }
     
     func updateTopicButtons() {
-        for i in 0..<buttonOutlets.count {
-            buttonOutlets[i].setTitleColor(.black, for: .normal)
-            buttonOutlets[i].backgroundColor = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
+        for i in 0..<self.allButtons.count {
+            self.allButtons[i].setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
+            self.allButtons[i].backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
     
     func setFontSize() {
-        for button in buttonOutlets {
+        for button in allButtons {
             if UIScreen.main.bounds.size.width > 320 {
                 button.titleLabel?.font =  .systemFont(ofSize: 12)
             } else {
@@ -192,8 +193,7 @@ extension CategoriesCell {
             
         default:
             /// Последнюю выбранную категорию делаем "активной"
-            buttonOutlets[position].setTitleColor(.white, for: .normal)
-            buttonOutlets[position].backgroundColor = #colorLiteral(red: 0.3582896786, green: 0.6229948593, blue: 0.9236595812, alpha: 1)
+            allButtons[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
         }
     }
 }

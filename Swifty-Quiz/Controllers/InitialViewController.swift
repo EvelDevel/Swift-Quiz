@@ -23,21 +23,34 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var playedNumberLabel: UILabel!
     @IBOutlet weak var continueGameButton: HalfRoundButton!
     @IBAction func startGame(_ sender: UIButton) { }
+    @IBOutlet weak var contentCenter: NSLayoutConstraint!
+    
+    @IBOutlet var initialWhiteViews: [UIView]!
+    @IBOutlet var initialButtons: [UIButton]!
+    private let shadows = ShadowsHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addDefaultQuestionSet()
         showLastGameInfo()
         updateContinueButton()
+        addShadows()
+    }
+    
+    func addShadows() {
+        shadows.addStaticShadows(initialWhiteViews)
+        shadows.addButtonShadows(initialButtons)
     }
     
     func updateContinueButton() {
         /// Показываем или убираем кнопку "продолжить игру"
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            UIView.animate(withDuration: 0.22, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
+                self.contentCenter.constant = (UIScreen.main.scale / 2) + 12.5
                 self.continueGameButton.isHidden = false
             })
         } else {
+            self.contentCenter.constant = (UIScreen.main.scale / 2) - 20.5
             continueGameButton.isHidden = true
         }
     }

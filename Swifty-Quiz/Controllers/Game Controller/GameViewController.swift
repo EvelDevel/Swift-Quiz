@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     var weContinueLastGame = false
     
-    @IBOutlet var answerButtonsCollection: [HalfRoundButton]!
+    @IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
@@ -31,13 +31,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var progressWhite: UIView!
     @IBOutlet weak var questionArea: UIView!
-    @IBOutlet weak var progressBarWhite: UIView!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+    @IBOutlet var GameComtrollerViews: [UIView]!
     
     private let buttonsView = AnswerButtonsView()
-    private let shadows = GameViewShadows()
+    private let shadows = ShadowsHelper()
     
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
@@ -59,8 +59,8 @@ class GameViewController: UIViewController {
         setValuesIfWeContinue()
         addQuestionSet()
         updateQuestion()
-        shadows.addStaticShadows(questionArea, progressWhite)
-        shadows.addButtonShadows(answerButtonsCollection)
+        shadows.addStaticShadows(GameComtrollerViews)
+        shadows.addButtonShadows(answerButtonsCollection) 
     }
 
     override func viewDidDisappear(_ animated: Bool) {

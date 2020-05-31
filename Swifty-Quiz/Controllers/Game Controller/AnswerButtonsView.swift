@@ -11,7 +11,7 @@ class AnswerButtonsView: UIView {
     private var correctAnswerNewPosition = 0
     
     /// Восстановление видимости всех кнопок
-    func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [HalfRoundButton]) {
+    func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [UIButton]) {
         if index < count {
             for button in buttons {
                 button.isHidden = false
@@ -20,7 +20,7 @@ class AnswerButtonsView: UIView {
     }
     
     /// Устанавливаем дефолтный цвет кнопок
-    func setDefaultButtonsColor(_ buttons: [HalfRoundButton]) {
+    func setDefaultButtonsColor(_ buttons: [UIButton]) {
         for button in buttons {
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
             button.backgroundColor = #colorLiteral(red: 0.9964529872, green: 0.8487327695, blue: 0.225723803, alpha: 1)

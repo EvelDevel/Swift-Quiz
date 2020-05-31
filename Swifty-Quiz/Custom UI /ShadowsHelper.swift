@@ -4,16 +4,19 @@
 
 import UIKit
 
-class GameViewShadows {
+class ShadowsHelper {
     
     /// Кнопки - черная тень
-    func addButtonShadows(_ buttons: [HalfRoundButton]) {
+    func addButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {
-            button.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
+            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
             button.layer.shadowOpacity = 1
             button.layer.shadowRadius = 5
             button.layer.shadowOffset = CGSize(width: 0, height: 5)
             button.layer.position = button.center
+            button.layer.shouldRasterize = true
+            button.layer.rasterizationScale = UIScreen.main.scale
+            //button.layer.shadowPath = CGPath(ellipseIn: CGRect(x: 0, y: 0, width: 10, height: 10), transform: nil)
             
             /// Задротское скругление
             button.layer.cornerCurve = .continuous
@@ -27,6 +30,8 @@ class GameViewShadows {
         button.layer.shadowRadius = 5
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
+        button.layer.shouldRasterize = true
+        button.layer.rasterizationScale = UIScreen.main.scale
     }
     
     /// Кнопки - зеленая тень
@@ -36,21 +41,20 @@ class GameViewShadows {
         button.layer.shadowRadius = 5
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
+        button.layer.shouldRasterize = true
+        button.layer.rasterizationScale = UIScreen.main.scale
     }
     
-    /// Статические элементы - черная тень
-    func addStaticShadows(_ questionArea: UIView, _ progressBar: UIView) {
-        
-        questionArea.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        questionArea.layer.shadowOpacity = 1
-        questionArea.layer.shadowRadius = 5
-        questionArea.layer.shadowOffset = CGSize(width: 0, height: 5)
-        questionArea.layer.position = questionArea.center
-        
-        progressBar.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        progressBar.layer.shadowOpacity = 1
-        progressBar.layer.shadowRadius = 5
-        progressBar.layer.shadowOffset = CGSize(width: 0, height: 5)
-        progressBar.layer.position = progressBar.center
+    /// Черная тень для UIView
+    func addStaticShadows(_ view: [UIView]) {
+        for view in view {
+            view.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
+            view.layer.shadowOpacity = 1
+            view.layer.shadowRadius = 5
+            view.layer.shadowOffset = CGSize(width: 0, height: 5)
+            view.layer.position = view.center
+            view.layer.shouldRasterize = true
+            view.layer.rasterizationScale = UIScreen.main.scale
+        }
     }
 }
