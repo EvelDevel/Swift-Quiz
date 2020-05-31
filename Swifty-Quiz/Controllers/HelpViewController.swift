@@ -28,7 +28,6 @@ class HelpViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
         /// Обновляем вопрос в игре
         /// Если выбрана опция "переходить после подсказки"
         if Game.shared.settings.changeAfterHelp == 0 {

@@ -16,7 +16,6 @@ class ShadowsHelper {
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
-            //button.layer.shadowPath = CGPath(ellipseIn: CGRect(x: 0, y: 0, width: 10, height: 10), transform: nil)
             
             /// Задротское скругление
             button.layer.cornerCurve = .continuous
@@ -30,8 +29,6 @@ class ShadowsHelper {
         button.layer.shadowRadius = 5
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
-        button.layer.shouldRasterize = true
-        button.layer.rasterizationScale = UIScreen.main.scale
     }
     
     /// Кнопки - зеленая тень
@@ -41,8 +38,7 @@ class ShadowsHelper {
         button.layer.shadowRadius = 5
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
-        button.layer.shouldRasterize = true
-        button.layer.rasterizationScale = UIScreen.main.scale
+
     }
     
     /// Черная тень для UIView

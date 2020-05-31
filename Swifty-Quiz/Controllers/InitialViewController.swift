@@ -4,14 +4,6 @@
 
 import UIKit
 
-// MARK: TODO
-/// Сделать вывод подсказок по нажатию на настройки
-/// Если есть недоигранная игра, сделать так, чтобы ее можно было доиграть
-/// - Как только человек меняет настройки, начинает новую игру, возможность пропадает
-/// - Сохранять массив вопросов, настройки, и основные показатели
-/// - При изменении темы вопросов или смене настроек
-/// - Сделать изменяемый по высоте элемент сверху на главном экране, чтобы положение стака при появлении кнопки продолжить не скакало
-
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()
@@ -29,6 +21,10 @@ class InitialViewController: UIViewController {
     @IBOutlet var initialButtons: [UIButton]!
     private let shadows = ShadowsHelper()
     
+    @IBAction func tapButtonSounds(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addDefaultQuestionSet()
@@ -41,27 +37,21 @@ class InitialViewController: UIViewController {
         shadows.addStaticShadows(initialWhiteViews)
         shadows.addButtonShadows(initialButtons)
     }
+}
+
+
+// MARK: Показываем или убираем кнопку "продолжить игру"
+extension InitialViewController {
     
     func updateContinueButton() {
-        /// Показываем или убираем кнопку "продолжить игру"
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             UIView.animate(withDuration: 0.15, animations: {
                 self.contentCenter.constant = (UIScreen.main.scale / 2) + 12.5
-                self.continueGameButton.isHidden = false
-            })
+                self.continueGameButton.isHidden = false })
         } else {
             self.contentCenter.constant = (UIScreen.main.scale / 2) - 20.5
             continueGameButton.isHidden = true
         }
-    }
-}
-
-
-// MARK: Звуки кнопок главного экрана
-extension InitialViewController {
-    
-    @IBAction func tapButtonSounds(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
 }
 
