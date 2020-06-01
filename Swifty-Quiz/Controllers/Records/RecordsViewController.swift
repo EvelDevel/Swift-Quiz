@@ -86,7 +86,8 @@ extension RecordsViewController: UITableViewDataSource {
         dateFormatter.dateStyle = .short
         
         if record.playedNum! < record.totalQuestion! {
-            cell.colorBackground.backgroundColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 0.7969820205)
+            cell.colorBackground.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
+            cell.percentOfCorrect.textColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1)
         } else if record.percentOfCorrectAnswer! < 30 {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
         } else if record.percentOfCorrectAnswer! < 70 {

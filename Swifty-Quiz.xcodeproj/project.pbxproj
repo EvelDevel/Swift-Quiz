@@ -163,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
-				FB1D0BAC244D915C00E9C56D /* Cells */,
+				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
+				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -262,15 +263,6 @@
 				FB8742112461ABA600247923 /* SoundPlayer.swift */,
 			);
 			path = Singletons;
-			sourceTree = "<group>";
-		};
-		FB1D0BAC244D915C00E9C56D /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
-				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		FB2EAC87243EEE0F0098FAC3 = {
