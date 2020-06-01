@@ -66,7 +66,7 @@ extension HelpViewController {
         dismissing()
     }
     /// Нажали на кнопку "вернуться в игру"
-    @IBAction func backInGameButton(_ sender: HalfRoundButton) {
+    @IBAction func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
         dismissing()
     }
@@ -89,18 +89,8 @@ extension HelpViewController {
     }
     
     func addShadows() {
-        /// Вьюшка с подсказкой
-        helpView.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        helpView.layer.shadowOpacity = 1
-        helpView.layer.shadowRadius = 5
-        helpView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        helpView.layer.position = helpView.center
-        
-        /// Кнопка "назад в игру"
-        backInGameButton.layer.shadowColor = UIColor(red: 0.239, green: 0.282, blue: 0.341, alpha: 0.1).cgColor
-        backInGameButton.layer.shadowOpacity = 1
-        backInGameButton.layer.shadowRadius = 5
-        backInGameButton.layer.shadowOffset = CGSize(width: 0, height: 5)
-        backInGameButton.layer.position = backInGameButton.center
+        let shadows = ShadowsHelper()
+        shadows.addStaticShadows([helpView])
+        shadows.addButtonShadows([backInGameButton])
     }
 }

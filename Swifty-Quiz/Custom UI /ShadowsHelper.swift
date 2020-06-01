@@ -22,11 +22,29 @@ class ShadowsHelper {
         }
     }
     
+    /// Кнопки выбора тем - черная тень
+    func addTopicButtonShadows(_ buttons: [UIButton]) {
+        for button in buttons {
+            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
+            button.layer.shadowOpacity = 1
+            button.layer.shadowRadius = 4
+            button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
+            button.layer.shadowOffset = CGSize(width: 0, height: 5)
+            button.layer.position = button.center
+            button.layer.shouldRasterize = true
+            button.layer.rasterizationScale = UIScreen.main.scale
+            
+            /// Задротское скругление
+            button.layer.cornerCurve = .continuous
+        }
+    }
+    
+    
     /// Кнопки - красная тень
     func addRedShadow(button: UIButton) {
         button.layer.shadowColor = UIColor(red: 0.996, green: 0.353, blue: 0.224, alpha: 0.5).cgColor
         button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 5
+        button.layer.shadowRadius = 4
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
     }
@@ -35,7 +53,7 @@ class ShadowsHelper {
     func addGreenShadow(button: UIButton) {
         button.layer.shadowColor = UIColor(red: 0.055, green: 0.8, blue: 0.404, alpha: 0.5).cgColor
         button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 5
+        button.layer.shadowRadius = 4
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
 
@@ -46,7 +64,7 @@ class ShadowsHelper {
         for view in view {
             view.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
             view.layer.shadowOpacity = 1
-            view.layer.shadowRadius = 5
+            view.layer.shadowRadius = 4
             view.layer.shadowOffset = CGSize(width: 0, height: 5)
             view.layer.position = view.center
             view.layer.shouldRasterize = true

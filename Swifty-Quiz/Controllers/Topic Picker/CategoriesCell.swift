@@ -19,7 +19,7 @@ class CategoriesCell: UITableViewCell {
         super.awakeFromNib()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
-        shadows.addButtonShadows(allButtons)
+        shadows.addTopicButtonShadows(allButtons)
     }
     
     override func layoutSubviews() {

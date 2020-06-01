@@ -13,7 +13,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var totalQuestions: UILabel!
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var playedNumberLabel: UILabel!
-    @IBOutlet weak var continueGameButton: HalfRoundButton!
+    @IBOutlet weak var continueGameButton: UIButton!
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var contentCenter: NSLayoutConstraint!
     

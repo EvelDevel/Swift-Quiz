@@ -45,7 +45,6 @@
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
 		FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606AC24431A9300A692AD /* RecordsViewController.swift */; };
 		FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B124445E0600A692AD /* RecordsCaretaker.swift */; };
-		FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606B42444773A00A692AD /* HalfRoundButton.swift */; };
 		FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86AC9F2469A3E9002BA8B3 /* ControlFlowSet.swift */; };
 		FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */; };
 		FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */; };
@@ -118,7 +117,6 @@
 		FB8606A82441CF7300A692AD /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		FB8606B124445E0600A692AD /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
-		FB8606B42444773A00A692AD /* HalfRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRoundButton.swift; sourceTree = "<group>"; };
 		FB86AC9F2469A3E9002BA8B3 /* ControlFlowSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFlowSet.swift; sourceTree = "<group>"; };
 		FB86ACA12469A3F8002BA8B3 /* FunctionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsSet.swift; sourceTree = "<group>"; };
 		FB86ACA52469A410002BA8B3 /* ClosuresSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresSet.swift; sourceTree = "<group>"; };
@@ -343,7 +341,6 @@
 			isa = PBXGroup;
 			children = (
 				FBC1D489247574730055FF62 /* ShadowsHelper.swift */,
-				FB8606B42444773A00A692AD /* HalfRoundButton.swift */,
 			);
 			path = "Custom UI ";
 			sourceTree = "<group>";
@@ -574,7 +571,6 @@
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
 				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
-				FB8606B52444773A00A692AD /* HalfRoundButton.swift in Sources */,
 				FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */,
 				FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */,
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
