@@ -90,7 +90,6 @@ extension HelpViewController {
     
     func addShadows() {
         let shadows = ShadowsHelper()
-        shadows.addStaticShadows([helpView])
-        shadows.addButtonShadows([backInGameButton])
+        shadows.addHelpShadows(button: backInGameButton, view: helpView)
     }
 }
