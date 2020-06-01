@@ -11,7 +11,7 @@ class ShadowsHelper {
         for button in buttons {
             button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
             button.layer.shadowOpacity = 1
-            button.layer.shadowRadius = 5
+            button.layer.shadowRadius = 4
             button.layer.shadowOffset = CGSize(width: 0, height: 5)
             button.layer.position = button.center
             button.layer.shouldRasterize = true
@@ -77,7 +77,7 @@ class ShadowsHelper {
     func addHelpShadows(button: UIButton, view: UIView) {
         view.layer.shadowColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1).cgColor
         view.layer.shadowOpacity = 1
-        view.layer.shadowRadius = 3
+        view.layer.shadowRadius = 4
         view.layer.shadowOffset = CGSize(width: 0, height: 5)
         view.layer.position = view.center
         view.layer.shouldRasterize = true
@@ -85,7 +85,7 @@ class ShadowsHelper {
         
         button.layer.shadowColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1).cgColor
         button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 3
+        button.layer.shadowRadius = 4
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = view.center
         button.layer.shouldRasterize = true
