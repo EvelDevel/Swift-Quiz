@@ -146,30 +146,30 @@ extension CategoriesCell {
         case 20:
             newQuestionSet = TopicOperator.getQuestionsNestedTypes()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Вложенные типы", tag: 19)
+            
+        // MARK:  09 row
         case 21:
             newQuestionSet = TopicOperator.getQuestionsExtensions()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Расширения", tag: 20)
-            
-        // MARK:  09 row
         case 22:
             newQuestionSet = TopicOperator.getQuestionsGenerics()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Универсальные шаблоны", tag: 21)
+            
+        // MARK:  10 row
         case 23:
             newQuestionSet = TopicOperator.getQuestionsProtocols()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Протоколы", tag: 22)
-            
-        // MARK:  10 row
         case 24:
             newQuestionSet = TopicOperator.getQuestionsAccessControl()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Контроль доступа", tag: 23)
+            
+        // MARK:  11 row
         case 25:
             newQuestionSet = TopicOperator.getQuestionsMemorySafety()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Безопасность хранения", tag: 24)
-            
-         // MARK:  11 row
-         case 26:
-             newQuestionSet = TopicOperator.getQuestionsAdvancedOperators()
-             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Продвинутые операторы", tag: 25)
+        case 26:
+            newQuestionSet = TopicOperator.getQuestionsAdvancedOperators()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Продвинутые операторы", tag: 25)
              
             
             // MARK: PATTERNS

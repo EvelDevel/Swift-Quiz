@@ -49,23 +49,23 @@ class TopicOperator {
     static func getQuestionsARC() -> [Question] { return ARCSet.getQuestions() }
     
     // MARK: 08 row
-    // Приведение типов, Вложенные типы, Расширения
+    // Приведение типов, Вложенные типы
     static func getQuestionsTypeCasting() -> [Question] { return TypeCastingSet.getQuestions() }
     static func getQuestionsNestedTypes() -> [Question] { return NestedTypesSet.getQuestions() }
-    static func getQuestionsExtensions() -> [Question] { return ExtensionsSet.getQuestions() }
     
     // MARK: 09 row
-    // Шаблоны, Протоколы
+    // Расширения, Шаблоны
+    static func getQuestionsExtensions() -> [Question] { return ExtensionsSet.getQuestions() }
     static func getQuestionsGenerics() -> [Question] { return GenericsSet.getQuestions() }
-    static func getQuestionsProtocols() -> [Question] { return ProtocolsSet.getQuestions() }
     
     // MARK: 10 row
-    // Контроль доступа, Безопасность хранения
+    // Протоколы, Контроль доступа
+    static func getQuestionsProtocols() -> [Question] { return ProtocolsSet.getQuestions() }
     static func getQuestionsAccessControl() -> [Question] { return AccessControlSet.getQuestions() }
-    static func getQuestionsMemorySafety() -> [Question] { return MemorySafetySet.getQuestions() }
     
     // MARK: 11 row
-    // Продвинутые операторы
+    // Безопасность хранения, Продвинутые операторы
+    static func getQuestionsMemorySafety() -> [Question] { return MemorySafetySet.getQuestions() }
     static func getQuestionsAdvancedOperators() -> [Question] { return AdvancedOperatorsSet.getQuestions() }
     
     
