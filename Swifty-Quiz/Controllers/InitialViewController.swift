@@ -4,6 +4,13 @@
 
 import UIKit
 
+// MARK: TODO - разобраться с ресайзом тени на топик-пикере
+/// Не работает на :
+/// - 7
+/// - XR
+/// - 6s
+/// - 8 
+
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()

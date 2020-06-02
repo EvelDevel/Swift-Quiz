@@ -19,11 +19,19 @@ class CategoriesCell: UITableViewCell {
         super.awakeFromNib()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
-        shadows.addTopicButtonShadows(allButtons)
+        addShadows()
     }
     
     override func layoutSubviews() {
         delegate?.showAlert()
+    }
+    
+    func addShadows() {
+        /// Не знаю как, но помогает от кривых, нересайзнутых теней на этих экранах: 7, XR, 6s, 8
+        /// stackoverflow.com/questions/49664951/shadow-effect-is-not-displaying-properly-for-uiview
+        DispatchQueue.main.async {
+            self.shadows.addTopicButtonShadows(self.allButtons)
+        }
     }
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {

@@ -23,7 +23,7 @@ class ShadowsHelper {
     }
     
     /// Кнопки выбора тем - черная тень
-    /// Разобраться как ресайзить shadowPath на больших экранах и тогда можно раскомментировать
+    /// shadowPath - дополнительная оптимизация для большого количества теней
     func addTopicButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {
             button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
@@ -33,13 +33,12 @@ class ShadowsHelper {
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
-            // button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
+            button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
             
             /// Задротское скругление
             button.layer.cornerCurve = .continuous
         }
     }
-    
     
     /// Кнопки ответов - красная тень
     func addRedShadow(button: UIButton) {
