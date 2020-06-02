@@ -23,17 +23,17 @@ class ShadowsHelper {
     }
     
     /// Кнопки выбора тем - черная тень
-    /// Здесь идет дополнительный shadowPath для оптимизации
+    /// Разобраться как ресайзить shadowPath на больших экранах и тогда можно раскомментировать
     func addTopicButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {
             button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
             button.layer.shadowOpacity = 1
             button.layer.shadowRadius = 4
-            button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
             button.layer.shadowOffset = CGSize(width: 0, height: 5)
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
+            // button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
             
             /// Задротское скругление
             button.layer.cornerCurve = .continuous

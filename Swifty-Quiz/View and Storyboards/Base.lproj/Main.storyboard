@@ -65,7 +65,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                 <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                                <inset key="contentEdgeInsets" minX="14" minY="14" maxX="14" maxY="14"/>
                                                 <state key="normal" image="categoryPicker"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

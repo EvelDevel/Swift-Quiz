@@ -84,6 +84,7 @@ extension RecordsViewController: UITableViewDataSource {
         let record = Game.shared.records[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
+        cell.percentOfCorrect.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         if record.playedNum! < record.totalQuestion! {
             cell.colorBackground.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)

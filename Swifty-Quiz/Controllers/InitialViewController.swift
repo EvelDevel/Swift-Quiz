@@ -45,7 +45,7 @@ extension InitialViewController {
     
     func updateContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            UIView.animate(withDuration: 0.15, animations: {
+            UIView.animate(withDuration: 0.12, animations: {
                 self.contentCenter.constant = (UIScreen.main.scale / 2) + 12.5
                 self.continueGameButton.isHidden = false })
         } else {
