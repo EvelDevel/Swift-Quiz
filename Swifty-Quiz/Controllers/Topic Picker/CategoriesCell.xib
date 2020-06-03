@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="618" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="618"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="644" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="644"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="618"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="644"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
@@ -628,7 +628,7 @@
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Nb-Hc-BOM"/>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="RS1-Wq-feW" secondAttribute="bottom" constant="15" id="EGO-lp-sOc"/>
                     <constraint firstItem="UdD-H9-Pu8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Reu-s7-rdt"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pLn-8m-84D" secondAttribute="bottom" constant="22" id="S5a-3v-9fU"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pLn-8m-84D" secondAttribute="bottom" constant="50" id="S5a-3v-9fU"/>
                     <constraint firstItem="pLn-8m-84D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SSf-2a-uT8"/>
                     <constraint firstItem="RS1-Wq-feW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bna-Kq-cLs"/>
                     <constraint firstItem="RS1-Wq-feW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="c3I-H1-gAa"/>
@@ -672,7 +672,7 @@
                 <outletCollection property="allButtons" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="5R7-Mn-isn"/>
                 <outletCollection property="allButtons" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="E06-uJ-Yar"/>
             </connections>
-            <point key="canvasLocation" x="-120.28985507246378" y="125.22321428571428"/>
+            <point key="canvasLocation" x="-120.28985507246378" y="133.92857142857142"/>
         </tableViewCell>
     </objects>
 </document>

@@ -28,7 +28,7 @@ class CategoriesCell: UITableViewCell {
     
     func addShadows() {
         /// Не знаю как, но помогает от кривых, нересайзнутых теней на этих экранах: 7, XR, 6s, 8
-        /// stackoverflow.com/questions/49664951/shadow-effect-is-not-displaying-properly-for-uiview
+        /// https://stackoverflow.com/questions/49664951/shadow-effect-is-not-displaying-properly-for-uiview
         DispatchQueue.main.async {
             self.shadows.addTopicButtonShadows(self.allButtons)
         }
