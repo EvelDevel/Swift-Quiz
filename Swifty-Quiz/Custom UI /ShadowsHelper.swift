@@ -33,6 +33,8 @@ class ShadowsHelper {
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
+            
+            /// Maybe it's overkill but it work, so...
             button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
             
             /// Задротское скругление
