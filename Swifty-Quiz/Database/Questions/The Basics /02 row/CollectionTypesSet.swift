@@ -808,7 +808,32 @@ class CollectionTypesSet {
                      optionD: "Столкнемся с ошибкой",
                      correctAnswer: 1,
                      questionId: 69,
-                     helpText: "Числам (индексам) ниже 10 можно приписывать нули. В этой стилистической надстройке нет прямой необходимости, но иногда она может сделать код более читаемым.")
+                     helpText: "Числам (индексам) ниже 10 можно приписывать нули. В этой стилистической надстройке нет прямой необходимости, но иногда она может сделать код более читаемым."),
+//
+//            Question(question: ["",
+//                                "",
+//                                ""],
+//                     image: "",
+//                     optionA: "",
+//                     optionB: "",
+//                     optionC: "",
+//                     optionD: "",
+//                     correctAnswer: 1,
+//                     questionId: 42,
+//                     helpText: ""),
+//
+//            Question(question: ["",
+//                                "",
+//                                ""],
+//                     image: "",
+//                     optionA: "",
+//                     optionB: "",
+//                     optionC: "",
+//                     optionD: "",
+//                     correctAnswer: 1,
+//                     questionId: 42,
+//                     helpText: ""),
+            
         ]
     }
 }

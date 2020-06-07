@@ -478,7 +478,33 @@ class StringAndCharactersSet {
                      optionD: "",
                      correctAnswer: 1,
                      questionId: 41,
-                     helpText: "Чтобы проверить, имеет ли строка определенный строковый префикс или суффикс, вызовите hasPrefix(_:) и hasSuffix(_:) методы, оба из которых принимают единственный аргумент типа String, и возвращают логическое значение.")
+                     helpText: "Чтобы проверить, имеет ли строка определенный строковый префикс или суффикс, вызовите hasPrefix(_:) и hasSuffix(_:) методы, оба из которых принимают единственный аргумент типа String, и возвращают логическое значение."),
+            
+//            
+//            Question(question: ["",
+//                                "",
+//                                ""],
+//                     image: "",
+//                     optionA: "",
+//                     optionB: "",
+//                     optionC: "",
+//                     optionD: "",
+//                     correctAnswer: 1,
+//                     questionId: 42,
+//                     helpText: ""),
+//            
+//            
+//            Question(question: ["",
+//                                "",
+//                                ""],
+//                     image: "",
+//                     optionA: "",
+//                     optionB: "",
+//                     optionC: "",
+//                     optionD: "",
+//                     correctAnswer: 1,
+//                     questionId: 42,
+//                     helpText: ""),
         ]
     }
 }
