@@ -7,17 +7,15 @@ import Foundation
 class ProtocolsSet {
     static func getQuestions() -> [Question] {
         return [
-            Question(question: ["",
-                                "",
-                                ""],
-                     image: "",
-                     optionA: "",
-                     optionB: "",
-                     optionC: "",
-                     optionD: "",
+            Question(question: ["Что выведет программа?"],
+                     image: "Protocols1",
+                     optionA: "protocol",
+                     optionB: "class",
+                     optionC: "Столкнемся с ошибкой",
+                     optionD: "Ничего",
                      correctAnswer: 1,
                      questionId: 1,
-                     helpText: ""),
+                     helpText: "Правильный ответ: protocol."),
             
 //            Question(question: ["",
 //                                "",
