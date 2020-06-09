@@ -4,6 +4,10 @@
 
 import Foundation
 
+/// В этом файле вопросы по следующим паттернам:
+/// - delegate, singleton, memento, strategy, facade
+/// - observer, builder, flyweight, adapter, factory, template method
+
 class BasicPatternsSet {
     static func getQuestions() -> [Question] {
         return [
