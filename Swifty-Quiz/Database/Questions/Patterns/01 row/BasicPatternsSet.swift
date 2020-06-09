@@ -513,6 +513,9 @@ class BasicPatternsSet {
                      questionId: 43,
                      helpText: "Вам поможет паттерн Memento."),
             
+            /// Добавить вопросы с сайта:
+            /// https://refactoring.guru/ru/design-patterns/creational-patterns
+            
 //            Question(question: ["",
 //                                "",
 //                                ""],
