@@ -4,6 +4,10 @@
 
 import UIKit
 
+// MARK: TODO
+/// Есть баг при очень быстром нажатии на кнопки ответов - вылетает потому что не успевает прогрузить звуки
+/// Exception caught in AudioQueueInternalStop_Sync - error -66671 - попробовать разобраться
+
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()

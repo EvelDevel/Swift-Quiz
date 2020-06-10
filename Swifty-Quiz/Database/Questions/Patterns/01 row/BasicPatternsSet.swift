@@ -515,6 +515,7 @@ class BasicPatternsSet {
             
             /// Добавить вопросы с сайта:
             /// https://refactoring.guru/ru/design-patterns/creational-patterns
+            /// https://habr.com/ru/post/136766/
             
 //            Question(question: ["",
 //                                "",
