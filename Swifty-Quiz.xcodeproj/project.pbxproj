@@ -291,8 +291,9 @@
 				FBECDC58243F241B00BD5583 /* Controllers */,
 				FB8606B0244458E300A692AD /* Database */,
 				FB8606B32444771300A692AD /* Custom UI  */,
-				FBECDC59243F259900BD5583 /* View and Storyboards */,
 				FBDECD7C24839924004695FB /* Assets */,
+				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
+				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
 			path = "Swifty-Quiz";
@@ -452,15 +453,6 @@
 				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		FBECDC59243F259900BD5583 /* View and Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
-				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
-			);
-			path = "View and Storyboards";
 			sourceTree = "<group>";
 		};
 		FBECDC5C243F30D700BD5583 /* Model */ = {
