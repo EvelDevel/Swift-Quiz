@@ -5,8 +5,7 @@
 import UIKit
 
 // MARK: TODO
-/// Есть баг при очень быстром нажатии на кнопки ответов - вылетает потому что не успевает прогрузить звуки
-/// Exception caught in AudioQueueInternalStop_Sync - error -66671 - попробовать разобраться
+/// Попробовать реализовать супер-игру. Все вопросы в одну кучу, автоматически выставляя сохранение игры.
 
 class InitialViewController: UIViewController {
     
