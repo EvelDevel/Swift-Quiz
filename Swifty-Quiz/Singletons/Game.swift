@@ -11,6 +11,7 @@ class Game {
     
     private var weShowedSettingAlert: Bool = false
     private var weShowedTopicAlert: Bool = false
+    private var weShowedNewGameAlert: Bool = false
     
     private(set) var settings: Settings {
         didSet {
@@ -44,6 +45,12 @@ extension Game {
     }
     func setThatWeShowedTopicAlert() {
         self.weShowedTopicAlert = true
+    }
+    func showNewGameAlertStatus() -> Bool {
+        return self.weShowedNewGameAlert
+    }
+    func setThatWeShowedNewGameAlert() {
+        self.weShowedNewGameAlert = true
     }
 }
 

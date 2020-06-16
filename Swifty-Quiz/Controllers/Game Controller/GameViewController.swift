@@ -59,8 +59,8 @@ class GameViewController: UIViewController {
         setValuesIfWeContinue()
         addQuestionSet()
         updateQuestion()
-        shadows.addStaticShadows(GameComtrollerViews)
-        shadows.addButtonShadows(answerButtonsCollection) 
+        addShadows()
+        showAlertIfNeeded()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -71,6 +71,30 @@ class GameViewController: UIViewController {
             if currentQuestionIndex > 0 {
                 gameEnding(path: 2)
             }
+        }
+    }
+    
+    func addShadows() {
+        shadows.addStaticShadows(GameComtrollerViews)
+        shadows.addButtonShadows(answerButtonsCollection)
+    }
+    
+    func showAlertIfNeeded() {
+        /// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
+        /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
+        if Game.shared.records.count != 0
+            && Game.shared.records[0].continueGameStatus == true
+            && weContinueLastGame == false
+            && Game.shared.showNewGameAlertStatus() != true {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы ответите хотя-бы на один вопрос, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
+            Game.shared.setThatWeShowedNewGameAlert()
         }
     }
 }

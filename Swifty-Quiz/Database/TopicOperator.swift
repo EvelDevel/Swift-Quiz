@@ -7,6 +7,15 @@ import Foundation
 
 class TopicOperator {
     
+    
+    // MARK: Super Sets
+    
+    // MARK: 01 row
+    // Руководство, Паттерны
+    static func getQuestionsAllGuide() -> [Question] { return AllGuideSet.getQuestions() }
+    static func getQuestionsAllPatterns() -> [Question] { return AllPatternsSet.getQuestions() }
+    
+    
     // MARK: THE BASICS
     
     // MARK: 01 row

@@ -11,6 +11,8 @@ protocol CategoriesCellDelegate: class {
 
 class CategoriesCell: UITableViewCell {
 
+    /// Все аутлеты кнопок
+    /// Пересоздавать связи каждый раз при изменении кол-ва или положения кнопок
     @IBOutlet var allButtons: [UIButton]!
     weak var delegate: CategoriesCellDelegate?
     private let shadows = ShadowsHelper()
@@ -77,6 +79,15 @@ extension CategoriesCell {
         
         switch sender.tag {
             
+            // MARK: Super Sets
+            
+        // MARK: 01 row
+        case 31:
+            newQuestionSet = TopicOperator.getQuestionsAllGuide()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Руководство", tag: 30)
+        case 32:
+            newQuestionSet = TopicOperator.getQuestionsAllPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны", tag: 31)
             
             // MARK: THE BASICS
             
@@ -199,7 +210,7 @@ extension CategoriesCell {
         case 30:
             newQuestionSet = TopicOperator.getQuestionsAntipatterns()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 29)
-            
+        
         default:
             /// Последнюю выбранную категорию делаем "активной"
             allButtons[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
