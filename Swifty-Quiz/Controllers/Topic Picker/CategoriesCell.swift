@@ -46,24 +46,17 @@ class CategoriesCell: UITableViewCell {
         sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func updateTopicButtons() {
-        for i in 0..<self.allButtons.count {
-            self.allButtons[i].setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
-            self.allButtons[i].backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        allButtons.forEach() { button in
+            button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
     
     func setFontSize() {
-        for button in allButtons {
-            if UIScreen.main.bounds.size.width > 320 {
-                button.titleLabel?.font =  .systemFont(ofSize: 12)
-            } else {
-                button.titleLabel?.font =  .systemFont(ofSize: 10)
-            }
+        allButtons.forEach() { button in
+            if UIScreen.main.bounds.size.width > 320 { button.titleLabel?.font = .systemFont(ofSize: 12)
+            } else { button.titleLabel?.font = .systemFont(ofSize: 10) }
         }
     }
 }
