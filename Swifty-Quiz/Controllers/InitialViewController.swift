@@ -66,8 +66,8 @@ extension InitialViewController {
         if SelectedTopic.shared.topic.questionSet.isEmpty {
             /// Первый запуск: добавляем сет, обновлянем название
             let newSet = TopicOperator.getQuestionsTheBasics()
-            SelectedTopic.shared.addQuestionSet(newSet, topic: "Типы данных", tag: 0)
-            selectedTopic.text = "Типы данных"
+            SelectedTopic.shared.addQuestionSet(newSet, topic: "Основы", tag: 11)
+            selectedTopic.text = "Основы"
         } else {
             /// При любом повторном: берем информацию из синглтона
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
