@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 1501 по 1600
+
 class ErrorHandlingSet {
     static func getQuestions() -> [Question] {
         return [

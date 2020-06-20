@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 2001 по 2100
+
 class ExtensionsSet {
     static func getQuestions() -> [Question] {
         return [

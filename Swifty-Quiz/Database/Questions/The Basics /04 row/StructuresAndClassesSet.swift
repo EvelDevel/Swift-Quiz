@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 801 по 900
+
 class StructuresAndClassesSet {
     static func getQuestions() -> [Question] {
         return [
@@ -14,7 +16,7 @@ class StructuresAndClassesSet {
                      optionC: "Enumerations",
                      optionD: "Collections",
                      correctAnswer: 1,
-                     questionId: 1,
+                     questionId: 801,
                      helpText: "Правильный ответ: Structures. "),
             
             Question(question: ["Как будет \"Классы\" по Английски?"],
@@ -24,7 +26,7 @@ class StructuresAndClassesSet {
                      optionC: "Enumerations",
                      optionD: "Collections",
                      correctAnswer: 1,
-                     questionId: 2,
+                     questionId: 802,
                      helpText: "Правильный ответ: Classes."),
             
             Question(question: ["Какими ключевыми словами обозначаются структуры и классы в коде?",
@@ -35,7 +37,7 @@ class StructuresAndClassesSet {
                      optionC: "class и structures",
                      optionD: "classes и struct",
                      correctAnswer: 1,
-                     questionId: 3,
+                     questionId: 803,
                      helpText: "Классы и структуры имеют схожий синтаксис объявления. Для объявления классов, используйте ключевое слово class, а для структур - ключевое слово struct. В обоих случаях необходимо поместить все определение полностью внутрь пары фигурных скобок"),
             
             Question(question: ["Что можно объявить внутри классов и структур для добавления функциональности?",
@@ -47,7 +49,7 @@ class StructuresAndClassesSet {
                      optionC: "Функции и замыкания",
                      optionD: "Комментарии",
                      correctAnswer: 1,
-                     questionId: 4,
+                     questionId: 804,
                      helpText: "Классы и структуры являются универсальными и гибкими конструкциями, которые станут строительными блоками для кода вашей программы. Для добавления функциональности в классах и структурах можно объявить свойства и методы, применив тот же синтаксис, как и при объявлении констант, переменных и функций."),
             
             Question(question: ["Требует ли Swift создавать отдельные файлы для интерфейсов и реализаций пользовательских классов и структур?",
@@ -58,7 +60,7 @@ class StructuresAndClassesSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 5,
+                     questionId: 805,
                      helpText: "В отличие от других языков программирования, Swift не требует создавать отдельные файлы для интерфейсов и реализаций пользовательских классов и структур. В Swift, вы объявляете структуру или класс в одном файле, и внешний интерфейс автоматически становится доступным для использования в другом коде."),
             
             Question(question: ["Как традиционно называют экземпляр класса в ООП?"],
@@ -68,7 +70,7 @@ class StructuresAndClassesSet {
                      optionC: "Таргет",
                      optionD: "Структура",
                      correctAnswer: 1,
-                     questionId: 6,
+                     questionId: 806,
                      helpText: "Экземпляр класса традиционно называют объектом."),
             
             Question(question: ["Можем ли мы применять функциональность экземпляров класса к экземплярам структуры?",
@@ -79,7 +81,7 @@ class StructuresAndClassesSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 7,
+                     questionId: 807,
                      helpText: "Экземпляр класса традиционно называют объектом. Тем не менее, классы и структуры в Swift гораздо ближе по функциональности, чем в других языках, и многое в этой главе описывает функциональность, которую можно применить к экземплярам и класса, и структуры."),
             
             Question(question: ["Выберите то, что не является общей чертой класса и структуры",
@@ -90,7 +92,7 @@ class StructuresAndClassesSet {
                      optionC: "Можно объявлять методы",
                      optionD: "Можно объявлять инициализаторы",
                      correctAnswer: 1,
-                     questionId: 8,
+                     questionId: 808,
                      helpText: "Вы не можете использовать деинициализатор у структуры. Классы и структуры в Swift имеют много общего. И в классах и в структурах можно: Объявлять свойства для хранения значений. Объявлять методы, чтобы обеспечить функциональность. Объявлять индексы, чтобы обеспечить доступ к их значениям, через синтаксис индексов. Объявлять инициализаторы, чтобы установить их первоначальное состояние. Они оба могут быть расширены, чтобы расширить их функционал за пределами стандартной реализации. Они оба могут соответствовать протоколам, для обеспечения стандартной функциональности определенного типа"),
             
             Question(question: ["Могут ли структуры соответствовать протоколам, чтобы обеспечивать стандартную функционального определенного типа?",
@@ -101,7 +103,7 @@ class StructuresAndClassesSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 9,
+                     questionId: 809,
                      helpText: "Они оба могут соответствовать протоколам, для обеспечения стандартной функциональности определенного типа."),
             
             Question(question: ["Позволяет ли наследование одной структуре наследовать характеристики другой?",
@@ -113,7 +115,7 @@ class StructuresAndClassesSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 10,
+                     questionId: 810,
                      helpText: "Классы имеют дополнительные возможности, которых нет у структур: Наследование позволяет одному классу наследовать характеристики другого. Приведение типов позволяет проверить и интерпретировать тип экземпляра класса в процессе выполнения. Деинициализаторы позволяют экземпляру класса освободить любые ресурсы, которые он использовал. Подсчет ссылок допускает более чем одну ссылку на экземпляр класса."),
             
             Question(question: ["С чем связаны дополнительные возможности поддержки классов в Swift?"],
@@ -123,7 +125,7 @@ class StructuresAndClassesSet {
                      optionC: "С архитектурой языка",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 11,
+                     questionId: 811,
                      helpText: "Дополнительные возможности поддержки классов связаны с увеличением сложности. Лучше использовать структуры и перечисления, потому что их легче понимать. Также не забывайте про классы. На практике - большинство пользовательских типов данных, с которыми вы работаете - это структуры и перечисления."),
             
             Question(question: ["Имена классов и структур в Swift должны начинаться с UpperCamelCase или lowerCamelCase?",
@@ -135,7 +137,7 @@ class StructuresAndClassesSet {
                      optionC: "Зависит от команды",
                      optionD: "Без разницы",
                      correctAnswer: 1,
-                     questionId: 12,
+                     questionId: 812,
                      helpText: "Чего бы вы не создавали, новый класс или структуру, вы фактически создаете новый тип в Swift. Назначайте имена типов, используя UpperCamelCase(SomeClass или SomeStructure), чтобы соответствовать стандартам написания имен типов в Swift (например, String, Int и Bool)."),
 
             Question(question: ["Имена свойств и методов в Swift должны начинаться с UpperCamelCase или lowerCamelCase?",
@@ -147,7 +149,7 @@ class StructuresAndClassesSet {
                      optionC: "Зависит от команды",
                      optionD: "На ваше усмотрение",
                      correctAnswer: 1,
-                     questionId: 13,
+                     questionId: 813,
                      helpText: "Всегда назначайте свойствам и методам имена в lowerCamelCase (например, frameRate и incrementCount), чтобы отличить их от имен типов."),
 
             Question(question: ["Сами по себе классы или структуры описывают специфику каких-либо объектов?",
@@ -158,7 +160,7 @@ class StructuresAndClassesSet {
                      optionC: "Только классы",
                      optionD: "Только структуры",
                      correctAnswer: 1,
-                     questionId: 14,
+                     questionId: 814,
                      helpText: "Сами по себе классы и структуры не описывают специфику каких-либо объектов. Для того чтобы это сделать нам нужно создать экземпляр структуры или класса."),
 
             Question(question: ["Чтобы создать экземпляр класса, какой синтаксис необходимо использовать?",
@@ -170,7 +172,7 @@ class StructuresAndClassesSet {
                      optionC: "let objectName = (ClassName)()",
                      optionD: "let objectName = ClassName[]",
                      correctAnswer: 1,
-                     questionId: 15,
+                     questionId: 815,
                      helpText: "И классы и структуры используют синтаксис инициализатора для образования новых экземпляров. Самая простая форма синтаксиса инициализатора - использование имени типа и пустые круглые скобки сразу после него Resolution(), VideoMode(). Это создает новый экземпляр класса или структуры с любыми инициализированными свойствами с их значениями по умолчанию."),
 
             Question(question: ["Как мы можем получить доступ к свойствам экземпляра?",
@@ -182,7 +184,7 @@ class StructuresAndClassesSet {
                      optionC: "Синтаксис инициализации",
                      optionD: "Синтаксис деинициализатора",
                      correctAnswer: 1,
-                     questionId: 16,
+                     questionId: 816,
                      helpText: "Вы можете получить доступ к свойствам экземпляра, используя точечный синтаксис. В точечном синтаксисе имя свойства пишется сразу после имени экземпляра, а между ними вписывается точка (.) без пробелов. Вы так же можете углубляться дальше в подсвойства, используя тот же синтаксис через точку."),
 
             Question(question: ["Можем ли мы присваивать новое значение свойству экземпляра через точечный синтаксис?",
@@ -193,7 +195,7 @@ class StructuresAndClassesSet {
                      optionC: "Нет",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 17,
+                     questionId: 817,
                      helpText: "Вы можете использовать точечный синтаксис для присваивания нового значения свойству экземпляра. Только если это свойство - переменная, а не константа."),
 
             Question(question: ["У структур и у классов есть поэлементный, автоматически генерированный инициализатор, так ли это?",
@@ -204,7 +206,7 @@ class StructuresAndClassesSet {
                      optionC: "И у структур и у классов",
                      optionD: "Нет",
                      correctAnswer: 1,
-                     questionId: 18,
+                     questionId: 818,
                      helpText: "Все структуры имеют автоматически генерированный \"поэлементный инициализатор\", который вы можете использовать для инициализации свойств новых экземпляров структуры. Начальные значения для свойств нового экземпляра могут быть переданы поэлементному инициализатору по имени. В отличии от структур, классы не получили поэлементного инициализатора исходных значений."),
 
             Question(question: ["Что из перечисленного является типом значения?",
@@ -215,7 +217,7 @@ class StructuresAndClassesSet {
                      optionC: "Структуры и классы",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 19,
+                     questionId: 819,
                      helpText: "Тип значения - это тип, значение которого копируется, когда оно присваивается константе или переменной, или когда передается функции. Все структуры и перечисления - типы значений в Swift. Это значит, что любой экземпляр структуры и перечисления, который вы создаете, и любые типы значений, которые они имеют в качестве свойств, всегда копируются, когда он передается по вашему коду."),
 
             Question(question: ["Каким образом реализованы все базовые типы в Swift?",
@@ -227,7 +229,7 @@ class StructuresAndClassesSet {
                      optionC: "Как сабклассы",
                      optionD: "Как методы",
                      correctAnswer: 1,
-                     questionId: 20,
+                     questionId: 820,
                      helpText: "Все базовые типы Swift - типы значений и реализованы они как структуры."),
 
             Question(question: ["У стандартных типов коллекций в Swift есть оптимизация, позволяющая сократить затраты на копирование большого количества элементов, из-за нее элементы копируются... ",
@@ -238,7 +240,7 @@ class StructuresAndClassesSet {
                      optionC: "В глобальном потоке",
                      optionD: "Специальным алгоритмом",
                      correctAnswer: 1,
-                     questionId: 21,
+                     questionId: 821,
                      helpText: "Коллекции, определенные стандартной библиотекой, такие как массивы, словари и строки, используют оптимизацию для снижения затрат на копирование. Вместо того, чтобы немедленно сделать копию, эти коллекции совместно используют память, в которой элементы хранятся между исходным экземпляром и любыми копиями. Если одна из копий коллекции модифицирована, элементы копируются непосредственно перед изменением."),
 
             Question(question: ["Какие значения выведутся в консоль?",
@@ -249,7 +251,7 @@ class StructuresAndClassesSet {
                      optionC: "1920 и 1920",
                      optionD: "Никакие",
                      correctAnswer: 1,
-                     questionId: 22,
+                     questionId: 822,
                      helpText: "Правильный ответ: 2048 и 1920. Когда мы присвоили cinema текущее значение hd, то значения, которые хранились в hd были скопированы в новый экземпляр cinema. И в качестве результата мы имеем два совершенно отдельных экземпляра, которые содержат одинаковые числовые значения. Так как они являются раздельными экземплярами, то установив значение свойства width у cinema на 2048 никак не повлияет на значение width у hd."),
 
             Question(question: ["Что из перечисленного является ссылочным типом?",
@@ -260,7 +262,7 @@ class StructuresAndClassesSet {
                      optionC: "Перечисления",
                      optionD: "Свойства",
                      correctAnswer: 1,
-                     questionId: 23,
+                     questionId: 823,
                      helpText: "Классы - ссылочный тип. В отличии от типа значений, ссылочный тип не копируется, когда его присваивают переменной или константе, или когда его передают функции. Вместо копирования используется ссылка на существующий экземпляр."),
 
             Question(question: ["В чем сложность работы со ссылочными типами?",
@@ -271,7 +273,7 @@ class StructuresAndClassesSet {
                      optionC: "Проблематичнее поддерживать",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 24,
+                     questionId: 824,
                      helpText: "Бывает очень сложно следить за ссылочными типами. Если две разные переменные, ссылающиеся на один экземпляр, находились бы в разных уголках вашей программы, то было бы сложно найти все места, где мы их изменяем. Где бы вы не использовали одной переменной, вам так же бы приходилось думать и о второй, и наоборот. В отличии от ссылочного типа, с типами значения дела обстоят значительно проще, так как весь код, который взаимодействует с одним и тем же значением, находится рядом, в вашем исходном файле."),
 
             Question(question: ["Если данный код скомпилируется, что мы получим в консоль?",
@@ -282,7 +284,7 @@ class StructuresAndClassesSet {
                      optionC: "Ошибка компиляции",
                      optionD: "0",
                      correctAnswer: 1,
-                     questionId: 25,
+                     questionId: 825,
                      helpText: "Обратите внимание, что hd объявлена как константа, а не переменная. Однако вы все равно можете менять hd.width, потому что значения hd сами по себе не меняются, так как константа не «содержит» значение экземпляра Resolution, а напротив, она лишь ссылается на него. Это свойство width лежащее в основе Resolution, которое меняется (поскольку оно var)"),
 
             Question(question: ["Как проверить, ссылаются ли несколько констант или переменных на один экземпляр класса или нет?",
@@ -293,7 +295,7 @@ class StructuresAndClassesSet {
                      optionC: "Оператор присваивания =",
                      optionD: "Через инструкцию if",
                      correctAnswer: 1,
-                     questionId: 26,
+                     questionId: 826,
                      helpText: "Так как классы являются ссылочными типами, то есть возможность сделать так, чтобы несколько констант и переменных ссылались на один единственный экземпляр класса. (Такое поведение не применимо к структурам и перечислениями, так как они копируют значение, когда присваиваются константам или переменным или передаются функциям.). Иногда бывает полезно выяснить ссылаются ли две константы или переменные на один и тот же экземпляр класса. Для проверки этого в Swift есть два оператора тождественности: Идентичен (===), Не идентичен ( !== )"),
 
 //            Question(question: ["",
@@ -305,7 +307,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 27,
+//                     questionId: 827,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -317,7 +319,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 28,
+//                     questionId: 828,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -329,7 +331,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 29,
+//                     questionId: 829,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -341,7 +343,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 30,
+//                     questionId: 830,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -353,7 +355,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 31,
+//                     questionId: 831,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -365,7 +367,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 32,
+//                     questionId: 832,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -377,7 +379,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 33,
+//                     questionId: 833,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -389,7 +391,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 34,
+//                     questionId: 834,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -401,7 +403,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 35,
+//                     questionId: 835,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -413,7 +415,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 36,
+//                     questionId: 836,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -425,7 +427,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 37,
+//                     questionId: 837,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -437,7 +439,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 38,
+//                     questionId: 838,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -449,7 +451,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 39,
+//                     questionId: 839,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -461,7 +463,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 40,
+//                     questionId: 840,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -473,7 +475,7 @@ class StructuresAndClassesSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 41,
+//                     questionId: 841,
 //                     helpText: ""),
         ]
     }

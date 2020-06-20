@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 2301 по 2400
+
 class AccessControlSet {
     static func getQuestions() -> [Question] {
         return [

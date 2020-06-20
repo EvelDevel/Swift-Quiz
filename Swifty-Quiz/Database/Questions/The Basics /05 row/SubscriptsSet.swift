@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 1101 по 1200
+
 class SubscriptsSet {
     static func getQuestions() -> [Question] {
         return [
@@ -14,7 +16,7 @@ class SubscriptsSet {
                      optionC: "Subclasses",
                      optionD: "Subway",
                      correctAnswer: 1,
-                     questionId: 1,
+                     questionId: 1101,
                      helpText: "Правильный ответ: Subscripts."),
 
             Question(question: ["Могут ли классы, структуры и перечисления определять сабскрипты для доступа к членам коллекции, списка, или последовательности?",
@@ -25,7 +27,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 2,
+                     questionId: 1102,
                      helpText: "Классы, структуры и перечисления могут определять сабскрипты, которые являются сокращенным вариантом доступа к члену коллекции, списка или последовательности. Вы можете использовать сабскрипт для получения или установки нового значения элемента без разделения этих двух методов (получения значения и установкой нового)."),
 
             Question(question: ["Воспользовавшись этим мы можем, через синтаксис сабскриптов, получить доступ к элементу массива",
@@ -37,7 +39,7 @@ class SubscriptsSet {
                      optionC: "Ключ",
                      optionD: "Значение",
                      correctAnswer: 1,
-                     questionId: 3,
+                     questionId: 1103,
                      helpText: "Вы можете воспользоваться сабскриптом в экземпляре массива для получения значения элемента someArray[index] через индекс, или в экземпляре словаря someDictionary[key] через ключ."),
 
             Question(question: ["Воспользовавшись этим мы можем, через синтаксис сабскриптов, получить доступ к элементу словаря",
@@ -49,7 +51,7 @@ class SubscriptsSet {
                      optionC: "Индекс элемента",
                      optionD: "Значение",
                      correctAnswer: 1,
-                     questionId: 4,
+                     questionId: 1104,
                      helpText: "Вы можете воспользоваться сабскриптом в экземпляре массива для получения значения элемента someArray[index] через индекс, или в экземпляре словаря someDictionary[key] через ключ."),
 
             Question(question: ["Можем ли мы определять несколько сабскриптов для одного типа?",
@@ -60,7 +62,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 5,
+                     questionId: 1105,
                      helpText: "Вы можете определить несколько сабскриптов для одного типа, при необходимости загружается подходящий сабскрипт, который выбирается в зависимости от типа значения сабскрипта, который вы передаете в сабскрипт."),
 
             Question(question: ["Сабскрипты ограничены одной размерностью, так ли это?",
@@ -72,7 +74,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 6,
+                     questionId: 1106,
                      helpText: "Сабскрипты не ограничены одной размерностью, вы можете определить сабскрипты с множественными вводами параметров для удовлетворения потребностей вашего пользовательского типа."),
 
             Question(question: ["Является ли синтаксис сабскриптов аналогичным синтаксису методов экземпляра и синтаксису вычисляемых свойств?",
@@ -83,7 +85,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 7,
+                     questionId: 1107,
                      helpText: "Сабскрипты позволяют вам запрашивать экземпляры определенного типа, написав одно или несколько значений в квадратных скобках после имени экземпляра. Синтаксис сабскрипта аналогичный синтаксису метода экземпляра и вычисляемому свойству. Вы пишете определения сабскрипта с помощью ключевого слова subscript и указываете один или более входных параметров и возвращаемый тип, точно так же как и в методах экземпляра. "),
 
             Question(question: ["Каким ключевым словом определяется сабскрипт?",
@@ -94,7 +96,7 @@ class SubscriptsSet {
                      optionC: "public",
                      optionD: "key",
                      correctAnswer: 1,
-                     questionId: 8,
+                     questionId: 1108,
                      helpText: "Вы пишете определения сабскрипта с помощью ключевого слова subscript."),
 
             Question(question: ["Могут ли сабскрипты иметь и геттер и сеттер?",
@@ -105,7 +107,7 @@ class SubscriptsSet {
                      optionC: "Только read-write",
                      optionD: "Только read-only",
                      correctAnswer: 1,
-                     questionId: 9,
+                     questionId: 1109,
                      helpText: "В отличии от методов экземпляра, сабскрипты могут быть read-write или read-only. Такое поведение сообщается геттером и сеттером в точности так же как и в вычисляемых свойствах."),
 
             Question(question: ["Какой тип будет у newValue?"],
@@ -115,7 +117,7 @@ class SubscriptsSet {
                      optionC: "Тип не указан",
                      optionD: "Опциональный",
                      correctAnswer: 1,
-                     questionId: 10,
+                     questionId: 1110,
                      helpText: "Тип newValue такой же как и у возвращаемого значения сабскрипта. В случае с вычисляемыми свойствами вы можете не указывать параметр сеттера (newValue)."),
 
             Question(question: ["Если не установить название для параметра сеттера, как оно будет называться?",
@@ -126,7 +128,7 @@ class SubscriptsSet {
                      optionC: "new",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 11,
+                     questionId: 1111,
                      helpText: "Параметр по умолчанию называется newValue и предоставляется, если не было назначено другого."),
 
             Question(question: ["Можем ли мы опустить слово get для нередактируемых (read-only) сабскриптов?",
@@ -138,7 +140,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 12,
+                     questionId: 1112,
                      helpText: "Как и в случае с нередактируемыми (read-only) вычисляемыми свойствами, вы можете опустить слово get для нередактируемых (read-only) сабскриптов. subscript(index: Int) -> Int { //возвращает надлежащее значение скрипта }."),
 
             Question(question: ["Какое значение мы получим в консоль?"],
@@ -148,20 +150,8 @@ class SubscriptsSet {
                      optionC: "3",
                      optionD: "Столкнемся с ошибкой",
                      correctAnswer: 1,
-                     questionId: 13,
+                     questionId: 1113,
                      helpText: "В этом примере экземпляр TimesTable создан для отображения таблицы умножения на три. Это определяется переданным ему значением 3 в инициализатор структуры как значение для параметра экземпляра multiplier. Вы можете запросить экземпляр threeTimesTable с помощью сабскрипта, как уже сделано в примере threeTimesTable[6]. Мы запрашиваем шестую запись в таблице умножения на три, которая возвращает значение 18 или 6 умноженное на 3."),
-
-            Question(question: ["",
-                                "",
-                                ""],
-                     image: "",
-                     optionA: "",
-                     optionB: "",
-                     optionC: "",
-                     optionD: "",
-                     correctAnswer: 1,
-                     questionId: 14,
-                     helpText: "Точное значение “сабскрипта” зависит от контекста, в котором он применяется. Обычно сабскрипты используются в качестве сокращенного способа обращения к элементу коллекции, списка или последовательности. Вы свободны применять сабскрипты в необходимой форме для вашего класса или для функциональности структуры."),
 
             Question(question: ["Какое значение мы получим в консоль?"],
                      image: "Subscripts15",
@@ -170,7 +160,7 @@ class SubscriptsSet {
                      optionC: "2",
                      optionD: "Столкнемся с ошибкой",
                      correctAnswer: 1,
-                     questionId: 15,
+                     questionId: 1115,
                      helpText: "Правильный ответ: 4. В примере мы объявляем переменную numberOfLegs и инициализируем ее с помощью литерала словаря, который содержит три пары ключ-значение. Тип словаря numberOfLegs выводится как [String: Int]. После того как словарь создан, в этом примере используется сабскриптное присваивание для добавления ключа типа String “птичка“, значения типа Int 2."),
 
             Question(question: ["Использует ли Dictionary опциональный тип сабскрипта?",
@@ -182,19 +172,17 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 16,
+                     questionId: 1116,
                      helpText: "Тип Dictionary в Swift осуществляет ключ-значение индексирование. Тип Dictionary использует опциональный тип сабскрипта, чтобы смоделировать факт того, что не каждый ключ может иметь значение, и для того, чтобы была возможность удаления значения для ключа, присваивая ему nil."),
 
-            Question(question: ["Какое количество входных параметров могут принимать сабскрипты?",
-                                "",
-                                ""],
+            Question(question: ["Какое количество входных параметров могут принимать сабскрипты?"],
                      image: "",
                      optionA: "Любое",
                      optionB: "Не больше 5",
                      optionC: "Не больше 3",
                      optionD: "Один",
                      correctAnswer: 1,
-                     questionId: 17,
+                     questionId: 1117,
                      helpText: "Сабскрипты могут принимать любое количество входных параметров."),
 
             Question(question: ["Параметры сабскриптов могут быть строго определенного типа, так ли это?"],
@@ -204,7 +192,7 @@ class SubscriptsSet {
                      optionC: "Только строковые типы",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 18,
+                     questionId: 1118,
                      helpText: "Сабскрипты могут принимать любое количество входных параметров, и эти параметры могут быть любого типа."),
 
             Question(question: ["Могут ли сабскрипты возвращать любой тип?",
@@ -215,7 +203,7 @@ class SubscriptsSet {
                      optionC: "Только числовые типы",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 19,
+                     questionId: 1119,
                      helpText: "Сабскрипты могут возвращать любой тип."),
 
             Question(question: ["Могут ли сабскрипты иметь сквозные параметры или обеспечивать исходные значения параметров?",
@@ -226,7 +214,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 20,
+                     questionId: 1120,
                      helpText: "Сабскрипты могут использовать вариативные параметры, но они не могут иметь сквозных параметров или обеспечивать исходные значения параметрам."),
 
             Question(question: ["Сколько сабскриптных реализаций может обеспечивать класс или структура?",
@@ -237,7 +225,7 @@ class SubscriptsSet {
                      optionC: "Класс до 2, структура до 5",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 21,
+                     questionId: 1121,
                      helpText: "Класс или структура могут обеспечить столько сабскриптных реализаций, сколько нужно, и подходящий сабскрипт, который будет использоваться, будет выведен, основываясь на типе значения или значений, которые содержатся внутри скобок сабскрипта, в том месте, где этот сабскрипт используется."),
 
             Question(question: ["Как называется определение множественных сабскриптов?",
@@ -248,7 +236,7 @@ class SubscriptsSet {
                      optionC: "Массовая сабскриптизация",
                      optionD: "Сабскриптитуция",
                      correctAnswer: 1,
-                     questionId: 22,
+                     questionId: 1122,
                      helpText: "Определение множественных сабскриптов так же известно как перегрузка сабскрипта."),
 
             Question(question: ["Сабскрипт может принимать только один входящий параметр, так ли это?",
@@ -259,7 +247,7 @@ class SubscriptsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 23,
+                     questionId: 1123,
                      helpText: "Сейчас в большинстве случаев сабскрипт принимает один единственный параметр, вы так же можете определить сабскрипт с несколькими параметрами, если этот вариант подходит для вашего типа."),
 
 //            Question(question: ["",
@@ -271,7 +259,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 24,
+//                     questionId: 1124,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -283,7 +271,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 25,
+//                     questionId: 1125,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -295,7 +283,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 26,
+//                     questionId: 1126,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -307,7 +295,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 27,
+//                     questionId: 1127,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -319,7 +307,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 28,
+//                     questionId: 1128,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -331,7 +319,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 29,
+//                     questionId: 1129,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -343,7 +331,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 30,
+//                     questionId: 1130,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -355,7 +343,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 31,
+//                     questionId: 1131,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -367,7 +355,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 32,
+//                     questionId: 1132,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -379,7 +367,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 33,
+//                     questionId: 1133,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -391,7 +379,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 34,
+//                     questionId: 1134,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -403,7 +391,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 35,
+//                     questionId: 1135,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -415,7 +403,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 36,
+//                     questionId: 1136,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -427,7 +415,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 37,
+//                     questionId: 1137,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -439,7 +427,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 38,
+//                     questionId: 1138,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -451,7 +439,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 39,
+//                     questionId: 1139,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -463,7 +451,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 40,
+//                     questionId: 1140,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -475,7 +463,7 @@ class SubscriptsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 41,
+//                     questionId: 1141,
 //                     helpText: ""),
         ]
     }

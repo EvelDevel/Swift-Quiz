@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 2101 по 2200
+
 class GenericsSet {
     static func getQuestions() -> [Question] {
         return [

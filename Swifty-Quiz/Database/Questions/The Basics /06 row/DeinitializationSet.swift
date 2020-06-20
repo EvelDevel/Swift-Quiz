@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 1401 по 1500
+
 class DeinitializationSet {
     static func getQuestions() -> [Question] {
         return [

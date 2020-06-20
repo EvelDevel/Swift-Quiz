@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK:  Вопросы (id) с 1001 по 1100
+
 class MethodsSet {
     static func getQuestions() -> [Question] {
         return [
@@ -15,7 +17,7 @@ class MethodsSet {
                      optionC: "Closures",
                      optionD: "Functions",
                      correctAnswer: 1,
-                     questionId: 1,
+                     questionId: 1001,
                      helpText: "Правильный ответ: Methods."),
             
             Question(question: ["Чем отличаются методы от функций?",
@@ -27,7 +29,7 @@ class MethodsSet {
                      optionC: "Методы глобальнее функций",
                      optionD: "Методы пишутся с заглавной буквы",
                      correctAnswer: 1,
-                     questionId: 2,
+                     questionId: 1002,
                      helpText: "Методы - это функции, которые связаны с определенным типом. Классы, структуры и перечисления - все они могут определять методы экземпляра, которые включают в себя определенные задачи и функциональность для работы с экземпляром данного типа."),
             
             Question(question: ["Могут ли классы определять методы типа?",
@@ -39,7 +41,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 3,
+                     questionId: 1003,
                      helpText: "Классы, структуры и перечисления так же могут определить методы типа, которые связаны с самим типом. Методы типа работают аналогично методам класса в Objective-C."),
             
             Question(question: ["Имеем ли мы возможность определять методы и в структурах, и в классах, и в перечислениях?",
@@ -51,7 +53,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 4,
+                     questionId: 1004,
                      helpText: "Дело в том, что структуры и перечисления могут определить методы в Swift, что является главным отличием от C или Objective-C. В Objective-C классы единственный тип, который может определять методы. В Swift вы можете выбирать, стоит ли вам определять класс, структуру или перечисление, и вы все равно, при любом раскладе, получаете возможность определения методов типа, который вы создадите."),
             
             Question(question: ["Методы экземпляра класса и функции имеют одинаковый синтаксис?",
@@ -63,7 +65,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 5,
+                     questionId: 1005,
                      helpText: "Методы экземпляра являются функциями, которые принадлежат экземплярам конкретного класса, структуры или перечисления. Они обеспечивают функциональность этих экземпляров, либо давая возможность доступа и изменения свойств экземпляра, либо обеспечивая функциональность экземпляра в соответствии с его целью. Методы экземпляра имеют абсолютно одинаковый синтаксис как и функции"),
             
             Question(question: ["Где записывается метод экземпляра?",
@@ -74,7 +76,7 @@ class MethodsSet {
                      optionC: "В имени вашего типа",
                      optionD: "В протоколе вашего типа",
                      correctAnswer: 1,
-                     questionId: 6,
+                     questionId: 1006,
                      helpText: "Вы пишете метод экземпляра внутри фигурных скобок типа, которому он принадлежит."),
             
             Question(question: ["Имеет ли метод экземпляра доступ к остальным методам экземпляра и свойствам этого типа?",
@@ -85,7 +87,7 @@ class MethodsSet {
                      optionC: "Неявно только к свойствам",
                      optionD: "Неявно только к методам",
                      correctAnswer: 1,
-                     questionId: 7,
+                     questionId: 1007,
                      helpText: "Да, метод экземпляра имеет неявный доступ ко всем остальным методам экземпляра и свойствам этого типа."),
             
             Question(question: ["Можем ли мы вызывать метод экземпляра в изоляции, без самого экземпляра этого типа?",
@@ -96,7 +98,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 8,
+                     questionId: 1008,
                      helpText: "Метод экземпляра может быть вызван только для конкретного экземпляра типа, которому он принадлежит. Его нельзя вызвать в изоляции, без существующего экземпляра."),
             
             Question(question: ["Через какой синтаксис вызываются методы экземпляра класса?",
@@ -107,7 +109,7 @@ class MethodsSet {
                      optionC: "Литеральный синтаксис",
                      optionD: "Синтаксис сабскриптов",
                      correctAnswer: 1,
-                     questionId: 9,
+                     questionId: 1009,
                      helpText: "Вы можете вызвать методы экземпляра с тем же точечным синтаксисом, как и свойства."),
             
             Question(question: ["Может ли метод экземпляра иметь имя аргумента и ярлык аргумента одновременно?",
@@ -118,7 +120,7 @@ class MethodsSet {
                      optionC: "Нет, только ярлык",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 10,
+                     questionId: 1010,
                      helpText: "Параметры функций могут иметь и имя аргумента (для использования внутри функций), и ярлык аргумента (для использования при вызове функций), что описано Ярлыки аргументов и имена параметров функций. То же самое верно для имен параметров методов, потому как методы те же самые функции, но ассоциированные с определенным типом."),
             
             Question(question: ["Когда необходимо использовать неявное свойство self?",
@@ -130,7 +132,7 @@ class MethodsSet {
                      optionC: "В расширении типа",
                      optionD: "Только внутри структур",
                      correctAnswer: 1,
-                     questionId: 11,
+                     questionId: 1011,
                      helpText: "Каждый экземпляр типа имеет неявное свойство self, которое является абсолютным эквивалентом самому экземпляру. Вы используете свойство self для ссылки на текущий экземпляр, внутри методов этого экземпляра."),
             
             Question(question: ["Если мы находимся не внутри функции или метода, обязаны ли мы употреблять self постоянно?",
@@ -141,7 +143,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 12,
+                     questionId: 1012,
                      helpText: "На практике вам не нужно писать self очень часто. Если вы не пишите self, то Swift полагает, что вы ссылаетесь на свойство или метод текущего экземпляра каждый раз, когда вы используете известное имя свойства или метода внутри метода."),
             
             Question(question: ["Если имя параметра метода экземпляра совпадает с именем свойства экземпляра, должны ли мы писать self при обращении к свойству?",
@@ -152,7 +154,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 13,
+                     questionId: 1013,
                      helpText: "Главное исключение из этого правила получается, когда имя параметра метода экземпляра совпадает с именем свойства экземпляра. В этой ситуации имя параметра имеет приоритет и появляется необходимость ссылаться на свойство в более подходящей форме. Вы используете свойство self для того, чтобы увидеть различие между именем параметра и именем свойства."),
             
             Question(question: ["Каким типом являются структуры и перечисления?",
@@ -163,7 +165,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 14,
+                     questionId: 1014,
                      helpText: "Структуры и перечисления являются типами значений."),
             
             Question(question: ["После указания этого ключевого слова к методу структуры или перечисления, он может изменить свои свойства изнутри метода",
@@ -175,7 +177,7 @@ class MethodsSet {
                      optionC: "public",
                      optionD: "private",
                      correctAnswer: 1,
-                     questionId: 15,
+                     questionId: 1015,
                      helpText: "Если вам нужно изменить свойства вашей структуры или перечисления изнутри конкретного метода, то вы можете выбрать поведение как изменяющееся для этого метода. После этого метод может изменить свои свойства изнутри метода, и все изменения будут сохранены в исходную структуру, когда выполнение метода закончится. Метод так же может присвоить совершенно новый экземпляр для свойства self, и этот новый экземпляр заменит существующий, после того как выполнение метода закончится."),
             
             Question(question: ["Если наш экземпляр структуры является константой, можем ли мы вызывать изменяющиеся методы?",
@@ -186,7 +188,7 @@ class MethodsSet {
                      optionC: "Если свойства - переменные",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 16,
+                     questionId: 1016,
                      helpText: "Вы не можете вызвать изменяющийся (mutating) метод для константных типов структуры, потому как ее свойства не могут быть изменены, даже если свойства являются переменными"),
             
             Question(question: ["Могут ли изменяющиеся методы присваивать полностью новый экземпляр неявному свойству self?"],
@@ -196,7 +198,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 17,
+                     questionId: 1017,
                      helpText: "Изменяющиеся методы (mutating) могут присваивать полностью новый экземпляр неявному свойству self."),
             
             Question(question: ["Могут ли изменяющиеся методы перечислений устанавливать отдельный член перечисления как неявный параметр self?",
@@ -207,7 +209,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 18,
+                     questionId: 1018,
                      helpText: "Да, изменяющиеся методы для перечислений могут установить отдельный член перечисления как неявный параметр self."),
             
             Question(question: ["Каким ключевым словом определить методы типа?",
@@ -219,7 +221,7 @@ class MethodsSet {
                      optionC: "public",
                      optionD: "fileprivate",
                      correctAnswer: 1,
-                     questionId: 19,
+                     questionId: 1019,
                      helpText: "Вы можете определить методы, которые вызываются самим типом. Такие методы зовутся методами типа. Индикатор такого метода - ключевое слово static, которое ставится до ключевого слова метода func. Классы так же могут использовать ключевое слово class, чтобы разрешать подклассам переопределение инструкций суперкласса этого метода."),
             
             Question(question: ["Можем ли мы создавать методы типа для классов, структур и перечислений?",
@@ -230,7 +232,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 20,
+                     questionId: 1020,
                      helpText: "В Objective-C определять методы типов можно только для классов. В Swift вы можете создавать методы типа не только для классов, но и для структур и перечислений. Метод каждого типа ограничен самим типом, который он поддерживает."),
             
             Question(question: ["Можем ли мы использовать точечный синтаксис для обращения к методам типа?",
@@ -241,7 +243,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 21,
+                     questionId: 1021,
                      helpText: "Методы типа так же используют точечный синтаксис, как и методы экземпляра. Однако эти методы вы вызываете самим типом, а не экземпляром этого типа."),
             
             Question(question: ["Сколько методов у класса Counter?"],
@@ -251,7 +253,7 @@ class MethodsSet {
                      optionC: "Один",
                      optionD: "У Counter нет методов",
                      correctAnswer: 1,
-                     questionId: 22,
+                     questionId: 1022,
                      helpText: "Правильный ответ: Два (increment() и increment(by amount: Int)). Все функции, относящиеся к определенному классу, являются методами."),
             
             Question(question: ["Получим ли мы сообщение в консоль?",
@@ -262,7 +264,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 23,
+                     questionId: 1023,
                      helpText: "Правильный ответ: Да. Мы присваиваем свойству x значение 4.0, и когда вызываем метод нашего экземпляра - проверяем является ли 4.0 больше чем 1.0, и когда получаем true (а в строчке if somePoint.isToTheRightOf(x: 1.0) мы проверяем именно это) - выводим наше сообщение в консоль."),
             
             Question(question: ["Что мы получим, если в return self.x > x уберем self?",
@@ -273,7 +275,7 @@ class MethodsSet {
                      optionC: "Ошибка компиляции",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 24,
+                     questionId: 1024,
                      helpText: "Правильный ответ: print не сработает. Если мы уберем self, то метод будет считать, что мы производим сравнение входящего параметра х с этим же входящим параметром х, а эта операция сравнения не может вернуть true. А раз результатом работы нашего метода будет false - print не отработает."),
             
             Question(question: ["Можем ли мы подобным образом присваивать значения self?"],
@@ -283,7 +285,7 @@ class MethodsSet {
                      optionC: "",
                      optionD: "",
                      correctAnswer: 1,
-                     questionId: 25,
+                     questionId: 1025,
                      helpText: "Изменяющиеся методы для перечислений могут установить отдельный член перечисления как неявный параметр self. В этом примере мы рассматриваем перечисление с тремя положениями переключателя. Переключатель проходит последовательно три положения (off, low, high), каждый раз меняя положение, как вызывается метод next()."),
             
 //            Question(question: ["",
@@ -295,7 +297,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 26,
+//                     questionId: 1026,
 //                     helpText: ""),
 //
 //            Question(question: ["",
@@ -307,7 +309,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 27,
+//                     questionId: 1027,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -319,7 +321,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 28,
+//                     questionId: 1028,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -331,7 +333,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 29,
+//                     questionId: 1029,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -343,7 +345,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 30,
+//                     questionId: 1030,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -355,7 +357,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 31,
+//                     questionId: 1031,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -367,7 +369,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 32,
+//                     questionId: 1032,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -379,7 +381,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 33,
+//                     questionId: 1033,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -391,7 +393,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 34,
+//                     questionId: 1034,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -403,7 +405,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 35,
+//                     questionId: 1035,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -415,7 +417,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 36,
+//                     questionId: 1036,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -427,7 +429,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 37,
+//                     questionId: 1037,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -439,7 +441,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 38,
+//                     questionId: 1038,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -451,7 +453,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 39,
+//                     questionId: 1039,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -463,7 +465,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 40,
+//                     questionId: 1040,
 //                     helpText: ""),
 //            
 //            Question(question: ["",
@@ -475,7 +477,7 @@ class MethodsSet {
 //                     optionC: "",
 //                     optionD: "",
 //                     correctAnswer: 1,
-//                     questionId: 41,
+//                     questionId: 1041,
 //                     helpText: ""),
         ]
     }
