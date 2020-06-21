@@ -9,17 +9,17 @@ import Foundation
 class TypeCastingSet {
     static func getQuestions() -> [Question] {
         return [
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 1,
-//                     helpText: ""),
+            Question(question: ["",
+                                "",
+                                ""],
+                     image: "",
+                     optionA: "",
+                     optionB: "",
+                     optionC: "",
+                     optionD: "",
+                     correctAnswer: 1,
+                     questionId: 1801,
+                     helpText: ""),
 //            
 //            Question(question: ["",
 //                                "",

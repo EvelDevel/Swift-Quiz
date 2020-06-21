@@ -66,7 +66,7 @@ extension InitialViewController {
         if SelectedTopic.shared.topic.questionSet.isEmpty {
             /// Первый запуск: добавляем сет, обновлянем название
             let newSet = TopicOperator.getQuestionsTheBasics()
-            SelectedTopic.shared.addQuestionSet(newSet, topic: "Основы", tag: 11)
+            SelectedTopic.shared.addQuestionSet(newSet, topic: "Основы", tag: 10)
             selectedTopic.text = "Основы"
         } else {
             /// При любом повторном: берем информацию из синглтона
@@ -100,6 +100,7 @@ extension InitialViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         /// Указываем себя в качестве делегата в момент перехода по нужным segue
+        /// Выполняем проверку, что выбранный сет вопросов не пустой
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self

@@ -9,17 +9,17 @@ import Foundation
 class ArchitecturalPatternsSet {
     static func getQuestions() -> [Question] {
         return [
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 5,
-//                     helpText: ""),
+            Question(question: ["",
+                                "",
+                                ""],
+                     image: "",
+                     optionA: "",
+                     optionB: "",
+                     optionC: "",
+                     optionD: "",
+                     correctAnswer: 1,
+                     questionId: 2701,
+                     helpText: ""),
 //            
 //            Question(question: ["",
 //                                "",
