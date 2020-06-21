@@ -5,7 +5,7 @@
 import UIKit
 
 // MARK: TODO
-/// Попробовать реализовать супер-игру. Все вопросы в одну кучу, автоматически выставляя сохранение игры.
+/// Возможно имеет смысл ограничить количество вопросов в супер игре - делать 100 рандомных вопросов и все
 
 class InitialViewController: UIViewController {
     
@@ -34,6 +34,7 @@ class InitialViewController: UIViewController {
         showLastGameInfo()
         updateContinueButton()
         addShadows()
+        makeSuperSets()
     }
     
     func addShadows() {
@@ -42,6 +43,19 @@ class InitialViewController: UIViewController {
     }
 }
 
+
+// MARK: Исполнение фоновых задач при загрузке приложения
+extension InitialViewController {
+    
+    /// Создание супер-сетов
+    /// Запускаем сразу а не ждем нажатия на кнопку
+    func makeSuperSets() {
+        DispatchQueue.main.async {
+            AllGuideSet.addQuestions()
+            AllPatternsSet.addQuestions()
+        }
+    }
+}
 
 // MARK: Показываем или убираем кнопку "продолжить игру"
 extension InitialViewController {

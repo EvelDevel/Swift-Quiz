@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B17D869A-D299-434F-9C9F-D5D6B4898D35"
+            uuid = "B2864D92-2894-498E-9329-DBC2D5B7E772"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swifty-Quiz/Database/Questions/Super Sets/AllGuideSet.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9"
-            landmarkName = "getQuestions()"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "addQuestions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72D6A3CA-E31F-42E2-9023-DC05D64F2820"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swifty-Quiz/Database/Questions/Super Sets/AllPatternsSet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "addQuestions()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
