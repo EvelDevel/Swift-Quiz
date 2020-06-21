@@ -29,6 +29,7 @@ class CategoriesCell: UITableViewCell {
 
     weak var delegate: CategoriesCellDelegate?
     private let shadows = ShadowsHelper()
+    private var lastPosition = SelectedTopic.shared.topic.topicTag
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,9 +43,14 @@ class CategoriesCell: UITableViewCell {
         updateTopicButtons()
         addQuestionsToArray(sender: sender)
         delegate?.updateNumberOfQuestions()
-        SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
         Game.shared.changeContinueStatus()
         sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+        
+        /// Звук, если нажимаем на новую кнопку, а не "уже активную"
+        if sender.tag - 1 != self.lastPosition {
+            SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
+            lastPosition = sender.tag - 1
+        }
     }
     
     override func layoutSubviews() {
