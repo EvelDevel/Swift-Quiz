@@ -844,7 +844,6 @@ class CollectionTypesSet {
 //                     correctAnswer: 1,
 //                     questionId: 372,
 //                     helpText: ""),
-            
         ]
     }
 }

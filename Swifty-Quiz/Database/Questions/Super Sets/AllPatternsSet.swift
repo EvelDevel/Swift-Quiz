@@ -24,7 +24,7 @@ class AllPatternsSet {
     }
     
     static func getQuestions() -> [Question] {
-        return allPatternsQuestions
+        allPatternsQuestions
     }
 }
 

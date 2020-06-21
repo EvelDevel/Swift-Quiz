@@ -40,14 +40,14 @@ class CategoriesCell: UITableViewCell {
     }
     
     @IBAction func topicButtonPressed(_ sender: UIButton) {
-        updateTopicButtons()
-        addQuestionsToArray(sender: sender)
-        delegate?.updateNumberOfQuestions()
-        Game.shared.changeContinueStatus()
-        sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-        
-        /// Звук, если нажимаем на новую кнопку, а не "уже активную"
+        /// Срабатывание только в случае,
+        /// Когда нажимаем на новую кнопку а не активную
         if sender.tag - 1 != self.lastPosition {
+            updateTopicButtons()
+            addQuestionsToArray(sender: sender)
+            delegate?.updateNumberOfQuestions()
+            Game.shared.changeContinueStatus()
+            sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
             lastPosition = sender.tag - 1
         }
