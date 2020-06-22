@@ -112,12 +112,14 @@ extension CategoriesCell {
             
         // MARK: 01 row
         case 1:
-            newQuestionSet = TopicOperator.getQuestionsAllGuide()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Руководство", tag: 0)
+            newQuestionSet = TopicOperator.getRandom20()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 случайных", tag: 0)
         case 2:
-            newQuestionSet = TopicOperator.getQuestionsAllPatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны", tag: 1)
-            
+            newQuestionSet = TopicOperator.getRandom50()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "50 случайных", tag: 1)
+        case 3:
+            newQuestionSet = TopicOperator.getRandom100()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "100 случайных", tag: 2)
             
             // MARK: THE BASICS
             

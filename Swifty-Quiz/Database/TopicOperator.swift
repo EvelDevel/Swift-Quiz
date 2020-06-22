@@ -12,8 +12,9 @@ class TopicOperator {
     
     // MARK: 01 row
     // Руководство, Паттерны
-    static func getQuestionsAllGuide() -> [Question] { return AllGuideSet.getQuestions() }
-    static func getQuestionsAllPatterns() -> [Question] { return AllPatternsSet.getQuestions() }
+    static func getRandom20() -> [Question] { return RandomSuperSets.getQuestions(limit: 20) }
+    static func getRandom50() -> [Question] { return RandomSuperSets.getQuestions(limit: 50) }
+    static func getRandom100() -> [Question] { return RandomSuperSets.getQuestions(limit: 100) }
     
     
     // MARK: THE BASICS

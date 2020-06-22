@@ -27,7 +27,11 @@ class TopicViewController: UIViewController {
     }
     
     func setDefaultNumberOfQuestions() {
-        numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+        if SelectedTopic.shared.topic.topicTag < 10 {
+            numberOfQuestions.text = SelectedTopic.shared.topic.topicName
+        } else {
+            numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+        }
     }
     
     func showAlertIfNeeded() {
@@ -68,7 +72,11 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 extension TopicViewController: CategoriesCellDelegate {
     
     func updateNumberOfQuestions() {
-        numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+        if SelectedTopic.shared.topic.topicTag < 10 {
+            numberOfQuestions.text = SelectedTopic.shared.topic.topicName
+        } else {
+            numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+        }
     }
     
     func showAlert() {

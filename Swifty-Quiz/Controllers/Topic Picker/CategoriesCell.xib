@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="746"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игры по разделам" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
-                        <rect key="frame" x="16" y="15" width="147" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подборки вопросов" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
+                        <rect key="frame" x="16" y="15" width="160.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Mye-XD-PCD"/>
                         </constraints>
@@ -32,10 +32,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efU-AZ-oTf" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Руководство">
+                                        <state key="normal" title="20 случайных">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -48,10 +48,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjn-CH-lMo" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="160.5" y="0.0" width="127.5" height="30"/>
+                                        <rect key="frame" x="95.5" y="0.0" width="87" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Паттерны">
+                                        <state key="normal" title="50 случайных">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -61,6 +61,22 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ofy-2b-DuF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-mf-tY5" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="190.5" y="0.0" width="97.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="100 случайных">
+                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4zr-qP-8xz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -706,8 +722,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outletCollection property="superSets" destination="efU-AZ-oTf" collectionClass="NSMutableArray" id="2xf-4c-ikT"/>
-                <outletCollection property="superSets" destination="sjn-CH-lMo" collectionClass="NSMutableArray" id="FDN-rK-Rxq"/>
                 <outletCollection property="guideQuestions" destination="wcJ-TJ-Cn5" collectionClass="NSMutableArray" id="S3A-cU-eD2"/>
                 <outletCollection property="guideQuestions" destination="fTQ-Ap-1US" collectionClass="NSMutableArray" id="YJP-Rr-zDd"/>
                 <outletCollection property="guideQuestions" destination="ia1-P9-vXa" collectionClass="NSMutableArray" id="xbK-jT-6Gg"/>
@@ -738,6 +752,9 @@
                 <outletCollection property="patternsQuestions" destination="fgV-Eu-Kjd" collectionClass="NSMutableArray" id="s1f-Ge-Ob0"/>
                 <outletCollection property="patternsQuestions" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="G0V-tQ-5U6"/>
                 <outletCollection property="patternsQuestions" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="BNc-KD-1Oc"/>
+                <outletCollection property="superSets" destination="efU-AZ-oTf" collectionClass="NSMutableArray" id="QGb-JR-fK2"/>
+                <outletCollection property="superSets" destination="sjn-CH-lMo" collectionClass="NSMutableArray" id="uYO-fh-Ybf"/>
+                <outletCollection property="superSets" destination="iyP-mf-tY5" collectionClass="NSMutableArray" id="hse-eu-DQA"/>
             </connections>
             <point key="canvasLocation" x="-178.2608695652174" y="174.10714285714286"/>
         </tableViewCell>

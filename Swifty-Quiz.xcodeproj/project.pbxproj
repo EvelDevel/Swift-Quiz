@@ -68,8 +68,7 @@
 		FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA97903247CF43200228FB5 /* SettingCell.xib */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionTypesSet.swift */; };
-		FBB4405524991C1E00D88937 /* AllGuideSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* AllGuideSet.swift */; };
-		FBB4405724991C2A00D88937 /* AllPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405624991C2A00D88937 /* AllPatternsSet.swift */; };
+		FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* RandomSuperSets.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowsHelper.swift */; };
 		FBDD37462464642F00B3E47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
@@ -142,8 +141,7 @@
 		FBA97903247CF43200228FB5 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTypesSet.swift; sourceTree = "<group>"; };
-		FBB4405424991C1E00D88937 /* AllGuideSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGuideSet.swift; sourceTree = "<group>"; };
-		FBB4405624991C2A00D88937 /* AllPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPatternsSet.swift; sourceTree = "<group>"; };
+		FBB4405424991C1E00D88937 /* RandomSuperSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSuperSets.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
 		FBC1D489247574730055FF62 /* ShadowsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsHelper.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
@@ -432,8 +430,7 @@
 		FBB4405324991BD700D88937 /* Super Sets */ = {
 			isa = PBXGroup;
 			children = (
-				FBB4405424991C1E00D88937 /* AllGuideSet.swift */,
-				FBB4405624991C2A00D88937 /* AllPatternsSet.swift */,
+				FBB4405424991C1E00D88937 /* RandomSuperSets.swift */,
 			);
 			path = "Super Sets";
 			sourceTree = "<group>";
@@ -575,7 +572,6 @@
 				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
 				FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */,
 				FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */,
-				FBB4405724991C2A00D88937 /* AllPatternsSet.swift in Sources */,
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
 				FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
@@ -614,7 +610,7 @@
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
-				FBB4405524991C1E00D88937 /* AllGuideSet.swift in Sources */,
+				FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,
 			);
