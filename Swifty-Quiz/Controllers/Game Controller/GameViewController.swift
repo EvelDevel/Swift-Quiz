@@ -87,14 +87,14 @@ class GameViewController: UIViewController {
             && weContinueLastGame == false
             && Game.shared.showNewGameAlertStatus() != true {
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Есть незавершенная игра!", message: "Если вы ответите хотя-бы на один вопрос, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя-бы на один вопрос, измените настройки, или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
                 alert.addAction(okAction)
                 self.present(alert, animated: true, completion: nil)
                 
             }
             /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
-            Game.shared.setThatWeShowedNewGameAlert()
+            Game.shared.setThatWeShowedAlert()
         }
     }
 }
