@@ -7,7 +7,6 @@ import Foundation
 
 class TopicOperator {
     
-    
     // MARK: Super Sets
     
     // MARK: 01 row
