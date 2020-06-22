@@ -341,7 +341,12 @@ extension GameViewController {
             SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных", tag: 1)
         } else if SelectedTopic.shared.topic.topicTag == 2 {
             SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "100 случайных", tag: 2)
+        } else if SelectedTopic.shared.topic.topicTag == 3 {
+            SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 по Руководству", tag: 3)
+        } else if SelectedTopic.shared.topic.topicTag == 4 {
+            SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 по Паттернам", tag: 4)
         }
+        
         // MARK: Добавить остальные рефреши когда появятся новые подборки
     }
     

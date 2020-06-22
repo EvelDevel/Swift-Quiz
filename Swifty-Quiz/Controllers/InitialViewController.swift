@@ -5,7 +5,6 @@
 import UIKit
 
 // MARK: TODO
-/// Подумать как можно рефрешить пачки случайных вопросов чтобы не приходилось переключаться на другие темы
 
 class InitialViewController: UIViewController {
     

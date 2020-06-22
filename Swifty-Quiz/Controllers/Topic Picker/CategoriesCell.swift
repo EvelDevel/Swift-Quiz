@@ -123,6 +123,13 @@ extension CategoriesCell {
         case 3:
             newQuestionSet = TopicOperator.getRandom100()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "100 случайных", tag: 2)
+        case 4:
+            newQuestionSet = TopicOperator.getGuide20()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 по Руководству", tag: 3)
+        case 5:
+            newQuestionSet = TopicOperator.getPatterns20()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 по Паттернам", tag: 4)
+            
             
             // MARK: THE BASICS
             

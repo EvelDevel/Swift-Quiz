@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0807EF24A090CA00016E18 /* GuideRandomSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */; };
+		FB0807F124A0948500016E18 /* PatternsRandomSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807F024A0948500016E18 /* PatternsRandomSet.swift */; };
 		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
 		FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C1B246A554B005F5289 /* MethodsSet.swift */; };
@@ -78,6 +80,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideRandomSet.swift; sourceTree = "<group>"; };
+		FB0807F024A0948500016E18 /* PatternsRandomSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsRandomSet.swift; sourceTree = "<group>"; };
 		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
 		FB119C1B246A554B005F5289 /* MethodsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsSet.swift; sourceTree = "<group>"; };
@@ -431,6 +435,8 @@
 			isa = PBXGroup;
 			children = (
 				FBB4405424991C1E00D88937 /* RandomSuperSets.swift */,
+				FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */,
+				FB0807F024A0948500016E18 /* PatternsRandomSet.swift */,
 			);
 			path = "Super Sets";
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
+				FB0807F124A0948500016E18 /* PatternsRandomSet.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
 				FB99F88D247B978C0053166C /* AdvancedPatternsSet.swift in Sources */,
@@ -596,6 +603,7 @@
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
+				FB0807EF24A090CA00016E18 /* GuideRandomSet.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
