@@ -273,6 +273,7 @@ extension GameViewController {
         case 1:
             callDelegateAndSaveRecord(continueStatus: false)
             updateMessageAndShowAlert()
+            refreshRandomSets()
         case 2:
             callDelegateAndSaveRecord(continueStatus: true)
         default:
@@ -325,6 +326,23 @@ extension GameViewController {
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
         currentQuestionNumber -= 1
+    }
+    
+    func refreshRandomSets() {
+        /// Когда выбрана подборка "сет случайных вопросов" (tag от 0 до 9)
+        /// Перетасовываем их, когда:
+        /// - переключили тему в выборе тем
+        /// - завершили текущий сет (доиграли до конца)
+        /// При любых других раскладах текущий сет случайных вопросов будет повторяться
+        
+        if SelectedTopic.shared.topic.topicTag == 0 {
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных", tag: 0)
+        } else if SelectedTopic.shared.topic.topicTag == 1 {
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных", tag: 1)
+        } else if SelectedTopic.shared.topic.topicTag == 2 {
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "100 случайных", tag: 2)
+        }
+        // MARK: Добавить остальные рефреши когда появятся новые подборки
     }
     
     func restartGame() {

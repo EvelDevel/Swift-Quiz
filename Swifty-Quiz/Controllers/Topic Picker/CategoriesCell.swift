@@ -111,6 +111,9 @@ extension CategoriesCell {
             // MARK: SUPER SETS
             
         // MARK: 01 row
+        /// При добавлении новых сетов со подборками случайных вопросов
+        /// Добавлять рефреш в refreshRandomSets() внутри GameViewController
+        /// Это обновляет сет, когда мы доиграли сет, чтобы после завершения не играть его снова
         case 1:
             newQuestionSet = TopicOperator.getRandom20()
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 случайных", tag: 0)
