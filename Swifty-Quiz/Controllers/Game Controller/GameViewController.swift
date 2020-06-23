@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     private let saveRecordSettings = Game.shared.settings.saveRecord
     private let soundSettings = Game.shared.settings.sound
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
+    private let currentTag = SelectedTopic.shared.topic.topicTag
     var weContinueLastGame = false
     
     @IBOutlet var answerButtonsCollection: [UIButton]!
@@ -311,10 +312,15 @@ extension GameViewController {
     }
     
     func updateMessageAndShowAlert() {
-        if updatePercentage() < 35 { message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
-        } else if updatePercentage() < 55 { message = "Достойный результат, но нужно продолжать работать!"
-        } else if updatePercentage() < 75 { message = "Уже хорошо! Но вы можете постараться еще лучше!"
-        } else { message = "Превосходно! Продолжайте в том же духе и по остальным темам!" }
+        if updatePercentage() < 35 {
+            message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
+        } else if updatePercentage() < 55 {
+            message = "Достойный результат, но нужно продолжать работать!"
+        } else if updatePercentage() < 75 {
+            message = "Уже хорошо! Но вы можете постараться еще лучше!"
+        } else {
+            message = "Превосходно! Продолжайте в том же духе и по остальным темам!"
+        }
         showAlert(title: "Ваш счет", message: "\(message)")
     }
     
@@ -335,18 +341,17 @@ extension GameViewController {
         /// - завершили текущий сет (доиграли до конца)
         /// При любых других раскладах текущий сет случайных вопросов будет повторяться
         
-        if SelectedTopic.shared.topic.topicTag == 0 {
+        if currentTag == 0 {
             SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных", tag: 0)
-        } else if SelectedTopic.shared.topic.topicTag == 1 {
+        } else if currentTag == 1 {
             SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных", tag: 1)
-        } else if SelectedTopic.shared.topic.topicTag == 2 {
+        } else if currentTag == 2 {
             SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных", tag: 2)
-        } else if SelectedTopic.shared.topic.topicTag == 3 {
+        } else if currentTag == 3 {
             SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 по Руководству", tag: 3)
-        } else if SelectedTopic.shared.topic.topicTag == 4 {
+        } else if currentTag == 4 {
             SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 по Паттернам", tag: 4)
         }
-        
         // MARK: Добавить остальные рефреши когда появятся новые подборки
     }
     
