@@ -140,11 +140,9 @@ extension GameViewController {
     
     func addQuestionContent() {
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
+            buttonsView.makeCorrectButtonsSet(currentQuestionIndex, initialQuestionSet, optionA, optionB, optionC, optionD)
             setQuestionImageAndTextSize()
             setQuestionText()
-            buttonsView.saveCorrectAnswerText(currentQuestionIndex, initialQuestionSet)
-            buttonsView.shuffleAnswersPositions(currentQuestionIndex, initialQuestionSet)
-            buttonsView.setShuffledAnswers(optionA, optionB, optionC, optionD)
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
@@ -198,11 +196,10 @@ extension GameViewController {
     func setQuestionText() {
         let normal = initialQuestionSet[currentQuestionIndex].question[0]
         let random = initialQuestionSet[currentQuestionIndex].question.shuffled()
-        
-        if  shuffleSettings == 1 {
-            questionLabel.text = random[0]
+        if  self.shuffleSettings == 1 {
+            self.questionLabel.text = random[0]
         } else {
-            questionLabel.text = normal
+            self.questionLabel.text = normal
         }
     }
 }

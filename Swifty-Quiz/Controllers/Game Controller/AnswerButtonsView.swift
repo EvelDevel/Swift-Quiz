@@ -5,21 +5,19 @@
 import UIKit
 
 class AnswerButtonsView: UIView {
-
-    private var correctAnswer: String = ""
-    private var shuffledAnswersArray: [String] = []
+    
     private var correctAnswerNewPosition = 0
     
     /// Восстановление видимости всех кнопок
     func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [UIButton]) {
         if index < count {
             for button in buttons {
-                button.isHidden = false
+                animationChanging(true, button)
             }
         }
     }
     
-    /// Устанавливаем дефолтный цвет кнопок
+    /// Установка дефолтного цвета
     func setDefaultButtonsColor(_ buttons: [UIButton]) {
         for button in buttons {
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
@@ -27,19 +25,36 @@ class AnswerButtonsView: UIView {
         }
     }
     
+    /// Запрос на новое корректное положение ответа
+    func showCorrectPosition() -> Int {
+        return correctAnswerNewPosition
+    }
+    
+    
+    // MARK: Основная работа по формированию блока с кнопоками
     /// Фиксируем правильный ответ
-    func saveCorrectAnswerText(_ index: Int, _ array: [Question]) {
+    /// Шафлим положение всех ответов
+    /// Устанавливаем на новые места
+    func makeCorrectButtonsSet(_ index: Int,
+                              _ array: [Question],
+                              _ optionA: UIButton,
+                              _ optionB: UIButton,
+                              _ optionC: UIButton,
+                              _ optionD: UIButton) {
+        
+        var shuffledAnswersArray: [String] = []
+        var correctAnswer: String = ""
+        
+        /// Фиксируем текст правильного ответа
         switch array[index].correctAnswer {
         case 1: correctAnswer = array[index].optionA
         case 2: correctAnswer = array[index].optionB
         case 3: correctAnswer = array[index].optionC
         case 4: correctAnswer = array[index].optionD
-        default: print("Error with correct placing answers")
+        default: print("Error with saving the correct answer")
         }
-    }
-    
-    /// Перемешиваем позиции вариантов ответа
-    func shuffleAnswersPositions(_ index: Int, _ array: [Question]) {
+        
+        /// Перемешиваем позиции ответов
         var tempAnswersArray: [String] = []
         tempAnswersArray.append(array[index].optionA)
         tempAnswersArray.append(array[index].optionB)
@@ -47,38 +62,58 @@ class AnswerButtonsView: UIView {
         tempAnswersArray.append(array[index].optionD)
         shuffledAnswersArray = tempAnswersArray.shuffled()
         
+        /// Сдвигаем все "непустые" варианты вверх
+        /// Необходимо для более красивой анимации
+        var tempArray: [String] = []
+        for index in 0...3 {
+            if shuffledAnswersArray[index] != "" {
+                tempArray.insert(shuffledAnswersArray[index], at: 0)
+            } else {
+                tempArray.append(shuffledAnswersArray[index])
+            }
+        }
+        shuffledAnswersArray = tempArray
+        
+        /// Находим актуальный индекс правильного ответа
         for i in 0..<shuffledAnswersArray.count {
             if shuffledAnswersArray[i] == correctAnswer {
                 correctAnswerNewPosition = i + 1
             }
         }
+    
+        /// Устанавливаем все ответы на позиции
+        func workWithLabelText(_ button: UIButton, _ index: Int) {
+            button.titleLabel?.text = shuffledAnswersArray[index]
+            button.setTitle(shuffledAnswersArray[index], for: .normal)
+            if shuffledAnswersArray[index] == "" {
+                animationChanging(false, button)
+            }
+        }
+        workWithLabelText(optionA, 0)
+        workWithLabelText(optionB, 1)
+        workWithLabelText(optionC, 2)
+        workWithLabelText(optionD, 3)
     }
     
-    func showCorrectPosition() -> Int {
-        return correctAnswerNewPosition
+    
+    // MARK: Анимация кнопок
+    /// Работает как на сокращение количества, так и на увеличение
+    func animationChanging(_ returnVisibility: Bool, _ button: UIButton) {
+        if returnVisibility {
+            UIView.animate( withDuration: 0.2, delay: 0, usingSpringWithDamping: 1,
+                            initialSpringVelocity: 0, options: [], animations: {
+                                button.isHidden = false
+            })
+        } else {
+            UIView.animate( withDuration: 0.2, delay: 0, usingSpringWithDamping: 1,
+                            initialSpringVelocity: 0, options: [], animations: {
+                                button.isHidden = true
+            })
+        }
     }
     
-    /// Устанавливаем ответы на новые позиции
-    func setShuffledAnswers(_ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
-        
-        /// Установка ответов без анимации и скрытие пустых кнопок
-        optionA.titleLabel?.text = shuffledAnswersArray[0]
-        optionA.setTitle(shuffledAnswersArray[0], for: .normal)
-        if shuffledAnswersArray[0] == "" { optionA.isHidden = true }
-        
-        optionB.titleLabel?.text = shuffledAnswersArray[1]
-        optionB.setTitle(shuffledAnswersArray[1], for: .normal)
-        if shuffledAnswersArray[1] == "" { optionB.isHidden = true }
-        
-        optionC.titleLabel?.text = shuffledAnswersArray[2]
-        optionC.setTitle(shuffledAnswersArray[2], for: .normal)
-        if shuffledAnswersArray[2] == "" { optionC.isHidden = true }
-        
-        optionD.titleLabel?.text = shuffledAnswersArray[3]
-        optionD.setTitle(shuffledAnswersArray[3], for: .normal)
-        if shuffledAnswersArray[3] == "" { optionD.isHidden = true }
-    }
     
+    // MARK: Изменение цвета кнопки при ответе
     func changeButtonColor(sender: UIButton, _ answerIsCorrect: Bool,
                            _ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
         switch sender.tag {
