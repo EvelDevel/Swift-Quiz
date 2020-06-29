@@ -271,7 +271,6 @@ extension GameViewController {
         case 1:
             callDelegateAndSaveRecord(continueStatus: false)
             updateMessageAndShowAlert()
-            refreshRandomSets()
         case 2:
             callDelegateAndSaveRecord(continueStatus: true)
         default:
@@ -313,7 +312,7 @@ extension GameViewController {
             message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
         } else if updatePercentage() < 55 {
             message = "Достойный результат, но нужно продолжать работать!"
-        } else if updatePercentage() < 75 {
+        } else if updatePercentage() < 85 {
             message = "Уже хорошо! Но вы можете постараться еще лучше!"
         } else {
             message = "Превосходно! Продолжайте в том же духе и по остальным темам!"
@@ -324,11 +323,26 @@ extension GameViewController {
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)
         let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
-        let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.dismiss(animated: true, completion: nil) })
+        let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.quitGame() })
         alert.addAction(restartAction)
         alert.addAction(quitAction)
         present(alert, animated: true, completion: nil)
         currentQuestionNumber -= 1
+    }
+    
+    func quitGame() {
+        refreshRandomSets()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func restartGame() {
+        endGameFlag = false
+        helpCounter = 0
+        helpCounterLabel.text = ""
+        score = 0
+        currentQuestionNumber = 1
+        currentQuestionIndex = 0
+        updateQuestion()
     }
     
     func refreshRandomSets() {
@@ -350,14 +364,6 @@ extension GameViewController {
             SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 по Паттернам", tag: 4)
         }
         // MARK: Добавить остальные рефреши когда появятся новые подборки
-    }
-    
-    func restartGame() {
-        endGameFlag = false
-        score = 0
-        currentQuestionNumber = 1
-        currentQuestionIndex = 0
-        updateQuestion()
     }
 }
 
