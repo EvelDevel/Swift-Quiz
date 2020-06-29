@@ -37,9 +37,9 @@ class GameViewController: UIViewController {
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBOutlet var GameComtrollerViews: [UIView]!
     
+    private let gameHelper = GameHelper()
     private let buttonsView = AnswerButtonsView()
     private let shadows = ShadowsHelper()
-    
     private var initialQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
@@ -52,7 +52,6 @@ class GameViewController: UIViewController {
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
-
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -66,8 +65,10 @@ class GameViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         /// Свернули игру не доиграв
-        /// Сохраняем, если еще не прошло сохранение текущей игры
-        /// И если настройка сохранения незавершенных - активна (и ответили хотя бы на 1 вопрос)
+        /// Сохраняем:
+        /// - Если еще не прошло сохранение текущей игры (Многократне прожатие ответа на последний вопрос)
+        /// - Если активна настройка сохранения незавершенных игр
+        /// - Ответили хотя бы на 1 вопрос
         if endGameFlag == false && saveRecordSettings == 1 {
             if currentQuestionIndex > 0 {
                 gameEnding(path: 2)
@@ -81,22 +82,7 @@ class GameViewController: UIViewController {
     }
     
     func showAlertIfNeeded() {
-        /// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
-        /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
-        if Game.shared.records.count != 0
-            && Game.shared.records[0].continueGameStatus == true
-            && weContinueLastGame == false
-            && Game.shared.showNewGameAlertStatus() != true {
-            DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя-бы на один вопрос, измените настройки, или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
-                alert.addAction(okAction)
-                self.present(alert, animated: true, completion: nil)
-                
-            }
-            /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
-            Game.shared.setThatWeShowedAlert()
-        }
+        gameHelper.showAlertIfNeeded(weContinueLastGame, self)
     }
 }
 
@@ -138,11 +124,13 @@ extension GameViewController {
         updateUI()
     }
     
+    /// Установка контента
     func addQuestionContent() {
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
             buttonsView.makeCorrectButtonsSet(currentQuestionIndex, initialQuestionSet, optionA, optionB, optionC, optionD)
-            setQuestionImageAndTextSize()
-            setQuestionText()
+            gameHelper.setQuestionImageAndTextSize(initialQuestionSet, currentQuestionIndex, questionImageView,
+                                                   questionImageHeight, view, questionLabel)
+            gameHelper.setQuestionText(initialQuestionSet, shuffleSettings, currentQuestionIndex, questionLabel)
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
@@ -158,49 +146,6 @@ extension GameViewController {
     
     func updatePercentage() -> Double {
         return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
-    }
-}
-
-
-// MARK: Установка контента вопросов (addQuestionContent)
-extension GameViewController {
-    
-    func setQuestionImageAndTextSize() {
-        let image = initialQuestionSet[currentQuestionIndex].image
-        if  image == "" {
-            questionImageView.image = nil
-            questionImageHeight.constant = 0
-            
-            if view.frame.size.width <= 320 {
-                questionLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .light)
-            } else if view.frame.size.width <= 410 {
-                questionLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
-            } else {
-                questionLabel.font = UIFont.systemFont(ofSize: 22.0, weight: .light)
-            }
-        } else {
-            questionImageView.image = UIImage(named: image)
-            if view.frame.size.width <= 320 {
-                questionLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
-                questionImageHeight.constant = 180
-            } else if view.frame.size.width <= 410 {
-                questionLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .light)
-                questionImageHeight.constant = 180
-            } else {
-                questionLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
-                questionImageHeight.constant = 220
-            }
-        }
-    }
-    
-    func setQuestionText() {
-        let normal = initialQuestionSet[currentQuestionIndex].question[0]
-        let random = initialQuestionSet[currentQuestionIndex].question.shuffled()
-        if  self.shuffleSettings == 1 {
-            self.questionLabel.text = random[0]
-        } else {
-            self.questionLabel.text = normal
-        }
     }
 }
 
@@ -246,7 +191,7 @@ extension GameViewController {
     }
     
     /// Запускаем подсказку после неправильного ответа
-    /// Попадаем сюда, только если активирована такая настройка
+    /// Попадаем сюда, только если активирована соответствующая настройка
     func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
@@ -270,7 +215,7 @@ extension GameViewController {
         switch path {
         case 1:
             callDelegateAndSaveRecord(continueStatus: false)
-            updateMessageAndShowAlert()
+            showAlert(title: "Ваш счет", message: "\(gameHelper.updatedAlertMessage(score: updatePercentage()))")
         case 2:
             callDelegateAndSaveRecord(continueStatus: true)
         default:
@@ -307,19 +252,6 @@ extension GameViewController {
         delegate?.updateInitialFromGameView()
     }
     
-    func updateMessageAndShowAlert() {
-        if updatePercentage() < 35 {
-            message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
-        } else if updatePercentage() < 55 {
-            message = "Достойный результат, но нужно продолжать работать!"
-        } else if updatePercentage() < 85 {
-            message = "Уже хорошо! Но вы можете постараться еще лучше!"
-        } else {
-            message = "Превосходно! Продолжайте в том же духе и по остальным темам!"
-        }
-        showAlert(title: "Ваш счет", message: "\(message)")
-    }
-    
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)
         let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
@@ -331,7 +263,7 @@ extension GameViewController {
     }
     
     func quitGame() {
-        refreshRandomSets()
+        gameHelper.refreshRandomSets(tag: currentTag)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -343,27 +275,6 @@ extension GameViewController {
         currentQuestionNumber = 1
         currentQuestionIndex = 0
         updateQuestion()
-    }
-    
-    func refreshRandomSets() {
-        /// Когда выбрана подборка "сет случайных вопросов" (tag от 0 до 9)
-        /// Перетасовываем их, когда:
-        /// - переключили тему в выборе тем
-        /// - завершили текущий сет (доиграли до конца)
-        /// При любых других раскладах текущий сет случайных вопросов будет повторяться
-        
-        if currentTag == 0 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных", tag: 0)
-        } else if currentTag == 1 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных", tag: 1)
-        } else if currentTag == 2 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных", tag: 2)
-        } else if currentTag == 3 {
-            SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 по Руководству", tag: 3)
-        } else if currentTag == 4 {
-            SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 по Паттернам", tag: 4)
-        }
-        // MARK: Добавить остальные рефреши когда появятся новые подборки
     }
 }
 
