@@ -51,6 +51,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingCell else { return UITableViewCell() }
         cell.delegate = self
+        tableView.separatorColor = #colorLiteral(red: 0.9432304886, green: 0.9432304886, blue: 0.9432304886, alpha: 1)
         return cell
     }
 }
