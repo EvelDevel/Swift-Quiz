@@ -199,7 +199,7 @@ extension CategoriesCell {
             SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Опциональная последовательность", tag: 26)
         case 28:
             newQuestionSet = TopicOperator.getQuestionsARC()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "ARC", tag: 27)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Автоматический подсчет ссылок", tag: 27)
             
         // MARK:  08 row
         case 29:
