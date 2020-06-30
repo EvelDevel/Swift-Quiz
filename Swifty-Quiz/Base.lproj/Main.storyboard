@@ -92,8 +92,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="9pn-OI-WXv"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="gear" catalog="system">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="12" minY="11" maxX="12" maxY="11"/>
+                                                <state key="normal" image="gear">
+                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -115,7 +116,7 @@
                                         <rect key="frame" x="0.0" y="70" width="288" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="XjC-5I-4ct" userLabel="Game Information">
-                                                <rect key="frame" x="16" y="10" width="257" height="110"/>
+                                                <rect key="frame" x="16" y="8" width="257" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о последней игре:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWi-6k-ilE">
                                                         <rect key="frame" x="0.0" y="0.0" width="257" height="24"/>
@@ -127,31 +128,31 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKW-XW-9Qq">
-                                                        <rect key="frame" x="0.0" y="24" width="257" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="24" width="257" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общее количество вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
-                                                        <rect key="frame" x="0.0" y="41.5" width="257" height="18"/>
+                                                        <rect key="frame" x="0.0" y="42" width="257" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пройдено вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-TR-MPJ">
-                                                        <rect key="frame" x="0.0" y="59.5" width="257" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="60" width="257" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Использовано подсказок: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msP-V4-F60">
-                                                        <rect key="frame" x="0.0" y="77" width="257" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="78" width="257" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
-                                                        <rect key="frame" x="0.0" y="94.5" width="257" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="96" width="257" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -165,7 +166,7 @@
                                             <constraint firstAttribute="bottom" secondItem="XjC-5I-4ct" secondAttribute="bottom" constant="10" id="bHx-g0-7LQ"/>
                                             <constraint firstAttribute="trailing" secondItem="XjC-5I-4ct" secondAttribute="trailing" constant="15" id="by7-1Y-gBw"/>
                                             <constraint firstAttribute="height" constant="130" id="hCG-Ny-5xn"/>
-                                            <constraint firstItem="XjC-5I-4ct" firstAttribute="top" secondItem="Jty-Zp-18d" secondAttribute="top" constant="10" id="tmp-en-a89"/>
+                                            <constraint firstItem="XjC-5I-4ct" firstAttribute="top" secondItem="Jty-Zp-18d" secondAttribute="top" constant="8" id="tmp-en-a89"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -902,7 +903,7 @@
         <segue reference="aL1-7b-at2"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gear" width="75" height="80"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="launchscreen" width="800" height="300"/>
         <image name="trash" catalog="system" width="121" height="128"/>
