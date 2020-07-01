@@ -12,6 +12,7 @@ enum Sounds {
     case answerButtonWrong
     case clearRecordsSound
     case infoAboutSetting
+    case theAppIsLoading
 }
 
 class SoundPlayer {
@@ -45,6 +46,9 @@ class SoundPlayer {
             case .infoAboutSetting:
                 name = "button1"
                 soundExtension = "wav"
+            case .theAppIsLoading:
+                name = "swipe"
+                soundExtension = "mp3"
             }
             
             guard let url = Bundle.main.url(forResource: name, withExtension: soundExtension) else {
@@ -54,7 +58,7 @@ class SoundPlayer {
                 player = try AVAudioPlayer(contentsOf: url)
                 player.play()
             } catch {
-                print("Error witn button sounds")
+                print("Error with sound")
             }
         }
     }

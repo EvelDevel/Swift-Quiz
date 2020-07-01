@@ -19,6 +19,7 @@ class LaunchViewController: UIViewController {
             let initial = mainStoryboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
             initial.modalPresentationStyle = .fullScreen
             self.present(initial, animated: true, completion: nil)
+            SoundPlayer.shared.playSound(sound: .theAppIsLoading)
         }
     }
 }

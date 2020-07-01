@@ -42,6 +42,7 @@
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
 		FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C057245591AC009FADDE /* SettingEnums.swift */; };
+		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
@@ -121,6 +122,7 @@
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
 		FB66C057245591AC009FADDE /* SettingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnums.swift; sourceTree = "<group>"; };
+		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB8606A62441CF1C00A692AD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 		FB87420624605B9C00247923 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FB69CBEC24ACFD64007506F6 /* swipe.mp3 */,
 				FB87420A24605BF500247923 /* button1.wav */,
 				FB87420824605BF500247923 /* button2.wav */,
 				FBA764F9246331E400D567D0 /* button3.mp3 */,
@@ -554,6 +557,7 @@
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
+				FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */,
 				FBDD37462464642F00B3E47D /* Main.storyboard in Resources */,
 				FB87420E24605BF500247923 /* button1.wav in Resources */,
 				FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */,
