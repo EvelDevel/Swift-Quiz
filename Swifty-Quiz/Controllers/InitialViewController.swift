@@ -18,6 +18,7 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var continueGameButton: UIButton!
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var contentCenter: NSLayoutConstraint!
+    @IBOutlet weak var topicPicker: UIButton!
     
     @IBOutlet var initialWhiteViews: [UIView]!
     @IBOutlet var initialButtons: [UIButton]!
@@ -33,6 +34,15 @@ class InitialViewController: UIViewController {
         showLastGameInfo()
         updateContinueButton()
         addShadows()
+        topicPickerImageTuning()
+    }
+    
+    /// Настройка корректного отображения стрелочки в выборе тем
+    /// Без этого картинка "сжимается" по бокам, становится сплющенной
+    func topicPickerImageTuning() {
+        topicPicker.imageView!.contentMode = .scaleAspectFit
+        topicPicker.contentVerticalAlignment = .center
+        topicPicker.contentHorizontalAlignment = .right
     }
     
     func addShadows() {

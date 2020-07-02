@@ -50,34 +50,56 @@
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-5e-qkn" userLabel="ActualTopic">
-                                                <rect key="frame" x="0.0" y="0.0" width="216" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущая категория:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3m-ip-ljx">
-                                                        <rect key="frame" x="16" y="11" width="184" height="16"/>
+                                                        <rect key="frame" x="16" y="11" width="256" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название категории" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
-                                                        <rect key="frame" x="16" y="29" width="184" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="DFh-GA-6kY"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="16" y="29" width="155.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
+                                                        <rect key="frame" x="0.0" y="1" width="288" height="59"/>
+                                                        <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <state key="normal" image="arrow.right.circle" catalog="system">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                        </state>
+                                                        <state key="highlighted" image="arrow.right.circle.fill" catalog="system">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="13"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y03-Wu-b7m"/>
+                                                            <segue destination="uSs-gR-mOM" kind="show" identifier="toTopicSelection" id="5Bw-8E-m1y"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="T1V-ld-fKj" firstAttribute="top" secondItem="O4g-5e-qkn" secondAttribute="top" constant="1" id="2fK-IP-6Ke"/>
                                                     <constraint firstItem="V3m-ip-ljx" firstAttribute="centerX" secondItem="O4g-5e-qkn" secondAttribute="centerX" id="5mZ-k3-0wq"/>
                                                     <constraint firstItem="V3m-ip-ljx" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" constant="16" id="95f-Jg-kA6"/>
-                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="centerX" secondItem="O4g-5e-qkn" secondAttribute="centerX" id="DBc-bi-PwC"/>
-                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mKv-or-Ad3" secondAttribute="trailing" constant="16" id="f1D-Ow-tMI"/>
-                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" constant="16" id="geB-pW-FmD"/>
+                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="V3m-ip-ljx" secondAttribute="bottom" constant="2" id="AKC-es-1yU"/>
+                                                    <constraint firstItem="T1V-ld-fKj" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" id="CEs-C3-6xS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="T1V-ld-fKj" secondAttribute="bottom" id="Pbn-GE-aOa"/>
+                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" constant="16" id="a9S-Fq-iZx"/>
                                                     <constraint firstItem="V3m-ip-ljx" firstAttribute="top" secondItem="O4g-5e-qkn" secondAttribute="top" constant="11" id="iPn-35-fXc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="T1V-ld-fKj" secondAttribute="trailing" id="l7a-VT-fwl"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V3m-ip-ljx" secondAttribute="trailing" constant="10" id="owo-nr-S2J"/>
-                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="V3m-ip-ljx" secondAttribute="bottom" constant="2" id="trf-f0-39K"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mKv-or-Ad3" secondAttribute="trailing" constant="50" id="uvS-2r-bAX"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -85,28 +107,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah">
-                                                <rect key="frame" x="228" y="0.0" width="60" height="60"/>
-                                                <color key="backgroundColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="9pn-OI-WXv"/>
-                                                </constraints>
-                                                <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="imageEdgeInsets" minX="12" minY="11" maxX="12" maxY="11"/>
-                                                <state key="normal" image="gear">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="13"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="XWP-N3-PbW"/>
-                                                    <segue destination="mCG-gu-aKe" kind="show" identifier="toSettingsViewController" id="Glg-Ao-mfx"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="bOq-V4-IDh"/>
@@ -174,13 +174,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-al-yFZ" userLabel="Record&amp;Setting">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-al-yFZ" userLabel="Record&amp;Setting">
                                         <rect key="frame" x="0.0" y="210" width="288" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Рекорды">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -194,14 +194,17 @@
                                                     <segue destination="3kd-gf-GXa" kind="show" identifier="toResultsViewController" id="3de-aO-0bL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
-                                                <rect key="frame" x="150" y="0.0" width="138" height="48"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah">
+                                                <rect key="frame" x="240" y="0.0" width="48" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="contentEdgeInsets" minX="14" minY="14" maxX="14" maxY="14"/>
-                                                <state key="normal" title="Выбор тем">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="MFP-cx-ZJB"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                                                <state key="normal" image="n-gear-lighter">
+                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -209,8 +212,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y03-Wu-b7m"/>
-                                                    <segue destination="uSs-gR-mOM" kind="show" identifier="toTopicSelection" id="5Bw-8E-m1y"/>
+                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="XWP-N3-PbW"/>
+                                                    <segue destination="mCG-gu-aKe" kind="show" identifier="toSettingsViewController" id="Glg-Ao-mfx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -227,7 +230,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="u18-MC-pOa"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                 <state key="normal" title="Играть">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -248,7 +251,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="zg8-CA-eai"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Продолжить">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -287,6 +290,7 @@
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
                         <outlet property="playedNumberLabel" destination="OIU-TR-MPJ" id="sah-ld-QHR"/>
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
+                        <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
                         <outletCollection property="initialWhiteViews" destination="O4g-5e-qkn" collectionClass="NSMutableArray" id="y40-xE-ZLg"/>
                         <outletCollection property="initialWhiteViews" destination="Jty-Zp-18d" collectionClass="NSMutableArray" id="QIC-jc-Wcv"/>
@@ -487,7 +491,7 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="522"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUK-a2-umW" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Ei-9VS">
@@ -903,9 +907,11 @@
         <segue reference="aL1-7b-at2"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="gear" width="75" height="80"/>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
+        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="launchscreen" width="800" height="300"/>
+        <image name="n-gear-lighter" width="89" height="96"/>
         <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
 </document>
