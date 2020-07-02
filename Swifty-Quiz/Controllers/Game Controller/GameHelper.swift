@@ -75,8 +75,9 @@ class GameHelper {
     
     
     // MARK: Настройка размеров для изображения и текста вопроса
-    func setQuestionImageAndTextSize(_ set: [Question], _ index: Int, _ questionImageView: UIImageView,
-                                     _ questionImageHeight: NSLayoutConstraint, _ view: UIView, _ questionLabel: UILabel) {
+    func setQuestionImageAndTextSizes(_ set: [Question], _ index: Int, _ questionImageView: UIImageView,
+                                      _ questionImageHeight: NSLayoutConstraint, _ view: UIView,
+                                      _ questionLabel: UILabel, _ buttons: [UIButton]) {
         
         let image = set[index].image
         if  image == "" {
@@ -104,6 +105,17 @@ class GameHelper {
             } else {
                 questionLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .light)
                 questionImageHeight.constant = 220
+            }
+        }
+        
+        /// Размер текста ответов
+        for button in buttons {
+            if view.frame.size.width <= 320 {
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+            } else if view.frame.size.width <= 410 {
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .light)
+            } else {
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
             }
         }
     }

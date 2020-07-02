@@ -128,8 +128,8 @@ extension GameViewController {
     func addQuestionContent() {
         if currentQuestionIndex <= initialQuestionSet.count - 1 {
             buttonsView.makeCorrectButtonsSet(currentQuestionIndex, initialQuestionSet, optionA, optionB, optionC, optionD)
-            gameHelper.setQuestionImageAndTextSize(initialQuestionSet, currentQuestionIndex, questionImageView,
-                                                   questionImageHeight, view, questionLabel)
+            gameHelper.setQuestionImageAndTextSizes(initialQuestionSet, currentQuestionIndex, questionImageView,
+                                                   questionImageHeight, view, questionLabel, answerButtonsCollection)
             gameHelper.setQuestionText(initialQuestionSet, shuffleSettings, currentQuestionIndex, questionLabel)
         } else if endGameFlag == false {
             gameEnding(path: 1)
