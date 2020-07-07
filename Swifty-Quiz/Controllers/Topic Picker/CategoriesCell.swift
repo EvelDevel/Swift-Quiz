@@ -116,19 +116,19 @@ extension CategoriesCell {
         /// Это обновляет сет, когда мы доиграли сет, чтобы после завершения не играть его снова
         case 1:
             newQuestionSet = TopicOperator.getRandom20()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 случайных", tag: 0)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 случайных вопросов", tag: 0)
         case 2:
             newQuestionSet = TopicOperator.getRandom50()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "50 случайных", tag: 1)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "50 случайных вопросов", tag: 1)
         case 3:
             newQuestionSet = TopicOperator.getRandom100()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "100 случайных", tag: 2)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "100 случайных вопросов", tag: 2)
         case 4:
             newQuestionSet = TopicOperator.getGuide20()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 по Руководству", tag: 3)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 вопросов по Руководству", tag: 3)
         case 5:
             newQuestionSet = TopicOperator.getPatterns20()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 по Паттернам", tag: 4)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "20 вопросов по Паттернам", tag: 4)
             
             
             // MARK: THE BASICS

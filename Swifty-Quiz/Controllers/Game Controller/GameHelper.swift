@@ -20,15 +20,15 @@ class GameHelper {
         /// - не доиграли
         
         if tag == 0 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных", tag: 0)
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
         } else if tag == 1 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных", tag: 1)
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных вопросов", tag: 1)
         } else if tag == 2 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных", tag: 2)
+            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных вопросов", tag: 2)
         } else if tag == 3 {
-            SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 по Руководству", tag: 3)
+            SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Руководству", tag: 3)
         } else if tag == 4 {
-            SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 по Паттернам", tag: 4)
+            SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
         }
         
         // MARK: TODO - Добавить остальные рефреши когда появятся новые подборки
@@ -111,11 +111,11 @@ class GameHelper {
         /// Размер текста ответов
         for button in buttons {
             if view.frame.size.width <= 320 {
-                button.titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
             } else if view.frame.size.width <= 410 {
-                button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .light)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
             } else {
-                button.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: .light)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 18.0)
             }
         }
     }
