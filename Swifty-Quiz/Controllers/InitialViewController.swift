@@ -9,6 +9,7 @@ import UIKit
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()
+    @IBOutlet weak var totalQuestionsLabel: UILabel!
     @IBOutlet weak var selectedTopic: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
@@ -35,6 +36,7 @@ class InitialViewController: UIViewController {
         updateContinueButton()
         addShadows()
         topicPickerImageTuning()
+        showTotalQuestions()
     }
     
     /// Настройка корректного отображения стрелочки в выборе тем
@@ -48,6 +50,12 @@ class InitialViewController: UIViewController {
     func addShadows() {
         shadows.addStaticShadows(initialWhiteViews)
         shadows.addButtonShadows(initialButtons)
+    }
+    
+    func showTotalQuestions() {
+        /// Показываем общее количество вопросов
+        _ = RandomSuperSets.getQuestions(limit: 0)
+        totalQuestionsLabel.text = "Всего вопросов: \(RandomSuperSets.showTotalquestionsNumber())"
     }
 }
 

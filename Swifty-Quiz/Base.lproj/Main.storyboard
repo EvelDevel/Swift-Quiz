@@ -273,11 +273,19 @@
                                     <constraint firstAttribute="width" constant="288" id="CB1-jd-ZYu"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общее количество вопросов: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
+                                <rect key="frame" x="111.5" y="635" width="152" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
+                            <constraint firstItem="DQZ-bR-P5Q" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="TO0-gY-iRv"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="20" id="uLq-MP-k4C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                     </view>
@@ -292,6 +300,7 @@
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
+                        <outlet property="totalQuestionsLabel" destination="DQZ-bR-P5Q" id="6Z6-p2-RmZ"/>
                         <outletCollection property="initialWhiteViews" destination="O4g-5e-qkn" collectionClass="NSMutableArray" id="y40-xE-ZLg"/>
                         <outletCollection property="initialWhiteViews" destination="Jty-Zp-18d" collectionClass="NSMutableArray" id="QIC-jc-Wcv"/>
                         <outletCollection property="initialButtons" destination="SXd-ZC-ZJT" collectionClass="NSMutableArray" id="Sqb-6h-YPd"/>
@@ -491,7 +500,7 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="621"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUK-a2-umW" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Ei-9VS">

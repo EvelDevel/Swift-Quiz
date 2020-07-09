@@ -6,11 +6,11 @@ import Foundation
 
 class RandomSuperSets {
     
+    private static var allQuestions: [Question] = []
+    private static var allQuestionsShuffled: [Question] = []
+    private static var arrayToReturn: [Question] = []
+    
     static func getQuestions(limit: Int) -> [Question] {
-        
-        var allQuestions: [Question] = []
-        var allQuestionsShuffled: [Question] = []
-        var arrayToReturn: [Question] = []
         
         allQuestions.append(contentsOf: TheBasicsSet.getQuestions())
         allQuestions.append(contentsOf: BasicOperatorsSet.getQuestions())
@@ -64,5 +64,9 @@ class RandomSuperSets {
         }
         
         return arrayToReturn
+    }
+    
+    static func showTotalquestionsNumber() -> Int {
+        return allQuestions.count
     }
 }
