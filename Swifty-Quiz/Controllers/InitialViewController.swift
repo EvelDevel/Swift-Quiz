@@ -5,6 +5,7 @@
 import UIKit
 
 // MARK: TODO
+/// Возможно имеет смысл сделать не всплывающие подсказки в настройках, а отдельное вью, на котором нормально расписать
 
 class InitialViewController: UIViewController {
     
