@@ -12,6 +12,7 @@ class RandomSuperSets {
     
     static func getQuestions(limit: Int) -> [Question] {
         
+        /// Обнуляем массивы
         allQuestions = []
         arrayToReturn = []
         
@@ -60,7 +61,7 @@ class RandomSuperSets {
         allQuestions.append(contentsOf: ArchitecturalPatternsSet.getQuestions())
         allQuestions.append(contentsOf: AntipatternsSet.getQuestions())
         
-        /// Набираем нужное кол-во вопросов
+        /// Набираем нужное кол-во вопросов по выбранной категории
         allQuestionsShuffled = allQuestions.shuffled()
         for index in 0..<limit {
             arrayToReturn.append(allQuestionsShuffled[index])
@@ -69,6 +70,7 @@ class RandomSuperSets {
         return arrayToReturn
     }
     
+    /// Получить общее количество вопросов
     static func showTotalquestionsNumber() -> Int {
         return allQuestions.count
     }
