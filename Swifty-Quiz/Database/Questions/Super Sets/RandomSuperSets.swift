@@ -12,6 +12,9 @@ class RandomSuperSets {
     
     static func getQuestions(limit: Int) -> [Question] {
         
+        allQuestions = []
+        arrayToReturn = []
+        
         allQuestions.append(contentsOf: TheBasicsSet.getQuestions())
         allQuestions.append(contentsOf: BasicOperatorsSet.getQuestions())
         allQuestions.append(contentsOf: StringAndCharactersSet.getQuestions())
