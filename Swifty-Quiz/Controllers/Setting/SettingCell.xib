@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="457" id="KGk-i7-Jjw" customClass="SettingCell" customModule="Swifty_Quiz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="466" id="KGk-i7-Jjw" customClass="SettingCell" customModule="Swifty_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D0I-Pl-Rlx">
@@ -206,14 +206,6 @@
                             <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Fc3-YR-kyn"/>
                         </connections>
                     </segmentedControl>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YNH-BO-Tn5">
-                        <rect key="frame" x="283" y="373" width="15" height="14"/>
-                        <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="5Sv-gW-cRJ"/>
-                            <constraint firstAttribute="width" constant="15" id="Tj5-Dv-CA5"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
@@ -223,7 +215,6 @@
                     <constraint firstItem="veB-j8-GhW" firstAttribute="top" secondItem="kDo-Pf-RA7" secondAttribute="bottom" constant="15" id="4hT-an-d0o"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Odq-rL-3kX" secondAttribute="bottom" constant="20" id="5pj-tC-6OW"/>
                     <constraint firstItem="D0I-Pl-Rlx" firstAttribute="firstBaseline" secondItem="l73-AV-Lm5" secondAttribute="firstBaseline" id="6X8-f8-P4g"/>
-                    <constraint firstAttribute="trailing" secondItem="YNH-BO-Tn5" secondAttribute="trailing" constant="22" id="C8I-PZ-qKu"/>
                     <constraint firstItem="JRi-HG-15f" firstAttribute="top" secondItem="oll-D6-fdB" secondAttribute="bottom" constant="5" id="CDf-qh-oR3"/>
                     <constraint firstItem="U53-eV-aMa" firstAttribute="top" secondItem="AVI-46-PfM" secondAttribute="bottom" constant="15" id="Clw-i5-oru"/>
                     <constraint firstItem="Odq-rL-3kX" firstAttribute="top" secondItem="U53-eV-aMa" secondAttribute="bottom" constant="5" id="Ctt-Xy-GuP"/>
@@ -239,7 +230,6 @@
                     <constraint firstItem="i1T-ve-GQ7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N4o-mw-CxX"/>
                     <constraint firstItem="0cg-zy-ekF" firstAttribute="firstBaseline" secondItem="kAI-b0-802" secondAttribute="firstBaseline" id="OUU-fg-3aq"/>
                     <constraint firstItem="U53-eV-aMa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OVs-wH-DP4"/>
-                    <constraint firstItem="YNH-BO-Tn5" firstAttribute="firstBaseline" secondItem="U53-eV-aMa" secondAttribute="firstBaseline" id="PW2-4H-ln9"/>
                     <constraint firstAttribute="trailing" secondItem="l73-AV-Lm5" secondAttribute="trailing" constant="16" id="PyE-xv-2Ta"/>
                     <constraint firstAttribute="trailing" secondItem="kAI-b0-802" secondAttribute="trailing" constant="16" id="RJS-BR-vdx"/>
                     <constraint firstItem="l73-AV-Lm5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tsn-WY-bQi"/>
@@ -289,10 +279,10 @@
                 <outletCollection property="allControls" destination="AVI-46-PfM" collectionClass="NSMutableArray" id="jRI-mZ-TIz"/>
                 <outletCollection property="allControls" destination="Odq-rL-3kX" collectionClass="NSMutableArray" id="xur-D8-ShZ"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="225.33482142857142"/>
+            <point key="canvasLocation" x="137.68115942028987" y="228.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
