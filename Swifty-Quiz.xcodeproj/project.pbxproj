@@ -46,6 +46,7 @@
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
+		FB7BCD4D24BC92CA00B8F6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
 		FB8606A92441CF7300A692AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* Record.swift */; };
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
@@ -77,7 +78,6 @@
 		FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* RandomSuperSets.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowsHelper.swift */; };
-		FBDD37462464642F00B3E47D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* TopicOperator.swift */; };
@@ -556,12 +556,12 @@
 				FBA764FB246331E400D567D0 /* button3.mp3 in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
+				FB7BCD4D24BC92CA00B8F6BA /* Main.storyboard in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
 				FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */,
-				FBDD37462464642F00B3E47D /* Main.storyboard in Resources */,
 				FB87420E24605BF500247923 /* button1.wav in Resources */,
 				FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */,
 				FB87420C24605BF500247923 /* button2.wav in Resources */,

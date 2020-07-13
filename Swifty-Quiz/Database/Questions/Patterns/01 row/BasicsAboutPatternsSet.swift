@@ -143,17 +143,17 @@ class BasicsAboutPatternsSet {
                      questionId: 2512,
                      helpText: "Давайте посмотрим на признаки хорошей архитектуры для MVP: распределение: большая часть ответственности разделена между Presenter и Model, а View ничего не делает; тестируемость: отличная, мы можем проверить большую часть бизнес-логики благодаря бездействию View; простота использования: в нашем нереально простом примере количество кода в два раза больше по сравнению с MVC, но в то же время идея MVP очень проста."),
             
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 2513,
-//                     helpText: ""),
+            //            Question(question: ["",
+            //                                "",
+            //                                ""],
+            //                     image: "",
+            //                     optionA: "",
+            //                     optionB: "",
+            //                     optionC: "",
+            //                     optionD: "",
+            //                     correctAnswer: 1,
+            //                     questionId: 2513,
+            //                     helpText: ""),
         ]
     }
 }

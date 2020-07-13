@@ -6,6 +6,13 @@ import UIKit
 
 // MARK: TODO
 /// Возможно имеет смысл сделать не всплывающие подсказки в настройках, а отдельное вью, на котором нормально расписать
+/// Добавить какую-нибудь ачивку за нахождение в рекордах всех тем со 100% результатом (типа "маньяк" или похожее)
+
+/// Пример как сделать кнопки для перехода на другие ресурсы
+//    @IBAction func goToWeb(_ sender: Any) {
+//        let urlComponents = URLComponents (string: "https://refactoring.guru/ru/design-patterns/chain-of-responsibility")!
+//        UIApplication.shared.open (urlComponents.url!)
+//    }
 
 class InitialViewController: UIViewController {
     
