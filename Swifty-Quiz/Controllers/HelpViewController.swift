@@ -9,7 +9,7 @@ protocol HelpViewControllerDelegate: class {
 }
 
 class HelpViewController: UIViewController {
-    
+
     @IBOutlet weak var helpView: UIView!
     @IBOutlet weak var helpTextLabel: UILabel!
     @IBOutlet weak var backInGameButton: UIButton!

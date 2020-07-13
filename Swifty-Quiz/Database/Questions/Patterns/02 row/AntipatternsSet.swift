@@ -4,7 +4,7 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 2801 по 2900
+// MARK:  Вопросы (id) с 2901 по 3000
 
 class AntipatternsSet {
     static func getQuestions() -> [Question] {
