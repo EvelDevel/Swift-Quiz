@@ -238,19 +238,22 @@ extension CategoriesCell {
             
         // MARK: 01 row
         case 37:
-            newQuestionSet = TopicOperator.getQuestionsBasicPatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Базовые паттерны", tag: 36)
+            newQuestionSet = TopicOperator.getQuestionsBasicsAboutPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Паттерны: Общие вопросы", tag: 36)
         case 38:
-            newQuestionSet = TopicOperator.getQuestionsAdvancedPatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Продвинутые паттерны", tag: 37)
+            newQuestionSet = TopicOperator.getQuestionsCreationalPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Порождающие паттерны", tag: 37)
+        case 39:
+            newQuestionSet = TopicOperator.getQuestionsStructuralPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Структурные паттерны", tag: 38)
             
         // MARK: 02 row
-        case 39:
-            newQuestionSet = TopicOperator.getQuestionsArchitecturalPatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Архитектурные паттерны", tag: 38)
         case 40:
+            newQuestionSet = TopicOperator.getQuestionsBehavioralPatterns()
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Поведенческие паттерны", tag: 39)
+        case 41:
             newQuestionSet = TopicOperator.getQuestionsAntipatterns()
-            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 39)
+            SelectedTopic.shared.addQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 40)
         
             
         default:
@@ -260,7 +263,7 @@ extension CategoriesCell {
                 superSets[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             case 10...35:
                 guideQuestions[position-10].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 36...39:
+            case 36...40:
                 patternsQuestions[position-36].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             default:
                 print("default case in addQuestionsToArray() in CategoriesCell")

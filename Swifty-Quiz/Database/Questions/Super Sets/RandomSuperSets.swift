@@ -55,10 +55,10 @@ class RandomSuperSets {
         
         ///
         
-        allQuestions.append(contentsOf: BasicPatternsSet.getQuestions())
-        allQuestions.append(contentsOf: AdvancedPatternsSet.getQuestions())
+        allQuestions.append(contentsOf: CreationalPatternsSet.getQuestions())
+        allQuestions.append(contentsOf: StructuralPatternsSet.getQuestions())
         
-        allQuestions.append(contentsOf: ArchitecturalPatternsSet.getQuestions())
+        allQuestions.append(contentsOf: BehavioralPatternsSet.getQuestions())
         allQuestions.append(contentsOf: AntipatternsSet.getQuestions())
         
         /// Набираем нужное кол-во вопросов по выбранной категории

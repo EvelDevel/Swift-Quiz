@@ -45,6 +45,7 @@
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
+		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
 		FB8606A92441CF7300A692AD /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A82441CF7300A692AD /* Record.swift */; };
 		FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */; };
@@ -62,9 +63,9 @@
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
 		FB96628D246E6E85000B82B9 /* AdvancedOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */; };
-		FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88A247B95430053166C /* BasicPatternsSet.swift */; };
-		FB99F88D247B978C0053166C /* AdvancedPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */; };
-		FB99F890247B98AE0053166C /* ArchitecturalPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */; };
+		FB99F88B247B95430053166C /* CreationalPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88A247B95430053166C /* CreationalPatternsSet.swift */; };
+		FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88C247B978C0053166C /* StructuralPatternsSet.swift */; };
+		FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */; };
 		FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* AntipatternsSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
@@ -125,6 +126,7 @@
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
 		FB8606A62441CF1C00A692AD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FB8606A82441CF7300A692AD /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FB8606AC24431A9300A692AD /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
@@ -141,9 +143,9 @@
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
 		FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedOperatorsSet.swift; sourceTree = "<group>"; };
-		FB99F88A247B95430053166C /* BasicPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPatternsSet.swift; sourceTree = "<group>"; };
-		FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedPatternsSet.swift; sourceTree = "<group>"; };
-		FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitecturalPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F88A247B95430053166C /* CreationalPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationalPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F88C247B978C0053166C /* StructuralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuralPatternsSet.swift; sourceTree = "<group>"; };
+		FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralPatternsSet.swift; sourceTree = "<group>"; };
 		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
@@ -423,8 +425,9 @@
 		FB99F889247B95280053166C /* 01 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB99F88A247B95430053166C /* BasicPatternsSet.swift */,
-				FB99F88C247B978C0053166C /* AdvancedPatternsSet.swift */,
+				FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */,
+				FB99F88A247B95430053166C /* CreationalPatternsSet.swift */,
+				FB99F88C247B978C0053166C /* StructuralPatternsSet.swift */,
 			);
 			path = "01 row";
 			sourceTree = "<group>";
@@ -432,7 +435,7 @@
 		FB99F88E247B97C90053166C /* 02 row */ = {
 			isa = PBXGroup;
 			children = (
-				FB99F88F247B98AE0053166C /* ArchitecturalPatternsSet.swift */,
+				FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */,
 				FB99F891247B98E40053166C /* AntipatternsSet.swift */,
 			);
 			path = "02 row";
@@ -587,7 +590,7 @@
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
 				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
-				FB99F88B247B95430053166C /* BasicPatternsSet.swift in Sources */,
+				FB99F88B247B95430053166C /* CreationalPatternsSet.swift in Sources */,
 				FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */,
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
 				FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */,
@@ -606,12 +609,12 @@
 				FB0807F124A0948500016E18 /* PatternsRandomSet.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
-				FB99F88D247B978C0053166C /* AdvancedPatternsSet.swift in Sources */,
+				FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */,
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
-				FB99F890247B98AE0053166C /* ArchitecturalPatternsSet.swift in Sources */,
+				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
@@ -621,6 +624,7 @@
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
+				FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,

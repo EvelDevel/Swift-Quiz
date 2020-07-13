@@ -83,12 +83,13 @@ class TopicOperator {
     // MARK: PATTERNS
     
     // MARK: 01 row
-    // Фабричный метод, Абстрактная фабрика
-    static func getQuestionsBasicPatterns() -> [Question] { return BasicPatternsSet.getQuestions() }  
-    static func getQuestionsAdvancedPatterns() -> [Question] { return AdvancedPatternsSet.getQuestions() }
+    // Порождающие и структурные паттерны
+    static func getQuestionsBasicsAboutPatterns() -> [Question] { return BasicsAboutPatternsSet.getQuestions() }  
+    static func getQuestionsCreationalPatterns() -> [Question] { return CreationalPatternsSet.getQuestions() }  
+    static func getQuestionsStructuralPatterns() -> [Question] { return StructuralPatternsSet.getQuestions() }
     
     // MARK: 02 row
-    // Строитель, Прототип, Одиночка
-    static func getQuestionsArchitecturalPatterns() -> [Question] { return ArchitecturalPatternsSet.getQuestions() }
+    // Поведенческие и аннтипаттерны
+    static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
 }

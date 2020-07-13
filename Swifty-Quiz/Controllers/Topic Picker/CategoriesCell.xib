@@ -659,11 +659,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-W0-nCM" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EE-qQ-BEr" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G39-3i-Oox" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Базовые паттерны">
+                                        <state key="normal" title="Общие вопросы">
+                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dh4-ee-vSo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EE-qQ-BEr" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="106" y="0.0" width="91" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Порождающие">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -675,11 +691,11 @@
                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uxw-az-k8Y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-Eu-Kjd" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="129.5" y="0.0" width="158.5" height="30"/>
+                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-Eu-Kjd" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="205" y="0.0" width="83" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Продвинутые паттерны">
+                                        <state key="normal" title="Структурные">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -699,11 +715,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NOy-Hr-VFH" userLabel="02 Row">
                                 <rect key="frame" x="0.0" y="38" width="288" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePD-0W-Wt5" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
+                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePD-0W-Wt5" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="Архитектурные паттерны">
+                                        <state key="normal" title="Поведенческие">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -715,8 +731,8 @@
                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hUv-fE-Dfs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-kX-loM" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="185" y="0.0" width="103" height="30"/>
+                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-kX-loM" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="151" y="0.0" width="137" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Антипаттерны">
@@ -788,15 +804,16 @@
                 <outletCollection property="guideQuestions" destination="sf5-r1-kg8" collectionClass="NSMutableArray" id="RM0-fo-aee"/>
                 <outletCollection property="guideQuestions" destination="jet-al-ahe" collectionClass="NSMutableArray" id="gIN-yS-jIK"/>
                 <outletCollection property="guideQuestions" destination="ZuT-3w-aPC" collectionClass="NSMutableArray" id="aWf-en-y0F"/>
-                <outletCollection property="patternsQuestions" destination="1EE-qQ-BEr" collectionClass="NSMutableArray" id="KTL-o2-fgG"/>
-                <outletCollection property="patternsQuestions" destination="fgV-Eu-Kjd" collectionClass="NSMutableArray" id="s1f-Ge-Ob0"/>
-                <outletCollection property="patternsQuestions" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="G0V-tQ-5U6"/>
-                <outletCollection property="patternsQuestions" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="BNc-KD-1Oc"/>
                 <outletCollection property="superSets" destination="efU-AZ-oTf" collectionClass="NSMutableArray" id="AXk-3b-eE5"/>
                 <outletCollection property="superSets" destination="sjn-CH-lMo" collectionClass="NSMutableArray" id="o89-eU-Odm"/>
                 <outletCollection property="superSets" destination="iyP-mf-tY5" collectionClass="NSMutableArray" id="l6b-8v-2Iq"/>
                 <outletCollection property="superSets" destination="t42-Ee-vW4" collectionClass="NSMutableArray" id="Yfr-xT-EEA"/>
                 <outletCollection property="superSets" destination="IZA-oy-Het" collectionClass="NSMutableArray" id="gh8-Th-D60"/>
+                <outletCollection property="patternsQuestions" destination="G39-3i-Oox" collectionClass="NSMutableArray" id="hcr-4j-Xp4"/>
+                <outletCollection property="patternsQuestions" destination="1EE-qQ-BEr" collectionClass="NSMutableArray" id="rwH-FH-LZZ"/>
+                <outletCollection property="patternsQuestions" destination="fgV-Eu-Kjd" collectionClass="NSMutableArray" id="twq-wA-2hX"/>
+                <outletCollection property="patternsQuestions" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="UE1-kT-2VQ"/>
+                <outletCollection property="patternsQuestions" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="GIz-wA-3Vj"/>
             </connections>
             <point key="canvasLocation" x="-178.2608695652174" y="174.10714285714286"/>
         </tableViewCell>
