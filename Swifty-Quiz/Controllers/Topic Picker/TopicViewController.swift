@@ -21,8 +21,13 @@ class TopicViewController: UIViewController {
         setDefaultNumberOfQuestions()
     }
     
+    /// Обновляем выбранную категорию моментально
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.selectedCategory()
+    }
+    
+    /// Обновляем (убираем) кнопку "продолжить" при смене темы с задержкой
+    override func viewDidDisappear(_ animated: Bool) {
         delegate?.updateInitialFromTopicView()
     }
     

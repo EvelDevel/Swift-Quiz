@@ -13,6 +13,8 @@ enum Sounds {
     case clearRecordsSound
     case infoAboutSetting
     case theAppIsLoading
+    case showContinueButton
+    case hideContinueButton
 }
 
 class SoundPlayer {
@@ -48,6 +50,12 @@ class SoundPlayer {
                 soundExtension = "wav"
             case .theAppIsLoading:
                 name = "swipe"
+                soundExtension = "mp3"
+            case .showContinueButton:
+                name = "showContinue"
+                soundExtension = "mp3"
+            case .hideContinueButton:
+                name = "hideContinue"
                 soundExtension = "mp3"
             }
             

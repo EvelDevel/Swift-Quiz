@@ -5,8 +5,6 @@
 import UIKit
 
 // MARK: TODO
-/// Возможно имеет смысл сделать не всплывающие подсказки в настройках, а отдельное вью, на котором нормально расписать
-/// Добавить какую-нибудь ачивку за нахождение в рекордах всех тем со 100% результатом (типа "маньяк" или похожее)
 
 /// Пример как сделать кнопки для перехода на другие ресурсы
 //    @IBAction func goToWeb(_ sender: Any) {
@@ -74,11 +72,17 @@ extension InitialViewController {
     func updateContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             UIView.animate(withDuration: 0.12, animations: {
+                if self.continueGameButton.isHidden == true {
+                    SoundPlayer.shared.playSound(sound: .showContinueButton)
+                }
                 self.contentCenter.constant = (UIScreen.main.scale / 2) + 12.5
                 self.continueGameButton.isHidden = false })
         } else {
+            if self.continueGameButton.isHidden == false {
+                SoundPlayer.shared.playSound(sound: .hideContinueButton)
+            }
             self.contentCenter.constant = (UIScreen.main.scale / 2) - 20.5
-            continueGameButton.isHidden = true
+            self.continueGameButton.isHidden = true
         }
     }
 }

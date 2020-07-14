@@ -20,7 +20,7 @@ class RecordsViewController: UIViewController {
         cellRegistration()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         delegate?.updateInitialFromRecordView()
     }
 }
