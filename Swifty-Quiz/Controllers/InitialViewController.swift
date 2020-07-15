@@ -6,12 +6,6 @@ import UIKit
 
 // MARK: TODO
 
-/// Пример как сделать кнопки для перехода на другие ресурсы
-//    @IBAction func goToWeb(_ sender: Any) {
-//        let urlComponents = URLComponents (string: "https://refactoring.guru/ru/design-patterns/chain-of-responsibility")!
-//        UIApplication.shared.open (urlComponents.url!)
-//    }
-
 class InitialViewController: UIViewController {
     
     private let recordCaretaker = RecordsCaretaker()
