@@ -12,6 +12,9 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoVerticalPosition: NSLayoutConstraint!
+    @IBOutlet weak var aboutButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var aboutButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var aboutButtonVerticalPosition: NSLayoutConstraint!
     
     private let recordCaretaker = RecordsCaretaker()
     @IBOutlet weak var totalQuestionsLabel: UILabel!
@@ -23,6 +26,7 @@ class InitialViewController: UIViewController {
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var contentCenter: NSLayoutConstraint!
     @IBOutlet weak var topicPicker: UIButton!
+    @IBOutlet weak var logoButton: UIButton!
     
     @IBOutlet var initialWhiteViews: [UIView]!
     @IBOutlet var initialButtons: [UIButton]!
@@ -43,6 +47,7 @@ class InitialViewController: UIViewController {
         updateContinueButton()
         addShadows()
         topicPickerImageTuning()
+        logoImageTuning()
         correctLogoPosition()
         showTotalQuestions()
     }
@@ -65,6 +70,11 @@ extension InitialViewController {
         topicPicker.contentVerticalAlignment = .center
         topicPicker.contentHorizontalAlignment = .right
     }
+    func logoImageTuning() {
+        logoButton.imageView!.contentMode = .scaleAspectFit
+        logoButton.contentVerticalAlignment = .top
+        logoButton.contentHorizontalAlignment = .right
+    }
     
     func addShadows() {
         shadows.addStaticShadows(initialWhiteViews)
@@ -77,14 +87,23 @@ extension InitialViewController {
             logoVerticalPosition.constant = 40
             logoWidth.constant = 150
             logoHeight.constant = 40
+            aboutButtonHeight.constant = 75
+            aboutButtonWidth.constant = 170
+            aboutButtonVerticalPosition.constant = 25
         } else if view.frame.size.width <= 410 {
             logoVerticalPosition.constant = 60
             logoWidth.constant = 180
             logoHeight.constant = 60
+            aboutButtonHeight.constant = 95
+            aboutButtonWidth.constant = 220
+            aboutButtonVerticalPosition.constant = 45
         } else {
             logoVerticalPosition.constant = 100
             logoWidth.constant = 200
             logoHeight.constant = 80
+            aboutButtonHeight.constant = 100
+            aboutButtonWidth.constant = 240
+            aboutButtonVerticalPosition.constant = 85
         }
     }
 }

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
                                 <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="X3f-Kd-fLr"/>
@@ -49,19 +49,16 @@
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZeJ-N1-e7I">
-                                <rect key="frame" x="13" y="57" width="291" height="180"/>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="kFH-TO-M4S"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-sQ-Zj7">
+                                <rect key="frame" x="16" y="64" width="288" height="172"/>
                                 <string key="text">Это некоммерческое приложение, направленное на укрепление знаний по языку Swift у iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. После нажатия на кнопки ниже - вы будете перенаправлены на внешние ресурсы.</string>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92B-HM-6qy">
-                                <rect key="frame" x="16" y="257" width="288" height="40"/>
+                                <rect key="frame" x="16" y="251" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="40"/>
@@ -119,18 +116,8 @@
                                     <constraint firstAttribute="height" constant="40" id="ADP-aB-zJx"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z1u-at-46T">
-                                <rect key="frame" x="16" y="317" width="291" height="70"/>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="VAF-ih-WvF"/>
-                                </constraints>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-WO-fgw">
-                                <rect key="frame" x="16" y="407" width="288" height="40"/>
+                                <rect key="frame" x="16" y="392" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-sd-EN0" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="168.5" height="40"/>
@@ -168,27 +155,37 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="CCO-vY-Znd"/>
+                                    <constraint firstAttribute="height" constant="40" id="E82-Df-Ut8"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Kn-E0Y">
+                                <rect key="frame" x="16" y="311" width="288" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="FXq-Kz-m6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FPK-sQ-Zj7" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="15R-ks-aVX"/>
+                            <constraint firstItem="eID-hT-29a" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rvs-WO-fgw" secondAttribute="bottom" constant="20" id="5mA-n5-Bao"/>
                             <constraint firstItem="ObP-s4-3a8" firstAttribute="top" secondItem="eID-hT-29a" secondAttribute="top" constant="25" id="7CZ-ci-ohm"/>
-                            <constraint firstItem="rvs-WO-fgw" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="7tV-pE-h8z"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="ZeJ-N1-e7I" secondAttribute="trailing" constant="16" id="Fm5-mf-thW"/>
-                            <constraint firstItem="Z1u-at-46T" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="GEZ-nj-g6G"/>
-                            <constraint firstItem="92B-HM-6qy" firstAttribute="top" secondItem="ZeJ-N1-e7I" secondAttribute="bottom" constant="20" id="HOB-nJ-PxQ"/>
-                            <constraint firstItem="rvs-WO-fgw" firstAttribute="top" secondItem="Z1u-at-46T" secondAttribute="bottom" constant="20" id="JaK-Yt-28L"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="Z1u-at-46T" secondAttribute="trailing" constant="13" id="Pb5-yA-6NW"/>
+                            <constraint firstItem="rvs-WO-fgw" firstAttribute="top" secondItem="s4P-Kn-E0Y" secondAttribute="bottom" constant="15" id="7dN-Tr-B8s"/>
+                            <constraint firstItem="rvs-WO-fgw" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="BHp-2W-1ND"/>
+                            <constraint firstItem="FPK-sQ-Zj7" firstAttribute="top" secondItem="ObP-s4-3a8" secondAttribute="bottom" constant="15" id="Kpm-O0-0Ny"/>
+                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="s4P-Kn-E0Y" secondAttribute="trailing" constant="16" id="PCl-th-air"/>
+                            <constraint firstItem="s4P-Kn-E0Y" firstAttribute="top" secondItem="92B-HM-6qy" secondAttribute="bottom" constant="20" id="Xlc-sh-R5a"/>
+                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="rvs-WO-fgw" secondAttribute="trailing" constant="16" id="bXh-ho-vhD"/>
                             <constraint firstItem="ObP-s4-3a8" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="dFR-PV-9Cu"/>
                             <constraint firstItem="92B-HM-6qy" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="ggR-kI-VaA"/>
-                            <constraint firstItem="Z1u-at-46T" firstAttribute="top" secondItem="92B-HM-6qy" secondAttribute="bottom" constant="20" id="i6b-IA-meS"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="rvs-WO-fgw" secondAttribute="trailing" constant="16" id="u64-Ul-7rX"/>
+                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="FPK-sQ-Zj7" secondAttribute="trailing" constant="16" id="iHC-5i-cYa"/>
+                            <constraint firstItem="92B-HM-6qy" firstAttribute="top" secondItem="FPK-sQ-Zj7" secondAttribute="bottom" constant="15" id="ic0-KV-lcB"/>
+                            <constraint firstItem="s4P-Kn-E0Y" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="raT-0w-KQk"/>
                             <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="ObP-s4-3a8" secondAttribute="trailing" constant="50" id="w43-4e-kNl"/>
-                            <constraint firstItem="ZeJ-N1-e7I" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="13" id="yHM-oR-KM8"/>
                             <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="92B-HM-6qy" secondAttribute="trailing" constant="16" id="z7P-Xm-jQP"/>
-                            <constraint firstItem="ZeJ-N1-e7I" firstAttribute="top" secondItem="ObP-s4-3a8" secondAttribute="bottom" constant="8" id="zrL-1o-NjS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eID-hT-29a"/>
                     </view>
@@ -214,6 +211,23 @@
                                     <constraint firstAttribute="width" constant="140" id="rHO-eI-hdD"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-C7-FGY" userLabel="About Project">
+                                <rect key="frame" x="75" y="30" width="170" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="PB4-CK-oVQ"/>
+                                    <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="info.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="goToAbout:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rXK-s6-XMj"/>
+                                    <segue destination="849-ZK-r5e" kind="show" id="9nc-dD-ESJ"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
                                 <rect key="frame" x="16" y="104" width="288" height="360"/>
                                 <subviews>
@@ -445,17 +459,6 @@
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-C7-FGY" userLabel="About Project">
-                                <rect key="frame" x="75" y="30" width="170" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="PB4-CK-oVQ"/>
-                                    <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="goToAbout:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rXK-s6-XMj"/>
-                                    <segue destination="849-ZK-r5e" kind="show" id="9nc-dD-ESJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -472,10 +475,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
                     <connections>
+                        <outlet property="aboutButtonHeight" destination="PB4-CK-oVQ" id="HaH-dB-bpO"/>
+                        <outlet property="aboutButtonVerticalPosition" destination="XHx-hL-pFL" id="swl-Oh-tpl"/>
+                        <outlet property="aboutButtonWidth" destination="kv3-HN-QsB" id="ydS-jk-9Qk"/>
                         <outlet property="contentCenter" destination="hs6-n2-mIT" id="t92-a9-86Y"/>
                         <outlet property="continueGameButton" destination="mO1-NM-9Qp" id="Q6k-rs-nB8"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
+                        <outlet property="logoButton" destination="rPr-C7-FGY" id="A8u-Ac-tgU"/>
                         <outlet property="logoHeight" destination="0d1-Vn-wXw" id="ASw-7Q-4Jy"/>
                         <outlet property="logoVerticalPosition" destination="N9V-EI-MNJ" id="Vx5-26-6Ph"/>
                         <outlet property="logoWidth" destination="rHO-eI-hdD" id="RFE-j1-aXt"/>
@@ -1101,7 +1108,8 @@
         <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="launchscreen" width="800" height="300"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="launch" width="800" height="300"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
         <image name="trash" catalog="system" width="121" height="128"/>
