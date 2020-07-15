@@ -29,6 +29,10 @@ class InitialViewController: UIViewController {
     @IBOutlet var initialButtons: [UIButton]!
     private let shadows = ShadowsHelper()
     
+    @IBAction func goToAbout(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+    }
+    
     @IBAction func tapButtonSounds(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }

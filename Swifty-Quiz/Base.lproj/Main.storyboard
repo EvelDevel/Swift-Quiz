@@ -317,6 +317,7 @@
                                     <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="goToAbout:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rXK-s6-XMj"/>
                                     <segue destination="849-ZK-r5e" kind="show" id="9nc-dD-ESJ"/>
                                 </connections>
                             </button>
