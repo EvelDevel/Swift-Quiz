@@ -50,23 +50,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZeJ-N1-e7I">
-                                <rect key="frame" x="13" y="57" width="291" height="115"/>
+                                <rect key="frame" x="13" y="57" width="291" height="180"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="kFH-TO-M4S"/>
+                                    <constraint firstAttribute="height" constant="180" id="kFH-TO-M4S"/>
                                 </constraints>
                                 <string key="text">Это некоммерческое приложение, направленное на укрепление знаний по языку Swift у iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. После нажатия на кнопки ниже - вы будете перенаправлены на внешние ресурсы.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92B-HM-6qy">
-                                <rect key="frame" x="16" y="182" width="288" height="40"/>
+                                <rect key="frame" x="16" y="257" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Автор">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -81,9 +81,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-yO-hFQ" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="70.5" y="0.0" width="100" height="40"/>
+                                        <rect key="frame" x="71.5" y="0.0" width="101" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Дизайнер">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -98,9 +98,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-nK-7s4" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="180.5" y="0.0" width="107.5" height="40"/>
+                                        <rect key="frame" x="182.5" y="0.0" width="105.5" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Редактор">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -120,23 +120,23 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z1u-at-46T">
-                                <rect key="frame" x="16" y="242" width="291" height="60"/>
+                                <rect key="frame" x="16" y="317" width="291" height="70"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="VAF-ih-WvF"/>
+                                    <constraint firstAttribute="height" constant="70" id="VAF-ih-WvF"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-WO-fgw">
-                                <rect key="frame" x="16" y="312" width="288" height="40"/>
+                                <rect key="frame" x="16" y="407" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-sd-EN0" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="168.5" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="refactor.guru">
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Refactoring Guru">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -150,10 +150,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-VM-edI" customClass="RoundCornerButton" customModule="Swifty_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="148" y="0.0" width="140" height="40"/>
+                                        <rect key="frame" x="178.5" y="0.0" width="109.5" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="swiftbook.ru">
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Swift Book">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -178,8 +178,8 @@
                             <constraint firstItem="rvs-WO-fgw" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="7tV-pE-h8z"/>
                             <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="ZeJ-N1-e7I" secondAttribute="trailing" constant="16" id="Fm5-mf-thW"/>
                             <constraint firstItem="Z1u-at-46T" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="GEZ-nj-g6G"/>
-                            <constraint firstItem="92B-HM-6qy" firstAttribute="top" secondItem="ZeJ-N1-e7I" secondAttribute="bottom" constant="10" id="HOB-nJ-PxQ"/>
-                            <constraint firstItem="rvs-WO-fgw" firstAttribute="top" secondItem="Z1u-at-46T" secondAttribute="bottom" constant="10" id="JaK-Yt-28L"/>
+                            <constraint firstItem="92B-HM-6qy" firstAttribute="top" secondItem="ZeJ-N1-e7I" secondAttribute="bottom" constant="20" id="HOB-nJ-PxQ"/>
+                            <constraint firstItem="rvs-WO-fgw" firstAttribute="top" secondItem="Z1u-at-46T" secondAttribute="bottom" constant="20" id="JaK-Yt-28L"/>
                             <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="Z1u-at-46T" secondAttribute="trailing" constant="13" id="Pb5-yA-6NW"/>
                             <constraint firstItem="ObP-s4-3a8" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="dFR-PV-9Cu"/>
                             <constraint firstItem="92B-HM-6qy" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="ggR-kI-VaA"/>
@@ -446,7 +446,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-C7-FGY" userLabel="About Project">
-                                <rect key="frame" x="75" y="29" width="170" height="65"/>
+                                <rect key="frame" x="75" y="30" width="170" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="PB4-CK-oVQ"/>
                                     <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
@@ -463,7 +463,7 @@
                             <constraint firstItem="abk-Hi-kpA" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="40" id="N9V-EI-MNJ"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
                             <constraint firstItem="DQZ-bR-P5Q" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="TO0-gY-iRv"/>
-                            <constraint firstItem="rPr-C7-FGY" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="29" id="XHx-hL-pFL"/>
+                            <constraint firstItem="rPr-C7-FGY" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="30" id="XHx-hL-pFL"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="20" id="uLq-MP-k4C"/>
                             <constraint firstItem="abk-Hi-kpA" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="w98-eo-kLd"/>
@@ -476,6 +476,9 @@
                         <outlet property="continueGameButton" destination="mO1-NM-9Qp" id="Q6k-rs-nB8"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
+                        <outlet property="logoHeight" destination="0d1-Vn-wXw" id="ASw-7Q-4Jy"/>
+                        <outlet property="logoVerticalPosition" destination="N9V-EI-MNJ" id="Vx5-26-6Ph"/>
+                        <outlet property="logoWidth" destination="rHO-eI-hdD" id="RFE-j1-aXt"/>
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>

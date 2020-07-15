@@ -8,6 +8,11 @@ import UIKit
 
 class InitialViewController: UIViewController {
     
+    /// Для настройки логотипа
+    @IBOutlet weak var logoHeight: NSLayoutConstraint!
+    @IBOutlet weak var logoWidth: NSLayoutConstraint!
+    @IBOutlet weak var logoVerticalPosition: NSLayoutConstraint!
+    
     private let recordCaretaker = RecordsCaretaker()
     @IBOutlet weak var totalQuestionsLabel: UILabel!
     @IBOutlet weak var selectedTopic: UILabel!
@@ -23,10 +28,10 @@ class InitialViewController: UIViewController {
     @IBOutlet var initialButtons: [UIButton]!
     private let shadows = ShadowsHelper()
     
+    /// Звуки
     @IBAction func goToAbout(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    
     @IBAction func tapButtonSounds(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
@@ -38,8 +43,20 @@ class InitialViewController: UIViewController {
         updateContinueButton()
         addShadows()
         topicPickerImageTuning()
+        correctLogoPosition()
         showTotalQuestions()
     }
+    
+    func showTotalQuestions() {
+        /// Показываем общее количество вопросов
+        _ = RandomSuperSets.getQuestions(limit: 0)
+        totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
+    }
+}
+
+
+// MARK: Наводим красоту в UI
+extension InitialViewController {
     
     /// Настройка корректного отображения стрелочки в выборе тем
     /// Без этого картинка "сжимается" по бокам, становится сплющенной
@@ -54,10 +71,21 @@ class InitialViewController: UIViewController {
         shadows.addButtonShadows(initialButtons)
     }
     
-    func showTotalQuestions() {
-        /// Показываем общее количество вопросов
-        _ = RandomSuperSets.getQuestions(limit: 0)
-        totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
+    /// Настройка адекватного расположение логотипа
+    func correctLogoPosition() {
+        if view.frame.size.width <= 320 {
+            logoVerticalPosition.constant = 40
+            logoWidth.constant = 150
+            logoHeight.constant = 40
+        } else if view.frame.size.width <= 410 {
+            logoVerticalPosition.constant = 60
+            logoWidth.constant = 180
+            logoHeight.constant = 60
+        } else {
+            logoVerticalPosition.constant = 100
+            logoWidth.constant = 200
+            logoHeight.constant = 80
+        }
     }
 }
 
