@@ -20,8 +20,6 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
-    @IBOutlet weak var helpCounterLabel: UILabel!
-    @IBOutlet weak var playedNumberLabel: UILabel!
     @IBOutlet weak var continueGameButton: UIButton!
     @IBAction func startGame(_ sender: UIButton) { }
     @IBOutlet weak var contentCenter: NSLayoutConstraint!
@@ -61,7 +59,7 @@ class InitialViewController: UIViewController {
     func showTotalQuestions() {
         /// Показываем общее количество вопросов
         _ = RandomSuperSets.getQuestions(limit: 0)
-        totalQuestionsLabel.text = "Всего вопросов: \(RandomSuperSets.showTotalquestionsNumber())"
+        totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
     }
 }
 
@@ -75,13 +73,13 @@ extension InitialViewController {
                 if self.continueGameButton.isHidden == true {
                     SoundPlayer.shared.playSound(sound: .showContinueButton)
                 }
-                self.contentCenter.constant = (UIScreen.main.scale / 2) + 12.5
+                self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
                 self.continueGameButton.isHidden = false })
         } else {
             if self.continueGameButton.isHidden == false {
                 SoundPlayer.shared.playSound(sound: .hideContinueButton)
             }
-            self.contentCenter.constant = (UIScreen.main.scale / 2) - 20.5
+            self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
             self.continueGameButton.isHidden = true
         }
     }
@@ -114,11 +112,9 @@ extension InitialViewController {
         if records.count != 0 {
             /// Если он не пуст, инициализируем необходимые значения
             let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
-            helpCounterLabel.text = "Использовано подсказок: \(records[0].helpCounter ?? 0)"
             lastTopic.text = "Категория: \(records[0].topic ?? "")"
-            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
-            totalQuestions.text = "Общее количество вопросов: \(records[0].totalQuestion ?? 0)"
-            playedNumberLabel.text = "Пройдено вопросов: \(records[0].playedNum ?? 0)"
+            totalQuestions.text = "Вопросы: \(records[0].playedNum ?? 0) из \(records[0].totalQuestion ?? 0) (подсказок: \(records[0].helpCounter ?? 0))"
+            lastScore.text = "Результат: \(records[0].score ?? 0) ответов (\(roundedPercents)%)"
         }
     }
 }
@@ -162,11 +158,10 @@ extension InitialViewController: GameViewControllerDelegate {
                     helpCounter: Int,
                     playedNum: Int) {
         
-        playedNumberLabel.text = "Пройдено вопросов: \(playedNum)"
-        helpCounterLabel.text = "Использовано подсказок: \(helpCounter)"
         lastTopic.text = "Категория: \(topic)"
-        lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
-        totalQuestions.text = "Общее количество вопросов: \(totalQuestion)"
+        totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
+        lastScore.text = "Результат: \(result) правильных (\(percentOfCorrect)%)"
+        
     }
     
     func updateInitialFromGameView() {

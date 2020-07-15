@@ -77,6 +77,7 @@
 		FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA97903247CF43200228FB5 /* SettingCell.xib */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionTypesSet.swift */; };
+		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
 		FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* RandomSuperSets.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowsHelper.swift */; };
@@ -157,6 +158,7 @@
 		FBA97903247CF43200228FB5 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTypesSet.swift; sourceTree = "<group>"; };
+		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
 		FBB4405424991C1E00D88937 /* RandomSuperSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSuperSets.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
 		FBC1D489247574730055FF62 /* ShadowsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsHelper.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			children = (
 				FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */,
 				FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */,
+				FBB3584424BF229300C33A79 /* AboutProjectController.swift */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
 				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
@@ -638,6 +641,7 @@
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,
+				FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */,
 				FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
