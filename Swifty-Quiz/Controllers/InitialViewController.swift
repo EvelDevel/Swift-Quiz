@@ -121,6 +121,8 @@ extension InitialViewController {
                 self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
                 self.continueGameButton.isHidden = false })
         } else {
+            /// Дополнительная проверка по флагу для того,
+            /// чтобы по завершению игры не было фонового звука скрытия кнопки (пока мы еще в игре)
             if self.continueGameButton.isHidden == false {
                 SoundPlayer.shared.playSound(sound: .hideContinueButton)
             }

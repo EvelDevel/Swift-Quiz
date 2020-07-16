@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
     private let gameHelper = GameHelper()
     private let buttonsView = AnswerButtonsView()
     private let shadows = ShadowsHelper()
-    private var initialQuestionSet: [Question] = []
+    private var localQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
     private var score: Int = 0
@@ -74,6 +74,7 @@ class GameViewController: UIViewController {
                 gameEnding(path: 2)
             }
         }
+        delegate?.updateInitialFromGameView()
     }
     
     func addShadows() {
@@ -97,7 +98,7 @@ extension GameViewController {
                 self.currentQuestionIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
                 self.helpCounter = Game.shared.records[0].helpCounter!
-                self.initialQuestionSet = SelectedTopic.shared.topic.questionSet
+                self.localQuestionSet = SelectedTopic.shared.topic.questionSet
                 if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
             }
         }
@@ -107,17 +108,20 @@ extension GameViewController {
         let normal = SelectedTopic.shared.topic.questionSet
         let random = SelectedTopic.shared.topic.questionSet.shuffled()
         
+        /// В этот момент мы передаем локальному массиву с вопросами исходный массив
+        /// Который мы добавили в синглтон при выборе категории
+        /// Далее по контроллеру изменяем локальный массив, не трогая порядок вопросов исходного
         if weContinueLastGame == false {
             if orderSettings == 0 {
-                initialQuestionSet = normal
+                localQuestionSet = normal
             } else {
-                initialQuestionSet = random
+                localQuestionSet = random
             }
         }
     }
     
     func updateQuestion() {
-        buttonsView.refreshButtonsVisibility(currentQuestionIndex, initialQuestionSet.count, answerButtonsCollection)
+        buttonsView.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
         buttonsView.setDefaultButtonsColor(answerButtonsCollection)
         shadows.addButtonShadows(answerButtonsCollection)
         addQuestionContent()
@@ -126,11 +130,11 @@ extension GameViewController {
     
     /// Установка контента
     func addQuestionContent() {
-        if currentQuestionIndex <= initialQuestionSet.count - 1 {
-            buttonsView.makeCorrectButtonsSet(currentQuestionIndex, initialQuestionSet, optionA, optionB, optionC, optionD)
-            gameHelper.setQuestionImageAndTextSizes(initialQuestionSet, currentQuestionIndex, questionImageView,
+        if currentQuestionIndex <= localQuestionSet.count - 1 {
+            buttonsView.makeCorrectButtonsSet(currentQuestionIndex, localQuestionSet, optionA, optionB, optionC, optionD)
+            gameHelper.setQuestionImageAndTextSizes(localQuestionSet, currentQuestionIndex, questionImageView,
                                                    questionImageHeight, view, questionLabel, answerButtonsCollection)
-            gameHelper.setQuestionText(initialQuestionSet, shuffleSettings, currentQuestionIndex, questionLabel)
+            gameHelper.setQuestionText(localQuestionSet, shuffleSettings, currentQuestionIndex, questionLabel)
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
@@ -140,12 +144,12 @@ extension GameViewController {
         dontUpdateQuestionFlag = false
         helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
-        questionCounterLabel.text = "\(currentQuestionNumber) / \(initialQuestionSet.count)"
-        progressView.frame.size.width = (progressWhite.frame.size.width / CGFloat(initialQuestionSet.count)) * CGFloat(currentQuestionIndex)
+        questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
+        progressView.frame.size.width = (progressWhite.frame.size.width / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
     }
     
     func updatePercentage() -> Double {
-        return Double(String(format: "%.1f", (Double(self.score) / Double(self.initialQuestionSet.count) * 100))) ?? 0
+        return Double(String(format: "%.1f", (Double(self.score) / Double(self.localQuestionSet.count) * 100))) ?? 0
     }
 }
 
@@ -180,7 +184,7 @@ extension GameViewController {
         /// Обновляем вопрос, показатели, и переходим дальше, если:
         /// - еще остались вопросы в массиве
         /// - мы не выводили подсказку "после неправильного ответа" (настройки)
-        if currentQuestionIndex < initialQuestionSet.count && dontUpdateQuestionFlag == false {
+        if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
             currentQuestionIndex += 1
             currentQuestionNumber += 1
             
@@ -196,7 +200,7 @@ extension GameViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
-        helpView.questionID = initialQuestionSet[currentQuestionIndex].questionId
+        helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
     
         if helpFlag == false { // отключаем многократное засчитывание
             helpCounter += 1
@@ -226,7 +230,7 @@ extension GameViewController {
     func callDelegateAndSaveRecord(continueStatus: Bool) {
         endGameFlag = true
         delegate?.didEndGame(   result: score,
-                                totalQuestion: initialQuestionSet.count,
+                                totalQuestion: localQuestionSet.count,
                                 percentOfCorrect: updatePercentage(),
                                 topic: SelectedTopic.shared.topic.topicName,
                                 helpCounter: helpCounter,
@@ -235,7 +239,7 @@ extension GameViewController {
         let record = Record(    date: Date(),
                                 score: score,
                                 topic: SelectedTopic.shared.topic.topicName,
-                                totalQuestion: initialQuestionSet.count,
+                                totalQuestion: localQuestionSet.count,
                                 percentOfCorrectAnswer: updatePercentage(),
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex,
@@ -246,10 +250,12 @@ extension GameViewController {
         } else {
             Game.shared.addRecord(record)
         }
-        SelectedTopic.shared.addQuestionSet(initialQuestionSet,
+        /// В синглтон улетает исходный массив (не зашафленный)
+        /// Это нужно для корректной работы, при изменении порядка вопросов в настройках
+        /// (когда сыграли перемешанный, чтобы сохранялся исходный на случай когда вернули настройки на прямой порядок)
+        SelectedTopic.shared.addQuestionSet(SelectedTopic.shared.topic.questionSet,
                                             topic: SelectedTopic.shared.topic.topicName,
                                             tag: SelectedTopic.shared.topic.topicTag)
-        delegate?.updateInitialFromGameView()
     }
     
     func showAlert(title: String, message: String) {
@@ -286,7 +292,7 @@ extension GameViewController {
         if segue.identifier  == "toHelpViewController" {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
-            helpView.questionID = initialQuestionSet[currentQuestionIndex].questionId
+            helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
             /// Если не переходим к следующему - засчитываем только 1 подсказку
             if helpFlag == false {
                 helpCounter += 1
