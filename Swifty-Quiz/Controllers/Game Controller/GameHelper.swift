@@ -44,7 +44,7 @@ class GameHelper {
         } else if score < 55 {
             message = "Достойный результат, но нужно продолжать работать!"
         } else if score < 85 {
-            message = "Уже хорошо! Но вы можете постараться еще лучше!"
+            message = "Уже хорошо! Но вы можете постараться сделать еще лучше!"
         } else {
             message = "Превосходно! Продолжайте в том же духе и по остальным темам!"
         }
@@ -63,7 +63,7 @@ class GameHelper {
             && Game.shared.showNewGameAlertStatus() != true {
             
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя-бы на один вопрос, измените настройки, или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя бы на один вопрос, измените настройки или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
                 alert.addAction(okAction)
                 view.present(alert, animated: true, completion: nil)

@@ -44,7 +44,7 @@ class TopicViewController: UIViewController {
         /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             if Game.shared.showTopicAlertStatus() != true {
-                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы выберете другую тему, ответите хотя-бы на один вопрос новой игры, или измените настройки, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы выберете другую тему, ответите хотя бы на один вопрос новой игры или измените настройки, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)
