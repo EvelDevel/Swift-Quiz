@@ -162,7 +162,7 @@ extension InitialViewController {
             let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
             lastTopic.text = "Категория: \(records[0].topic ?? "")"
             totalQuestions.text = "Вопросы: \(records[0].playedNum ?? 0) из \(records[0].totalQuestion ?? 0) (подсказок: \(records[0].helpCounter ?? 0))"
-            lastScore.text = "Результат: \(records[0].score ?? 0) ответов (\(roundedPercents)%)"
+            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
         }
     }
 }
@@ -208,7 +208,7 @@ extension InitialViewController: GameViewControllerDelegate {
         
         lastTopic.text = "Категория: \(topic)"
         totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
-        lastScore.text = "Результат: \(result) правильных (\(percentOfCorrect)%)"
+        lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
         
     }
     
