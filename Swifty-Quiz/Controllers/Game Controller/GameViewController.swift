@@ -74,6 +74,7 @@ class GameViewController: UIViewController {
                 gameEnding(path: 2)
             }
         }
+        /// Всегда при закрытии экрана вызываем обновление initialView
         delegate?.updateInitialFromGameView()
     }
     

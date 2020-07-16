@@ -5,6 +5,7 @@
 import UIKit
 
 // MARK: TODO
+// Сделать возможность открывать картинку на весь экран и "зумить" (на случай мелких картинок)
 
 class InitialViewController: UIViewController {
     
