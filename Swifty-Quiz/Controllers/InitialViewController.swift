@@ -34,27 +34,58 @@ class InitialViewController: UIViewController {
     private let shadows = ShadowsHelper()
     
     /// Звуки
-    @IBAction func goToAbout(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
-    }
-    @IBAction func tapButtonSounds(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
-    }
+    @IBAction func goToAbout(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+    @IBAction func tapButtonSounds(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayingStartInformation()
+        userInterfaceTuning()
+    }
+}
+
+
+// MARK: Отображаем стартовую информацию
+extension InitialViewController {
+    
+    func displayingStartInformation() {
         addDefaultQuestionSet()
         showLastGameInfo()
-        updateContinueButton()
-        addShadows()
-        topicPickerImageTuning()
-        logoImageTuning()
-        correctLogoPosition()
         showTotalQuestions()
     }
     
+    /// Загружаем дефолтную или текущую категорию
+    func addDefaultQuestionSet() {
+        if SelectedTopic.shared.topic.questionSet.isEmpty {
+            /// Первый запуск: добавляем сет, обновлянем название
+            let newSet = TopicOperator.getQuestionsTheBasics()
+            SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
+            selectedTopic.text = "Основы"
+        } else {
+            /// При любом повторном: берем информацию из синглтона
+            selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+        }
+    }
+    
+    /// Показываем информацию о последней игре
+    func showLastGameInfo() {
+        let records: [Record] = recordCaretaker.getRecordsList()
+        let category = records[0].topic ?? ""
+        let played = records[0].playedNum ?? 0
+        let total = records[0].totalQuestion ?? 0
+        let help = records[0].helpCounter ?? 0
+        let correct = records[0].score ?? 0
+        
+        if records.count != 0 {
+            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+            lastTopic.text = "Категория: \(category)"
+            totalQuestions.text = "Вопросы: \(played) из \(total) (подсказок: \(help))"
+            lastScore.text = "Правильных ответов: \(correct) (\(roundedPercents)%)"
+        }
+    }
+    
+    /// Показываем общее количество вопросов в игре
     func showTotalQuestions() {
-        /// Показываем общее количество вопросов
         _ = RandomSuperSets.getQuestions(limit: 0)
         totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
     }
@@ -64,8 +95,36 @@ class InitialViewController: UIViewController {
 // MARK: Наводим красоту в UI
 extension InitialViewController {
     
-    /// Настройка корректного отображения стрелочки в выборе тем
-    /// Без этого картинка "сжимается" по бокам, становится сплющенной
+    func userInterfaceTuning() {
+        updateContinueButton()
+        addShadows()
+        topicPickerImageTuning()
+        logoImageTuning()
+        correctLogoPosition()
+    }
+    
+    /// Показываем или скрываем кнопку "продолжить"
+    func updateContinueButton() {
+        if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
+            UIView.animate(withDuration: 0.12, animations: {
+                if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }
+                self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
+                self.continueGameButton.isHidden = false })
+        } else {
+            if self.continueGameButton.isHidden == false { SoundPlayer.shared.playSound(sound: .hideContinueButton) }
+            self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
+            self.continueGameButton.isHidden = true
+        }
+    }
+    
+    /// Добавляем тени на элементы
+    func addShadows() {
+        shadows.addStaticShadows(initialWhiteViews)
+        shadows.addButtonShadows(initialButtons)
+    }
+    
+    /// Настройка корректного отображения стрелочки в выборе тем и иконки у логотипа
+    /// Без этого картинки "сжимаются" по бокам, становясь немного сплющенными
     func topicPickerImageTuning() {
         topicPicker.imageView!.contentMode = .scaleAspectFit
         topicPicker.contentVerticalAlignment = .center
@@ -75,11 +134,6 @@ extension InitialViewController {
         logoButton.imageView!.contentMode = .scaleAspectFit
         logoButton.contentVerticalAlignment = .top
         logoButton.contentHorizontalAlignment = .right
-    }
-    
-    func addShadows() {
-        shadows.addStaticShadows(initialWhiteViews)
-        shadows.addButtonShadows(initialButtons)
     }
     
     /// Настройка адекватного расположение логотипа
@@ -110,70 +164,10 @@ extension InitialViewController {
 }
 
 
-// MARK: Показываем или убираем кнопку "продолжить игру"
-extension InitialViewController {
-    
-    func updateContinueButton() {
-        if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            UIView.animate(withDuration: 0.12, animations: {
-                if self.continueGameButton.isHidden == true {
-                    SoundPlayer.shared.playSound(sound: .showContinueButton)
-                }
-                self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
-                self.continueGameButton.isHidden = false })
-        } else {
-            /// Дополнительная проверка по флагу для того,
-            /// чтобы по завершению игры не было фонового звука скрытия кнопки (пока мы еще в игре)
-            if self.continueGameButton.isHidden == false {
-                SoundPlayer.shared.playSound(sound: .hideContinueButton)
-            }
-            self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
-            self.continueGameButton.isHidden = true
-        }
-    }
-}
-
-
-// MARK: Загрузка дефолтной категории
-extension InitialViewController {
-    
-    func addDefaultQuestionSet() {
-        if SelectedTopic.shared.topic.questionSet.isEmpty {
-            /// Первый запуск: добавляем сет, обновлянем название
-            let newSet = TopicOperator.getQuestionsTheBasics()
-            SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
-            selectedTopic.text = "Основы"
-        } else {
-            /// При любом повторном: берем информацию из синглтона
-            selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
-        }
-    }
-}
-
-
-// MARK: Загружаем информацию о последней игре при входе
-extension InitialViewController {
-    
-    func showLastGameInfo() {
-        /// Получаем список рекордов
-        let records: [Record] = recordCaretaker.getRecordsList()
-        if records.count != 0 {
-            /// Если он не пуст, инициализируем необходимые значения
-            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
-            lastTopic.text = "Категория: \(records[0].topic ?? "")"
-            totalQuestions.text = "Вопросы: \(records[0].playedNum ?? 0) из \(records[0].totalQuestion ?? 0) (подсказок: \(records[0].helpCounter ?? 0))"
-            lastScore.text = "Правильных ответов: \(records[0].score ?? 0) (\(roundedPercents)%)"
-        }
-    }
-}
-
-
 // MARK: Активация делегатов
 extension InitialViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /// Указываем себя в качестве делегата в момент перехода по нужным segue
-        /// Выполняем проверку, что выбранный сет вопросов не пустой
         if segue.identifier  == "toGameViewController" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
@@ -201,18 +195,13 @@ extension InitialViewController:    GameViewControllerDelegate,
                                     TopicViewControllerDelegate,
                                     RecordsViewControllerDelegate,
                                     SettingsViewControllerDelegate{
-    func didEndGame(result: Int,
-                    totalQuestion: Int,
-                    percentOfCorrect: Double,
-                    topic: String,
-                    helpCounter: Int,
-                    playedNum: Int) {
-        
-        lastTopic.text =        "Категория: \(topic)"
-        totalQuestions.text =   "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
-        lastScore.text =        "Правильных ответов: \(result) (\(percentOfCorrect)%)"
-    }
     
-    func updateInitialView()    { updateContinueButton() }
-    func selectedCategory()     { selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)" }
+    func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double,
+                    topic: String, helpCounter: Int, playedNum: Int) {
+        lastTopic.text = "Категория: \(topic)"
+        totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
+        lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
+    }
+    func updateInitialView() { updateContinueButton() }
+    func selectedCategory() { selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)" }
 }

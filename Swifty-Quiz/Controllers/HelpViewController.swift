@@ -37,11 +37,6 @@ class HelpViewController: UIViewController {
             delegate?.refreshTappedAnswerStatus()
         }
     }
-}
-
-
-// MARK: Поиск нужной подсказки
-extension HelpViewController {
     
     func setHelpLabelText() {
         for question in SelectedTopic.shared.topic.questionSet {
