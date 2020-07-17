@@ -12,13 +12,10 @@ protocol GameViewControllerDelegate: class {
 class GameViewController: UIViewController {
     
     /// Settings
-    private let orderSettings = Game.shared.settings.questionOrder
-    private let shuffleSettings = Game.shared.settings.questionTextShuffeling
-    private let saveRecordSettings = Game.shared.settings.saveRecord
-    private let soundSettings = Game.shared.settings.sound
-    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
-    private let currentTag = SelectedTopic.shared.topic.topicTag
-    var weContinueLastGame = false
+    private let orderSetting =      Game.shared.settings.questionOrder
+    private let shuffleSetting =    Game.shared.settings.questionTextShuffeling
+    private let saveSetting =       Game.shared.settings.saveRecord
+    private let helpSetting =       Game.shared.settings.helpAfterWrong
     
     @IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
@@ -37,6 +34,7 @@ class GameViewController: UIViewController {
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBOutlet var GameComtrollerViews: [UIView]!
     
+    private let currentTag = SelectedTopic.shared.topic.topicTag
     private let gameHelper = GameHelper()
     private let buttonsView = AnswerButtonsView()
     private let shadows = ShadowsHelper()
@@ -47,6 +45,7 @@ class GameViewController: UIViewController {
     private var imageName = ""
     private var helpCounter = 0
     private var message = ""
+    var weContinueLastGame = false
     
     /// Flags
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
@@ -69,7 +68,7 @@ class GameViewController: UIViewController {
         /// - Если еще не прошло сохранение текущей игры (Многократне прожатие ответа на последний вопрос)
         /// - Если активна настройка сохранения незавершенных игр
         /// - Ответили хотя бы на 1 вопрос
-        if endGameFlag == false && saveRecordSettings == 1 {
+        if endGameFlag == false && saveSetting == 1 {
             if currentQuestionIndex > 0 {
                 gameEnding(path: 2)
             }
@@ -113,7 +112,7 @@ extension GameViewController {
         /// Который мы добавили в синглтон при выборе категории
         /// Далее по контроллеру изменяем локальный массив, не трогая порядок вопросов исходного
         if weContinueLastGame == false {
-            if orderSettings == 0 {
+            if orderSetting == 0 {
                 localQuestionSet = normal
             } else {
                 localQuestionSet = random
@@ -135,7 +134,7 @@ extension GameViewController {
             buttonsView.makeCorrectButtonsSet(currentQuestionIndex, localQuestionSet, optionA, optionB, optionC, optionD)
             gameHelper.setQuestionImageAndTextSizes(localQuestionSet, currentQuestionIndex, questionImageView,
                                                    questionImageHeight, view, questionLabel, answerButtonsCollection)
-            gameHelper.setQuestionText(localQuestionSet, shuffleSettings, currentQuestionIndex, questionLabel)
+            gameHelper.setQuestionText(localQuestionSet, shuffleSetting, currentQuestionIndex, questionLabel)
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
@@ -177,7 +176,7 @@ extension GameViewController {
             /// - запускаем функцию вызова подсказки
             /// - запрещаем фоном обновлять вопрос и переходить дальше
             /// - (это произойдет после ухода с экрана подсказки, если активирована такая настройка)
-            if helpAfterWrongAnswerSetting == 1 {
+            if helpSetting == 1 {
                 showHelpAfterWrongAnswer()
                 dontUpdateQuestionFlag = true
             }
@@ -251,8 +250,6 @@ extension GameViewController {
         } else {
             Game.shared.addRecord(record)
         }
-        
-        /// Развязываем процесс сохранения вопросов
         /// Отдельно сохраняется локальный массив (который может быть зашафлен)
         /// Отдельно сохраняется исходный - для последующих игр и возможных изменений настроек
         /// При продолжении игры, в коде выше загружается именно локальный, на котором остановились
@@ -279,6 +276,7 @@ extension GameViewController {
     
     func restartGame() {
         endGameFlag = false
+        weContinueLastGame = false
         helpCounter = 0
         helpCounterLabel.text = ""
         score = 0
