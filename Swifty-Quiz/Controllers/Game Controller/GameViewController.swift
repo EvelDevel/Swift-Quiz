@@ -99,7 +99,7 @@ extension GameViewController {
                 self.currentQuestionIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
                 self.helpCounter = Game.shared.records[0].helpCounter!
-                self.localQuestionSet = SelectedTopic.shared.topic.questionSet
+                self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
                 if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
             }
         }
@@ -251,9 +251,12 @@ extension GameViewController {
         } else {
             Game.shared.addRecord(record)
         }
-        /// В синглтон улетает исходный массив (не зашафленный)
-        /// Это нужно для корректной работы, при изменении порядка вопросов в настройках
-        /// (когда сыграли перемешанный, чтобы сохранялся исходный на случай когда вернули настройки на прямой порядок)
+        
+        /// Развязываем процесс сохранения вопросов
+        /// Отдельно сохраняется локальный массив (который может быть зашафлен)
+        /// Отдельно сохраняется исходный - для последующих игр и возможных изменений настроек
+        /// При продолжении игры, в коде выше загружается именно локальный, на котором остановились
+        SelectedTopic.shared.addRandomSetToContinue(localQuestionSet)
         SelectedTopic.shared.addQuestionSet(SelectedTopic.shared.topic.questionSet,
                                             topic: SelectedTopic.shared.topic.topicName,
                                             tag: SelectedTopic.shared.topic.topicTag)

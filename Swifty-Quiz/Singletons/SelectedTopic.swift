@@ -25,9 +25,14 @@ class SelectedTopic {
         self.topic.topicTag = tag
     }
     
-    func clearQuestions() {
-        self.topic.questionSet = []
-        self.topic.topicName = ""
-        self.topic.topicTag = 0
+    func addRandomSetToContinue(_ continueSet: [Question]) {
+        self.topic.continueQuestionSet = continueSet
     }
+    
+//
+//    func clearQuestions() {
+//        self.topic.questionSet = []
+//        self.topic.topicName = ""
+//        self.topic.topicTag = 0
+//    }
 }

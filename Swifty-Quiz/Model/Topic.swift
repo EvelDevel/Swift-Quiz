@@ -6,6 +6,7 @@ import Foundation
 
 struct Topic: Codable {
     var questionSet: [Question]
+    var continueQuestionSet: [Question]
     var topicTag: Int
     var topicName: String 
 }
