@@ -6,6 +6,7 @@ import UIKit
 
 protocol HelpViewControllerDelegate: class {
     func updateAfterHelp()
+    func refreshTappedAnswerStatus()
 }
 
 class HelpViewController: UIViewController {
@@ -32,6 +33,8 @@ class HelpViewController: UIViewController {
         /// Если выбрана опция "переходить после подсказки"
         if Game.shared.settings.changeAfterHelp == 0 {
             delegate?.updateAfterHelp()
+        } else {
+            delegate?.refreshTappedAnswerStatus()
         }
     }
 }

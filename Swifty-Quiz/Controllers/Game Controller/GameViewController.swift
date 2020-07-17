@@ -45,6 +45,8 @@ class GameViewController: UIViewController {
     private var imageName = ""
     private var helpCounter = 0
     private var message = ""
+    private var answerPressed = false
+    private var alreadyTappedIncorrect: [Int] = []
     var weContinueLastGame = false
     
     /// Flags
@@ -61,7 +63,7 @@ class GameViewController: UIViewController {
         addShadows()
         showAlertIfNeeded()
     }
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         /// Свернули игру не доиграв
         /// Сохраняем:
@@ -126,6 +128,8 @@ extension GameViewController {
         shadows.addButtonShadows(answerButtonsCollection)
         addQuestionContent()
         updateUI()
+        answerPressed = false
+        alreadyTappedIncorrect = []
     }
     
     /// Установка контента
@@ -156,40 +160,53 @@ extension GameViewController {
 
 // MARK: Нажатие на ответ
 extension GameViewController {
-    
+
     @IBAction func answerPressed(_ sender: UIButton) {
-        if sender.tag == buttonsView.showCorrectPosition() {
-            /// Увеличиваем счет только если не брали подсказку
-            if helpFlag == false {
-                score += 1
+        
+        if answerPressed == false {
+            if sender.tag == buttonsView.showCorrectPosition() {
+                /// Увеличиваем счет только если не брали подсказку
+                if helpFlag == false {
+                    score += 1
+                }
+                dontUpdateQuestionFlag = false
+                shadows.addGreenShadow(button: sender)
+                buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
+                SoundPlayer.shared.playSound(sound: .answerButtonRight)
+                answerPressed = true
+            } else {
+                shadows.addRedShadow(button: sender)
+                buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
+                SoundPlayer.shared.playSound(sound: .answerButtonWrong)
+                answerPressed = true
+                
+                /// Запуск подсказки после неправильного ответа (настройки)
+                /// - запускаем функцию вызова подсказки
+                /// - запрещаем фоном обновлять вопрос и переходить дальше
+                /// - (это произойдет после ухода с экрана подсказки, если активирована такая настройка)
+                if helpSetting == 1 {
+                    if alreadyTappedIncorrect.contains(sender.tag) == false {
+                        /// Добавляем нажатые неправильные ответы в локальный массив
+                        /// Чтобы отсечь повторные нажатия на неправильный ответ, когда мы выводим подсказки
+                        alreadyTappedIncorrect.append(sender.tag)
+                        showHelpAfterWrongAnswer()
+                    } else {
+                        answerPressed = false
+                    }
+                    dontUpdateQuestionFlag = true
+                }
             }
-            dontUpdateQuestionFlag = false
-            shadows.addGreenShadow(button: sender)
-            buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
-            SoundPlayer.shared.playSound(sound: .answerButtonRight)
-        } else {
-            shadows.addRedShadow(button: sender)
-            buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
-            SoundPlayer.shared.playSound(sound: .answerButtonWrong)
             
-            /// Запуск подсказки после неправильного ответа (настройки)
-            /// - запускаем функцию вызова подсказки
-            /// - запрещаем фоном обновлять вопрос и переходить дальше
-            /// - (это произойдет после ухода с экрана подсказки, если активирована такая настройка)
-            if helpSetting == 1 {
-                showHelpAfterWrongAnswer()
-                dontUpdateQuestionFlag = true
-            }
-        }
-        /// Обновляем вопрос, показатели, и переходим дальше, если:
-        /// - еще остались вопросы в массиве
-        /// - мы не выводили подсказку "после неправильного ответа" (настройки)
-        if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
-            currentQuestionIndex += 1
-            currentQuestionNumber += 1
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                self.updateQuestion()
+            /// Обновляем вопрос, показатели, и переходим дальше, если:
+            /// - еще остались вопросы в массиве
+            /// - мы не выводили подсказку "после неправильного ответа" (настройки)
+            if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
+                currentQuestionIndex += 1
+                currentQuestionNumber += 1
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    self.updateQuestion()
+                }
             }
         }
     }
@@ -317,5 +334,8 @@ extension GameViewController: HelpViewControllerDelegate {
                 self.updateQuestion()
             }
         }
+    }
+    func refreshTappedAnswerStatus() {
+        self.answerPressed = false
     }
 }
