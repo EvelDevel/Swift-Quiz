@@ -65,9 +65,8 @@ class GameViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        /// Свернули игру не доиграв
-        /// Сохраняем:
-        /// - Если еще не прошло сохранение текущей игры (Многократне прожатие ответа на последний вопрос)
+        /// Свернули игру не доиграв. Сохраняем:
+        /// - Если еще не прошло сохранение текущей игры (Многократное прожатие ответа на последний вопрос)
         /// - Если активна настройка сохранения незавершенных игр
         /// - Ответили хотя бы на 1 вопрос
         if endGameFlag == false && saveSetting == 1 {
@@ -162,37 +161,41 @@ extension GameViewController {
 extension GameViewController {
 
     @IBAction func answerPressed(_ sender: UIButton) {
-        
+        /// Первая проверка: Предотвращаем двойное нажатие на разные кнопки
         if answerPressed == false {
             if sender.tag == buttonsView.showCorrectPosition() {
+                
+                /// Когда ответили правильно
                 /// Увеличиваем счет только если не брали подсказку
-                if helpFlag == false {
-                    score += 1
-                }
+                if helpFlag == false { score += 1 }
                 dontUpdateQuestionFlag = false
                 shadows.addGreenShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .answerButtonRight)
                 answerPressed = true
             } else {
+                /// Когда ответили неправильно
                 shadows.addRedShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .answerButtonWrong)
                 answerPressed = true
                 
-                /// Запуск подсказки после неправильного ответа (настройки)
-                /// - запускаем функцию вызова подсказки
-                /// - запрещаем фоном обновлять вопрос и переходить дальше
-                /// - (это произойдет после ухода с экрана подсказки, если активирована такая настройка)
+                /// Если активирована настройка "выводить подсказку"
                 if helpSetting == 1 {
+                    /// Если мы еще не нажимали на данный ответ
                     if alreadyTappedIncorrect.contains(sender.tag) == false {
-                        /// Добавляем нажатые неправильные ответы в локальный массив
-                        /// Чтобы отсечь повторные нажатия на неправильный ответ, когда мы выводим подсказки
+                        /// Добавляем нажатую кнопку в "массив уже нажатых ответов"
+                        /// Отсекаем повторный вызов подсказок с одной клавиши
                         alreadyTappedIncorrect.append(sender.tag)
+                        /// Выводим подсказку
+                        /// Обнуляем в делегате "нажатость" ответа (refreshTappedAnswerStatus())
                         showHelpAfterWrongAnswer()
                     } else {
+                        /// Если мы уже нажимали кнопку
+                        /// Просто обнуляем нажатость ответа, без подсказки
                         answerPressed = false
                     }
+                    /// Флаг "не обновлять вопрос", который используется в проверке ниже
                     dontUpdateQuestionFlag = true
                 }
             }
@@ -235,9 +238,11 @@ extension GameViewController {
     func gameEnding(path: Int) {
         switch path {
         case 1:
+            /// Доиграли до конца
             callDelegateAndSaveRecord(continueStatus: false)
             showAlert(title: "Ваш счет", message: "\(gameHelper.updatedAlertMessage(score: updatePercentage()))")
         case 2:
+            /// Преждевременно закончили игру
             callDelegateAndSaveRecord(continueStatus: true)
         default:
             print("gameEnding error")
