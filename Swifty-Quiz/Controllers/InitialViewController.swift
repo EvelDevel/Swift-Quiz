@@ -196,9 +196,11 @@ extension InitialViewController {
 }
 
 
-// MARK: Работа с делегатом GameViewController
-extension InitialViewController: GameViewControllerDelegate {
-    
+// MARK: Работа с делегатами
+extension InitialViewController:    GameViewControllerDelegate,
+                                    TopicViewControllerDelegate,
+                                    RecordsViewControllerDelegate,
+                                    SettingsViewControllerDelegate{
     func didEndGame(result: Int,
                     totalQuestion: Int,
                     percentOfCorrect: Double,
@@ -206,43 +208,11 @@ extension InitialViewController: GameViewControllerDelegate {
                     helpCounter: Int,
                     playedNum: Int) {
         
-        lastTopic.text = "Категория: \(topic)"
-        totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
-        lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
-        
+        lastTopic.text =        "Категория: \(topic)"
+        totalQuestions.text =   "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
+        lastScore.text =        "Правильных ответов: \(result) (\(percentOfCorrect)%)"
     }
     
-    func updateInitialFromGameView() {
-        updateContinueButton()
-    }
-}
-
-
-// MARK: Работа с делегатом TopicViewControllerDelegate
-extension InitialViewController: TopicViewControllerDelegate {
-    
-    func selectedCategory() {
-        selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
-    }
-    func updateInitialFromTopicView() {
-        updateContinueButton()
-    }
-}
-
-
-// MARK: Работа с делегатом RecordsViewControllerDelegate
-extension InitialViewController: RecordsViewControllerDelegate {
-    
-    func updateInitialFromRecordView() {
-        updateContinueButton()
-    }
-}
-
-
-// MARK: Работа с делегатом SettingsViewControllerDelegate
-extension InitialViewController: SettingsViewControllerDelegate {
-    
-    func updateInitialFromSettingView() {
-        updateContinueButton()
-    }
+    func updateInitialView()    { updateContinueButton() }
+    func selectedCategory()     { selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)" }
 }

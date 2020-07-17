@@ -6,7 +6,7 @@ import UIKit
 
 protocol GameViewControllerDelegate: class {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
-    func updateInitialFromGameView()
+    func updateInitialView()
 }
 
 class GameViewController: UIViewController {
@@ -75,7 +75,7 @@ class GameViewController: UIViewController {
             }
         }
         /// Всегда при закрытии экрана вызываем обновление initialView
-        delegate?.updateInitialFromGameView()
+        delegate?.updateInitialView()
     }
     
     func addShadows() {

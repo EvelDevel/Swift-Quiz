@@ -5,7 +5,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate: class {
-    func updateInitialFromSettingView()
+    func updateInitialView()
 }
 
 class SettingsViewController: UIViewController {
@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        delegate?.updateInitialFromSettingView()
+        delegate?.updateInitialView()
     }
     
     func showAlertIfNeeded() {

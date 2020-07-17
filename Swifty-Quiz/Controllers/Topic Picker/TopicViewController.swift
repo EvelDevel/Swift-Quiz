@@ -6,7 +6,7 @@ import UIKit
 
 protocol TopicViewControllerDelegate: class {
     func selectedCategory()
-    func updateInitialFromTopicView()
+    func updateInitialView()
 }
 
 class TopicViewController: UIViewController {
@@ -28,7 +28,7 @@ class TopicViewController: UIViewController {
     
     /// Обновляем (убираем) кнопку "продолжить" при смене темы с задержкой
     override func viewDidDisappear(_ animated: Bool) {
-        delegate?.updateInitialFromTopicView()
+        delegate?.updateInitialView()
     }
     
     func setDefaultNumberOfQuestions() {

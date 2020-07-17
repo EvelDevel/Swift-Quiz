@@ -5,7 +5,7 @@
 import UIKit
 
 protocol RecordsViewControllerDelegate: class {
-    func updateInitialFromRecordView()
+    func updateInitialView()
 }
 
 class RecordsViewController: UIViewController {
@@ -21,7 +21,7 @@ class RecordsViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        delegate?.updateInitialFromRecordView()
+        delegate?.updateInitialView()
     }
 }
 
