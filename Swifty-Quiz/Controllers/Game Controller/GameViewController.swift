@@ -275,8 +275,8 @@ extension GameViewController {
         /// Отдельно сохраняется локальный массив (который может быть зашафлен)
         /// Отдельно сохраняется исходный - для последующих игр и возможных изменений настроек
         /// При продолжении игры, в коде выше загружается именно локальный, на котором остановились
-        SelectedTopic.shared.addRandomSetToContinue(localQuestionSet)
-        SelectedTopic.shared.addQuestionSet(SelectedTopic.shared.topic.questionSet,
+        SelectedTopic.shared.saveShuffledSet(localQuestionSet)
+        SelectedTopic.shared.saveQuestionSet(SelectedTopic.shared.topic.questionSet,
                                             topic: SelectedTopic.shared.topic.topicName,
                                             tag: SelectedTopic.shared.topic.topicTag)
     }

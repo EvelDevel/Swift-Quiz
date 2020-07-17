@@ -20,15 +20,15 @@ class GameHelper {
         /// - не доиграли
         
         if tag == 0 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
+            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
         } else if tag == 1 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных вопросов", tag: 1)
+            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных вопросов", tag: 1)
         } else if tag == 2 {
-            SelectedTopic.shared.addQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных вопросов", tag: 2)
+            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных вопросов", tag: 2)
         } else if tag == 3 {
-            SelectedTopic.shared.addQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Руководству", tag: 3)
+            SelectedTopic.shared.saveQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Руководству", tag: 3)
         } else if tag == 4 {
-            SelectedTopic.shared.addQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
+            SelectedTopic.shared.saveQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
         }
         
         // MARK: TODO - Добавить остальные рефреши когда появятся новые подборки

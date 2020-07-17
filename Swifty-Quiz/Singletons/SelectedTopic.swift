@@ -8,31 +8,18 @@ class SelectedTopic {
     
     static let shared = SelectedTopic()
     private let topicCaretaker = TopicCaretaker()
-    
-    private(set) var topic: Topic {
-        didSet {
-            topicCaretaker.saveTopic(topic: self.topic)
-        }
-    }
+    private(set) var topic: Topic { didSet { topicCaretaker.saveTopic(topic: self.topic) } }
     
     private init() {
         self.topic = self.topicCaretaker.getTopic()
     }
     
-    func addQuestionSet(_ questionSet: [Question], topic: String, tag: Int) {
+    func saveQuestionSet(_ questionSet: [Question], topic: String, tag: Int) {
         self.topic.questionSet = questionSet
         self.topic.topicName = topic
         self.topic.topicTag = tag
     }
-    
-    func addRandomSetToContinue(_ continueSet: [Question]) {
+    func saveShuffledSet(_ continueSet: [Question]) {
         self.topic.continueQuestionSet = continueSet
     }
-    
-//
-//    func clearQuestions() {
-//        self.topic.questionSet = []
-//        self.topic.topicName = ""
-//        self.topic.topicTag = 0
-//    }
 }

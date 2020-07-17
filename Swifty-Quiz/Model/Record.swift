@@ -4,13 +4,15 @@
 
 import Foundation
 
+// MARK: Модель рекорда игры
 struct Record: Codable {
-    var date: Date?
-    var score: Int?
-    var topic: String?
-    var totalQuestion: Int?
-    var percentOfCorrectAnswer: Double?
-    var helpCounter: Int?
-    var playedNum: Int?
-    var continueGameStatus: Bool?
+    
+    var date: Date?                         /// Дата
+    var score: Int?                         /// Общий счет
+    var topic: String?                      /// Тема игры (название категории)
+    var totalQuestion: Int?                 /// Общее количество вопросов
+    var percentOfCorrectAnswer: Double?     /// Процент правильных ответов
+    var helpCounter: Int?                   /// Счетчик подсказок
+    var playedNum: Int?                     /// Отыгранное количество вопросов
+    var continueGameStatus: Bool?           /// Статус "продолжаем" игру или нет
 }
