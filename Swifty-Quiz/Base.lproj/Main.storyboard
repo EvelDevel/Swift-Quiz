@@ -387,8 +387,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT">
                                                 <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Рекорды">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="История игр">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
