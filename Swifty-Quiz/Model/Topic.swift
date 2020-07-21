@@ -7,8 +7,8 @@ import Foundation
 // MARK: Модель "Тема игры"
 struct Topic: Codable {
     
-    var questionSet: [Question]             /// Исходный сет вопросов
-    var continueQuestionSet: [Question]     /// Потенциально зашафленный сет (для продолжения игры)
-    var topicTag: Int                       /// Порядковый номер текущей темы
-    var topicName: String                   /// Тема выбранной категории
+    var questionSet: [Question]         // Исходный сет вопросов
+    var continueQuestionSet: [Question] // Потенциально зашафленный сет (для продолжения игры)
+    var topicTag: Int                   // Порядковый номер текущей темы
+    var topicName: String               // Тема выбранной категории
 }

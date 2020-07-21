@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -108,7 +108,7 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <segments>
                             <segment title="Продолжать"/>
-                            <segment title="Выводить подсказку"/>
+                            <segment title="Выводить теорию"/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -148,41 +148,8 @@
                             <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="V5c-NS-bcm"/>
                         </connections>
                     </segmentedControl>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-zy-ekF">
-                        <rect key="frame" x="283" y="302" width="15" height="14"/>
-                        <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="1Wo-i7-rKq"/>
-                            <constraint firstAttribute="height" constant="15" id="38W-as-Hex"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAI-b0-802" userLabel="questionText">
-                        <rect key="frame" x="16" y="299" width="288" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="lcn-M8-YEn"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                        <state key="normal" title="Сохранять рекорд при досрочном выходе?">
-                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I3c-zw-zax"/>
-                        </connections>
-                    </button>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AVI-46-PfM">
-                        <rect key="frame" x="16" y="324" width="288" height="32"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <segments>
-                            <segment title="Не сохранять"/>
-                            <segment title="Сохранять"/>
-                        </segments>
-                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <connections>
-                            <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="sLZ-xR-Trp"/>
-                        </connections>
-                    </segmentedControl>
                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U53-eV-aMa" userLabel="questionText">
-                        <rect key="frame" x="16" y="370" width="288" height="20"/>
+                        <rect key="frame" x="16" y="299" width="288" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="sHa-pq-GVO"/>
                         </constraints>
@@ -195,7 +162,7 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-rL-3kX">
-                        <rect key="frame" x="16" y="395" width="288" height="32"/>
+                        <rect key="frame" x="16" y="324" width="288" height="32"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <segments>
                             <segment title="Включены"/>
@@ -216,38 +183,30 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Odq-rL-3kX" secondAttribute="bottom" constant="5" id="5pj-tC-6OW"/>
                     <constraint firstItem="D0I-Pl-Rlx" firstAttribute="firstBaseline" secondItem="l73-AV-Lm5" secondAttribute="firstBaseline" id="6X8-f8-P4g"/>
                     <constraint firstItem="JRi-HG-15f" firstAttribute="top" secondItem="oll-D6-fdB" secondAttribute="bottom" constant="5" id="CDf-qh-oR3"/>
-                    <constraint firstItem="U53-eV-aMa" firstAttribute="top" secondItem="AVI-46-PfM" secondAttribute="bottom" constant="15" id="Clw-i5-oru"/>
                     <constraint firstItem="Odq-rL-3kX" firstAttribute="top" secondItem="U53-eV-aMa" secondAttribute="bottom" constant="5" id="Ctt-Xy-GuP"/>
                     <constraint firstItem="iWV-f5-f8C" firstAttribute="top" secondItem="veB-j8-GhW" secondAttribute="bottom" constant="5" id="F0O-KG-8m5"/>
                     <constraint firstItem="JRi-HG-15f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FFn-2Z-Bqn"/>
-                    <constraint firstAttribute="trailing" secondItem="AVI-46-PfM" secondAttribute="trailing" constant="16" id="Fpk-rv-RwE"/>
                     <constraint firstItem="QuD-fe-LIa" firstAttribute="firstBaseline" secondItem="veB-j8-GhW" secondAttribute="firstBaseline" id="HNv-eC-FhK"/>
+                    <constraint firstItem="U53-eV-aMa" firstAttribute="top" secondItem="JRi-HG-15f" secondAttribute="bottom" constant="15" id="HpY-c3-TIz"/>
                     <constraint firstAttribute="trailing" secondItem="U53-eV-aMa" secondAttribute="trailing" constant="16" id="IjL-fn-nIC"/>
                     <constraint firstItem="Odq-rL-3kX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Izy-c2-DGz"/>
                     <constraint firstItem="Bdm-wf-yoT" firstAttribute="top" secondItem="i1T-ve-GQ7" secondAttribute="bottom" constant="15" id="L3L-hq-XJv"/>
-                    <constraint firstItem="AVI-46-PfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Lkx-1T-uo2"/>
                     <constraint firstItem="l73-AV-Lm5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="MMy-Nh-gZg"/>
                     <constraint firstItem="i1T-ve-GQ7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N4o-mw-CxX"/>
-                    <constraint firstItem="0cg-zy-ekF" firstAttribute="firstBaseline" secondItem="kAI-b0-802" secondAttribute="firstBaseline" id="OUU-fg-3aq"/>
                     <constraint firstItem="U53-eV-aMa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OVs-wH-DP4"/>
                     <constraint firstAttribute="trailing" secondItem="l73-AV-Lm5" secondAttribute="trailing" constant="16" id="PyE-xv-2Ta"/>
-                    <constraint firstAttribute="trailing" secondItem="kAI-b0-802" secondAttribute="trailing" constant="16" id="RJS-BR-vdx"/>
                     <constraint firstItem="l73-AV-Lm5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tsn-WY-bQi"/>
                     <constraint firstItem="oll-D6-fdB" firstAttribute="top" secondItem="iWV-f5-f8C" secondAttribute="bottom" constant="15" id="VvE-mh-4p6"/>
                     <constraint firstAttribute="trailing" secondItem="D0I-Pl-Rlx" secondAttribute="trailing" constant="22" id="WwO-DG-kRE"/>
                     <constraint firstItem="kDo-Pf-RA7" firstAttribute="top" secondItem="Bdm-wf-yoT" secondAttribute="bottom" constant="5" id="WxX-D1-w3P"/>
                     <constraint firstItem="oll-D6-fdB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Xy3-lO-BpL"/>
                     <constraint firstItem="tCG-VD-v47" firstAttribute="firstBaseline" secondItem="oll-D6-fdB" secondAttribute="firstBaseline" id="bMt-ge-S1X"/>
-                    <constraint firstAttribute="trailing" secondItem="0cg-zy-ekF" secondAttribute="trailing" constant="22" id="bZd-Cg-Bsp"/>
                     <constraint firstItem="3kg-np-sbC" firstAttribute="firstBaseline" secondItem="Bdm-wf-yoT" secondAttribute="firstBaseline" id="cPp-Qc-cap"/>
                     <constraint firstItem="i1T-ve-GQ7" firstAttribute="top" secondItem="l73-AV-Lm5" secondAttribute="bottom" constant="5" id="eLj-BS-k3l"/>
                     <constraint firstAttribute="trailing" secondItem="JRi-HG-15f" secondAttribute="trailing" constant="16" id="ePB-im-GRd"/>
                     <constraint firstAttribute="trailing" secondItem="3kg-np-sbC" secondAttribute="trailing" constant="22" id="ehL-xq-xhX"/>
                     <constraint firstAttribute="trailing" secondItem="veB-j8-GhW" secondAttribute="trailing" constant="16" id="gHc-rB-RDD"/>
-                    <constraint firstItem="kAI-b0-802" firstAttribute="top" secondItem="JRi-HG-15f" secondAttribute="bottom" constant="15" id="gla-vn-3Dm"/>
                     <constraint firstAttribute="trailing" secondItem="Bdm-wf-yoT" secondAttribute="trailing" constant="16" id="hMP-rl-O3E"/>
-                    <constraint firstItem="kAI-b0-802" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iXS-Xx-oWo"/>
-                    <constraint firstItem="AVI-46-PfM" firstAttribute="top" secondItem="kAI-b0-802" secondAttribute="bottom" constant="5" id="oET-Lh-5bb"/>
                     <constraint firstAttribute="trailing" secondItem="Odq-rL-3kX" secondAttribute="trailing" constant="16" id="rCd-JH-tY9"/>
                     <constraint firstItem="veB-j8-GhW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sdV-Je-z51"/>
                     <constraint firstAttribute="trailing" secondItem="i1T-ve-GQ7" secondAttribute="trailing" constant="16" id="tB8-Fm-aLK"/>
@@ -270,13 +229,11 @@
                 <outlet property="helpAfterWrongAnswerControl" destination="iWV-f5-f8C" id="Uk8-Jy-9oZ"/>
                 <outlet property="questionOrderControl" destination="i1T-ve-GQ7" id="GZA-eP-47O"/>
                 <outlet property="questionTextControl" destination="kDo-Pf-RA7" id="fyb-c2-Fov"/>
-                <outlet property="saveRecordControl" destination="AVI-46-PfM" id="4q3-Fu-27Y"/>
                 <outlet property="soundControl" destination="Odq-rL-3kX" id="JTT-Ae-xHc"/>
                 <outletCollection property="allControls" destination="i1T-ve-GQ7" collectionClass="NSMutableArray" id="yvi-eX-7xc"/>
                 <outletCollection property="allControls" destination="kDo-Pf-RA7" collectionClass="NSMutableArray" id="w3e-pd-jO2"/>
                 <outletCollection property="allControls" destination="iWV-f5-f8C" collectionClass="NSMutableArray" id="Mao-u8-yWI"/>
                 <outletCollection property="allControls" destination="JRi-HG-15f" collectionClass="NSMutableArray" id="PTF-70-vHj"/>
-                <outletCollection property="allControls" destination="AVI-46-PfM" collectionClass="NSMutableArray" id="jRI-mZ-TIz"/>
                 <outletCollection property="allControls" destination="Odq-rL-3kX" collectionClass="NSMutableArray" id="xur-D8-ShZ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="228.34821428571428"/>

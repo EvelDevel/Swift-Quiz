@@ -16,10 +16,6 @@ enum HelpAfterWrong {   // Подсказка после неправильно�
     case proceed
     case help
 }
-enum SaveRecord {       // Поведение при досрочном выходе
-    case save
-    case dontSave
-}
 enum Sound {            // Звук
     case on
     case off

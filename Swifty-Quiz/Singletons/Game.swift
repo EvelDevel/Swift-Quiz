@@ -107,14 +107,6 @@ extension Game {
             self.settings.helpAfterWrong = 0
         }
     }
-    /// Настройки: Поведение при досрочном выходе из игры
-    func setSaveRecord(setting: SaveRecord) {
-        if setting == .save {
-            self.settings.saveRecord = 1
-        } else {
-            self.settings.saveRecord = 0
-        }
-    }
     /// Настройки: Звук
     func setSound(setting: Sound) {
         if setting == .off {

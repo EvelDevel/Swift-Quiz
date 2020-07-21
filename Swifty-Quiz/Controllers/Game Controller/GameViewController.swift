@@ -14,7 +14,6 @@ class GameViewController: UIViewController {
     /// Settings
     private let orderSetting =      Game.shared.settings.questionOrder
     private let shuffleSetting =    Game.shared.settings.questionTextShuffeling
-    private let saveSetting =       Game.shared.settings.saveRecord
     private let helpSetting =       Game.shared.settings.helpAfterWrong
     
     @IBOutlet var answerButtonsCollection: [UIButton]!
@@ -69,7 +68,7 @@ class GameViewController: UIViewController {
         /// - Если еще не прошло сохранение текущей игры (Многократное прожатие ответа на последний вопрос)
         /// - Если активна настройка сохранения незавершенных игр
         /// - Ответили хотя бы на 1 вопрос
-        if endGameFlag == false && saveSetting == 1 {
+        if endGameFlag == false {
             if currentQuestionIndex > 0 {
                 gameEnding(path: 2)
             }
