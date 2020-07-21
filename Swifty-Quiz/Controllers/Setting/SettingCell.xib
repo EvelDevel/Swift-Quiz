@@ -108,7 +108,7 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <segments>
                             <segment title="Продолжать"/>
-                            <segment title="Выводить теорию"/>
+                            <segment title="Показать подсказку"/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
