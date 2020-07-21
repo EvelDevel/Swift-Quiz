@@ -70,14 +70,14 @@ extension InitialViewController {
     /// Показываем информацию о последней игре
     func showLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
-        let category = records[0].topic ?? ""
-        let played = records[0].playedNum ?? 0
-        let total = records[0].totalQuestion ?? 0
-        let help = records[0].helpCounter ?? 0
-        let correct = records[0].score ?? 0
         
         if records.count != 0 {
-            let roundedPercents = String(format: "%.1f", records[0].percentOfCorrectAnswer ?? 0)
+            let category = records.first?.topic ?? ""
+            let played = records.first?.playedNum ?? 0
+            let total = records.first?.totalQuestion ?? 0
+            let help = records.first?.helpCounter ?? 0
+            let correct = records.first?.score ?? 0
+            let roundedPercents = String(format: "%.1f", records.first?.percentOfCorrectAnswer ?? 0)
             lastTopic.text = "Категория: \(category)"
             totalQuestions.text = "Вопросы: \(played) из \(total) (подсказок: \(help))"
             lastScore.text = "Правильных ответов: \(correct) (\(roundedPercents)%)"
