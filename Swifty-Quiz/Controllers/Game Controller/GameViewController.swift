@@ -11,11 +11,6 @@ protocol GameViewControllerDelegate: class {
 
 class GameViewController: UIViewController {
     
-    /// Settings
-    private let orderSetting =      Game.shared.settings.questionOrder
-    private let shuffleSetting =    Game.shared.settings.questionTextShuffeling
-    private let helpSetting =       Game.shared.settings.helpAfterWrong
-    
     @IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
@@ -44,36 +39,35 @@ class GameViewController: UIViewController {
     private var imageName = ""
     private var helpCounter = 0
     private var message = ""
-    private var answerPressed = false
     private var alreadyTappedIncorrect: [Int] = []
-    var weContinueLastGame = false
+    
+    /// Settings
+    private let orderSetting = Game.shared.settings.questionOrder
+    private let shuffleSetting = Game.shared.settings.questionTextShuffeling
+    private let helpSetting = Game.shared.settings.helpAfterWrong
     
     /// Flags
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
+    private var answerPressed = false // Уже нажали один ответ (второй не срабатывает)
+    var weContinueLastGame = false
+    
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setValuesIfWeContinue()
+        setUpValuesIfWeContinue()
         addQuestionSet()
         updateQuestion()
         addShadows()
         showAlertIfNeeded()
     }
     
+    /// Свернули игру, сохраняем, если:
+    /// Еще не запрашивалось сохранение текущей игры и ответили хотя-бы на один вопрос
     override func viewDidDisappear(_ animated: Bool) {
-        /// Свернули игру не доиграв. Сохраняем:
-        /// - Если еще не прошло сохранение текущей игры (Многократное прожатие ответа на последний вопрос)
-        /// - Если активна настройка сохранения незавершенных игр
-        /// - Ответили хотя бы на 1 вопрос
-        if endGameFlag == false {
-            if currentQuestionIndex > 0 {
-                gameEnding(path: 2)
-            }
-        }
-        /// Всегда при закрытии экрана вызываем обновление initialView
+        if endGameFlag == false && currentQuestionIndex > 0 { gameEnding(path: 2) }
         delegate?.updateInitialView()
     }
     
@@ -91,7 +85,7 @@ class GameViewController: UIViewController {
 // MARK: Установка и обновление основных игровых параметров
 extension GameViewController {
     
-    func setValuesIfWeContinue() {
+    func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame == true {
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
