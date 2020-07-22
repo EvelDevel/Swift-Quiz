@@ -447,7 +447,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="6Qt-OO-YBl"/>
                                                     <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="hE6-Bb-3eY"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toGameViewController" id="AS6-ki-vnO"/>
                                                 </connections>
@@ -468,7 +467,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="startGame:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="P3d-Ov-9SK"/>
                                                     <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="yQX-t3-jRv"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="continueGame" id="aL1-7b-at2"/>
                                                 </connections>

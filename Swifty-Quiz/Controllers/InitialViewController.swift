@@ -4,67 +4,57 @@
 
 import UIKit
 
-// MARK: TODO
-/// Сделать общий "прогресс-бар" по всей игре.
-/// Ответили правильно на вопрос - по этому айдишнику ставим "плюсик" и считаем общее количество таких плюсиков
-/// Выводим в "Историю игр"
-
 class InitialViewController: UIViewController {
     
-    /// Для настройки логотипа
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoVerticalPosition: NSLayoutConstraint!
     @IBOutlet weak var aboutButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var aboutButtonWidth: NSLayoutConstraint!
     @IBOutlet weak var aboutButtonVerticalPosition: NSLayoutConstraint!
+    @IBOutlet weak var contentCenter: NSLayoutConstraint!
     
-    private let recordCaretaker = RecordsCaretaker()
     @IBOutlet weak var totalQuestionsLabel: UILabel!
     @IBOutlet weak var selectedTopic: UILabel!
     @IBOutlet weak var lastTopic: UILabel!
     @IBOutlet weak var lastScore: UILabel!
     @IBOutlet weak var totalQuestions: UILabel!
     @IBOutlet weak var continueGameButton: UIButton!
-    @IBAction func startGame(_ sender: UIButton) { }
-    @IBOutlet weak var contentCenter: NSLayoutConstraint!
     @IBOutlet weak var topicPicker: UIButton!
     @IBOutlet weak var logoButton: UIButton!
     
     @IBOutlet var initialWhiteViews: [UIView]!
     @IBOutlet var initialButtons: [UIButton]!
-    private let shadows = ShadowsHelper()
-    
-    /// Звуки
     @IBAction func goToAbout(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBAction func tapButtonSounds(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
+    private let shadows = ShadowsHelper()
+    private let recordCaretaker = RecordsCaretaker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayingStartInformation()
-        userInterfaceTuning()
+        setUpInitialInformation()
+        setUpUserInterface()
     }
 }
 
 
-// MARK: Отображаем стартовую информацию
+// MARK: Start Information
 extension InitialViewController {
     
-    func displayingStartInformation() {
-        addDefaultQuestionSet()
+    func setUpInitialInformation() {
+        setUpStartingQuestionSet()
         showLastGameInfo()
         showTotalQuestions()
     }
     
-    /// Загружаем дефолтную или текущую категорию
-    func addDefaultQuestionSet() {
+    /// Загружаем дефолтную или выбранную ранее категорию
+    func setUpStartingQuestionSet() {
         if SelectedTopic.shared.topic.questionSet.isEmpty {
-            /// Первый запуск: добавляем сет, обновлянем название
             let newSet = TopicOperator.getQuestionsTheBasics()
             SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
             selectedTopic.text = "Основы"
         } else {
-            /// При любом повторном: берем информацию из синглтона
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
         }
     }
@@ -94,15 +84,15 @@ extension InitialViewController {
 }
 
 
-// MARK: Наводим красоту в UI
+// MARK: User Interface
 extension InitialViewController {
     
-    func userInterfaceTuning() {
+    func setUpUserInterface() {
         updateContinueButton()
         addShadows()
-        topicPickerImageTuning()
-        logoImageTuning()
-        correctLogoPosition()
+        imageTuning(button: topicPicker, position: .center)
+        imageTuning(button: logoButton, position: .top)
+        setUpCorrectLogoPosition()
     }
     
     /// Показываем или скрываем кнопку "продолжить"
@@ -125,21 +115,16 @@ extension InitialViewController {
         shadows.addButtonShadows(initialButtons)
     }
     
-    /// Настройка корректного отображения стрелочки в выборе тем и иконки у логотипа
-    /// Без этого картинки "сжимаются" по бокам, становясь немного сплющенными
-    func topicPickerImageTuning() {
-        topicPicker.imageView!.contentMode = .scaleAspectFit
-        topicPicker.contentVerticalAlignment = .center
-        topicPicker.contentHorizontalAlignment = .right
-    }
-    func logoImageTuning() {
-        logoButton.imageView!.contentMode = .scaleAspectFit
-        logoButton.contentVerticalAlignment = .top
-        logoButton.contentHorizontalAlignment = .right
+    /// Корректного отображение дополнительных картинок у кнопок
+    func imageTuning(button: UIButton, position: UIControl.ContentVerticalAlignment) {
+        button.imageView!.contentMode = .scaleAspectFit
+        button.contentVerticalAlignment = position
+        button.contentHorizontalAlignment = .right
     }
     
-    /// Настройка адекватного расположение логотипа
-    func correctLogoPosition() {
+    /// Настройка адекватного расположения логотипа
+    /// В зависимости от размера экрана
+    func setUpCorrectLogoPosition() {
         if view.frame.size.width <= 320 {
             logoVerticalPosition.constant = 40
             logoWidth.constant = 150
