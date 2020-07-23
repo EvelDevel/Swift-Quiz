@@ -30,7 +30,6 @@ class AnswerButtonsView: UIView {
         return correctAnswerNewPosition
     }
     
-    
     // MARK: Основная работа по формированию блока с кнопоками
     /// Фиксируем правильный ответ
     /// Шафлим положение всех ответов
