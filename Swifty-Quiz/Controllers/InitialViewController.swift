@@ -4,6 +4,8 @@
 
 import UIKit
 
+// MARK: TODO - Баги
+
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var logoHeight: NSLayoutConstraint!

@@ -34,7 +34,7 @@
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3p8-Kl-Cpk"/>
+                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gn2-Tk-KVA"/>
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-ve-GQ7">
@@ -67,7 +67,7 @@
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845034246578" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tei-tX-psv"/>
+                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hks-TP-bjQ"/>
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kDo-Pf-RA7">
@@ -100,7 +100,7 @@
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hqR-Kg-uKb"/>
+                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IRG-Dc-lAJ"/>
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iWV-f5-f8C">
@@ -133,7 +133,7 @@
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Eju-or-vRf"/>
+                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vii-6M-OHb"/>
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-HG-15f">
@@ -157,9 +157,6 @@
                         <state key="normal" title="Звуки в игре: ">
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
-                        <connections>
-                            <action selector="informationAboutSettingPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WSe-nn-dAr"/>
-                        </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-rL-3kX">
                         <rect key="frame" x="16" y="324" width="288" height="32"/>
