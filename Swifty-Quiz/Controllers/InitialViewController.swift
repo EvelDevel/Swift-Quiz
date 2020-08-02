@@ -4,6 +4,10 @@
 
 import UIKit
 
+// MARK: TODO - Баги с Apple Store отзывов
+
+/// Нажатие ответ (со звуком) глушит аудио другого приложения (в моем случае Soundcloud, iPhone 11, последняя версия iOS)
+
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
