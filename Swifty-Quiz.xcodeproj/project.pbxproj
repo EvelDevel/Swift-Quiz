@@ -800,7 +800,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Swifty-Quiz";
 				SWIFT_VERSION = 5.0;
@@ -820,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Swifty-Quiz";
 				SWIFT_VERSION = 5.0;
