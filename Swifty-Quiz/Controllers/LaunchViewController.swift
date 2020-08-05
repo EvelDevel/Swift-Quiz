@@ -3,12 +3,20 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import AVFoundation
 
 class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeRightSettingsForSounds()
         controlledTransitionFromLaunch()
+    }
+    
+    /// Без этой функции любой звук приложения сразу глушит любую фоновую музыку
+    func makeRightSettingsForSounds() {
+        do { try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient) }
+        catch { print("Some problems with AVAudioSession.sharedInstance())") }
     }
     
     /// Контролируемый переход с Лаунч-скрина (через подставной)
