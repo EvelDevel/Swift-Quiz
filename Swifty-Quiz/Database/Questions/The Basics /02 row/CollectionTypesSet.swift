@@ -17,7 +17,6 @@ class CollectionTypesSet {
                      optionB: "Два",
                      optionC: "Четыре",
                      optionD: "Пять",
-                     correctAnswer: 1,
                      questionId: 301,
                      helpText: "Swift обеспечивает три основных типа коллекций - это Массивы, Множества и Словари для хранения коллекций значений."),
             
@@ -29,7 +28,6 @@ class CollectionTypesSet {
                      optionB: "Словарь",
                      optionC: "Множество",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 302,
                      helpText: "Массивы - это упорядоченные коллекции значений. Массивы хранят много значений одинакового типа в упорядоченном списке. Одно и то же значение в массиве может появиться несколько раз, в разных позициях."),
             
@@ -41,7 +39,6 @@ class CollectionTypesSet {
                      optionB: "Массив",
                      optionC: "Словарь",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 303,
                      helpText: "Множества - это неупорядоченные коллекции уникальных значений."),
             
@@ -53,7 +50,6 @@ class CollectionTypesSet {
                      optionB: "Множество",
                      optionC: "Массив",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 304,
                      helpText: "Словари - это неупорядоченные коллекции, хранящие пары ключ-значение. Словарь представляет собой контейнер, который хранит несколько значений одного и того же типа. Каждое значение связано с уникальным ключом, который выступает в качестве идентификатора этого значения внутри словаря. В отличие от элементов в массиве, элементы в словаре не имеют определенного порядка. Используйте словарь, когда вам нужно искать значения на основе их идентификатора, так же как в реальном мире словарь используется для поиска определения конкретного слова."),
             
@@ -63,7 +59,6 @@ class CollectionTypesSet {
                      optionB: "Множество",
                      optionC: "Массив",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 305,
                      helpText: "На изображении словарь, коллекция пар ключ-значение"),
             
@@ -75,7 +70,6 @@ class CollectionTypesSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 306,
                      helpText: "Массивам, множествам и словарям в Swift всегда понятно, какие типы значений и ключи они могут хранить. Это означает, что вы не можете по ошибке вставить неверное значение в коллекцию. Это также означает, что вы можете быть уверены в типах значений, которые вы получите из коллекции."),
             
@@ -87,7 +81,6 @@ class CollectionTypesSet {
                      optionB: "Только добавлять элементы",
                      optionC: "Только удалять элементы",
                      optionD: "Нет",
-                     correctAnswer: 1,
                      questionId: 307,
                      helpText: "Когда вы создаете массив или словарь и присваиваете его переменной, то созданная коллекция будет изменяемой. Это означает, что вы можете изменить коллекцию после ее создания путем добавления, удаления, или изменения элементов этой коллекции. И наоборот, когда вы присвоите массив или словарь константе, то он будет неизменяемым, а его размер и содержимое не может быть изменено."),
             
@@ -99,7 +92,6 @@ class CollectionTypesSet {
                      optionB: "Множество",
                      optionC: "Набор",
                      optionD: "Словарь",
-                     correctAnswer: 1,
                      questionId: 308,
                      helpText: "На изображении массив, упорядоченная коллекция значений, доступных по индексу."),
             
@@ -111,7 +103,6 @@ class CollectionTypesSet {
                      optionB: "Массив",
                      optionC: "Словарь",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 309,
                      helpText: "На изображении множество, неупорядоченная коллекция уникальных значений."),
             
@@ -123,7 +114,6 @@ class CollectionTypesSet {
                      optionB: "Можем добавлять элементы",
                      optionC: "Можем удалять элементы",
                      optionD: "Да",
-                     correctAnswer: 1,
                      questionId: 310,
                      helpText: "Когда вы присвоите массив или словарь константе, то он будет неизменяемым, а его размер и содержимое не может быть изменено. Хорошей практикой является создание неизменяемых коллекций во всех случаях, когда коллекцию не нужно менять. Делая это, мы позволяем компилятору Swift оптимизировать производительность наших коллекций."),
             
@@ -135,7 +125,6 @@ class CollectionTypesSet {
                      optionB: "[ElementType]",
                      optionC: "[ElementType]()",
                      optionD: "Array(ElementType)[]",
-                     correctAnswer: 1,
                      questionId: 311,
                      helpText: "Полная форма записи массива в Swift пишется Array<ElementType>, где ElementType это тип значений, которые могут храниться в массиве."),
             
@@ -147,7 +136,6 @@ class CollectionTypesSet {
                      optionB: "Array<ElementType>",
                      optionC: "[ElementType]()",
                      optionD: "Array(ElementType)[]",
-                     correctAnswer: 1,
                      questionId: 312,
                      helpText: "Вы можете также написать массив в сокращенной форме как [ElementType]. Хотя две формы функционально идентичны, краткая форма является предпочтительной."),
             
@@ -159,7 +147,6 @@ class CollectionTypesSet {
                      optionB: "var array = (String)[]",
                      optionC: "var array = [String()]",
                      optionD: "var array: [String]?",
-                     correctAnswer: 1,
                      questionId: 313,
                      helpText: "Вы можете создать пустой массив определенного типа с помощью синтаксиса инициализатора: var array = [String]()."),
             
@@ -171,7 +158,6 @@ class CollectionTypesSet {
                      optionB: "var array: String = []",
                      optionC: "var array = String()",
                      optionD: "var array: [String]?",
-                     correctAnswer: 1,
                      questionId: 314,
                      helpText: "В качестве альтернативы синтаксису инизиализатора, вы можете создать пустой массив с помощью пустого литерала массива, который записывается в виде [] (пустой пары квадратных скобок)."),
             
@@ -183,7 +169,6 @@ class CollectionTypesSet {
                      optionB: "[Int] и [0, 0, 0]",
                      optionC: "[Double] и [0, 0, 0]",
                      optionD: "[Int] и [0.0, 0.0, 0.0]",
-                     correctAnswer: 1,
                      questionId: 315,
                      helpText: "Если не указывать иного, Swift присвоит массиву чисел с плавающей точкой тип [Double], а данный инициализатор массива указывает, что в этом массиве должны быть числа 0.0, повторяющиеся три раза. То есть правильный ответ будет [Double], [0.0, 0.0, 0.0]."),
             
@@ -195,7 +180,6 @@ class CollectionTypesSet {
                      optionB: "Используя интерполяцию",
                      optionC: "Через свойство .insert",
                      optionD: "Логическим оператором И &&",
-                     correctAnswer: 1,
                      questionId: 316,
                      helpText: "Вы можете создать новый массив, объединив два существующих массива с совместимыми типами с оператором сложения (+). Новый тип массива выводится из типа двух массивов, которые вы объединяете вместе. Так же можно добавить один массив к другому через firstArray.append(contentsOf: secondArray)."),
             
@@ -207,7 +191,6 @@ class CollectionTypesSet {
                      optionB: "var nums: Int = [0, 1, 2, 3]",
                      optionC: "var nums: [Int] = 0, 1, 2, 3",
                      optionD: "var nums: [Int](0, 1, 2, 3)",
-                     correctAnswer: 1,
                      questionId: 317,
                      helpText: "Вы можете инициализировать массив с помощью литерала массива, который является быстрым способом писать одно или несколько значений как набор значений массива. Литерал массива пишется в виде списка значений, разделенных запятыми и окруженными парами скобок: [value 1, value 2, value 3]. Пример: создается массив под названием numbers для хранения Int значений: var number: [Int] = [1, 2, 3, 4, 5]."),
             
@@ -219,7 +202,6 @@ class CollectionTypesSet {
                      optionB: "var array = [String]()",
                      optionC: "var array = [Int](1, 2, 3)",
                      optionD: "var array = []",
-                     correctAnswer: 1,
                      questionId: 318,
                      helpText: "Благодаря выводу типов Swift, вы можете не писать тип для массива, который вы инициализируйте с помощью литерала массива, хранящего значения того же типа, например var array: [Int] = [1, 2]. Вместо этого, инициализация array может быть записана в сокращенной форме: var array = [1, 2]. Поскольку все значения внутри литерала массива одинакового типа (Int), Swift может вывести, что [Int] является правильным типом для переменной array."),
             
@@ -231,7 +213,6 @@ class CollectionTypesSet {
                      optionB: "array.sort()",
                      optionC: "array.prefix()",
                      optionD: "array.append()",
-                     correctAnswer: 1,
                      questionId: 319,
                      helpText: "Чтобы узнать количество элементов в массиве, проверьте его свойство count."),
             
@@ -243,7 +224,6 @@ class CollectionTypesSet {
                      optionB: "Array is not empty",
                      optionC: "Ничего не выведет",
                      optionD: "Столкнемся с ошибкой",
-                     correctAnswer: 1,
                      questionId: 320,
                      helpText: "Логическое свойство isEmpty можно использовать в качестве быстрого способа узнать, является ли свойство count равным 0. В данном примере у нас пустой массив array, значит мы пройдем проверку по первому условию и выведем «Array is empty»"),
             
@@ -255,7 +235,6 @@ class CollectionTypesSet {
                      optionB: "В начало массива",
                      optionC: "Посередине",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 321,
                      helpText: "Через вызов метода append вы можете добавлять новые элементы в конец массива."),
             
@@ -265,7 +244,6 @@ class CollectionTypesSet {
                      optionB: "[0.1, 1.1, 1.2, 2.2, 3.4]",
                      optionC: "Массив не изменится",
                      optionD: "Ничего",
-                     correctAnswer: 1,
                      questionId: 322,
                      helpText: "Добавить массив с одним или несколькими совместимыми (типами) элементами можно с помощью оператора сложения с присвоением (+=), но в данном случае мы столкнемся с ошибкой, поскольку numbers является константой."),
             
@@ -277,7 +255,6 @@ class CollectionTypesSet {
                      optionB: "[1.0, 2.0, 3, 4, 5]",
                      optionC: "[1, 2, 3, 4, 5]",
                      optionD: "[1.0, 2.0]",
-                     correctAnswer: 1,
                      questionId: 323,
                      helpText: "Правильный ответ [1.0, 2.0, 3.0, 4.0, 5.0]. Оператор присваивания со сложением добавит в данный массив значения 3, 4 и 5, но, так как массив numbers имеет тип [Double], значения примут вид 3.0, 4.0, 5.0."),
             
@@ -289,7 +266,6 @@ class CollectionTypesSet {
                      optionB: "arrayName(0)",
                      optionC: "arrayName-2",
                      optionD: "arrayName.3",
-                     correctAnswer: 1,
                      questionId: 324,
                      helpText: "Можно извлечь значение из массива с помощью синтаксиса сабскриптов, поместив индекс значения, который вы хотите получить, внутри квадратных скобок сразу после имени массива. Первый элемент в массиве имеет индекс 0, а не 1. Массивы в Swift всегда начинаются с 0."),
             
@@ -301,7 +277,6 @@ class CollectionTypesSet {
                      optionB: "[1.0, 2.0, 3.0, 4.0]",
                      optionC: "[1.0, 2.0, 3.0, 1.0]",
                      optionD: "[1.0, 1.0, 3.0, 4.0]",
-                     correctAnswer: 1,
                      questionId: 325,
                      helpText: "Вы можете использовать синтаксис сабскриптов для изменения существующего значения по указанному индексу. Правильный ответ: [1.0, 2.0, 1.0, 4.0], поскольку мы инициализируем новое значение элементу массива, который находится на индексе [2], начиная с 0 это будет третий элемент (3.0)."),
             
@@ -313,7 +288,6 @@ class CollectionTypesSet {
                      optionB: "[1.0, 4, 5, 6]",
                      optionC: "[1.0, 2.0, 3.0, 4.0]",
                      optionD: "[4.0, 5.0, 6.0, 4.0]",
-                     correctAnswer: 1,
                      questionId: 326,
                      helpText: "Вы можете использовать синтаксис сабскриптов для изменения диапазона значений за раз, даже если набор изменяемых значений имеет разную длину, по сравнению с диапазоном который требуется заменить. Правильный ответ: [1.0, 4.0, 5.0, 6.0], поскольку мы меняем значения с 1 по 3 индекс, а это 2.0, 3.0, 4.0."),
             
@@ -325,7 +299,6 @@ class CollectionTypesSet {
                      optionB: "[1.0, 2.0, 11.0, 12.0, 5.0]",
                      optionC: "[1.0, 2.0, 11.0, 12.0]",
                      optionD: "[1.0, 2.0, 11.0, 12.0, 13.0]",
-                     correctAnswer: 1,
                      questionId: 327,
                      helpText: "Вы можете использовать синтаксис сабскриптов для изменения диапазона значений за раз, даже если набор изменяемых значений имеет разную длину, по сравнению с диапазоном который требуется заменить. Правильный ответ: [1.0, 2.0, 11.0, 12.0, 13.0, 5.0], поскольку мы меняем значения с 2 по 3 индекс, а это 3.0, 4.0, но вставляем уже три элемента, вместо удаленных двух."),
             
@@ -337,7 +310,6 @@ class CollectionTypesSet {
                      optionB: ".append",
                      optionC: "add(_:at:)",
                      optionD: "remove(_ :at:)",
-                     correctAnswer: 1,
                      questionId: 328,
                      helpText: "Для вставки элемента по заданному индексу внутрь массива, вызовите его метод insert(_:at:)."),
             
@@ -349,7 +321,6 @@ class CollectionTypesSet {
                      optionB: ".append",
                      optionC: "add(_:at:)",
                      optionD: "insert(_:at:)",
-                     correctAnswer: 1,
                      questionId: 329,
                      helpText: "Можно удалить элемент из массива с помощью метода remove(at:). Этот метод удаляет элемент с указанным индексом и возвращает удаленный элемент (хотя вы можете проигнорировать возвращаемое значение, если оно вам не нужно)."),
             
@@ -360,7 +331,6 @@ class CollectionTypesSet {
                      optionB: "Вернется nil",
                      optionC: "Ничего не произойдет",
                      optionD: "Вернется последний элемент",
-                     correctAnswer: 1,
                      questionId: 330,
                      helpText: "Если вы пытаетесь получить доступ или изменить значение индекса, который находится за пределами существующих границ массива, у вас будет ошибка исполнения. Вы можете проверить, действителен ли индекс, прежде чем его использовать, сравнив его с свойством count массива. За исключением случаев, когда count равен 0 (то есть массив пуст), самый большой валидный индекс в массиве всегда будет count - 1, так как массивы индексируются с нуля."),
             
@@ -371,7 +341,6 @@ class CollectionTypesSet {
                      optionB: "[1, 2, 3, 9, 4, 5]",
                      optionC: "[1, 2, 3, 4, 5]",
                      optionD: "[1, 2, 3, 9, 4]",
-                     correctAnswer: 1,
                      questionId: 331,
                      helpText: "Сначала numbers.insert(9, at: 3) добавляет девятку на третий индекс, то есть между тройкой и четверкой, после чего numbers.remove(at: 0) удаляет единицу, которая находится на нулевом индексе. Получается [2, 3, 9, 4, 5]."),
             
@@ -383,7 +352,6 @@ class CollectionTypesSet {
                      optionB: "array.removeLast()",
                      optionC: "array.remove(_ :at:)",
                      optionD: "array.deleteLast()",
-                     correctAnswer: 1,
                      questionId: 332,
                      helpText: "Если вы хотите удалить последний или несколько последних элементов из массива, вы можете использовать метод dropLast(), в скобках необходимо указать количество элементов, которые вы хотите удалить. После реализации данного метода вам вернется оставшаяся последовательность."),
             
@@ -395,7 +363,6 @@ class CollectionTypesSet {
                      optionB: "array.remove(_ :at:)",
                      optionC: "array.dropLast()",
                      optionD: "array.deleteLast()",
-                     correctAnswer: 1,
                      questionId: 333,
                      helpText: "Если вы хотите удалить последний элемент из массива, то можно использовать метод removeLast() вместо remove(at:), чтобы избежать необходимости запроса свойства count для массива. Также как и метод remove(at:), removeLast() возвращает удаленный элемент."),
             
@@ -406,7 +373,6 @@ class CollectionTypesSet {
                      optionB: "[1, 2, 3, 4] и 4",
                      optionC: "[1, 2, 3, 4, 5] и 5",
                      optionD: "[1, 2, 3, 4] и 5",
-                     correctAnswer: 1,
                      questionId: 334,
                      helpText: "Первое выражение var first = numbers.dropLast() присвоит переменной first массив с оставшимися элементами, это [1, 2, 3, 4]. Второе выражение var second = first.removeLast() присвоит переменной second последний элемент массива first, то есть цифру 4, но при этом он удалит ее из этой переменной, и там останется только [1, 2, 3]. Правильный ответ: [1, 2, 3], 4." ),
             
@@ -418,7 +384,6 @@ class CollectionTypesSet {
                      optionB: "цикл while",
                      optionC: "enumerated()",
                      optionD: "Через сабскрипт [i]",
-                     correctAnswer: 1,
                      questionId: 335,
                      helpText: "Вы можете выполнить итерацию по всему набору значений внутри массива с помощью цикла for-in. Но если вам нужен целочисленный индекс каждого значения так же как и само значение, используйте вместо этого глобальную функцию enumerated() для итерации по массиву. Функция enumerated() возвращает кортеж для каждого элемента массива, собрав вместе индекс и значение для этого элемента."),
             
@@ -430,7 +395,6 @@ class CollectionTypesSet {
                      optionB: "for-in и sorted()",
                      optionC: "repeat-while",
                      optionD: "while",
-                     correctAnswer: 1,
                      questionId: 336,
                      helpText: "Если вам нужен целочисленный индекс каждого значения так же как и само значение, используйте глобальную функцию enumerated() для итерации по массиву. Функция enumerated() возвращает кортеж для каждого элемента массива, собрав вместе индекс и значение для этого элемента. При этом вы можете разложить кортеж во временные константы или переменные в рамках итерации: for (index, value) in someArray.enumerated() { print(index, value) }"),
             
@@ -442,7 +406,6 @@ class CollectionTypesSet {
                      optionB: "1 - 0.1 и 2 - 0.2",
                      optionC: "Ничего не получим",
                      optionD: "index - value и index - value",
-                     correctAnswer: 1,
                      questionId: 337,
                      helpText: "0 - 0.1 и 1 - 0.2"),
             
@@ -454,7 +417,6 @@ class CollectionTypesSet {
                      optionB: "Массив",
                      optionC: "Словарь",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 338,
                      helpText: "Множество хранит различные значения одного типа в виде коллекции в неупорядоченной форме. Вы можете использовать множества как альтернативы массиву, когда порядок для вас значения не имеет или когда вам нужно быть уверенным в том, что значения внутри коллекции не повторяются."),
             
@@ -466,7 +428,6 @@ class CollectionTypesSet {
                      optionB: "Хешируемым",
                      optionC: "Числовым",
                      optionD: "Вычисляемым",
-                     correctAnswer: 1,
                      questionId: 339,
                      helpText: "Тип значений должен быть хешируемым для того, чтобы мог храниться в множестве, таким образом тип должен предоставлять возможность для вычисления собственного значения хеша. Тип значения хеша Int должен быть для всех объектов одинаковым, чтобы можно было провести сравнение что если a == b, то и a.hashValue == b.hashValue. Вы можете использовать ваш собственный тип в качестве типа значения множества или типа ключа словаря, подписав его под протокол Hashable из стандартной библиотеки Swift."),
             
@@ -478,7 +439,6 @@ class CollectionTypesSet {
                      optionB: "Set(ElementType)",
                      optionC: "Set[ElementType]",
                      optionD: "(Set<ElementType>)",
-                     correctAnswer: 1,
                      questionId: 340,
                      helpText: "Тип множества Swift записывается как Set<ElementType>, ElementType является типом, который хранится в множестве."),
             
@@ -490,7 +450,6 @@ class CollectionTypesSet {
                      optionB: "Да, [Set]",
                      optionC: "Да, <Set>",
                      optionD: "Да, (Set)",
-                     correctAnswer: 1,
                      questionId: 341,
                      helpText: "В отличии от массивов множества не имеют сокращенной формы записи. Кроме случаев инициализации через литерал массива, где содержатся элементы одного и того-же типа, в таком случае можно писать просто Set, без указания конкретного типа."),
             
@@ -502,7 +461,6 @@ class CollectionTypesSet {
                      optionB: "var names = Array<String>[]",
                      optionC: "var names = Dictionary<String>()",
                      optionD: "var names = (Set { String })",
-                     correctAnswer: 1,
                      questionId: 342,
                      helpText: "Вы можете создать пустое множество конкретного типа, используя синтаксис инициализатора: var name = Set<String>(). Тип переменной name будет выведен из типа инициализатора как Set<String>."),
             
@@ -514,7 +472,6 @@ class CollectionTypesSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 343,
                      helpText: "Альтернативно, если контекст предоставляет информацию о типе, например как аргумент функции или просто явное указание типа переменной или константы, то вы можете создать пустое множество при помощи пустого литерала массива."),
             
@@ -525,7 +482,6 @@ class CollectionTypesSet {
                      optionB: "Нет, не можем",
                      optionC: "Да, let ints: Set<Int>([1, 2])",
                      optionD: "Да, let ints = Set<Int[1, 2]>",
-                     correctAnswer: 1,
                      questionId: 344,
                      helpText: "Вы можете инициализировать множество при помощи литерала массива, чтобы использовать его в качестве сокращенной записи нескольких элементов множества. Для этого вы должны явно указать что это множество определенных типов значений (записывается как Set<Type>). Где Type - это любые стандартные типы Int, String, Double или Bool (или любой другой хешируемый тип значений)."),
             
@@ -537,7 +493,6 @@ class CollectionTypesSet {
                      optionB: "Character",
                      optionC: "String",
                      optionD: "Set<Character>",
-                     correctAnswer: 1,
                      questionId: 345,
                      helpText: "Любому знаку присваивается тип String, если не указать иного (Character). А так как это множество, то правильный ответ будет Set<String>."),
             
@@ -549,7 +504,6 @@ class CollectionTypesSet {
                      optionB: "Последний элемент множества",
                      optionC: "Первый элемент множества",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 346,
                      helpText: "Вы можете удалить элемент из множества, используя метод remove(_:), который удаляет элемент, который является членом множества и возвращает удаленное значение или nil, если удаляемого элемента нет."),
             
@@ -561,7 +515,6 @@ class CollectionTypesSet {
                      optionB: ".sort()",
                      optionC: ".filter()",
                      optionD: ".flatMap()",
-                     correctAnswer: 1,
                      questionId: 347,
                      helpText: "Множества в Swift не имеют определенного порядка. Для того, чтобы провести итерацию по множеству в определенном порядке, вам нужно использовать метод sorted(), который возвращает вам элементы коллекции в виде отсортированного массива, используя оператор <."),
             
@@ -571,7 +524,6 @@ class CollectionTypesSet {
                      optionB: "intersection(_:)",
                      optionC: "subtracting(_:)",
                      optionD: "symmetricDifference(_:)",
-                     correctAnswer: 1,
                      questionId: 348,
                      helpText: "Используйте метод union(_:) для создания нового множества, состоящего из всех значений двух входных множеств. Если в множествах значения повторяются - они не будут повторяться в новом множестве (все значения внутри множества уникальны). Допустим, есть одно множество one = [0, 1, 2, 3, 4, 5], и есть второе множество two = [3, 4, 5, 6], при выполнении one.union(two).sorted() мы получим [0, 1, 2, 3, 4, 5, 6]."),
             
@@ -581,7 +533,6 @@ class CollectionTypesSet {
                      optionB: "union(_:)",
                      optionC: "subtracting(_:)",
                      optionD: "symmetricDifference(_:)",
-                     correctAnswer: 1,
                      questionId: 349,
                      helpText: "Используйте метод intersection(_:) для создания нового множества из общих значений двух входных множеств. Допустим, есть одно множество one = [0, 1, 2, 3, 4, 5], и есть второе множество two = [3, 4, 5, 6], при выполнении one.intersection(two).sorted() мы получим [3, 4, 5]"),
             
@@ -593,7 +544,6 @@ class CollectionTypesSet {
                      optionB: "intersection(_:)",
                      optionC: "union(_:)",
                      optionD: "symmetricDifference(_:)",
-                     correctAnswer: 1,
                      questionId: 350,
                      helpText: "Используйте метод subtracting(_:) для создания множества со значениями не принадлежащих указанному множеству из двух входных. Допустим, есть одно множество one = [0, 1, 2, 3, 4, 5], и есть второе множество two = [3, 4, 5, 6], при выполнении one.subtracting(two).sorted() мы получим [0, 1, 2]."),
             
@@ -603,7 +553,6 @@ class CollectionTypesSet {
                      optionB: "intersection(_:)",
                      optionC: "subtracting(_:)",
                      optionD: "union(_:)",
-                     correctAnswer: 1,
                      questionId: 351,
                      helpText: "Используйте метод symmetricDifference(_:) для создания нового множества из значений, которые не повторяются в двух входных множествах. Допустим, есть одно множество one = [0, 1, 2, 3, 4, 5], и есть второе множество two = [3, 4, 5, 6], при выполнении one.symmetricDifference(two).sorted() мы получим [0, 1, 2, 6]."),
             
@@ -614,7 +563,6 @@ class CollectionTypesSet {
                      optionB: "b",
                      optionC: "c",
                      optionD: "На картинке нет надмножеств",
-                     correctAnswer: 1,
                      questionId: 352,
                      helpText: "Иллюстрация отображает три множества a, b и c. Множество a является надмножеством множества b, так как содержит все его элементы."),
             
@@ -625,7 +573,6 @@ class CollectionTypesSet {
                      optionB: "a",
                      optionC: "c",
                      optionD: "На картинке нет подмножеств",
-                     correctAnswer: 1,
                      questionId: 353,
                      helpText: "Иллюстрация отображает три множества a, b и c. Множество b является подмножеством множества a потому, что все его элементы находятся в a."),
             
@@ -637,7 +584,6 @@ class CollectionTypesSet {
                      optionB: "a и b",
                      optionC: "c и a",
                      optionD: "Здесь нет разделенных",
-                     correctAnswer: 1,
                      questionId: 354,
                      helpText: "Иллюстрация отображает три множества a, b и c. Множества b и c называются разделенными, так как у них нет общих элементов."),
             
@@ -648,7 +594,6 @@ class CollectionTypesSet {
                      optionB: "isSuperset(of:)",
                      optionC: "isStrictSubset(of:)",
                      optionD: "isStrictSuperset(of:)",
-                     correctAnswer: 1,
                      questionId: 355,
                      helpText: "Используйте метод isSubset(of:) для определения все ли значения множества содержатся в указанном множестве. Например, let one: Set = [1, 2], let two: Set = [1, 2, 3, 4, 5], one.isSubset(of: two) вернет true, потому что все значения множества one содержатся в множестве two. Фактически мы определяем, является ли множество подмножеством указанного множества."),
             
@@ -659,7 +604,6 @@ class CollectionTypesSet {
                      optionB: "isSubset(of:)",
                      optionC: "isStrictSubset(of:)",
                      optionD: "isStrictSuperset(of:)",
-                     correctAnswer: 1,
                      questionId: 356,
                      helpText: "Используйте метод isSuperset(of:), чтобы определить содержит ли множество все значения указанного множества. Например, let one: Set = [1, 2], let two: Set = [1, 2, 3, 4, 5], two.isSuperset(of: one) вернет true, потому что все значения множества one содержатся в множестве two. Фактически мы определяем, является ли множество надмножеством указанного множества."),
             
@@ -671,7 +615,6 @@ class CollectionTypesSet {
                      optionB: "Dictionary<KeyType>, <ValueType>",
                      optionC: "Dictionary(KeyType, ValueType)",
                      optionD: "<Dictionary(KeyType, ValueType)>",
-                     correctAnswer: 1,
                      questionId: 357,
                      helpText: "В Swift тип словаря в полной форме пишется как Dictionary<KeyType, ValueType>, где KeyType это тип значения который используется как ключ словаря, а ValueType это тип значения который словарь может хранить для этих ключей. Тип словаря KeyType должен подчиняться протоколу Hashable, как тип значения множества."),
             
@@ -682,7 +625,6 @@ class CollectionTypesSet {
                      optionB: "Да, KeyType: ValueType",
                      optionC: "Да, <KeyType, ValueType>",
                      optionD: "Нет",
-                     correctAnswer: 1,
                      questionId: 358,
                      helpText: "Вы можете написать словарь в сокращенной форме как [KeyType: ValueType]. Хотя две формы функционально идентичны, краткая форма является предпочтительной и используется в данном руководстве при обращении к типу словаря."),
             
@@ -694,7 +636,6 @@ class CollectionTypesSet {
                      optionB: "var names = Int: String[]",
                      optionC: "var names: [Int: String] = ()",
                      optionD: "var names: (Int: String) = []",
-                     correctAnswer: 1,
                      questionId: 359,
                      helpText: "Подобно массивам вы можете создать пустой словарь определенного типа с помощью синтаксиса инициализатора: var names = [Int: String](). В этом примере создается пустой словарь с типом [Int: String] для хранения удобных для восприятия имен числовых значений. Его ключи имеют тип Int, а значения - String."),
             
@@ -706,7 +647,6 @@ class CollectionTypesSet {
                      optionB: "[]",
                      optionC: "[](:)",
                      optionD: "{:}",
-                     correctAnswer: 1,
                      questionId: 360,
                      helpText: "Если контекст уже предоставляет информацию о типе (ранее мы уже инициализировали значения), вы можете создать пустой словарь с помощью литерала пустого словаря, который пишется как [:] ( двоеточие внутри пары квадратных скобок)."),
             
@@ -718,7 +658,6 @@ class CollectionTypesSet {
                      optionB: "var b = [Int: String](1: \"Name\")",
                      optionC: "var c: (Int: String)[0: \"Name\"]",
                      optionD: "var d: <Int: String>[0: \"Name\"]",
-                     correctAnswer: 1,
                      questionId: 361,
                      helpText: "Вы можете инициализировать словарь с помощью литерала словаря, который имеет схожий синтаксис с литералом массива. Литерал словаря это краткий способ написать одну или несколько пар ключ-значение в виде коллекций словаря. В литерале словаря, ключ и значение в каждой паре ключ-значение разделено двоеточием. Пары написаны как список, разделенный запятыми и окруженный парой квадратных скобок."),
             
@@ -730,7 +669,6 @@ class CollectionTypesSet {
                      optionB: "[Int : Character]",
                      optionC: "[Int : String]",
                      optionD: "[Float : String]",
-                     correctAnswer: 1,
                      questionId: 362,
                      helpText: "Правильный ответ [Double : String], поскольку стандартно присваивается тип Double любому числу с плавающей точкой, без явного указания типа. Вторая часть, значение словаря, имеет тип String."),
             
@@ -741,7 +679,6 @@ class CollectionTypesSet {
                      optionB: "dictionary.Key(Value)",
                      optionC: "dictionary.Key = [Value]",
                      optionD: "Значения словаря неизменяемы",
-                     correctAnswer: 1,
                      questionId: 363,
                      helpText: "Вы можете добавить новый элемент в словарь с помощью синтаксиса индексов. Используйте новый ключ соответствующего типа в качестве индекса, а затем присвойте новое значение соответствующего типа. Вы также можете использовать синтаксис индексов для изменения значения связанного с определенным ключом. Правильный ответ: dictionary[Key] = Value."),
             
@@ -753,7 +690,6 @@ class CollectionTypesSet {
                      optionB: "update(key:)",
                      optionC: "changeValue(forKey:)",
                      optionD: "change(key:)",
-                     correctAnswer: 1,
                      questionId: 364,
                      helpText: "В качестве альтернативы индексам, можно использовать метод словаря updateValue(forKey:), чтобы установить или обновить значение для определенного ключа. Подобно примерам с индексами вверху, метод updateValue(forKey:) устанавливает значение для ключа если оно не существует, или обновляет значение, если этот ключ уже существует. Однако, в отличие от индексов, метод updateValue(forKey:) возвращает старое значение после выполнения обновления. Это позволяет вам проверить состоялось ли обновление или нет."),
             
@@ -764,7 +700,6 @@ class CollectionTypesSet {
                      optionB: "0",
                      optionC: "Ничего",
                      optionD: "Опциональный тип",
-                     correctAnswer: 1,
                      questionId: 365,
                      helpText: "Метод updateValue(forKey:) возвращает опциональное значение соответствующее типу значения словаря. Например, для словаря, который хранит String значения, метод вернет String? тип, или опциональный String. Это опциональное значение содержит старое значение для этого ключа, если оно существовало до обновления, либо nil если значение не существовало."),
             
@@ -775,7 +710,6 @@ class CollectionTypesSet {
                      optionB: "Ничего",
                      optionC: "Рандомное значение",
                      optionD: "Столкнемся с ошибкой",
-                     correctAnswer: 1,
                      questionId: 366,
                      helpText: "Поскольку есть вероятность запросить ключ для несуществующего значения, индекс словаря возвращает опциональное значение соответствующее типу значений словаря. Если словарь содержит значение для запрошенного ключа, индекс возвращает опциональное значение, содержащее существующее значение для этого ключа. В противном случае индекс возвращает nil."),
             
@@ -787,7 +721,6 @@ class CollectionTypesSet {
                      optionB: "dict[Key] = []",
                      optionC: "dict[Key] = 0",
                      optionD: "dict[Key].remove()",
-                     correctAnswer: 1,
                      questionId: 367,
                      helpText: "Вы можете использовать синтаксис индексов для удаления пары ключ-значение из словаря путем присвоения nil значению для этого ключа."),
             
@@ -798,7 +731,6 @@ class CollectionTypesSet {
                      optionB: "remove(forKey:)",
                      optionC: "removeValue(Key:)",
                      optionD: "deleteValue(forKey:)",
-                     correctAnswer: 1,
                      questionId: 368,
                      helpText: "Кроме того, можно удалить пару ключ-значение из словаря с помощью метода removeValue(forKey:). Этот метод удаляет пару ключ-значение если она существует и затем возвращает значение , либо возвращает nil если значения не существует"),
             
@@ -808,7 +740,6 @@ class CollectionTypesSet {
                      optionB: "10",
                      optionC: "8",
                      optionD: "Столкнемся с ошибкой",
-                     correctAnswer: 1,
                      questionId: 369,
                      helpText: "Числам (индексам) ниже 10 можно приписывать нули. В этой стилистической надстройке нет прямой необходимости, но иногда она может сделать код более читаемым."),
             
@@ -819,7 +750,6 @@ class CollectionTypesSet {
                      optionB: "Не копируются",
                      optionC: "В глобальном потоке",
                      optionD: "Специальным алгоритмом",
-                     correctAnswer: 1,
                      questionId: 370,
                      helpText: "Коллекции, определенные стандартной библиотекой, такие как массивы, словари и строки, используют оптимизацию для снижения затрат на копирование. Вместо того, чтобы немедленно сделать копию, эти коллекции совместно используют память, в которой элементы хранятся между исходным экземпляром и любыми копиями. Если одна из копий коллекции модифицирована, элементы копируются непосредственно перед изменением."),
             
@@ -829,7 +759,6 @@ class CollectionTypesSet {
                      optionB: "3",
                      optionC: "2",
                      optionD: "Столкнемся с ошибкой",
-                     correctAnswer: 1,
                      questionId: 371,
                      helpText: "Правильный ответ: 4. В примере мы объявляем переменную numberOfLegs и инициализируем ее с помощью литерала словаря, который содержит три пары ключ-значение. Тип словаря numberOfLegs выводится как [String: Int]. После того как словарь создан, в этом примере используется сабскриптное присваивание для добавления ключа типа String “птичка“, значения типа Int 2."),
             
@@ -841,7 +770,7 @@ class CollectionTypesSet {
             //                     optionB: "",
             //                     optionC: "",
             //                     optionD: "",
-            //                     correctAnswer: 1,
+            //
             //                     questionId: 372,
             //                     helpText: ""),
         ]

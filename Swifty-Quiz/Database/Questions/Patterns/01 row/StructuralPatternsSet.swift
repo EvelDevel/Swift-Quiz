@@ -15,7 +15,6 @@ class StructuralPatternsSet {
                      optionB: "Управление поведением",
                      optionC: "Создание объектов",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2701,
                      helpText: "Структурные паттерны позволяют лучше структурировать код, чтобы его было легче понимать."),
             
@@ -26,7 +25,6 @@ class StructuralPatternsSet {
                      optionB: "Мост",
                      optionC: "Компоновщик",
                      optionD: "Декоратор",
-                     correctAnswer: 1,
                      questionId: 2702,
                      helpText: "Адаптер — это структурный паттерн проектирования, который позволяет объектам с несовместимыми интерфейсами работать вместе."),
             
@@ -38,7 +36,6 @@ class StructuralPatternsSet {
                      optionB: "Delegate",
                      optionC: "Adapter",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2703,
                      helpText: "Паттерн flyweight — «легковес». В переводах классических книг он обычно называется «приспособленец». По классификации это структурный паттерн. Его цель — в минимизации используемой памяти там, где необязательно создавать несколько объектов, а вместо этого можно переиспользовать один."),
             
@@ -49,7 +46,6 @@ class StructuralPatternsSet {
                      optionB: "Компоновщик",
                      optionC: "Декоратор",
                      optionD: "Легковес",
-                     correctAnswer: 1,
                      questionId: 2704,
                      helpText: "Мост — это структурный паттерн проектирования, который разделяет один или несколько классов на две отдельные иерархии — абстракцию и реализацию, позволяя изменять их независимо друг от друга."),
             
@@ -61,7 +57,6 @@ class StructuralPatternsSet {
                      optionB: "Memento (Хранитель)",
                      optionC: "Delegate (Делегат)",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2705,
                      helpText: "Паттерн Facade (фасад) — структурный шаблон проектирования. Он предоставляет простой интерфейс к сложной системе классов, библиотеке или фреймворку."),
             
@@ -72,7 +67,6 @@ class StructuralPatternsSet {
                      optionB: "Bridge",
                      optionC: "Decorator",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2706,
                      helpText: "Адаптер (adapter) позволяет создать объект-прокладку, который будет превращать вызовы приложения в формат, понятный стороннему классу. Можно поместить недостающую функциональность в адаптер и приспособить его для работы с суперклассом. Такой адаптер может работать со всеми подклассами иерархии."),
             
@@ -84,7 +78,6 @@ class StructuralPatternsSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2707,
                      helpText: "У паттерна Facade (Фасад) паттерна нет строгих предписаний о том, как реализовывать фасад, какие у него должны быть методы. К каждой задаче фасад делается так, чтобы максимально удобно структурировать сложную работу нескольких систем."),
             
@@ -94,7 +87,6 @@ class StructuralPatternsSet {
                      optionB: "Adapter",
                      optionC: "Composite",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2708,
                      helpText: "Чем больше класс, тем тяжелее разобраться в его коде, и тем больше это затягивает разработку. Кроме того, изменения, вносимые в одну из реализаций, приводят к редактированию всего класса, что может привести к внесению случайных ошибок в код. Мост (Bridge) позволяет разделить монолитный класс на несколько отдельных иерархий. После этого вы можете менять их код независимо друг от друга. Это упрощает работу над кодом и уменьшает вероятность внесения ошибок."),
             
@@ -105,7 +97,6 @@ class StructuralPatternsSet {
                      optionB: "Delegate",
                      optionC: "Adapter",
                      optionD: "Abstract Factory",
-                     correctAnswer: 1,
                      questionId: 2709,
                      helpText: "Flyweight: вместо создания и хранения в памяти нескольких объектов, нужных для одной цели, мы создаем и храним один объект и используем его для всех случаев. Все стандартные цвета, такие как UIColor.red, UIColor.green, UIColor.white, UIColor.black и т. д. реализованы по паттерну flyweight."),
             
@@ -115,7 +106,6 @@ class StructuralPatternsSet {
                      optionB: "Компоновщик",
                      optionC: "Заместитель",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2710,
                      helpText: "Преимущества паттерна Мост: Позволяет строить платформо-независимые программы. Скрывает лишние или опасные детали реализации от клиентского кода. Реализует принцип открытости/закрытости."),
             
@@ -126,7 +116,6 @@ class StructuralPatternsSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2711,
                      helpText: "Фасад можно сделать Одиночкой, так как обычно нужен только один объект-фасад."),
             
@@ -137,7 +126,6 @@ class StructuralPatternsSet {
                      optionB: "Мост",
                      optionC: "Заместитель",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2712,
                      helpText: "Компоновщик — это структурный паттерн проектирования, который позволяет сгруппировать множество объектов в древовидную структуру, а затем работать с ней так, как будто это единичный объект."),
             
@@ -148,7 +136,6 @@ class StructuralPatternsSet {
                      optionB: "Decorator",
                      optionC: "Composite",
                      optionD: "Mediator",
-                     correctAnswer: 1,
                      questionId: 2713,
                      helpText: "Преимущества и недостатки паттерна Proxy (прокси, заместитель): Позволяет контролировать сервисный объект незаметно для клиента. Может работать, даже если сервисный объект еще не создан. Может контролировать жизненный цикл служебного объекта. Усложняет код программы из-за введения дополнительных классов. Увеличивает время отклика от сервиса."),
             
@@ -159,7 +146,6 @@ class StructuralPatternsSet {
                      optionB: "Компоновщик",
                      optionC: "Фасад",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2714,
                      helpText: "Декоратор — это структурный паттерн проектирования, который позволяет динамически добавлять объектам новую функциональность, оборачивая их в полезные «обёртки»."),
             
@@ -171,7 +157,6 @@ class StructuralPatternsSet {
                      optionB: "Composite",
                      optionC: "Adapter",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2715,
                      helpText: "В любом приложении под iOS используются цвета. Как правило, дизайнер придумывает палитру из оттенков, наиболее часто используемых в дизайне приложения, а в коде хранятся переменные, которые эту палитру описывают. Самым логичным решением будет хранить эти переменные, используя паттерн flyweight, который в Swift реализуется очень просто."),
             
@@ -181,7 +166,6 @@ class StructuralPatternsSet {
                      optionB: "Facade",
                      optionC: "Flyweight",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2716,
                      helpText: "При использовании паттерна Декоратор, объекты помещают в обёртки, имеющие дополнительные поведения. Обёртки и сами объекты имеют одинаковый интерфейс, поэтому клиентам без разницы, с чем работать — с обычным объектом данных или с обернутым."),
             
@@ -193,7 +177,6 @@ class StructuralPatternsSet {
                      optionB: "Chain Of Responsibility",
                      optionC: "Mediator",
                      optionD: "Command",
-                     correctAnswer: 1,
                      questionId: 2717,
                      helpText: "Decorator (декоратор) — структурный шаблон проектирования, расширяющий функциональность объекта без использования наследования."),
             
@@ -204,7 +187,6 @@ class StructuralPatternsSet {
                      optionB: "Декоратор",
                      optionC: "Компоновщик",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2718,
                      helpText: "Фасад предлагает определённый вид системы по умолчанию, устраивающий большинство клиентов. Используйте фасады для определения точек входа на каждый уровень подсистемы. Если подсистемы зависят друг от друга, то зависимость можно упростить, разрешив подсистемам обмениваться информацией только через фасады."),
             
@@ -216,7 +198,6 @@ class StructuralPatternsSet {
                      optionB: "Chain Of Responsibility",
                      optionC: "Mediator",
                      optionD: "Command",
-                     correctAnswer: 1,
                      questionId: 2719,
                      helpText: "Паттерн Composite (компоновщик) — структурный шаблон проектирования. Он представляет объекты в виде древовидной структуры и обеспечивает к ним доступ через единый интерфейс."),
             
@@ -227,7 +208,6 @@ class StructuralPatternsSet {
                      optionB: "Компоновщик",
                      optionC: "Адаптер",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2720,
                      helpText: "Во многих языках программирования есть ключевое слово final, которое может блокировать наследование класса. Расширить такие классы можно только с помощью ."),
             
@@ -239,7 +219,6 @@ class StructuralPatternsSet {
                      optionB: "Adapter",
                      optionC: "Bridge",
                      optionD: "Facade",
-                     correctAnswer: 1,
                      questionId: 2721,
                      helpText: "Паттерн Proxy (прокси, «заместитель») — структурный шаблон проектирования. Представляет собой объект, который контролирует доступ к другому объекту, перехватывая все вызовы. При этом объект-прокси имеет тот же интерфейс, что и настоящий объект."),
             
@@ -249,7 +228,6 @@ class StructuralPatternsSet {
                      optionB: "Composite",
                      optionC: "Mediator",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2722,
                      helpText: "Этот недостаток относится к паттерну Facade"),
             
@@ -261,7 +239,6 @@ class StructuralPatternsSet {
                      optionB: "Mediator",
                      optionC: "Composite",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2723,
                      helpText: "Преимущества и недостатки паттерна Decorator (декоратор): Большая гибкость, чем у наследования. Позволяет добавлять обязанности на лету. Можно добавлять несколько новых обязанностей сразу. Позволяет иметь несколько мелких объектов вместо одного объекта на все случаи жизни. Трудно конфигурировать многократно обернутые объекты. Обилие крошечных классов."),
             
@@ -272,7 +249,6 @@ class StructuralPatternsSet {
                      optionB: "Адаптер",
                      optionC: "Декоратор",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2724,
                      helpText: "Преимущества и недостатки паттерна Composite (компоновщик): Упрощает архитектуру клиента при работе со сложным деревом компонентов. Облегчает добавление новых видов компонентов. Создает слишком общий дизайн классов."),
             
@@ -282,7 +258,6 @@ class StructuralPatternsSet {
                      optionB: "Composite",
                      optionC: "Bridge",
                      optionD: "Decorator",
-                     correctAnswer: 1,
                      questionId: 2725,
                      helpText: "Адаптер (Adapter) — это структурный паттерн проектирования, который позволяет объектам с несовместимыми интерфейсами работать вместе."),
             
@@ -292,7 +267,6 @@ class StructuralPatternsSet {
                      optionB: "Facade",
                      optionC: "Adapter",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2726,
                      helpText: "Мост (Bridge) — это структурный паттерн проектирования, который разделяет один или несколько классов на две отдельные иерархии — абстракцию и реализацию, позволяя изменять их независимо друг от друга."),
             
@@ -302,7 +276,6 @@ class StructuralPatternsSet {
                      optionB: "Flyweight",
                      optionC: "Proxy",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2727,
                      helpText: "Компоновщик (Composite) — это структурный паттерн проектирования, который позволяет сгруппировать множество объектов в древовидную структуру, а затем работать с ней так, как будто это единичный объект."),
             
@@ -312,7 +285,6 @@ class StructuralPatternsSet {
                      optionB: "Composite",
                      optionC: "Facade",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2728,
                      helpText: "Декоратор (Decorator) — это структурный паттерн проектирования, который позволяет динамически добавлять объектам новую функциональность, оборачивая их в полезные «обёртки»."),
             
@@ -322,7 +294,6 @@ class StructuralPatternsSet {
                      optionB: "Decorator",
                      optionC: "Composite",
                      optionD: "Flyweight",
-                     correctAnswer: 1,
                      questionId: 2729,
                      helpText: "Фасад (Facade) — это структурный паттерн проектирования, который предоставляет простой интерфейс к сложной системе классов, библиотеке или фреймворку."),
             
@@ -332,7 +303,6 @@ class StructuralPatternsSet {
                      optionB: "Decorator",
                      optionC: "Facade",
                      optionD: "",
-                     correctAnswer: 1,
                      questionId: 2730,
                      helpText: "Легковес (Flyweight) — это структурный паттерн проектирования, который позволяет вместить бóльшее количество объектов в отведённую оперативную память. Легковес экономит память, разделяя общее состояние объектов между собой, вместо хранения одинаковых данных в каждом объекте."),
             
@@ -342,7 +312,6 @@ class StructuralPatternsSet {
                      optionB: "State",
                      optionC: "Facade",
                      optionD: "Delegate",
-                     correctAnswer: 1,
                      questionId: 2731,
                      helpText: "Заместитель (Proxy) — это структурный паттерн проектирования, который позволяет подставлять вместо реальных объектов специальные объекты-заменители. Эти объекты перехватывают вызовы к оригинальному объекту, позволяя сделать что-то до или после передачи вызова оригиналу."),
             
@@ -354,56 +323,8 @@ class StructuralPatternsSet {
 //                     optionB: "",
 //                     optionC: "",
 //                     optionD: "",
-//                     correctAnswer: 1,
+//
 //                     questionId: 2732,
-//                     helpText: ""),
-//
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 2733,
-//                     helpText: ""),
-//
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 2734,
-//                     helpText: ""),
-//
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 2735,
-//                     helpText: ""),
-//
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//                     correctAnswer: 1,
-//                     questionId: 2736,
 //                     helpText: ""),
         ]
     }

@@ -75,7 +75,6 @@ class GameViewController: UIViewController {
         shadows.addStaticShadows(GameComtrollerViews)
         shadows.addButtonShadows(answerButtonsCollection)
     }
-    
     func showAlertIfNeeded() {
         gameHelper.showAlertIfNeeded(weContinueLastGame, self)
     }

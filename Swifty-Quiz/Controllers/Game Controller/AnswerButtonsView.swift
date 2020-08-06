@@ -41,57 +41,52 @@ class AnswerButtonsView: UIView {
                               _ optionC: UIButton,
                               _ optionD: UIButton) {
         
-        var shuffledAnswersArray: [String] = []
+        var tempArrayForShuffeling: [String] = []
+        var arrayWithShuffledAnswers: [String] = []
+        var finalAnswersSet: [String] = []
         var correctAnswer: String = ""
         
-        /// Фиксируем текст правильного ответа
-        switch array[index].correctAnswer {
-        case 1: correctAnswer = array[index].optionA
-        case 2: correctAnswer = array[index].optionB
-        case 3: correctAnswer = array[index].optionC
-        case 4: correctAnswer = array[index].optionD
-        default: print("Error with saving the correct answer")
+        /// Фиксируем текст правильного ответа (всегда первый)
+        if array.count != 0 {
+            correctAnswer = array[index].optionA
         }
         
         /// Перемешиваем позиции ответов
-        var tempAnswersArray: [String] = []
-        tempAnswersArray.append(array[index].optionA)
-        tempAnswersArray.append(array[index].optionB)
-        tempAnswersArray.append(array[index].optionC)
-        tempAnswersArray.append(array[index].optionD)
-        shuffledAnswersArray = tempAnswersArray.shuffled()
+        tempArrayForShuffeling.append(array[index].optionA)
+        tempArrayForShuffeling.append(array[index].optionB)
+        tempArrayForShuffeling.append(array[index].optionC)
+        tempArrayForShuffeling.append(array[index].optionD)
+        arrayWithShuffledAnswers = tempArrayForShuffeling.shuffled()
         
-        /// Сдвигаем все "непустые" варианты вверх
-        /// Необходимо для более красивой анимации
-        var tempArray: [String] = []
+        /// Сдвигаем все "непустые" варианты вверх (для красивой анимации)
         for index in 0...3 {
-            if shuffledAnswersArray[index] != "" {
-                tempArray.insert(shuffledAnswersArray[index], at: 0)
+            if arrayWithShuffledAnswers[index] != "" {
+                finalAnswersSet.insert(arrayWithShuffledAnswers[index], at: 0)
             } else {
-                tempArray.append(shuffledAnswersArray[index])
+                finalAnswersSet.append(arrayWithShuffledAnswers[index])
             }
         }
-        shuffledAnswersArray = tempArray
         
         /// Находим актуальный индекс правильного ответа
-        for i in 0..<shuffledAnswersArray.count {
-            if shuffledAnswersArray[i] == correctAnswer {
+        for i in 0..<finalAnswersSet.count {
+            if finalAnswersSet[i] == correctAnswer {
                 correctAnswerNewPosition = i + 1
             }
         }
     
-        /// Устанавливаем все ответы на позиции
-        func workWithLabelText(_ button: UIButton, _ index: Int) {
-            button.titleLabel?.text = shuffledAnswersArray[index]
-            button.setTitle(shuffledAnswersArray[index], for: .normal)
-            if shuffledAnswersArray[index] == "" {
+        /// Устанавливаем все перемешанные ответы на новые позиции
+        func putShuffledAnswersToNewPositions(_ button: UIButton,
+                                              _ index: Int) {
+            button.titleLabel?.text = finalAnswersSet[index]
+            button.setTitle(finalAnswersSet[index], for: .normal)
+            if finalAnswersSet[index] == "" {
                 animationChanging(false, button)
             }
         }
-        workWithLabelText(optionA, 0)
-        workWithLabelText(optionB, 1)
-        workWithLabelText(optionC, 2)
-        workWithLabelText(optionD, 3)
+        putShuffledAnswersToNewPositions(optionA, 0)
+        putShuffledAnswersToNewPositions(optionB, 1)
+        putShuffledAnswersToNewPositions(optionC, 2)
+        putShuffledAnswersToNewPositions(optionD, 3)
     }
     
     
