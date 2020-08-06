@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="746" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="746"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="821" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Swifty_Quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="821"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="746"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="821"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подборки вопросов" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
-                        <rect key="frame" x="16" y="50" width="288" height="68"/>
+                        <rect key="frame" x="16" y="55" width="288" height="68"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aff-PP-AXD" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -127,7 +127,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
-                        <rect key="frame" x="16" y="143" width="143" height="20.5"/>
+                        <rect key="frame" x="16" y="158" width="143" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="PUD-mA-gbc"/>
                         </constraints>
@@ -136,7 +136,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                        <rect key="frame" x="16" y="178.5" width="288" height="410"/>
+                        <rect key="frame" x="16" y="198.5" width="288" height="410"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-RY-saU" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -645,7 +645,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
-                        <rect key="frame" x="16" y="613.5" width="288" height="20.5"/>
+                        <rect key="frame" x="16" y="643.5" width="288" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="k5c-Qp-N5g"/>
                         </constraints>
@@ -654,7 +654,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-8m-84D" userLabel="Patterns">
-                        <rect key="frame" x="16" y="649" width="288" height="68"/>
+                        <rect key="frame" x="16" y="684" width="288" height="68"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-W0-nCM" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -759,21 +759,21 @@
                 <constraints>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Nb-Hc-BOM"/>
                     <constraint firstItem="ACn-p5-cdl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="46t-jq-ymH"/>
-                    <constraint firstItem="RS1-Wq-feW" firstAttribute="top" secondItem="ACn-p5-cdl" secondAttribute="bottom" constant="25" id="9ZW-Ff-AVr"/>
-                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="RS1-Wq-feW" secondAttribute="bottom" constant="15" id="EGO-lp-sOc"/>
+                    <constraint firstItem="RS1-Wq-feW" firstAttribute="top" secondItem="ACn-p5-cdl" secondAttribute="bottom" constant="35" id="9ZW-Ff-AVr"/>
+                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="RS1-Wq-feW" secondAttribute="bottom" constant="20" id="EGO-lp-sOc"/>
                     <constraint firstItem="tUx-lF-pbh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="R4x-dl-6Oi"/>
                     <constraint firstItem="UdD-H9-Pu8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Reu-s7-rdt"/>
-                    <constraint firstAttribute="bottom" secondItem="pLn-8m-84D" secondAttribute="bottom" constant="50" id="S5a-3v-9fU"/>
+                    <constraint firstAttribute="bottom" secondItem="pLn-8m-84D" secondAttribute="bottom" constant="30" id="S5a-3v-9fU"/>
                     <constraint firstItem="pLn-8m-84D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SSf-2a-uT8"/>
                     <constraint firstItem="tUx-lF-pbh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="T2Y-w1-kDk"/>
                     <constraint firstAttribute="trailing" secondItem="ACn-p5-cdl" secondAttribute="trailing" constant="16" id="TdG-eq-yav"/>
                     <constraint firstItem="RS1-Wq-feW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bna-Kq-cLs"/>
                     <constraint firstAttribute="trailing" secondItem="UdD-H9-Pu8" secondAttribute="trailing" constant="16" id="dvo-lB-6uh"/>
-                    <constraint firstItem="ACn-p5-cdl" firstAttribute="top" secondItem="tUx-lF-pbh" secondAttribute="bottom" constant="15" id="g5J-4M-K4G"/>
+                    <constraint firstItem="ACn-p5-cdl" firstAttribute="top" secondItem="tUx-lF-pbh" secondAttribute="bottom" constant="20" id="g5J-4M-K4G"/>
                     <constraint firstAttribute="trailing" secondItem="d0p-ZD-gEa" secondAttribute="trailing" constant="16" id="jgA-Kn-7V8"/>
                     <constraint firstAttribute="trailing" secondItem="pLn-8m-84D" secondAttribute="trailing" constant="16" id="mP1-Eo-OZB"/>
-                    <constraint firstItem="UdD-H9-Pu8" firstAttribute="top" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="25" id="tRH-b3-ILq"/>
-                    <constraint firstItem="pLn-8m-84D" firstAttribute="top" secondItem="UdD-H9-Pu8" secondAttribute="bottom" constant="15" id="xZ7-Zc-9BV"/>
+                    <constraint firstItem="UdD-H9-Pu8" firstAttribute="top" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="35" id="tRH-b3-ILq"/>
+                    <constraint firstItem="pLn-8m-84D" firstAttribute="top" secondItem="UdD-H9-Pu8" secondAttribute="bottom" constant="20" id="xZ7-Zc-9BV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -815,7 +815,7 @@
                 <outletCollection property="patternsQuestions" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="UE1-kT-2VQ"/>
                 <outletCollection property="patternsQuestions" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="GIz-wA-3Vj"/>
             </connections>
-            <point key="canvasLocation" x="-178.2608695652174" y="174.10714285714286"/>
+            <point key="canvasLocation" x="-178.2608695652174" y="199.21875"/>
         </tableViewCell>
     </objects>
 </document>
