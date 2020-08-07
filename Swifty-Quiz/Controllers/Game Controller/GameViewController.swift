@@ -114,9 +114,13 @@ extension GameViewController {
     }
     
     func updateQuestion() {
-        buttonsView.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
-        buttonsView.setDefaultButtonsColor(answerButtonsCollection)
-        shadows.addButtonShadows(answerButtonsCollection)
+        /// Если это был последний вопрос и мы получили алерт о завершении
+        /// Не обновляем кнопки (чтобы осталась активна последняя нажатая)
+        if currentQuestionIndex < localQuestionSet.count {
+            buttonsView.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
+            buttonsView.setDefaultButtonsColor(answerButtonsCollection)
+            shadows.addButtonShadows(answerButtonsCollection)
+        }
         addQuestionContent()
         updateUI()
         answerPressed = false
