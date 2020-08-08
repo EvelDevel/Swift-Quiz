@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
     private var answerPressed = false // Уже нажали один ответ (второй не срабатывает)
     var weContinueLastGame = false
-    
+
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -144,7 +144,12 @@ extension GameViewController {
         helpFlag = false
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
-        progressView.frame.size.width = (progressWhite.frame.size.width / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
+        progressView.frame.size.width = ((view.frame.size.width - 40) / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
+        
+//        print("view.frame.size.width: \(view.frame.size.width)")
+//        print("CGFloat(localQuestionSet.count)): \(CGFloat(localQuestionSet.count)))")
+//        print("CGFloat(currentQuestionIndex): \(CGFloat(currentQuestionIndex))")
+//        print("________")
     }
     
     func updatePercentage() -> Double {
