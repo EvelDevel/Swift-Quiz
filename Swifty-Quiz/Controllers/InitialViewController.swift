@@ -6,6 +6,9 @@ import UIKit
 
 // MARK: TODO - Баги и доработки с Apple Store отзывов
 
+/// Сделать цвет шрифта в статус баре чёрным для темной темы
+/// Когда остановились на вопросе с картинкой - после продолжения картинка ресайзится
+
 /// Добавить кнопку «сообщить о проблеме» (на экране во время игры)
 /// В "Истории игр" - возможность зайти в каждую игру и посмотреть все ответы (историю одной игры)
 /// Возможность перемещаться назад во время игры (посмотреть предыдущие ответы, на случай неправильного)
@@ -34,6 +37,7 @@ class InitialViewController: UIViewController {
     @IBAction func goToAbout(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBAction func tapButtonSounds(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
+    private let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
     private let shadows = ShadowsHelper()
     private let recordCaretaker = RecordsCaretaker()
     
@@ -54,12 +58,18 @@ extension InitialViewController {
         showTotalQuestions()
     }
     
-    /// Загружаем дефолтную или выбранную ранее категорию
+    /// Загружаем дефолтную категорию или подтверждаем ранее выбранную
     func setUpStartingQuestionSet() {
-        if SelectedTopic.shared.topic.questionSet.isEmpty {
+        
+        /// Если это первый старт ИЛИ обновилась текущая версия приложения
+        /// Загружаем дефолтную категорию
+        /// Обновляем контент и сбрасываем статус "можно продолжить"
+        /// Исчезнет кнопка "продолжить", и не будет отображаться alert "Есть незавершенная игра"
+        if SelectedTopic.shared.topic.questionSet.isEmpty || Game.shared.settings.appLastVersion != currentAppVersion {
             let newSet = TopicOperator.getQuestionsTheBasics()
             SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
             selectedTopic.text = "Основы"
+            Game.shared.changeContinueStatus()
         } else {
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
         }
@@ -103,6 +113,9 @@ extension InitialViewController {
     
     /// Показываем или скрываем кнопку "продолжить"
     func updateContinueButton() {
+        
+        /// Показываем "продолжить", если есть рекорд (состоялась незавершенная игра)
+        /// У этого рекорда статус "можно продолжить" (не меняли настройки / категорию / версию приложения)
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             UIView.animate(withDuration: 0.12, animations: {
                 if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }

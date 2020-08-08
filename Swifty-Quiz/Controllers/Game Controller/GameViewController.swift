@@ -263,11 +263,17 @@ extension GameViewController {
                                 playedNum: currentQuestionIndex,
                                 continueGameStatus: continueStatus)
         
+        /// Записываем рекорд, или подменяем прошлый, если продолжали
         if weContinueLastGame {
             Game.shared.replaceRecord(record)
         } else {
             Game.shared.addRecord(record)
         }
+        
+        /// Сохраняем текущую версию приложения (отслеживаем обновления)
+        let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        Game.shared.saveAppVersion(version: currentAppVersion)
+        
         /// Отдельно сохраняется локальный массив (который может быть зашафлен)
         /// Отдельно сохраняется исходный - для последующих игр и возможных изменений настроек
         /// При продолжении игры, в коде выше загружается именно локальный, на котором остановились

@@ -13,7 +13,7 @@ class LaunchViewController: UIViewController {
         controlledTransitionFromLaunch()
     }
     
-    /// Без этой функции любой звук приложения сразу глушит любую фоновую музыку
+    /// Без этой функции любой звук приложения сразу останавливает фоновую музыку 
     func makeRightSettingsForSounds() {
         do { try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient) }
         catch { print("Some problems with AVAudioSession.sharedInstance())") }

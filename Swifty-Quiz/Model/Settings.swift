@@ -12,4 +12,5 @@ struct Settings: Codable {
     var sound: Int                  // Звук
     var changeAfterHelp: Int        // Поведение после подсказки (меняем вопрос или остаемся)
     var helpAfterWrong: Int         // Поведение после неправильного ответа (показываем подсказку или переходим)
+    var appLastVersion: String      // Сохранение текущей версии приложения (чтобы когда обновляем, рефрешить контент)
 }

@@ -24,6 +24,9 @@ class TopicViewController: UIViewController {
     /// Обновляем выбранную категорию моментально
     override func viewWillDisappear(_ animated: Bool) {
         delegate?.selectedCategory()
+        /// Сохраняем текущую версию при смене категории (на всякий случай, для отслеживания обновлений)
+        let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        Game.shared.saveAppVersion(version: currentAppVersion)
     }
     
     /// Обновляем (убираем) кнопку "продолжить" при смене темы с задержкой

@@ -25,7 +25,8 @@ class SettingsCaretaker {
                             questionTextShuffeling: 0,
                             sound: 0,
                             changeAfterHelp: 0,
-                            helpAfterWrong: 0)
+                            helpAfterWrong: 0,
+                            appLastVersion: "")
         }
         do {
             return try self.decoder.decode(Settings.self, from: data)
@@ -35,7 +36,8 @@ class SettingsCaretaker {
                             questionTextShuffeling: 0, 
                             sound: 0,
                             changeAfterHelp: 0,
-                            helpAfterWrong: 0)
+                            helpAfterWrong: 0,
+                            appLastVersion: "")
         }
     }
 }

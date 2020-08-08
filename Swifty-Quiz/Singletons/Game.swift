@@ -123,4 +123,9 @@ extension Game {
             self.settings.changeAfterHelp = 0
         }
     }
+    
+    /// Сохранение текущей версии приложения
+    func saveAppVersion(version: String) {
+        self.settings.appLastVersion = version
+    }
 }
