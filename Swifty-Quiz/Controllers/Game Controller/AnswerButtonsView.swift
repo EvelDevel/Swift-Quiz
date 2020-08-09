@@ -7,6 +7,7 @@ import UIKit
 class AnswerButtonsView: UIView {
     
     private var correctAnswerNewPosition = 0
+    private var finalButtonsSetToSend: [String] = []
     
     /// Восстановление видимости всех кнопок
     func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [UIButton]) {
@@ -23,11 +24,6 @@ class AnswerButtonsView: UIView {
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
             button.backgroundColor = #colorLiteral(red: 0.9964529872, green: 0.8487327695, blue: 0.225723803, alpha: 1)
         }
-    }
-    
-    /// Запрос на новое корректное положение ответа
-    func showCorrectPosition() -> Int {
-        return correctAnswerNewPosition
     }
     
     // MARK: Основная работа по формированию блока с кнопоками
@@ -87,6 +83,18 @@ class AnswerButtonsView: UIView {
         putShuffledAnswersToNewPositions(optionB, 1)
         putShuffledAnswersToNewPositions(optionC, 2)
         putShuffledAnswersToNewPositions(optionD, 3)
+        
+        finalButtonsSetToSend = finalAnswersSet
+    }
+    
+    /// Запрос на новое корректное положение ответа
+    func showCorrectPosition() -> Int {
+        return correctAnswerNewPosition
+    }
+    
+    /// Запрос на финальный questionSet
+    func showFinalButtonsSet() -> [String] {
+        return finalButtonsSetToSend
     }
     
     

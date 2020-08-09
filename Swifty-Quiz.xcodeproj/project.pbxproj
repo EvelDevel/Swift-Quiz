@@ -37,6 +37,7 @@
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
 		FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */; };
 		FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */; };
+		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB66C04F24542587009FADDE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C04E24542587009FADDE /* Settings.swift */; };
 		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
@@ -121,6 +122,7 @@
 		FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB66C04E24542587009FADDE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				FBECDC5D243F310800BD5583 /* Question.swift */,
+				FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */,
 				FB8606A82441CF7300A692AD /* Record.swift */,
 				FB66C04E24542587009FADDE /* Settings.swift */,
 				FB66C0522454782B009FADDE /* Topic.swift */,
@@ -610,6 +613,7 @@
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */,
 				FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */,
+				FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */,
 				FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */,
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,

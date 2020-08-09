@@ -15,4 +15,5 @@ struct Record: Codable {
     var helpCounter: Int?                   // Счетчик подсказок
     var playedNum: Int?                     // Отыгранное количество вопросов
     var continueGameStatus: Bool?           // Статус "продолжаем" игру или нет
+    var gameHistory: [GameHistory]?         // История игры
 }

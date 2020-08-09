@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
     private var helpCounter = 0
     private var message = ""
     private var alreadyTappedIncorrect: [Int] = []
+    private var gameHistory: [GameHistory] = []
     
     /// Settings
     private let orderSetting = Game.shared.settings.questionOrder
@@ -50,7 +51,7 @@ class GameViewController: UIViewController {
     private var helpFlag = false // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
-    private var answerPressed = false // Уже нажали один ответ (второй не срабатывает)
+    private var answerPressed = false // Уже нажали один ответ (чтобы второе нажатие не срабатывало)
     var weContinueLastGame = false
 
     weak var delegate: GameViewControllerDelegate?
@@ -87,6 +88,7 @@ extension GameViewController {
     func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame == true {
+                self.gameHistory = Game.shared.records[0].gameHistory!
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
                 self.currentQuestionIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
@@ -145,11 +147,6 @@ extension GameViewController {
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
         progressView.frame.size.width = ((view.frame.size.width - 40) / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
-        
-//        print("view.frame.size.width: \(view.frame.size.width)")
-//        print("CGFloat(localQuestionSet.count)): \(CGFloat(localQuestionSet.count)))")
-//        print("CGFloat(currentQuestionIndex): \(CGFloat(currentQuestionIndex))")
-//        print("________")
     }
     
     func updatePercentage() -> Double {
@@ -162,12 +159,9 @@ extension GameViewController {
 extension GameViewController {
 
     @IBAction func answerPressed(_ sender: UIButton) {
-        /// Первая проверка: Предотвращаем двойное нажатие на разные кнопки
         if answerPressed == false {
+            
             if sender.tag == buttonsView.showCorrectPosition() {
-                
-                /// Когда ответили правильно
-                /// Увеличиваем счет только если не брали подсказку
                 if helpFlag == false { score += 1 }
                 dontUpdateQuestionFlag = false
                 shadows.addGreenShadow(button: sender)
@@ -175,35 +169,32 @@ extension GameViewController {
                 SoundPlayer.shared.playSound(sound: .answerButtonRight)
                 answerPressed = true
             } else {
-                /// Когда ответили неправильно
                 shadows.addRedShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .answerButtonWrong)
                 answerPressed = true
                 
-                /// Если активирована настройка "выводить подсказку"
+                /// Показываем подсказку после неправильного
+                /// Если активна настройка
                 if helpSetting == 1 {
-                    /// Если мы еще не нажимали на данный ответ
                     if alreadyTappedIncorrect.contains(sender.tag) == false {
-                        /// Добавляем нажатую кнопку в "массив уже нажатых ответов"
-                        /// Отсекаем повторный вызов подсказок с одной клавиши
                         alreadyTappedIncorrect.append(sender.tag)
-                        /// Выводим подсказку
-                        /// Обнуляем в делегате "нажатость" ответа (refreshTappedAnswerStatus())
                         showHelpAfterWrongAnswer()
                     } else {
-                        /// Если мы уже нажимали кнопку
-                        /// Просто обнуляем нажатость ответа, без подсказки
                         answerPressed = false
                     }
-                    /// Флаг "не обновлять вопрос", который используется в проверке ниже
                     dontUpdateQuestionFlag = true
                 }
             }
             
+            /// Сохраняем пройденный вопрос в историю
+            gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
+                                           correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                                           userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
+                                           questionId: localQuestionSet[currentQuestionIndex].questionId))
+            
             /// Обновляем вопрос, показатели, и переходим дальше, если:
-            /// - еще остались вопросы в массиве
-            /// - мы не выводили подсказку "после неправильного ответа" (настройки)
+            /// Остались вопросы в массиве, не выводили авто-подсказку (настройки)
             if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
                 currentQuestionIndex += 1
                 currentQuestionNumber += 1
@@ -215,17 +206,13 @@ extension GameViewController {
         }
     }
     
-    /// Запускаем подсказку после неправильного ответа
-    /// Попадаем сюда, только если активирована соответствующая настройка
+    /// Запуск подсказки после неправильного ответа
     func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
         helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
-    
-        if helpFlag == false { // отключаем многократное засчитывание
-            helpCounter += 1
-        }
+        if helpFlag == false { helpCounter += 1 }
         helpCounterLabel.text = "\(helpCounter)"
         helpFlag = true
         self.present(helpView, animated: true, completion: nil)
@@ -266,7 +253,8 @@ extension GameViewController {
                                 percentOfCorrectAnswer: updatePercentage(),
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex,
-                                continueGameStatus: continueStatus)
+                                continueGameStatus: continueStatus,
+                                gameHistory: gameHistory)
         
         /// Записываем рекорд, или подменяем прошлый, если продолжали
         if weContinueLastGame {

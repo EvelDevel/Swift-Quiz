@@ -24,7 +24,7 @@ class TheBasicsSet {
                                 "Создание нового объекта, с которым планируется взаимодействие"],
                      image: "",
                      optionA: "Объявление",
-                     optionB: "Модицикация",
+                     optionB: "Модифицикация",
                      optionC: "Инициализация",
                      optionD: "",
                      questionId: 61,
