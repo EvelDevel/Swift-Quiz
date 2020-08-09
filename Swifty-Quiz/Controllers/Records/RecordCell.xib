@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecordCell" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="RecordCell" customModule="Swifty_Quiz" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecordCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="84" id="KGk-i7-Jjw" customClass="RecordCell" customModule="Swifty_Quiz" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="380" height="84"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-de-6E7">
-                        <rect key="frame" x="20" y="10" width="62" height="62"/>
+                        <rect key="frame" x="16" y="10" width="62" height="62"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNV-0e-ce0">
                                 <rect key="frame" x="7" y="20.5" width="50" height="21.5"/>
@@ -106,7 +106,7 @@
                     <constraint firstItem="dio-AF-jQx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="OP8-GU-sHw"/>
                     <constraint firstItem="GBc-rt-n09" firstAttribute="leading" secondItem="0rP-Ie-Ogi" secondAttribute="trailing" constant="5" id="RL9-eX-nYY"/>
                     <constraint firstItem="FcE-xq-s4t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="SEo-j3-NUq"/>
-                    <constraint firstItem="wKb-de-6E7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WWY-LO-E6R"/>
+                    <constraint firstItem="wKb-de-6E7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WWY-LO-E6R"/>
                     <constraint firstAttribute="bottom" secondItem="dio-AF-jQx" secondAttribute="bottom" id="YOl-wB-QxH"/>
                     <constraint firstItem="YS0-bb-Hxu" firstAttribute="leading" secondItem="ysi-7y-8JZ" secondAttribute="trailing" constant="5" id="ZgR-fL-rqk"/>
                     <constraint firstAttribute="bottom" secondItem="wKb-de-6E7" secondAttribute="bottom" constant="10" id="bNR-Mz-nlw"/>

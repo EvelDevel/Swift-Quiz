@@ -38,6 +38,10 @@
 		FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */; };
 		FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
+		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
+		FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */; };
+		FB6624EA24E0202C008C9CE5 /* GameHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */; };
+		FB6624EB24E02552008C9CE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB66C04F24542587009FADDE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C04E24542587009FADDE /* Settings.swift */; };
 		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
@@ -47,7 +51,6 @@
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
-		FB7BCD4D24BC92CA00B8F6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */; };
 		FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB7BCD4E24BDCDA700B8F6BA /* hideContinue.mp3 */; };
 		FB7BCD5124BDCDA700B8F6BA /* showContinue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB7BCD4F24BDCDA700B8F6BA /* showContinue.mp3 */; };
 		FB8606A72441CF1C00A692AD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8606A62441CF1C00A692AD /* Game.swift */; };
@@ -123,6 +126,9 @@
 		FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
+		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
+		FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryCell.swift; sourceTree = "<group>"; };
+		FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameHistoryCell.xib; sourceTree = "<group>"; };
 		FB66C04E24542587009FADDE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
 				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
 				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
+				FB6624E624E01FEB008C9CE5 /* GameHistory */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -330,6 +337,16 @@
 				FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */,
 			);
 			path = "Topic Picker";
+			sourceTree = "<group>";
+		};
+		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
+			isa = PBXGroup;
+			children = (
+				FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */,
+				FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */,
+				FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */,
+			);
+			path = GameHistory;
 			sourceTree = "<group>";
 		};
 		FB66C05624559197009FADDE /* Setting */ = {
@@ -569,8 +586,9 @@
 				FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
-				FB7BCD4D24BC92CA00B8F6BA /* Main.storyboard in Resources */,
+				FB6624EA24E0202C008C9CE5 /* GameHistoryCell.xib in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
+				FB6624EB24E02552008C9CE5 /* Main.storyboard in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
@@ -595,6 +613,7 @@
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
+				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
 				FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */,
 				FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */,
@@ -640,6 +659,7 @@
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
 				FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */,
+				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,

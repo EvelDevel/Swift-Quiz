@@ -19,8 +19,4 @@ class RecordCell: UITableViewCell {
         super.awakeFromNib()
         graySeparatorHeight.constant = 1.0 / UIScreen.main.scale
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }

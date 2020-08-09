@@ -543,23 +543,22 @@
                                     <constraint firstAttribute="height" constant="70" id="99A-ml-R6p"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XJN-af-bwb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XJN-af-bwb">
                                 <rect key="frame" x="0.0" y="70" width="320" height="478"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="separatorInset" minX="80" minY="0.0" maxX="16" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordCell" id="DRq-Yu-4TB">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DRq-Yu-4TB" id="3Px-6X-BWr">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DRq-Yu-4TB" id="3Px-6X-BWr">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="3kd-gf-GXa" id="mFq-Zf-t10"/>
-                                    <outlet property="delegate" destination="3kd-gf-GXa" id="FJp-ne-i9i"/>
+                                    <outlet property="dataSource" destination="3kd-gf-GXa" id="lfy-zt-EeO"/>
+                                    <outlet property="delegate" destination="3kd-gf-GXa" id="f2i-RZ-Mb9"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf">
@@ -612,6 +611,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WZ-7W-5bT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="300" y="1010"/>
+        </scene>
+        <!--Game History View Controller-->
+        <scene sceneID="0H6-LV-1qG">
+            <objects>
+                <viewController storyboardIdentifier="GameHistoryViewController" id="jjh-O8-n2Q" customClass="GameHistoryViewController" customModule="Swifty_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7HQ-B3-iMX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-kX-UfF" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчет по игре" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-ca-tEt">
+                                        <rect key="frame" x="16" y="25" width="150" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="5mo-6b-88w"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="92d-oY-qtr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-cD-mlb">
+                                        <rect key="frame" x="16" y="55" width="284" height="67"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg7-oT-H7K">
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHq-c9-rik">
+                                                <rect key="frame" x="0.0" y="17" width="284" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOK-Z6-vP3">
+                                                <rect key="frame" x="0.0" y="34" width="284" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htX-x0-RmX">
+                                                <rect key="frame" x="0.0" y="51" width="284" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Unw-ca-tEt" firstAttribute="leading" secondItem="YCa-kX-UfF" secondAttribute="leading" constant="16" id="Hqq-d9-kpp"/>
+                                    <constraint firstItem="Unw-ca-tEt" firstAttribute="top" secondItem="YCa-kX-UfF" secondAttribute="top" constant="25" id="IA1-1g-KeI"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ZP-cD-mlb" secondAttribute="trailing" constant="20" id="Kzh-5x-djb"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ZP-cD-mlb" secondAttribute="bottom" constant="8" id="Oqa-Kv-FkI"/>
+                                    <constraint firstItem="5ZP-cD-mlb" firstAttribute="leading" secondItem="YCa-kX-UfF" secondAttribute="leading" constant="16" id="juH-hm-M9v"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Unw-ca-tEt" secondAttribute="trailing" constant="20" symbolic="YES" id="ogY-Pi-1T1"/>
+                                    <constraint firstAttribute="height" constant="130" id="q5N-Rr-rj0"/>
+                                    <constraint firstItem="5ZP-cD-mlb" firstAttribute="top" secondItem="Unw-ca-tEt" secondAttribute="bottom" constant="5" id="twb-Sb-dqx"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-H4-8AS">
+                                <rect key="frame" x="0.0" y="130" width="320" height="438"/>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="80" minY="0.0" maxX="16" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GameHistoryCell" rowHeight="48" id="26R-Kg-saO">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="26R-Kg-saO" id="tB8-lD-xdQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jjh-O8-n2Q" id="gLg-eb-KgJ"/>
+                                    <outlet property="delegate" destination="jjh-O8-n2Q" id="XHO-gT-xB7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DDb-H4-8AS" firstAttribute="top" secondItem="YCa-kX-UfF" secondAttribute="bottom" id="Cim-sw-AIn"/>
+                            <constraint firstItem="DDb-H4-8AS" firstAttribute="leading" secondItem="XoC-vq-Qvt" secondAttribute="leading" id="DFh-FZ-Mg9"/>
+                            <constraint firstItem="XoC-vq-Qvt" firstAttribute="trailing" secondItem="YCa-kX-UfF" secondAttribute="trailing" id="Ukx-wU-VjA"/>
+                            <constraint firstItem="XoC-vq-Qvt" firstAttribute="bottom" secondItem="DDb-H4-8AS" secondAttribute="bottom" id="UoG-Ft-OGd"/>
+                            <constraint firstItem="YCa-kX-UfF" firstAttribute="leading" secondItem="XoC-vq-Qvt" secondAttribute="leading" id="dAL-SI-XL1"/>
+                            <constraint firstItem="XoC-vq-Qvt" firstAttribute="trailing" secondItem="DDb-H4-8AS" secondAttribute="trailing" id="kLs-ek-Ltr"/>
+                            <constraint firstItem="YCa-kX-UfF" firstAttribute="top" secondItem="XoC-vq-Qvt" secondAttribute="top" id="xP9-hV-T97"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XoC-vq-Qvt"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameDate" destination="vg7-oT-H7K" id="yej-cl-Bh5"/>
+                        <outlet property="gameProgress" destination="lOK-Z6-vP3" id="apE-oQ-glw"/>
+                        <outlet property="gameResult" destination="htX-x0-RmX" id="YBS-WH-3qW"/>
+                        <outlet property="gameTopic" destination="vHq-c9-rik" id="yum-tN-mlw"/>
+                        <outlet property="tableView" destination="DDb-H4-8AS" id="6Ng-cd-j4k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbF-YY-1uL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="1732.3943661971832"/>
         </scene>
         <!--Topic View Controller-->
         <scene sceneID="uFF-a5-ESS">
@@ -714,7 +820,7 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="522"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUK-a2-umW" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Ei-9VS">

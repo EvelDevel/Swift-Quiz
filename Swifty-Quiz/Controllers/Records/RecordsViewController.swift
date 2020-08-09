@@ -23,15 +23,16 @@ class RecordsViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         delegate?.updateInitialView()
     }
-}
-
-
-// MARK: Звуки нажатия кнопки и стирания рекордов
-extension RecordsViewController {
     
-    @IBAction func clearRecordSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
-    func playTrashSound() { SoundPlayer.shared.playSound(sound: .clearRecordsSound) }
+    /// Звуки нажатия кнопки и стирания рекордов
+    @IBAction func clearRecordSound(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+    }
+    func playTrashSound() {
+        SoundPlayer.shared.playSound(sound: .clearRecordsSound)
+    }
 }
+
 
 // MARK: Алерт на очистку рекордов и удаление по свайпу ячейки
 extension RecordsViewController {
@@ -64,8 +65,8 @@ extension RecordsViewController {
 }
 
 
-// MARK: Настройка таблицы
-extension RecordsViewController: UITableViewDataSource {
+// MARK: Настройка таблицы и работа с ней
+extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Регистрация ячейки
     func cellRegistration() {
@@ -110,5 +111,13 @@ extension RecordsViewController: UITableViewDataSource {
         cell.scoreLabel.text = "Очки: \(record.score ?? 0)"
         
         return cell
+    }
+    
+    /// Отработка нажатий
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameHistory = mainStoryboard.instantiateViewController(withIdentifier: "GameHistoryViewController") as! GameHistoryViewController
+        self.present(gameHistory, animated: true, completion: nil)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
 }
