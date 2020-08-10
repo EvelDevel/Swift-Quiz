@@ -9,11 +9,13 @@ class GameHistory: Codable {
     var correctAnswer: String
     var userAnswer: String
     var questionId: Int
+    var image: String
     
-    init(question: String, correctAnswer: String, userAnswer: String, questionId: Int) {
+    init(question: String, correctAnswer: String, userAnswer: String, questionId: Int, image: String) {
         self.question = question
         self.correctAnswer = correctAnswer
         self.userAnswer = userAnswer
         self.questionId = questionId
+        self.image = image
     }
 }

@@ -117,6 +117,11 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let gameHistory = mainStoryboard.instantiateViewController(withIdentifier: "GameHistoryViewController") as! GameHistoryViewController
+        
+        /// Пробрасываем все необходимые параметры
+        gameHistory.history = Game.shared.records[indexPath.row].gameHistory ?? []
+        gameHistory.index = indexPath.row
+
         self.present(gameHistory, animated: true, completion: nil)
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }

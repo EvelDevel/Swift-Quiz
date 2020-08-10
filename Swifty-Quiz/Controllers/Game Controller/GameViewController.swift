@@ -191,7 +191,8 @@ extension GameViewController {
             gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
                                            correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
                                            userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
-                                           questionId: localQuestionSet[currentQuestionIndex].questionId))
+                                           questionId: localQuestionSet[currentQuestionIndex].questionId,
+                                           image: localQuestionSet[currentQuestionIndex].image))
             
             /// Обновляем вопрос, показатели, и переходим дальше, если:
             /// Остались вопросы в массиве, не выводили авто-подсказку (настройки)
