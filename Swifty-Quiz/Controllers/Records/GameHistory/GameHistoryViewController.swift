@@ -9,7 +9,6 @@ class GameHistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var history: [GameHistory] = []
-    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
