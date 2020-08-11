@@ -43,16 +43,18 @@ class GameViewController: UIViewController {
     private var gameHistory: [GameHistory] = []
     
     /// Settings
-    private let orderSetting = Game.shared.settings.questionOrder
-    private let shuffleSetting = Game.shared.settings.questionTextShuffeling
-    private let helpSetting = Game.shared.settings.helpAfterWrong
+    private let questionOrderSetting = Game.shared.settings.questionOrder
+    private let questionTextShuffelingSetting = Game.shared.settings.questionTextShuffeling
+    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     
     /// Flags
-    private var helpFlag = false // Предотвращает повторное засчитывание подсказки
+    private var weDidTakeHelp = false // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
     private var answerPressed = false // Уже нажали один ответ (чтобы второе нажатие не срабатывало)
-    var weContinueLastGame = false
+    private var weDidGetAutoHelp = false // Пользователь получил автоматическую подсказку (настройки)
+    var weContinueLastGame = false // Продолжаем игру или играем новую
+    
 
     weak var delegate: GameViewControllerDelegate?
     
@@ -88,12 +90,13 @@ extension GameViewController {
     func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame == true {
-                self.gameHistory = Game.shared.records[0].gameHistory!
+                self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
+                self.weDidTakeHelp = Game.shared.records[0].helpFlag!
+                self.gameHistory = Game.shared.records[0].gameHistory!
                 self.currentQuestionIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
                 self.helpCounter = Game.shared.records[0].helpCounter!
-                self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
                 if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
             }
         }
@@ -107,7 +110,7 @@ extension GameViewController {
         /// Который мы добавили в синглтон при выборе категории
         /// Далее по контроллеру изменяем локальный массив, не трогая порядок вопросов исходного
         if weContinueLastGame == false {
-            if orderSetting == 0 {
+            if questionOrderSetting == 0 {
                 localQuestionSet = normal
             } else {
                 localQuestionSet = random
@@ -116,6 +119,7 @@ extension GameViewController {
     }
     
     func updateQuestion() {
+        
         /// Если это был последний вопрос и мы получили алерт о завершении
         /// Не обновляем кнопки (чтобы осталась активна последняя нажатая)
         if currentQuestionIndex < localQuestionSet.count {
@@ -123,9 +127,12 @@ extension GameViewController {
             buttonsView.setDefaultButtonsColor(answerButtonsCollection)
             shadows.addButtonShadows(answerButtonsCollection)
         }
+        answerPressed = false
+        dontUpdateQuestionFlag = false
+        weDidGetAutoHelp = false
+        weDidTakeHelp = false
         addQuestionContent()
         updateUI()
-        answerPressed = false
         alreadyTappedIncorrect = []
     }
     
@@ -135,15 +142,14 @@ extension GameViewController {
             buttonsView.makeCorrectButtonsSet(currentQuestionIndex, localQuestionSet, optionA, optionB, optionC, optionD)
             gameHelper.setQuestionImageAndTextSizes(localQuestionSet, currentQuestionIndex, questionImageView,
                                                    questionImageHeight, view, questionLabel, answerButtonsCollection)
-            gameHelper.setQuestionText(localQuestionSet, shuffleSetting, currentQuestionIndex, questionLabel)
+            gameHelper.setQuestionText(localQuestionSet, questionTextShuffelingSetting, currentQuestionIndex, questionLabel)
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
     }
     
     func updateUI() {
-        dontUpdateQuestionFlag = false
-        helpFlag = false
+        
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
         progressView.frame.size.width = ((view.frame.size.width - 40) / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
@@ -161,8 +167,20 @@ extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         if answerPressed == false {
             
+            /// Как только нажали, до выполнения каких либо манипуляций с ответом и флагами...
+            /// записываем вопрос и ответ в историю (правильность будет определяться уже после, внутри контроллера истории).
+            /// Это необходимо для того, чтобы у нас правильно отрабатывали флаги и рекорд не засчитывался многократно или некорректно
+            if weDidTakeHelp == false {
+                gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
+                                               correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                                               userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
+                                               questionId: localQuestionSet[currentQuestionIndex].questionId,
+                                               image: localQuestionSet[currentQuestionIndex].image))
+            }
+            
+            /// Далее работа непосредственно внутри контроллера
             if sender.tag == buttonsView.showCorrectPosition() {
-                if helpFlag == false { score += 1 }
+                if weDidTakeHelp == false { score += 1 }
                 dontUpdateQuestionFlag = false
                 shadows.addGreenShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
@@ -176,7 +194,7 @@ extension GameViewController {
                 
                 /// Показываем подсказку после неправильного
                 /// Если активна настройка
-                if helpSetting == 1 {
+                if helpAfterWrongAnswerSetting == 1 {
                     if alreadyTappedIncorrect.contains(sender.tag) == false {
                         alreadyTappedIncorrect.append(sender.tag)
                         showHelpAfterWrongAnswer()
@@ -186,13 +204,6 @@ extension GameViewController {
                     dontUpdateQuestionFlag = true
                 }
             }
-            
-            /// Сохраняем пройденный вопрос в историю
-            gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
-                                           correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
-                                           userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
-                                           questionId: localQuestionSet[currentQuestionIndex].questionId,
-                                           image: localQuestionSet[currentQuestionIndex].image))
             
             /// Обновляем вопрос, показатели, и переходим дальше, если:
             /// Остались вопросы в массиве, не выводили авто-подсказку (настройки)
@@ -213,9 +224,10 @@ extension GameViewController {
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
         helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
-        if helpFlag == false { helpCounter += 1 }
+        if weDidTakeHelp == false { helpCounter += 1 }
         helpCounterLabel.text = "\(helpCounter)"
-        helpFlag = true
+        weDidTakeHelp = true
+        weDidGetAutoHelp = true
         self.present(helpView, animated: true, completion: nil)
     }
 }
@@ -228,18 +240,32 @@ extension GameViewController {
         switch path {
         case 1:
             /// Доиграли до конца
-            callDelegateAndSaveRecord(continueStatus: false)
+            callDelegateAndSaveRecord(continueStatus: false, autoHelp: weDidGetAutoHelp)
             showAlert(title: "Ваш счет", message: "\(gameHelper.updatedAlertMessage(score: updatePercentage()))")
         case 2:
             /// Преждевременно закончили игру
-            callDelegateAndSaveRecord(continueStatus: true)
+            callDelegateAndSaveRecord(continueStatus: true, autoHelp: weDidGetAutoHelp)
         default:
             print("gameEnding error")
         }
     }
     
-    func callDelegateAndSaveRecord(continueStatus: Bool) {
+    func callDelegateAndSaveRecord(continueStatus: Bool, autoHelp: Bool) {
+        var continueStatus = continueStatus
         endGameFlag = true
+        
+        /// Если была автоподсказка или мы брали сами + текущий вопрос НЕ является последним
+        /// Прибавляем индекс (чтобы при продолжении пойти со следующего) и сбрасываем флаг подсказки
+        /// Если вопрос последний - убираем статус возможности продолжать игру
+        if weDidGetAutoHelp || weDidTakeHelp {
+            if currentQuestionNumber < localQuestionSet.count {
+                currentQuestionIndex = currentQuestionIndex + 1
+                weDidTakeHelp = false
+            } else {
+                continueStatus = false
+            }
+        }
+        
         delegate?.didEndGame(   result: score,
                                 totalQuestion: localQuestionSet.count,
                                 percentOfCorrect: updatePercentage(),
@@ -255,16 +281,17 @@ extension GameViewController {
                                 helpCounter: helpCounter,
                                 playedNum: currentQuestionIndex,
                                 continueGameStatus: continueStatus,
-                                gameHistory: gameHistory)
+                                gameHistory: gameHistory,
+                                helpFlag: weDidTakeHelp)
         
-        /// Записываем рекорд, или подменяем прошлый, если продолжали
+        // Записываем рекорд, или подменяем прошлый, если продолжали
         if weContinueLastGame {
             Game.shared.replaceRecord(record)
         } else {
             Game.shared.addRecord(record)
         }
         
-        /// Сохраняем текущую версию приложения (отслеживаем обновления)
+        // Сохраняем текущую версию приложения (отслеживаем обновления)
         let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
         Game.shared.saveAppVersion(version: currentAppVersion)
         
@@ -300,6 +327,9 @@ extension GameViewController {
         score = 0
         currentQuestionNumber = 1
         currentQuestionIndex = 0
+        weDidGetAutoHelp = false
+        weDidTakeHelp = false
+        gameHistory = []
         updateQuestion()
     }
 }
@@ -313,12 +343,22 @@ extension GameViewController {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
             helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
+            
             /// Если не переходим к следующему - засчитываем только 1 подсказку
-            if helpFlag == false {
+            if weDidTakeHelp == false {
                 helpCounter += 1
+                
+                /// Сохраняем вопрос в историю после того, как взяли подсказку
+                /// Так же как и подсказку - записываем всего один раз
+                gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
+                                               correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                                               userAnswer: "Подсказка",
+                                               questionId: localQuestionSet[currentQuestionIndex].questionId,
+                                               image: localQuestionSet[currentQuestionIndex].image))
             }
+            
             helpCounterLabel.text = "\(helpCounter)"
-            helpFlag = true
+            weDidTakeHelp = true
         }
     }
 }
@@ -332,6 +372,8 @@ extension GameViewController: HelpViewControllerDelegate {
             if Game.shared.settings.changeAfterHelp == 0 {
                 self.currentQuestionNumber += 1
                 self.currentQuestionIndex += 1
+                self.weDidGetAutoHelp = false
+                self.weDidTakeHelp = false
                 self.updateQuestion()
             }
         }
