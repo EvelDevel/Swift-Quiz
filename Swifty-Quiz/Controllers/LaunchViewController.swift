@@ -13,13 +13,16 @@ class LaunchViewController: UIViewController {
         controlledTransitionFromLaunch()
     }
     
-    /// Без этой функции любой звук приложения сразу останавливает фоновую музыку 
+    /// Меняем аудио-сессию (приложение не останавливает фоновую музыку)
     func makeRightSettingsForSounds() {
-        do { try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient) }
-        catch { print("Some problems with AVAudioSession.sharedInstance())") }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+        } catch {
+            print("Some problems with AVAudioSession.sharedInstance())")
+        }
     }
     
-    /// Контролируемый переход с Лаунч-скрина (через подставной)
+    /// Контролируемый переход с Лаунч-скрина
     func controlledTransitionFromLaunch() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

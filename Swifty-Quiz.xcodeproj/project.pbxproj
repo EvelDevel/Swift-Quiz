@@ -187,7 +187,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB0E0290246CF334005CA792 /* Records */ = {
+		FB0E0290246CF334005CA792 /* GameHistory */ = {
 			isa = PBXGroup;
 			children = (
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
@@ -195,7 +195,7 @@
 				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
 				FB6624E624E01FEB008C9CE5 /* GameHistory */,
 			);
-			path = Records;
+			path = GameHistory;
 			sourceTree = "<group>";
 		};
 		FB119C12246A52E1005F5289 /* 01 row */ = {
@@ -319,8 +319,8 @@
 				FBECDC5C243F30D700BD5583 /* Model */,
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
+				FB8606B32444771300A692AD /* Helpers */,
 				FB8606B0244458E300A692AD /* Database */,
-				FB8606B32444771300A692AD /* Custom UI  */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
 				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
@@ -372,13 +372,14 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
-		FB8606B32444771300A692AD /* Custom UI  */ = {
+		FB8606B32444771300A692AD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D489247574730055FF62 /* ShadowsHelper.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 			);
-			path = "Custom UI ";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FB87420624605B9C00247923 /* Sounds */ = {
@@ -483,7 +484,6 @@
 			children = (
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
-				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 			);
 			path = "Game Controller";
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
 				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
-				FB0E0290246CF334005CA792 /* Records */,
+				FB0E0290246CF334005CA792 /* GameHistory */,
 				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;

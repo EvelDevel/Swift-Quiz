@@ -6,18 +6,12 @@ import UIKit
 
 class GameHelper {
     
-    // MARK: Обновление сета "случайных" вопросов (20, 50, 100) по завершению игры
-    func refreshRandomSets(tag: Int) {
+    // Обновление сета "случайных" вопросов
+    func refreshRandomSet(tag: Int) {
         
         /// Когда выбрана подборка "сет случайных вопросов" (tag от 0 до 9)
-        
-        /// Перетасовываем их, когда:
-        /// - переключили тему в выборе тем (реализация в другом контроллере)
-        /// - завершили текущий сет (доиграли до конца и нажали на "выход")
-        
-        /// При любых других раскладах текущий сет случайных вопросов будет повторяться
-        /// - перезапуск
-        /// - не доиграли
+        /// Перетасовываем их, когда: переключили тему, завершили текущий сет (доиграли до конца и нажали на "выход")
+        /// При любых других раскладах текущий сет случайных вопросов будет повторяться (перезапуск, не доиграли)
         
         if tag == 0 {
             SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
@@ -30,8 +24,6 @@ class GameHelper {
         } else if tag == 4 {
             SelectedTopic.shared.saveQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
         }
-        
-        // MARK: TODO - Добавить остальные рефреши когда появятся новые подборки
     }
     
     
@@ -55,8 +47,6 @@ class GameHelper {
     // MARK: Алерт незавершенной игры (когда есть, что продолжить)
     func showAlertIfNeeded(_ continueStatus: Bool, _ view: UIViewController) {
         
-        /// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
-        /// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
         if Game.shared.records.count != 0
             && Game.shared.records[0].continueGameStatus == true
             && continueStatus == false
@@ -68,7 +58,6 @@ class GameHelper {
                 alert.addAction(okAction)
                 view.present(alert, animated: true, completion: nil)
             }
-            /// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
             Game.shared.setThatWeShowedAlert()
         }
     }
@@ -124,15 +113,12 @@ class GameHelper {
     // MARK: Установка текста вопроса
     func setQuestionText(_ set: [Question], _ shuffleSettings: Int, _ index: Int, _ questionLabel: UILabel) {
         
-        /// Текст вопроса может меняться (у вопросов по несколько формулировок)
         let normal = set[index].question[0]
         let random = set[index].question.shuffled()
         
         if  shuffleSettings == 1 {
-            /// Если в настройках стоит "менять формулировки"
             questionLabel.text = random[0]
         } else {
-            /// Если настройка неактивна
             questionLabel.text = normal
         }
     }

@@ -28,6 +28,7 @@ class InitialViewController: UIViewController {
     
     @IBOutlet var initialWhiteViews: [UIView]!
     @IBOutlet var initialButtons: [UIButton]!
+    
     @IBAction func goToAbout(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBAction func tapButtonSounds(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     
@@ -47,19 +48,15 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
     
     func setUpInitialInformation() {
-        setUpStartingQuestionSet()
-        showLastGameInfo()
+        setUpStartQuestionSet()
+        setUpLastGameInfo()
         showTotalQuestions()
     }
     
-    /// Загружаем дефолтную категорию или подтверждаем ранее выбранную
-    func setUpStartingQuestionSet() {
-        
-        /// Если это первый старт ИЛИ обновилась текущая версия приложения
-        /// Загружаем дефолтную категорию
-        /// Обновляем контент и сбрасываем статус "можно продолжить"
-        /// Исчезнет кнопка "продолжить", и не будет отображаться alert "Есть незавершенная игра"
-        if SelectedTopic.shared.topic.questionSet.isEmpty || Game.shared.settings.appLastVersion != currentAppVersion {
+    /// Загружаем дефолтный сет
+    func setUpStartQuestionSet() {
+        if SelectedTopic.shared.topic.questionSet.isEmpty
+            || Game.shared.settings.appLastVersion != currentAppVersion {
             let newSet = TopicOperator.getQuestionsTheBasics()
             SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
             selectedTopic.text = "Основы"
@@ -69,10 +66,9 @@ extension InitialViewController {
         }
     }
     
-    /// Показываем информацию о последней игре
-    func showLastGameInfo() {
+    /// Устанавливаем информацию о последней игре
+    func setUpLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
-        
         if records.count != 0 {
             let category = records.first?.topic ?? ""
             let played = records.first?.playedNum ?? 0
@@ -107,9 +103,6 @@ extension InitialViewController {
     
     /// Показываем или скрываем кнопку "продолжить"
     func updateContinueButton() {
-        
-        /// Показываем "продолжить", если есть рекорд (состоялась незавершенная игра)
-        /// У этого рекорда статус "можно продолжить" (не меняли настройки / категорию / версию приложения)
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             UIView.animate(withDuration: 0.12, animations: {
                 if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }
@@ -164,7 +157,7 @@ extension InitialViewController {
 }
 
 
-// MARK: Активация делегатов
+// MARK: Активация делегирования
 extension InitialViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -190,11 +183,11 @@ extension InitialViewController {
 }
 
 
-// MARK: Работа с делегатами
+// MARK: Выполнение функций делегата
 extension InitialViewController:    GameViewControllerDelegate,
-                                    TopicViewControllerDelegate,
-                                    RecordsViewControllerDelegate,
-                                    SettingsViewControllerDelegate{
+    TopicViewControllerDelegate,
+    RecordsViewControllerDelegate,
+SettingsViewControllerDelegate{
     
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double,
                     topic: String, helpCounter: Int, playedNum: Int) {

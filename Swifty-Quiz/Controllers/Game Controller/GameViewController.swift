@@ -28,7 +28,6 @@ class GameViewController: UIViewController {
     @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
     @IBOutlet var GameComtrollerViews: [UIView]!
     
-    private let currentTag = SelectedTopic.shared.topic.topicTag
     private let gameHelper = GameHelper()
     private let buttonsView = AnswerButtonsView()
     private let shadows = ShadowsHelper()
@@ -36,9 +35,7 @@ class GameViewController: UIViewController {
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
     private var score: Int = 0
-    private var imageName = ""
     private var helpCounter = 0
-    private var message = ""
     private var alreadyTappedIncorrect: [Int] = []
     private var gameHistory: [GameHistory] = []
     
@@ -55,7 +52,6 @@ class GameViewController: UIViewController {
     private var weDidGetAutoHelp = false // Пользователь получил автоматическую подсказку (настройки)
     var weContinueLastGame = false // Продолжаем игру или играем новую
     
-
     weak var delegate: GameViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -67,8 +63,7 @@ class GameViewController: UIViewController {
         showAlertIfNeeded()
     }
     
-    /// Свернули игру, сохраняем, если:
-    /// Еще не запрашивалось сохранение текущей игры и ответили хотя-бы на один вопрос
+    /// Swipe-down, сохраняем если не запрашивалось сохранение текущей игры и ответили хотя-бы на один вопрос
     override func viewDidDisappear(_ animated: Bool) {
         if endGameFlag == false && currentQuestionIndex > 0 { gameEnding(path: 2) }
         delegate?.updateInitialView()
@@ -87,6 +82,7 @@ class GameViewController: UIViewController {
 // MARK: Установка и обновление основных игровых параметров
 extension GameViewController {
     
+    /// Установка значений при продолжении
     func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame == true {
@@ -102,13 +98,11 @@ extension GameViewController {
         }
     }
     
+    /// Загружаем сет вопросов
     func addQuestionSet() {
         let normal = SelectedTopic.shared.topic.questionSet
         let random = SelectedTopic.shared.topic.questionSet.shuffled()
-        
-        /// В этот момент мы передаем локальному массиву с вопросами исходный массив
-        /// Который мы добавили в синглтон при выборе категории
-        /// Далее по контроллеру изменяем локальный массив, не трогая порядок вопросов исходного
+
         if weContinueLastGame == false {
             if questionOrderSetting == 0 {
                 localQuestionSet = normal
@@ -118,10 +112,9 @@ extension GameViewController {
         }
     }
     
+    /// Апдейт вопроса
     func updateQuestion() {
-        
-        /// Если это был последний вопрос и мы получили алерт о завершении
-        /// Не обновляем кнопки (чтобы осталась активна последняя нажатая)
+        /// У последнего вопроса не обновляем интерфейс
         if currentQuestionIndex < localQuestionSet.count {
             buttonsView.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
             buttonsView.setDefaultButtonsColor(answerButtonsCollection)
@@ -131,9 +124,9 @@ extension GameViewController {
         dontUpdateQuestionFlag = false
         weDidGetAutoHelp = false
         weDidTakeHelp = false
+        alreadyTappedIncorrect = []
         addQuestionContent()
         updateUI()
-        alreadyTappedIncorrect = []
     }
     
     /// Установка контента
@@ -148,13 +141,12 @@ extension GameViewController {
         }
     }
     
+    /// Обновляем прогресс
     func updateUI() {
-        
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
         progressView.frame.size.width = ((view.frame.size.width - 40) / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
     }
-    
     func updatePercentage() -> Double {
         return Double(String(format: "%.1f", (Double(self.score) / Double(self.localQuestionSet.count) * 100))) ?? 0
     }
@@ -181,10 +173,10 @@ extension GameViewController {
             /// Далее работа непосредственно внутри контроллера
             if sender.tag == buttonsView.showCorrectPosition() {
                 if weDidTakeHelp == false { score += 1 }
-                dontUpdateQuestionFlag = false
                 shadows.addGreenShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .answerButtonRight)
+                dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {
                 shadows.addRedShadow(button: sender)
@@ -238,15 +230,12 @@ extension GameViewController {
     
     func gameEnding(path: Int) {
         switch path {
-        case 1:
-            /// Доиграли до конца
+        case 1: /// Доиграли до конца
             callDelegateAndSaveRecord(continueStatus: false, autoHelp: weDidGetAutoHelp)
             showAlert(title: "Ваш счет", message: "\(gameHelper.updatedAlertMessage(score: updatePercentage()))")
-        case 2:
-            /// Преждевременно закончили игру
+        case 2: /// Преждевременно закончили игру
             callDelegateAndSaveRecord(continueStatus: true, autoHelp: weDidGetAutoHelp)
-        default:
-            print("gameEnding error")
+        default: print("gameEnding error")
         }
     }
     
@@ -315,22 +304,22 @@ extension GameViewController {
     }
     
     func quitGame() {
-        gameHelper.refreshRandomSets(tag: currentTag)
+        gameHelper.refreshRandomSet(tag: SelectedTopic.shared.topic.topicTag)
         self.dismiss(animated: true, completion: nil)
     }
     
     func restartGame() {
-        endGameFlag = false
         weContinueLastGame = false
-        helpCounter = 0
         helpCounterLabel.text = ""
-        score = 0
         currentQuestionNumber = 1
-        currentQuestionIndex = 0
         weDidGetAutoHelp = false
+        currentQuestionIndex = 0
         weDidTakeHelp = false
+        endGameFlag = false
         gameHistory = []
         updateQuestion()
+        helpCounter = 0
+        score = 0
     }
 }
 
@@ -356,7 +345,6 @@ extension GameViewController {
                                                questionId: localQuestionSet[currentQuestionIndex].questionId,
                                                image: localQuestionSet[currentQuestionIndex].image))
             }
-            
             helpCounterLabel.text = "\(helpCounter)"
             weDidTakeHelp = true
         }

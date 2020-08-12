@@ -33,6 +33,5 @@ class AboutProjectController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
