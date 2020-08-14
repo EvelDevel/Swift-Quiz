@@ -783,7 +783,7 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="522"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUK-a2-umW" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Ei-9VS">
