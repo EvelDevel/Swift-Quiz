@@ -799,18 +799,15 @@ class CollectionTypesSet {
                      questionId: 375,
                      helpText: "suffix(_ maxLength: Int) возвращает последовательность, состоящую из исходных элементов коллекции, в количестве maxLength, указанном пользователем, начиная с конца исходной последовательности. То есть мы получим [3, 4, 5]. Если maxLength превышает количество элементов исходной последовательности - мы получим все ее элементы."),
             
-//            Question(question: ["",
-//                                "",
-//                                ""],
-//                     image: "",
-//                     optionA: "",
-//                     optionB: "",
-//                     optionC: "",
-//                     optionD: "",
-//
-//                     questionId: 376,
-//                     helpText: ""),
-//
+            Question(question: ["Какие города объединятся в словаре grouped при группировке словаря по такому признаку?"],
+                     image: "Collections76",
+                     optionA: "Shanghai и Seoul",
+                     optionB: "Shanghai и Karachi",
+                     optionC: "Shanghai и Beijing",
+                     optionD: "Beijing и Karachi",
+                     questionId: 376,
+                     helpText: "Shanghai и Seoul. При инициализации словаря используется входной аргумент grouping, в качестве значения которому передается анализируемые ключи словаря cities. После инициализатора указывается замыкание, в соответствии с которым и производится группировка значений (в данном случае по первому символу ключа)."),
+
 //            Question(question: ["",
 //                                "",
 //                                ""],
