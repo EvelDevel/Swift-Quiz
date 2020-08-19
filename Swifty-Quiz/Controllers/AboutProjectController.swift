@@ -26,6 +26,10 @@ class AboutProjectController: UIViewController {
         let urlComponents = URLComponents(string: "https://swiftbook.ru/content/languageguide/")!
         UIApplication.shared.open(urlComponents.url!)
     }
+    @IBAction func swiftMe(_ sender: Any) {
+        let urlComponents = URLComponents(string: "https://swiftme.ru/")!
+        UIApplication.shared.open(urlComponents.url!)
+    }
     @IBAction func telegramLibrary(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://t.me/mobileproglib")!
         UIApplication.shared.open(urlComponents.url!)
