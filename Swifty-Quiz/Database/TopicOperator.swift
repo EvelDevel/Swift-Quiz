@@ -8,8 +8,6 @@ import Foundation
 class TopicOperator {
     
     // MARK: Super Sets
-    
-    // MARK: 01 row
     // Руководство, Паттерны
     static func getRandom20() -> [Question] { return RandomSuperSets.getQuestions(limit: 20) }
     static func getRandom50() -> [Question] { return RandomSuperSets.getQuestions(limit: 50) }
@@ -19,7 +17,6 @@ class TopicOperator {
     
     
     // MARK: THE BASICS
-    
     // MARK: 01 row
     // Основы, Операторы, Строки и символы
     static func getQuestionsTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }
@@ -81,14 +78,11 @@ class TopicOperator {
     
     
     // MARK: PATTERNS
-    
-    // MARK: 01 row
     // Порождающие и структурные паттерны
     static func getQuestionsBasicsAboutPatterns() -> [Question] { return BasicsAboutPatternsSet.getQuestions() }  
     static func getQuestionsCreationalPatterns() -> [Question] { return CreationalPatternsSet.getQuestions() }  
     static func getQuestionsStructuralPatterns() -> [Question] { return StructuralPatternsSet.getQuestions() }
     
-    // MARK: 02 row
     // Поведенческие и аннтипаттерны
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
