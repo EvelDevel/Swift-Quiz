@@ -114,7 +114,7 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		FB2EAC90243EEE0F0098FAC3 /* Swifty - Russian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty - Russian.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2EAC90243EEE0F0098FAC3 /* Свифти-Квиз.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Свифти-Квиз.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -306,7 +306,7 @@
 		FB2EAC91243EEE0F0098FAC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB2EAC90243EEE0F0098FAC3 /* Swifty - Russian.app */,
+				FB2EAC90243EEE0F0098FAC3 /* Свифти-Квиз.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 			);
 			name = "Swifty-Quiz";
 			productName = Millionaire2.0;
-			productReference = FB2EAC90243EEE0F0098FAC3 /* Swifty - Russian.app */;
+			productReference = FB2EAC90243EEE0F0098FAC3 /* Свифти-Квиз.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -826,7 +826,7 @@
 				);
 				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
-				PRODUCT_NAME = "Swifty - Russian";
+				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -846,7 +846,7 @@
 				);
 				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
-				PRODUCT_NAME = "Swifty - Russian";
+				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

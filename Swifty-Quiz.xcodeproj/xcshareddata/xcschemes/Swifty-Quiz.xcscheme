@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-               BuildableName = "Swifty-Quiz.app"
+               BuildableName = "Swifty - Russian.app"
                BlueprintName = "Swifty-Quiz"
                ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-            BuildableName = "Swifty-Quiz.app"
+            BuildableName = "Swifty - Russian.app"
             BlueprintName = "Swifty-Quiz"
             ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB2EAC8F243EEE0F0098FAC3"
-            BuildableName = "Swifty-Quiz.app"
+            BuildableName = "Swifty - Russian.app"
             BlueprintName = "Swifty-Quiz"
             ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
          </BuildableReference>
