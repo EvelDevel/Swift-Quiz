@@ -76,24 +76,24 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="751" text="Текст вопроса " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFg-FD-6vG">
-                                <rect key="frame" x="0.0" y="208" width="210" height="26.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="208" width="210" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="adq-Lc-45q">
-                                <rect key="frame" x="0.0" y="242.33333333333334" width="210" height="33.333333333333343"/>
+                                <rect key="frame" x="0.0" y="238.99999999999997" width="210" height="36.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="749" text="Правильный ответ: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdx-JJ-S7x">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="15.666666666666666"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="16.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="Ваш ответ: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEp-GA-g4v">
-                                        <rect key="frame" x="0.0" y="17.666666666666686" width="210" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                        <rect key="frame" x="0.0" y="18.666666666666686" width="210" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -151,6 +151,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="exclamationmark.octagon" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.octagon" catalog="system" width="128" height="112"/>
     </resources>
 </document>
