@@ -4,10 +4,6 @@
 
 import UIKit
 
-protocol GameHistoryCellDelegate: class {
-    func reportButtonPressed(id: Int)
-}
-
 class GameHistoryCell: UITableViewCell {
 
     @IBOutlet weak var questionImage: UIImageView!
@@ -20,9 +16,6 @@ class GameHistoryCell: UITableViewCell {
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var stackTopMargin: NSLayoutConstraint!
     
-    weak var delegate: GameHistoryCellDelegate?
-    var questionId = 0
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -30,10 +23,5 @@ class GameHistoryCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         separatorHeight.constant = 1.0 / UIScreen.main.scale
-    }
-    
-    /// Нажатие на "репорт" о вопросе
-    @IBAction func reportButtonTapped(_ sender: Any) {
-        delegate?.reportButtonPressed(id: questionId)
     }
 }

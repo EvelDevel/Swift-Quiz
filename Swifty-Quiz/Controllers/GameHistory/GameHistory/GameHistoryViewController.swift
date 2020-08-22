@@ -32,9 +32,6 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         
-        cell.questionId = history[indexPath.row].questionId
-        cell.delegate = self
-        
         /// Настройка изображений
         if history[indexPath.row].image == "" {
             cell.imageHeight.constant = 0
@@ -72,11 +69,21 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
+    
+    /// Обработка свайпа ячейки влево (для репорта)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let reportAction = UIContextualAction(style: .normal, title: "Сообщить о проблеме") { (action, view, completion) in
+            self.reportButtonPressed(id: self.history[indexPath.row].questionId)
+            completion(true)
+        }
+        reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [reportAction])
+    }
 }
 
 
 // MARK: Работа с делегатом
-extension GameHistoryViewController: GameHistoryCellDelegate, MFMailComposeViewControllerDelegate {
+extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
     
     func reportButtonPressed(id: Int) {
         showMailComposer(id: id)

@@ -101,20 +101,6 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giP-7L-BKc">
-                        <rect key="frame" x="35.333333333333336" y="90" width="23.666666666666664" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="nD2-Vr-wEB"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" image="exclamationmark.octagon" catalog="system">
-                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19"/>
-                        </state>
-                        <connections>
-                            <action selector="reportButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j0q-Sa-MxQ"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
@@ -122,9 +108,7 @@
                     <constraint firstAttribute="bottom" secondItem="8Jk-ps-7p4" secondAttribute="bottom" constant="20.5" id="3jo-yM-3qA"/>
                     <constraint firstAttribute="bottom" secondItem="5iS-B8-Oan" secondAttribute="bottom" id="926-xY-qJL"/>
                     <constraint firstItem="8Jk-ps-7p4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="QvP-eV-e8E"/>
-                    <constraint firstItem="giP-7L-BKc" firstAttribute="centerX" secondItem="OBZ-nz-QSa" secondAttribute="centerX" id="SrG-Hw-F8Z"/>
                     <constraint firstAttribute="trailing" secondItem="5iS-B8-Oan" secondAttribute="trailing" constant="16" id="T0A-2y-nrt"/>
-                    <constraint firstItem="giP-7L-BKc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="90" id="YC0-l5-dbW"/>
                     <constraint firstItem="8Jk-ps-7p4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="bA0-nT-JDw"/>
                     <constraint firstItem="ird-p1-UMY" firstAttribute="centerX" secondItem="OBZ-nz-QSa" secondAttribute="centerX" id="fTz-Tz-big"/>
                     <constraint firstItem="5iS-B8-Oan" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="mUR-mb-tfY"/>
@@ -150,7 +134,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="213.28125"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="exclamationmark.octagon" catalog="system" width="128" height="112"/>
-    </resources>
 </document>
