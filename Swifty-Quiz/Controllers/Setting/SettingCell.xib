@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="20" id="ykh-Ft-eTC"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                        <state key="normal" title="Последовательность вопросов">
+                        <state key="normal" title="Менять последовательность вопросов?">
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
@@ -38,11 +38,14 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-ve-GQ7">
-                        <rect key="frame" x="20" y="40" width="280" height="32"/>
+                        <rect key="frame" x="20" y="40" width="280" height="36"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="wlp-Zv-dgd"/>
+                        </constraints>
                         <segments>
-                            <segment title="Прямая"/>
-                            <segment title="Случайная"/>
+                            <segment title="Нет"/>
+                            <segment title="Да"/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -50,7 +53,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-np-sbC">
-                        <rect key="frame" x="283" y="89" width="15" height="14"/>
+                        <rect key="frame" x="283" y="93" width="15" height="14"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="McI-0r-QDK"/>
@@ -58,12 +61,12 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-wf-yoT" userLabel="questionText">
-                        <rect key="frame" x="20" y="86" width="280" height="20"/>
+                        <rect key="frame" x="20" y="90" width="280" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="3Os-Be-ijl"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                        <state key="normal" title="Формулировка текста вопроса">
+                        <state key="normal" title="Менять формулировки вопросов?">
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845034246578" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
@@ -71,11 +74,14 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kDo-Pf-RA7">
-                        <rect key="frame" x="20" y="111" width="280" height="32"/>
+                        <rect key="frame" x="20" y="115" width="280" height="36"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="aRg-CU-9xX"/>
+                        </constraints>
                         <segments>
-                            <segment title="Не менять"/>
-                            <segment title="Менять"/>
+                            <segment title="Нет"/>
+                            <segment title="Да"/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -83,7 +89,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QuD-fe-LIa">
-                        <rect key="frame" x="283" y="160" width="15" height="14"/>
+                        <rect key="frame" x="283" y="168" width="15" height="14"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="eQx-FD-6PI"/>
@@ -91,7 +97,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veB-j8-GhW" userLabel="questionText">
-                        <rect key="frame" x="20" y="157" width="280" height="20"/>
+                        <rect key="frame" x="20" y="165" width="280" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="eJC-p9-pDW"/>
                         </constraints>
@@ -104,8 +110,11 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iWV-f5-f8C">
-                        <rect key="frame" x="20" y="182" width="280" height="32"/>
+                        <rect key="frame" x="20" y="190" width="280" height="36"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="SMt-Lv-BaB"/>
+                        </constraints>
                         <segments>
                             <segment title="Продолжать"/>
                             <segment title="Показать подсказку"/>
@@ -116,7 +125,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-VD-v47">
-                        <rect key="frame" x="283" y="231" width="15" height="14"/>
+                        <rect key="frame" x="283" y="243" width="15" height="14"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="0eo-sA-DmW"/>
@@ -124,7 +133,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oll-D6-fdB" userLabel="questionText">
-                        <rect key="frame" x="20" y="228" width="280" height="20"/>
+                        <rect key="frame" x="20" y="240" width="280" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="YBo-XS-VMy"/>
                         </constraints>
@@ -137,8 +146,11 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-HG-15f">
-                        <rect key="frame" x="20" y="253" width="280" height="32"/>
+                        <rect key="frame" x="20" y="265" width="280" height="36"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="R1A-4r-PD8"/>
+                        </constraints>
                         <segments>
                             <segment title="Оставаться"/>
                             <segment title="Переходить "/>
@@ -149,7 +161,7 @@
                         </connections>
                     </segmentedControl>
                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U53-eV-aMa" userLabel="questionText">
-                        <rect key="frame" x="20" y="299" width="280" height="20"/>
+                        <rect key="frame" x="20" y="315" width="280" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="sHa-pq-GVO"/>
                         </constraints>
@@ -159,8 +171,11 @@
                         </state>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-rL-3kX">
-                        <rect key="frame" x="20" y="324" width="280" height="32"/>
+                        <rect key="frame" x="20" y="340" width="280" height="36"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="7zw-zL-dRG"/>
+                        </constraints>
                         <segments>
                             <segment title="Включены"/>
                             <segment title="Выключены"/>
