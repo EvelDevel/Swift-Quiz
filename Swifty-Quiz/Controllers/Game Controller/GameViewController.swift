@@ -357,7 +357,7 @@ extension GameViewController: HelpViewControllerDelegate {
     
     func updateAfterHelp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            if Game.shared.settings.changeAfterHelp == 0 {
+            if Game.shared.settings.changeAfterHelp == 1 {
                 self.currentQuestionNumber += 1
                 self.currentQuestionIndex += 1
                 self.weDidGetAutoHelp = false

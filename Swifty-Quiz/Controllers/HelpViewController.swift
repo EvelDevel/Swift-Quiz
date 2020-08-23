@@ -30,7 +30,7 @@ class HelpViewController: UIViewController {
     /// Переход к следующему вопросу
     /// Или обновление статуса нажатого ответа
     override func viewWillDisappear(_ animated: Bool) {
-        if Game.shared.settings.changeAfterHelp == 0 {
+        if Game.shared.settings.changeAfterHelp == 1 {
             delegate?.updateAfterHelp()
         } else {
             delegate?.refreshTappedAnswerStatus()

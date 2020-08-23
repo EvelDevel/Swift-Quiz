@@ -118,9 +118,9 @@ extension Game {
     /// Настройки: Смена вопросов после подсказки
     func setChangeAfterHelp(setting: ChangeAfterHelp) {
         if setting == .dontChange {
-            self.settings.changeAfterHelp = 1
-        } else {
             self.settings.changeAfterHelp = 0
+        } else {
+            self.settings.changeAfterHelp = 1
         }
     }
     

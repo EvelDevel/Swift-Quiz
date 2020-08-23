@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="466" id="KGk-i7-Jjw" customClass="SettingCell" customModule="Swifty_Quiz" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="466" id="KGk-i7-Jjw" customClass="SettingCell" customModule="Свифти_Квиз" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -140,8 +140,8 @@
                         <rect key="frame" x="20" y="253" width="280" height="32"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <segments>
-                            <segment title="Переходить "/>
                             <segment title="Оставаться"/>
+                            <segment title="Переходить "/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>

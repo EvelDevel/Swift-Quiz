@@ -156,9 +156,9 @@ extension SettingCell {
         if target == self.changeAfterHelpControl {
             let segmentIndex = target.selectedSegmentIndex
             if segmentIndex == 0 {
-                Game.shared.setChangeAfterHelp(setting: .change)
-            } else {
                 Game.shared.setChangeAfterHelp(setting: .dontChange)
+            } else {
+                Game.shared.setChangeAfterHelp(setting: .change)
             }
         }
     }
