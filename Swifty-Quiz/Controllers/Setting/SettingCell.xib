@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="20" id="ykh-Ft-eTC"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                        <state key="normal" title="Менять последовательность вопросов?">
+                        <state key="normal" title="Последовательность вопросов">
                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
@@ -44,8 +44,8 @@
                             <constraint firstAttribute="height" constant="35" id="wlp-Zv-dgd"/>
                         </constraints>
                         <segments>
-                            <segment title="Нет"/>
-                            <segment title="Да"/>
+                            <segment title="Прамая"/>
+                            <segment title="Случайная"/>
                         </segments>
                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>

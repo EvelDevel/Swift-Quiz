@@ -5,13 +5,8 @@
 import UIKit
 
 // MARK: TODO - Баги и доработки с Apple Store отзывов
-/// Добавить кнопку «сообщить о проблеме» (на экране во время игры)
-/// https://www.youtube.com/watch?time_continue=5&v=J-pn5V2jcfo&feature=emb_logo
-
 /// Отслеживание общего "успеха" в игре
-
 /// - ability to share your score on social media
-/// - ability to select multiple categories
 /// - add notifications... reminders to take daily quiz or complete a quiz they are yet to finish
 
 class InitialViewController: UIViewController {
