@@ -4,7 +4,7 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 1 по 100
+// MARK: 01 - Вопросы (id) с 1 по 100
 
 class TheBasicsSet {
     static func getQuestions() -> [Question] {

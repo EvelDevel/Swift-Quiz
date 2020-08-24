@@ -4,7 +4,7 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 101 по 200
+// MARK: 02 -  Вопросы (id) с 101 по 200
 
 class BasicOperatorsSet {
     static func getQuestions() -> [Question] {
