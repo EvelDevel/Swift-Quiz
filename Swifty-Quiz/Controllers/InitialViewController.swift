@@ -148,7 +148,7 @@ extension InitialViewController {
 			aboutButtonVerticalPosition.constant = 20
 		} else if view.frame.size.width <= 410 {
 			/// 8, SE-2
-			logoVerticalPosition.constant = 70
+			logoVerticalPosition.constant = 55
 			logoWidth.constant = 200
 			logoHeight.constant = 80
 			aboutButtonHeight.constant = 105
