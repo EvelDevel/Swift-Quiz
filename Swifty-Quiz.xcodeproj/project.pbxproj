@@ -322,8 +322,7 @@
 				FB8606B32444771300A692AD /* Helpers */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
-				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
-				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
+				FBA3E4A724FCEFCE00455BA8 /* Storyboards */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
 			);
 			path = "Swifty-Quiz";
@@ -467,6 +466,15 @@
 				FB99F891247B98E40053166C /* AntipatternsSet.swift */,
 			);
 			path = "02 row";
+			sourceTree = "<group>";
+		};
+		FBA3E4A724FCEFCE00455BA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */,
+				FB2EAC99243EEE0F0098FAC3 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		FBB4405324991BD700D88937 /* Super Sets */ = {
