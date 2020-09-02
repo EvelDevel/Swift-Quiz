@@ -37,6 +37,7 @@
 		FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2EAC9E243EEE130098FAC3 /* LaunchScreen.storyboard */; };
 		FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */; };
 		FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */; };
+		FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB39FCBC24FFAD7200B0685D /* error.mp3 */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
 		FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */; };
@@ -125,6 +126,7 @@
 		FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		FB39FCBC24FFAD7200B0685D /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
 		FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryCell.swift; sourceTree = "<group>"; };
@@ -374,7 +376,6 @@
 		FB8606B32444771300A692AD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D489247574730055FF62 /* ShadowsHelper.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 			);
@@ -384,6 +385,7 @@
 		FB87420624605B9C00247923 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				FB39FCBC24FFAD7200B0685D /* error.mp3 */,
 				FB69CBEC24ACFD64007506F6 /* swipe.mp3 */,
 				FB7BCD4E24BDCDA700B8F6BA /* hideContinue.mp3 */,
 				FB7BCD4F24BDCDA700B8F6BA /* showContinue.mp3 */,
@@ -490,6 +492,7 @@
 		FBC1D4822474EDCD0055FF62 /* Game Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
 			);
@@ -591,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA764FB246331E400D567D0 /* button3.mp3 in Resources */,
+				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
 				FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,

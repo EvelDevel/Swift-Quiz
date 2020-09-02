@@ -181,7 +181,7 @@ extension GameViewController {
             } else {
                 shadows.addRedShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
-                SoundPlayer.shared.playSound(sound: .answerButtonWrong)
+                SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true
                 
                 /// Показываем подсказку после неправильного
