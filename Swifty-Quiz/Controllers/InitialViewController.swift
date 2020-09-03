@@ -5,9 +5,8 @@
 import UIKit
 
 // MARK: TODO - Баги и доработки с Apple Store отзывов
-/// При запуске на айпаде - логотип в лаунче очень большой, потом становится меньше (перескакивает)
-/// - ability to share your score on social media
-/// - add notifications... reminders to take daily quiz or complete a quiz they are yet to finish
+/// 1. Social features
+/// 2. Push-notifications
 
 class InitialViewController: UIViewController {
 
