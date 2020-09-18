@@ -175,7 +175,7 @@ extension GameViewController {
                 if weDidTakeHelp == false { score += 1 }
                 shadows.addGreenShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
-                SoundPlayer.shared.playSound(sound: .answerButtonRight)
+                SoundPlayer.shared.playSound(sound: .correctAnswer)
                 dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {

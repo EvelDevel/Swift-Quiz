@@ -8,7 +8,7 @@ import AVFoundation
 enum Sounds {
     case menuMainButton
     case topicAndSettingsButton
-    case answerButtonRight
+    case correctAnswer
     case answerButtonWrong
     case clearRecordsSound
     case infoAboutSetting
@@ -37,9 +37,9 @@ class SoundPlayer {
             case .topicAndSettingsButton:
                 name = "button2"
                 soundExtension = "wav"
-            case .answerButtonRight:
-                name = "button1"
-                soundExtension = "wav"
+            case .correctAnswer:
+                name = "rightAnswer"
+                soundExtension = "mp3"
             case .answerButtonWrong:
                 name = "button2"
                 soundExtension = "wav"
