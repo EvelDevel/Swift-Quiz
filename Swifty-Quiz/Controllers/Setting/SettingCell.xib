@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="D0I-Pl-Rlx">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="D0I-Pl-Rlx">
                         <rect key="frame" x="286" y="18.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -54,7 +54,7 @@
                             <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="BVQ-iX-eGv"/>
                         </connections>
                     </segmentedControl>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="vIg-7M-84W">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="vIg-7M-84W">
                         <rect key="frame" x="286" y="96.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,7 +91,7 @@
                             <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="CAd-Bk-hp2"/>
                         </connections>
                     </segmentedControl>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-Li-E20">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-Li-E20">
                         <rect key="frame" x="286" y="174.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,7 +128,7 @@
                             <action selector="settingSwitchSound:" destination="KGk-i7-Jjw" eventType="valueChanged" id="ahO-XP-Stz"/>
                         </connections>
                     </segmentedControl>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-sN-h5w">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-sN-h5w">
                         <rect key="frame" x="286" y="252.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -258,6 +258,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Info" width="50" height="50"/>
+        <image name="InfoGray" width="50" height="50"/>
     </resources>
 </document>

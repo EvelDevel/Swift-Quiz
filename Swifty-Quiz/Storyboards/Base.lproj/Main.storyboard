@@ -1000,7 +1000,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="18" minY="3" maxX="15" maxY="3"/>
-                                        <state key="normal" image="Info"/>
+                                        <state key="normal" image="InfoGray"/>
                                         <state key="highlighted" image="InfoFill"/>
                                         <connections>
                                             <action selector="helpSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFE-tH-tE9"/>
@@ -1008,7 +1008,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veA-zL-dzC" userLabel="Help Counter">
-                                        <rect key="frame" x="289.5" y="17.5" width="40.5" height="0.0"/>
+                                        <rect key="frame" x="289.5" y="17.5" width="42.5" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="12" id="7jA-hR-zMQ"/>
                                         </constraints>
@@ -1071,7 +1071,7 @@
                                     <constraint firstItem="lup-xN-Pbw" firstAttribute="leading" secondItem="B6F-p6-lv0" secondAttribute="leading" constant="20" id="Tln-5Z-j7o"/>
                                     <constraint firstAttribute="height" constant="56" id="UbX-hD-Rp3"/>
                                     <constraint firstItem="veA-zL-dzC" firstAttribute="firstBaseline" secondItem="atk-Fk-RiH" secondAttribute="firstBaseline" id="hgb-w8-lIc"/>
-                                    <constraint firstItem="2hl-kx-2hD" firstAttribute="leading" secondItem="veA-zL-dzC" secondAttribute="trailing" constant="-10" id="ozG-6h-m12"/>
+                                    <constraint firstItem="2hl-kx-2hD" firstAttribute="leading" secondItem="veA-zL-dzC" secondAttribute="trailing" constant="-12" id="ozG-6h-m12"/>
                                     <constraint firstItem="atk-Fk-RiH" firstAttribute="centerX" secondItem="B6F-p6-lv0" secondAttribute="centerX" id="rnb-I7-FTr"/>
                                     <constraint firstAttribute="trailing" secondItem="2hl-kx-2hD" secondAttribute="trailing" constant="5" id="uDT-ek-yjI"/>
                                     <constraint firstItem="lup-xN-Pbw" firstAttribute="top" secondItem="atk-Fk-RiH" secondAttribute="bottom" constant="12" id="utN-tX-5hz"/>
@@ -1223,8 +1223,8 @@
         <segue reference="AS6-ki-vnO"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Info" width="50" height="50"/>
         <image name="InfoFill" width="50" height="50"/>
+        <image name="InfoGray" width="50" height="50"/>
         <image name="RightChevrone" width="50" height="50"/>
         <image name="RightChevroneFill" width="50" height="50"/>
         <image name="launch" width="800" height="300"/>
