@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
         <!--Launch View Controller-->
         <scene sceneID="K1c-Td-h8m">
             <objects>
-                <viewController id="FKu-aM-NQz" customClass="LaunchViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FKu-aM-NQz" customClass="LaunchViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWE-bf-pj2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +39,7 @@
         <!--About Project Controller-->
         <scene sceneID="bfT-QU-NfU">
             <objects>
-                <viewController id="849-ZK-r5e" customClass="AboutProjectController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="849-ZK-r5e" customClass="AboutProjectController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kwm-od-X7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +53,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92B-HM-6qy">
                                 <rect key="frame" x="16" y="213" width="343" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -69,7 +70,7 @@
                                             <action selector="author:" destination="849-ZK-r5e" eventType="touchUpInside" id="aI3-Ob-3qt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-yO-hFQ" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-yO-hFQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="82" y="0.0" width="120" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +87,7 @@
                                             <action selector="design:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="ogz-ke-p1W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-nK-7s4" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-nK-7s4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="212" y="0.0" width="131" height="40"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -122,7 +123,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-WO-fgw">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-sd-EN0" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-sd-EN0" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -138,7 +139,7 @@
                                                     <action selector="refactorGuru:" destination="849-ZK-r5e" eventType="touchUpInside" id="lP4-TS-KmK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-VM-edI" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-VM-edI" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="156" y="0.0" width="91.5" height="40"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -155,7 +156,7 @@
                                                     <action selector="swiftbookRu:" destination="849-ZK-r5e" eventType="touchUpInside" id="Zej-co-Jhl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-Gn-Yrk" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-Gn-Yrk" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="257.5" y="0.0" width="85.5" height="40"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -181,7 +182,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-Mm-JQE">
                                         <rect key="frame" x="0.0" y="50" width="343" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-vk-WCk" customClass="RoundCornerButton" customModule="Swifty_RU" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-vk-WCk" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -244,7 +245,7 @@
         <!--Initial View Controller-->
         <scene sceneID="crJ-bM-xcy">
             <objects>
-                <viewController storyboardIdentifier="InitialViewController" id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbL-mg-kmy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +264,7 @@
                                     <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="info.circle.fill" catalog="system">
+                                <state key="normal">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                     </preferredSymbolConfiguration>
@@ -294,17 +295,18 @@
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
+                                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
                                                         <rect key="frame" x="0.0" y="1" width="288" height="59"/>
                                                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
-                                                        <state key="normal" image="arrow.right.circle" catalog="system">
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                                        <inset key="titleEdgeInsets" minX="300" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="254" minY="20" maxX="10" maxY="20"/>
+                                                        <state key="normal" image="RightChevrone">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
-                                                        <state key="highlighted" image="arrow.right.circle.fill" catalog="system">
+                                                        <state key="highlighted" image="RightChevroneFill">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -549,7 +551,7 @@
         <!--Records View Controller-->
         <scene sceneID="AUf-56-Jv7">
             <objects>
-                <viewController storyboardIdentifier="RecordsViewController" id="3kd-gf-GXa" customClass="RecordsViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordsViewController" id="3kd-gf-GXa" customClass="RecordsViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xqm-Am-DQd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,16 +581,19 @@
                                     <outlet property="delegate" destination="3kd-gf-GXa" id="f2i-RZ-Mb9"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf">
-                                <rect key="frame" x="249" y="27.5" width="110" height="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-xX-Faf">
+                                <rect key="frame" x="248.5" y="24" width="110.5" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="QMY-o0-VI2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.7969820205479452" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" title="Очистить" image="trash" catalog="system">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="70" maxY="3"/>
+                                <state key="normal" title="Очистить историю">
                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="cleanRecords:" destination="3kd-gf-GXa" eventType="touchUpInside" id="FL5-Zn-vxz"/>
@@ -596,7 +601,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История игр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmK-rs-T9h">
-                                <rect key="frame" x="16" y="25" width="120" height="24"/>
+                                <rect key="frame" x="16" y="25" width="119.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -608,11 +613,11 @@
                             <constraint firstItem="XJN-af-bwb" firstAttribute="top" secondItem="Klu-XE-vdS" secondAttribute="bottom" id="DZv-Oo-Ozh"/>
                             <constraint firstItem="Klu-XE-vdS" firstAttribute="top" secondItem="6VH-zc-nbY" secondAttribute="top" id="GTG-p8-OBm"/>
                             <constraint firstItem="6VH-zc-nbY" firstAttribute="trailing" secondItem="XJN-af-bwb" secondAttribute="trailing" id="S3h-5b-tuf"/>
-                            <constraint firstItem="ZeY-xX-Faf" firstAttribute="firstBaseline" secondItem="ZmK-rs-T9h" secondAttribute="firstBaseline" id="Uqi-Gl-e6I"/>
                             <constraint firstItem="6VH-zc-nbY" firstAttribute="trailing" secondItem="ZeY-xX-Faf" secondAttribute="trailing" constant="16" id="WWT-Zy-lup"/>
                             <constraint firstItem="ZeY-xX-Faf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6VH-zc-nbY" secondAttribute="leading" symbolic="YES" id="XGW-61-YZJ"/>
                             <constraint firstItem="Klu-XE-vdS" firstAttribute="leading" secondItem="6VH-zc-nbY" secondAttribute="leading" id="Z0w-Sh-hpZ"/>
                             <constraint firstItem="XJN-af-bwb" firstAttribute="leading" secondItem="6VH-zc-nbY" secondAttribute="leading" id="ZZ6-9B-U9A"/>
+                            <constraint firstItem="ZeY-xX-Faf" firstAttribute="centerY" secondItem="ZmK-rs-T9h" secondAttribute="centerY" id="d7s-yS-aUu"/>
                             <constraint firstAttribute="bottom" secondItem="XJN-af-bwb" secondAttribute="bottom" id="fDg-7C-6OQ"/>
                             <constraint firstItem="ZmK-rs-T9h" firstAttribute="top" secondItem="6VH-zc-nbY" secondAttribute="top" constant="25" id="mao-ij-6EC"/>
                             <constraint firstItem="ZmK-rs-T9h" firstAttribute="leading" secondItem="6VH-zc-nbY" secondAttribute="leading" constant="16" id="ppx-BA-Tgl"/>
@@ -633,7 +638,7 @@
         <!--Game History View Controller-->
         <scene sceneID="0H6-LV-1qG">
             <objects>
-                <viewController storyboardIdentifier="GameHistoryViewController" id="jjh-O8-n2Q" customClass="GameHistoryViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameHistoryViewController" id="jjh-O8-n2Q" customClass="GameHistoryViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7HQ-B3-iMX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -703,7 +708,7 @@
         <!--Topic View Controller-->
         <scene sceneID="uFF-a5-ESS">
             <objects>
-                <viewController id="uSs-gR-mOM" customClass="TopicViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uSs-gR-mOM" customClass="TopicViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kZG-cv-995">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -779,7 +784,7 @@
         <!--Settings View Controller-->
         <scene sceneID="JT5-CO-yaY">
             <objects>
-                <viewController id="mCG-gu-aKe" customClass="SettingsViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mCG-gu-aKe" customClass="SettingsViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qie-bt-59L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -801,7 +806,7 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="587"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Swifty_RU" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mUK-a2-umW" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Ei-9VS">
@@ -843,7 +848,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -899,7 +904,7 @@
                                             <constraint firstItem="mHw-dw-Ztz" firstAttribute="leading" secondItem="WV1-s6-FrL" secondAttribute="leading" constant="16" id="zrn-aE-qoa"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView" customClass="AnswerButtonsView" customModule="Swifty_RU" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-UX-cgG" userLabel="ButtonsView" customClass="AnswerButtonsView" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="295.5" width="375" height="295.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vjR-Yi-cYW" userLabel="Buttons">
@@ -986,16 +991,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-p6-lv0" userLabel="Header Stats View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
                                         <rect key="frame" x="320" y="14" width="50" height="23"/>
                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Nqs-qb-q99"/>
                                             <constraint firstAttribute="height" constant="23" id="sP7-Wj-Til"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                        <color key="tintColor" red="0.23610874726877762" green="0.27885135452246407" blue="0.33557069300000009" alpha="0.7010648544520548" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="info.circle" catalog="system"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="18" minY="3" maxX="15" maxY="3"/>
+                                        <state key="normal" image="Info"/>
+                                        <state key="highlighted" image="InfoFill"/>
                                         <connections>
                                             <action selector="helpSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFE-tH-tE9"/>
                                             <segue destination="tce-xI-jYz" kind="presentation" identifier="toHelpViewController" modalTransitionStyle="crossDissolve" id="xzC-Ih-f4Q"/>
@@ -1117,7 +1123,7 @@
         <!--Help View Controller-->
         <scene sceneID="wvl-AF-KOl">
             <objects>
-                <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Swifty_RU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overCurrentContext" id="tce-xI-jYz" customClass="HelpViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iA-3V-kie">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1217,13 +1223,12 @@
         <segue reference="AS6-ki-vnO"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
-        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Info" width="50" height="50"/>
+        <image name="InfoFill" width="50" height="50"/>
+        <image name="RightChevrone" width="50" height="50"/>
+        <image name="RightChevroneFill" width="50" height="50"/>
         <image name="launch" width="800" height="300"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
 </document>
