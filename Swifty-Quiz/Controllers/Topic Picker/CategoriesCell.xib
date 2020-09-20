@@ -127,19 +127,19 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A35-uV-IEt" userLabel="Guide-Suggestion">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A35-uV-IEt" userLabel="Guide-Suggestion">
                         <rect key="frame" x="16" y="148" width="288" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
-                                <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-YO-tgt">
-                                <rect key="frame" x="149" y="0.0" width="139" height="30"/>
+                                <rect key="frame" x="111.5" y="0.0" width="176.5" height="30"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="122" minY="6" maxX="0.0" maxY="6"/>
+                                <inset key="imageEdgeInsets" minX="158" minY="6" maxX="0.0" maxY="6"/>
                                 <state key="normal" image="PlusCircle">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                 </state>
@@ -150,7 +150,7 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="Usd-1Y-196"/>
+                            <constraint firstAttribute="height" constant="30" id="XKj-Du-HD2"/>
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
@@ -662,22 +662,19 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-dN-P82" userLabel="Patterns-Suggestion">
-                        <rect key="frame" x="16" y="623" width="288" height="20.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-dN-P82" userLabel="Patterns-Suggestion">
+                        <rect key="frame" x="16" y="623" width="288" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
-                                <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20.5" id="k5c-Qp-N5g"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvN-jI-gWd">
-                                <rect key="frame" x="149" y="0.0" width="139" height="20.5"/>
+                                <rect key="frame" x="88" y="0.0" width="200" height="30"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="122" minY="1" maxX="0.0" maxY="1"/>
+                                <inset key="imageEdgeInsets" minX="181" minY="6" maxX="0.0" maxY="6"/>
                                 <state key="normal" image="PlusCircle">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
                                 </state>
@@ -687,9 +684,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="HVn-HO-smd"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-8m-84D" userLabel="Patterns">
-                        <rect key="frame" x="16" y="653.5" width="288" height="68"/>
+                        <rect key="frame" x="16" y="663" width="288" height="68"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-W0-nCM" userLabel="01 Row">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
