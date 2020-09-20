@@ -10,11 +10,9 @@ protocol RecordsViewControllerDelegate: class {
 
 class RecordsViewController: UIViewController {
     
-	@IBAction func dismissHistory(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
-		dismiss(animated: true, completion: nil)
-	}
-	
+	@IBOutlet weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
     @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
@@ -25,15 +23,31 @@ class RecordsViewController: UIViewController {
         super.viewDidLoad()
         cellRegistration()
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
+	
+	/// Call delegates
+	override func viewDidDisappear(_ animated: Bool) {
         delegate?.updateInitialView()
     }
-    
+	
+	/// > 13.0 iOS Navigation settings
+	override func viewWillAppear(_ animated: Bool) {
+		if #available(iOS 13.0, *) {
+			backButton.isHidden = true
+			titleHeight.constant = 25
+			headerHeight.constant = 65
+		}
+	}
+	/// < 13.0 iOS Navigation
+    @IBAction func dismissHistory(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
     /// Звуки нажатия кнопки и стирания рекордов
     @IBAction func clearRecordSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
+	
     func playTrashSound() {
         SoundPlayer.shared.playSound(sound: .clearRecordsSound)
     }

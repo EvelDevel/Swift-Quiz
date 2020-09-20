@@ -11,12 +11,10 @@ protocol TopicViewControllerDelegate: class {
 }
 
 class TopicViewController: UIViewController {
-
-	@IBAction func dismissTopicView(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
-		dismiss(animated: true, completion: nil)
-	}
 	
+	@IBOutlet weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var numberOfQuestions: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	weak var delegate: TopicViewControllerDelegate?
@@ -26,7 +24,7 @@ class TopicViewController: UIViewController {
 		cellRegistration()
 		setDefaultNumberOfQuestions()
 	}
-
+	
 	/// Обновляем выбранную категорию моментально
 	override func viewWillDisappear(_ animated: Bool) {
 		delegate?.selectedCategory()
@@ -38,6 +36,20 @@ class TopicViewController: UIViewController {
 	/// Обновляем (убираем) кнопку "продолжить" при смене темы с задержкой
 	override func viewDidDisappear(_ animated: Bool) {
 		delegate?.updateInitialView()
+	}
+	
+	/// > 13.0 iOS Navigation settings
+	override func viewWillAppear(_ animated: Bool) {
+		if #available(iOS 13.0, *) {
+			backButton.isHidden = true
+			titleHeight.constant = 25
+			headerHeight.constant = 80
+		}
+	}
+	/// < 13.0 iOS Navigation
+	@IBAction func dismissTopicView(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
 	}
 
 	func setDefaultNumberOfQuestions() {

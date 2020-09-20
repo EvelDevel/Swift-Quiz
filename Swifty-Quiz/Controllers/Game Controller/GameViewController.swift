@@ -10,11 +10,9 @@ protocol GameViewControllerDelegate: class {
 }
 
 class GameViewController: UIViewController {
-    
-	@IBAction func dismissGame(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
-		dismiss(animated: true, completion: nil)
-	}
+	
+	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var headerHeight: NSLayoutConstraint!
 	
 	@IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
@@ -73,7 +71,20 @@ class GameViewController: UIViewController {
         if endGameFlag == false && currentQuestionIndex > 0 { gameEnding(path: 2) }
         delegate?.updateInitialView()
     }
-    
+	
+	/// > 13.0 iOS Navigation settings
+	override func viewWillAppear(_ animated: Bool) {
+		if #available(iOS 13.0, *) {
+			backButton.isHidden = true
+			headerHeight.constant = 0
+		}
+	}
+	/// < 13.0 iOS Navigation
+	@IBAction func dismissGame(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
     func addShadows() {
         shadows.addStaticShadows(GameComtrollerViews)
         shadows.addButtonShadows(answerButtonsCollection)

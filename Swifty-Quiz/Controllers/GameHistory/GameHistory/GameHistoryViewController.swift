@@ -6,20 +6,34 @@ import UIKit
 import MessageUI
 
 class GameHistoryViewController: UIViewController {
-    
-	@IBAction func dismissGameHistory(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
-		dismiss(animated: true, completion: nil)
-	}
 	
-    @IBOutlet weak var tableView: UITableView!
-    var history: [GameHistory] = []
+	@IBOutlet weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var tableView: UITableView!
+    
+	var history: [GameHistory] = []
     var cellWidth: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegistration()
     }
+	
+	/// > 13.0 iOS Navigation settings
+	override func viewWillAppear(_ animated: Bool) {
+		if #available(iOS 13.0, *) {
+			backButton.isHidden = true
+			titleHeight.constant = 25
+			headerHeight.constant = 65
+		}
+	}
+	
+	/// < 13.0 iOS Navigation
+	@IBAction func dismissGameHistory(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
 }
 
 

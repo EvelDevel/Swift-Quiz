@@ -495,8 +495,8 @@
 		FBC1D4822474EDCD0055FF62 /* Game Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
+				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
 			);
 			path = "Game Controller";
