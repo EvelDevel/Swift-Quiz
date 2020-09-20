@@ -10,6 +10,11 @@ protocol SettingsViewControllerDelegate: class {
 
 class SettingsViewController: UIViewController {
     
+	@IBAction func dismissSettings(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
     @IBOutlet weak var tableView: UITableView!
     weak var delegate: SettingsViewControllerDelegate?
     

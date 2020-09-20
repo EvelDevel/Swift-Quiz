@@ -11,7 +11,12 @@ protocol GameViewControllerDelegate: class {
 
 class GameViewController: UIViewController {
     
-    @IBOutlet var answerButtonsCollection: [UIButton]!
+	@IBAction func dismissGame(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
+	@IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!

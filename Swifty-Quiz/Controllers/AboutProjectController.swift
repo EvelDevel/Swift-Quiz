@@ -6,7 +6,12 @@ import UIKit
 
 class AboutProjectController: UIViewController {
 
-    @IBAction func author(_ sender: Any) {
+	@IBAction func dismissAbout(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
+	@IBAction func author(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/ev.nikitin")!
         UIApplication.shared.open(urlComponents.url!)
 		SoundPlayer.shared.playSound(sound: .menuMainButton)

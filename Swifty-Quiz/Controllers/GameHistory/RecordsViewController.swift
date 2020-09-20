@@ -10,7 +10,12 @@ protocol RecordsViewControllerDelegate: class {
 
 class RecordsViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+	@IBAction func dismissHistory(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
+	@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cleanRecords: UIButton!
     @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
     

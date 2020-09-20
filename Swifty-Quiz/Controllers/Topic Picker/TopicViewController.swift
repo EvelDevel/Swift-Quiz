@@ -12,6 +12,11 @@ protocol TopicViewControllerDelegate: class {
 
 class TopicViewController: UIViewController {
 
+	@IBAction func dismissTopicView(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
 	@IBOutlet weak var numberOfQuestions: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	weak var delegate: TopicViewControllerDelegate?

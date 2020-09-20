@@ -7,6 +7,11 @@ import MessageUI
 
 class GameHistoryViewController: UIViewController {
     
+	@IBAction func dismissGameHistory(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		dismiss(animated: true, completion: nil)
+	}
+	
     @IBOutlet weak var tableView: UITableView!
     var history: [GameHistory] = []
     var cellWidth: CGFloat = 0
