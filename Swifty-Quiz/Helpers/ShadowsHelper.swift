@@ -18,7 +18,11 @@ class ShadowsHelper {
             button.layer.rasterizationScale = UIScreen.main.scale
             
             /// Задротское скругление
-            button.layer.cornerCurve = .continuous
+			if #available(iOS 13.0, *) {
+				button.layer.cornerCurve = .continuous
+			} else {
+				// Fallback on earlier versions
+			}
         }
     }
     
@@ -38,7 +42,11 @@ class ShadowsHelper {
             button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
             
             /// Задротское скругление
-            button.layer.cornerCurve = .continuous
+			if #available(iOS 13.0, *) {
+				button.layer.cornerCurve = .continuous
+			} else {
+				// Fallback on earlier versions
+			}
         }
     }
     
