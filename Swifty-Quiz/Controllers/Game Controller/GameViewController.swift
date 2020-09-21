@@ -12,7 +12,7 @@ protocol GameViewControllerDelegate: class {
 class GameViewController: UIViewController {
 	
 	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet weak var headerTopMargin: NSLayoutConstraint!
 	
 	@IBOutlet var answerButtonsCollection: [UIButton]!
     @IBOutlet weak var optionA: UIButton!
@@ -76,7 +76,7 @@ class GameViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
-			headerHeight.constant = 0
+			headerTopMargin.constant = 0
 		}
 	}
 	/// < 13.0 iOS Navigation

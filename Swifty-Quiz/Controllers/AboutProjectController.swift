@@ -26,6 +26,7 @@ class AboutProjectController: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	
+	
 	// MARK: Links
 	
 	@IBAction func author(_ sender: Any) {

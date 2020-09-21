@@ -8,7 +8,7 @@ import MessageUI
 class GameHistoryViewController: UIViewController {
 	
 	@IBOutlet weak var headerHeight: NSLayoutConstraint!
-	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet weak var titleTopMargin: NSLayoutConstraint!
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var tableView: UITableView!
     
@@ -24,11 +24,10 @@ class GameHistoryViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
-			titleHeight.constant = 25
+			titleTopMargin.constant = 25
 			headerHeight.constant = 65
 		}
 	}
-	
 	/// < 13.0 iOS Navigation
 	@IBAction func dismissGameHistory(_ sender: Any) {
 		SoundPlayer.shared.playSound(sound: .menuMainButton)

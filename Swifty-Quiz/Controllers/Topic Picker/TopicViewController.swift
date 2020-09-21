@@ -13,7 +13,7 @@ protocol TopicViewControllerDelegate: class {
 class TopicViewController: UIViewController {
 	
 	@IBOutlet weak var headerHeight: NSLayoutConstraint!
-	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet weak var titleTopMargin: NSLayoutConstraint!
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var numberOfQuestions: UILabel!
 	@IBOutlet weak var tableView: UITableView!
@@ -42,7 +42,7 @@ class TopicViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
-			titleHeight.constant = 25
+			titleTopMargin.constant = 25
 			headerHeight.constant = 80
 		}
 	}
