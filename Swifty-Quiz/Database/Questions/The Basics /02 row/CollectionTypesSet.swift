@@ -4,7 +4,7 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 301 по 400
+// MARK: 04 - Вопросы (id) с 301 по 400
 
 class CollectionTypesSet {
     static func getQuestions() -> [Question] {
