@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB0807EF24A090CA00016E18 /* GuideRandomSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */; };
-		FB0807F124A0948500016E18 /* PatternsRandomSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807F024A0948500016E18 /* PatternsRandomSet.swift */; };
+		FB0807EF24A090CA00016E18 /* RandomFromGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807EE24A090CA00016E18 /* RandomFromGuide.swift */; };
+		FB0807F124A0948500016E18 /* RandomFromPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0807F024A0948500016E18 /* RandomFromPatterns.swift */; };
+		FB0B96A225262192006C986D /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* QuestionManager.swift */; };
 		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
 		FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C1B246A554B005F5289 /* MethodsSet.swift */; };
@@ -84,7 +85,7 @@
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionTypesSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
-		FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* RandomSuperSets.swift */; };
+		FBB4405524991C1E00D88937 /* RandomFromAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4405424991C1E00D88937 /* RandomFromAll.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowsHelper.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
@@ -93,8 +94,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideRandomSet.swift; sourceTree = "<group>"; };
-		FB0807F024A0948500016E18 /* PatternsRandomSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsRandomSet.swift; sourceTree = "<group>"; };
+		FB0807EE24A090CA00016E18 /* RandomFromGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFromGuide.swift; sourceTree = "<group>"; };
+		FB0807F024A0948500016E18 /* RandomFromPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFromPatterns.swift; sourceTree = "<group>"; };
+		FB0B96A125262192006C986D /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
 		FB119C1B246A554B005F5289 /* MethodsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsSet.swift; sourceTree = "<group>"; };
@@ -171,7 +173,7 @@
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTypesSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
-		FBB4405424991C1E00D88937 /* RandomSuperSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSuperSets.swift; sourceTree = "<group>"; };
+		FBB4405424991C1E00D88937 /* RandomFromAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFromAll.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
 		FBC1D489247574730055FF62 /* ShadowsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsHelper.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
@@ -485,9 +487,10 @@
 		FBB4405324991BD700D88937 /* Super Sets */ = {
 			isa = PBXGroup;
 			children = (
-				FBB4405424991C1E00D88937 /* RandomSuperSets.swift */,
-				FB0807EE24A090CA00016E18 /* GuideRandomSet.swift */,
-				FB0807F024A0948500016E18 /* PatternsRandomSet.swift */,
+				FB0B96A125262192006C986D /* QuestionManager.swift */,
+				FBB4405424991C1E00D88937 /* RandomFromAll.swift */,
+				FB0807EE24A090CA00016E18 /* RandomFromGuide.swift */,
+				FB0807F024A0948500016E18 /* RandomFromPatterns.swift */,
 			);
 			path = "Super Sets";
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */,
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionTypesSet.swift in Sources */,
+				FB0B96A225262192006C986D /* QuestionManager.swift in Sources */,
 				FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */,
 				FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */,
 				FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */,
@@ -656,7 +660,7 @@
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
-				FB0807F124A0948500016E18 /* PatternsRandomSet.swift in Sources */,
+				FB0807F124A0948500016E18 /* RandomFromPatterns.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
 				FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */,
@@ -668,7 +672,7 @@
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
-				FB0807EF24A090CA00016E18 /* GuideRandomSet.swift in Sources */,
+				FB0807EF24A090CA00016E18 /* RandomFromGuide.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
@@ -686,7 +690,7 @@
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
-				FBB4405524991C1E00D88937 /* RandomSuperSets.swift in Sources */,
+				FBB4405524991C1E00D88937 /* RandomFromAll.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,
 			);

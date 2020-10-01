@@ -86,8 +86,7 @@ extension InitialViewController {
 
 	/// Показываем общее количество вопросов в игре
 	func showTotalQuestions() {
-		weak var _ = RandomSuperSets.getQuestions(limit: 0)
-		totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
+		totalQuestionsLabel.text = "Вопросов в игре: \(QuestionManager.getAllQuestionsCounter())"
 	}
 }
 

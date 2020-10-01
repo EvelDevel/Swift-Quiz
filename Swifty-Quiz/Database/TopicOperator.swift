@@ -9,11 +9,11 @@ class TopicOperator {
     
     // MARK: Super Sets
     // Руководство, Паттерны
-    static func getRandom20() -> [Question] { return RandomSuperSets.getQuestions(limit: 20) }
-    static func getRandom50() -> [Question] { return RandomSuperSets.getQuestions(limit: 50) }
-    static func getRandom100() -> [Question] { return RandomSuperSets.getQuestions(limit: 100) }
-    static func getGuide20() -> [Question] { return GuideRandomSet.getQuestions(limit: 20) }
-    static func getPatterns20() -> [Question] { return PatternsRandomSet.getQuestions(limit: 20) }
+    static func getRandom20() -> [Question] { return RandomFromAll.getQuestions(limit: 20) }
+    static func getRandom50() -> [Question] { return RandomFromAll.getQuestions(limit: 50) }
+    static func getRandom100() -> [Question] { return RandomFromAll.getQuestions(limit: 100) }
+    static func getGuide20() -> [Question] { return RandomFromGuide.getQuestions(limit: 20) }
+    static func getPatterns20() -> [Question] { return RandomFromPatterns.getQuestions(limit: 20) }
     
     
     // MARK: THE BASICS

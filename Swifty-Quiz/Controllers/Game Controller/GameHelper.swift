@@ -14,15 +14,15 @@ class GameHelper {
         /// При любых других раскладах текущий сет случайных вопросов будет повторяться (перезапуск, не доиграли)
         
         if tag == 0 {
-            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
+            SelectedTopic.shared.saveQuestionSet(RandomFromAll.getQuestions(limit: 20), topic: "20 случайных вопросов", tag: 0)
         } else if tag == 1 {
-            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 50), topic: "50 случайных вопросов", tag: 1)
+            SelectedTopic.shared.saveQuestionSet(RandomFromAll.getQuestions(limit: 50), topic: "50 случайных вопросов", tag: 1)
         } else if tag == 2 {
-            SelectedTopic.shared.saveQuestionSet(RandomSuperSets.getQuestions(limit: 100), topic: "100 случайных вопросов", tag: 2)
+            SelectedTopic.shared.saveQuestionSet(RandomFromAll.getQuestions(limit: 100), topic: "100 случайных вопросов", tag: 2)
         } else if tag == 3 {
-            SelectedTopic.shared.saveQuestionSet(GuideRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Руководству", tag: 3)
+            SelectedTopic.shared.saveQuestionSet(RandomFromGuide.getQuestions(limit: 20), topic: "20 вопросов по Руководству", tag: 3)
         } else if tag == 4 {
-            SelectedTopic.shared.saveQuestionSet(PatternsRandomSet.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
+            SelectedTopic.shared.saveQuestionSet(RandomFromPatterns.getQuestions(limit: 20), topic: "20 вопросов по Паттернам", tag: 4)
         }
     }
     
