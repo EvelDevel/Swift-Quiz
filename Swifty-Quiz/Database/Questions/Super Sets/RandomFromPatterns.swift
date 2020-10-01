@@ -14,8 +14,7 @@ class RandomFromPatterns {
 		var toReturn: [Question] = []
 		
 		if limit > 0 {
-			shuffled = QuestionManager.getAllFromPatterns().shuffled()
-			toReturn = []
+			shuffled = QuestionManager.appendPatterns().shuffled()
 			
 			for index in 0..<limit {
 				toReturn.append(shuffled[index])

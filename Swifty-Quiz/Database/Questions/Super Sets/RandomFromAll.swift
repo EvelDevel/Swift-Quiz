@@ -15,7 +15,6 @@ class RandomFromAll {
 		
 		if limit > 0 {
 			shuffled = QuestionManager.getAllQuestions().shuffled()
-			toReturn = []
 			
 			for index in 0..<limit {
 				toReturn.append(shuffled[index])

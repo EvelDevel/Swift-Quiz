@@ -14,8 +14,7 @@ class RandomFromGuide {
 		var toReturn: [Question] = []
 		
 		if limit > 0 {
-			shuffled = QuestionManager.getAllFromGuide().shuffled()
-			toReturn = []
+			shuffled = QuestionManager.appendGuide().shuffled()
 			
 			for index in 0..<limit {
 				toReturn.append(shuffled[index])
