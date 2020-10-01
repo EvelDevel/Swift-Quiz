@@ -55,9 +55,9 @@ class RandomSuperSets {
         
         ///
         
+		allQuestions.append(contentsOf: BasicsAboutPatternsSet.getQuestions())
         allQuestions.append(contentsOf: CreationalPatternsSet.getQuestions())
         allQuestions.append(contentsOf: StructuralPatternsSet.getQuestions())
-        
         allQuestions.append(contentsOf: BehavioralPatternsSet.getQuestions())
         allQuestions.append(contentsOf: AntipatternsSet.getQuestions())
         

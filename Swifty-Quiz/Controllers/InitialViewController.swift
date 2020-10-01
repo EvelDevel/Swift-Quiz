@@ -7,6 +7,7 @@ import UIKit
 // MARK: TODO - Баги и доработки с Apple Store отзывов
 /// 1. Social features
 /// 2. Push-notifications
+/// Добавить вопросов по паттернам в эту версию (рус)
 
 class InitialViewController: UIViewController {
 
@@ -85,7 +86,7 @@ extension InitialViewController {
 
 	/// Показываем общее количество вопросов в игре
 	func showTotalQuestions() {
-		_ = RandomSuperSets.getQuestions(limit: 0)
+		weak var _ = RandomSuperSets.getQuestions(limit: 0)
 		totalQuestionsLabel.text = "Вопросов в игре: \(RandomSuperSets.showTotalquestionsNumber())"
 	}
 }
