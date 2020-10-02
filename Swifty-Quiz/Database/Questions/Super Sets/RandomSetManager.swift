@@ -89,9 +89,9 @@ class RandomSetManager {
 		var toReturn: [Question] = []
 		
 		switch type {
-		case .all: 		shuffled = all.shuffled()
-		case .guide: 	shuffled = guide.shuffled()
-		case .patterns: shuffled = patterns.shuffled()
+		case .all: 		shuffled = all.isEmpty ? setAndGetAllQuestions().shuffled() : all.shuffled()
+		case .guide: 	shuffled = guide.isEmpty ? setAndGetGuideQuestions().shuffled() : guide.shuffled()
+		case .patterns: shuffled = patterns.isEmpty ? setAndGetPatternsQuestions().shuffled() : patterns.shuffled()
 		}
 		
 		for index in 0..<limit {
