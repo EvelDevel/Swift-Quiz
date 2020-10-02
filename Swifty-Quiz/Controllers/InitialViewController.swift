@@ -86,7 +86,7 @@ extension InitialViewController {
 
 	/// Показываем общее количество вопросов в игре
 	func showTotalQuestions() {
-		totalQuestionsLabel.text = "Вопросов в игре: \(QuestionManager.getAllQuestionsCounter())"
+		totalQuestionsLabel.text = "Вопросов в игре: \(RandomSetManager.showAllQuestionsNumber())"
 	}
 }
 
