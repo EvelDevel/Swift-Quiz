@@ -5,8 +5,6 @@
 import UIKit
 
 // MARK: TODO - Баги и доработки с Apple Store отзывов
-/// 1. Social features
-/// 2. Push-notifications
 /// Добавить вопросов по паттернам в эту версию (рус)
 
 class InitialViewController: UIViewController {

@@ -53,7 +53,7 @@ class GameHelper {
             && Game.shared.showNewGameAlertStatus() != true {
             
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя бы на один вопрос, измените настройки или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Есть незавершенная игра", message: "Если вы ответите хотя бы на один вопрос или выберете другую тему, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
                 alert.addAction(okAction)
                 view.present(alert, animated: true, completion: nil)

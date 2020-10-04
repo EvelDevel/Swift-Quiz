@@ -6,7 +6,6 @@ import UIKit
 
 protocol SettingCellDelegate: class {
     func showInformationAlert(_ title: String, _ message: String)
-    func showAlert()
 }
 
 class SettingCell: UITableViewCell {
@@ -20,7 +19,6 @@ class SettingCell: UITableViewCell {
     weak var delegate: SettingCellDelegate?
     
     @IBAction func settingSwitchSound(_ sender: Any) {
-        Game.shared.changeContinueStatus()
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
     }
     
@@ -29,14 +27,6 @@ class SettingCell: UITableViewCell {
         setControlsTintColors()
         addingTargets()
         settingsInitialValues()
-    }
-    
-    override func layoutSubviews() {
-        delegate?.showAlert()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }
 
@@ -192,3 +182,31 @@ extension SettingCell {
         delegate?.showInformationAlert(title, message)
     }
 }
+
+
+// Последовательность вопросов
+enum QuestionOrder {
+	case straight
+	case random
+}
+// Смена формулировок вопроса
+enum QuestionText {
+	case same
+	case random
+}
+// Подсказка после неправильного ответа
+enum HelpAfterWrong {
+	case proceed
+	case help
+}
+// Звук
+enum Sound {
+	case on
+	case off
+}
+// Смена после подсказки
+enum ChangeAfterHelp {
+	case change
+	case dontChange
+}
+

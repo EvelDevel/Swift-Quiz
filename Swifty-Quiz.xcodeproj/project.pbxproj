@@ -47,7 +47,6 @@
 		FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05024544125009FADDE /* SettingsCaretaker.swift */; };
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
-		FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C057245591AC009FADDE /* SettingEnums.swift */; };
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
@@ -134,7 +133,6 @@
 		FB66C05024544125009FADDE /* SettingsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCaretaker.swift; sourceTree = "<group>"; };
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
-		FB66C057245591AC009FADDE /* SettingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEnums.swift; sourceTree = "<group>"; };
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -352,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
-				FB66C057245591AC009FADDE /* SettingEnums.swift */,
 				FBA97902247CF43200228FB5 /* SettingCell.swift */,
 				FBA97903247CF43200228FB5 /* SettingCell.xib */,
 			);
@@ -374,6 +371,7 @@
 		FB8606B32444771300A692AD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D489247574730055FF62 /* ShadowsHelper.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 			);
@@ -490,7 +488,6 @@
 			isa = PBXGroup;
 			children = (
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
-				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
 			);
 			path = "Game Controller";
@@ -671,7 +668,6 @@
 				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
-				FB66C058245591AC009FADDE /* SettingEnums.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,
 				FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */,
