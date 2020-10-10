@@ -49,42 +49,11 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameHistoryCell", for: indexPath) as? GameHistoryCell else {
             return UITableViewCell()
         }
-        
-        /// Настройка изображений
-        if history[indexPath.row].image == "" {
-            cell.imageHeight.constant = 0
-            cell.stackTopMargin.constant = 10
-        } else {
-            if let image = UIImage(named: "\(history[indexPath.row].image)") {
-                cell.questionImage.image = UIImage(named: "\(history[indexPath.row].image)")
-                let ratio = image.size.width / image.size.height
-                let view = self.tableView
-                let width = view?.frame.size.width ?? 350
-                let newHeight = width / (ratio + 0.1)
-                cell.imageHeight.constant = newHeight - 55
-                cell.stackTopMargin.constant = 20
-            }
-        }
-        
-        cell.questionNumber.text = "\(indexPath.row + 1)"
-        cell.questionText.text = history[indexPath.row].question
-        cell.correctAnswer.text = "Ответ: \(history[indexPath.row].correctAnswer)"
-        cell.userAnswer.text = "Ваш ответ: \(history[indexPath.row].userAnswer)"
-        
-        /// Цвет: Правильный или неправильный ответ
-        if history[indexPath.row].correctAnswer == history[indexPath.row].userAnswer {
-            cell.colorBack.backgroundColor = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 1)
-            cell.questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        } else if history[indexPath.row].userAnswer != "Подсказка" {
-            cell.colorBack.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 1)
-            cell.userAnswer.text = "Ваш ответ: \(history[indexPath.row].userAnswer)"
-            cell.questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        } else {
-            cell.colorBack.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
-            cell.questionNumber.textColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1)
-            cell.userAnswer.text = "Ваш ответ: Взяли подсказку"
-        }
-        
+		cell.delegate = self
+		cell.history = history
+		cell.tableView = tableView
+		cell.width = tableView.frame.size.width
+		cell.cellIndex = indexPath.row
         return cell
     }
     
@@ -94,13 +63,24 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
             self.reportButtonPressed(id: self.history[indexPath.row].questionId)
             completion(true)
         }
-        reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.5)
         return UISwipeActionsConfiguration(actions: [reportAction])
     }
 }
 
 
 // MARK: Работа с делегатом
+extension GameHistoryViewController: GameHistoryCellDelegate {
+	func showHint(index: Int) {
+		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		let historyHintView  = mainStoryboard.instantiateViewController(withIdentifier: "HistoryHintController") as! HistoryHintController
+		historyHintView.helpText = history[index].helpText
+		present(historyHintView, animated: true, completion: nil)
+	}
+}
+
+
+// MARK: Работа c отправкой почты
 extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
     
     func reportButtonPressed(id: Int) {

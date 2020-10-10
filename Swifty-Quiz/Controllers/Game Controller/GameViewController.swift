@@ -101,7 +101,7 @@ extension GameViewController {
     /// Установка значений при продолжении
     func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
-            if weContinueLastGame == true {
+            if weContinueLastGame {
                 self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
                 self.weDidTakeHelp = Game.shared.records[0].helpFlag!
@@ -180,7 +180,8 @@ extension GameViewController {
                                                correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
                                                userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
                                                questionId: localQuestionSet[currentQuestionIndex].questionId,
-                                               image: localQuestionSet[currentQuestionIndex].image))
+                                               image: localQuestionSet[currentQuestionIndex].image,
+											   helpText: localQuestionSet[currentQuestionIndex].helpText))
             }
             
             /// Далее работа непосредственно внутри контроллера
@@ -356,7 +357,8 @@ extension GameViewController {
                                                correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
                                                userAnswer: "Подсказка",
                                                questionId: localQuestionSet[currentQuestionIndex].questionId,
-                                               image: localQuestionSet[currentQuestionIndex].image))
+											   image: localQuestionSet[currentQuestionIndex].image,
+											   helpText: localQuestionSet[currentQuestionIndex].helpText))
             }
             helpCounterLabel.text = "\(helpCounter)"
             weDidTakeHelp = true

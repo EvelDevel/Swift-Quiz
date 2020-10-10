@@ -4,11 +4,9 @@
 
 import UIKit
 
-// MARK: TODO - Баги и доработки с Apple Store отзывов
-/// Добавить вопросов по паттернам в эту версию (рус)
-
 class InitialViewController: UIViewController {
 
+	@IBOutlet weak var lastGameTitle: UILabel!
 	@IBOutlet weak var logoHeight: NSLayoutConstraint!
 	@IBOutlet weak var logoWidth: NSLayoutConstraint!
 	@IBOutlet weak var logoVerticalPosition: NSLayoutConstraint!
@@ -29,8 +27,12 @@ class InitialViewController: UIViewController {
 	@IBOutlet var initialWhiteViews: [UIView]!
 	@IBOutlet var initialButtons: [UIButton]!
 
-	@IBAction func goToAbout(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
-	@IBAction func tapButtonSounds(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+	@IBAction func goToAbout(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+	}
+	@IBAction func tapButtonSounds(_ sender: Any) {
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+	}
 
 	private let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
 	private let shadows = ShadowsHelper()
@@ -41,6 +43,10 @@ class InitialViewController: UIViewController {
 		setUpInitialInformation()
 		setUpUserInterface()
 	}
+	
+	override func viewWillLayoutSubviews() {
+		updateLastGameLabel()
+	}
 }
 
 
@@ -48,15 +54,14 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
 
 	func setUpInitialInformation() {
-		setUpStartQuestionSet()
-		setUpLastGameInfo()
+		setStartQuestionSet()
+		updateLastGameInfo()
 		showTotalQuestions()
 	}
 
 	/// Загружаем дефолтный сет
-	func setUpStartQuestionSet() {
-		if SelectedTopic.shared.topic.questionSet.isEmpty
-			|| Game.shared.settings.appLastVersion != currentAppVersion {
+	func setStartQuestionSet() {
+		if SelectedTopic.shared.topic.questionSet.isEmpty || Game.shared.settings.appLastVersion != currentAppVersion {
 			let newSet = TopicOperator.getQuestionsTheBasics()
 			SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
 			selectedTopic.text = "Основы"
@@ -67,7 +72,7 @@ extension InitialViewController {
 	}
 
 	/// Устанавливаем информацию о последней игре
-	func setUpLastGameInfo() {
+	func updateLastGameInfo() {
 		let records: [Record] = recordCaretaker.getRecordsList()
 		if records.count != 0 {
 			let category = records.first?.topic ?? ""
@@ -79,6 +84,10 @@ extension InitialViewController {
 			lastTopic.text = "Категория: \(category)"
 			totalQuestions.text = "Вопросы: \(played) из \(total) (подсказок: \(help))"
 			lastScore.text = "Правильных ответов: \(correct) (\(roundedPercents)%)"
+		} else {
+			lastTopic.text = "Категория: "
+			totalQuestions.text = "Вопросы: "
+			lastScore.text = "Правильных ответов: "
 		}
 	}
 
@@ -103,14 +112,23 @@ extension InitialViewController {
 	/// Показываем или скрываем кнопку "продолжить"
 	func updateContinueButton() {
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-			UIView.animate(withDuration: 0.12, animations: {
-				if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }
-				self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
-				self.continueGameButton.isHidden = false })
+			if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }
+			self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
+			self.continueGameButton.isHidden = false
 		} else {
 			if self.continueGameButton.isHidden == false { SoundPlayer.shared.playSound(sound: .hideContinueButton) }
 			self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
 			self.continueGameButton.isHidden = true
+		}
+	}
+	
+	/// Показываем корректный заголовок последней игры
+	func updateLastGameLabel() {
+		lastGameTitle.text = "Информация о прошлой игре: "
+		if Game.shared.records.count != 0 {
+			if Game.shared.records.first?.continueGameStatus ?? false {
+				lastGameTitle.text = "Информация о текущей игре: "
+			}
 		}
 	}
 
@@ -195,9 +213,9 @@ extension InitialViewController {
 
 // MARK: Выполнение функций делегата
 extension InitialViewController:    GameViewControllerDelegate,
-	TopicViewControllerDelegate,
-	RecordsViewControllerDelegate,
-SettingsViewControllerDelegate{
+									TopicViewControllerDelegate,
+									RecordsViewControllerDelegate,
+									SettingsViewControllerDelegate{
 
 	func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double,
 					topic: String, helpCounter: Int, playedNum: Int) {
@@ -205,6 +223,16 @@ SettingsViewControllerDelegate{
 		totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
 		lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
 	}
-	func updateInitialView() { updateContinueButton() }
-	func selectedCategory() { selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)" }
+	
+	func updateInitialView() {
+		updateContinueButton()
+	}
+	func selectedCategory() {
+		updateLastGameLabel()
+		selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+	}
+	func refreshLastGameInfo() {
+		updateLastGameInfo()
+		updateLastGameLabel()
+	}
 }

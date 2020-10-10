@@ -4,8 +4,13 @@
 
 import UIKit
 
+protocol GameHistoryCellDelegate: class {
+	func showHint(index: Int)
+}
+
 class GameHistoryCell: UITableViewCell {
 
+	@IBOutlet weak var showHintButton: RoundCornerButton!
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var colorBack: UIView!
     @IBOutlet weak var questionNumber: UILabel!
@@ -24,4 +29,56 @@ class GameHistoryCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         separatorHeight.constant = 1.0 / UIScreen.main.scale
     }
+	
+	weak var delegate: GameHistoryCellDelegate?
+	var history: [GameHistory] = []
+	var tableView = UITableView()
+	var width: CGFloat = 350
+	
+	var cellIndex: Int = 0 {
+		didSet {
+			/// Настройка изображений
+			if history[cellIndex].image == "" {
+				imageHeight.constant = 0
+				stackTopMargin.constant = 10
+			} else {
+				if let image = UIImage(named: "\(history[cellIndex].image)") {
+					questionImage.image = UIImage(named: "\(history[cellIndex].image)")
+					let ratio = image.size.width / image.size.height
+					let newHeight = width / (ratio + 0.1)
+					imageHeight.constant = newHeight - 55
+					stackTopMargin.constant = 20
+				}
+			}
+			questionNumber.text = "\(cellIndex + 1)"
+			questionText.text = history[cellIndex].question
+			correctAnswer.text = "Ответ: \(history[cellIndex].correctAnswer)"
+			userAnswer.text = "Ваш ответ: \(history[cellIndex].userAnswer)"
+			
+			/// Цвет: Правильный или неправильный ответ
+			if history[cellIndex].correctAnswer == history[cellIndex].userAnswer {
+				colorBack.backgroundColor = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 0.7)
+				questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+				showHintButton.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 0.7)
+				showHintButton.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 0.8), for: .normal)
+			} else if history[cellIndex].userAnswer != "Подсказка" {
+				colorBack.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.7)
+				userAnswer.text = "Ваш ответ: \(history[cellIndex].userAnswer)"
+				questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+				showHintButton.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.5)
+				showHintButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+			} else {
+				colorBack.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
+				questionNumber.textColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1)
+				userAnswer.text = "Ваш ответ: Взяли подсказку"
+				showHintButton.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 0.7)
+				showHintButton.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 0.8), for: .normal)
+			}
+		}
+	}
+	
+	@IBAction func showHintTapped(_ sender: Any) {
+		delegate?.showHint(index: cellIndex)
+		SoundPlayer.shared.playSound(sound: .menuMainButton)
+	}
 }

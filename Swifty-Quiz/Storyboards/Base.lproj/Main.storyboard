@@ -319,18 +319,15 @@
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
+                                                    <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
                                                         <rect key="frame" x="0.0" y="1" width="288" height="59"/>
                                                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="254" minY="20" maxX="10" maxY="20"/>
                                                         <state key="normal" image="RightChevrone">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                         </state>
-                                                        <state key="highlighted" image="RightChevroneFill">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
+                                                        <state key="highlighted" image="RightChevroneFill"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="13"/>
@@ -548,6 +545,7 @@
                         <outlet property="aboutButtonWidth" destination="kv3-HN-QsB" id="ydS-jk-9Qk"/>
                         <outlet property="contentCenter" destination="hs6-n2-mIT" id="t92-a9-86Y"/>
                         <outlet property="continueGameButton" destination="mO1-NM-9Qp" id="Q6k-rs-nB8"/>
+                        <outlet property="lastGameTitle" destination="ZWi-6k-ilE" id="mqF-ba-ezj"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
                         <outlet property="logoButton" destination="rPr-C7-FGY" id="A8u-Ac-tgU"/>
@@ -1091,14 +1089,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-p6-lv0" userLabel="Header Stats View">
                                 <rect key="frame" x="0.0" y="30" width="320" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-kx-2hD" userLabel="Help Button">
                                         <rect key="frame" x="265" y="14" width="50" height="23"/>
-                                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Nqs-qb-q99"/>
                                             <constraint firstAttribute="height" constant="23" id="sP7-Wj-Til"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="18" minY="3" maxX="15" maxY="3"/>
                                         <state key="normal" image="InfoGray"/>
                                         <state key="highlighted" image="InfoFill"/>
@@ -1323,7 +1320,6 @@
                             <constraint firstItem="ZLX-MH-VUT" firstAttribute="top" secondItem="gBd-b4-JLA" secondAttribute="bottom" constant="15" id="sqo-j8-kgQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Hd6-LK-X2M"/>
                     <connections>
                         <outlet property="backInGameButton" destination="ZLX-MH-VUT" id="2CR-cX-Nbn"/>
                         <outlet property="helpTextLabel" destination="cxL-CA-430" id="Uyv-fA-TWK"/>
@@ -1334,6 +1330,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEo-4j-NCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2019" y="112"/>
+        </scene>
+        <!--History Hint Controller-->
+        <scene sceneID="I8P-R4-CYP">
+            <objects>
+                <viewController storyboardIdentifier="HistoryHintController" modalPresentationStyle="overCurrentContext" id="Vot-Kk-PyF" customClass="HistoryHintController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C4u-vz-WWu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc2-ez-CSx">
+                                <rect key="frame" x="16" y="349" width="288" height="54"/>
+                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="1Zl-gL-MSC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Вернуться в игру">
+                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oh9-r3-ssy">
+                                <rect key="frame" x="16" y="184" width="288" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihq-tW-5g9">
+                                        <rect key="frame" x="20" y="62" width="248" height="68"/>
+                                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теоретическая подсказка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbF-7N-Iaa">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="poS-bM-Xb4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHh-ST-dpc" userLabel="Separator">
+                                        <rect key="frame" x="25" y="48" width="238" height="1"/>
+                                        <color key="backgroundColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ieO-ug-x0K"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qHh-ST-dpc" firstAttribute="leading" secondItem="oh9-r3-ssy" secondAttribute="leading" constant="25" id="2xp-Eb-UdM"/>
+                                    <constraint firstItem="Ihq-tW-5g9" firstAttribute="top" secondItem="oh9-r3-ssy" secondAttribute="top" constant="62" id="9GF-Ip-UNq"/>
+                                    <constraint firstAttribute="trailing" secondItem="qHh-ST-dpc" secondAttribute="trailing" constant="25" id="9gn-fv-7fo"/>
+                                    <constraint firstItem="bbF-7N-Iaa" firstAttribute="top" secondItem="oh9-r3-ssy" secondAttribute="top" id="Fuz-91-nek"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ihq-tW-5g9" secondAttribute="bottom" constant="20" id="Hu2-DH-fAz"/>
+                                    <constraint firstItem="qHh-ST-dpc" firstAttribute="top" secondItem="oh9-r3-ssy" secondAttribute="top" constant="48" id="NSD-Tw-Mxd"/>
+                                    <constraint firstItem="bbF-7N-Iaa" firstAttribute="leading" secondItem="oh9-r3-ssy" secondAttribute="leading" id="X6a-Ck-MPR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Yg6-5r-sPW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ihq-tW-5g9" secondAttribute="trailing" constant="20" id="YlM-g7-STy"/>
+                                    <constraint firstAttribute="trailing" secondItem="bbF-7N-Iaa" secondAttribute="trailing" id="eqf-MR-KXT"/>
+                                    <constraint firstItem="Ihq-tW-5g9" firstAttribute="leading" secondItem="oh9-r3-ssy" secondAttribute="leading" constant="20" id="qoT-KM-TQh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iYU-Vj-8WX"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oh9-r3-ssy" firstAttribute="leading" secondItem="iYU-Vj-8WX" secondAttribute="leading" constant="16" id="A87-7x-rgV"/>
+                            <constraint firstItem="dc2-ez-CSx" firstAttribute="leading" secondItem="iYU-Vj-8WX" secondAttribute="leading" constant="16" id="M28-cn-6Hb"/>
+                            <constraint firstItem="iYU-Vj-8WX" firstAttribute="trailing" secondItem="oh9-r3-ssy" secondAttribute="trailing" constant="16" id="TAN-Z1-Ztf"/>
+                            <constraint firstItem="iYU-Vj-8WX" firstAttribute="trailing" secondItem="dc2-ez-CSx" secondAttribute="trailing" constant="16" id="TSt-4n-YiN"/>
+                            <constraint firstItem="dc2-ez-CSx" firstAttribute="top" secondItem="oh9-r3-ssy" secondAttribute="bottom" constant="15" id="kwB-Gd-9Ux"/>
+                            <constraint firstItem="oh9-r3-ssy" firstAttribute="centerY" secondItem="iYU-Vj-8WX" secondAttribute="centerY" constant="-25" id="rq8-Go-Lcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="dc2-ez-CSx" id="eil-7i-hfP"/>
+                        <outlet property="hintBG" destination="oh9-r3-ssy" id="kdo-Ti-sKd"/>
+                        <outlet property="hintTextLabel" destination="Ihq-tW-5g9" id="ZCP-Wh-WyR"/>
+                        <outlet property="separatorHeight" destination="ieO-ug-x0K" id="wGJ-RI-9cQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVc-4F-QnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="2452"/>
         </scene>
     </scenes>
     <designables>
