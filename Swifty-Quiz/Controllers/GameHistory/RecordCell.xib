@@ -41,7 +41,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-bb-Hxu">
-                        <rect key="frame" x="220" y="37" width="100" height="14"/>
+                        <rect key="frame" x="212" y="37" width="100" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="Wsc-c0-Nq7"/>
                             <constraint firstAttribute="width" constant="100" id="r4f-Fk-81l"/>
@@ -52,9 +52,9 @@
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-Ie-Ogi">
-                        <rect key="frame" x="95" y="56" width="120" height="14"/>
+                        <rect key="frame" x="95" y="56" width="115" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="K3a-ZU-bRM"/>
+                            <constraint firstAttribute="width" constant="115" id="K3a-ZU-bRM"/>
                             <constraint firstAttribute="height" constant="14" id="cug-hL-yYS"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -63,7 +63,7 @@
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подсказки: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-rt-n09">
-                        <rect key="frame" x="220" y="56" width="100" height="14"/>
+                        <rect key="frame" x="212" y="56" width="100" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="4w8-5z-1UE"/>
                             <constraint firstAttribute="height" constant="14" id="RUC-Wh-U7q"/>
@@ -74,9 +74,9 @@
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysi-7y-8JZ">
-                        <rect key="frame" x="95" y="37.5" width="120" height="14"/>
+                        <rect key="frame" x="95" y="37.5" width="115" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="a5o-8N-M8O"/>
+                            <constraint firstAttribute="width" constant="115" id="a5o-8N-M8O"/>
                             <constraint firstAttribute="height" constant="14" id="ukg-kf-zJh"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -105,11 +105,11 @@
                     <constraint firstAttribute="trailing" secondItem="dio-AF-jQx" secondAttribute="trailing" constant="16" id="Ff9-5C-T0Q"/>
                     <constraint firstItem="dio-AF-jQx" firstAttribute="top" secondItem="0rP-Ie-Ogi" secondAttribute="bottom" constant="13" id="K3R-Om-Ank"/>
                     <constraint firstItem="dio-AF-jQx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="OP8-GU-sHw"/>
-                    <constraint firstItem="GBc-rt-n09" firstAttribute="leading" secondItem="0rP-Ie-Ogi" secondAttribute="trailing" constant="5" id="RL9-eX-nYY"/>
+                    <constraint firstItem="GBc-rt-n09" firstAttribute="leading" secondItem="0rP-Ie-Ogi" secondAttribute="trailing" constant="2" id="RL9-eX-nYY"/>
                     <constraint firstItem="FcE-xq-s4t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="SEo-j3-NUq"/>
                     <constraint firstItem="wKb-de-6E7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WWY-LO-E6R"/>
                     <constraint firstAttribute="bottom" secondItem="dio-AF-jQx" secondAttribute="bottom" id="YOl-wB-QxH"/>
-                    <constraint firstItem="YS0-bb-Hxu" firstAttribute="leading" secondItem="ysi-7y-8JZ" secondAttribute="trailing" constant="5" id="ZgR-fL-rqk"/>
+                    <constraint firstItem="YS0-bb-Hxu" firstAttribute="leading" secondItem="ysi-7y-8JZ" secondAttribute="trailing" constant="2" id="ZgR-fL-rqk"/>
                     <constraint firstAttribute="bottom" secondItem="wKb-de-6E7" secondAttribute="bottom" constant="10" id="bNR-Mz-nlw"/>
                     <constraint firstAttribute="trailing" secondItem="FcE-xq-s4t" secondAttribute="trailing" constant="17" id="cBH-HT-51U"/>
                     <constraint firstItem="FcE-xq-s4t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="95" id="dXm-oI-gmY"/>
@@ -130,6 +130,10 @@
                 <outlet property="scoreLabel" destination="YS0-bb-Hxu" id="3XN-fx-9xu"/>
                 <outlet property="topicLabel" destination="FcE-xq-s4t" id="FK5-au-iGZ"/>
                 <outlet property="totalQuestionLabel" destination="0rP-Ie-Ogi" id="u5b-Q3-aBj"/>
+                <outletCollection property="infoTitles" destination="ysi-7y-8JZ" collectionClass="NSMutableArray" id="pgJ-YH-FZl"/>
+                <outletCollection property="infoTitles" destination="0rP-Ie-Ogi" collectionClass="NSMutableArray" id="faH-Uy-cU9"/>
+                <outletCollection property="infoTitles" destination="YS0-bb-Hxu" collectionClass="NSMutableArray" id="Md5-1C-z1g"/>
+                <outletCollection property="infoTitles" destination="GBc-rt-n09" collectionClass="NSMutableArray" id="6sR-WO-9N6"/>
             </connections>
             <point key="canvasLocation" x="184.05797101449278" y="89.0625"/>
         </tableViewCell>

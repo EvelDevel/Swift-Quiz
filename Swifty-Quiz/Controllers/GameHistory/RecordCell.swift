@@ -14,11 +14,23 @@ class RecordCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var helpCounterLabel: UILabel!
     @IBOutlet weak var graySeparatorHeight: NSLayoutConstraint!
-    
+	@IBOutlet var infoTitles: [UILabel]!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
+		setInfoTitlesFontSize()
         graySeparatorHeight.constant = 1.0 / UIScreen.main.scale
     }
+	
+	func setInfoTitlesFontSize() {
+		let bounds = UIScreen.main.bounds.size.width
+		
+		if bounds <= 320 {
+			for title in infoTitles {
+				title.font = UIFont.systemFont(ofSize: 11.0, weight: .regular)
+			}
+		}
+	}
 	
 	var cellIndex: Int = 0 {
 		didSet {
