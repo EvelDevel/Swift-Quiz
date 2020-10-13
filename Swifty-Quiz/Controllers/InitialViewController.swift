@@ -148,7 +148,9 @@ extension InitialViewController {
 	/// Настройка адекватного расположения логотипа
 	/// В зависимости от размера экрана
 	func setUpCorrectLogoPosition() {
-		if view.frame.size.width <= 320 {
+		let width = UIScreen.main.bounds.size.width
+		
+		if width <= 320 {
 			/// SE-1
 			logoVerticalPosition.constant = 40
 			logoWidth.constant = 180
@@ -156,7 +158,7 @@ extension InitialViewController {
 			aboutButtonHeight.constant = 95
 			aboutButtonWidth.constant = 210
 			aboutButtonVerticalPosition.constant = 20
-		} else if view.frame.size.width <= 410 {
+		} else if width <= 410 {
 			/// 8, SE-2
 			logoVerticalPosition.constant = 55
 			logoWidth.constant = 200
@@ -164,7 +166,7 @@ extension InitialViewController {
 			aboutButtonHeight.constant = 105
 			aboutButtonWidth.constant = 240
 			aboutButtonVerticalPosition.constant = 55
-		} else if view.frame.size.width > 410 && view.frame.size.width < 500 {
+		} else if width > 410 && width < 500 {
 			/// 8+, 11, 7+, 11 Pro Max
 			logoVerticalPosition.constant = 90
 			logoWidth.constant = 220

@@ -97,7 +97,7 @@ extension RecordsViewController {
 }
 
 
-// MARK: Настройка таблицы и работа с ней
+// MARK: Настройка таблицы
 extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Регистрация ячейки
