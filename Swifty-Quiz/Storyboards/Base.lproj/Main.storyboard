@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92B-HM-6qy">
-                                <rect key="frame" x="16" y="276" width="288" height="40"/>
+                                <rect key="frame" x="16" y="219" width="288" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="40"/>
@@ -71,8 +71,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="author:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="GAx-4e-b96"/>
-                                            <action selector="author:" destination="849-ZK-r5e" eventType="touchUpInside" id="aI3-Ob-3qt"/>
+                                            <action selector="author:" destination="849-ZK-r5e" eventType="touchUpInside" id="GjP-kr-W87"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-yO-hFQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -89,7 +88,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="design:" destination="849-ZK-r5e" eventType="touchUpInside" id="LW4-9U-LVA"/>
-                                            <action selector="design:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="ogz-ke-p1W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-nK-7s4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -106,7 +104,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="corrector:" destination="849-ZK-r5e" eventType="touchUpInside" id="MeB-jT-dek"/>
-                                            <action selector="corrector:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="pVy-PP-dgP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -115,15 +112,15 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-sQ-Zj7">
-                                <rect key="frame" x="16" y="89" width="288" height="172"/>
-                                <string key="text">Это некоммерческое приложение, направленное на укрепление знаний по языку Swift у iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. После нажатия на кнопки ниже - вы будете перенаправлены на внешние ресурсы.</string>
+                                <rect key="frame" x="16" y="89" width="288" height="115"/>
+                                <string key="text">Мое приложение направленно на укрепление знаний по языку Swift у начинающих iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. </string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-Py-QwI">
-                                <rect key="frame" x="16" y="417" width="288" height="90"/>
+                                <rect key="frame" x="16" y="360" width="288" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-WO-fgw">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -158,7 +155,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="swiftbookRu:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="S8q-Gq-K6c"/>
-                                                    <action selector="swiftbookRu:" destination="849-ZK-r5e" eventType="touchUpInside" id="Zej-co-Jhl"/>
+                                                    <action selector="swiftbookRu:" destination="849-ZK-r5e" eventType="touchUpInside" id="VcS-uR-sfg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-Gn-Yrk" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -175,8 +172,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="swiftMe:" destination="849-ZK-r5e" eventType="touchUpInside" id="kDw-kD-P6n"/>
-                                                    <action selector="swiftbookRu:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="KxN-pe-9Vr"/>
-                                                    <action selector="swiftbookRu:" destination="849-ZK-r5e" eventType="touchUpInside" id="bg6-kk-R3M"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -211,7 +206,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Kn-E0Y">
-                                <rect key="frame" x="16" y="336" width="288" height="66"/>
+                                <rect key="frame" x="16" y="279" width="288" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="FXq-Kz-m6X"/>
                                 </constraints>

@@ -100,13 +100,13 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcE-xq-s4t">
-                        <rect key="frame" x="95" y="12" width="212" height="20.5"/>
+                        <rect key="frame" x="95" y="12" width="204" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dio-AF-jQx" userLabel="GraySeparator">
-                        <rect key="frame" x="90" y="83" width="218" height="1"/>
+                        <rect key="frame" x="90" y="83" width="210" height="1"/>
                         <color key="backgroundColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.29548373287671231" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="RnF-8s-UcM"/>
@@ -114,7 +114,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="F0I-PJ-Y6r" secondAttribute="trailing" constant="8" id="0Ab-NV-cmJ"/>
+                    <constraint firstAttribute="trailing" secondItem="F0I-PJ-Y6r" secondAttribute="trailing" id="0Ab-NV-cmJ"/>
                     <constraint firstItem="dio-AF-jQx" firstAttribute="top" secondItem="F0I-PJ-Y6r" secondAttribute="bottom" constant="13" id="5ZG-af-Ya4"/>
                     <constraint firstAttribute="trailing" secondItem="dio-AF-jQx" secondAttribute="trailing" constant="16" id="Ff9-5C-T0Q"/>
                     <constraint firstItem="dio-AF-jQx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="OP8-GU-sHw"/>

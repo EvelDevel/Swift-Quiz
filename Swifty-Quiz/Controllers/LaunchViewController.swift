@@ -27,7 +27,7 @@ class LaunchViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initial = mainStoryboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
-            initial.modalPresentationStyle = .fullScreen
+			initial.modalPresentationStyle = .overFullScreen
             self.present(initial, animated: true, completion: nil)
             SoundPlayer.shared.playSound(sound: .theAppIsLoading)
         }

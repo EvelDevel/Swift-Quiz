@@ -6,6 +6,7 @@ import UIKit
 
 protocol GameViewControllerDelegate: class {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
+	func showReviewRequest()
     func updateInitialView()
 }
 
@@ -70,6 +71,7 @@ class GameViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         if endGameFlag == false && currentQuestionIndex > 0 { gameEnding(path: 2) }
         delegate?.updateInitialView()
+		delegate?.showReviewRequest()
     }
 	
 	/// > 13.0 iOS Navigation settings
