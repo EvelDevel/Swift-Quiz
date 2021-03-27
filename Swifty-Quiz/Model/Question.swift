@@ -4,18 +4,16 @@
 
 import Foundation
 
-// MARK: Модель вопроса игры
 struct Question: Codable {
     
     let question: [String]  // Массив с формулировками вопроса
     let image: String       // Изображение для вопроса
-
-    /// Варианты ответа (4 варианта, вариативно может быть от 2 до 4)
-    /// Правильный ответ всегда в optionA
-    let optionA: String
-    let optionB: String
+    
+    let optionA: String     // Варианты ответа (4 варианта, вариативно может быть от 2 до 4)
+    let optionB: String     // Правильный ответ всегда в optionA
     let optionC: String
     let optionD: String
+    
     let questionId: Int     // Уникальный номер вопроса
     let helpText: String    // Теоретическая подсказка
 }

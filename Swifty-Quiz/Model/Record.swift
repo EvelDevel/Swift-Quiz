@@ -4,7 +4,6 @@
 
 import Foundation
 
-// MARK: Модель рекорда игры
 struct Record: Codable {
     
     var date: Date?                         // Дата

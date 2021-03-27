@@ -4,7 +4,6 @@
 
 import Foundation
 
-// MARK: Модель "Тема игры"
 struct Topic: Codable {
     
     var questionSet: [Question]         // Исходный сет вопросов

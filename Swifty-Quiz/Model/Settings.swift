@@ -4,7 +4,6 @@
 
 import Foundation
 
-// MARK: Модель "настройки"
 struct Settings: Codable {
     
     var questionOrder: Int          // Порядок вопросов
