@@ -14,7 +14,7 @@
 
 import UIKit
 
-protocol CategoriesCellDelegate: class {
+protocol CategoriesCellDelegate: AnyObject {
     func updateNumberOfQuestions()
     func showAlert()
 	func suggestQuestion(section: String)
@@ -24,20 +24,27 @@ class CategoriesCell: UITableViewCell {
     
     /// Коллекции кнопок, разбиты по разделам,
     /// Так не нужно переделывать один массив при каждом изменении любой кнопки
-    var allOutlets: [UIButton] = []
+    var allButtons: [UIButton] = []
+    
     @IBOutlet var superSets: [UIButton]!
     @IBOutlet var guideQuestions: [UIButton]!
     @IBOutlet var patternsQuestions: [UIButton]!
+    @IBOutlet var interfaceQuestions: [UIButton]!
+    @IBOutlet var testQuestions: [UIButton]!
+    
 	@IBOutlet weak var suggestQuestionGuide: UIButton!
 	@IBOutlet weak var suggestQuestionPatterns: UIButton!
-
+    @IBOutlet weak var suggestQuestionInterface: UIButton!
+    @IBOutlet weak var suggestQuestionTesting: UIButton!
+    
     weak var delegate: CategoriesCellDelegate?
+    
     private let shadows = ShadowsHelper()
     private var lastPosition = SelectedTopic.shared.topic.topicTag
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        unificationOfOutlets()
+        appendAllButtons()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
         addShadows()
@@ -63,14 +70,27 @@ class CategoriesCell: UITableViewCell {
     }
     
 	/// "Предложить вопрос"
-	@IBAction func suggestQuestionGuide(_ sender: Any) { delegate?.suggestQuestion(section: "Language Guide") }
-	@IBAction func suggestQuestionPatterns(_ sender: Any) { delegate?.suggestQuestion(section: "Patterns") }
+	@IBAction func suggestQuestionGuide(_ sender: Any) {
+        delegate?.suggestQuestion(section: "Language Guide")
+    }
+	@IBAction func suggestQuestionPatterns(_ sender: Any) {
+        delegate?.suggestQuestion(section: "Patterns")
+    }
+    @IBAction func suggestQuestionInterface(_ sender: Any) {
+        delegate?.suggestQuestion(section: "Interface")
+    }
+    @IBAction func suggestQuestionTesting(_ sender: Any) {
+        delegate?.suggestQuestion(section: "Testing")
+    }
+    
 
+    /// Корректного отображение плюсиков
 	func imageTuning() {
 		imageTuning(button: suggestQuestionGuide, position: .center)
 		imageTuning(button: suggestQuestionPatterns, position: .center)
+        imageTuning(button: suggestQuestionInterface, position: .center)
+        imageTuning(button: suggestQuestionTesting, position: .center)
 	}
-	/// Корректного отображение плюсиков
 	func imageTuning(button: UIButton, position: UIControl.ContentVerticalAlignment) {
 		button.imageView!.contentMode = .scaleAspectFit
 		button.contentVerticalAlignment = position
@@ -83,34 +103,32 @@ class CategoriesCell: UITableViewCell {
 extension CategoriesCell {
     
     /// Объединяем аутлеты в пачку
-    func unificationOfOutlets() {
-        allOutlets.append(contentsOf: superSets)
-        allOutlets.append(contentsOf: guideQuestions)
-        allOutlets.append(contentsOf: patternsQuestions)
+    func appendAllButtons() {
+        allButtons.append(contentsOf: superSets)
+        allButtons.append(contentsOf: guideQuestions)
+        allButtons.append(contentsOf: patternsQuestions)
+        allButtons.append(contentsOf: interfaceQuestions)
+        allButtons.append(contentsOf: testQuestions)
     }
     
     /// Добавляем тени кнопкам
-    /// - На некоторых экранах тень под кнопкой не ресайзится (7, XR, 6s, 8)
-    /// - DispatchQueue является решением данного бага в нашем случае
-    /// - https://stackoverflow.com/questions/49664951/shadow-effect-is-not-displaying-properly-for-uiview
     func addShadows() {
         DispatchQueue.main.async {
-            self.shadows.addTopicButtonShadows(self.allOutlets)
+            self.shadows.addTopicButtonShadows(self.allButtons)
         }
     }
     
     /// Рефреш кнопок
     func updateTopicButtons() {
-        allOutlets.forEach() { button in
+        allButtons.forEach() { button in
             button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
     
     /// Размер шрифта
-    /// Зависящий от размера экрана
     func setFontSize() {
-        allOutlets.forEach() { button in
+        allButtons.forEach() { button in
             if UIScreen.main.bounds.size.width > 320 { button.titleLabel?.font = .systemFont(ofSize: 12)
             } else { button.titleLabel?.font = .systemFont(ofSize: 10) }
         }
@@ -276,6 +294,18 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 40)
         
             
+            // MARK: INTERFACE
+        case 50:
+            newQuestionSet = TopicOperator.getQuestionsUI()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Auto Layout", tag: 50)
+            
+            
+            // MARK: TESTING
+        case 60:
+            newQuestionSet = TopicOperator.getQuestionsTesting()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Test Driven Development", tag: 60)
+            
+            
         default:
             /// Последнюю выбранную категорию делаем "активной"
             switch position {
@@ -285,6 +315,10 @@ extension CategoriesCell {
                 guideQuestions[position-10].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             case 36...40:
                 patternsQuestions[position-36].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 50...59:
+                interfaceQuestions[position-50].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 60...69:
+                testQuestions[position-60].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             default:
                 print("default case in addQuestionsToArray() in CategoriesCell")
             }

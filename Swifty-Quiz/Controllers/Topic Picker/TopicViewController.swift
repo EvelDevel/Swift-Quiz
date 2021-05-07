@@ -5,7 +5,7 @@
 import UIKit
 import MessageUI
 
-protocol TopicViewControllerDelegate: class {
+protocol TopicViewControllerDelegate: AnyObject {
 	func selectedCategory()
 	func updateInitialView()
 }
@@ -17,7 +17,8 @@ class TopicViewController: UIViewController {
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var numberOfQuestions: UILabel!
 	@IBOutlet weak var tableView: UITableView!
-	weak var delegate: TopicViewControllerDelegate?
+	
+    weak var delegate: TopicViewControllerDelegate?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,15 +26,12 @@ class TopicViewController: UIViewController {
 		setDefaultNumberOfQuestions()
 	}
 	
-	/// Обновляем выбранную категорию моментально
 	override func viewWillDisappear(_ animated: Bool) {
 		delegate?.selectedCategory()
-		/// Сохраняем текущую версию при смене категории (на всякий случай, для отслеживания обновлений)
 		let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
 		Game.shared.saveAppVersion(version: currentAppVersion)
 	}
 
-	/// Обновляем (убираем) кнопку "продолжить" при смене темы с задержкой
 	override func viewDidDisappear(_ animated: Bool) {
 		delegate?.updateInitialView()
 	}

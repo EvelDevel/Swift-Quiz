@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol RecordsViewControllerDelegate: class {
+protocol RecordsViewControllerDelegate: AnyObject {
     func updateInitialView()
 	func refreshLastGameInfo()
 }

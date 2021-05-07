@@ -86,4 +86,11 @@ class TopicOperator {
     // Поведенческие и аннтипаттерны
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
+    
+    
+    // MARK: UI
+    static func getQuestionsUI() -> [Question] { return AutoLayoutSet.getQuestions() }
+    
+    // MARK: TESTING
+    static func getQuestionsTesting() -> [Question] { return TestDrivenDevelopmentSet.getQuestions() }
 }

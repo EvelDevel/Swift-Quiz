@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol GameViewControllerDelegate: class {
+protocol GameViewControllerDelegate: AnyObject {
     func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
 	func showReviewRequest()
     func updateInitialView()

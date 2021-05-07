@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol HelpViewControllerDelegate: class {
+protocol HelpViewControllerDelegate: AnyObject {
     func updateAfterHelp()
     func refreshTappedAnswerStatus()
 }

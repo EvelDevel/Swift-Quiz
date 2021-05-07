@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol GameHistoryCellDelegate: class {
+protocol GameHistoryCellDelegate: AnyObject {
 	func showHint(index: Int)
 }
 

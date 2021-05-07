@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol SettingCellDelegate: class {
+protocol SettingCellDelegate: AnyObject {
     func showInformationAlert(_ title: String, _ message: String)
 }
 
