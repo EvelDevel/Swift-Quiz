@@ -89,8 +89,8 @@ class TopicOperator {
     
     
     // MARK: UI
-    static func getQuestionsUI() -> [Question] { return AutoLayoutSet.getQuestions() }
+    static func getQuestionsAutoLayout() -> [Question] { return AutoLayoutSet.getQuestions() }
     
     // MARK: TESTING
-    static func getQuestionsTesting() -> [Question] { return TestDrivenDevelopmentSet.getQuestions() }
+    static func getQuestionsTDD() -> [Question] { return TestDrivenDevelopmentSet.getQuestions() }
 }

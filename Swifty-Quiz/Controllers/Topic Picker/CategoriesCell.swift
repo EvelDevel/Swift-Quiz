@@ -296,13 +296,13 @@ extension CategoriesCell {
             
             // MARK: INTERFACE
         case 50:
-            newQuestionSet = TopicOperator.getQuestionsUI()
+            newQuestionSet = TopicOperator.getQuestionsAutoLayout()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Auto Layout", tag: 50)
             
             
             // MARK: TESTING
         case 60:
-            newQuestionSet = TopicOperator.getQuestionsTesting()
+            newQuestionSet = TopicOperator.getQuestionsTDD()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Test Driven Development", tag: 60)
             
             

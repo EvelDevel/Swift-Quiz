@@ -15,6 +15,8 @@ class RandomSetManager {
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []
+    private static var interface: [Question] = []
+    private static var testing: [Question] = []
 	
 	// Получить общее количество всех вопросов
 	static func showAllQuestionsNumber() -> Int {
@@ -32,6 +34,8 @@ class RandomSetManager {
 		if all.isEmpty {
 			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
 			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
+            all.append(contentsOf: RandomSetManager.setAndGetUIQuestions())
+            all.append(contentsOf: RandomSetManager.setAndGetTestingQuestions())
 		}
 		return all
 	}
@@ -66,7 +70,6 @@ class RandomSetManager {
 			guide.append(contentsOf: MemorySafetySet.getQuestions())
 			guide.append(contentsOf: AdvancedOperatorsSet.getQuestions())
 		}
-		
 		return guide
 	}
 	
@@ -79,9 +82,24 @@ class RandomSetManager {
 			patterns.append(contentsOf: BehavioralPatternsSet.getQuestions())
 			patterns.append(contentsOf: AntipatternsSet.getQuestions())
 		}
-		
 		return patterns
 	}
+    
+    // Получить массив всех вопросов по интерфейсу
+    static func setAndGetUIQuestions() -> [Question] {
+        if interface.isEmpty {
+            interface.append(contentsOf: AutoLayoutSet.getQuestions())
+        }
+        return interface
+    }
+    
+    // Получить массив всех вопросов по тестированию
+    static func setAndGetTestingQuestions() -> [Question] {
+        if testing.isEmpty {
+            testing.append(contentsOf: TestDrivenDevelopmentSet.getQuestions())
+        }
+        return testing
+    }
 	
 	// Формируем пачки случайных вопросов
 	static func getQuestions(_ limit: Int, _ type: RandomType) -> [Question] {
@@ -89,15 +107,19 @@ class RandomSetManager {
 		var toReturn: [Question] = []
 		
 		switch type {
-		case .all: 		shuffled = all.isEmpty ? setAndGetAllQuestions().shuffled() : all.shuffled()
-		case .guide: 	shuffled = guide.isEmpty ? setAndGetGuideQuestions().shuffled() : guide.shuffled()
-		case .patterns: shuffled = patterns.isEmpty ? setAndGetPatternsQuestions().shuffled() : patterns.shuffled()
+		case .all:
+            shuffled = all.isEmpty ? setAndGetAllQuestions().shuffled() : all.shuffled()
+		
+        case .guide:
+            shuffled = guide.isEmpty ? setAndGetGuideQuestions().shuffled() : guide.shuffled()
+		
+        case .patterns:
+            shuffled = patterns.isEmpty ? setAndGetPatternsQuestions().shuffled() : patterns.shuffled()
 		}
 		
 		for index in 0..<limit {
 			toReturn.append(shuffled[index])
 		}
-		
 		return toReturn
 	}
 }
