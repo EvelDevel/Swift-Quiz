@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="1107" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1107"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="777" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="777"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="1107"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="777"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подборки вопросов" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
-                        <rect key="frame" x="16" y="15" width="159.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разные подборки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
+                        <rect key="frame" x="16" y="15" width="140" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Mye-XD-PCD"/>
                         </constraints>
@@ -794,158 +794,30 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ANI-de-S5G" userLabel="Interface">
-                        <rect key="frame" x="20" y="751" width="280" height="63"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="geV-aj-4z7" userLabel="Patterns-Suggestion">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Интерфейс" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqN-tJ-qXD" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9R-ha-Qx2">
-                                        <rect key="frame" x="100" y="0.0" width="180" height="30"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="160" minY="6" maxX="0.0" maxY="6"/>
-                                        <state key="normal" image="PlusCircle">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
-                                        </state>
-                                        <state key="highlighted" image="PlusCircleFill"/>
-                                        <connections>
-                                            <action selector="suggestQuestionInterface:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tT2-dO-0Zh"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qWN-e3-2bc"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GQW-HH-j2t" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="39" width="280" height="24"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-0W-uBi" userLabel="01 Row">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-5E-p9y" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Auto Layout">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="9"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Anq-Wo-N12"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="9Pz-2b-nBi"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                    </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-0g-Ci4" userLabel="Testing">
-                        <rect key="frame" x="20" y="834" width="280" height="69"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-Xu-t4u" userLabel="Patterns-Suggestion">
-                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тестирование" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-Gm-AGm" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGL-Ld-iUb">
-                                        <rect key="frame" x="122" y="0.0" width="158" height="30"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="140" minY="6" maxX="0.0" maxY="6"/>
-                                        <state key="normal" image="PlusCircle">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
-                                        </state>
-                                        <state key="highlighted" image="PlusCircleFill"/>
-                                        <connections>
-                                            <action selector="suggestQuestionTesting:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FKJ-SC-7lG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Hh1-dO-5Hi"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nzF-S8-4dy" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="39" width="280" height="30"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="onF-Hy-18n" userLabel="01 Row">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRX-OS-tyx" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Test Driven Development">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="9"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0al-Jn-XnT"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="iQK-s7-sIy"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                    </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Nb-Hc-BOM"/>
                     <constraint firstItem="ACn-p5-cdl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="46t-jq-ymH"/>
-                    <constraint firstItem="xBR-0g-Ci4" firstAttribute="top" secondItem="ANI-de-S5G" secondAttribute="bottom" constant="20" id="96R-wC-Gcc"/>
                     <constraint firstItem="A35-uV-IEt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9dF-uu-xhO"/>
                     <constraint firstItem="A35-uV-IEt" firstAttribute="top" secondItem="ACn-p5-cdl" secondAttribute="bottom" constant="25" id="9kI-OH-cMg"/>
-                    <constraint firstItem="ANI-de-S5G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CI2-a3-cFV"/>
-                    <constraint firstAttribute="trailing" secondItem="xBR-0g-Ci4" secondAttribute="trailing" constant="20" id="KXq-Vu-ze5"/>
-                    <constraint firstItem="ANI-de-S5G" firstAttribute="top" secondItem="EkM-3J-uz3" secondAttribute="bottom" constant="20" id="Kdr-nT-6kK"/>
                     <constraint firstAttribute="trailing" secondItem="EkM-3J-uz3" secondAttribute="trailing" constant="20" id="Mgb-4E-2cC"/>
+                    <constraint firstAttribute="bottom" secondItem="EkM-3J-uz3" secondAttribute="bottom" constant="25" id="OmX-ey-kFu"/>
                     <constraint firstItem="EkM-3J-uz3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="PD4-Qs-zQm"/>
                     <constraint firstItem="tUx-lF-pbh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="R4x-dl-6Oi"/>
                     <constraint firstItem="tUx-lF-pbh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="T2Y-w1-kDk"/>
                     <constraint firstAttribute="trailing" secondItem="ACn-p5-cdl" secondAttribute="trailing" constant="16" id="TdG-eq-yav"/>
-                    <constraint firstItem="xBR-0g-Ci4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UHH-t6-594"/>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="A35-uV-IEt" secondAttribute="bottom" constant="10" id="XZh-ab-H0W"/>
-                    <constraint firstAttribute="trailing" secondItem="ANI-de-S5G" secondAttribute="trailing" constant="20" id="aMd-XY-fpT"/>
                     <constraint firstItem="EkM-3J-uz3" firstAttribute="top" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="25" id="diI-nM-zar"/>
                     <constraint firstItem="ACn-p5-cdl" firstAttribute="top" secondItem="tUx-lF-pbh" secondAttribute="bottom" constant="20" id="g5J-4M-K4G"/>
                     <constraint firstAttribute="trailing" secondItem="d0p-ZD-gEa" secondAttribute="trailing" constant="16" id="jgA-Kn-7V8"/>
                     <constraint firstAttribute="trailing" secondItem="A35-uV-IEt" secondAttribute="trailing" constant="16" id="jrH-TK-bue"/>
-                    <constraint firstAttribute="bottom" secondItem="xBR-0g-Ci4" secondAttribute="bottom" constant="50" id="wyo-ti-DJh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="suggestQuestionGuide" destination="KwJ-YO-tgt" id="vdT-mg-dfY"/>
-                <outlet property="suggestQuestionInterface" destination="L9R-ha-Qx2" id="XGD-Bp-CZc"/>
                 <outlet property="suggestQuestionPatterns" destination="CvN-jI-gWd" id="TtE-e2-MTv"/>
-                <outlet property="suggestQuestionTesting" destination="EGL-Ld-iUb" id="HzP-vi-76x"/>
                 <outletCollection property="guideQuestions" destination="wcJ-TJ-Cn5" collectionClass="NSMutableArray" id="S3A-cU-eD2"/>
                 <outletCollection property="guideQuestions" destination="fTQ-Ap-1US" collectionClass="NSMutableArray" id="YJP-Rr-zDd"/>
                 <outletCollection property="guideQuestions" destination="ia1-P9-vXa" collectionClass="NSMutableArray" id="xbK-jT-6Gg"/>
@@ -982,10 +854,8 @@
                 <outletCollection property="patternsQuestions" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="UE1-kT-2VQ"/>
                 <outletCollection property="patternsQuestions" destination="1EE-qQ-BEr" collectionClass="NSMutableArray" id="rwH-FH-LZZ"/>
                 <outletCollection property="patternsQuestions" destination="xEj-kX-loM" collectionClass="NSMutableArray" id="GIz-wA-3Vj"/>
-                <outletCollection property="interfaceQuestions" destination="juQ-5E-p9y" collectionClass="NSMutableArray" id="s0i-Gx-f67"/>
-                <outletCollection property="testQuestions" destination="lRX-OS-tyx" collectionClass="NSMutableArray" id="evm-IA-mEF"/>
             </connections>
-            <point key="canvasLocation" x="-178.2608695652174" y="294.97767857142856"/>
+            <point key="canvasLocation" x="-178.2608695652174" y="184.48660714285714"/>
         </tableViewCell>
     </objects>
     <designables>
@@ -1066,12 +936,6 @@
         </designable>
         <designable name="jet-al-ahe">
             <size key="intrinsicContentSize" width="120" height="24"/>
-        </designable>
-        <designable name="juQ-5E-p9y">
-            <size key="intrinsicContentSize" width="58" height="24"/>
-        </designable>
-        <designable name="lRX-OS-tyx">
-            <size key="intrinsicContentSize" width="121" height="24"/>
         </designable>
         <designable name="qoY-Nu-I1Z">
             <size key="intrinsicContentSize" width="94" height="24"/>

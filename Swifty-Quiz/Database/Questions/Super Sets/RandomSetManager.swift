@@ -34,8 +34,6 @@ class RandomSetManager {
 		if all.isEmpty {
 			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
 			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
-            all.append(contentsOf: RandomSetManager.setAndGetUIQuestions())
-            all.append(contentsOf: RandomSetManager.setAndGetTestingQuestions())
 		}
 		return all
 	}
@@ -85,22 +83,6 @@ class RandomSetManager {
 		return patterns
 	}
     
-    // Получить массив всех вопросов по интерфейсу
-    static func setAndGetUIQuestions() -> [Question] {
-        if interface.isEmpty {
-            interface.append(contentsOf: AutoLayoutSet.getQuestions())
-        }
-        return interface
-    }
-    
-    // Получить массив всех вопросов по тестированию
-    static func setAndGetTestingQuestions() -> [Question] {
-        if testing.isEmpty {
-            testing.append(contentsOf: TestDrivenDevelopmentSet.getQuestions())
-        }
-        return testing
-    }
-	
 	// Формируем пачки случайных вопросов
 	static func getQuestions(_ limit: Int, _ type: RandomType) -> [Question] {
 		var shuffled: [Question] = []
