@@ -86,4 +86,8 @@ class TopicOperator {
     // Поведенческие и аннтипаттерны
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
+    
+    
+    // MARK: OTHER
+    static func getQuestionsExtremeProgramming() -> [Question] { return ExtremeProgrammingSet.getQuestions() }
 }

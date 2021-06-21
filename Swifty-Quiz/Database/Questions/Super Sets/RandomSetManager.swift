@@ -8,6 +8,7 @@ enum RandomType {
 	case all
 	case patterns
 	case guide
+    case others
 }
 
 class RandomSetManager {
@@ -15,8 +16,7 @@ class RandomSetManager {
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []
-    private static var interface: [Question] = []
-    private static var testing: [Question] = []
+    private static var others: [Question] = []
 	
 	// Получить общее количество всех вопросов
 	static func showAllQuestionsNumber() -> Int {
@@ -34,6 +34,7 @@ class RandomSetManager {
 		if all.isEmpty {
 			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
 			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
+            all.append(contentsOf: RandomSetManager.setAndGetOtherQuestions())
 		}
 		return all
 	}
@@ -83,6 +84,14 @@ class RandomSetManager {
 		return patterns
 	}
     
+    // Получить массив всех вопросов по Разному
+    static func setAndGetOtherQuestions() -> [Question] {
+        if others.isEmpty {
+            others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
+        }
+        return others
+    }
+    
 	// Формируем пачки случайных вопросов
 	static func getQuestions(_ limit: Int, _ type: RandomType) -> [Question] {
 		var shuffled: [Question] = []
@@ -97,8 +106,11 @@ class RandomSetManager {
 		
         case .patterns:
             shuffled = patterns.isEmpty ? setAndGetPatternsQuestions().shuffled() : patterns.shuffled()
-		}
-		
+        
+        case .others:
+            shuffled = others.isEmpty ? setAndGetOtherQuestions().shuffled() : others.shuffled()
+        }
+        
 		for index in 0..<limit {
 			toReturn.append(shuffled[index])
 		}

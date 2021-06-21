@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1CC8312680408800C9F09E /* ExtremeProgrammingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */; };
 		FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* RandomSetManager.swift */; };
 		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
@@ -91,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremeProgrammingSet.swift; sourceTree = "<group>"; };
 		FB0B96A125262192006C986D /* RandomSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSetManager.swift; sourceTree = "<group>"; };
 		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
@@ -187,6 +189,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C85725726803F5C00642E74 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		FB0E0290246CF334005CA792 /* GameHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 				FBB4405324991BD700D88937 /* Super Sets */,
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
+				2C85725726803F5C00642E74 /* Other */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -680,6 +691,7 @@
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,
+				2C1CC8312680408800C9F09E /* ExtremeProgrammingSet.swift in Sources */,
 				FB8606B224445E0600A692AD /* RecordsCaretaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

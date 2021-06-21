@@ -29,9 +29,11 @@ class CategoriesCell: UITableViewCell {
     @IBOutlet var superSets: [UIButton]!
     @IBOutlet var guideQuestions: [UIButton]!
     @IBOutlet var patternsQuestions: [UIButton]!
+    @IBOutlet var otherQuestions: [UIButton]!
     
 	@IBOutlet weak var suggestQuestionGuide: UIButton!
 	@IBOutlet weak var suggestQuestionPatterns: UIButton!
+    @IBOutlet weak var suggestQuestionOthers: UIButton!
     
     weak var delegate: CategoriesCellDelegate?
     
@@ -72,12 +74,16 @@ class CategoriesCell: UITableViewCell {
 	@IBAction func suggestQuestionPatterns(_ sender: Any) {
         delegate?.suggestQuestion(section: "Patterns")
     }
+    @IBAction func suggestQuestionOthers(_ sender: Any) {
+        delegate?.suggestQuestion(section: "Others")
+    }
     
 
     /// Корректного отображение плюсиков
 	func imageTuning() {
 		imageTuning(button: suggestQuestionGuide, position: .center)
 		imageTuning(button: suggestQuestionPatterns, position: .center)
+        imageTuning(button: suggestQuestionOthers, position: .center)
 	}
 	func imageTuning(button: UIButton, position: UIControl.ContentVerticalAlignment) {
 		button.imageView!.contentMode = .scaleAspectFit
@@ -95,6 +101,7 @@ extension CategoriesCell {
         allButtons.append(contentsOf: superSets)
         allButtons.append(contentsOf: guideQuestions)
         allButtons.append(contentsOf: patternsQuestions)
+        allButtons.append(contentsOf: otherQuestions)
     }
     
     /// Добавляем тени кнопкам
@@ -279,6 +286,12 @@ extension CategoriesCell {
             newQuestionSet = TopicOperator.getQuestionsAntipatterns()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 40)
         
+            
+        // MARK: OTHER
+        case 50:
+            newQuestionSet = TopicOperator.getQuestionsExtremeProgramming()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Экстремальное программированиее", tag: 49)
+            
         default:
             /// Последнюю выбранную категорию делаем "активной"
             switch position {
@@ -288,6 +301,8 @@ extension CategoriesCell {
                 guideQuestions[position-10].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             case 36...40:
                 patternsQuestions[position-36].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 49...60:
+                otherQuestions[position-49].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             
             default:
                 print("default case in addQuestionsToArray() in CategoriesCell")
