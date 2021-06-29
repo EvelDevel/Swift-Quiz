@@ -104,7 +104,7 @@ extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
         
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["hello@swifty-quiz.online"])
+        composer.setToRecipients(["hello@swifty-quiz.ru"])
         composer.setSubject("Вопрос №\(id)")
         composer.setMessageBody("Обнаружил(а) ошибку с вопросом №\(id), она заключается в следующем: ", isHTML: false)
         present(composer, animated: true)
