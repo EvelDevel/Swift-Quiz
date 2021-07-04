@@ -63,7 +63,7 @@ extension InitialViewController {
 	/// Загружаем дефолтный сет
 	func setStartQuestionSet() {
 		if SelectedTopic.shared.topic.questionSet.isEmpty || Game.shared.settings.appLastVersion != currentAppVersion {
-			let newSet = TopicOperator.getQuestionsTheBasics()
+			let newSet = TopicOperator.getTheBasics()
 			SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 10)
 			selectedTopic.text = "Основы"
 			Game.shared.changeContinueStatus()
