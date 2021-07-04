@@ -17,73 +17,66 @@ class TopicOperator {
     
     
     // MARK: THE BASICS
-    // MARK: 01 row
-    // Основы, Операторы, Строки и символы
-    static func getQuestionsTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }
-    static func getQuestionsBasicOperators() -> [Question] { return BasicOperatorsSet.getQuestions() }
-    static func getQuestionsStringAndCharacters() -> [Question] { return StringAndCharactersSet.getQuestions() }
     
-    // MARK: 02 row
-    // Коллекции, Управление потоком
-    static func getQuestionsCollectionTypes() -> [Question] { return CollectionTypesSet.getQuestions() }
-    static func getQuestionsControlFlow() -> [Question] { return ControlFlowSet.getQuestions() }
+    static func getTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }
+    static func getIntegers() -> [Question] { return IntegersSet.getQuestions() }
+    static func getBooleans() -> [Question] { return BooleansSet.getQuestions() }
     
-    // MARK: 03 row
-    // Функции, Замыкания, Перечисления
-    static func getQuestionsFunctions() -> [Question] { return FunctionsSet.getQuestions() }
-    static func getQuestionsClosures() -> [Question] { return ClosuresSet.getQuestions() }
-    static func getQuestionsEnums() -> [Question] { return EnumerationsSet.getQuestions() }
+    static func getBasicOperators() -> [Question] { return BasicOperatorsSet.getQuestions() }
+    static func getRangeOperators() -> [Question] { return RangeOperatorsSet.getQuestions() }
     
-    // MARK: 04 row
-    // Структуры и классы, Свойства, Методы
-    static func getQuestionsStructuresAndClasses() -> [Question] { return StructuresAndClassesSet.getQuestions() }
-    static func getQuestionsProperties() -> [Question] { return PropertiesSet.getQuestions() }
-    static func getQuestionsMethods() -> [Question] { return MethodsSet.getQuestions() }
+    static func getBooleanOperators() -> [Question] { return BooleanOperatorsSet.getQuestions() }
+    static func getStringAndCharacters() -> [Question] { return StringAndCharactersSet.getQuestions() }
     
-    // MARK: 05 row
-    // Сабскрипты, Наследование, Инициализация
-    static func getQuestionsSubscripts() -> [Question] { return SubscriptsSet.getQuestions() }
-    static func getQuestionsInheritance() -> [Question] { return InheritanceSet.getQuestions() }
-    static func getQuestionsInitialization() -> [Question] { return InitializationSet.getQuestions() }
+    static func getCollections() -> [Question] { return CollectionsSet.getQuestions() }
+    static func getSets() -> [Question] { return SetsSet.getQuestions() }
+    static func getDictionaries() -> [Question] { return DictionariesSet.getQuestions() }
     
-    // MARK: 06 row
-    // Деинициализация, Обработка ошибок
-    static func getQuestionsDeinitialization() -> [Question] { return DeinitializationSet.getQuestions() }
-    static func getQuestionsErrorHandling() -> [Question] { return ErrorHandlingSet.getQuestions() }
+    static func getTuples() -> [Question] { return TuplesSet.getQuestions() }
+    static func getControlFlow() -> [Question] { return ControlFlowSet.getQuestions() }
+
+    static func getOptionalTypes() -> [Question] { return OptionalTypesSet.getQuestions() }
+    static func getFunctions() -> [Question] { return FunctionsSet.getQuestions() }
+    static func getClosures() -> [Question] { return ClosuresSet.getQuestions() }
     
-    // MARK: 07 row
-    // Опциональное связывание, ARC - Автоматический подсчет ссылок
-    static func getQuestionsOptionalChaining() -> [Question] { return OptionalChainingSet.getQuestions() }
-    static func getQuestionsARC() -> [Question] { return ARCSet.getQuestions() }
+    static func getEnums() -> [Question] { return EnumerationsSet.getQuestions() }
+    static func getStructuresAndClasses() -> [Question] { return StructuresAndClassesSet.getQuestions() }
+    static func getProperties() -> [Question] { return PropertiesSet.getQuestions() }
     
-    // MARK: 08 row
-    // Приведение типов, Вложенные типы
-    static func getQuestionsTypeCasting() -> [Question] { return TypeCastingSet.getQuestions() }
-    static func getQuestionsNestedTypes() -> [Question] { return NestedTypesSet.getQuestions() }
+    static func getMethods() -> [Question] { return MethodsSet.getQuestions() }
+    static func getSubscripts() -> [Question] { return SubscriptsSet.getQuestions() }
+    static func getInheritance() -> [Question] { return InheritanceSet.getQuestions() }
     
-    // MARK: 09 row
-    // Расширения, Шаблоны
-    static func getQuestionsExtensions() -> [Question] { return ExtensionsSet.getQuestions() }
-    static func getQuestionsGenerics() -> [Question] { return GenericsSet.getQuestions() }
+    static func getInitialization() -> [Question] { return InitializationSet.getQuestions() }
+    static func getDeinitialization() -> [Question] { return DeinitializationSet.getQuestions() }
     
-    // MARK: 10 row
-    // Протоколы, Контроль доступа
-    static func getQuestionsProtocols() -> [Question] { return ProtocolsSet.getQuestions() }
-    static func getQuestionsAccessControl() -> [Question] { return AccessControlSet.getQuestions() }
+    static func getErrorHandling() -> [Question] { return ErrorHandlingSet.getQuestions() }
+    static func getConcurrency() -> [Question] { return ConcurrencySet.getQuestions() }
     
-    // MARK: 11 row
-    // Безопасность хранения, Продвинутые операторы
-    static func getQuestionsMemorySafety() -> [Question] { return MemorySafetySet.getQuestions() }
-    static func getQuestionsAdvancedOperators() -> [Question] { return AdvancedOperatorsSet.getQuestions() }
+    static func getOptionalChaining() -> [Question] { return OptionalChainingSet.getQuestions() }
+    static func getARC() -> [Question] { return ARCSet.getQuestions() }
+    
+    static func getTypeCasting() -> [Question] { return TypeCastingSet.getQuestions() }
+    static func getNestedTypes() -> [Question] { return NestedTypesSet.getQuestions() }
+    
+    static func getExtensions() -> [Question] { return ExtensionsSet.getQuestions() }
+    static func getOpaqueTypes() -> [Question] { return OpaqueTypeSet.getQuestions() }
+    
+    static func getGenerics() -> [Question] { return GenericsSet.getQuestions() }
+    static func getProtocols() -> [Question] { return ProtocolsSet.getQuestions() }
+    
+    static func getAccessControl() -> [Question] { return AccessControlSet.getQuestions() }
+    static func getMemorySafety() -> [Question] { return MemorySafetySet.getQuestions() }
+    
+    static func getAdvancedOperators() -> [Question] { return AdvancedOperatorsSet.getQuestions() }
     
     
     // MARK: PATTERNS
-    // Порождающие и структурные паттерны
+   
     static func getQuestionsBasicsAboutPatterns() -> [Question] { return BasicsAboutPatternsSet.getQuestions() }  
     static func getQuestionsCreationalPatterns() -> [Question] { return CreationalPatternsSet.getQuestions() }  
     static func getQuestionsStructuralPatterns() -> [Question] { return StructuralPatternsSet.getQuestions() }
     
-    // Поведенческие и аннтипаттерны
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
     

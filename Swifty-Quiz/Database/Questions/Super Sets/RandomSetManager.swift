@@ -43,28 +43,48 @@ class RandomSetManager {
 	static func setAndGetGuideQuestions() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
+            guide.append(contentsOf: IntegersSet.getQuestions())
+            guide.append(contentsOf: BooleansSet.getQuestions())
+            
 			guide.append(contentsOf: BasicOperatorsSet.getQuestions())
+            guide.append(contentsOf: RangeOperatorsSet.getQuestions())
+            guide.append(contentsOf: BooleanOperatorsSet.getQuestions())
+            
 			guide.append(contentsOf: StringAndCharactersSet.getQuestions())
-			guide.append(contentsOf: CollectionTypesSet.getQuestions())
+			guide.append(contentsOf: CollectionsSet.getQuestions())
+            guide.append(contentsOf: SetsSet.getQuestions())
+            guide.append(contentsOf: DictionariesSet.getQuestions())
+            
+            guide.append(contentsOf: TuplesSet.getQuestions())
 			guide.append(contentsOf: ControlFlowSet.getQuestions())
+            guide.append(contentsOf: OptionalTypesSet.getQuestions())
+            
 			guide.append(contentsOf: FunctionsSet.getQuestions())
 			guide.append(contentsOf: ClosuresSet.getQuestions())
 			guide.append(contentsOf: EnumerationsSet.getQuestions())
+            
 			guide.append(contentsOf: StructuresAndClassesSet.getQuestions())
 			guide.append(contentsOf: PropertiesSet.getQuestions())
 			guide.append(contentsOf: MethodsSet.getQuestions())
+            
 			guide.append(contentsOf: SubscriptsSet.getQuestions())
 			guide.append(contentsOf: InheritanceSet.getQuestions())
 			guide.append(contentsOf: InitializationSet.getQuestions())
+            
 			guide.append(contentsOf: DeinitializationSet.getQuestions())
 			guide.append(contentsOf: ErrorHandlingSet.getQuestions())
+            guide.append(contentsOf: ConcurrencySet.getQuestions())
 			guide.append(contentsOf: OptionalChainingSet.getQuestions())
+            
 			guide.append(contentsOf: ARCSet.getQuestions())
 			guide.append(contentsOf: TypeCastingSet.getQuestions())
 			guide.append(contentsOf: NestedTypesSet.getQuestions())
+            
 			guide.append(contentsOf: ExtensionsSet.getQuestions())
+            guide.append(contentsOf: OpaqueTypeSet.getQuestions())
 			guide.append(contentsOf: GenericsSet.getQuestions())
 			guide.append(contentsOf: ProtocolsSet.getQuestions())
+            
 			guide.append(contentsOf: AccessControlSet.getQuestions())
 			guide.append(contentsOf: MemorySafetySet.getQuestions())
 			guide.append(contentsOf: AdvancedOperatorsSet.getQuestions())
