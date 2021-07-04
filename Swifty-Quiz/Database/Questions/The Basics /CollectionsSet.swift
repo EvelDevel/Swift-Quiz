@@ -6,7 +6,7 @@ import Foundation
 
 // MARK: 04 - Вопросы (id) с 301 по 400
 
-class CollectionTypesSet {
+class CollectionsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Сколько основных типов коллекций обеспечивает Swift?",
