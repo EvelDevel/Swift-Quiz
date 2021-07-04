@@ -122,7 +122,7 @@ extension CategoriesCell {
     /// Размер шрифта
     func setFontSize() {
         allButtons.forEach() { button in
-            if UIScreen.main.bounds.size.width > 320 { button.titleLabel?.font = .systemFont(ofSize: 12)
+            if UIScreen.main.bounds.size.width > 320 { button.titleLabel?.font = .systemFont(ofSize: 11)
             } else { button.titleLabel?.font = .systemFont(ofSize: 10) }
         }
     }
@@ -134,17 +134,15 @@ extension CategoriesCell {
     
     /// Загружаем пачку вопросов в наш синглтон массив по нажатию на тему
     func addQuestionsToArray(sender: UIButton) {
-        var newQuestionSet: [Question] = SelectedTopic.shared.topic.questionSet
+        var newQuestionSet: [Question] = []
         let position = SelectedTopic.shared.topic.topicTag
         
         switch sender.tag {
-            
-            // MARK: SUPER SETS
-            
-        // MARK: 01 row
-        /// При добавлении новых сетов со подборками случайных вопросов
+
+        /// При добавлении новых сетов с подборками случайных вопросов
         /// Добавлять рефреш в refreshRandomSets() внутри GameViewController
-        /// Это обновляет сет, когда мы доиграли сет, чтобы после завершения не играть его снова
+        /// Это обновляет случайный сет, когда мы его доиграли (чтобы не играть его снова)
+        
         case 1:
             newQuestionSet = TopicOperator.getRandom20()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "20 случайных вопросов", tag: 0)
@@ -162,133 +160,171 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "20 вопросов по Паттернам", tag: 4)
             
             
-            // MARK: THE BASICS
-            
-        // MARK: 01 row
+        // MARK: THE BASICS
+    
         case 11:
-            newQuestionSet = TopicOperator.getQuestionsTheBasics()
+            newQuestionSet = TopicOperator.getTheBasics()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Основы", tag: 10)
         case 12:
-            newQuestionSet = TopicOperator.getQuestionsBasicOperators()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Операторы", tag: 11)
+            newQuestionSet = TopicOperator.getIntegers()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Числовые типы", tag: 11)
         case 13:
-            newQuestionSet = TopicOperator.getQuestionsStringAndCharacters()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Строки и символы", tag: 12)
+            newQuestionSet = TopicOperator.getBooleans()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Логические типы", tag: 12)
             
-        // MARK: 02 row
+            
         case 14:
-            newQuestionSet = TopicOperator.getQuestionsCollectionTypes()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Типы коллекций", tag: 13)
+            newQuestionSet = TopicOperator.getBasicOperators()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Базовые операторы", tag: 13)
         case 15:
-            newQuestionSet = TopicOperator.getQuestionsControlFlow()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Управление потоком", tag: 14)
+            newQuestionSet = TopicOperator.getRangeOperators()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Операторы диапазона", tag: 14)
             
-        // MARK: 03 row
+            
         case 16:
-            newQuestionSet = TopicOperator.getQuestionsFunctions()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Функции", tag: 15)
+            newQuestionSet = TopicOperator.getBooleanOperators()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Логические операторы", tag: 15)
         case 17:
-            newQuestionSet = TopicOperator.getQuestionsClosures()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Замыкания", tag: 16)
+            newQuestionSet = TopicOperator.getStringAndCharacters()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Строки и символы", tag: 16)
+        
+            
         case 18:
-            newQuestionSet = TopicOperator.getQuestionsEnums()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Перечисления", tag: 17)
-            
-        // MARK: 04 row
+            newQuestionSet = TopicOperator.getCollections()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Коллекции", tag: 17)
         case 19:
-            newQuestionSet = TopicOperator.getQuestionsStructuresAndClasses()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Структуры и классы", tag: 18)
+            newQuestionSet = TopicOperator.getSets()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Множества", tag: 18)
         case 20:
-            newQuestionSet = TopicOperator.getQuestionsProperties()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Свойства", tag: 19)
+            newQuestionSet = TopicOperator.getDictionaries()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Словари", tag: 19)
+            
+            
         case 21:
-            newQuestionSet = TopicOperator.getQuestionsMethods()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Методы", tag: 20)
-            
-        // MARK: 05 row
+            newQuestionSet = TopicOperator.getTuples()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Кортежи", tag: 20)
         case 22:
-            newQuestionSet = TopicOperator.getQuestionsSubscripts()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Сабскрипты", tag: 21)
+            newQuestionSet = TopicOperator.getControlFlow()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Управление потоком", tag: 21)
+        
+            
         case 23:
-            newQuestionSet = TopicOperator.getQuestionsInheritance()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Наследование", tag: 22)
+            newQuestionSet = TopicOperator.getOptionalTypes()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Опциональные типы", tag: 22)
         case 24:
-            newQuestionSet = TopicOperator.getQuestionsInitialization()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Инициализация", tag: 23)
-            
-        // MARK:  06 row
+            newQuestionSet = TopicOperator.getFunctions()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Функции", tag: 23)
         case 25:
-            newQuestionSet = TopicOperator.getQuestionsDeinitialization()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Деинициализация", tag: 24)
+            newQuestionSet = TopicOperator.getClosures()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Замыкания", tag: 24)
+            
+            
         case 26:
-            newQuestionSet = TopicOperator.getQuestionsErrorHandling()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Обработка ошибок", tag: 25)
-            
-        // MARK:  07 row
+            newQuestionSet = TopicOperator.getEnums()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Перечисления", tag: 25)
         case 27:
-            newQuestionSet = TopicOperator.getQuestionsOptionalChaining()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Опциональная последовательность", tag: 26)
+            newQuestionSet = TopicOperator.getStructuresAndClasses()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Структуры и классы", tag: 26)
         case 28:
-            newQuestionSet = TopicOperator.getQuestionsARC()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Автоматический подсчет ссылок", tag: 27)
+            newQuestionSet = TopicOperator.getProperties()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Свойства", tag: 27)
+
             
-        // MARK:  08 row
         case 29:
-            newQuestionSet = TopicOperator.getQuestionsTypeCasting()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Приведение типов", tag: 28)
+            newQuestionSet = TopicOperator.getMethods()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Методы", tag: 28)
         case 30:
-            newQuestionSet = TopicOperator.getQuestionsNestedTypes()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Вложенные типы", tag: 29)
-            
-        // MARK:  09 row
+            newQuestionSet = TopicOperator.getSubscripts()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Сабскрипты", tag: 29)
         case 31:
-            newQuestionSet = TopicOperator.getQuestionsExtensions()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Расширения", tag: 30)
+            newQuestionSet = TopicOperator.getInheritance()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Наследование", tag: 30)
+        
+            
         case 32:
-            newQuestionSet = TopicOperator.getQuestionsGenerics()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Универсальные шаблоны", tag: 31)
-            
-        // MARK:  10 row
+            newQuestionSet = TopicOperator.getInitialization()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Инициализация", tag: 31)
         case 33:
-            newQuestionSet = TopicOperator.getQuestionsProtocols()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Протоколы", tag: 32)
-        case 34:
-            newQuestionSet = TopicOperator.getQuestionsAccessControl()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Контроль доступа", tag: 33)
+            newQuestionSet = TopicOperator.getDeinitialization()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Деинициализация", tag: 32)
             
-        // MARK:  11 row
+            
+        case 34:
+            newQuestionSet = TopicOperator.getErrorHandling()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Обработка ошибок", tag: 33)
         case 35:
-            newQuestionSet = TopicOperator.getQuestionsMemorySafety()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Безопасность хранения", tag: 34)
+            newQuestionSet = TopicOperator.getConcurrency()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Согласованность", tag: 34)
+            
+            
         case 36:
-            newQuestionSet = TopicOperator.getQuestionsAdvancedOperators()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Продвинутые операторы", tag: 35)
+            newQuestionSet = TopicOperator.getOptionalChaining()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Опциональная последовательность", tag: 35)
+        case 37:
+            newQuestionSet = TopicOperator.getARC()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Автоматический подсчет ссылок", tag: 36)
+            
+            
+        case 38:
+            newQuestionSet = TopicOperator.getTypeCasting()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Приведение типов", tag: 37)
+        case 39:
+            newQuestionSet = TopicOperator.getNestedTypes()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Вложенные типы", tag: 38)
+            
+        
+        case 40:
+            newQuestionSet = TopicOperator.getExtensions()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Расширения", tag: 39)
+        case 41:
+            newQuestionSet = TopicOperator.getOpaqueTypes()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Непрозрачные типы", tag: 40)
+        
+        
+        case 42:
+            newQuestionSet = TopicOperator.getGenerics()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Универсальные шаблоны", tag: 41)
+        case 43:
+            newQuestionSet = TopicOperator.getProtocols()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Протоколы", tag: 42)
+        
+            
+        case 44:
+            newQuestionSet = TopicOperator.getAccessControl()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Контроль доступа", tag: 43)
+        case 45:
+            newQuestionSet = TopicOperator.getMemorySafety()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Безопасность хранения", tag: 44)
+            
+            
+        case 46:
+            newQuestionSet = TopicOperator.getAdvancedOperators()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Продвинутые операторы", tag: 45)
              
             
-            // MARK: PATTERNS
-            
-        // MARK: 01 row
-        case 37:
+        // MARK: PATTERNS
+         
+        case 50:
             newQuestionSet = TopicOperator.getQuestionsBasicsAboutPatterns()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Паттерны: Общие вопросы", tag: 36)
-        case 38:
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Паттерны: Общие вопросы", tag: 49)
+        case 51:
             newQuestionSet = TopicOperator.getQuestionsCreationalPatterns()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Порождающие паттерны", tag: 37)
-        case 39:
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Порождающие паттерны", tag: 50)
+        case 52:
             newQuestionSet = TopicOperator.getQuestionsStructuralPatterns()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Структурные паттерны", tag: 38)
-            
-        // MARK: 02 row
-        case 40:
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Структурные паттерны", tag: 51)
+       
+        case 53:
             newQuestionSet = TopicOperator.getQuestionsBehavioralPatterns()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Поведенческие паттерны", tag: 39)
-        case 41:
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Поведенческие паттерны", tag: 52)
+        case 54:
             newQuestionSet = TopicOperator.getQuestionsAntipatterns()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 40)
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Антипаттерны", tag: 53)
         
             
         // MARK: OTHER
-        case 50:
+        
+        case 60:
             newQuestionSet = TopicOperator.getQuestionsExtremeProgramming()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Экстремальное программированиее", tag: 49)
             
@@ -297,12 +333,12 @@ extension CategoriesCell {
             switch position {
             case 0...9:
                 superSets[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 10...35:
+            case 10...49:
                 guideQuestions[position-10].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 36...40:
-                patternsQuestions[position-36].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 49...60:
-                otherQuestions[position-49].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 50...59:
+                patternsQuestions[position-50].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 60...69:
+                otherQuestions[position-60].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             
             default:
                 print("default case in addQuestionsToArray() in CategoriesCell")
