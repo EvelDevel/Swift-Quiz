@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class OptionalTypesSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

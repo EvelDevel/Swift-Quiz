@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class BooleansSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

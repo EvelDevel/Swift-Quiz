@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class TuplesSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

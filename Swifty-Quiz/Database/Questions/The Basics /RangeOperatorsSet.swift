@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class RangeOperatorsSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

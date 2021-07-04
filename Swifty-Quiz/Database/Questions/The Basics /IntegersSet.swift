@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class IntegersSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

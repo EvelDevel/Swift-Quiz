@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class DictionariesSet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}

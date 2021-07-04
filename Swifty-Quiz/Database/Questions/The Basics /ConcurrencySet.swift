@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class ConcurrencySet {
+    static func getQuestions() -> [Question] {
+        return [ ]
+    }
+}
