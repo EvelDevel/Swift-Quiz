@@ -27,9 +27,9 @@ class CategoriesCell: UITableViewCell {
     var allButtons: [UIButton] = []
     
     @IBOutlet var superSets: [UIButton]!
-    @IBOutlet var guideQuestions: [UIButton]!
-    @IBOutlet var patternsQuestions: [UIButton]!
-    @IBOutlet var otherQuestions: [UIButton]!
+    @IBOutlet var guide: [UIButton]!
+    @IBOutlet var patterns: [UIButton]!
+    @IBOutlet var other: [UIButton]!
     
 	@IBOutlet weak var suggestQuestionGuide: UIButton!
 	@IBOutlet weak var suggestQuestionPatterns: UIButton!
@@ -99,9 +99,9 @@ extension CategoriesCell {
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
         allButtons.append(contentsOf: superSets)
-        allButtons.append(contentsOf: guideQuestions)
-        allButtons.append(contentsOf: patternsQuestions)
-        allButtons.append(contentsOf: otherQuestions)
+        allButtons.append(contentsOf: guide)
+        allButtons.append(contentsOf: patterns)
+        allButtons.append(contentsOf: other)
     }
     
     /// Добавляем тени кнопкам
@@ -122,8 +122,16 @@ extension CategoriesCell {
     /// Размер шрифта
     func setFontSize() {
         allButtons.forEach() { button in
-            if UIScreen.main.bounds.size.width > 320 { button.titleLabel?.font = .systemFont(ofSize: 11)
-            } else { button.titleLabel?.font = .systemFont(ofSize: 10) }
+            if UIScreen.main.bounds.size.width > 320 {
+                button.titleLabel?.font = .systemFont(
+                    ofSize: 13,
+                    weight: .light
+                )
+            } else {
+                button.titleLabel?.font = .systemFont(
+                    ofSize: 10
+                )
+            }
         }
     }
 }
@@ -162,16 +170,12 @@ extension CategoriesCell {
             
         // MARK: THE BASICS
     
-        case 11:
-            newQuestionSet = TopicOperator.getTheBasics()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Основы", tag: 10)
         case 12:
-            newQuestionSet = TopicOperator.getIntegers()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Числовые типы", tag: 11)
+            newQuestionSet = TopicOperator.getTheBasics()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Основы", tag: 11)
         case 13:
-            newQuestionSet = TopicOperator.getBooleans()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Логические типы", tag: 12)
-            
+            newQuestionSet = TopicOperator.getIntegersAndBooleans()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Числовые и логические типы", tag: 12)
             
         case 14:
             newQuestionSet = TopicOperator.getBasicOperators()
@@ -326,19 +330,19 @@ extension CategoriesCell {
         
         case 60:
             newQuestionSet = TopicOperator.getQuestionsExtremeProgramming()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Экстремальное программированиее", tag: 49)
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Экстремальное программированиее", tag: 59)
             
         default:
             /// Последнюю выбранную категорию делаем "активной"
             switch position {
             case 0...9:
                 superSets[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 10...49:
-                guideQuestions[position-10].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 50...59:
-                patternsQuestions[position-50].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 60...69:
-                otherQuestions[position-60].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 10...48:
+                guide[position-11].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 49...58:
+                patterns[position-49].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+            case 59...68:
+                other[position-59].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             
             default:
                 print("default case in addQuestionsToArray() in CategoriesCell")

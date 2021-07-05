@@ -43,8 +43,7 @@ class RandomSetManager {
 	static func setAndGetGuideQuestions() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
-            guide.append(contentsOf: IntegersSet.getQuestions())
-            guide.append(contentsOf: BooleansSet.getQuestions())
+            guide.append(contentsOf: IntegersAndBooleansSet.getQuestions())
             
 			guide.append(contentsOf: BasicOperatorsSet.getQuestions())
             guide.append(contentsOf: RangeOperatorsSet.getQuestions())

@@ -19,8 +19,7 @@ class TopicOperator {
     // MARK: THE BASICS
     
     static func getTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }
-    static func getIntegers() -> [Question] { return IntegersSet.getQuestions() }
-    static func getBooleans() -> [Question] { return BooleansSet.getQuestions() }
+    static func getIntegersAndBooleans() -> [Question] { return IntegersAndBooleansSet.getQuestions() }
     
     static func getBasicOperators() -> [Question] { return BasicOperatorsSet.getQuestions() }
     static func getRangeOperators() -> [Question] { return RangeOperatorsSet.getQuestions() }
