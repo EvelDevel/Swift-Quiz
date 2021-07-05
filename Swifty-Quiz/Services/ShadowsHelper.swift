@@ -31,7 +31,7 @@ class ShadowsHelper {
     func addTopicButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {
             button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
-            button.layer.shadowOpacity = 0.7
+            button.layer.shadowOpacity = 0.6
             button.layer.shadowRadius = 4
             button.layer.shadowOffset = CGSize(width: 0, height: 5)
             button.layer.position = button.center
