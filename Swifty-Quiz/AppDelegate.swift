@@ -4,11 +4,6 @@
 
 import UIKit
 
-// MARK: Доработки
-
-/// 1. Хранение данных на RealmSwift!
-/// 2. Социальные функции (поделиться историей игр)
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

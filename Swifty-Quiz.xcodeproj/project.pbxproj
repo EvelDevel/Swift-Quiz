@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1CC8312680408800C9F09E /* ExtremeProgrammingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */; };
-		2CD0C3232691FE2200871C14 /* IntegersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3222691FE2200871C14 /* IntegersSet.swift */; };
-		2CD0C3252691FE5A00871C14 /* BooleansSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3242691FE5A00871C14 /* BooleansSet.swift */; };
+		2CD0C3232691FE2200871C14 /* IntegersAndBooleansSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3222691FE2200871C14 /* IntegersAndBooleansSet.swift */; };
 		2CD0C3272691FEA300871C14 /* RangeOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3262691FEA300871C14 /* RangeOperatorsSet.swift */; };
 		2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3282691FEF900871C14 /* BooleanOperatorsSet.swift */; };
 		2CD0C32B2691FF3800871C14 /* SetsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C32A2691FF3800871C14 /* SetsSet.swift */; };
@@ -103,8 +102,7 @@
 
 /* Begin PBXFileReference section */
 		2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremeProgrammingSet.swift; sourceTree = "<group>"; };
-		2CD0C3222691FE2200871C14 /* IntegersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegersSet.swift; sourceTree = "<group>"; };
-		2CD0C3242691FE5A00871C14 /* BooleansSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleansSet.swift; sourceTree = "<group>"; };
+		2CD0C3222691FE2200871C14 /* IntegersAndBooleansSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegersAndBooleansSet.swift; sourceTree = "<group>"; };
 		2CD0C3262691FEA300871C14 /* RangeOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeOperatorsSet.swift; sourceTree = "<group>"; };
 		2CD0C3282691FEF900871C14 /* BooleanOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanOperatorsSet.swift; sourceTree = "<group>"; };
 		2CD0C32A2691FF3800871C14 /* SetsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsSet.swift; sourceTree = "<group>"; };
@@ -356,8 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */,
-				2CD0C3222691FE2200871C14 /* IntegersSet.swift */,
-				2CD0C3242691FE5A00871C14 /* BooleansSet.swift */,
+				2CD0C3222691FE2200871C14 /* IntegersAndBooleansSet.swift */,
 				FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */,
 				2CD0C3262691FEA300871C14 /* RangeOperatorsSet.swift */,
 				2CD0C3282691FEF900871C14 /* BooleanOperatorsSet.swift */,
@@ -576,7 +573,6 @@
 				FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */,
 				FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */,
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
-				2CD0C3252691FE5A00871C14 /* BooleansSet.swift in Sources */,
 				2CD0C3272691FEA300871C14 /* RangeOperatorsSet.swift in Sources */,
 				FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */,
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
@@ -615,7 +611,7 @@
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
 				FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */,
 				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
-				2CD0C3232691FE2200871C14 /* IntegersSet.swift in Sources */,
+				2CD0C3232691FE2200871C14 /* IntegersAndBooleansSet.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
