@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 2801 по 2900
-
 class BehavioralPatternsSet {
     static func getQuestions() -> [Question] {
         return [

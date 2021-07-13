@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 17 - Вопросы (id) с 1601 по 1700
-
 class OptionalChainingSet {
 	static func getQuestions() -> [Question] {
 		return [

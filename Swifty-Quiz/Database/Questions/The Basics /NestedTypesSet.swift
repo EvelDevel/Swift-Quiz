@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 20 - Вопросы (id) с 1901 по 2000
-
 class NestedTypesSet {
 	static func getQuestions() -> [Question] {
 		return [

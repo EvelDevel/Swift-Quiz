@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 07 - Вопросы (id) с 601 по 700
-
 class ClosuresSet {
 	static func getQuestions() -> [Question] {
 		return [

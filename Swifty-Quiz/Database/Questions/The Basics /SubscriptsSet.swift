@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 12 - Вопросы (id) с 1101 по 1200
-
 class SubscriptsSet {
 	static func getQuestions() -> [Question] {
 		return [

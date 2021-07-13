@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 04 - Вопросы (id) с 301 по 400
-
 class CollectionsSet {
     static func getQuestions() -> [Question] {
         return [

@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 801 по 900
-
 class StructuresAndClassesSet {
     static func getQuestions() -> [Question] {
         return [

@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 03 - Вопросы (id) с 201 по 300
-
 class StringAndCharactersSet {
 	static func getQuestions() -> [Question] {
 		return [

@@ -8,8 +8,6 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 3000 по 3100
-
 class ExtremeProgrammingSet {
     static func getQuestions() -> [Question] {
         return [

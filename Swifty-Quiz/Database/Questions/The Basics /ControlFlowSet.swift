@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 05 - Вопросы (id) с 401 по 500
-
 class ControlFlowSet {
     static func getQuestions() -> [Question] {
         return [

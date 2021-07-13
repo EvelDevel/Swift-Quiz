@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK:  Вопросы (id) с 2501 по 2600
-
 class BasicsAboutPatternsSet {
     static func getQuestions() -> [Question] {
         return [

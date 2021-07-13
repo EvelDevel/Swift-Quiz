@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 13 - Вопросы (id) с 1201 по 1300
-
 class InheritanceSet {
 	static func getQuestions() -> [Question] {
 		return [

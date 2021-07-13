@@ -4,8 +4,6 @@
 
 import Foundation
 
-// MARK: 26 - Вопросы (id) с 2451 по 2500
-
 class AdvancedOperatorsSet {
 	static func getQuestions() -> [Question] {
 		return [
