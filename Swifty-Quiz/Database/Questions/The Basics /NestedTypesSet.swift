@@ -13,7 +13,7 @@ class NestedTypesSet {
 					 optionB: "Type Casting",
 					 optionC: "Typing",
 					 optionD: "Opaque Types",
-					 questionId: 1901,
+					 questionId: 675637044,
 					 helpText: "Правильный ответ: Nested Types."),
 			
 			Question(question: ["Где вам нужно написать свое определение типа, чтобы вложить один тип в другой?"],
@@ -22,7 +22,7 @@ class NestedTypesSet {
 					 optionB: "Внутри ()",
 					 optionC: "Перед {}",
 					 optionD: "После ()",
-					 questionId: 1902,
+					 questionId: 243043804,
 					 helpText: "Чтобы вложить тип в другой тип, вам нужно написать свое определение во внешних фигурных скобках типа, который он поддерживает."),
 			
 			Question(question: ["На сколько уровней могут быть вложены типы?",
@@ -32,7 +32,7 @@ class NestedTypesSet {
 					 optionB: "На 2",
 					 optionC: "На 1",
 					 optionD: "На 3",
-					 questionId: 1903,
+					 questionId: 394304011,
 					 helpText: "Типы могут быть вложены на столько уровней, на сколько это необходимо."),
 			
 			Question(question: ["Можем ли мы использовать вложенные типы снаружи определяющего их контекста?"],
@@ -41,7 +41,7 @@ class NestedTypesSet {
 					 optionB: "Нет",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 1904,
+					 questionId: 526458719,
 					 helpText: "Для того, чтобы использовать вложенные типы снаружи определяющего их контекста, нужно поставить префикс имени типа, внутри которого он вложен, затем его имя.")
 		]
 	}
