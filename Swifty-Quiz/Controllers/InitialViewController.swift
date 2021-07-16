@@ -188,7 +188,7 @@ extension InitialViewController {
 }
 
 
-// MARK: Активация делегирования
+// MARK: Сетаем себя как делегат
 extension InitialViewController {
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

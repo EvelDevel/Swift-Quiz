@@ -165,7 +165,7 @@ extension CategoriesCell {
             
         case 18:
             newQuestionSet = TopicOperator.getCollections()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Коллекции", tag: 17)
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Коллекции, массивы", tag: 17)
         case 19:
             newQuestionSet = TopicOperator.getSets()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Множества", tag: 18)
