@@ -131,23 +131,11 @@
                         <rect key="frame" x="16" y="158" width="288" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
-                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-YO-tgt">
-                                <rect key="frame" x="111" y="0.0" width="177" height="30"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="158" minY="6" maxX="0.0" maxY="6"/>
-                                <state key="normal" image="PlusCircle">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
-                                </state>
-                                <state key="highlighted" image="PlusCircleFill"/>
-                                <connections>
-                                    <action selector="suggestQuestionGuide:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OJM-La-Xno"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="XKj-Du-HD2"/>
@@ -853,23 +841,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvN-jI-gWd">
-                                        <rect key="frame" x="88" y="0.0" width="192" height="30"/>
-                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="173" minY="6" maxX="0.0" maxY="6"/>
-                                        <state key="normal" image="PlusCircle">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
-                                        </state>
-                                        <state key="highlighted" image="PlusCircleFill"/>
-                                        <connections>
-                                            <action selector="suggestQuestionPatterns:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GLR-Yj-zYe"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HVn-HO-smd"/>
@@ -993,23 +969,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCW-9o-V5c">
-                                        <rect key="frame" x="67" y="0.0" width="213" height="30"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="192" minY="6" maxX="0.0" maxY="6"/>
-                                        <state key="normal" image="PlusCircle">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
-                                        </state>
-                                        <state key="highlighted" image="PlusCircleFill"/>
-                                        <connections>
-                                            <action selector="suggestQuestionOthers:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="l32-i9-uI1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CgT-Xj-igk"/>
@@ -1071,9 +1035,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="suggestQuestionGuide" destination="KwJ-YO-tgt" id="vdT-mg-dfY"/>
-                <outlet property="suggestQuestionOthers" destination="WCW-9o-V5c" id="phs-gK-Fv0"/>
-                <outlet property="suggestQuestionPatterns" destination="CvN-jI-gWd" id="TtE-e2-MTv"/>
                 <outletCollection property="superSets" destination="efU-AZ-oTf" collectionClass="NSMutableArray" id="AXk-3b-eE5"/>
                 <outletCollection property="superSets" destination="sjn-CH-lMo" collectionClass="NSMutableArray" id="o89-eU-Odm"/>
                 <outletCollection property="superSets" destination="iyP-mf-tY5" collectionClass="NSMutableArray" id="l6b-8v-2Iq"/>
@@ -1264,8 +1225,4 @@
             <size key="intrinsicContentSize" width="128" height="26"/>
         </designable>
     </designables>
-    <resources>
-        <image name="PlusCircle" width="50" height="50"/>
-        <image name="PlusCircleFill" width="50" height="50"/>
-    </resources>
 </document>

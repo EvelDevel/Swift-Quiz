@@ -17,7 +17,6 @@ import UIKit
 protocol CategoriesCellDelegate: AnyObject {
     func updateNumberOfQuestions()
     func showAlert()
-	func suggestQuestion(section: String)
 }
 
 class CategoriesCell: UITableViewCell {
@@ -31,10 +30,6 @@ class CategoriesCell: UITableViewCell {
     @IBOutlet var patterns: [UIButton]!
     @IBOutlet var other: [UIButton]!
     
-	@IBOutlet weak var suggestQuestionGuide: UIButton!
-	@IBOutlet weak var suggestQuestionPatterns: UIButton!
-    @IBOutlet weak var suggestQuestionOthers: UIButton!
-    
     weak var delegate: CategoriesCellDelegate?
     
     private let shadows = ShadowsHelper()
@@ -46,7 +41,6 @@ class CategoriesCell: UITableViewCell {
         addQuestionsToArray(sender: UIButton())
         setFontSize()
         addShadows()
-		imageTuning()
     }
 
     override func layoutSubviews() {
@@ -66,30 +60,6 @@ class CategoriesCell: UITableViewCell {
             lastPosition = sender.tag - 1
         }
     }
-    
-	/// "Предложить вопрос"
-	@IBAction func suggestQuestionGuide(_ sender: Any) {
-        delegate?.suggestQuestion(section: "Language Guide")
-    }
-	@IBAction func suggestQuestionPatterns(_ sender: Any) {
-        delegate?.suggestQuestion(section: "Patterns")
-    }
-    @IBAction func suggestQuestionOthers(_ sender: Any) {
-        delegate?.suggestQuestion(section: "Others")
-    }
-    
-
-    /// Корректного отображение плюсиков
-	func imageTuning() {
-		imageTuning(button: suggestQuestionGuide, position: .center)
-		imageTuning(button: suggestQuestionPatterns, position: .center)
-        imageTuning(button: suggestQuestionOthers, position: .center)
-	}
-	func imageTuning(button: UIButton, position: UIControl.ContentVerticalAlignment) {
-		button.imageView!.contentMode = .scaleAspectFit
-		button.contentVerticalAlignment = position
-		button.contentHorizontalAlignment = .right
-	}
 }
 
 
