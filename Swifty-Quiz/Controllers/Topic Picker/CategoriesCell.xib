@@ -986,7 +986,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
                                         <subviews>
                                             <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-0U-VKM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Extreme Programming">
@@ -1002,10 +1002,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-gZ-M38" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="134.5" y="0.0" width="145.5" height="35"/>
+                                                <rect key="frame" x="135" y="0.0" width="145" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Mobile Security (MASVS)">
+                                                <state key="normal" title="MASVS - Mobile Security">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1173,7 +1173,7 @@
             <size key="intrinsicContentSize" width="196" height="26"/>
         </designable>
         <designable name="cfQ-gZ-M38">
-            <size key="intrinsicContentSize" width="122" height="24"/>
+            <size key="intrinsicContentSize" width="121" height="24"/>
         </designable>
         <designable name="dTA-Ih-nNB">
             <size key="intrinsicContentSize" width="68" height="26"/>
