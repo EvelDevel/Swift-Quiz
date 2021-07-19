@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1CC8312680408800C9F09E /* ExtremeProgrammingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */; };
+		2C6D045F26A150C30071A615 /* MobileSecuritySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */; };
 		2CD0C3232691FE2200871C14 /* IntegersAndBooleansSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3222691FE2200871C14 /* IntegersAndBooleansSet.swift */; };
 		2CD0C3272691FEA300871C14 /* RangeOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3262691FEA300871C14 /* RangeOperatorsSet.swift */; };
 		2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3282691FEF900871C14 /* BooleanOperatorsSet.swift */; };
@@ -102,6 +103,7 @@
 
 /* Begin PBXFileReference section */
 		2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremeProgrammingSet.swift; sourceTree = "<group>"; };
+		2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileSecuritySet.swift; sourceTree = "<group>"; };
 		2CD0C3222691FE2200871C14 /* IntegersAndBooleansSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegersAndBooleansSet.swift; sourceTree = "<group>"; };
 		2CD0C3262691FEA300871C14 /* RangeOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeOperatorsSet.swift; sourceTree = "<group>"; };
 		2CD0C3282691FEF900871C14 /* BooleanOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanOperatorsSet.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
+				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				FBECDC5E243F310800BD5583 /* Question.swift in Sources */,
 				FB8606A92441CF7300A692AD /* Record.swift in Sources */,
 				FB8606A72441CF1C00A692AD /* Game.swift in Sources */,
+				2C6D045F26A150C30071A615 /* MobileSecuritySet.swift in Sources */,
 				FB86ACA82469A424002BA8B3 /* EnumerationsSet.swift in Sources */,
 				FB99F88B247B95430053166C /* CreationalPatternsSet.swift in Sources */,
 				2CD0C32B2691FF3800871C14 /* SetsSet.swift in Sources */,

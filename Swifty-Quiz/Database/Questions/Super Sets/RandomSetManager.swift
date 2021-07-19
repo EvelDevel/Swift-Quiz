@@ -107,6 +107,7 @@ class RandomSetManager {
     static func setAndGetOtherQuestions() -> [Question] {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
+            others.append(contentsOf: MobileSecuritySet.getQuestions())
         }
         return others
     }

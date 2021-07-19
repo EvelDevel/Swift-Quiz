@@ -963,7 +963,7 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                        <rect key="frame" x="20" y="1089" width="280" height="64"/>
+                        <rect key="frame" x="20" y="1089" width="280" height="75"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gTx-Jc-ho6" userLabel="Patterns-Suggestion">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
@@ -980,16 +980,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-13-vKy" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="40" width="280" height="24"/>
+                                <rect key="frame" x="0.0" y="40" width="280" height="35"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="01 Row">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
                                         <subviews>
                                             <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-0U-VKM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="126.5" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="XP (Extreme Programming)">
+                                                <state key="normal" title="Extreme Programming">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -999,6 +999,22 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8IO-i2-HNY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-gZ-M38" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="134.5" y="0.0" width="145.5" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Mobile Security (MASVS)">
+                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wxK-WI-cU9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1081,6 +1097,7 @@
                 <outletCollection property="patterns" destination="fgV-Eu-Kjd" collectionClass="NSMutableArray" id="1qd-sx-JVa"/>
                 <outletCollection property="patterns" destination="ePD-0W-Wt5" collectionClass="NSMutableArray" id="uni-Fw-OBQ"/>
                 <outletCollection property="patterns" destination="1Ja-zl-HbK" collectionClass="NSMutableArray" id="GeV-oa-A6F"/>
+                <outletCollection property="other" destination="cfQ-gZ-M38" collectionClass="NSMutableArray" id="eQt-iQ-0YA"/>
             </connections>
             <point key="canvasLocation" x="-368.11594202898556" y="294.97767857142856"/>
         </tableViewCell>
@@ -1144,7 +1161,7 @@
             <size key="intrinsicContentSize" width="95" height="26"/>
         </designable>
         <designable name="Zoq-0U-VKM">
-            <size key="intrinsicContentSize" width="131" height="24"/>
+            <size key="intrinsicContentSize" width="107" height="24"/>
         </designable>
         <designable name="ZuT-3w-aPC">
             <size key="intrinsicContentSize" width="138" height="26"/>
@@ -1154,6 +1171,9 @@
         </designable>
         <designable name="cBU-t6-J6S">
             <size key="intrinsicContentSize" width="196" height="26"/>
+        </designable>
+        <designable name="cfQ-gZ-M38">
+            <size key="intrinsicContentSize" width="122" height="24"/>
         </designable>
         <designable name="dTA-Ih-nNB">
             <size key="intrinsicContentSize" width="68" height="26"/>

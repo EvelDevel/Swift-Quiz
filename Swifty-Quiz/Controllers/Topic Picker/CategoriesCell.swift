@@ -301,6 +301,9 @@ extension CategoriesCell {
         case 60:
             newQuestionSet = TopicOperator.getQuestionsExtremeProgramming()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Экстремальное программированиее", tag: 59)
+        case 61:
+            newQuestionSet = TopicOperator.getQuestionsMobileSecurity()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Мобильная безопасность (MASVS)", tag: 60)
             
         default:
             /// Последнюю выбранную категорию делаем "активной"
