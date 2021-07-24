@@ -10,6 +10,15 @@ import Foundation
 
 class OpaqueTypeSet {
     static func getQuestions() -> [Question] {
-        return [ ]
+        return [
+            Question(question: ["Что делает функция или метод с непрозрачным типом возвращаемого значения?"],
+                     image: "",
+                     optionA: "Скрывает информацию о типе",
+                     optionB: "Шифрует информацию о типе",
+                     optionC: "Не использует информацию о типе",
+                     optionD: "",
+                     questionId: 0000,
+                     helpText: "Функция или метод с непрозрачным типом возвращаемого значения скрывает информацию о типе своего возвращаемого значения.")
+        ]
     }
 }
