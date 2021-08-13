@@ -9,12 +9,12 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeRightSettingsForSounds()
-        controlledTransitionFromLaunch()
+        setAudioSettings()
+        transitionFromLaunch()
     }
     
-    /// Меняем аудио-сессию (приложение не останавливает фоновую музыку)
-    func makeRightSettingsForSounds() {
+    // Set audio session, app won't stop music
+    func setAudioSettings() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
         } catch {
@@ -22,8 +22,7 @@ class LaunchViewController: UIViewController {
         }
     }
     
-    /// Контролируемый переход с Лаунч-скрина
-    func controlledTransitionFromLaunch() {
+    func transitionFromLaunch() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initial = mainStoryboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
