@@ -15,13 +15,14 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var helpTextLabel: UILabel!
     @IBOutlet weak var backInGameButton: UIButton!
     @IBOutlet weak var separatorHeight: NSLayoutConstraint!
+    
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpHelpText()
-        dismissOnClick()
+        setHelp()
+        addDismissOnClick()
         addShadows()
         setFontSize()
         makeThinSeparator()
@@ -38,7 +39,7 @@ class HelpViewController: UIViewController {
     }
     
     /// Устанавливаем корректную теорию в подсказку
-    func setUpHelpText() {
+    func setHelp() {
         for question in SelectedTopic.shared.topic.questionSet {
             if question.questionId == questionID {
                 helpTextLabel.text = question.helpText
@@ -52,7 +53,7 @@ class HelpViewController: UIViewController {
 extension HelpViewController {
     
     /// Сворачиваем подсказку по клику на пустое место контроллера
-    func dismissOnClick() {
+    func addDismissOnClick() {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
         gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
