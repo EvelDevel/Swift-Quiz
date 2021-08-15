@@ -304,6 +304,9 @@ extension CategoriesCell {
         case 61:
             newQuestionSet = TopicOperator.getQuestionsMobileSecurity()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "MASVS - Мобильная безопасность", tag: 60)
+        case 62:
+            newQuestionSet = TopicOperator.getQuestionsLifecycle()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Жизненный цикл UIViewController", tag: 61)
             
         default:
             /// Последнюю выбранную категорию делаем "активной"

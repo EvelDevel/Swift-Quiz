@@ -108,6 +108,7 @@ class RandomSetManager {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
             others.append(contentsOf: MobileSecuritySet.getQuestions())
+            others.append(contentsOf: VCLifecycleSet.getQuestions())
         }
         return others
     }
@@ -120,13 +121,10 @@ class RandomSetManager {
 		switch type {
 		case .all:
             shuffled = all.isEmpty ? setAndGetAllQuestions().shuffled() : all.shuffled()
-		
         case .guide:
             shuffled = guide.isEmpty ? setAndGetGuideQuestions().shuffled() : guide.shuffled()
-		
         case .patterns:
             shuffled = patterns.isEmpty ? setAndGetPatternsQuestions().shuffled() : patterns.shuffled()
-        
         case .others:
             shuffled = others.isEmpty ? setAndGetOtherQuestions().shuffled() : others.shuffled()
         }
