@@ -10,27 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="1289" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1289"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="1407" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1407"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="1289"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="1407"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подборки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
-                        <rect key="frame" x="16" y="15" width="80" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Mye-XD-PCD"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
-                        <rect key="frame" x="16" y="55" width="288" height="78"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
+                        <rect key="frame" x="16" y="16" width="288" height="120"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подборки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUx-lF-pbh" userLabel="Title : All together">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gQ2-aS-T9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aff-PP-AXD" userLabel="01 Row">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="40" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efU-AZ-oTf" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="87.5" height="35"/>
@@ -86,7 +86,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-Dv-A9g" userLabel="02 Row">
-                                <rect key="frame" x="0.0" y="43" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="85" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t42-Ee-vW4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="35"/>
@@ -127,25 +127,20 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A35-uV-IEt" userLabel="Guide-Suggestion">
-                        <rect key="frame" x="16" y="158" width="288" height="30"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
+                        <rect key="frame" x="16" y="161" width="288" height="750"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IbA-6n-nfG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="XKj-Du-HD2"/>
-                        </constraints>
-                    </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                        <rect key="frame" x="16" y="198" width="288" height="680"/>
-                        <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-RY-saU" userLabel="01">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="40" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-TJ-Cn5" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="58.5" height="35"/>
@@ -185,7 +180,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZjH-2Z-w47" userLabel="02">
-                                <rect key="frame" x="0.0" y="43" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="85" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTQ-Ap-1US" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="131.5" height="35"/>
@@ -225,7 +220,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8JX-xk-SnF" userLabel="03">
-                                <rect key="frame" x="0.0" y="86" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="130" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj7-kD-b2p" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="35"/>
@@ -265,7 +260,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Bm-L9-lts" userLabel="04">
-                                <rect key="frame" x="0.0" y="129" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="175" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzF-u7-CfO" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
@@ -321,7 +316,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="USH-QV-zUE" userLabel="05">
-                                <rect key="frame" x="0.0" y="172" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="220" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvK-SO-qiQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="81" height="35"/>
@@ -361,7 +356,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fTe-64-5ew" userLabel="06">
-                                <rect key="frame" x="0.0" y="215" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="265" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDT-3T-1au" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="135.5" height="35"/>
@@ -417,7 +412,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6I7-dp-IXt" userLabel="07">
-                                <rect key="frame" x="0.0" y="258" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="310" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfF-Hb-wae" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="88.5" height="35"/>
@@ -473,7 +468,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Ty-KZ-SHj" userLabel="08">
-                                <rect key="frame" x="0.0" y="301" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="355" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-ll-eTI" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
@@ -529,7 +524,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-YM-QwU" userLabel="09">
-                                <rect key="frame" x="0.0" y="344" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="400" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAi-7Y-eFa" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="35"/>
@@ -569,7 +564,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Uo-cP-6CN" userLabel="10">
-                                <rect key="frame" x="0.0" y="387" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="445" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQr-jF-kPJ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="145.5" height="35"/>
@@ -609,7 +604,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-Z2-RI9" userLabel="11">
-                                <rect key="frame" x="0.0" y="430" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="490" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBU-t6-J6S" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="241" height="35"/>
@@ -649,7 +644,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-CZ-v13" userLabel="12">
-                                <rect key="frame" x="0.0" y="473" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="535" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-F9-lSf" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="35"/>
@@ -689,7 +684,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rmz-ta-3A1" userLabel="13">
-                                <rect key="frame" x="0.0" y="516" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="580" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="252-im-U99" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="35"/>
@@ -729,7 +724,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8YX-je-phL" userLabel="14">
-                                <rect key="frame" x="0.0" y="559" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="625" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd1-N1-nLv" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="192.5" height="35"/>
@@ -769,7 +764,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GpZ-MK-Kt0" userLabel="15">
-                                <rect key="frame" x="0.0" y="602" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="670" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLI-Em-zmZ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
@@ -809,7 +804,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZbG-Vu-OTR" userLabel="16">
-                                <rect key="frame" x="0.0" y="645" width="288" height="35"/>
+                                <rect key="frame" x="0.0" y="715" width="288" height="35"/>
                                 <subviews>
                                     <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-3w-aPC" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
@@ -835,22 +830,17 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                        <rect key="frame" x="20" y="903" width="280" height="161"/>
+                        <rect key="frame" x="20" y="936" width="280" height="161"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-dN-P82" userLabel="Patterns-Suggestion">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HVn-HO-smd"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hjq-o6-0qv"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-8m-84D" userLabel="Patterns">
                                 <rect key="frame" x="0.0" y="40" width="280" height="121"/>
                                 <subviews>
@@ -963,22 +953,17 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                        <rect key="frame" x="20" y="1089" width="280" height="75"/>
+                        <rect key="frame" x="20" y="1122" width="280" height="75"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gTx-Jc-ho6" userLabel="Patterns-Suggestion">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CgT-Xj-igk"/>
+                                    <constraint firstAttribute="height" constant="30" id="CTw-dj-Cbu"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-13-vKy" userLabel="Patterns">
                                 <rect key="frame" x="0.0" y="40" width="280" height="35"/>
                                 <subviews>
@@ -986,7 +971,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
                                         <subviews>
                                             <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-0U-VKM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="127" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Extreme Programming">
@@ -1002,10 +987,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-gZ-M38" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="135" y="0.0" width="145" height="35"/>
+                                                <rect key="frame" x="137" y="0.0" width="143" height="35"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="MASVS - Mobile Security">
+                                                <state key="normal" title="MASVS, Mobile Security">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1031,21 +1016,16 @@
                 <constraints>
                     <constraint firstItem="d0p-ZD-gEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Nb-Hc-BOM"/>
                     <constraint firstItem="ACn-p5-cdl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="46t-jq-ymH"/>
-                    <constraint firstItem="A35-uV-IEt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9dF-uu-xhO"/>
-                    <constraint firstItem="A35-uV-IEt" firstAttribute="top" secondItem="ACn-p5-cdl" secondAttribute="bottom" constant="25" id="9kI-OH-cMg"/>
                     <constraint firstItem="qsA-EW-zXT" firstAttribute="top" secondItem="EkM-3J-uz3" secondAttribute="bottom" constant="25" id="CcX-RI-7LD"/>
                     <constraint firstAttribute="trailing" secondItem="qsA-EW-zXT" secondAttribute="trailing" constant="20" id="Ez4-nR-Mq9"/>
+                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="ACn-p5-cdl" secondAttribute="bottom" constant="25" id="GVw-li-mxK"/>
                     <constraint firstAttribute="trailing" secondItem="EkM-3J-uz3" secondAttribute="trailing" constant="20" id="Mgb-4E-2cC"/>
-                    <constraint firstAttribute="bottom" secondItem="qsA-EW-zXT" secondAttribute="bottom" constant="35" id="O5k-Sd-Pvf"/>
+                    <constraint firstItem="ACn-p5-cdl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="NvD-u0-bJE"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qsA-EW-zXT" secondAttribute="bottom" constant="35" id="O5k-Sd-Pvf"/>
                     <constraint firstItem="EkM-3J-uz3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="PD4-Qs-zQm"/>
-                    <constraint firstItem="tUx-lF-pbh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="R4x-dl-6Oi"/>
-                    <constraint firstItem="tUx-lF-pbh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="T2Y-w1-kDk"/>
                     <constraint firstAttribute="trailing" secondItem="ACn-p5-cdl" secondAttribute="trailing" constant="16" id="TdG-eq-yav"/>
-                    <constraint firstItem="d0p-ZD-gEa" firstAttribute="top" secondItem="A35-uV-IEt" secondAttribute="bottom" constant="10" id="XZh-ab-H0W"/>
                     <constraint firstItem="EkM-3J-uz3" firstAttribute="top" secondItem="d0p-ZD-gEa" secondAttribute="bottom" constant="25" id="diI-nM-zar"/>
-                    <constraint firstItem="ACn-p5-cdl" firstAttribute="top" secondItem="tUx-lF-pbh" secondAttribute="bottom" constant="20" id="g5J-4M-K4G"/>
                     <constraint firstAttribute="trailing" secondItem="d0p-ZD-gEa" secondAttribute="trailing" constant="16" id="jgA-Kn-7V8"/>
-                    <constraint firstAttribute="trailing" secondItem="A35-uV-IEt" secondAttribute="trailing" constant="16" id="jrH-TK-bue"/>
                     <constraint firstItem="qsA-EW-zXT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rjm-Po-aIU"/>
                 </constraints>
             </tableViewCellContentView>
@@ -1099,7 +1079,7 @@
                 <outletCollection property="patterns" destination="1Ja-zl-HbK" collectionClass="NSMutableArray" id="GeV-oa-A6F"/>
                 <outletCollection property="other" destination="cfQ-gZ-M38" collectionClass="NSMutableArray" id="eQt-iQ-0YA"/>
             </connections>
-            <point key="canvasLocation" x="-368.11594202898556" y="294.97767857142856"/>
+            <point key="canvasLocation" x="-381.15942028985512" y="367.96875"/>
         </tableViewCell>
     </objects>
     <designables>
@@ -1173,7 +1153,7 @@
             <size key="intrinsicContentSize" width="196" height="26"/>
         </designable>
         <designable name="cfQ-gZ-M38">
-            <size key="intrinsicContentSize" width="121" height="24"/>
+            <size key="intrinsicContentSize" width="117" height="24"/>
         </designable>
         <designable name="dTA-Ih-nNB">
             <size key="intrinsicContentSize" width="68" height="26"/>
