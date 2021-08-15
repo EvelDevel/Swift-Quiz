@@ -18,19 +18,16 @@ class RandomSetManager {
 	private static var patterns: [Question] = []
     private static var others: [Question] = []
 	
-	// Получить общее количество всех вопросов
+    // Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
+    // Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
+    // То есть при старте программы, все эти основные массивы наполняются, и освобождаются только при выходе из приложение
+    // Пустыми они быть не могут, но главное - чтобы отработала эта функция
+    
 	static func showAllQuestionsNumber() -> Int {
-		
-		// Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
-		// Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
-		// То есть при старте программы, все эти основные массивы наполняются, и освобождаются только при выходе из приложение
-		// Пустыми они быть не могут, но главное - чтобы отработала эта функция
-		
-		return setAndGetAllQuestions().count
+		return getAllQuestions().count
 	}
 	
-	// Получить массив всех вопросов
-	static func setAndGetAllQuestions() -> [Question] {
+	static func getAllQuestions() -> [Question] {
 		if all.isEmpty {
 			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
 			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
@@ -39,7 +36,6 @@ class RandomSetManager {
 		return all
 	}
 	
-	// Получить массив всех вопросов по Руководству
 	static func setAndGetGuideQuestions() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
@@ -91,7 +87,6 @@ class RandomSetManager {
 		return guide
 	}
 	
-	// Получить массив всех вопросов по Паттернам
 	static func setAndGetPatternsQuestions() -> [Question] {
 		if patterns.isEmpty {
 			patterns.append(contentsOf: BasicsAboutPatternsSet.getQuestions())
@@ -103,7 +98,6 @@ class RandomSetManager {
 		return patterns
 	}
     
-    // Получить массив всех вопросов по Разному
     static func setAndGetOtherQuestions() -> [Question] {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
@@ -113,14 +107,13 @@ class RandomSetManager {
         return others
     }
     
-	// Формируем пачки случайных вопросов
 	static func getQuestions(_ limit: Int, _ type: RandomType) -> [Question] {
 		var shuffled: [Question] = []
-		var toReturn: [Question] = []
+		var final: [Question] = []
 		
 		switch type {
 		case .all:
-            shuffled = all.isEmpty ? setAndGetAllQuestions().shuffled() : all.shuffled()
+            shuffled = all.isEmpty ? getAllQuestions().shuffled() : all.shuffled()
         case .guide:
             shuffled = guide.isEmpty ? setAndGetGuideQuestions().shuffled() : guide.shuffled()
         case .patterns:
@@ -130,8 +123,8 @@ class RandomSetManager {
         }
         
 		for index in 0..<limit {
-			toReturn.append(shuffled[index])
+			final.append(shuffled[index])
 		}
-		return toReturn
+		return final
 	}
 }
