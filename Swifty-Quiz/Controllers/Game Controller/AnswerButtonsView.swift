@@ -31,11 +31,11 @@ class AnswerButtonsView: UIView {
     /// Шафлим положение всех ответов
     /// Устанавливаем на новые места
     func makeCorrectButtonsSet(_ index: Int,
-                              _ array: [Question],
-                              _ optionA: UIButton,
-                              _ optionB: UIButton,
-                              _ optionC: UIButton,
-                              _ optionD: UIButton) {
+                               _ array: [Question],
+                               _ optionA: UIButton,
+                               _ optionB: UIButton,
+                               _ optionC: UIButton,
+                               _ optionD: UIButton) {
         
         var tempArrayForShuffeling: [String] = []
         var arrayWithShuffledAnswers: [String] = []
@@ -69,7 +69,7 @@ class AnswerButtonsView: UIView {
                 correctAnswerNewPosition = i + 1
             }
         }
-    
+        
         /// Устанавливаем все перемешанные ответы на новые позиции
         func putShuffledAnswersToNewPositions(_ button: UIButton,
                                               _ index: Int) {
@@ -102,15 +102,25 @@ class AnswerButtonsView: UIView {
     /// Работает как на сокращение количества, так и на увеличение
     func animationChanging(_ returnVisibility: Bool, _ button: UIButton) {
         if returnVisibility {
-            UIView.animate( withDuration: 0.2, delay: 0, usingSpringWithDamping: 1,
-                            initialSpringVelocity: 0, options: [], animations: {
-                                button.isHidden = false
-            })
+            UIView.animate(
+                withDuration: 0.2,
+                delay: 0,
+                usingSpringWithDamping: 1,
+                initialSpringVelocity: 0,
+                options: [],
+                animations: {
+                    button.isHidden = false
+                })
         } else {
-            UIView.animate( withDuration: 0.2, delay: 0, usingSpringWithDamping: 1,
-                            initialSpringVelocity: 0, options: [], animations: {
-                                button.isHidden = true
-            })
+            UIView.animate(
+                withDuration: 0.2,
+                delay: 0,
+                usingSpringWithDamping: 1,
+                initialSpringVelocity: 0,
+                options: [],
+                animations: {
+                    button.isHidden = true
+                })
         }
     }
     

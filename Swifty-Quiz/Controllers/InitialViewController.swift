@@ -113,11 +113,17 @@ extension InitialViewController {
 	/// Показываем или скрываем кнопку "продолжить"
 	func updateContinueButton() {
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-			if self.continueGameButton.isHidden == true { SoundPlayer.shared.playSound(sound: .showContinueButton) }
+            
+			if self.continueGameButton.isHidden == true {
+                SoundPlayer.shared.playSound(sound: .showContinueButton)
+            }
 			self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
 			self.continueGameButton.isHidden = false
 		} else {
-			if self.continueGameButton.isHidden == false { SoundPlayer.shared.playSound(sound: .hideContinueButton) }
+            
+			if self.continueGameButton.isHidden == false {
+                SoundPlayer.shared.playSound(sound: .hideContinueButton)
+            }
 			self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
 			self.continueGameButton.isHidden = true
 		}
@@ -215,13 +221,17 @@ extension InitialViewController {
 
 
 // MARK: Выполнение функций делегата
-extension InitialViewController:    GameViewControllerDelegate,
-									TopicViewControllerDelegate,
-									RecordsViewControllerDelegate,
-									SettingsViewControllerDelegate{
+extension InitialViewController: GameViewControllerDelegate,
+                                 TopicViewControllerDelegate,
+                                 RecordsViewControllerDelegate,
+                                 SettingsViewControllerDelegate {
 
-	func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double,
-					topic: String, helpCounter: Int, playedNum: Int) {
+	func didEndGame(result: Int,
+                    totalQuestion: Int,
+                    percentOfCorrect: Double,
+					topic: String,
+                    helpCounter: Int,
+                    playedNum: Int) {
 		lastTopic.text = "Категория: \(topic)"
 		totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
 		lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
@@ -230,14 +240,17 @@ extension InitialViewController:    GameViewControllerDelegate,
 	func updateInitialView() {
 		updateContinueButton()
 	}
+    
 	func selectedCategory() {
 		updateLastGameLabel()
 		selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
 	}
+    
 	func refreshLastGameInfo() {
 		updateLastGameInfo()
 		updateLastGameLabel()
 	}
+    
 	func showReviewRequest() {
 		let recordsNumber = Game.shared.records.count
 		if recordsNumber == 10 || recordsNumber == 30 || recordsNumber == 50

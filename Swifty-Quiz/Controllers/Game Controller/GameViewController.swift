@@ -5,7 +5,12 @@
 import UIKit
 
 protocol GameViewControllerDelegate: AnyObject {
-    func didEndGame(result: Int, totalQuestion: Int, percentOfCorrect: Double, topic: String, helpCounter: Int, playedNum: Int)
+    func didEndGame(result: Int,
+                    totalQuestion: Int,
+                    percentOfCorrect: Double,
+                    topic: String,
+                    helpCounter: Int,
+                    playedNum: Int)
 	func showReviewRequest()
     func updateInitialView()
 }
@@ -271,23 +276,27 @@ extension GameViewController {
             }
         }
         
-        delegate?.didEndGame(   result: score,
-                                totalQuestion: localQuestionSet.count,
-                                percentOfCorrect: updatePercentage(),
-                                topic: SelectedTopic.shared.topic.topicName,
-                                helpCounter: helpCounter,
-                                playedNum: currentQuestionIndex)
+        delegate?.didEndGame(
+            result: score,
+            totalQuestion: localQuestionSet.count,
+            percentOfCorrect: updatePercentage(),
+            topic: SelectedTopic.shared.topic.topicName,
+            helpCounter: helpCounter,
+            playedNum: currentQuestionIndex
+        )
 
-        let record = Record(    date: Date(),
-                                score: score,
-                                topic: SelectedTopic.shared.topic.topicName,
-                                totalQuestion: localQuestionSet.count,
-                                percentOfCorrectAnswer: updatePercentage(),
-                                helpCounter: helpCounter,
-                                playedNum: currentQuestionIndex,
-                                continueGameStatus: continueStatus,
-                                gameHistory: gameHistory,
-                                helpFlag: weDidTakeHelp)
+        let record = Record(
+            date: Date(),
+            score: score,
+            topic: SelectedTopic.shared.topic.topicName,
+            totalQuestion: localQuestionSet.count,
+            percentOfCorrectAnswer: updatePercentage(),
+            helpCounter: helpCounter,
+            playedNum: currentQuestionIndex,
+            continueGameStatus: continueStatus,
+            gameHistory: gameHistory,
+            helpFlag: weDidTakeHelp
+        )
         
         // Записываем рекорд, или подменяем прошлый, если продолжали
         if weContinueLastGame {
@@ -304,9 +313,12 @@ extension GameViewController {
         /// Отдельно сохраняется исходный - для последующих игр и возможных изменений настроек
         /// При продолжении игры, в коде выше загружается именно локальный, на котором остановились
         SelectedTopic.shared.saveShuffledSet(localQuestionSet)
-        SelectedTopic.shared.saveQuestionSet(SelectedTopic.shared.topic.questionSet,
-                                            topic: SelectedTopic.shared.topic.topicName,
-                                            tag: SelectedTopic.shared.topic.topicTag)
+        
+        SelectedTopic.shared.saveQuestionSet(
+            SelectedTopic.shared.topic.questionSet,
+            topic: SelectedTopic.shared.topic.topicName,
+            tag: SelectedTopic.shared.topic.topicTag
+        )
     }
     
     func showAlert(title: String, message: String) {
@@ -355,12 +367,16 @@ extension GameViewController {
                 
                 /// Сохраняем вопрос в историю после того, как взяли подсказку
                 /// Так же как и подсказку - записываем всего один раз
-                gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
-                                               correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
-                                               userAnswer: "Подсказка",
-                                               questionId: localQuestionSet[currentQuestionIndex].questionId,
-											   image: localQuestionSet[currentQuestionIndex].image,
-											   helpText: localQuestionSet[currentQuestionIndex].helpText))
+                gameHistory.append(
+                    GameHistory(
+                        question: localQuestionSet[currentQuestionIndex].question[0],
+                        correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                        userAnswer: "Подсказка",
+                        questionId: localQuestionSet[currentQuestionIndex].questionId,
+                        image: localQuestionSet[currentQuestionIndex].image,
+                        helpText: localQuestionSet[currentQuestionIndex].helpText
+                    )
+                )
             }
             helpCounterLabel.text = "\(helpCounter)"
             weDidTakeHelp = true
@@ -383,6 +399,7 @@ extension GameViewController: HelpViewControllerDelegate {
             }
         }
     }
+    
     func refreshTappedAnswerStatus() {
         self.answerPressed = false
     }
