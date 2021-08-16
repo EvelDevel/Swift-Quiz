@@ -66,7 +66,6 @@ class ShadowsHelper {
         button.layer.shadowRadius = 4
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.position = button.center
-
     }
     
     /// Черная тень для UIView
