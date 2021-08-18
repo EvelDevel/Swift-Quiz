@@ -58,8 +58,9 @@ class VCLifecycleSet {
                      optionB: "Перед viewDidLoad()",
                      optionC: "Перед viewWillLayoutSubviews()",
                      optionD: "",
-                     questionId: 567399116,
+                     questionId: 303360430,
                      helpText: "Все свойства и аутлеты устанавливаются перед loadView(), после awakeFromNib()."),
+            
             
             // MARK: loadView()
             
@@ -70,7 +71,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 615454268,
+                     questionId: 485945897,
                      helpText: "Согласно документации Apple, вам нежелательно обращаться к этому методу самостоятельно. View controller вызывает этот метод когда запрашивается его view property, но в данный момент оно пустое (nil). Он загружает или создает вью и присваивает его view property этого контроллера. Желательно не трогать loadView(), особенно если вью создается через .xib или storyboard (если вы используете Interface Builder для создания своих вьюх и инициализации вью контроллера, не оверрайдите (override) этот метод)."),
             
             Question(question: ["Какая основная задача у метода loadView()?",
@@ -195,18 +196,119 @@ class VCLifecycleSet {
                      questionId: 589318428,
                      helpText: "Если вы переписываете метод viewWillAppear(), в тот или иной момент вы должны будете обратиться к суперклассу super.viewWillAppear(), так же как и у метода viewDidLoad и многих других."),
             
+            
+            // MARK: updateViewConstraints()
+            
+            Question(question: ["В какой момент мы должны обращаться к super.updateViewConstraints() в переопределяемой реализации updateViewConstraints()?"],
+                     image: "",
+                     optionA: "В конце",
+                     optionB: "В начале",
+                     optionC: "Без разницы",
+                     optionD: "",
+                     questionId: 758933900,
+                     helpText: "Вызов данного метода происходит перед методом viewWillLayoutSubviews(), в конце переопределенного метода вы обязательно должны обращаться к суперклассу super.updateViewConstraints()."),
+            
+            Question(question: ["Какой из методов вызовется в первую очередь?"],
+                     image: "",
+                     optionA: "updateViewConstraints()",
+                     optionB: "viewWillLayoutSubviews()",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 890793497,
+                     helpText: "Вызов updateViewConstraints() происходит перед методом viewWillLayoutSubviews()."),
+            
+            
             // MARK: viewWillLayoutSubviews()
+            
+            Question(question: ["Выполняет ли дефолтная реализация метода viewWillLayoutSubviews() какие-либо действия с сабвью?"],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 819333472,
+                     helpText: "Каждый раз, когда размеры вью меняются (или мы меняем ориентацию экрана), viewWillLayoutSubviews() корректирует размеры и положение своих сабвью. Вы можете переписать этот метод, чтобы вносить изменения до того, как вью пересчитает и расположит сабвью. Дефолтная реализация не выполняет никаких действий."),
+            
+            Question(question: ["Будет ли вызван метод viewWillLayoutSubviews() после изменения ориентации экрана?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 642683692,
+                     helpText: "Каждый раз, когда размеры вью меняются (или мы меняем ориентацию экрана), viewWillLayoutSubviews() корректирует размеры и положение своих сабвью. При изменении ориентации экрана этот метод будет вызываться сразу после viewWillTransition()."),
+            
+            Question(question: ["При вызове метода viewWillLayoutSubviews() мы уже имеем доступ к геометрическим данным загружаемого экрана?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 327853033,
+                     helpText: "После вызова метода viewWillAppear устанавливаются границы вью, и геометрические данные становятся доступным к этапу viewWillLayoutSubviews. Между методами viewWillLayoutSubviews и viewDidLayoutSubviews происходит AutoLayout, оба этих метода направлены на то, чтобы проконтролировать, выполнились ли правильно расстановка всех вью и сабвью."),
+            
+            Question(question: ["Если мы не используем Autolayout, в каком методе жизненного цикла мы можем скорректировать положение и размеры наших сабвью?"],
+                     image: "",
+                     optionA: "viewWillLayoutSubviews",
+                     optionB: "viewDidLayoutSubviews",
+                     optionC: "viewWillAppear",
+                     optionD: "viewWillDisappear",
+                     questionId: 968252448,
+                     helpText: "Если вы не используете autolayout, то подходящим местом для работы с вашими вью и сабвью будет метод viewWillLayoutSubviews, который, как раз, вызывается перед тем как происходит рассчет и расстановка всей иерархии вью на экране."),
+            
+            Question(question: ["Должны ли мы обращаться к super.viewWillLayoutSubviews внутри переопределяемой реализации viewWillLayoutSubviews()?"],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 921715652,
+                     helpText: "В данном методе (viewWillLayoutSubviews) обращение к своему суперклассу не требуется, поэтому писать super.viewWillLayoutSubviews() не нужно."),
              
+            
             // MARK: viewDidLayoutSubviews()
             
+            Question(question: ["Выполняет ли дефолтная, не переопределенная реализация метода viewDidLayoutSubviews() какие-либо действия с сабвью?"],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 828879628,
+                     helpText: "Дефолтная реализация viewDidLayoutSubviews() не выполняет никаких действий, поэтому обращаться к super.viewDidLayoutSubviews() не нужно."),
+            
+            Question(question: ["Должны ли мы обращаться к супер классу super.viewDidLayoutSubviews()?"],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да, в конце метода",
+                     optionC: "Да, в начале метода",
+                     optionD: "",
+                     questionId: 192057514,
+                     helpText: "Дефолтная реализация viewDidLayoutSubviews() не выполняет никаких действий, поэтому обращаться к super.viewDidLayoutSubviews() не нужно."),
+            
+            Question(question: ["На каком этапе жизненного цикла мы можем сохранить финальное положение объекта? Например: положение скролл вью?",
+                                "На каком этапе жизненного цикла мы можем сохранить финальное положение объекта? Например: положение ячейки в таблице?"],
+                     image: "",
+                     optionA: "viewDidLayoutSubviews()",
+                     optionB: "viewWillLayoutSubviews()",
+                     optionC: "viewDidLoad()",
+                     optionD: "",
+                     questionId: 670969436,
+                     helpText: "При вызове этого метода мы уже можем быть уверены, что вью корректно выставило положение всех своих потомков. Именно здесь мы можем сохранять последнее состояние каких-то объектов, например: положение скролл вью, или положение ячейки в таблице."),
+            
+            
             // MARK: viewDidAppear()
+            
             
             // MARK: viewWillTransition()
             // Выполняется при развороте экрана (смена ориентации)
             
+            
             // MARK: viewWillDisappear()
             
+            
             // MARK: viewDidDisappear()
+            
             
             // MARK: deinit()
         ]
@@ -228,8 +330,6 @@ class VCLifecycleSet {
  viewDidLoad
  viewWillAppear
  updateViewConstraints
- viewWillLayoutSubviews
- viewDidLayoutSubviews
  viewWillLayoutSubviews
  viewDidLayoutSubviews
  viewDidAppear
