@@ -5,20 +5,26 @@
 import Foundation
 
 class Game {
+    
     static let shared = Game()
+    
     private let recordCaretaker = RecordsCaretaker()
     private let settingsCaretaker = SettingsCaretaker()
     private var weShowedAlert: Bool = false
     
     private(set) var settings: Settings {
         didSet {
-            settingsCaretaker.saveSettings(settings: self.settings)
+            settingsCaretaker.saveSettings(
+                settings: self.settings
+            )
         }
     }
     
     private(set) var records: [Record] = [] {
         didSet {
-            recordCaretaker.saveRecordsList(records: self.records)
+            recordCaretaker.saveRecordsList(
+                records: self.records
+            )
         }
     }
     
@@ -31,12 +37,15 @@ class Game {
 
 // MARK: Работа с подсказкой по незавершенной игре
 extension Game {
+    
     func showSettingsAlertStatus() -> Bool {
         return self.weShowedAlert
     }
+    
     func showTopicAlertStatus() -> Bool {
         return self.weShowedAlert
     }
+    
     func showNewGameAlertStatus() -> Bool {
         return self.weShowedAlert
     }
@@ -49,19 +58,24 @@ extension Game {
 
 // MARK: Сохранение, удаление, редактирование рекордов
 extension Game {
+    
     func addRecord(_ record: Record) {
         self.records.insert(record, at: 0)
     }
+    
     func replaceRecord(_ record: Record) {
         self.records.remove(at: 0)
         self.records.insert(record, at: 0)
     }
+    
     func clearRecords() {
         self.records = []
     }
+    
     func deleteOneRecord(index: Int) {
         self.records.remove(at: index)
     }
+    
     func changeContinueStatus() {
         if self.records.count != 0 {
             var lastRecord = self.records[0]
@@ -75,6 +89,7 @@ extension Game {
 
 // MARK: Сохранение настроек
 extension Game {
+    
     func saveSettings(_ settings: Settings) {
         self.settings = settings
     }
@@ -83,6 +98,7 @@ extension Game {
 
 // MARK: Установка значений настроек
 extension Game {
+    
     /// Настройки: Порядок вопросов в теме
     func setQuestionOrder(setting: QuestionOrder) {
         if setting == .random {
@@ -91,6 +107,7 @@ extension Game {
             self.settings.questionOrder = 0
         }
     }
+    
     /// Настройки: Смена формулировок вопроса
     func setQuestionTextShuffeling(setting: QuestionText) {
         if setting == .random {
@@ -99,6 +116,7 @@ extension Game {
             self.settings.questionTextShuffeling = 0
         }
     }
+    
     /// Настройки: Помощь после неправильного ответа
     func setHelpAfterWrong(setting: HelpAfterWrong) {
         if setting == .help {
@@ -107,6 +125,7 @@ extension Game {
             self.settings.helpAfterWrong = 0
         }
     }
+    
     /// Настройки: Звук
     func setSound(setting: Sound) {
         if setting == .off {
@@ -115,6 +134,7 @@ extension Game {
             self.settings.sound = 0
         }
     }
+    
     /// Настройки: Смена вопросов после подсказки
     func setChangeAfterHelp(setting: ChangeAfterHelp) {
         if setting == .dontChange {
