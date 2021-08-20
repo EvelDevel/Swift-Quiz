@@ -28,8 +28,8 @@ class VCLifecycleSet {
                                 "На одном из этих этапов мы увидим полностью загруженный экран, на каком?"],
                      image: "Lifecycle01",
                      optionA: "Appeared",
-                     optionB: "Dissapearing",
-                     optionC: "Dissapeared",
+                     optionB: "Disappearing",
+                     optionC: "Disappeared",
                      optionD: "Appearing",
                      questionId: 615454268,
                      helpText: "Правильный ответ: Appeared. После вызова viewDidAppear: Этот метод вызывается после того, как вью отобразилось на экране. Обычно в нем сохраняют данные, запускают анимацию, начинают воспроизведение видео или звука или начинают получение данных по сетевым запросам."),
@@ -60,6 +60,18 @@ class VCLifecycleSet {
                      optionD: "",
                      questionId: 303360430,
                      helpText: "Все свойства и аутлеты устанавливаются перед loadView(), после awakeFromNib()."),
+            
+            
+            // MARK: awakeFromNib()
+            
+            Question(question: ["Какой метод не входит в жизненный цикл вью контроллера, но фактически вызывается после инициализации контроллера через storyboard?"],
+                     image: "",
+                     optionA: "awakeFromNib()",
+                     optionB: "loadView()",
+                     optionC: "updateViewConstraints()",
+                     optionD: "",
+                     questionId: 405126932,
+                     helpText: "awakeFromNib не является частью ViewController Lifecycle, ну нужно понимать что он вызывается сразу после инициализации, перед подготовкой перехода у контроллера, который задан с помощью storyboard."),
             
             
             // MARK: loadView()
@@ -163,7 +175,7 @@ class VCLifecycleSet {
                      image: "",
                      optionA: "вью станут видимыми",
                      optionB: "все вью загружены в память",
-                     optionC: "ваш контроллер будет деинициализирован",
+                     optionC: "вью будет удалено из иерархии",
                      optionD: "",
                      questionId: 264890650,
                      helpText: "Этот метод вызывается каждый раз перед тем, как ваши вью станут видимыми, а так же до конфигурации анимации. На этом этапе наши вью уже имеют внешний размер, но ориентация экрана еще не установлена. Вы можете переписать (override) этот метод, чтобы реализовать свои задачи по тонкой настройке ваших вью и сабвью, которые нужно сделать без анимации (спрятать те или иные поля, или отключить какие-либо действия перед тем, как вью станет видимым)."),
@@ -350,7 +362,7 @@ class VCLifecycleSet {
             Question(question: ["Если мы с текущего контроллера презентуем следующий через .popover / .pageSheet modalPresentationStyle, какой метод жизненного цикла точно будет вызван?"],
                      image: "",
                      optionA: "updateViewConstraints()",
-                     optionB: "viewWillDissapear()",
+                     optionB: "viewWillDisappviewWillDisappearear()",
                      optionC: "viewDidDisappear()",
                      optionD: "viewWillAppear()",
                      questionId: 254078202,
@@ -388,38 +400,79 @@ class VCLifecycleSet {
                      helpText: "Если вы переопределяете метод viewWillTransition(), обязательно вызывайте суперкласс этого метода в тот или иной момент переопределения, поскольку UIKit должен корректным образом передать дальше по цепочке все размеры."),
             
             
+            // MARK: didReceiveMemoryWarning()
+            
+            Question(question: ["Этот метод будет вызываться в случае нехватки памяти"],
+                     image: "",
+                     optionA: "didReceiveMemoryWarning()",
+                     optionB: "updateViewConstraints()",
+                     optionC: "viewWillTransition()",
+                     optionD: "",
+                     questionId: 384118327,
+                     helpText: "В случае нехватки памяти срабатывает метод didReceiveMemoryWarning() (его можно искуственно вызвать через симулятор - Debug / Simulate Memory Warning). В нем можно обнулять объекты, которые не используются, предупредить пользователя, что приложение будет закрыто и попробовать сохранить какие-то данные."),
+            
+            
+            
             // MARK: viewWillDisappear()
+            
+            Question(question: ["viewWillDessapear вызывается перед удалением вью из иерархии вью контроллера. Так ли это?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 309737988,
+                     helpText: "Метод viewWillDisappear() вызывается перед тем, как вью уходит с экрана (удаляется из иерархии вью контроллера). Здесь можно выполнять resignFirstResponder(), ставят на паузу выполняемые действия, можно откатить все изменения, которые были внесены в viewWillAppear (ориентация и стиль статус бара), можно почистить данные, обнулить кэш. Метод требует обязательного обращения к суперклассу super.viewWillDisappear()."),
+            
+            Question(question: ["Требует ли viewWillDisappear обязательного обращения к суперклассу при переопределении?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 184565849,
+                     helpText: "viewWillDisappear() требует обязательного обращения к суперклассу super.viewWillDisappear()."),
             
             
             // MARK: viewDidDisappear()
             
+            Question(question: ["Какой метод говорит нам о том, что вью было успешно удалено из иерархии и больше не отображается на экране?"],
+                     image: "",
+                     optionA: "viewDidDisappear",
+                     optionB: "viewWillDisappear",
+                     optionC: "viewWillTransition",
+                     optionD: "",
+                     questionId: 248289859,
+                     helpText: "Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер). Разница с viewWillDisappear в том, что первый вызывается до анимации экрана, а второй - после. В этом методе так же необходимо обращаться к суперклассу super.viewDidDisappear."),
+            
+            Question(question: ["Требует ли viewDidDisappear обязательного обращения к суперклассу при переопределении?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 239282554,
+                     helpText: "Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер). Разница с viewWillDisappear в том, что первый вызывается до анимации экрана, а второй - после. В этом методе так же необходимо обращаться к суперклассу super.viewDidDisappear."),
             
             // MARK: deinit()
+            
+            Question(question: ["Какой метод жизненного цикла вызывается последним, когда мы уходим с контроллера?"],
+                     image: "",
+                     optionA: "deinit()",
+                     optionB: "viewDidDisappear()",
+                     optionC: "viewWillDisappear()",
+                     optionD: "",
+                     questionId: 329432052,
+                     helpText: "Деинициализаторы вызываются автоматически прямо перед тем как освобождается экземпляр (мы закрыли наш контроллер). У вас нет возможности вызывать деинициализатор самостоятельно. Деинициализаторы суперкласса наследуются их подклассами, и деинициализаторы суперкласса вызываются автоматически в конце реализации деинициализатора подкласса. Деинициализаторы суперклассов всегда вызываются, даже если подкласс не имеет своего деинициализатора."),
+            
+            Question(question: ["Может ли деинициализатор (deinit) получить доступ к свойствам экземпляра перед его освобождением?"],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 658675427,
+                     helpText: "Так как экземпляр не освобождается до тех пор пока не будет вызван деинициализатор, то деинициалиатор может получить доступ ко всем свойствам экземпляра, который он вызывает, и может изменить свое поведение, основываясь на этих свойствах."),
         ]
     }
 }
-
-/**
- awakeFromNib
- property did set
- outlet did set
- loadView
- viewDidLoad
- viewWillAppear
- updateViewConstraints
- viewWillLayoutSubviews
- viewDidLayoutSubviews
- viewDidAppear
- ---
- viewWillTransition
- viewWillLayoutSubviews
- viewDidLayoutSubviews
- ---
- viewWillTransition
- viewWillLayoutSubviews
- viewDidLayoutSubviews
- viewWillDisappear
- ---
- viewDidDisappear
- deinitialize view controller
-*/
