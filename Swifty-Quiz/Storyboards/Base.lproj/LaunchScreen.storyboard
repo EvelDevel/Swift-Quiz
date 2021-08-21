@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="qOO-lw-tZL">
-                                <rect key="frame" x="55" y="372" width="304" height="162"/>
+                                <rect key="frame" x="55" y="374" width="304" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qOO-lw-tZL" secondAttribute="height" multiplier="15:8" id="fJI-qk-QRL"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qOO-lw-tZL" secondAttribute="trailing" constant="35" id="OTP-gV-qVd"/>
-                            <constraint firstItem="qOO-lw-tZL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XDE-RC-eVY"/>
+                            <constraint firstItem="qOO-lw-tZL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="2" id="XDE-RC-eVY"/>
                             <constraint firstItem="qOO-lw-tZL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="35" id="qut-vT-Ga5"/>
                         </constraints>
                     </view>
