@@ -113,7 +113,7 @@ extension CategoriesCell {
     /// Загружаем пачку вопросов в наш синглтон массив по нажатию на тему
     func addQuestionsToArray(sender: UIButton) {
         var newQuestionSet: [Question] = []
-        let position = SelectedTopic.shared.topic.topicTag
+        let currentTag = SelectedTopic.shared.topic.topicTag
         
         switch sender.tag {
 
@@ -309,19 +309,8 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Жизненный цикл UIViewController", tag: 61)
             
         default:
-            /// Последнюю выбранную категорию делаем "активной"
-            switch position {
-            case 0...9:
-                superSets[position].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 10...48:
-                guide[position-11].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 49...58:
-                patterns[position-49].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            case 59...68:
-                other[position-59].backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            
-            default:
-                print("default case in addQuestionsToArray() in CategoriesCell")
+            allButtons.forEach { button in
+                button.backgroundColor = button.tag - 1 == currentTag ? #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             }
         }
     }
