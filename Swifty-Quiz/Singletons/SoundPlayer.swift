@@ -26,8 +26,14 @@ class SoundPlayer {
     private init() { }
 
     func playSound(sound: Sounds) {
+        
+        /// Фикс для симуляторов ниже 13.0 - сильные лаги, если оставить AVAudioPlayer
         #if targetEnvironment(simulator)
+        if #available(iOS 13, *) {
+            
+        } else {
             return
+        }
         #endif
         
         if Game.shared.settings.sound == 0 {

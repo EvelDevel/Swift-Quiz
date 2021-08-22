@@ -39,7 +39,7 @@ class HelpViewController: UIViewController {
     }
     
     /// Устанавливаем корректную теорию в подсказку
-    func setHelp() {
+    private func setHelp() {
         for question in SelectedTopic.shared.topic.questionSet {
             if question.questionId == questionID {
                 helpTextLabel.text = question.helpText
@@ -53,7 +53,7 @@ class HelpViewController: UIViewController {
 extension HelpViewController {
     
     /// Сворачиваем подсказку по клику на пустое место контроллера
-    func addDismissOnClick() {
+    private  func addDismissOnClick() {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
         gestureRecognizer.cancelsTouchesInView = false
         gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
@@ -62,7 +62,8 @@ extension HelpViewController {
     @objc func close() {
         dismissing()
     }
-    func dismissing() {
+    
+    private func dismissing() {
         dismiss(animated: true)
     }
     
@@ -77,10 +78,11 @@ extension HelpViewController {
 // MARK: User Interface
 extension HelpViewController {
     
-    func makeThinSeparator() {
+    private func makeThinSeparator() {
         separatorHeight.constant = 1.0 / UIScreen.main.scale
     }
-    func setFontSize() {
+    
+    private func setFontSize() {
 		let width = UIScreen.main.bounds.size.width
         
 		if width <= 320 {
@@ -89,7 +91,8 @@ extension HelpViewController {
             helpTextLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
         }
     }
-    func addShadows() {
+    
+    private func addShadows() {
         let shadows = ShadowsHelper()
         shadows.addHelpShadows(button: backInGameButton, view: helpView)
     }
