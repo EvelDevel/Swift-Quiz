@@ -9,6 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--AboutProject-->
+        <scene sceneID="teD-ad-SYY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutProject" id="EZ7-oU-xxJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7VO-MM-xXd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQI-we-mqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="-179"/>
+        </scene>
         <!--Launch View Controller-->
         <scene sceneID="K1c-Td-h8m">
             <objects>
@@ -18,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
-                                <rect key="frame" x="55" y="371" width="304" height="162"/>
+                                <rect key="frame" x="55" y="367" width="304" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jdu-OT-CUg" secondAttribute="height" multiplier="15:8" id="f1B-Qc-8Ag"/>
                                 </constraints>
@@ -27,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="0cL-bL-Twe"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jdu-OT-CUg" firstAttribute="centerY" secondItem="0cL-bL-Twe" secondAttribute="centerY" constant="-1" id="BGz-ma-wsP"/>
+                            <constraint firstItem="Jdu-OT-CUg" firstAttribute="centerY" secondItem="IWE-bf-pj2" secondAttribute="centerY" id="BGz-ma-wsP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jdu-OT-CUg" secondAttribute="trailing" constant="35" id="oET-P7-kNP"/>
                             <constraint firstItem="Jdu-OT-CUg" firstAttribute="leading" secondItem="IWE-bf-pj2" secondAttribute="leadingMargin" constant="35" id="vwl-ge-5mV"/>
                         </constraints>
@@ -36,231 +46,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfc-hF-Pqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-482" y="112"/>
-        </scene>
-        <!--About Project Controller-->
-        <scene sceneID="bfT-QU-NfU">
-            <objects>
-                <viewController id="849-ZK-r5e" customClass="AboutProjectController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kwm-od-X7d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5F-vv-Yp4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95544545709828077" green="0.95880379422371054" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О проекте" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObP-s4-3a8">
-                                <rect key="frame" x="16" y="50" width="348" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92B-HM-6qy">
-                                <rect key="frame" x="16" y="199.5" width="382" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-gd-l2W" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
-                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Автор">
-                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="author:" destination="849-ZK-r5e" eventType="touchUpInside" id="GjP-kr-W87"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-yO-hFQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="134" height="40"/>
-                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Дизайнер">
-                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="design:" destination="849-ZK-r5e" eventType="touchUpInside" id="LW4-9U-LVA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-nK-7s4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="234" y="0.0" width="148" height="40"/>
-                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Редактор">
-                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="corrector:" destination="849-ZK-r5e" eventType="touchUpInside" id="MeB-jT-dek"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ADP-aB-zJx"/>
-                                </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-sQ-Zj7">
-                                <rect key="frame" x="16" y="89" width="382" height="95.5"/>
-                                <string key="text">Мое приложение направленно на укрепление знаний по языку Swift у начинающих iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. </string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-Py-QwI">
-                                <rect key="frame" x="16" y="340.5" width="382" height="90"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-WO-fgw">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-sd-EN0" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="40"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Refactoring Guru">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="refactorGuru:" destination="849-ZK-r5e" eventType="touchUpInside" id="lP4-TS-KmK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-VM-edI" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="172.5" y="0.0" width="102" height="40"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Swift Book">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="swiftbookRu:" destination="Hx6-JN-pvA" eventType="touchUpInside" id="S8q-Gq-K6c"/>
-                                                    <action selector="swiftbookRu:" destination="849-ZK-r5e" eventType="touchUpInside" id="VcS-uR-sfg"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-Gn-Yrk" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="284.5" y="0.0" width="97.5" height="40"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Swift Me">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="swiftMe:" destination="849-ZK-r5e" eventType="touchUpInside" id="kDw-kD-P6n"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="E82-Df-Ut8"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-Mm-JQE">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-vk-WCk" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Telegram-канал &quot;Библиотека разработчика&quot;">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="telegramLibrary:" destination="849-ZK-r5e" eventType="touchUpInside" id="gf9-rR-1tr"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="f81-Xu-Ygj"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Kn-E0Y">
-                                <rect key="frame" x="16" y="259.5" width="382" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="FXq-Kz-m6X"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0h-G5-ZuO">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Ut7-Ku-XMA"/>
-                                    <constraint firstAttribute="width" constant="70" id="zQJ-57-2t8"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="10" minY="14" maxX="40" maxY="2"/>
-                                <state key="normal" image="ChevroneBigYellow"/>
-                                <state key="highlighted" image="ChevroneBigDarkYellow"/>
-                                <connections>
-                                    <action selector="dismissAbout:" destination="849-ZK-r5e" eventType="touchUpInside" id="Dam-Zj-yZP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="eID-hT-29a"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="FPK-sQ-Zj7" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="15R-ks-aVX"/>
-                            <constraint firstItem="ObP-s4-3a8" firstAttribute="top" secondItem="eID-hT-29a" secondAttribute="top" constant="50" id="7CZ-ci-ohm"/>
-                            <constraint firstItem="ibr-Py-QwI" firstAttribute="top" secondItem="FPK-sQ-Zj7" secondAttribute="bottom" constant="156" id="IXS-Is-Sn8"/>
-                            <constraint firstItem="FPK-sQ-Zj7" firstAttribute="top" secondItem="ObP-s4-3a8" secondAttribute="bottom" constant="15" id="Kpm-O0-0Ny"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="s4P-Kn-E0Y" secondAttribute="trailing" constant="16" id="PCl-th-air"/>
-                            <constraint firstItem="ObP-s4-3a8" firstAttribute="top" secondItem="f0h-G5-ZuO" secondAttribute="bottom" constant="15" id="XMF-ev-PYf"/>
-                            <constraint firstItem="s4P-Kn-E0Y" firstAttribute="top" secondItem="92B-HM-6qy" secondAttribute="bottom" constant="20" id="Xlc-sh-R5a"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="ibr-Py-QwI" secondAttribute="trailing" constant="16" id="bXN-Bd-1bM"/>
-                            <constraint firstItem="ObP-s4-3a8" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="dFR-PV-9Cu"/>
-                            <constraint firstItem="ibr-Py-QwI" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="eQi-pK-GS3"/>
-                            <constraint firstItem="92B-HM-6qy" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="ggR-kI-VaA"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="FPK-sQ-Zj7" secondAttribute="trailing" constant="16" id="iHC-5i-cYa"/>
-                            <constraint firstItem="92B-HM-6qy" firstAttribute="top" secondItem="FPK-sQ-Zj7" secondAttribute="bottom" constant="15" id="ic0-KV-lcB"/>
-                            <constraint firstItem="s4P-Kn-E0Y" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" constant="16" id="raT-0w-KQk"/>
-                            <constraint firstItem="f0h-G5-ZuO" firstAttribute="leading" secondItem="eID-hT-29a" secondAttribute="leading" id="vFI-Kg-MRb"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="ObP-s4-3a8" secondAttribute="trailing" constant="50" id="w43-4e-kNl"/>
-                            <constraint firstItem="eID-hT-29a" firstAttribute="trailing" secondItem="92B-HM-6qy" secondAttribute="trailing" constant="16" id="z7P-Xm-jQP"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ayr-bo-qIi"/>
-                    <connections>
-                        <outlet property="backButton" destination="f0h-G5-ZuO" id="iQ8-a6-ein"/>
-                        <outlet property="titleHeight" destination="7CZ-ci-ohm" id="u9Y-VS-JWV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A3J-8N-8Dc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Hx6-JN-pvA" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1222.5" y="-638.02816901408448"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="crJ-bM-xcy">
@@ -291,7 +76,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToAbout:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rXK-s6-XMj"/>
-                                    <segue destination="849-ZK-r5e" kind="show" id="9nc-dD-ESJ"/>
+                                    <segue destination="EZ7-oU-xxJ" kind="show" id="jZi-Zc-Bsw"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
@@ -515,13 +300,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
-                                <rect key="frame" x="162" y="830" width="90" height="12"/>
+                                <rect key="frame" x="162" y="820" width="90" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
-                                <rect key="frame" x="311" y="816" width="40" height="40"/>
+                                <rect key="frame" x="311" y="806" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8yO-NU-6Oc"/>
@@ -550,7 +335,7 @@
                             <constraint firstItem="rPr-C7-FGY" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="30" id="XHx-hL-pFL"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="kaM-Au-o8t" firstAttribute="trailing" secondItem="mO1-NM-9Qp" secondAttribute="trailing" id="ij7-zK-GlG"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="20" id="uLq-MP-k4C"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="30" id="uLq-MP-k4C"/>
                             <constraint firstItem="abk-Hi-kpA" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="w98-eo-kLd"/>
                         </constraints>
                     </view>
@@ -1248,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222.5" y="111.97183098591549"/>
+            <point key="canvasLocation" x="2141" y="233"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="wvl-AF-KOl">
@@ -1345,7 +1130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEo-4j-NCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="112"/>
+            <point key="canvasLocation" x="2938" y="233"/>
         </scene>
         <!--History Hint Controller-->
         <scene sceneID="I8P-R4-CYP">
@@ -1442,29 +1227,6 @@
             <point key="canvasLocation" x="300" y="2452"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="7gx-VM-edI">
-            <size key="intrinsicContentSize" width="61" height="27"/>
-        </designable>
-        <designable name="LIp-Gn-Yrk">
-            <size key="intrinsicContentSize" width="50" height="27"/>
-        </designable>
-        <designable name="fqR-yO-hFQ">
-            <size key="intrinsicContentSize" width="67" height="29"/>
-        </designable>
-        <designable name="ggV-sd-EN0">
-            <size key="intrinsicContentSize" width="97" height="27"/>
-        </designable>
-        <designable name="gqf-nK-7s4">
-            <size key="intrinsicContentSize" width="64" height="29"/>
-        </designable>
-        <designable name="jqC-gd-l2W">
-            <size key="intrinsicContentSize" width="40" height="29"/>
-        </designable>
-        <designable name="zsk-vk-WCk">
-            <size key="intrinsicContentSize" width="261" height="27"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="AS6-ki-vnO"/>
     </inferredMetricsTieBreakers>

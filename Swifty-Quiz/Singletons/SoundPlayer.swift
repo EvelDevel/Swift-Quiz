@@ -24,8 +24,12 @@ class SoundPlayer {
     var player = AVAudioPlayer()
     
     private init() { }
-    
+
     func playSound(sound: Sounds) {
+        #if targetEnvironment(simulator)
+            return
+        #endif
+        
         if Game.shared.settings.sound == 0 {
             
             var name: String = ""
