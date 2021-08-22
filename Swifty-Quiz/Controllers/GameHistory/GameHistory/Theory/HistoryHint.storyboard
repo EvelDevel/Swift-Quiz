@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cpK-fy-GVu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History Hint Controller-->
+        <scene sceneID="nhJ-ja-hDS">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpW-hq-AkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HistoryHintController" modalPresentationStyle="overCurrentContext" id="cpK-fy-GVu" customClass="HistoryHintController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPE-Se-sph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-yO-ipt">
+                                <rect key="frame" x="16" y="518" width="382" height="54"/>
+                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Xhp-eB-9dh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Вернуться в игру">
+                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pee-QL-Hue">
+                                <rect key="frame" x="16" y="353" width="382" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAD-pB-RSh">
+                                        <rect key="frame" x="20" y="62" width="342" height="68"/>
+                                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теоретическая подсказка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlL-Yn-hZg">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="87Q-zh-Whj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-Tb-c76" userLabel="Separator">
+                                        <rect key="frame" x="25" y="48" width="332" height="1"/>
+                                        <color key="backgroundColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="nS4-MM-y6e"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZAD-pB-RSh" firstAttribute="top" secondItem="pee-QL-Hue" secondAttribute="top" constant="62" id="9EI-ou-Iby"/>
+                                    <constraint firstItem="XqK-Tb-c76" firstAttribute="leading" secondItem="pee-QL-Hue" secondAttribute="leading" constant="25" id="9bL-Rm-Wkt"/>
+                                    <constraint firstAttribute="trailing" secondItem="UlL-Yn-hZg" secondAttribute="trailing" id="GaT-Gr-qj3"/>
+                                    <constraint firstItem="XqK-Tb-c76" firstAttribute="top" secondItem="pee-QL-Hue" secondAttribute="top" constant="48" id="Lgf-Jf-oMZ"/>
+                                    <constraint firstItem="UlL-Yn-hZg" firstAttribute="top" secondItem="pee-QL-Hue" secondAttribute="top" id="NnZ-yI-lx0"/>
+                                    <constraint firstAttribute="trailing" secondItem="XqK-Tb-c76" secondAttribute="trailing" constant="25" id="Rvk-VF-Lua"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZAD-pB-RSh" secondAttribute="bottom" constant="20" id="V1t-Ze-WK9"/>
+                                    <constraint firstItem="ZAD-pB-RSh" firstAttribute="leading" secondItem="pee-QL-Hue" secondAttribute="leading" constant="20" id="m7f-U8-UMH"/>
+                                    <constraint firstItem="UlL-Yn-hZg" firstAttribute="leading" secondItem="pee-QL-Hue" secondAttribute="leading" id="mfW-HD-D6P"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZAD-pB-RSh" secondAttribute="trailing" constant="20" id="ox6-PU-rI9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="xfb-2z-0do"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xG-4v-gjr"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7xG-4v-gjr" firstAttribute="trailing" secondItem="Gpx-yO-ipt" secondAttribute="trailing" constant="16" id="0gN-tT-NZb"/>
+                            <constraint firstItem="Gpx-yO-ipt" firstAttribute="leading" secondItem="7xG-4v-gjr" secondAttribute="leading" constant="16" id="IKX-Zs-KTA"/>
+                            <constraint firstItem="Gpx-yO-ipt" firstAttribute="top" secondItem="pee-QL-Hue" secondAttribute="bottom" constant="15" id="Veg-1O-Ph0"/>
+                            <constraint firstItem="pee-QL-Hue" firstAttribute="centerY" secondItem="7xG-4v-gjr" secondAttribute="centerY" constant="-25" id="cOB-fd-IxZ"/>
+                            <constraint firstItem="7xG-4v-gjr" firstAttribute="trailing" secondItem="pee-QL-Hue" secondAttribute="trailing" constant="16" id="hTT-EJ-8DP"/>
+                            <constraint firstItem="pee-QL-Hue" firstAttribute="leading" secondItem="7xG-4v-gjr" secondAttribute="leading" constant="16" id="tWo-mv-PQe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Gpx-yO-ipt" id="Tfh-yb-yYi"/>
+                        <outlet property="hintBG" destination="pee-QL-Hue" id="ubP-hI-qrj"/>
+                        <outlet property="hintTextLabel" destination="ZAD-pB-RSh" id="ZWe-y6-dsV"/>
+                        <outlet property="separatorHeight" destination="nS4-MM-y6e" id="Uu6-gp-ujG"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="9" y="368"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehz-IH-jEO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game History View Controller-->
+        <scene sceneID="Yy2-Tx-i6q">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vq-wN-LBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="GameHistoryViewController" id="Ehz-IH-jEO" customClass="GameHistoryViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4cI-z7-GFt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y94-nX-Q5b" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отчет по игре" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lr-1k-x9f">
+                                        <rect key="frame" x="16" y="50" width="150" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Jpn-nd-337"/>
+                                            <constraint firstAttribute="height" constant="25" id="ppZ-LO-hp9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-hj-jpP">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="0Px-s6-xc6"/>
+                                            <constraint firstAttribute="height" constant="35" id="HSH-bi-OsV"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="10" minY="14" maxX="40" maxY="2"/>
+                                        <state key="normal" image="ChevroneBigYellow"/>
+                                        <state key="highlighted" image="ChevroneBigDarkYellow"/>
+                                        <connections>
+                                            <action selector="dismissGameHistory:" destination="Ehz-IH-jEO" eventType="touchUpInside" id="777-RF-WNF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Lr-1k-x9f" firstAttribute="top" secondItem="TOe-hj-jpP" secondAttribute="bottom" constant="15" id="1tX-Po-58b"/>
+                                    <constraint firstItem="2Lr-1k-x9f" firstAttribute="top" secondItem="Y94-nX-Q5b" secondAttribute="top" constant="50" id="8ek-lt-2nK"/>
+                                    <constraint firstAttribute="height" constant="85" id="SuK-CQ-Ynr"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Lr-1k-x9f" secondAttribute="trailing" constant="20" symbolic="YES" id="mGA-VW-M30"/>
+                                    <constraint firstItem="2Lr-1k-x9f" firstAttribute="leading" secondItem="Y94-nX-Q5b" secondAttribute="leading" constant="16" id="nol-2U-DUP"/>
+                                    <constraint firstItem="TOe-hj-jpP" firstAttribute="leading" secondItem="Y94-nX-Q5b" secondAttribute="leading" id="sAF-xp-XMg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-PJ-K5a">
+                                <rect key="frame" x="0.0" y="129" width="414" height="767"/>
+                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="80" minY="0.0" maxX="16" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GameHistoryCell" rowHeight="48" id="KTT-ZI-th3">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KTT-ZI-th3" id="b3m-Vu-YiB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ehz-IH-jEO" id="Wxu-KD-Mvm"/>
+                                    <outlet property="delegate" destination="Ehz-IH-jEO" id="8gG-7h-k7k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BmW-7l-fZY"/>
+                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y94-nX-Q5b" firstAttribute="top" secondItem="BmW-7l-fZY" secondAttribute="top" id="6eD-GH-Tnb"/>
+                            <constraint firstItem="Y94-nX-Q5b" firstAttribute="leading" secondItem="BmW-7l-fZY" secondAttribute="leading" id="9Zk-EG-kNN"/>
+                            <constraint firstItem="Se5-PJ-K5a" firstAttribute="top" secondItem="Y94-nX-Q5b" secondAttribute="bottom" id="D97-PJ-esz"/>
+                            <constraint firstItem="BmW-7l-fZY" firstAttribute="trailing" secondItem="Y94-nX-Q5b" secondAttribute="trailing" id="Nja-wi-7DL"/>
+                            <constraint firstItem="Se5-PJ-K5a" firstAttribute="leading" secondItem="BmW-7l-fZY" secondAttribute="leading" id="hud-u4-ohh"/>
+                            <constraint firstAttribute="bottom" secondItem="Se5-PJ-K5a" secondAttribute="bottom" id="iKP-KZ-MkG"/>
+                            <constraint firstItem="BmW-7l-fZY" firstAttribute="trailing" secondItem="Se5-PJ-K5a" secondAttribute="trailing" id="kzr-U6-ftJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="TOe-hj-jpP" id="JEK-wr-Gdf"/>
+                        <outlet property="headerHeight" destination="SuK-CQ-Ynr" id="9y0-x3-3GI"/>
+                        <outlet property="tableView" destination="Se5-PJ-K5a" id="wPq-Av-ZKE"/>
+                        <outlet property="titleTopMargin" destination="8ek-lt-2nK" id="j4H-cG-FiX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-380" y="785"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ChevroneBigDarkYellow" width="50" height="50"/>
+        <image name="ChevroneBigYellow" width="50" height="50"/>
+    </resources>
+</document>
