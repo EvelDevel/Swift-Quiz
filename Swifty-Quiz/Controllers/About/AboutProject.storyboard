@@ -22,16 +22,16 @@
                                 <color key="backgroundColor" red="0.95544545709999995" green="0.95880379419999995" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О проекте" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joc-DX-stD">
-                                <rect key="frame" x="16" y="94" width="348" height="24"/>
+                                <rect key="frame" x="20" y="94" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GVM-td-zFU">
-                                <rect key="frame" x="16" y="243.5" width="382" height="40"/>
+                                <rect key="frame" x="20" y="248.5" width="374" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-gx-Ie5" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="52"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Автор">
@@ -39,7 +39,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onU-7d-8Di" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="134" height="40"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="131" height="52"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Дизайнер">
@@ -55,7 +55,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -63,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbW-Fx-jNJ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="234" y="0.0" width="148" height="40"/>
+                                        <rect key="frame" x="229.5" y="0.0" width="144.5" height="52"/>
                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Редактор">
@@ -71,7 +71,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -80,11 +80,11 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="KzH-Km-fut"/>
+                                    <constraint firstAttribute="height" constant="52" id="KzH-Km-fut"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZk-Zb-xSd">
-                                <rect key="frame" x="16" y="133" width="382" height="95.5"/>
+                                <rect key="frame" x="20" y="133" width="374" height="95.5"/>
                                 <string key="text">Мое приложение направленно на укрепление знаний по языку Swift у начинающих iOS-разработчиков. Если у вас есть вопросы, претензии, или предложения, вы можете писать автору проекта. </string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,13 +92,13 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Gb-Rf-6Uo">
-                                <rect key="frame" x="16" y="384.5" width="382" height="90"/>
+                                <rect key="frame" x="20" y="416.5" width="374" height="114"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UI9-eE-Ug6">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-jW-UdA" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Refactoring Guru">
@@ -106,7 +106,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -114,7 +114,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-Md-grQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="172.5" y="0.0" width="102" height="40"/>
+                                                <rect key="frame" x="169" y="0.0" width="100" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Swift Book">
@@ -122,7 +122,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -131,7 +131,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2s-fk-N0n" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="284.5" y="0.0" width="97.5" height="40"/>
+                                                <rect key="frame" x="279" y="0.0" width="95" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Swift Me">
@@ -139,7 +139,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -148,14 +148,14 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="k6s-5l-X4V"/>
+                                            <constraint firstAttribute="height" constant="52" id="k6s-5l-X4V"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PKc-3y-zGO">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="62" width="374" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPj-vd-tNj" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Telegram-канал &quot;Библиотека разработчика&quot;">
@@ -163,7 +163,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -172,13 +172,13 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Yqc-eK-QXM"/>
+                                            <constraint firstAttribute="height" constant="52" id="Yqc-eK-QXM"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В нашем приложении используются материалы с нескольких ресурсов, за что им огромное спасибо!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-0w-S0p">
-                                <rect key="frame" x="16" y="303.5" width="382" height="66"/>
+                                <rect key="frame" x="20" y="330.5" width="374" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="Jzf-D4-P3n"/>
                                 </constraints>
@@ -204,22 +204,22 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="joc-DX-stD" firstAttribute="top" secondItem="IE1-LQ-FS6" secondAttribute="bottom" constant="15" id="1O5-Y5-I7H"/>
-                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="GVM-td-zFU" secondAttribute="trailing" constant="16" id="7zv-Vf-Aqd"/>
-                            <constraint firstItem="joc-DX-stD" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="16" id="9et-xD-WJE"/>
-                            <constraint firstItem="2Gb-Rf-6Uo" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="16" id="HX3-vw-VSb"/>
-                            <constraint firstItem="QiA-0w-S0p" firstAttribute="top" secondItem="GVM-td-zFU" secondAttribute="bottom" constant="20" id="JDv-vm-Fs1"/>
-                            <constraint firstItem="QiA-0w-S0p" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="16" id="JHy-Xp-cwU"/>
-                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="joc-DX-stD" secondAttribute="trailing" constant="50" id="LsK-y3-Fxm"/>
+                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="GVM-td-zFU" secondAttribute="trailing" constant="20" id="7zv-Vf-Aqd"/>
+                            <constraint firstItem="joc-DX-stD" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="20" id="9et-xD-WJE"/>
+                            <constraint firstItem="2Gb-Rf-6Uo" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="20" id="HX3-vw-VSb"/>
+                            <constraint firstItem="QiA-0w-S0p" firstAttribute="top" secondItem="GVM-td-zFU" secondAttribute="bottom" constant="30" id="JDv-vm-Fs1"/>
+                            <constraint firstItem="QiA-0w-S0p" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="20" id="JHy-Xp-cwU"/>
+                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="joc-DX-stD" secondAttribute="trailing" constant="20" id="LsK-y3-Fxm"/>
                             <constraint firstItem="IE1-LQ-FS6" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" id="Tri-9t-2J4"/>
-                            <constraint firstItem="2Gb-Rf-6Uo" firstAttribute="top" secondItem="zZk-Zb-xSd" secondAttribute="bottom" constant="156" id="YdP-Lp-mdO"/>
-                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="zZk-Zb-xSd" secondAttribute="trailing" constant="16" id="Ys2-1a-Cdi"/>
-                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="QiA-0w-S0p" secondAttribute="trailing" constant="16" id="cXJ-DD-2Fr"/>
-                            <constraint firstItem="zZk-Zb-xSd" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="16" id="gen-ZD-8kO"/>
-                            <constraint firstItem="GVM-td-zFU" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="16" id="kK5-yG-chA"/>
+                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="zZk-Zb-xSd" secondAttribute="trailing" constant="20" id="Ys2-1a-Cdi"/>
+                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="QiA-0w-S0p" secondAttribute="trailing" constant="20" id="cXJ-DD-2Fr"/>
+                            <constraint firstItem="zZk-Zb-xSd" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="20" id="gen-ZD-8kO"/>
+                            <constraint firstItem="GVM-td-zFU" firstAttribute="leading" secondItem="xZT-tB-ngD" secondAttribute="leading" constant="20" id="kK5-yG-chA"/>
+                            <constraint firstItem="2Gb-Rf-6Uo" firstAttribute="top" secondItem="QiA-0w-S0p" secondAttribute="bottom" constant="20" id="q11-Th-63B"/>
                             <constraint firstItem="joc-DX-stD" firstAttribute="top" secondItem="xZT-tB-ngD" secondAttribute="top" constant="50" id="rh1-3m-xKy"/>
-                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="2Gb-Rf-6Uo" secondAttribute="trailing" constant="16" id="ruV-7w-WiY"/>
+                            <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="2Gb-Rf-6Uo" secondAttribute="trailing" constant="20" id="ruV-7w-WiY"/>
                             <constraint firstItem="zZk-Zb-xSd" firstAttribute="top" secondItem="joc-DX-stD" secondAttribute="bottom" constant="15" id="uPH-yP-N8m"/>
-                            <constraint firstItem="GVM-td-zFU" firstAttribute="top" secondItem="zZk-Zb-xSd" secondAttribute="bottom" constant="15" id="wXg-MM-9Ym"/>
+                            <constraint firstItem="GVM-td-zFU" firstAttribute="top" secondItem="zZk-Zb-xSd" secondAttribute="bottom" constant="20" id="wXg-MM-9Ym"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jBi-HT-7pp"/>

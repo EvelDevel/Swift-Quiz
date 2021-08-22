@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -34,11 +34,11 @@
             <objects>
                 <viewController id="FKu-aM-NQz" customClass="LaunchViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWE-bf-pj2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
-                                <rect key="frame" x="55" y="367" width="304" height="162"/>
+                                <rect key="frame" x="51" y="226" width="218" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jdu-OT-CUg" secondAttribute="height" multiplier="15:8" id="f1B-Qc-8Ag"/>
                                 </constraints>
@@ -62,18 +62,18 @@
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbL-mg-kmy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="abk-Hi-kpA">
-                                <rect key="frame" x="137" y="84" width="140" height="45"/>
+                                <rect key="frame" x="90" y="40" width="140" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0d1-Vn-wXw"/>
                                     <constraint firstAttribute="width" constant="140" id="rHO-eI-hdD"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-C7-FGY" userLabel="About Project">
-                                <rect key="frame" x="122" y="74" width="170" height="65"/>
+                                <rect key="frame" x="75" y="30" width="170" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="PB4-CK-oVQ"/>
                                     <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
-                                <rect key="frame" x="63" y="273" width="288" height="360"/>
+                                <rect key="frame" x="16" y="104" width="288" height="360"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5De-it-OQy" userLabel="TopicPicker">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
@@ -121,7 +121,7 @@
                                                         <state key="highlighted" image="RightChevroneFill"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="13"/>
+                                                                <integer key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -201,7 +201,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="14"/>
+                                                <integer key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -215,7 +215,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-al-yFZ" userLabel="Record&amp;Setting">
                                         <rect key="frame" x="0.0" y="180" width="288" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -224,7 +224,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="13"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -232,7 +232,7 @@
                                                     <segue destination="6vK-r8-XKT" kind="show" identifier="toResultsViewController" id="CJh-Mg-eUL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="240" y="0.0" width="48" height="48"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -246,7 +246,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="13"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -262,7 +262,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WTE-VV-ica" userLabel="Game&amp;Topic">
                                         <rect key="frame" x="0.0" y="238" width="288" height="122"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -274,7 +274,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="13"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -282,7 +282,7 @@
                                                     <segue destination="cis-0o-Enk" kind="show" identifier="toGameViewController" id="hqs-Mj-uIf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-NM-9Qp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-NM-9Qp" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="66" width="288" height="56"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -294,7 +294,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="13"/>
+                                                        <real key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -310,13 +310,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
-                                <rect key="frame" x="162" y="820" width="90" height="12"/>
+                                <rect key="frame" x="115" y="526" width="90" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
-                                <rect key="frame" x="311" y="806" width="40" height="40"/>
+                                <rect key="frame" x="264" y="512" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8yO-NU-6Oc"/>
@@ -411,6 +411,20 @@
             <point key="canvasLocation" x="540" y="556"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="LsO-B9-8ah">
+            <size key="intrinsicContentSize" width="89" height="96"/>
+        </designable>
+        <designable name="SXd-ZC-ZJT">
+            <size key="intrinsicContentSize" width="100" height="33"/>
+        </designable>
+        <designable name="mO1-NM-9Qp">
+            <size key="intrinsicContentSize" width="101" height="33"/>
+        </designable>
+        <designable name="pq9-9e-V5c">
+            <size key="intrinsicContentSize" width="80" height="41"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="hqs-Mj-uIf"/>
     </inferredMetricsTieBreakers>

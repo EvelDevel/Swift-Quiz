@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                 <rect key="frame" x="16" y="518" width="382" height="54"/>
                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -28,7 +28,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="13"/>
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -78,13 +78,13 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="14"/>
+                                        <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0k4-Sb-gVi"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fsr-EG-eZt" firstAttribute="leading" secondItem="0k4-Sb-gVi" secondAttribute="leading" constant="16" id="6Y6-kw-514"/>
                             <constraint firstItem="0k4-Sb-gVi" firstAttribute="trailing" secondItem="fsr-EG-eZt" secondAttribute="trailing" constant="16" id="R0l-mq-k9r"/>
@@ -106,4 +106,9 @@
             <point key="canvasLocation" x="559" y="113"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ODb-va-1rm">
+            <size key="intrinsicContentSize" width="123" height="30"/>
+        </designable>
+    </designables>
 </document>

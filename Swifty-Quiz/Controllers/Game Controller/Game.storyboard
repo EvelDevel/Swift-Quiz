@@ -54,7 +54,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="14"/>
+                                                        <integer key="value" value="16"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -73,7 +73,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-L3-MjM" userLabel="Buttons">
                                                 <rect key="frame" x="16" y="5" width="382" height="353"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-1q-oQJ">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-1q-oQJ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="81"/>
                                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -82,14 +82,14 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="13"/>
+                                                                <real key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="xs9-d7-5PS" eventType="touchUpInside" id="bQd-b7-dMc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-fa-Dhg">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-fa-Dhg" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="91" width="382" height="80.5"/>
                                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -98,14 +98,14 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="13"/>
+                                                                <real key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="xs9-d7-5PS" eventType="touchUpInside" id="D5L-BC-Mgk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="urz-g4-9eM">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="urz-g4-9eM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="181.5" width="382" height="81"/>
                                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -114,14 +114,14 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="13"/>
+                                                                <real key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="answerPressed:" destination="xs9-d7-5PS" eventType="touchUpInside" id="VnO-oW-mze"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-A5-afB">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-A5-afB" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="272.5" width="382" height="80.5"/>
                                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -130,7 +130,7 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="13"/>
+                                                                <real key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -310,6 +310,20 @@
             <point key="canvasLocation" x="571" y="-275"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="PYi-A5-afB">
+            <size key="intrinsicContentSize" width="198" height="29"/>
+        </designable>
+        <designable name="Rh9-fa-Dhg">
+            <size key="intrinsicContentSize" width="173" height="29"/>
+        </designable>
+        <designable name="hhO-1q-oQJ">
+            <size key="intrinsicContentSize" width="177" height="29"/>
+        </designable>
+        <designable name="urz-g4-9eM">
+            <size key="intrinsicContentSize" width="169" height="29"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>

@@ -11,13 +11,12 @@
         <!--History Hint Controller-->
         <scene sceneID="nhJ-ja-hDS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rpW-hq-AkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HistoryHintController" modalPresentationStyle="overCurrentContext" id="cpK-fy-GVu" customClass="HistoryHintController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPE-Se-sph">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-yO-ipt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-yO-ipt" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                 <rect key="frame" x="16" y="518" width="382" height="54"/>
                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -29,7 +28,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="13"/>
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -76,7 +75,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="14"/>
+                                        <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -99,8 +98,14 @@
                         <outlet property="separatorHeight" destination="nS4-MM-y6e" id="Uu6-gp-ujG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpW-hq-AkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9" y="368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Gpx-yO-ipt">
+            <size key="intrinsicContentSize" width="123" height="30"/>
+        </designable>
+    </designables>
 </document>

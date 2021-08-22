@@ -9,6 +9,10 @@ import UIKit
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
+            
+            if #available(iOS 13, *) {
+                self.layer.cornerCurve = .continuous
+            }
         }
     }
 }
