@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -519,16 +520,36 @@
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.40298587330000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
+                                <rect key="frame" x="311" y="816" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8yO-NU-6Oc"/>
+                                    <constraint firstAttribute="width" constant="40" id="zvq-ds-Ym6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" systemColor="tertiaryLabelColor"/>
+                                <state key="normal" image="donates">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rPr-C7-FGY" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="7KA-KC-mDo"/>
+                            <constraint firstItem="kaM-Au-o8t" firstAttribute="centerY" secondItem="DQZ-bR-P5Q" secondAttribute="centerY" id="DpB-GN-cxx"/>
                             <constraint firstItem="abk-Hi-kpA" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="40" id="N9V-EI-MNJ"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
                             <constraint firstItem="DQZ-bR-P5Q" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="TO0-gY-iRv"/>
                             <constraint firstItem="rPr-C7-FGY" firstAttribute="top" secondItem="WHM-zc-GgI" secondAttribute="top" constant="30" id="XHx-hL-pFL"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
+                            <constraint firstItem="kaM-Au-o8t" firstAttribute="trailing" secondItem="mO1-NM-9Qp" secondAttribute="trailing" id="ij7-zK-GlG"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="20" id="uLq-MP-k4C"/>
                             <constraint firstItem="abk-Hi-kpA" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="w98-eo-kLd"/>
                         </constraints>
@@ -562,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-MD-aOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="111.97183098591549"/>
+            <point key="canvasLocation" x="298.55072463768118" y="111.83035714285714"/>
         </scene>
         <!--Records View Controller-->
         <scene sceneID="AUf-56-Jv7">
@@ -718,7 +739,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-H4-8AS">
-                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="767"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="80" minY="0.0" maxX="16" maxY="0.0"/>
                                 <prototypes>
@@ -743,7 +764,7 @@
                             <constraint firstItem="DDb-H4-8AS" firstAttribute="top" secondItem="YCa-kX-UfF" secondAttribute="bottom" id="Cim-sw-AIn"/>
                             <constraint firstItem="DDb-H4-8AS" firstAttribute="leading" secondItem="XoC-vq-Qvt" secondAttribute="leading" id="DFh-FZ-Mg9"/>
                             <constraint firstItem="XoC-vq-Qvt" firstAttribute="trailing" secondItem="YCa-kX-UfF" secondAttribute="trailing" id="Ukx-wU-VjA"/>
-                            <constraint firstItem="XoC-vq-Qvt" firstAttribute="bottom" secondItem="DDb-H4-8AS" secondAttribute="bottom" id="UoG-Ft-OGd"/>
+                            <constraint firstAttribute="bottom" secondItem="DDb-H4-8AS" secondAttribute="bottom" id="UoG-Ft-OGd"/>
                             <constraint firstItem="YCa-kX-UfF" firstAttribute="leading" secondItem="XoC-vq-Qvt" secondAttribute="leading" id="dAL-SI-XL1"/>
                             <constraint firstItem="XoC-vq-Qvt" firstAttribute="trailing" secondItem="DDb-H4-8AS" secondAttribute="trailing" id="kLs-ek-Ltr"/>
                             <constraint firstItem="YCa-kX-UfF" firstAttribute="top" secondItem="XoC-vq-Qvt" secondAttribute="top" id="xP9-hV-T97"/>
@@ -811,7 +832,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-82-s85" userLabel="Categories">
-                                <rect key="frame" x="0.0" y="101" width="414" height="707"/>
+                                <rect key="frame" x="0.0" y="101" width="414" height="741"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCategory" id="6kS-vR-sQt">
@@ -837,7 +858,7 @@
                             <constraint firstItem="Vtv-82-s85" firstAttribute="leading" secondItem="Nu4-HW-vhf" secondAttribute="leading" id="PUG-ib-bom"/>
                             <constraint firstItem="Vtv-82-s85" firstAttribute="top" secondItem="bSd-wd-tpT" secondAttribute="bottom" id="dVw-9F-Ltd"/>
                             <constraint firstItem="Nu4-HW-vhf" firstAttribute="trailing" secondItem="Vtv-82-s85" secondAttribute="trailing" id="qTF-rX-84Y"/>
-                            <constraint firstItem="Nu4-HW-vhf" firstAttribute="bottom" secondItem="Vtv-82-s85" secondAttribute="bottom" id="taR-ql-Nx9"/>
+                            <constraint firstAttribute="bottom" secondItem="Vtv-82-s85" secondAttribute="bottom" id="taR-ql-Nx9"/>
                             <constraint firstItem="bSd-wd-tpT" firstAttribute="leading" secondItem="Nu4-HW-vhf" secondAttribute="leading" id="wub-R4-q6w"/>
                         </constraints>
                     </view>
@@ -892,7 +913,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fN7-px-u30">
-                                <rect key="frame" x="0.0" y="75" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="767"/>
                                 <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" translatesAutoresizingMaskIntoConstraints="NO" id="mUK-a2-umW" customClass="SettingsCell" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -918,7 +939,7 @@
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" constant="50" id="4n3-pQ-Z5t"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="0JB-Nr-Ypt" secondAttribute="trailing" id="CuB-KM-Bh4"/>
                             <constraint firstItem="2Ss-4y-W7V" firstAttribute="trailing" secondItem="1Wm-RF-lUd" secondAttribute="trailing" constant="50" id="O3B-Al-jho"/>
-                            <constraint firstItem="2Ss-4y-W7V" firstAttribute="bottom" secondItem="fN7-px-u30" secondAttribute="bottom" id="Q8w-QE-qdn"/>
+                            <constraint firstAttribute="bottom" secondItem="fN7-px-u30" secondAttribute="bottom" id="Q8w-QE-qdn"/>
                             <constraint firstItem="0JB-Nr-Ypt" firstAttribute="top" secondItem="2Ss-4y-W7V" secondAttribute="top" id="Zcv-ed-P8O"/>
                             <constraint firstItem="1Wm-RF-lUd" firstAttribute="top" secondItem="sea-5X-vFD" secondAttribute="bottom" constant="15" id="asn-2v-L6e"/>
                             <constraint firstItem="fN7-px-u30" firstAttribute="top" secondItem="0JB-Nr-Ypt" secondAttribute="bottom" id="jVa-kB-jwc"/>
@@ -1456,8 +1477,12 @@
         <image name="RightChevroneFill" width="50" height="50"/>
         <image name="TrashCan" width="50" height="50"/>
         <image name="TrashCanFill" width="50" height="50"/>
+        <image name="donates" width="96" height="96"/>
         <image name="launch" width="800" height="300"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
