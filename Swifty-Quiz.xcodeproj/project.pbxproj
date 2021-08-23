@@ -105,7 +105,7 @@
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
-		FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowsHelper.swift */; };
+		FBC1D48A247574730055FF62 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* Shadow.swift */; };
 		FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
@@ -212,7 +212,7 @@
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
-		FBC1D489247574730055FF62 /* ShadowsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowsHelper.swift; sourceTree = "<group>"; };
+		FBC1D489247574730055FF62 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryHintController.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -306,8 +306,8 @@
 		FB291D2B26D2268700A40679 /* Theory */ = {
 			isa = PBXGroup;
 			children = (
-				FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */,
 				FB291D2C26D226C500A40679 /* HistoryHint.storyboard */,
+				FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */,
 			);
 			path = Theory;
 			sourceTree = "<group>";
@@ -394,7 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
-				FBC1D489247574730055FF62 /* ShadowsHelper.swift */,
+				FBC1D489247574730055FF62 /* Shadow.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 			);
 			path = Services;
@@ -669,7 +669,7 @@
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
 				FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
-				FBC1D48A247574730055FF62 /* ShadowsHelper.swift in Sources */,
+				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,

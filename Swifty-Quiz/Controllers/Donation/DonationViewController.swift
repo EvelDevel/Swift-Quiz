@@ -15,26 +15,30 @@ class DonationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setView()
+        setAlpha()
         setBlur()
         setShadows()
     }
     
-    private func setView() {
+    private func setAlpha() {
         view.alpha = 1
     }
     
     private func setBlur() {
-        let effect = UIBlurEffect(style: .regular)
-        let blur = UIVisualEffectView(effect: effect)
-        blur.frame = self.view.bounds
-        blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.insertSubview(blur, at: 0)
+        if #available(iOS 13, *) {
+            let effect = UIBlurEffect(style: .regular)
+            let blur = UIVisualEffectView(effect: effect)
+            blur.frame = self.view.bounds
+            blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            view.insertSubview(blur, at: 0)
+        } else {
+            view.backgroundColor = #colorLiteral(red: 0.8084501554, green: 0.8112918123, blue: 0.819816783, alpha: 0.8)
+        }
     }
     
     private func setShadows() {
-        let shadows = ShadowsHelper()
-        shadows.addButtonShadows([dismissButton])
+        let shadows = Shadow()
+        shadows.addHalfButtonShadows([dismissButton])
     }
 }
 
@@ -42,7 +46,6 @@ class DonationViewController: UIViewController {
 // MARK: Dismissing
 extension DonationViewController {
     
-    /// Нажали на кнопку "вернуться в игру"
     @IBAction func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
         dismissing()

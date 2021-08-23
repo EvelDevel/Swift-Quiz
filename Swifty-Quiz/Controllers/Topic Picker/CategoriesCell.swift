@@ -32,7 +32,7 @@ class CategoriesCell: UITableViewCell {
     
     weak var delegate: CategoriesCellDelegate?
     
-    private let shadows = ShadowsHelper()
+    private let shadows = Shadow()
     private var lastPosition = SelectedTopic.shared.topic.topicTag
     
     override func awakeFromNib() {

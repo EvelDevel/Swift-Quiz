@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     
     private let gameHelper = GameHelper()
     private let buttonsView = AnswerButtonsView()
-    private let shadows = ShadowsHelper()
+    private let shadows = Shadow()
     private var localQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0

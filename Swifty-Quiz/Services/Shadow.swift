@@ -4,7 +4,7 @@
 
 import UIKit
 
-class ShadowsHelper {
+class Shadow {
     
     /// Основные кнопки - черная тень
     func addButtonShadows(_ buttons: [UIButton]) {
@@ -16,13 +16,19 @@ class ShadowsHelper {
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
-            
-            /// Задротское скругление
-			if #available(iOS 13.0, *) {
-				button.layer.cornerCurve = .continuous
-			} else {
-				// Fallback on earlier versions
-			}
+        }
+    }
+    
+    /// Основные кнопки - половина черной тени
+    func addHalfButtonShadows(_ buttons: [UIButton]) {
+        for button in buttons {
+            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
+            button.layer.shadowOpacity = 1
+            button.layer.shadowRadius = 4
+            button.layer.shadowOffset = CGSize(width: 0, height: 3)
+            button.layer.position = button.center
+            button.layer.shouldRasterize = true
+            button.layer.rasterizationScale = UIScreen.main.scale
         }
     }
     
@@ -37,16 +43,7 @@ class ShadowsHelper {
             button.layer.position = button.center
             button.layer.shouldRasterize = true
             button.layer.rasterizationScale = UIScreen.main.scale
-            
-            /// Maybe it's overkill but it work, so...
             button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
-            
-            /// Задротское скругление
-			if #available(iOS 13.0, *) {
-				button.layer.cornerCurve = .continuous
-			} else {
-				// Fallback on earlier versions
-			}
         }
     }
     
@@ -79,24 +76,5 @@ class ShadowsHelper {
             view.layer.shouldRasterize = true
             view.layer.rasterizationScale = UIScreen.main.scale
         }
-    }
-    
-    /// Тени для блока с подсказкой и кнопки "Вернуться"
-    func addHelpShadows(button: UIButton, view: UIView) {
-        view.layer.shadowColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1).cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowRadius = 4
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-        view.layer.position = view.center
-        view.layer.shouldRasterize = true
-        view.layer.rasterizationScale = UIScreen.main.scale
-        
-        button.layer.shadowColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1).cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 4
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.position = view.center
-        button.layer.shouldRasterize = true
-        button.layer.rasterizationScale = UIScreen.main.scale
     }
 }

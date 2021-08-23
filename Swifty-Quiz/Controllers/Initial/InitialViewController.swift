@@ -39,7 +39,7 @@ class InitialViewController: UIViewController {
     }
     
 	private let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-	private let shadows = ShadowsHelper()
+	private let shadows = Shadow()
 	private let recordCaretaker = RecordsCaretaker()
 
 	override func viewDidLoad() {

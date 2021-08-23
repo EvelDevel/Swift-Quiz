@@ -7,7 +7,7 @@ import UIKit
 class HistoryHintController: UIViewController {
 
 	@IBOutlet weak var hintView: UIView!
-	@IBOutlet weak var backButton: UIButton!
+	@IBOutlet weak var dismissButton: RoundCornerButton!
 	@IBOutlet weak var separatorHeight: NSLayoutConstraint!
 	
     @IBOutlet weak var hintTextLabel: UILabel! {
@@ -23,6 +23,12 @@ class HistoryHintController: UIViewController {
 		setShadows()
 		setThinSeparator()
 		setFontSize()
+        setAlpha()
+        setBlur()
+    }
+    
+    private func setAlpha() {
+        view.alpha = 1
     }
     
     private func setThinSeparator() {
@@ -34,9 +40,17 @@ class HistoryHintController: UIViewController {
         hintTextLabel.font = width <= 320 ? UIFont.systemFont(ofSize: 12.0) : UIFont.systemFont(ofSize: 14.0)
     }
     
+    private func setBlur() {
+        let effect = UIBlurEffect(style: .regular)
+        let blur = UIVisualEffectView(effect: effect)
+        blur.frame = self.view.bounds
+        blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.insertSubview(blur, at: 0)
+    }
+    
     private func setShadows() {
-        let shadows = ShadowsHelper()
-        shadows.addHelpShadows(button: backButton, view: hintView)
+        let shadows = Shadow()
+        shadows.addHalfButtonShadows([dismissButton])
     }
 }
 
@@ -58,5 +72,9 @@ extension HistoryHintController {
 	
 	private func dismissing() {
 		dismiss(animated: true)
+        
+        UIView.animate(withDuration: 0.22) {
+            self.view.alpha = 0
+        }
 	}
 }

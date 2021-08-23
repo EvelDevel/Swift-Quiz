@@ -11,42 +11,23 @@
         <!--Help View Controller-->
         <scene sceneID="tiD-NQ-NTY">
             <objects>
-                <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overCurrentContext" id="7Sc-Eu-tmJ" customClass="HelpViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overFullScreen" id="7Sc-Eu-tmJ" customClass="HelpViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u53-Mp-X7s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                <rect key="frame" x="16" y="518" width="382" height="54"/>
-                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="02O-DY-wKm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Вернуться в игру">
-                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="backInGameButton:" destination="7Sc-Eu-tmJ" eventType="touchUpInside" id="e3V-wC-tV5"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-EG-eZt">
-                                <rect key="frame" x="16" y="353" width="382" height="150"/>
+                                <rect key="frame" x="20" y="320.5" width="374" height="215"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvt-oR-Eki">
-                                        <rect key="frame" x="20" y="62" width="342" height="68"/>
-                                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvt-oR-Eki">
+                                        <rect key="frame" x="20" y="70" width="334" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.7010648545" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теоретическая подсказка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-yC-Tz6">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-yC-Tz6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="geb-8K-qxU"/>
                                         </constraints>
@@ -55,47 +36,66 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5X-vJ-qhb" userLabel="Separator">
-                                        <rect key="frame" x="25" y="48" width="332" height="1"/>
-                                        <color key="backgroundColor" red="0.2361087473" green="0.27885135449999998" blue="0.33557069299999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="16" y="48" width="342" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="HXC-5f-IRj"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="147" width="342" height="52"/>
+                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Вернуться в игру">
+                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backInGameButton:" destination="7Sc-Eu-tmJ" eventType="touchUpInside" id="e3V-wC-tV5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="kvt-oR-Eki" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" constant="62" id="1lx-LB-eLd"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="30m-IJ-dbh"/>
+                                    <constraint firstItem="kvt-oR-Eki" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" constant="70" id="1lx-LB-eLd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="215" id="30m-IJ-dbh"/>
                                     <constraint firstItem="kvt-oR-Eki" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="20" id="3el-od-AGo"/>
-                                    <constraint firstAttribute="bottom" secondItem="kvt-oR-Eki" secondAttribute="bottom" constant="20" id="4Hf-fP-x6I"/>
+                                    <constraint firstAttribute="bottom" secondItem="ODb-va-1rm" secondAttribute="bottom" constant="16" id="5fZ-91-8IU"/>
+                                    <constraint firstItem="ODb-va-1rm" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="16" id="AQi-yj-hNm"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" id="Gpc-dS-rhL"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" id="RKG-Sf-t8T"/>
-                                    <constraint firstItem="v5X-vJ-qhb" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="25" id="dRz-YI-q1Q"/>
+                                    <constraint firstItem="ODb-va-1rm" firstAttribute="top" secondItem="kvt-oR-Eki" secondAttribute="bottom" constant="25" id="d0p-7E-hR2"/>
+                                    <constraint firstItem="v5X-vJ-qhb" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="16" id="dRz-YI-q1Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="ODb-va-1rm" secondAttribute="trailing" constant="16" id="jOK-eK-YCI"/>
                                     <constraint firstAttribute="trailing" secondItem="7Y5-yC-Tz6" secondAttribute="trailing" id="oED-VI-Pyf"/>
-                                    <constraint firstAttribute="trailing" secondItem="v5X-vJ-qhb" secondAttribute="trailing" constant="25" id="qnN-Zj-kCo"/>
+                                    <constraint firstAttribute="trailing" secondItem="v5X-vJ-qhb" secondAttribute="trailing" constant="16" id="qnN-Zj-kCo"/>
                                     <constraint firstItem="v5X-vJ-qhb" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" constant="48" id="tD7-GT-4uc"/>
                                     <constraint firstAttribute="trailing" secondItem="kvt-oR-Eki" secondAttribute="trailing" constant="20" id="tIy-AS-uiV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="16"/>
+                                        <integer key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0k4-Sb-gVi"/>
-                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fsr-EG-eZt" firstAttribute="leading" secondItem="0k4-Sb-gVi" secondAttribute="leading" constant="16" id="6Y6-kw-514"/>
-                            <constraint firstItem="0k4-Sb-gVi" firstAttribute="trailing" secondItem="fsr-EG-eZt" secondAttribute="trailing" constant="16" id="R0l-mq-k9r"/>
-                            <constraint firstItem="ODb-va-1rm" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="bottom" constant="15" id="STY-DZ-RYu"/>
+                            <constraint firstItem="fsr-EG-eZt" firstAttribute="leading" secondItem="0k4-Sb-gVi" secondAttribute="leading" constant="20" id="6Y6-kw-514"/>
+                            <constraint firstItem="0k4-Sb-gVi" firstAttribute="trailing" secondItem="fsr-EG-eZt" secondAttribute="trailing" constant="20" id="R0l-mq-k9r"/>
                             <constraint firstItem="fsr-EG-eZt" firstAttribute="centerY" secondItem="0k4-Sb-gVi" secondAttribute="centerY" constant="-25" id="WkM-UH-gMB"/>
-                            <constraint firstItem="0k4-Sb-gVi" firstAttribute="trailing" secondItem="ODb-va-1rm" secondAttribute="trailing" constant="16" id="zOK-pN-ZPg"/>
-                            <constraint firstItem="ODb-va-1rm" firstAttribute="leading" secondItem="0k4-Sb-gVi" secondAttribute="leading" constant="16" id="ziC-wj-zM3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backInGameButton" destination="ODb-va-1rm" id="d4R-dn-4ed"/>
+                        <outlet property="dismissButton" destination="ODb-va-1rm" id="d4R-dn-4ed"/>
                         <outlet property="helpTextLabel" destination="kvt-oR-Eki" id="y8O-CL-hcV"/>
                         <outlet property="helpView" destination="fsr-EG-eZt" id="IRt-so-zfk"/>
                         <outlet property="separatorHeight" destination="HXC-5f-IRj" id="2Gj-qX-GZo"/>
