@@ -343,6 +343,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="goToDonations:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="0XY-xj-6DA"/>
                                     <segue destination="fIJ-8O-b7h" kind="show" identifier="toDonation" id="B42-l4-R3R"/>
                                 </connections>
                             </button>

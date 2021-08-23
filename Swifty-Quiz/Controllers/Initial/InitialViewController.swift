@@ -34,7 +34,10 @@ class InitialViewController: UIViewController {
 	@IBAction func tapButtonSounds(_ sender: Any) {
 		SoundPlayer.shared.playSound(sound: .menuMainButton)
 	}
-
+    @IBAction func goToDonations(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+    }
+    
 	private let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
 	private let shadows = ShadowsHelper()
 	private let recordCaretaker = RecordsCaretaker()
