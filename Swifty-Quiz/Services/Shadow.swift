@@ -22,7 +22,7 @@ class Shadow {
     /// Основные кнопки - половина черной тени
     func addHalfButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {
-            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
+            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 0.9).cgColor
             button.layer.shadowOpacity = 1
             button.layer.shadowRadius = 4
             button.layer.shadowOffset = CGSize(width: 0, height: 3)
