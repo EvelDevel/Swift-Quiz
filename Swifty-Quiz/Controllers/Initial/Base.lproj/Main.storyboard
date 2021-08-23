@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -17,7 +17,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQI-we-mqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="-3"/>
+            <point key="canvasLocation" x="981" y="-58"/>
         </scene>
         <!--Game-->
         <scene sceneID="E12-Eb-zA6">
@@ -27,18 +27,28 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-EW-Dma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="130"/>
+            <point key="canvasLocation" x="982" y="137"/>
+        </scene>
+        <!--Donation-->
+        <scene sceneID="aaZ-wS-6TG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Donation" id="fIJ-8O-b7h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="i4r-Mv-aTY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-SI-abW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="362"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="K1c-Td-h8m">
             <objects>
                 <viewController id="FKu-aM-NQz" customClass="LaunchViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWE-bf-pj2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
-                                <rect key="frame" x="51" y="226" width="218" height="116"/>
+                                <rect key="frame" x="55" y="367" width="304" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jdu-OT-CUg" secondAttribute="height" multiplier="15:8" id="f1B-Qc-8Ag"/>
                                 </constraints>
@@ -62,18 +72,18 @@
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" id="x3Z-s5-6cX" customClass="InitialViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbL-mg-kmy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="abk-Hi-kpA">
-                                <rect key="frame" x="90" y="40" width="140" height="45"/>
+                                <rect key="frame" x="137" y="84" width="140" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0d1-Vn-wXw"/>
                                     <constraint firstAttribute="width" constant="140" id="rHO-eI-hdD"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-C7-FGY" userLabel="About Project">
-                                <rect key="frame" x="75" y="30" width="170" height="65"/>
+                                <rect key="frame" x="122" y="74" width="170" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="PB4-CK-oVQ"/>
                                     <constraint firstAttribute="width" constant="170" id="kv3-HN-QsB"/>
@@ -90,7 +100,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VpL-Hy-Br9">
-                                <rect key="frame" x="16" y="104" width="288" height="360"/>
+                                <rect key="frame" x="63" y="273" width="288" height="360"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5De-it-OQy" userLabel="TopicPicker">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
@@ -310,13 +320,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
-                                <rect key="frame" x="115" y="526" width="90" height="12"/>
+                                <rect key="frame" x="162" y="820" width="90" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
-                                <rect key="frame" x="264" y="512" width="40" height="40"/>
+                                <rect key="frame" x="311" y="806" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8yO-NU-6Oc"/>
@@ -332,6 +342,9 @@
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="fIJ-8O-b7h" kind="show" identifier="toDonation" id="B42-l4-R3R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
@@ -388,7 +401,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wpy-Dw-Uzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="556"/>
+            <point key="canvasLocation" x="-42" y="657"/>
         </scene>
         <!--Records-->
         <scene sceneID="csr-vY-mVC">
@@ -398,7 +411,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toF-xq-RUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="556"/>
+            <point key="canvasLocation" x="298" y="657"/>
         </scene>
         <!--Settings-->
         <scene sceneID="SVo-qx-HFB">
@@ -408,7 +421,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7S-TO-zVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="556"/>
+            <point key="canvasLocation" x="653" y="658"/>
         </scene>
     </scenes>
     <designables>

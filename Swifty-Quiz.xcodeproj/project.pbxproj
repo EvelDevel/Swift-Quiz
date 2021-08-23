@@ -86,6 +86,8 @@
 		FB87420D24605BF500247923 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB87420924605BF500247923 /* trash.mp3 */; };
 		FB87420E24605BF500247923 /* button1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420A24605BF500247923 /* button1.wav */; };
 		FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8742112461ABA600247923 /* SoundPlayer.swift */; };
+		FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91255C26D360E200C1DFEB /* Donation.storyboard */; };
+		FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91255E26D360ED00C1DFEB /* DonationViewController.swift */; };
 		FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */; };
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
@@ -192,6 +194,8 @@
 		FB87420924605BF500247923 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
 		FB87420A24605BF500247923 /* button1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button1.wav; sourceTree = "<group>"; };
 		FB8742112461ABA600247923 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		FB91255C26D360E200C1DFEB /* Donation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
+		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
@@ -413,6 +417,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		FB91255B26D360C800C1DFEB /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				FB91255C26D360E200C1DFEB /* Donation.storyboard */,
+				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
+			);
+			path = Donation;
+			sourceTree = "<group>";
+		};
 		FB99F887247B85FE0053166C /* The Basics  */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				FB291D1D26D2168100A40679 /* Initial */,
+				FB91255B26D360C800C1DFEB /* Donation */,
 				FB291D1C26D2167600A40679 /* About */,
 				FB291D1E26D2169200A40679 /* Help */,
 				FBC1D4822474EDCD0055FF62 /* Game Controller */,
@@ -584,6 +598,7 @@
 				FB291D2226D2211400A40679 /* Help.storyboard in Resources */,
 				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
 				FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */,
+				FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
 				FB6624EA24E0202C008C9CE5 /* GameHistoryCell.xib in Resources */,
@@ -619,6 +634,7 @@
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
+				FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */,
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
 				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
