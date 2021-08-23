@@ -97,7 +97,7 @@
                     <connections>
                         <outlet property="dismissButton" destination="A06-ZF-3X3" id="2Pn-KT-go9"/>
                         <outlet property="hintTextLabel" destination="Opr-Fm-tVe" id="Sxh-hg-P9u"/>
-                        <outlet property="hintView" destination="tt5-7N-veS" id="cMN-Hy-SRg"/>
+                        <outlet property="hintView" destination="Omw-qo-UL3" id="P3m-cd-zFU"/>
                         <outlet property="separatorHeight" destination="i7i-eU-Xrd" id="F7k-3G-b9h"/>
                     </connections>
                 </viewController>
