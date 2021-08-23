@@ -88,6 +88,7 @@
 		FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8742112461ABA600247923 /* SoundPlayer.swift */; };
 		FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91255C26D360E200C1DFEB /* Donation.storyboard */; };
 		FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91255E26D360ED00C1DFEB /* DonationViewController.swift */; };
+		FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91256226D3E63E00C1DFEB /* IAPManager.swift */; };
 		FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */; };
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
@@ -196,6 +197,8 @@
 		FB8742112461ABA600247923 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		FB91255C26D360E200C1DFEB /* Donation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		FB91256226D3E63E00C1DFEB /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		FB91256426D3EBAA00C1DFEB /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 			children = (
 				FB91255C26D360E200C1DFEB /* Donation.storyboard */,
 				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
+				FB91256226D3E63E00C1DFEB /* IAPManager.swift */,
+				FB91256426D3EBAA00C1DFEB /* Configuration.storekit */,
 			);
 			path = Donation;
 			sourceTree = "<group>";
@@ -700,6 +705,7 @@
 				FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				2CD0C32D2692007C00871C14 /* DictionariesSet.swift in Sources */,
+				FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,

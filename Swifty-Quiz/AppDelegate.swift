@@ -10,7 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	/// For under 13.0
 	var window: UIWindow?
 	
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        IAPManager.shared.fetchProducts()
         return true
     }
 

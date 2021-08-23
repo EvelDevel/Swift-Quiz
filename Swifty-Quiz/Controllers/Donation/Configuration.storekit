@@ -1,0 +1,78 @@
+{
+  "identifier" : "53730DCA",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1",
+      "familyShareable" : false,
+      "internalID" : "5CE77D35",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "swiftyQuizDonate379",
+      "referenceName" : "Donate 379",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1",
+      "familyShareable" : false,
+      "internalID" : "47A8AD2F",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "swiftyQuizDonate279",
+      "referenceName" : "Donate 279",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1",
+      "familyShareable" : false,
+      "internalID" : "12CF7146",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "swiftyQuizDonate179",
+      "referenceName" : "Donate 179",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1",
+      "familyShareable" : false,
+      "internalID" : "52D88198",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "swiftyQuizDonate99",
+      "referenceName" : "Donate 99",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}

@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="20" y="198" width="374" height="510.5"/>
+                                <rect key="frame" x="20" y="242" width="374" height="422.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="510.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="422.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поддержи проект!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-Zd-OyQ">
                                                 <rect key="frame" x="16" y="25" width="342" height="20.5"/>
@@ -28,7 +28,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
                                                 <rect key="frame" x="24" y="65.5" width="326" height="117"/>
                                                 <string key="text">Если вы уже получили пользу от моего приложения, и у вас появилось желание поддержать его, вы можете отправить мне небольшой донат через кнопки ниже. Так же вы можете оставить отзыв в AppleStore. Я и дальше буду поддерживать проект, но с вашей поддержкой будет приятнее. Благодарю! :)</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,13 +36,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Pa-RwL">
-                                                <rect key="frame" x="20" y="207.5" width="334" height="202"/>
+                                                <rect key="frame" x="20" y="207.5" width="334" height="114"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="atO-dd-boo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="96"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="52"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-Ln-8Gu" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="96"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="52"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -54,9 +54,12 @@
                                                                         <real key="value" value="16"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="donate99:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="fsb-rj-GkH"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjw-LC-a3o" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="96"/>
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="52"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -68,14 +71,17 @@
                                                                         <real key="value" value="16"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="donate179:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="w18-aG-fbV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XIa-lJ-8ok">
-                                                        <rect key="frame" x="0.0" y="106" width="334" height="96"/>
+                                                        <rect key="frame" x="0.0" y="62" width="334" height="52"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztt-nM-XvU" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="96"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="52"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -87,9 +93,12 @@
                                                                         <real key="value" value="16"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="donate279:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="eKL-Mi-ZWM"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-zd-nta" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="96"/>
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="52"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -101,6 +110,9 @@
                                                                         <real key="value" value="16"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="donate379:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="Fa9-mC-4Rn"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -110,7 +122,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="442.5" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="354.5" width="342" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
@@ -129,7 +141,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J13-df-caQ" userLabel="Separator">
-                                                <rect key="frame" x="50" y="425.5" width="274" height="1"/>
+                                                <rect key="frame" x="50" y="337.5" width="274" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="DmY-dq-oa7"/>
@@ -183,8 +195,20 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="Pjw-LC-a3o">
+            <size key="intrinsicContentSize" width="84" height="40"/>
+        </designable>
         <designable name="ghE-Cf-xuE">
             <size key="intrinsicContentSize" width="159" height="30"/>
+        </designable>
+        <designable name="hD3-Ln-8Gu">
+            <size key="intrinsicContentSize" width="78" height="40"/>
+        </designable>
+        <designable name="zPc-zd-nta">
+            <size key="intrinsicContentSize" width="87" height="40"/>
+        </designable>
+        <designable name="ztt-nM-XvU">
+            <size key="intrinsicContentSize" width="87" height="40"/>
         </designable>
     </designables>
     <resources>

@@ -8,11 +8,6 @@
 
 import UIKit
 
-// swiftyQuizDonate99
-// swiftyQuizDonate179
-// swiftyQuizDonate279
-// swiftyQuizDonate379
-
 class DonationViewController: UIViewController {
 
     @IBOutlet weak var dismissButton: RoundCornerButton!
@@ -23,7 +18,6 @@ class DonationViewController: UIViewController {
         setAlpha()
         setBlur()
         setShadows()
-        fetchProduct()
     }
     
     private func setAlpha() {
@@ -45,6 +39,20 @@ class DonationViewController: UIViewController {
     private func setShadows() {
         let shadows = Shadow()
         shadows.addHalfButtonShadows([dismissButton])
+    }
+    
+    // Donates buttons
+    @IBAction func donate99(_ sender: Any) {
+        IAPManager.shared.purchase(product: .swiftyQuizDonate99)
+    }
+    @IBAction func donate179(_ sender: Any) {
+        IAPManager.shared.purchase(product: .swiftyQuizDonate179)
+    }
+    @IBAction func donate279(_ sender: Any) {
+        IAPManager.shared.purchase(product: .swiftyQuizDonate279)
+    }
+    @IBAction func donate379(_ sender: Any) {
+        IAPManager.shared.purchase(product: .swiftyQuizDonate379)
     }
 }
 
