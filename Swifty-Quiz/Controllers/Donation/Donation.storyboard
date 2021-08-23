@@ -17,50 +17,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="16" y="294.5" width="382" height="317"/>
+                                <rect key="frame" x="16" y="184" width="382" height="538"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="538"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="474" width="358" height="52"/>
+                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Вернуться назад">
+                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backInGameButton:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="Cfv-h7-LSs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="5qf-tD-YP1"/>
+                                            <constraint firstAttribute="trailing" secondItem="ghE-Cf-xuE" secondAttribute="trailing" constant="12" id="J0U-VE-bdz"/>
+                                            <constraint firstItem="ghE-Cf-xuE" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="12" id="PWX-3D-h9h"/>
+                                            <constraint firstAttribute="bottom" secondItem="ghE-Cf-xuE" secondAttribute="bottom" constant="12" id="hIs-J7-zIe"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="16"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="265" width="382" height="52"/>
-                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Вернуться назад">
-                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="backInGameButton:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="Cfv-h7-LSs"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U6O-pb-vYA"/>
-                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Wk-Mg-uxB" firstAttribute="leading" secondItem="U6O-pb-vYA" secondAttribute="leading" constant="16" id="84m-7g-gf9"/>
-                            <constraint firstItem="3Wk-Mg-uxB" firstAttribute="centerY" secondItem="U6O-pb-vYA" secondAttribute="centerY" id="fVr-eN-sWM"/>
                             <constraint firstItem="U6O-pb-vYA" firstAttribute="trailing" secondItem="3Wk-Mg-uxB" secondAttribute="trailing" constant="16" id="nK2-G2-8pu"/>
+                            <constraint firstItem="3Wk-Mg-uxB" firstAttribute="centerY" secondItem="U6O-pb-vYA" secondAttribute="centerY" id="wLb-vj-gfV"/>
+                            <constraint firstItem="3Wk-Mg-uxB" firstAttribute="height" secondItem="WVf-W5-8bQ" secondAttribute="height" multiplier="0.6" id="wOZ-Gl-GoQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="ghE-Cf-xuE" id="D2w-k0-iI3"/>
+                        <outlet property="donationView" destination="pqf-sx-Kb4" id="KaV-Qw-KuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyE-5Y-gWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

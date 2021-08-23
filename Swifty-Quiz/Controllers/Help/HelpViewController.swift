@@ -22,7 +22,6 @@ class HelpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setHelp()
-        addDismissOnClick()
         addShadows()
         setFontSize()
         makeThinSeparator()
@@ -52,25 +51,21 @@ class HelpViewController: UIViewController {
 // MARK: Dismissing 
 extension HelpViewController {
     
-    /// Сворачиваем подсказку по клику на пустое место контроллера
-    private  func addDismissOnClick() {
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
-        gestureRecognizer.cancelsTouchesInView = false
-        gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
-        view.addGestureRecognizer(gestureRecognizer)
-    }
-    @objc func close() {
-        dismissing()
-    }
-    
-    private func dismissing() {
-        dismiss(animated: true)
-    }
-    
     /// Нажали на кнопку "вернуться в игру"
     @IBAction func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
         dismissing()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         let touch = touches.first
+         if touch?.view != self.helpView {
+            dismissing()
+        }
+    }
+    
+    private func dismissing() {
+        dismiss(animated: true)
     }
 }
 

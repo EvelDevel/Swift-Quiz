@@ -6,64 +6,57 @@ import UIKit
 
 class HistoryHintController: UIViewController {
 
-	@IBOutlet weak var hintTextLabel: UILabel!
-	@IBOutlet weak var hintBG: UIView!
+	@IBOutlet weak var hintView: UIView!
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var separatorHeight: NSLayoutConstraint!
 	
-	var helpText: String = ""
+    @IBOutlet weak var hintTextLabel: UILabel! {
+        didSet {
+            hintTextLabel.text = helpText
+        }
+    }
+    
+    var helpText: String = ""
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		changeHintText(text: helpText)
-		dismissOnClick()
-		addShadows()
-		makeThinSeparator()
+		setShadows()
+		setThinSeparator()
 		setFontSize()
     }
-	
-	func changeHintText(text: String) {
-		hintTextLabel.text = text
-	}
+    
+    private func setThinSeparator() {
+        separatorHeight.constant = 1.0 / UIScreen.main.scale
+    }
+    
+    private func setFontSize() {
+        let width = view.frame.size.width
+        hintTextLabel.font = width <= 320 ? UIFont.systemFont(ofSize: 12.0) : UIFont.systemFont(ofSize: 14.0)
+    }
+    
+    private func setShadows() {
+        let shadows = ShadowsHelper()
+        shadows.addHelpShadows(button: backButton, view: hintView)
+    }
 }
 
 
 // MARK: Dismissing
 extension HistoryHintController {
 	
-	/// Сворачиваем подсказку по клику на пустое место контроллера
-	func dismissOnClick() {
-		let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
-		gestureRecognizer.cancelsTouchesInView = false
-		gestureRecognizer.delegate = self as? UIGestureRecognizerDelegate
-		view.addGestureRecognizer(gestureRecognizer)
-	}
-	@objc func close() {
-		dismissing()
-	}
-	func dismissing() {
+    @IBAction func backToHistoryTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        dismissing()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         let touch = touches.first
+         if touch?.view != self.hintView {
+            dismissing()
+        }
+    }
+	
+	private func dismissing() {
 		dismiss(animated: true)
-	}
-	
-	@IBAction func backToHistoryTapped(_ sender: Any) {
-		dismiss(animated: true, completion: nil)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
-	}
-}
-
-
-// MARK: User Interface
-extension HistoryHintController {
-	
-	func makeThinSeparator() {
-		separatorHeight.constant = 1.0 / UIScreen.main.scale
-	}
-	func setFontSize() {
-		let width = view.frame.size.width
-		hintTextLabel.font = width <= 320 ? UIFont.systemFont(ofSize: 12.0) : UIFont.systemFont(ofSize: 14.0)
-	}
-	func addShadows() {
-		let shadows = ShadowsHelper()
-		shadows.addHelpShadows(button: backButton, view: hintBG)
 	}
 }
