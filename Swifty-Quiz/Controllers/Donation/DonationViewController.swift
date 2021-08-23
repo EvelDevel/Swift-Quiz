@@ -8,6 +8,11 @@
 
 import UIKit
 
+// swiftyQuizDonate99
+// swiftyQuizDonate179
+// swiftyQuizDonate279
+// swiftyQuizDonate379
+
 class DonationViewController: UIViewController {
 
     @IBOutlet weak var dismissButton: RoundCornerButton!
@@ -18,6 +23,7 @@ class DonationViewController: UIViewController {
         setAlpha()
         setBlur()
         setShadows()
+        fetchProduct()
     }
     
     private func setAlpha() {

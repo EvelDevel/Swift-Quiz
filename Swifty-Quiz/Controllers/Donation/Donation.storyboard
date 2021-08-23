@@ -17,13 +17,100 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="20" y="184" width="374" height="538"/>
+                                <rect key="frame" x="20" y="198" width="374" height="510.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="538"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="510.5"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поддержи проект!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-Zd-OyQ">
+                                                <rect key="frame" x="16" y="25" width="342" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
+                                                <rect key="frame" x="24" y="65.5" width="326" height="117"/>
+                                                <string key="text">Если вы уже получили пользу от моего приложения, и у вас появилось желание поддержать его, вы можете отправить мне небольшой донат через кнопки ниже. Так же вы можете оставить отзыв в AppleStore. Я и дальше буду поддерживать проект, но с вашей поддержкой будет приятнее. Благодарю! :)</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Pa-RwL">
+                                                <rect key="frame" x="20" y="207.5" width="334" height="202"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="atO-dd-boo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="96"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-Ln-8Gu" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="96"/>
+                                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="99 ₽" image="dollar40">
+                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjw-LC-a3o" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="96"/>
+                                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="179 ₽" image="dollar40">
+                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XIa-lJ-8ok">
+                                                        <rect key="frame" x="0.0" y="106" width="334" height="96"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztt-nM-XvU" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="96"/>
+                                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="279 ₽" image="dollar40">
+                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-zd-nta" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="96"/>
+                                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="379 ₽" image="dollar40">
+                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="114" id="FZy-yN-2bU"/>
+                                                </constraints>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="470" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="442.5" width="342" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
@@ -41,12 +128,32 @@
                                                     <action selector="backInGameButton:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="Cfv-h7-LSs"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J13-df-caQ" userLabel="Separator">
+                                                <rect key="frame" x="50" y="425.5" width="274" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="DmY-dq-oa7"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dNA-Pa-RwL" secondAttribute="trailing" constant="20" id="5ze-JE-hdB"/>
+                                            <constraint firstAttribute="trailing" secondItem="J13-df-caQ" secondAttribute="trailing" constant="50" id="69j-2n-JOu"/>
+                                            <constraint firstItem="J13-df-caQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="50" id="BWt-Ia-X1S"/>
+                                            <constraint firstItem="29d-TE-wSR" firstAttribute="top" secondItem="vhY-Zd-OyQ" secondAttribute="bottom" constant="20" id="Dbj-aM-M9y"/>
+                                            <constraint firstItem="29d-TE-wSR" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="24" id="Hfz-LT-tFY"/>
                                             <constraint firstAttribute="trailing" secondItem="ghE-Cf-xuE" secondAttribute="trailing" constant="16" id="J0U-VE-bdz"/>
                                             <constraint firstItem="ghE-Cf-xuE" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="PWX-3D-h9h"/>
+                                            <constraint firstAttribute="trailing" secondItem="29d-TE-wSR" secondAttribute="trailing" constant="24" id="SWs-cd-wcd"/>
+                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="20" id="Vfl-xG-Al7"/>
+                                            <constraint firstAttribute="trailing" secondItem="vhY-Zd-OyQ" secondAttribute="trailing" constant="16" id="ViO-Ja-DPT"/>
+                                            <constraint firstItem="J13-df-caQ" firstAttribute="top" secondItem="dNA-Pa-RwL" secondAttribute="bottom" constant="16" id="fL3-2e-tZN"/>
+                                            <constraint firstItem="vhY-Zd-OyQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="glG-Zq-myj"/>
                                             <constraint firstAttribute="bottom" secondItem="ghE-Cf-xuE" secondAttribute="bottom" constant="16" id="hIs-J7-zIe"/>
+                                            <constraint firstItem="vhY-Zd-OyQ" firstAttribute="top" secondItem="pqf-sx-Kb4" secondAttribute="top" constant="25" id="igk-ex-p9V"/>
+                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="top" secondItem="29d-TE-wSR" secondAttribute="bottom" constant="25" id="wIU-39-hVY"/>
+                                            <constraint firstItem="ghE-Cf-xuE" firstAttribute="top" secondItem="J13-df-caQ" secondAttribute="bottom" constant="16" id="wrt-oA-UoU"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -63,7 +170,6 @@
                             <constraint firstItem="3Wk-Mg-uxB" firstAttribute="leading" secondItem="U6O-pb-vYA" secondAttribute="leading" constant="20" id="84m-7g-gf9"/>
                             <constraint firstItem="U6O-pb-vYA" firstAttribute="trailing" secondItem="3Wk-Mg-uxB" secondAttribute="trailing" constant="20" id="nK2-G2-8pu"/>
                             <constraint firstItem="3Wk-Mg-uxB" firstAttribute="centerY" secondItem="U6O-pb-vYA" secondAttribute="centerY" id="wLb-vj-gfV"/>
-                            <constraint firstItem="3Wk-Mg-uxB" firstAttribute="height" secondItem="WVf-W5-8bQ" secondAttribute="height" multiplier="0.6" id="wOZ-Gl-GoQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -81,4 +187,7 @@
             <size key="intrinsicContentSize" width="159" height="30"/>
         </designable>
     </designables>
+    <resources>
+        <image name="dollar40" width="40" height="40"/>
+    </resources>
 </document>
