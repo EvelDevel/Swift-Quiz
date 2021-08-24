@@ -18,6 +18,7 @@
 		2CD0C331269200BB00871C14 /* OptionalTypesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C330269200BB00871C14 /* OptionalTypesSet.swift */; };
 		2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C332269200EE00871C14 /* ConcurrencySet.swift */; };
 		2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */; };
+		FB08DD8926D48AD400112058 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08DD8826D48AD400112058 /* StoreKit.framework */; };
 		FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* RandomSetManager.swift */; };
 		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
@@ -125,6 +126,7 @@
 		2CD0C330269200BB00871C14 /* OptionalTypesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalTypesSet.swift; sourceTree = "<group>"; };
 		2CD0C332269200EE00871C14 /* ConcurrencySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySet.swift; sourceTree = "<group>"; };
 		2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypeSet.swift; sourceTree = "<group>"; };
+		FB08DD8826D48AD400112058 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FB0B96A125262192006C986D /* RandomSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSetManager.swift; sourceTree = "<group>"; };
 		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB08DD8926D48AD400112058 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +245,14 @@
 				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		FB08DD8726D48AD400112058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB08DD8826D48AD400112058 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FB0E0290246CF334005CA792 /* GameHistory */ = {
@@ -320,6 +331,7 @@
 			children = (
 				FB2EAC92243EEE0F0098FAC3 /* Swifty-Quiz */,
 				FB2EAC91243EEE0F0098FAC3 /* Products */,
+				FB08DD8726D48AD400112058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
