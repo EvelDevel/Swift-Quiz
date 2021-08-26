@@ -233,7 +233,7 @@ extension GameViewController {
     
     /// Запуск подсказки после неправильного ответа
     func showHelpAfterWrongAnswer() {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Help", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
         helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
