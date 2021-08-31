@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="466" id="KGk-i7-Jjw" customClass="SettingCell" customModule="Свифти_Квиз" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
+            <rect key="frame" x="0.0" y="0.0" width="392" height="466"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
+                <rect key="frame" x="0.0" y="0.0" width="392" height="466"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="D0I-Pl-Rlx">
-                        <rect key="frame" x="286" y="18.5" width="14" height="13"/>
+                        <rect key="frame" x="358" y="18.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863441780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="U9t-do-7Up"/>
@@ -26,7 +26,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l73-AV-Lm5" userLabel="questionOrder">
-                        <rect key="frame" x="16" y="15" width="284" height="20"/>
+                        <rect key="frame" x="16" y="15" width="356" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="ykh-Ft-eTC"/>
                         </constraints>
@@ -39,10 +39,10 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i1T-ve-GQ7">
-                        <rect key="frame" x="16" y="43" width="288" height="36"/>
+                        <rect key="frame" x="16" y="43" width="360" height="41"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="wlp-Zv-dgd"/>
+                            <constraint firstAttribute="height" constant="40" id="wlp-Zv-dgd"/>
                         </constraints>
                         <segments>
                             <segment title="Прямая"/>
@@ -55,7 +55,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="vIg-7M-84W">
-                        <rect key="frame" x="286" y="96.5" width="14" height="13"/>
+                        <rect key="frame" x="358" y="101.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="4LO-YI-vKb"/>
@@ -63,7 +63,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-wf-yoT" userLabel="questionText">
-                        <rect key="frame" x="16" y="93" width="284" height="20"/>
+                        <rect key="frame" x="16" y="98" width="356" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="3Os-Be-ijl"/>
                         </constraints>
@@ -76,10 +76,10 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kDo-Pf-RA7">
-                        <rect key="frame" x="16" y="121" width="288" height="36"/>
+                        <rect key="frame" x="16" y="126" width="360" height="41"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="aRg-CU-9xX"/>
+                            <constraint firstAttribute="height" constant="40" id="aRg-CU-9xX"/>
                         </constraints>
                         <segments>
                             <segment title="Нет"/>
@@ -92,7 +92,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-Li-E20">
-                        <rect key="frame" x="286" y="174.5" width="14" height="13"/>
+                        <rect key="frame" x="358" y="184.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="iGJ-dI-al9"/>
@@ -100,7 +100,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veB-j8-GhW" userLabel="questionText">
-                        <rect key="frame" x="16" y="171" width="284" height="20"/>
+                        <rect key="frame" x="16" y="181" width="356" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="eJC-p9-pDW"/>
                         </constraints>
@@ -113,10 +113,10 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iWV-f5-f8C">
-                        <rect key="frame" x="16" y="199" width="288" height="36"/>
+                        <rect key="frame" x="16" y="209" width="360" height="41"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="SMt-Lv-BaB"/>
+                            <constraint firstAttribute="height" constant="40" id="SMt-Lv-BaB"/>
                         </constraints>
                         <segments>
                             <segment title="Продолжать"/>
@@ -129,7 +129,7 @@
                         </connections>
                     </segmentedControl>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoGray" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-sN-h5w">
-                        <rect key="frame" x="286" y="252.5" width="14" height="13"/>
+                        <rect key="frame" x="358" y="267.5" width="14" height="13"/>
                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.2478863442" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="D5d-mH-tzJ"/>
@@ -137,7 +137,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oll-D6-fdB" userLabel="questionText">
-                        <rect key="frame" x="16" y="249" width="284" height="20"/>
+                        <rect key="frame" x="16" y="264" width="356" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="YBo-XS-VMy"/>
                         </constraints>
@@ -150,10 +150,10 @@
                         </connections>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-HG-15f">
-                        <rect key="frame" x="16" y="277" width="288" height="36"/>
+                        <rect key="frame" x="16" y="292" width="360" height="41"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="R1A-4r-PD8"/>
+                            <constraint firstAttribute="height" constant="40" id="R1A-4r-PD8"/>
                         </constraints>
                         <segments>
                             <segment title="Оставаться"/>
@@ -166,7 +166,7 @@
                         </connections>
                     </segmentedControl>
                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U53-eV-aMa" userLabel="questionText">
-                        <rect key="frame" x="16" y="327" width="284" height="20"/>
+                        <rect key="frame" x="16" y="347" width="356" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="sHa-pq-GVO"/>
                         </constraints>
@@ -176,10 +176,10 @@
                         </state>
                     </button>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-rL-3kX">
-                        <rect key="frame" x="16" y="355" width="288" height="36"/>
+                        <rect key="frame" x="16" y="375" width="360" height="41"/>
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="7zw-zL-dRG"/>
+                            <constraint firstAttribute="height" constant="40" id="7zw-zL-dRG"/>
                         </constraints>
                         <segments>
                             <segment title="Включены"/>
@@ -254,7 +254,7 @@
                 <outletCollection property="allControls" destination="JRi-HG-15f" collectionClass="NSMutableArray" id="PTF-70-vHj"/>
                 <outletCollection property="allControls" destination="Odq-rL-3kX" collectionClass="NSMutableArray" id="xur-D8-ShZ"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="228.34821428571428"/>
+            <point key="canvasLocation" x="189.85507246376812" y="228.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>
