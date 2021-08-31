@@ -152,7 +152,7 @@ class VCLifecycleSet {
                      questionId: 212615901,
                      helpText: "При закрытии экрана первым будет вызван метод viewWillDisappear, который сообщает, что вью скоро будет удалено из иерархии и перестанет отображаться. "),
             
-            Question(question: ["Что мы получаем к моменту вызова viedDidAppear()?"],
+            Question(question: ["Что мы получаем к моменту вызова viewDidAppear()?"],
                      image: "",
                      optionA: "Вью появилось на экране",
                      optionB: "Вью только загружены в память",
