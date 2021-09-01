@@ -242,7 +242,6 @@
 		2C85725726803F5C00642E74 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				FB0B96A125262192006C986D /* RandomSetManager.swift */,
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
@@ -399,11 +398,10 @@
 		FB8606B0244458E300A692AD /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				FBC34FE526DF99F100120FB4 /* Caretakers */,
 				FB1D0B952446E76F00E9C56D /* Questions */,
+				FB0B96A125262192006C986D /* RandomSetManager.swift */,
 				FBECDC5F243F352D00BD5583 /* TopicOperator.swift */,
-				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
-				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
-				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -508,6 +506,16 @@
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
 			);
 			path = "Game Controller";
+			sourceTree = "<group>";
+		};
+		FBC34FE526DF99F100120FB4 /* Caretakers */ = {
+			isa = PBXGroup;
+			children = (
+				FB8606B124445E0600A692AD /* RecordsCaretaker.swift */,
+				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
+				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
+			);
+			path = Caretakers;
 			sourceTree = "<group>";
 		};
 		FBDECD7C24839924004695FB /* Assets */ = {
