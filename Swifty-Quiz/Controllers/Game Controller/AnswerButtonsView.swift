@@ -126,7 +126,7 @@ class AnswerButtonsView: UIView {
     
     
     // MARK: Изменение цвета кнопки при ответе
-    func changeButtonColor(sender: UIButton, _ answerIsCorrect: Bool,
+    func changeColor(sender: UIButton, _ answerIsCorrect: Bool,
                            _ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
         switch sender.tag {
         case 1:

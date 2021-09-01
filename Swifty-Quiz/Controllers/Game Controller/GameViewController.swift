@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
     @IBOutlet var GameComtrollerViews: [UIView]!
     
     private let gameHelper = GameHelper()
-    private let buttonsView = AnswerButtonsView()
+    private let buttons = AnswerButtonsView()
     private let shadows = Shadow()
     private var localQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
@@ -137,8 +137,8 @@ extension GameViewController {
     func updateQuestion() {
         /// У последнего вопроса не обновляем интерфейс
         if currentQuestionIndex < localQuestionSet.count {
-            buttonsView.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
-            buttonsView.setDefaultButtonsColor(answerButtonsCollection)
+            buttons.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
+            buttons.setDefaultButtonsColor(answerButtonsCollection)
             shadows.addButtonShadows(answerButtonsCollection)
         }
         answerPressed = false
@@ -153,7 +153,7 @@ extension GameViewController {
     /// Установка контента
     func addQuestionContent() {
         if currentQuestionIndex <= localQuestionSet.count - 1 {
-            buttonsView.makeCorrectButtonsSet(
+            buttons.makeCorrectButtonsSet(
                 currentQuestionIndex,
                 localQuestionSet,
                 optionA,
@@ -209,7 +209,7 @@ extension GameViewController {
                     GameHistory(
                         question: questionLabel.text ?? "",
                         correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
-                        userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
+                        userAnswer: buttons.showFinalButtonsSet()[sender.tag - 1],
                         questionId: localQuestionSet[currentQuestionIndex].questionId,
                         image: localQuestionSet[currentQuestionIndex].image,
                         helpText: localQuestionSet[currentQuestionIndex].helpText
@@ -217,18 +217,18 @@ extension GameViewController {
                 )
             }
             
-            if sender.tag == buttonsView.showCorrectPosition() {
+            if sender.tag == buttons.showCorrectPosition() {
                 if weDidTakeHelp == false {
                     score += 1
                 }
                 shadows.addGreenShadow(button: sender)
-                buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
+                buttons.changeColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .correctAnswer)
                 dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {
                 shadows.addRedShadow(button: sender)
-                buttonsView.changeButtonColor(sender: sender, false, optionA, optionB, optionC, optionD)
+                buttons.changeColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true
                 
