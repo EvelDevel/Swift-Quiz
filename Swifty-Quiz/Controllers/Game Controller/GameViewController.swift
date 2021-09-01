@@ -198,13 +198,14 @@ extension GameViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         if answerPressed == false {
             
-            /// Как только нажали, до выполнения каких либо манипуляций с ответом и флагами...
+            /// Как только нажали, до выполнения каких либо манипуляций с ответом и флагами
             /// записываем вопрос и ответ в историю (правильность будет определяться уже после, внутри контроллера истории).
             /// Это необходимо для того, чтобы у нас правильно отрабатывали флаги и рекорд не засчитывался многократно или некорректно
+            
             if weDidTakeHelp == false {
                 gameHistory.append(
                     GameHistory(
-                        question: localQuestionSet[currentQuestionIndex].question[0],
+                        question: questionLabel.text ?? "",
                         correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
                         userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
                         questionId: localQuestionSet[currentQuestionIndex].questionId,
