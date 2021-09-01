@@ -32,8 +32,8 @@ class CategoriesCell: UITableViewCell {
     
     weak var delegate: CategoriesCellDelegate?
     
-    private let shadows = Shadow()
-    private var lastPosition = SelectedTopic.shared.topic.topicTag
+    private let shadow = Shadow()
+    private var currentPosition = SelectedTopic.shared.topic.topicTag
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,16 +48,14 @@ class CategoriesCell: UITableViewCell {
     }
 
     @IBAction func topicButtonPressed(_ sender: UIButton) {
-        /// Срабатывание только в случае,
-        /// Когда нажимаем на новую кнопку а не активную
-        if sender.tag - 1 != self.lastPosition {
+        if sender.tag - 1 != self.currentPosition {
             updateTopicButtons()
             addQuestionsToArray(sender: sender)
             delegate?.updateNumberOfQuestions()
             Game.shared.changeContinueStatus()
             sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
             SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
-            lastPosition = sender.tag - 1
+            currentPosition = sender.tag - 1
         }
     }
 }
@@ -77,7 +75,7 @@ extension CategoriesCell {
     /// Добавляем тени кнопкам
     func addShadows() {
         DispatchQueue.main.async {
-            self.shadows.addTopicButtonShadows(self.allButtons)
+            self.shadow.addTopicButtonShadows(self.allButtons)
         }
     }
     
@@ -307,7 +305,6 @@ extension CategoriesCell {
         case 62:
             newQuestionSet = TopicOperator.getQuestionsLifecycle()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "ViewController Lifecycle", tag: 61)
-            
         case 63:
             newQuestionSet = TopicOperator.getQuestionsAppLifecycle()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "App Lifecycle", tag: 62)
