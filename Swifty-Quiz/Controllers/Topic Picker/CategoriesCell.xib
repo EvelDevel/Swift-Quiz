@@ -189,10 +189,10 @@
                                                 <rect key="frame" x="0.0" y="48" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="62" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alP-Je-3en" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="234" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Жизненный цикл UIViewController">
+                                                        <state key="normal" title="ViewController Lifecycle">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -202,6 +202,22 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fqg-Za-OpO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="63" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foR-Gb-xoj" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="242" y="0.0" width="140" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="App Lifecycle">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Fu-po-Q5b"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1099,6 +1115,7 @@
                 <outletCollection property="other" destination="alP-Je-3en" collectionClass="NSMutableArray" id="LTN-3A-Mok"/>
                 <outletCollection property="other" destination="Zoq-0U-VKM" collectionClass="NSMutableArray" id="SNf-ia-nt7"/>
                 <outletCollection property="other" destination="cfQ-gZ-M38" collectionClass="NSMutableArray" id="eQt-iQ-0YA"/>
+                <outletCollection property="other" destination="foR-Gb-xoj" collectionClass="NSMutableArray" id="83y-c3-Hev"/>
             </connections>
             <point key="canvasLocation" x="-347.19999999999999" y="365.76354679802955"/>
         </tableViewCell>
@@ -1171,7 +1188,7 @@
             <size key="intrinsicContentSize" width="52" height="26"/>
         </designable>
         <designable name="alP-Je-3en">
-            <size key="intrinsicContentSize" width="171" height="24"/>
+            <size key="intrinsicContentSize" width="117" height="24"/>
         </designable>
         <designable name="cBU-t6-J6S">
             <size key="intrinsicContentSize" width="196" height="26"/>
@@ -1192,6 +1209,9 @@
             <size key="intrinsicContentSize" width="110" height="26"/>
         </designable>
         <designable name="fgV-Eu-Kjd">
+            <size key="intrinsicContentSize" width="66" height="24"/>
+        </designable>
+        <designable name="foR-Gb-xoj">
             <size key="intrinsicContentSize" width="66" height="24"/>
         </designable>
         <designable name="gAi-7Y-eFa">

@@ -306,7 +306,11 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "MASVS - Мобильная безопасность", tag: 60)
         case 62:
             newQuestionSet = TopicOperator.getQuestionsLifecycle()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "Жизненный цикл UIViewController", tag: 61)
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "ViewController Lifecycle", tag: 61)
+            
+        case 63:
+            newQuestionSet = TopicOperator.getQuestionsAppLifecycle()
+            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "App Lifecycle", tag: 62)
             
         default:
             allButtons.forEach { button in

@@ -108,6 +108,7 @@
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* Shadow.swift */; };
+		FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */; };
 		FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
@@ -218,6 +219,7 @@
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
 		FBC1D489247574730055FF62 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleSet.swift; sourceTree = "<group>"; };
 		FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryHintController.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
+				FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */,
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
+				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
 				2CD0C32F2692009B00871C14 /* TuplesSet.swift in Sources */,
 				2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */,
 				FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */,
