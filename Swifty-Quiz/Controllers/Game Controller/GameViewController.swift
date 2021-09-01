@@ -5,12 +5,14 @@
 import UIKit
 
 protocol GameViewControllerDelegate: AnyObject {
-    func didEndGame(result: Int,
-                    totalQuestion: Int,
-                    percentOfCorrect: Double,
-                    topic: String,
-                    helpCounter: Int,
-                    playedNum: Int)
+    func didEndGame(
+        result: Int,
+        totalQuestion: Int,
+        percentOfCorrect: Double,
+        topic: String,
+        helpCounter: Int,
+        playedNum: Int
+    )
 	func showReviewRequest()
     func updateInitialView()
 }
@@ -50,7 +52,7 @@ class GameViewController: UIViewController {
     
     /// Settings
     private let questionOrderSetting = Game.shared.settings.questionOrder
-    private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
+    private let shouldShowAutoHelp = Game.shared.settings.helpAfterWrong
     
     /// Flags
     private var weDidTakeHelp = false // Предотвращает повторное засчитывание подсказки
@@ -215,9 +217,10 @@ extension GameViewController {
                 )
             }
             
-            /// Далее работа непосредственно внутри контроллера
             if sender.tag == buttonsView.showCorrectPosition() {
-                if weDidTakeHelp == false { score += 1 }
+                if weDidTakeHelp == false {
+                    score += 1
+                }
                 shadows.addGreenShadow(button: sender)
                 buttonsView.changeButtonColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .correctAnswer)
@@ -229,9 +232,7 @@ extension GameViewController {
                 SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true
                 
-                /// Показываем подсказку после неправильного
-                /// Если активна настройка
-                if helpAfterWrongAnswerSetting == 1 {
+                if shouldShowAutoHelp == 1 {
                     if alreadyTappedIncorrect.contains(sender.tag) == false {
                         alreadyTappedIncorrect.append(sender.tag)
                         showHelpAfterWrongAnswer()
@@ -393,7 +394,7 @@ extension GameViewController {
                 /// Так же как и подсказку - записываем всего один раз
                 gameHistory.append(
                     GameHistory(
-                        question: localQuestionSet[currentQuestionIndex].question[0],
+                        question: questionLabel.text ?? "",
                         correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
                         userAnswer: "Подсказка",
                         questionId: localQuestionSet[currentQuestionIndex].questionId,
