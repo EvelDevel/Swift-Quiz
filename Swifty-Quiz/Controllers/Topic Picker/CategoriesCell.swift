@@ -25,7 +25,7 @@ class CategoriesCell: UITableViewCell {
     /// Так не нужно переделывать один массив при каждом изменении любой кнопки
     var allButtons: [UIButton] = []
     
-    @IBOutlet var superSets: [UIButton]!
+    @IBOutlet var random: [UIButton]!
     @IBOutlet var guide: [UIButton]!
     @IBOutlet var patterns: [UIButton]!
     @IBOutlet var other: [UIButton]!
@@ -66,7 +66,7 @@ extension CategoriesCell {
     
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
-        allButtons.append(contentsOf: superSets)
+        allButtons.append(contentsOf: random)
         allButtons.append(contentsOf: guide)
         allButtons.append(contentsOf: patterns)
         allButtons.append(contentsOf: other)
@@ -128,12 +128,6 @@ extension CategoriesCell {
         case 3:
             newQuestionSet = TopicOperator.getRandom100()
             SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "100 случайных вопросов", tag: 2)
-        case 4:
-            newQuestionSet = TopicOperator.getGuide20()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "20 вопросов по Руководству", tag: 3)
-        case 5:
-            newQuestionSet = TopicOperator.getPatterns20()
-            SelectedTopic.shared.saveQuestionSet(newQuestionSet, topic: "20 вопросов по Паттернам", tag: 4)
             
             
         // MARK: THE BASICS
