@@ -130,19 +130,13 @@ class GameHelper {
         }
     }
     
-    func setQuestionText(
-        _ set: [Question],
-        _ shuffleSettings: Int,
-        _ index: Int,
-        _ questionLabel: UILabel
-    ) {
-        let normal = set[index].question[0]
-        let random = set[index].question.shuffled()
+    func setQuestionText(_ set: [Question],
+                         _ index: Int) -> String {
         
-        if  shuffleSettings == 1 {
-            questionLabel.text = random[0]
+        if  Game.shared.settings.questionTextShuffeling == 1 {
+            return set[index].question.shuffled()[0]
         } else {
-            questionLabel.text = normal
+            return set[index].question[0]
         }
     }
 }

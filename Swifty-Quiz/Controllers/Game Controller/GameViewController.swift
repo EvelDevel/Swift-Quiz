@@ -50,7 +50,6 @@ class GameViewController: UIViewController {
     
     /// Settings
     private let questionOrderSetting = Game.shared.settings.questionOrder
-    private let questionTextShuffelingSetting = Game.shared.settings.questionTextShuffeling
     private let helpAfterWrongAnswerSetting = Game.shared.settings.helpAfterWrong
     
     /// Flags
@@ -152,10 +151,30 @@ extension GameViewController {
     /// Установка контента
     func addQuestionContent() {
         if currentQuestionIndex <= localQuestionSet.count - 1 {
-            buttonsView.makeCorrectButtonsSet(currentQuestionIndex, localQuestionSet, optionA, optionB, optionC, optionD)
-            gameHelper.setQuestionImageAndTextSizes(localQuestionSet, currentQuestionIndex, questionImageView,
-                                                   questionImageHeight, view, questionLabel, answerButtonsCollection)
-            gameHelper.setQuestionText(localQuestionSet, questionTextShuffelingSetting, currentQuestionIndex, questionLabel)
+            buttonsView.makeCorrectButtonsSet(
+                currentQuestionIndex,
+                localQuestionSet,
+                optionA,
+                optionB,
+                optionC,
+                optionD
+            )
+            
+            gameHelper.setQuestionImageAndTextSizes(
+                localQuestionSet,
+                currentQuestionIndex,
+                questionImageView,
+                questionImageHeight,
+                view,
+                questionLabel,
+                answerButtonsCollection
+            )
+            
+            questionLabel.text = gameHelper.setQuestionText(
+                localQuestionSet,
+                currentQuestionIndex
+            )
+            
         } else if endGameFlag == false {
             gameEnding(path: 1)
         }
@@ -183,12 +202,16 @@ extension GameViewController {
             /// записываем вопрос и ответ в историю (правильность будет определяться уже после, внутри контроллера истории).
             /// Это необходимо для того, чтобы у нас правильно отрабатывали флаги и рекорд не засчитывался многократно или некорректно
             if weDidTakeHelp == false {
-                gameHistory.append(GameHistory(question: localQuestionSet[currentQuestionIndex].question[0],
-                                               correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
-                                               userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
-                                               questionId: localQuestionSet[currentQuestionIndex].questionId,
-                                               image: localQuestionSet[currentQuestionIndex].image,
-											   helpText: localQuestionSet[currentQuestionIndex].helpText))
+                gameHistory.append(
+                    GameHistory(
+                        question: localQuestionSet[currentQuestionIndex].question[0],
+                        correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                        userAnswer: buttonsView.showFinalButtonsSet()[sender.tag - 1],
+                        questionId: localQuestionSet[currentQuestionIndex].questionId,
+                        image: localQuestionSet[currentQuestionIndex].image,
+                        helpText: localQuestionSet[currentQuestionIndex].helpText
+                    )
+                )
             }
             
             /// Далее работа непосредственно внутри контроллера
