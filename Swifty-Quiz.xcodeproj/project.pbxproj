@@ -409,7 +409,6 @@
 		FB8606B32444771300A692AD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 				FBC1D489247574730055FF62 /* Shadow.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 			);
@@ -504,6 +503,7 @@
 				FB291D2326D221B700A40679 /* Game.storyboard */,
 				FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */,
 				FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */,
+				FB7B13E024AA020400CB11C6 /* GameHelper.swift */,
 			);
 			path = "Game Controller";
 			sourceTree = "<group>";
