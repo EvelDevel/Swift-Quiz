@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var questionArea: UIView!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
-    @IBAction func helpSound(_ sender: Any) { SoundPlayer.shared.playSound(sound: .menuMainButton) }
+
     @IBOutlet var GameComtrollerViews: [UIView]!
     
     private let gameHelper = GameHelper()
@@ -50,11 +50,9 @@ class GameViewController: UIViewController {
     private var alreadyTappedIncorrect: [Int] = []
     private var gameHistory: [GameHistory] = []
     
-    /// Settings
     private let questionOrderSetting = Game.shared.settings.questionOrder
     private let shouldShowAutoHelp = Game.shared.settings.helpAfterWrong
     
-    /// Flags
     private var weDidTakeHelp = false // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false // Предотвращает повторное сохранение одного рекорда
@@ -63,6 +61,10 @@ class GameViewController: UIViewController {
     var weContinueLastGame = false // Продолжаем игру или играем новую
     
     weak var delegate: GameViewControllerDelegate?
+    
+    @IBAction func helpSound(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
