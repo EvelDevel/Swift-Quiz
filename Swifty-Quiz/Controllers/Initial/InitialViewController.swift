@@ -229,15 +229,10 @@ extension InitialViewController: GameViewControllerDelegate,
                                  RecordsViewControllerDelegate,
                                  SettingsViewControllerDelegate {
 
-	func didEndGame(result: Int,
-                    totalQuestion: Int,
-                    percentOfCorrect: Double,
-					topic: String,
-                    helpCounter: Int,
-                    playedNum: Int) {
-		lastTopic.text = "Категория: \(topic)"
-		totalQuestions.text = "Вопросы: \(playedNum) из \(totalQuestion) (подсказок: \(helpCounter))"
-		lastScore.text = "Правильных ответов: \(result) (\(percentOfCorrect)%)"
+    func didEndGame(_ result: GameResult) {
+        lastTopic.text = "Категория: \(result.topic)"
+        totalQuestions.text = "Вопросы: \(result.playedNum) из \(result.totalQuestion) (подсказок: \(result.helpCounter))"
+        lastScore.text = "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
 	}
 	
 	func updateInitialView() {
@@ -258,8 +253,8 @@ extension InitialViewController: GameViewControllerDelegate,
 		let recordsNumber = Game.shared.records.count
 		if recordsNumber == 10 || recordsNumber == 30 || recordsNumber == 50
 		|| recordsNumber == 80 || recordsNumber == 100 || recordsNumber == 150 {
-			let twoSecondsFromNow = DispatchTime.now() + 1.0
-			DispatchQueue.main.asyncAfter(deadline: twoSecondsFromNow) {
+			
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
 				SKStoreReviewController.requestReview()
 			}
 		}

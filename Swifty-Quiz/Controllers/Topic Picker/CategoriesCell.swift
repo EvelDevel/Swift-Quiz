@@ -32,7 +32,6 @@ class CategoriesCell: UITableViewCell {
     
     weak var delegate: CategoriesCellDelegate?
     
-    private let shadow = Shadow()
     private var currentPosition = SelectedTopic.shared.topic.topicTag
     
     override func awakeFromNib() {
@@ -75,7 +74,7 @@ extension CategoriesCell {
     /// Добавляем тени кнопкам
     func addShadows() {
         DispatchQueue.main.async {
-            self.shadow.addTopicButtonShadows(self.allButtons)
+            Shadow().addTopicButtonShadows(self.allButtons)
         }
     }
     

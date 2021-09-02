@@ -5,14 +5,7 @@
 import UIKit
 
 protocol GameViewControllerDelegate: AnyObject {
-    func didEndGame(
-        result: Int,
-        totalQuestion: Int,
-        percentOfCorrect: Double,
-        topic: String,
-        helpCounter: Int,
-        playedNum: Int
-    )
+    func didEndGame(_ result: GameResult)
 	func showReviewRequest()
     func updateInitialView()
 }
@@ -41,7 +34,6 @@ class GameViewController: UIViewController {
     
     private let gameHelper = GameHelper()
     private let buttons = AnswerButtonsView()
-    private let shadows = Shadow()
     private var localQuestionSet: [Question] = []
     private var currentQuestionNumber: Int = 1
     private var currentQuestionIndex = 0
@@ -96,8 +88,8 @@ class GameViewController: UIViewController {
 	}
 	
     func addShadows() {
-        shadows.addStaticShadows(GameComtrollerViews)
-        shadows.addButtonShadows(answerButtonsCollection)
+        Shadow().addStaticShadows(GameComtrollerViews)
+        Shadow().addButtonShadows(answerButtonsCollection)
     }
     func showAlertIfNeeded() {
         gameHelper.showAlertIfNeeded(weContinueLastGame, self)
@@ -141,7 +133,7 @@ extension GameViewController {
         if currentQuestionIndex < localQuestionSet.count {
             buttons.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
             buttons.setDefaultButtonsColor(answerButtonsCollection)
-            shadows.addButtonShadows(answerButtonsCollection)
+            Shadow().addButtonShadows(answerButtonsCollection)
         }
         answerPressed = false
         dontUpdateQuestionFlag = false
@@ -223,13 +215,13 @@ extension GameViewController {
                 if weDidTakeHelp == false {
                     score += 1
                 }
-                shadows.addGreenShadow(button: sender)
+                Shadow().addGreenShadow(button: sender)
                 buttons.changeColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .correctAnswer)
                 dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {
-                shadows.addRedShadow(button: sender)
+                Shadow().addRedShadow(button: sender)
                 buttons.changeColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true
@@ -304,12 +296,14 @@ extension GameViewController {
         }
         
         delegate?.didEndGame(
-            result: score,
-            totalQuestion: localQuestionSet.count,
-            percentOfCorrect: updatePercentage(),
-            topic: SelectedTopic.shared.topic.topicName,
-            helpCounter: helpCounter,
-            playedNum: currentQuestionIndex
+            GameResult(
+                result: score,
+                totalQuestion: localQuestionSet.count,
+                percentOfCorrect: updatePercentage(),
+                topic: SelectedTopic.shared.topic.topicName,
+                helpCounter: helpCounter,
+                playedNum: currentQuestionIndex
+            )
         )
 
         let record = Record(
