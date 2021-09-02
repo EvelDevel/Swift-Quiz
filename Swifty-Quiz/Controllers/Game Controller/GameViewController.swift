@@ -239,7 +239,8 @@ extension GameViewController {
             
             /// Обновляем вопрос, показатели, и переходим дальше, если:
             /// Остались вопросы в массиве, не выводили авто-подсказку (настройки)
-            if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
+            if currentQuestionIndex < localQuestionSet.count
+                && dontUpdateQuestionFlag == false {
                 currentQuestionIndex += 1
                 currentQuestionNumber += 1
                 
@@ -250,7 +251,6 @@ extension GameViewController {
         }
     }
     
-    /// Запуск подсказки после неправильного ответа
     func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Help", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController

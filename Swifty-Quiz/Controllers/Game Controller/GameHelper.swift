@@ -112,7 +112,7 @@ class GameHelper {
                 questionImageHeight.constant = 180
             } else if width <= 410 {
                 questionLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
-                questionImageHeight.constant = 200
+                questionImageHeight.constant = 240
             } else {
                 questionLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .light)
                 questionImageHeight.constant = 280
