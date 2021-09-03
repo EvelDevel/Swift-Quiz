@@ -7,15 +7,6 @@ import Foundation
 class ErrorHandlingSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Обработка ошибок\" будет по английски?"],
-					 image: "",
-					 optionA: "Error Handling",
-					 optionB: "Processing",
-					 optionC: "Control Flow",
-					 optionD: "Reference Counting",
-					 questionId: 933771718,
-					 helpText: "Правильный ответ: Error Handling."),
-			
 			Question(question: ["Обработка ошибок, это процесс...?"],
 					 image: "",
 					 optionA: "Реагирования на ошибки",

@@ -7,15 +7,6 @@ import Foundation
 class NestedTypesSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Вложенные типы\" будут по английски?"],
-					 image: "",
-					 optionA: "Nested Types",
-					 optionB: "Type Casting",
-					 optionC: "Typing",
-					 optionD: "Opaque Types",
-					 questionId: 675637044,
-					 helpText: "Правильный ответ: Nested Types."),
-			
 			Question(question: ["Где вам нужно написать свое определение типа, чтобы вложить один тип в другой?"],
 					 image: "",
 					 optionA: "Во внешних {}",

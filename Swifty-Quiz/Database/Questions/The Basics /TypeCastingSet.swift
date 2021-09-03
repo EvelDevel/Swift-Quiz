@@ -7,15 +7,6 @@ import Foundation
 class TypeCastingSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Приведение типов\" будет по английски?"],
-					 image: "",
-					 optionA: "Type Casting",
-					 optionB: "Nested Types",
-					 optionC: "Typing",
-					 optionD: "Opaque Types",
-					 questionId: 462663293,
-					 helpText: "Правильный ответ: Type Casting."),
-			
 			Question(question: ["С помощью каких операторов реализуется приведение типов в Swift?",
 								"Приведение типов в Swift реализуется с помощью этих операторов"],
 					 image: "",

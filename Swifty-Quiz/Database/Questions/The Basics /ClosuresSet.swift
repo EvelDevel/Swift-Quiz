@@ -7,17 +7,8 @@ import Foundation
 class ClosuresSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Замыкания\" будет по английски?"],
-					 image: "",
-					 optionA: "Closures",
-					 optionB: "Tuples",
-					 optionC: "Methods",
-					 optionD: "Generics",
-					 questionId: 471816780,
-					 helpText: "Правильный ответ: Closures."),
-			
 			Question(question: ["Могут ли замыкания передаваться и использоваться в вашем коде?",
-								"Вы можете передавать и использовать замыкания в вашему коде. Так ли это?"],
+								"Можете ли вы передавать и использовать замыкания в вашему коде?"],
 					 image: "",
 					 optionA: "Да",
 					 optionB: "Нет",

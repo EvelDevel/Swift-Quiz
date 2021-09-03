@@ -7,16 +7,6 @@ import Foundation
 class MethodsSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как будет \"Методы\" по английски?",
-								"Как \"Методы\" переводятся на английский?"],
-					 image: "",
-					 optionA: "Methods",
-					 optionB: "Properties",
-					 optionC: "Closures",
-					 optionD: "Functions",
-					 questionId: 256030912,
-					 helpText: "Правильный ответ: Methods."),
-			
 			Question(question: ["Чем отличаются методы от функций?",
 								"Функции отличаются от методов именно этим",
 								"Отличие методов от функций"],

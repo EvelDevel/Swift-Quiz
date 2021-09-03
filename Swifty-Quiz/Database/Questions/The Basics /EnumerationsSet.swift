@@ -7,16 +7,6 @@ import Foundation
 class EnumerationsSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как по английски будут \"Перечисления\"?",
-								"\"Перечисления\", в переводе на английский?"],
-					 image: "",
-					 optionA: "Enumerations",
-					 optionB: "Closures",
-					 optionC: "Methods",
-					 optionD: "Lists",
-					 questionId: 709040279,
-					 helpText: "Правильный ответ: Enumerations."),
-			
 			Question(question: ["Каким ключевым словом перечисления обозначаются в коде?",
 								"В коде перечисления обозначаются этим ключевым словом",
 								"Как перечисления обозначаются в коде (ключевое слово)?"],

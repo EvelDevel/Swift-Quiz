@@ -7,15 +7,6 @@ import Foundation
 class DeinitializationSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Деинициализация\" будет по английски?"],
-					 image: "",
-					 optionA: "Deinitialization",
-					 optionB: "Initialization",
-					 optionC: "Installing",
-					 optionD: "Deinterpretation",
-					 questionId: 205895968,
-					 helpText: "Правильный ответ: Deinitialization."),
-
 			Question(question: ["Какое ключевое слово обозначает деинициализацию?",
 								"Этим ключевым словом обозначается деинициализация",
 								"Деинициализация обозначается этим ключевым словом"],

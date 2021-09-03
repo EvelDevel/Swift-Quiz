@@ -7,24 +7,6 @@ import Foundation
 class StructuresAndClassesSet {
     static func getQuestions() -> [Question] {
         return [
-            Question(question: ["Как будет \"Структуры\" по Английски?"],
-                     image: "",
-                     optionA: "Structures",
-                     optionB: "Classes",
-                     optionC: "Enumerations",
-                     optionD: "Collections",
-                     questionId: 486413605,
-                     helpText: "Правильный ответ: Structures. "),
-            
-            Question(question: ["Как будет \"Классы\" по Английски?"],
-                     image: "",
-                     optionA: "Classes",
-                     optionB: "Structures",
-                     optionC: "Enumerations",
-                     optionD: "Collections",
-                     questionId: 541439890,
-                     helpText: "Правильный ответ: Classes."),
-            
             Question(question: ["Какими ключевыми словами обозначаются структуры и классы в коде?",
                                 "Ключевые слова, которыми обозначаются классы и структуры в коде"],
                      image: "",

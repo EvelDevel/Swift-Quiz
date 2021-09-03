@@ -7,15 +7,6 @@ import Foundation
 class OptionalChainingSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Опциональная последовательность\" будет по английски?"],
-					 image: "",
-					 optionA: "Optional Chaining",
-					 optionB: "Optional Binding",
-					 optionC: "Forced Unwrapping",
-					 optionD: "Memory Safety",
-					 questionId: 694208091,
-					 helpText: "Правильный ответ: Optional Chaining."),
-			
 			Question(question: ["Срабатывает ли опциональная цепочка, если хотя бы один из запросов свойств равен nil?",
 								"Если в опциональной цепочке запросов, хотя бы один возвращается как nil, сработает ли она?"],
 					 image: "",

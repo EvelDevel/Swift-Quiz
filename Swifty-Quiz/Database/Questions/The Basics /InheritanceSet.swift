@@ -7,15 +7,6 @@ import Foundation
 class InheritanceSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Наследование\" будет по английски?"],
-					 image: "",
-					 optionA: "Inheritance",
-					 optionB: "Initialization",
-					 optionC: "Deinitialization",
-					 optionD: "Extensions",
-					 questionId: 790370052,
-					 helpText: "Правильный ответ: Inheritance."),
-			
 			Question(question: ["Могут ли структуры иметь наследование?",
 								"У структур есть наследование?",
 								"Есть ли наследование у структур и перечислений?"],

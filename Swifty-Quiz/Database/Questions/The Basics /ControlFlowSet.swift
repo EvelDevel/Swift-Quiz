@@ -7,17 +7,6 @@ import Foundation
 class ControlFlowSet {
     static func getQuestions() -> [Question] {
         return [
-			Question(question: ["Как данная тема \"Управление потоком\" называется на английском языке?",
-								"Как будет \"Управление потоком\" на английском языке?",
-								"Как будет \"Управление потоком\" в официальном документации (английский)?"],
-					 image: "",
-					 optionA: "Control Flow",
-					 optionB: "Collection Types",
-					 optionC: "Closures",
-					 optionD: "Optional Chaining",
-					 questionId: 184530382,
-					 helpText: "Знание английского языка в программировании играет важную роль. Правильный ответ: Control Flow."),
-			
             Question(question: ["Сколько разных циклов поддерживает Swift?",
                                 "Swift поддерживает столько разных циклов"],
                      image: "",

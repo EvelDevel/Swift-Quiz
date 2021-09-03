@@ -7,15 +7,6 @@ import Foundation
 class GenericsSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Универсальные шаблоны\" будет по английски?"],
-					 image: "",
-					 optionA: "Generics",
-					 optionB: "Closures",
-					 optionC: "Subscripts",
-					 optionD: "Collections",
-					 questionId: 643423426,
-					 helpText: "Правильный ответ: Generics."),
-			
 			Question(question: ["Что вы можете создавать с помощью универсальных шаблонов?",
 								"Что помогают реализовать универсальные шаблоны?",
 								"Универсальные шаблоны помогают реализовывать это"],

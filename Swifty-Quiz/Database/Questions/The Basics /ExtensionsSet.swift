@@ -7,15 +7,6 @@ import Foundation
 class ExtensionsSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Расширения\" будет по английски?"],
-					 image: "",
-					 optionA: "Extensions",
-					 optionB: "Protocols",
-					 optionC: "Generics",
-					 optionD: "Subscripts",
-					 questionId: 681657905,
-					 helpText: "Правильный ответ: Extensions."),
-			
 			Question(question: ["Можем ли мы добавлять функциональность классам, к исходному коду которых у нас нет доступа?",
 								"Если у нас нет доступа к исходному коду класса, можем ли мы добавить ему функциональности с помощью расширения?",
 								"Мы можем с помощью расширения добавить функциональность классу, даже если у нас нет доступа к его исходному коду. Так ли это?"],

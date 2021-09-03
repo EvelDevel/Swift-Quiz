@@ -7,16 +7,6 @@ import Foundation
 class PropertiesSet {
 	static func getQuestions() -> [Question] {
 		return [
-			Question(question: ["Как \"Свойства\" будут по английски?",
-								"Как \"Свойства\" переводятся на английский?"],
-					 image: "",
-					 optionA: "Properties",
-					 optionB: "Methods",
-					 optionC: "Subscripts",
-					 optionD: "Closures",
-					 questionId: 370759750,
-					 helpText: "Правильный ответ: Properties."),
-			
 			Question(question: ["Эти свойства содержат значения константы или переменной как часть экземпляра",
 								"Эти свойства обеспечиваются только структурами или классами, и содержат значения константы или переменной как часть экземпляра"],
 					 image: "",
