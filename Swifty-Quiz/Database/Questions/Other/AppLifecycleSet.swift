@@ -130,7 +130,6 @@ class AppLifecycleSet {
                      questionId: 651977696,
                      helpText: "Активное состояние - Active state - приложение переходит в состояние переднего плана и может обрабатывать события."),
             
-            
             Question(question: ["Какому объекту делегата придет уведомление в версии 12.4 при переходе между состояниями приложения?"],
                      image: "",
                      optionA: "UIApplicationDelegate",
