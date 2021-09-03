@@ -11,6 +11,7 @@ class TopicOperator {
     static func getRandom20() -> [Question] { return RandomSetManager.getQuestions(20) }
     static func getRandom50() -> [Question] { return RandomSetManager.getQuestions(50) }
     static func getRandom100() -> [Question] { return RandomSetManager.getQuestions(100) }
+    static func deathMatch() -> [Question] { return RandomSetManager.getAllQuestions() }
     
     
     // MARK: THE BASICS

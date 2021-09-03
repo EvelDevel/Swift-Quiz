@@ -47,14 +47,16 @@ class CategoriesCell: UITableViewCell {
     }
 
     @IBAction func topicButtonPressed(_ sender: UIButton) {
-        if sender.tag - 1 != self.currentPosition {
-            updateTopicButtons()
-            addQuestionsToArray(sender: sender)
-            delegate?.updateNumberOfQuestions()
-            Game.shared.changeContinueStatus()
-            sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
-            SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
-            currentPosition = sender.tag - 1
+        DispatchQueue.main.async {
+            if sender.tag - 1 != self.currentPosition {
+                self.updateTopicButtons()
+                sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+                SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
+                self.addQuestionsToArray(sender: sender)
+                self.delegate?.updateNumberOfQuestions()
+                Game.shared.changeContinueStatus()
+                self.currentPosition = sender.tag - 1
+            }
         }
     }
 }
@@ -128,6 +130,12 @@ extension CategoriesCell {
                 TopicOperator.getRandom100(),
                 topic: "100 случайных вопросов",
                 tag: 2
+            )
+        case 4:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.deathMatch(),
+                topic: "Все вопросы приложения",
+                tag: 3
             )
             
             
