@@ -11,24 +11,33 @@ class GameHelper {
     /// All other cases - same random set
     
     func refreshRandomSet(tag: Int) {
-        if tag == 0 {
+        switch tag {
+        case 0:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(20),
                 topic: "20 случайных вопросов",
                 tag: 0
             )
-        } else if tag == 1 {
+        case 1:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(50),
                 topic: "50 случайных вопросов",
                 tag: 1
             )
-        } else if tag == 2 {
+        case 2:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(100),
                 topic: "100 случайных вопросов",
                 tag: 2
             )
+        case 3:
+            SelectedTopic.shared.saveQuestionSet(
+                RandomSetManager.getAllQuestions(),
+                topic: "Все вопросы приложения",
+                tag: 3
+            )
+        default:
+            break
         }
     }
     
@@ -75,7 +84,6 @@ class GameHelper {
                     completion: nil
                 )
             }
-            
             Game.shared.setThatWeShowedAlert()
         }
     }

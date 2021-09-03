@@ -370,6 +370,7 @@
                         <outlet property="aboutButtonWidth" destination="kv3-HN-QsB" id="ydS-jk-9Qk"/>
                         <outlet property="contentCenter" destination="hs6-n2-mIT" id="t92-a9-86Y"/>
                         <outlet property="continueGameButton" destination="mO1-NM-9Qp" id="Q6k-rs-nB8"/>
+                        <outlet property="donationButton" destination="kaM-Au-o8t" id="O54-G2-KV0"/>
                         <outlet property="lastGameTitle" destination="ZWi-6k-ilE" id="mqF-ba-ezj"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>

@@ -15,7 +15,8 @@ class InitialViewController: UIViewController {
 	@IBOutlet weak var aboutButtonWidth: NSLayoutConstraint!
 	@IBOutlet weak var aboutButtonVerticalPosition: NSLayoutConstraint!
 	@IBOutlet weak var contentCenter: NSLayoutConstraint!
-
+    @IBOutlet weak var donationButton: UIButton!
+    
 	@IBOutlet weak var totalQuestionsLabel: UILabel!
 	@IBOutlet weak var selectedTopic: UILabel!
 	@IBOutlet weak var lastTopic: UILabel!
@@ -113,7 +114,7 @@ extension InitialViewController {
 		setUpCorrectLogoPosition()
 	}
 
-	/// Показываем или скрываем кнопку "продолжить"
+	/// Показываем или скрываем кноп "продолжить"
 	func updateContinueButton() {
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             
@@ -251,9 +252,7 @@ extension InitialViewController: GameViewControllerDelegate,
     
 	func showReviewRequest() {
 		let recordsNumber = Game.shared.records.count
-		if recordsNumber == 10 || recordsNumber == 30 || recordsNumber == 50
-		|| recordsNumber == 80 || recordsNumber == 100 || recordsNumber == 150 {
-			
+		if recordsNumber == 50 || recordsNumber == 150 {
 			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
 				SKStoreReviewController.requestReview()
 			}

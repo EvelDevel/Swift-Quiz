@@ -95,7 +95,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Death Match - Все вопросы приложения">
+                                                <state key="normal" title="The Death Match: Все вопросы приложения">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1178,7 +1178,7 @@
             <size key="intrinsicContentSize" width="70" height="24"/>
         </designable>
         <designable name="evn-nM-Qdi">
-            <size key="intrinsicContentSize" width="202" height="24"/>
+            <size key="intrinsicContentSize" width="219" height="24"/>
         </designable>
         <designable name="fTQ-Ap-1US">
             <size key="intrinsicContentSize" width="110" height="26"/>
