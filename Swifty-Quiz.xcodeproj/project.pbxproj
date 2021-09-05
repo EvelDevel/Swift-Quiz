@@ -20,6 +20,7 @@
 		2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */; };
 		FB08DD8926D48AD400112058 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08DD8826D48AD400112058 /* StoreKit.framework */; };
 		FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* RandomSetManager.swift */; };
+		FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C05B026E4D46D006744CB /* PulseAnimation.swift */; };
 		FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */; };
 		FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C19246A5522005F5289 /* PropertiesSet.swift */; };
 		FB119C1C246A554B005F5289 /* MethodsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C1B246A554B005F5289 /* MethodsSet.swift */; };
@@ -130,6 +131,7 @@
 		2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypeSet.swift; sourceTree = "<group>"; };
 		FB08DD8826D48AD400112058 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FB0B96A125262192006C986D /* RandomSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSetManager.swift; sourceTree = "<group>"; };
+		FB0C05B026E4D46D006744CB /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		FB119C15246A54BC005F5289 /* StructuresAndClassesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuresAndClassesSet.swift; sourceTree = "<group>"; };
 		FB119C19246A5522005F5289 /* PropertiesSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesSet.swift; sourceTree = "<group>"; };
 		FB119C1B246A554B005F5289 /* MethodsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsSet.swift; sourceTree = "<group>"; };
@@ -241,7 +243,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C85725726803F5C00642E74 /* Other */ = {
+		2C85725726803F5C00642E74 /* New */ = {
 			isa = PBXGroup;
 			children = (
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
@@ -249,7 +251,7 @@
 				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
 				FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */,
 			);
-			path = Other;
+			path = New;
 			sourceTree = "<group>";
 		};
 		FB08DD8726D48AD400112058 /* Frameworks */ = {
@@ -277,7 +279,7 @@
 			children = (
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
-				2C85725726803F5C00642E74 /* Other */,
+				2C85725726803F5C00642E74 /* New */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -413,6 +415,7 @@
 			children = (
 				FBC1D489247574730055FF62 /* Shadow.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
+				FB0C05B026E4D46D006744CB /* PulseAnimation.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				FBC34FE726E08EEE00120FB4 /* GameResult.swift in Sources */,
 				FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
+				FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */,
 				FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */,
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
 				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
@@ -884,7 +888,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.14;
+				MARKETING_VERSION = 1.13.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
@@ -904,7 +908,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.14;
+				MARKETING_VERSION = 1.13.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;

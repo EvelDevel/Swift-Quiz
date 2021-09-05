@@ -15,7 +15,9 @@ class InitialViewController: UIViewController {
 	@IBOutlet weak var aboutButtonWidth: NSLayoutConstraint!
 	@IBOutlet weak var aboutButtonVerticalPosition: NSLayoutConstraint!
 	@IBOutlet weak var contentCenter: NSLayoutConstraint!
+    
     @IBOutlet weak var donationButton: UIButton!
+    @IBOutlet weak var donationView: UIView!
     
 	@IBOutlet weak var totalQuestionsLabel: UILabel!
 	@IBOutlet weak var selectedTopic: UILabel!
@@ -52,6 +54,11 @@ class InitialViewController: UIViewController {
 	override func viewWillLayoutSubviews() {
 		updateLastGameLabel()
 	}
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showAnimation()
+    }
 }
 
 
@@ -100,6 +107,13 @@ extension InitialViewController {
 	func showTotalQuestions() {
 		totalQuestionsLabel.text = "Вопросов в игре: \(RandomSetManager.showAllQuestionsNumber())"
 	}
+    
+    private func showAnimation() {
+        let pulse = PulseAnimation(numberOfPulse: 10, radius: 23, postion: donationButton.center)
+        pulse.animationDuration = 1.5
+        pulse.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        view.layer.insertSublayer(pulse, below: donationButton.layer)
+    }
 }
 
 
