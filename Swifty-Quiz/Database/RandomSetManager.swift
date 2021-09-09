@@ -97,6 +97,7 @@ class RandomSetManager {
             others.append(contentsOf: MobileSecuritySet.getQuestions())
             others.append(contentsOf: VCLifecycleSet.getQuestions())
             others.append(contentsOf: AppLifecycleSet.getQuestions())
+            others.append(contentsOf: FramesAndBounds.getQuestions())
         }
         return others
     }

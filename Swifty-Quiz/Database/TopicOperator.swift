@@ -83,4 +83,5 @@ class TopicOperator {
     static func getQuestionsMobileSecurity() -> [Question] { return MobileSecuritySet.getQuestions() }
     static func getQuestionsLifecycle() -> [Question] { return VCLifecycleSet.getQuestions() }
     static func getQuestionsAppLifecycle() -> [Question] { return AppLifecycleSet.getQuestions() }
+    static func getQuestionsFramesAndBounds() -> [Question] { return FramesAndBounds.getQuestions() }
 }

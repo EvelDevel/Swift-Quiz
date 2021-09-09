@@ -8,6 +8,7 @@
 /// - Создать outlet-collection с названием раздела или добавить в массив существующего раздела
 /// - Добавить элементы этой коллекции в общий массив для работы с UI (функция unificationOfOutlets)
 /// - Добавить необходимые действия по этим кнопкам в addQuestionsToArray
+/// - Добавить новую категорию в RandomSetManager
 
 // MARK: При добавлении новых "случайных" сетов
 /// При добавлении новых сетов с подборками случайных вопросов
@@ -412,6 +413,12 @@ extension CategoriesCell {
                 TopicOperator.getQuestionsAppLifecycle(),
                 topic: "App Lifecycle",
                 tag: 62
+            )
+        case 64:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsFramesAndBounds(),
+                topic: "Frames & Bounds",
+                tag: 63
             )
             
         default:

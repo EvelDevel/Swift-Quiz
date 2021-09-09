@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="1346" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="1346"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="1481" id="KGk-i7-Jjw" customClass="CategoriesCell" customModule="Свифти_Квиз" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1481"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="1346"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="1481"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="16" width="382" height="1291"/>
+                        <rect key="frame" x="16" y="16" width="382" height="1339"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
@@ -115,7 +115,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                                <rect key="frame" x="0.0" y="155" width="382" height="128"/>
+                                <rect key="frame" x="0.0" y="155" width="382" height="176"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новинки без категории " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -127,7 +127,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-13-vKy" userLabel="Other">
-                                        <rect key="frame" x="0.0" y="40" width="382" height="88"/>
+                                        <rect key="frame" x="0.0" y="40" width="382" height="136"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="01 Row">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -209,12 +209,36 @@
                                                     <constraint firstAttribute="height" constant="40" id="WjE-Dz-elV"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-3M-N4p" userLabel="03 Row">
+                                                <rect key="frame" x="0.0" y="96" width="382" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="64" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFJ-qa-xNy" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="Frames &amp; Bounds">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ydL-R4-Uey"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Rsd-3D-ht1"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                                <rect key="frame" x="0.0" y="308" width="382" height="830"/>
+                                <rect key="frame" x="0.0" y="356" width="382" height="830"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство языка Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -916,7 +940,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="1163" width="382" height="128"/>
+                                <rect key="frame" x="0.0" y="1211" width="382" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны проектирования" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1091,8 +1115,9 @@
                 <outletCollection property="other" destination="foR-Gb-xoj" collectionClass="NSMutableArray" id="83y-c3-Hev"/>
                 <outletCollection property="patterns" destination="1Ja-zl-HbK" collectionClass="NSMutableArray" id="GeV-oa-A6F"/>
                 <outletCollection property="random" destination="evn-nM-Qdi" collectionClass="NSMutableArray" id="AJO-Zl-RY1"/>
+                <outletCollection property="other" destination="ZFJ-qa-xNy" collectionClass="NSMutableArray" id="7L6-IM-lEr"/>
             </connections>
-            <point key="canvasLocation" x="-347.19999999999999" y="291.13300492610841"/>
+            <point key="canvasLocation" x="-347.19999999999999" y="341.00985221674875"/>
         </tableViewCell>
     </objects>
     <designables>
@@ -1149,6 +1174,9 @@
         </designable>
         <designable name="YzE-jG-LN5">
             <size key="intrinsicContentSize" width="95" height="26"/>
+        </designable>
+        <designable name="ZFJ-qa-xNy">
+            <size key="intrinsicContentSize" width="85" height="24"/>
         </designable>
         <designable name="Zoq-0U-VKM">
             <size key="intrinsicContentSize" width="107" height="24"/>
