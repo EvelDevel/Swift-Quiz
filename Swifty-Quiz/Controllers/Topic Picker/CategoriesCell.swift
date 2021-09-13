@@ -420,6 +420,12 @@ extension CategoriesCell {
                 topic: "Frames & Bounds",
                 tag: 63
             )
+        case 65:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsMultithreading(),
+                topic: "Многопоточность",
+                tag: 64
+            )
             
         default:
             allButtons.forEach { button in

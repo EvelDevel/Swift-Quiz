@@ -213,7 +213,7 @@
                                                 <rect key="frame" x="0.0" y="96" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="64" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFJ-qa-xNy" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Frames &amp; Bounds">
@@ -226,6 +226,22 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ydL-R4-Uey"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="65" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glQ-a3-f4y" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="186.33333333333337" y="0.0" width="195.66666666666663" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="Многопоточность">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0ci-vW-aGo"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1116,6 +1132,7 @@
                 <outletCollection property="patterns" destination="1Ja-zl-HbK" collectionClass="NSMutableArray" id="GeV-oa-A6F"/>
                 <outletCollection property="random" destination="evn-nM-Qdi" collectionClass="NSMutableArray" id="AJO-Zl-RY1"/>
                 <outletCollection property="other" destination="ZFJ-qa-xNy" collectionClass="NSMutableArray" id="7L6-IM-lEr"/>
+                <outletCollection property="other" destination="glQ-a3-f4y" collectionClass="NSMutableArray" id="5F0-LS-HoH"/>
             </connections>
             <point key="canvasLocation" x="-347.19999999999999" y="341.00985221674875"/>
         </tableViewCell>
@@ -1219,6 +1236,9 @@
         </designable>
         <designable name="gAi-7Y-eFa">
             <size key="intrinsicContentSize" width="87" height="26"/>
+        </designable>
+        <designable name="glQ-a3-f4y">
+            <size key="intrinsicContentSize" width="89" height="24"/>
         </designable>
         <designable name="ia1-P9-vXa">
             <size key="intrinsicContentSize" width="102" height="26"/>

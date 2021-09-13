@@ -7,6 +7,42 @@ import Foundation
 class TheBasicsSet {
     static func getQuestions() -> [Question] {
         return [
+            
+            // MARK: Collections
+            
+            Question(question: ["Что будет напечатано в консоль?"],
+                     image: "Collections04",
+                     optionA: "Set<Int>",
+                     optionB: "Set",
+                     optionC: "Array",
+                     optionD: "Array<Int>",
+                     questionId: 425560646,
+                     helpText: "Правильный ответ: Set<Int>."),
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            ///
+            
+            
+            
+            
             Question(question: ["Команда, выполняющая одну или несколько операций",
                                 "Как называется завершенная команда языка Swift?",
                                 "В Swift завершенная команда называется именно так",

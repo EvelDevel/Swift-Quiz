@@ -8,10 +8,21 @@ import Foundation
 class TopicOperator {
     
     // MARK: RANDOM
+    
     static func getRandom20() -> [Question] { return RandomSetManager.getQuestions(20) }
     static func getRandom50() -> [Question] { return RandomSetManager.getQuestions(50) }
     static func getRandom100() -> [Question] { return RandomSetManager.getQuestions(100) }
     static func deathMatch() -> [Question] { return RandomSetManager.getAllQuestions() }
+    
+    
+    // MARK: NEW
+    
+    static func getQuestionsExtremeProgramming() -> [Question] { return ExtremeProgrammingSet.getQuestions() }
+    static func getQuestionsMobileSecurity() -> [Question] { return MobileSecuritySet.getQuestions() }
+    static func getQuestionsLifecycle() -> [Question] { return VCLifecycleSet.getQuestions() }
+    static func getQuestionsAppLifecycle() -> [Question] { return AppLifecycleSet.getQuestions() }
+    static func getQuestionsFramesAndBounds() -> [Question] { return FramesAndBounds.getQuestions() }
+    static func getQuestionsMultithreading() -> [Question] { return Multithreading.getQuestions() }
     
     
     // MARK: THE BASICS
@@ -76,12 +87,4 @@ class TopicOperator {
     
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
-    
-    
-    // MARK: OTHER
-    static func getQuestionsExtremeProgramming() -> [Question] { return ExtremeProgrammingSet.getQuestions() }
-    static func getQuestionsMobileSecurity() -> [Question] { return MobileSecuritySet.getQuestions() }
-    static func getQuestionsLifecycle() -> [Question] { return VCLifecycleSet.getQuestions() }
-    static func getQuestionsAppLifecycle() -> [Question] { return AppLifecycleSet.getQuestions() }
-    static func getQuestionsFramesAndBounds() -> [Question] { return FramesAndBounds.getQuestions() }
 }

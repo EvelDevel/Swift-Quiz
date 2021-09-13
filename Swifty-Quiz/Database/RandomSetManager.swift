@@ -98,6 +98,7 @@ class RandomSetManager {
             others.append(contentsOf: VCLifecycleSet.getQuestions())
             others.append(contentsOf: AppLifecycleSet.getQuestions())
             others.append(contentsOf: FramesAndBounds.getQuestions())
+            others.append(contentsOf: Multithreading.getQuestions())
         }
         return others
     }
