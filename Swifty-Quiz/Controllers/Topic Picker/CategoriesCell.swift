@@ -135,7 +135,7 @@ extension CategoriesCell {
         case 4:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.deathMatch(),
-                topic: "Все вопросы приложения",
+                topic: "The Death Match",
                 tag: 3
             )
             
