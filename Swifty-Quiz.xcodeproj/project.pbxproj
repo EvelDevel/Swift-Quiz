@@ -283,9 +283,9 @@
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				2C85725726803F5C00642E74 /* New */,
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
-				2C85725726803F5C00642E74 /* New */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -896,7 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.13.2;
+				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
@@ -916,7 +916,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.13.2;
+				MARKETING_VERSION = 1.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
