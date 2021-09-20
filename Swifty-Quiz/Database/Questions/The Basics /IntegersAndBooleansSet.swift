@@ -328,15 +328,6 @@ class IntegersAndBooleansSet {
                      optionD: "",
                      questionId: 352157881,
                      helpText: "Правильный ответ ON. Так как записи if isON == true { } и if isON { } эквивалентны, а наша константа isON равна true, при запуске тернарного оператора внутри print() мы получим ON в консоль (так как в случае true - выполняется первая часть тернарного оператора)"),
-            
-            Question(question: ["Что произойдет при запуске данного кода?"],
-                     image: "IntegersAndBooleansSet02",
-                     optionA: "Столкнемся с ошибкой",
-                     optionB: "Получим 10 в консоль",
-                     optionC: "Получим 0 в консоль",
-                     optionD: "",
-                     questionId: 754642456,
-                     helpText: "Мы столкнемся с ошибкой Type 'Int' cannot be used as a boolean; test for '!= 0' instead, поскольку наша переменная number является числом, мы не можем таким образом использовать ее в условии if. Результатом сравнения должен быть тип Bool."),
         ]
     }
 }
