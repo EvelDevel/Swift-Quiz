@@ -29,7 +29,7 @@ class SoundPlayer {
         
         /// Фикс для симуляторов ниже 13.0 - сильные лаги, если оставить AVAudioPlayer
         #if targetEnvironment(simulator)
-        if #available(iOS 13, *) {
+        if #available(iOS 14, *) {
             
         } else {
             return
