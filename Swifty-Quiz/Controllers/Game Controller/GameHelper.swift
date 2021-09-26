@@ -67,7 +67,7 @@ class GameHelper {
             
             DispatchQueue.main.async {
                 let alert = UIAlertController(
-                    title: "Есть незавершенная игра",
+                    title: "Незавершенная игра",
                     message: "Если вы ответите хотя бы на один вопрос или выберете другую тему, вы потеряете возможность закончить незавершенную игру",
                     preferredStyle: .alert
                 )

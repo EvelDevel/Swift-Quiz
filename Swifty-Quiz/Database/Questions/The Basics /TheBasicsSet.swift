@@ -7,19 +7,6 @@ import Foundation
 class TheBasicsSet {
     static func getQuestions() -> [Question] {
         return [
-        
-            ///
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             Question(question: ["Команда, выполняющая одну или несколько операций",
                                 "Как называется завершенная команда языка Swift?",
                                 "В Swift завершенная команда называется именно так",
