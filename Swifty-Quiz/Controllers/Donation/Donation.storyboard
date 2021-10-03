@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="20" y="194" width="374" height="518"/>
+                                <rect key="frame" x="20" y="225.5" width="374" height="455.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="518"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="455.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поддержка " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-Zd-OyQ">
                                                 <rect key="frame" x="16" y="25" width="342" height="20.5"/>
@@ -29,20 +29,20 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
-                                                <rect key="frame" x="24" y="65.5" width="326" height="134"/>
-                                                <string key="text">Если вы получили пользу от моего приложения, оценили огромный труд по созданию авторского контента и хотите поддержать небольшим вкладом, вы можете отправить донат через кнопки ниже. Так же вы можете оставить отзыв в Apple Store. Я планирую продолжать развивать проект, но с вашей поддержкой будет чуть приятнее. Благодарю! </string>
+                                                <rect key="frame" x="24" y="65.5" width="326" height="84"/>
+                                                <string key="text">Я стараюсь поддерживать свое приложение в актуальном состоянии и постоянно обновляю контент. Вы можете меня поддержать донатом, отзывом в сторе, или посмотреть рекламу от гугла. Благодарю!  </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Pa-RwL">
-                                                <rect key="frame" x="20" y="224.5" width="334" height="192.5"/>
+                                                <rect key="frame" x="20" y="174.5" width="334" height="180"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="atO-dd-boo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="53"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-Ln-8Gu" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="57.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="53"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -59,7 +59,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjw-LC-a3o" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="57.5"/>
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="53"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -78,10 +78,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XIa-lJ-8ok">
-                                                        <rect key="frame" x="0.0" y="67.5" width="334" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="63" width="334" height="53.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztt-nM-XvU" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="57.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="53.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -98,7 +98,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-zd-nta" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="57.5"/>
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="53.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -117,7 +117,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53y-I0-POd" userLabel="Ad" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="135" width="334" height="57.5"/>
+                                                        <rect key="frame" x="0.0" y="126.5" width="334" height="53.5"/>
                                                         <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -130,16 +130,16 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="donate379:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="NOe-MV-SI8"/>
+                                                            <action selector="watchAdTapped:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="jvs-qD-gNH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="FZy-yN-2bU"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="FZy-yN-2bU"/>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="450" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="387.5" width="342" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
@@ -158,7 +158,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J13-df-caQ" userLabel="Separator">
-                                                <rect key="frame" x="50" y="433" width="274" height="1"/>
+                                                <rect key="frame" x="50" y="370.5" width="274" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="DmY-dq-oa7"/>
@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="dismissButton" destination="ghE-Cf-xuE" id="D2w-k0-iI3"/>
                         <outlet property="donationView" destination="pqf-sx-Kb4" id="KaV-Qw-KuV"/>
+                        <outlet property="watchAdButton" destination="53y-I0-POd" id="nD8-Ee-Cfi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyE-5Y-gWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

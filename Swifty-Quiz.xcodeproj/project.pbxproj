@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -258,7 +258,6 @@
 				8991AD9095DB730613ACEAB6 /* Pods-Swifty-Quiz.debug.xcconfig */,
 				206DE9658EF136F51318B94F /* Pods-Swifty-Quiz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

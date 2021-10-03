@@ -7,17 +7,43 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import StoreKit
 
 class DonationViewController: UIViewController {
 
+    struct Constants {
+        static let ad = "ca-app-pub-8634387759111764/3661782608"
+    }
+    
+    @IBOutlet weak var watchAdButton: RoundCornerButton!
     @IBOutlet weak var dismissButton: RoundCornerButton!
     @IBOutlet weak var donationView: UIView!
+    
+    private var interstitial: GADInterstitialAd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setAlpha()
         setBlur()
         setShadows()
+        requestAd()
+    }
+    
+    private func requestAd() {
+        let request = GADRequest()
+        GADInterstitialAd.load(
+            withAdUnitID: Constants.ad,
+            request: request,
+            completionHandler: { [self] ad, error in
+                if let error = error {
+                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                    return
+                }
+                interstitial = ad
+                interstitial?.fullScreenContentDelegate = self
+            }
+        )
     }
     
     private func setAlpha() {
@@ -41,7 +67,7 @@ class DonationViewController: UIViewController {
         shadows.addHalfButtonShadows([dismissButton])
     }
     
-    // Donates buttons
+    /// Donates buttons
     @IBAction func donate99(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate99)
     }
@@ -53,6 +79,36 @@ class DonationViewController: UIViewController {
     }
     @IBAction func donate379(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate379)
+    }
+    
+    /// Watch Ad button
+    @IBAction func watchAdTapped(_ sender: Any) {
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+}
+
+
+// MARK: GADFullScreenContentDelegate
+extension DonationViewController: GADFullScreenContentDelegate {
+    
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+    }
+    
+    /// Tells the delegate that the ad presented full screen content.
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did present full screen content.")
+    }
+    
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        //interstitial = requestAd()
+        print("Ad did dismiss full screen content.")
     }
 }
 
