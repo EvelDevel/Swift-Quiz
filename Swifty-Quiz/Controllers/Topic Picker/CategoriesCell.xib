@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="1481"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="16" width="382" height="1339"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
+                        <rect key="frame" x="16" y="16" width="382" height="1342"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
@@ -28,7 +28,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gQ2-aS-T9C"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -115,14 +115,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                                <rect key="frame" x="0.0" y="155" width="382" height="176"/>
+                                <rect key="frame" x="0.0" y="156" width="382" height="176"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новинки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="CTw-dj-Cbu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -254,14 +254,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                                <rect key="frame" x="0.0" y="356" width="382" height="830"/>
+                                <rect key="frame" x="0.0" y="358" width="382" height="830"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IbA-6n-nfG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -956,14 +956,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="1211" width="382" height="128"/>
+                                <rect key="frame" x="0.0" y="1214" width="382" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Hjq-o6-0qv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
