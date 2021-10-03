@@ -7,6 +7,51 @@ import Foundation
 class FunctionsSet {
 	static func getQuestions() -> [Question] {
 		return [
+            Question(question: ["Является ли данная запись функции валидной в Swift?"],
+                     image: "Functions02",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 671720510,
+                     helpText: "Запись этой функции является не валидной и приведет к ошибке компиляции (Expected '}' at end of brace statement), поскольку у нее нет закрывающей фигурной скобки."),
+            
+            Question(question: ["Напечатает ли наша функция текст в консоль?"],
+                     image: "Functions03",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 160777453,
+                     helpText: "Эта функция не является валидной в Swift, поскольку ключевое слово для функции - func. Мы не можем заменить его на function, и получить ожидаемое поведение функции."),
+            
+            Question(question: ["Что мы получим, если запустим данный код?"],
+                     image: "Functions04",
+                     optionA: "Ничего, будет ошибка",
+                     optionB: "Hello!",
+                     optionC: "text",
+                     optionD: "",
+                     questionId: 267949023,
+                     helpText: "Данный код не отработает и мы получим ошибку компиляции. Это потому, что Swift является case sensitive (чувствительным к регистру) языком, это значит, что если наша функция написана с большой буквы в слове Text, мы обязаны вызвать ее именно так."),
+            
+            Question(question: ["Что произойдет при запуске данного кода?"],
+                     image: "Functions05",
+                     optionA: "Столкнемся с ошибкой",
+                     optionB: "В консоль получим Hello",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 127497833,
+                     helpText: "Мы столкнемся с ошибкой компиляции (Expected '(' in argument list of function declaration), поскольку мы не добавили к имени функции круглые скобки."),
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 			Question(question: ["Какие имена должны быть у функций?"],
 					 image: "",
 					 optionA: "Уникальные",
