@@ -72,6 +72,7 @@
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
+		FB6A14A8270D3A5E00B7E0DF /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = FB6A14A7270D3A5E00B7E0DF /* Configuration.storekit */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
@@ -191,6 +192,7 @@
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
+		FB6A14A7270D3A5E00B7E0DF /* Configuration.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
@@ -211,7 +213,6 @@
 		FB91255C26D360E200C1DFEB /* Donation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		FB91256226D3E63E00C1DFEB /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
-		FB91256426D3EBAA00C1DFEB /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
@@ -462,10 +463,10 @@
 		FB91255B26D360C800C1DFEB /* Donation */ = {
 			isa = PBXGroup;
 			children = (
+				FB6A14A7270D3A5E00B7E0DF /* Configuration.storekit */,
 				FB91255C26D360E200C1DFEB /* Donation.storyboard */,
 				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
 				FB91256226D3E63E00C1DFEB /* IAPManager.swift */,
-				FB91256426D3EBAA00C1DFEB /* Configuration.storekit */,
 			);
 			path = Donation;
 			sourceTree = "<group>";
@@ -658,6 +659,7 @@
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB553EBD2515236C0037A287 /* rightAnswer.mp3 in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
+				FB6A14A8270D3A5E00B7E0DF /* Configuration.storekit in Resources */,
 				FBA764FC246331E400D567D0 /* button4.mp3 in Resources */,
 				FB291D2826D224EA00A40679 /* Records.storyboard in Resources */,
 				FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */,
@@ -957,7 +959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.15;
+				MARKETING_VERSION = 1.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
@@ -978,7 +980,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.15;
+				MARKETING_VERSION = 1.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				SWIFT_VERSION = 5.0;
