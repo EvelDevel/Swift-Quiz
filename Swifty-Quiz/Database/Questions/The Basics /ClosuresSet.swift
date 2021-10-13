@@ -7,6 +7,24 @@ import Foundation
 class ClosuresSet {
 	static func getQuestions() -> [Question] {
 		return [
+            Question(question: ["Является ли данное замыкание валидным в Swift?"],
+                     image: "Closures01",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 414623122,
+                     helpText: "Нет, при использовании замыкания в таком виде - мы не должны писать круглые скобки, вместо них мы должны поставить знак равенства между названием и фигурной открывающейся скобкой."),
+            
+            Question(question: ["Является ли данное замыкание и его вызов валидными в Swift?"],
+                     image: "Closures02",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 528076104,
+                     helpText: "Да, вполне. Мы можем создавать замыкания в константах."),
+            
 			Question(question: ["Могут ли замыкания передаваться и использоваться в вашем коде?",
 								"Можете ли вы передавать и использовать замыкания в вашему коде?"],
 					 image: "",
