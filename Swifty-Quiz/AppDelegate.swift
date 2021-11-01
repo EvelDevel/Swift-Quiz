@@ -8,6 +8,11 @@ import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: To-do
+    // Вопрос - пожелание : можно ли в списке тем для вопросов вести какую то статистику какие темы хорошо усвоены, какие нет?
+    // Например захожу в список тем - вижу там лучший результат 60% а там 80% и тд.
+
+    
 	/// For under 13.0
 	var window: UIWindow?
 	
