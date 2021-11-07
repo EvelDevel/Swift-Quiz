@@ -9,7 +9,7 @@ class RandomSetManager {
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []
-    private static var others: [Question] = []
+    private static var new: [Question] = []
 	
     // Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
     // Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
@@ -92,15 +92,16 @@ class RandomSetManager {
 	}
     
     static func setAndGetOtherQuestions() -> [Question] {
-        if others.isEmpty {
-            others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
-            others.append(contentsOf: MobileSecuritySet.getQuestions())
-            others.append(contentsOf: VCLifecycleSet.getQuestions())
-            others.append(contentsOf: AppLifecycleSet.getQuestions())
-            others.append(contentsOf: FramesAndBounds.getQuestions())
-            others.append(contentsOf: Multithreading.getQuestions())
+        if new.isEmpty {
+            new.append(contentsOf: ExtremeProgrammingSet.getQuestions())
+            new.append(contentsOf: MobileSecuritySet.getQuestions())
+            new.append(contentsOf: VCLifecycleSet.getQuestions())
+            new.append(contentsOf: AppLifecycleSet.getQuestions())
+            new.append(contentsOf: FramesAndBounds.getQuestions())
+            new.append(contentsOf: Multithreading.getQuestions())
+            new.append(contentsOf: UIViewSet.getQuestions())
         }
-        return others
+        return new
     }
     
 	static func getQuestions(_ limit: Int) -> [Question] {

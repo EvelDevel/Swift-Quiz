@@ -29,7 +29,7 @@ class CategoriesCell: UITableViewCell {
     @IBOutlet var random: [UIButton]!
     @IBOutlet var guide: [UIButton]!
     @IBOutlet var patterns: [UIButton]!
-    @IBOutlet var other: [UIButton]!
+    @IBOutlet var new: [UIButton]!
     
     weak var delegate: CategoriesCellDelegate?
     
@@ -71,7 +71,7 @@ extension CategoriesCell {
         allButtons.append(contentsOf: random)
         allButtons.append(contentsOf: guide)
         allButtons.append(contentsOf: patterns)
-        allButtons.append(contentsOf: other)
+        allButtons.append(contentsOf: new)
     }
     
     /// Добавляем тени кнопкам
@@ -425,6 +425,12 @@ extension CategoriesCell {
                 TopicOperator.getQuestionsMultithreading(),
                 topic: "Многопоточность",
                 tag: 64
+            )
+        case 66:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsUIView(),
+                topic: "UIView",
+                tag: 65
             )
             
         default:
