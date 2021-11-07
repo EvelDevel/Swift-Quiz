@@ -9,7 +9,7 @@
 import Foundation
 
 
-class UIViewSet {
+class LayingOutSubviews {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [""],

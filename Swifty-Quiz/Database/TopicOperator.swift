@@ -23,7 +23,7 @@ class TopicOperator {
     static func getQuestionsAppLifecycle() -> [Question] { return AppLifecycleSet.getQuestions() }
     static func getQuestionsFramesAndBounds() -> [Question] { return FramesAndBounds.getQuestions() }
     static func getQuestionsMultithreading() -> [Question] { return Multithreading.getQuestions() }
-    static func getQuestionsUIView() -> [Question] { return UIViewSet.getQuestions() }
+    static func getQuestionsLayingOutSubviews() -> [Question] { return LayingOutSubviews.getQuestions() }
     
     
     // MARK: THE BASICS

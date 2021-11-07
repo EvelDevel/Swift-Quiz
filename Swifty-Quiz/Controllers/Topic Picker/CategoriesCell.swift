@@ -405,7 +405,7 @@ extension CategoriesCell {
         case 62:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsLifecycle(),
-                topic: "ViewController Lifecycle",
+                topic: "View Controller Lifecycle",
                 tag: 61
             )
         case 63:
@@ -417,7 +417,7 @@ extension CategoriesCell {
         case 64:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsFramesAndBounds(),
-                topic: "Frames & Bounds",
+                topic: "Bounds and Frame",
                 tag: 63
             )
         case 65:
@@ -428,8 +428,8 @@ extension CategoriesCell {
             )
         case 66:
             SelectedTopic.shared.saveQuestionSet(
-                TopicOperator.getQuestionsUIView(),
-                topic: "UIView",
+                TopicOperator.getQuestionsLayingOutSubviews(),
+                topic: "Laying Out Subviews",
                 tag: 65
             )
             

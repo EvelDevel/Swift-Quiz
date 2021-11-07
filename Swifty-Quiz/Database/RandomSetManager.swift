@@ -99,7 +99,7 @@ class RandomSetManager {
             new.append(contentsOf: AppLifecycleSet.getQuestions())
             new.append(contentsOf: FramesAndBounds.getQuestions())
             new.append(contentsOf: Multithreading.getQuestions())
-            new.append(contentsOf: UIViewSet.getQuestions())
+            new.append(contentsOf: LayingOutSubviews.getQuestions())
         }
         return new
     }
