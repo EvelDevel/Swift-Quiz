@@ -432,6 +432,12 @@ extension CategoriesCell {
                 topic: "Laying Out Subviews",
                 tag: 65
             )
+        case 67:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsAutoLayout(),
+                topic: "Auto Layout",
+                tag: 66
+            )
             
         default:
             allButtons.forEach { button in

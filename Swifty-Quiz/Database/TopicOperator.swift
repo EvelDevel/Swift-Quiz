@@ -24,6 +24,7 @@ class TopicOperator {
     static func getQuestionsFramesAndBounds() -> [Question] { return FramesAndBounds.getQuestions() }
     static func getQuestionsMultithreading() -> [Question] { return Multithreading.getQuestions() }
     static func getQuestionsLayingOutSubviews() -> [Question] { return LayingOutSubviews.getQuestions() }
+    static func getQuestionsAutoLayout() -> [Question] { return AutoLayout.getQuestions() }
     
     
     // MARK: THE BASICS

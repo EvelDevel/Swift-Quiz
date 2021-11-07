@@ -24,10 +24,10 @@ class DonationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestAd()
         setAlpha()
         setBlur()
         setShadows()
-        requestAd()
     }
     
     private func requestAd() {
