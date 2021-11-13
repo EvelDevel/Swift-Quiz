@@ -253,10 +253,10 @@
                                                 <rect key="frame" x="0.0" y="144" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-bv-KB0" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="231" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Laying Out Subviews">
+                                                        <state key="normal" title="UIView">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -269,7 +269,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="67" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKQ-Yb-Jqq" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="239" y="0.0" width="143" height="40"/>
+                                                        <rect key="frame" x="138" y="0.0" width="244" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Auto Layout">
@@ -1301,7 +1301,7 @@
             <size key="intrinsicContentSize" width="112" height="26"/>
         </designable>
         <designable name="rGc-bv-KB0">
-            <size key="intrinsicContentSize" width="101" height="24"/>
+            <size key="intrinsicContentSize" width="34" height="24"/>
         </designable>
         <designable name="rvK-SO-qiQ">
             <size key="intrinsicContentSize" width="48" height="26"/>
