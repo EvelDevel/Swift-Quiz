@@ -35,24 +35,40 @@ class CategoriesCell: UITableViewCell {
     weak var delegate: CategoriesCellDelegate?
     
     private var currentPosition = SelectedTopic.shared.topic.topicTag
+    private let progress = ProgressService()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+    }
+    
+    override func layoutSubviews() {
+        delegate?.showAlert()
+    }
+    
+    private func setup() {
         appendAllButtons()
         addQuestionsToArray(sender: UIButton())
         setFontSize()
         addShadows()
+        setupProgressBackground()
     }
-
-    override func layoutSubviews() {
-        delegate?.showAlert()
+    
+    private func setupProgressBackground() {
+        for button in allButtons {
+            button.backgroundColor = progress.getProgressBackground(
+                for: getTopicName(for: button.tag)
+            )
+        }
     }
 
     @IBAction private func topicButtonPressed(_ sender: UIButton) {
         DispatchQueue.main.async {
             if sender.tag - 1 != self.currentPosition {
-                self.updateTopicButtons()
-                sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
+                self.setupProgressBackground()
+                sender.backgroundColor = sender.backgroundColor?.withAlphaComponent(1)
+                //self.updateTopicButtons()
+                //sender.backgroundColor = #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1)
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
                 self.addQuestionsToArray(sender: sender)
                 self.delegate?.updateNumberOfQuestions()
@@ -445,6 +461,71 @@ extension CategoriesCell {
             allButtons.forEach { button in
                 button.backgroundColor = button.tag - 1 == currentTag ? #colorLiteral(red: 1, green: 0.8529722691, blue: 0.1131319478, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             }
+        }
+    }
+    
+    /// Get topic name for button
+    private func getTopicName(for tag: Int) -> String {
+        switch tag {
+        case 1: return "20 случайных вопросов"
+        case 2: return "50 случайных вопросов"
+        case 3: return "100 случайных вопросов"
+        case 4: return "The Death Match"
+            
+        case 12: return "Основы"
+        case 13: return "Числовые и логические типы"
+        case 14: return "Базовые операторы"
+        case 15: return "Операторы диапазона"
+        case 16: return "Логические операторы"
+        case 17: return "Строки и символы"
+        case 18: return "Коллекции, массивы"
+        case 19: return "Множества"
+        case 20: return "Словари"
+        case 21: return "Кортежи"
+        case 22: return "Управление потоком"
+        case 23: return "Опциональные типы"
+        case 24: return "Функции"
+        case 25: return "Замыкания"
+        case 26: return "Перечисления"
+        case 27: return "Структуры и классы"
+        case 28: return "Свойства"
+        case 29: return "Методы"
+        case 30: return "Сабскрипты"
+        case 31: return "Наследование"
+        case 32: return "Инициализация"
+        case 33: return "Деинициализация"
+        case 34: return "Обработка ошибок"
+        case 35: return "Согласованность"
+        case 36: return "Опциональная последовательность"
+        case 37: return "Автоматический подсчет ссылок"
+        case 38: return "Приведение типов"
+        case 39: return "Вложенные типы"
+        case 40: return "Расширения"
+        case 41: return "Непрозрачные типы"
+        case 42: return "Универсальные шаблоны"
+        case 43: return "Протоколы"
+        case 44: return "Контроль доступа"
+        case 45: return "Безопасность хранения"
+        case 46: return "Продвинутые операторы"
+          
+        case 50: return "Паттерны: Общие вопросы"
+        case 51: return "Порождающие паттерны"
+        case 52: return "Структурные паттерны"
+        case 53: return "Поведенческие паттерны"
+        case 54: return "Антипаттерны"
+            
+        case 60: return "Экстремальное программирование"
+        case 61: return "MASVS - Мобильная безопасность"
+        case 65: return "Многопоточность"
+            
+        case 62: return "View Controller Lifecycle"
+        case 63: return "App Lifecycle"
+        case 64: return "Bounds and Frame"
+        case 66: return "UIView"
+        case 67: return "Auto Layout"
+            
+        default:
+            return ""
         }
     }
 }
