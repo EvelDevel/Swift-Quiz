@@ -84,6 +84,10 @@ extension Game {
             self.records.insert(lastRecord, at: 0)
         }
     }
+    
+    func getRecordsList() -> [Record] {
+        self.recordCaretaker.getRecordsList()
+    }
 }
 
 
