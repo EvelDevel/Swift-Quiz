@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +34,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="9np-8K-UUr"/>
                                     <constraint firstItem="Zwp-fi-y2g" firstAttribute="leading" secondItem="aXI-DN-LRX" secondAttribute="leading" id="Ei7-va-IyV"/>
@@ -41,6 +42,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8cE-ue-sG5">
                                 <rect key="frame" x="0.0" y="129" width="414" height="767"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordCell" id="rtO-43-p0d">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
@@ -84,7 +86,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iVU-aq-WOw"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="iVU-aq-WOw" firstAttribute="trailing" secondItem="aXI-DN-LRX" secondAttribute="trailing" id="4FK-tP-m7J"/>
                             <constraint firstItem="uej-49-vP3" firstAttribute="leading" secondItem="iVU-aq-WOw" secondAttribute="leading" constant="16" id="5K2-i8-Mup"/>
@@ -121,5 +123,8 @@
         <image name="ChevroneBigYellow" width="50" height="50"/>
         <image name="TrashCan" width="50" height="50"/>
         <image name="TrashCanFill" width="50" height="50"/>
+        <namedColor name="MainBackground">
+            <color red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

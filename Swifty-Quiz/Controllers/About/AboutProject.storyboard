@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z17-PB-F6N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z17-PB-F6N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -201,7 +202,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xZT-tB-ngD"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="joc-DX-stD" firstAttribute="top" secondItem="IE1-LQ-FS6" secondAttribute="bottom" constant="15" id="1O5-Y5-I7H"/>
                             <constraint firstItem="xZT-tB-ngD" firstAttribute="trailing" secondItem="GVM-td-zFU" secondAttribute="trailing" constant="20" id="7zv-Vf-Aqd"/>
@@ -260,5 +261,8 @@
     <resources>
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>
+        <namedColor name="MainBackground">
+            <color red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehz-IH-jEO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehz-IH-jEO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,6 @@
         <!--Game History View Controller-->
         <scene sceneID="Yy2-Tx-i6q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8vq-wN-LBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="GameHistoryViewController" id="Ehz-IH-jEO" customClass="GameHistoryViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cI-z7-GFt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstItem="2Lr-1k-x9f" firstAttribute="top" secondItem="TOe-hj-jpP" secondAttribute="bottom" constant="15" id="1tX-Po-58b"/>
                                     <constraint firstItem="2Lr-1k-x9f" firstAttribute="top" secondItem="Y94-nX-Q5b" secondAttribute="top" constant="50" id="8ek-lt-2nK"/>
@@ -56,11 +56,11 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-PJ-K5a">
                                 <rect key="frame" x="0.0" y="129" width="414" height="767"/>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <inset key="separatorInset" minX="80" minY="0.0" maxX="16" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GameHistoryCell" rowHeight="48" id="KTT-ZI-th3">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="48"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KTT-ZI-th3" id="b3m-Vu-YiB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
@@ -75,7 +75,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BmW-7l-fZY"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="Y94-nX-Q5b" firstAttribute="top" secondItem="BmW-7l-fZY" secondAttribute="top" id="6eD-GH-Tnb"/>
                             <constraint firstItem="Y94-nX-Q5b" firstAttribute="leading" secondItem="BmW-7l-fZY" secondAttribute="leading" id="9Zk-EG-kNN"/>
@@ -93,6 +93,7 @@
                         <outlet property="titleTopMargin" destination="8ek-lt-2nK" id="j4H-cG-FiX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vq-wN-LBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-380" y="785"/>
         </scene>
@@ -100,5 +101,8 @@
     <resources>
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>
+        <namedColor name="MainBackground">
+            <color red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

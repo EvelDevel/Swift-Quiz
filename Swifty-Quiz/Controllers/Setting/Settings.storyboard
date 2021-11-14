@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mN4-RN-lmu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mN4-RN-lmu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +34,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="OwN-Es-per"/>
                                     <constraint firstItem="Jrx-jO-3hV" firstAttribute="leading" secondItem="v7Z-BJ-NNI" secondAttribute="leading" id="Toh-cj-8K8"/>
@@ -47,10 +48,10 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-3v-Zei">
                                 <rect key="frame" x="0.0" y="119" width="414" height="777"/>
-                                <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingsCell" id="L1b-0G-9SH" customClass="SettingsCell" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L1b-0G-9SH" id="ZOp-IP-1xL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -65,7 +66,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GEv-4b-n5E"/>
-                        <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="GEv-4b-n5E" firstAttribute="trailing" secondItem="TxS-3v-Zei" secondAttribute="trailing" id="4Ep-BV-oo3"/>
                             <constraint firstItem="TxS-3v-Zei" firstAttribute="leading" secondItem="GEv-4b-n5E" secondAttribute="leading" id="56f-MW-orJ"/>
@@ -2696,5 +2697,8 @@ TNgAAkzhAAJM5gACTOwAAkz0AAJM9gACTPgAAkz6AAJM/AACXpwAAl6hAAJergACXrEAAl6+AAJewwAC
 XssAAl7OAAJe0wACXtsAAAAAAAAEAQAAAAAAAABoAAAAAAAAAAAAAAAAAAJe3g
 </mutableData>
         </image>
+        <namedColor name="MainBackground">
+            <color red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
