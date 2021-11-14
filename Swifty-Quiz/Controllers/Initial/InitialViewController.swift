@@ -8,16 +8,9 @@ import StoreKit
 class InitialViewController: UIViewController {
 
 	@IBOutlet weak var lastGameTitle: UILabel!
-	@IBOutlet weak var logoHeight: NSLayoutConstraint!
-	@IBOutlet weak var logoWidth: NSLayoutConstraint!
-	@IBOutlet weak var logoVerticalPosition: NSLayoutConstraint!
-	@IBOutlet weak var aboutButtonHeight: NSLayoutConstraint!
-	@IBOutlet weak var aboutButtonWidth: NSLayoutConstraint!
-	@IBOutlet weak var aboutButtonVerticalPosition: NSLayoutConstraint!
 	@IBOutlet weak var contentCenter: NSLayoutConstraint!
     
     @IBOutlet weak var donationButton: UIButton!
-    @IBOutlet weak var donationView: UIView!
     
 	@IBOutlet weak var totalQuestionsLabel: UILabel!
 	@IBOutlet weak var selectedTopic: UILabel!
@@ -125,7 +118,6 @@ extension InitialViewController {
 		addShadows()
 		imageTuning(button: topicPicker, position: .center)
 		imageTuning(button: logoButton, position: .top)
-		setUpCorrectLogoPosition()
 	}
 
 	/// Показываем или скрываем кноп "продолжить"
@@ -168,46 +160,6 @@ extension InitialViewController {
 		button.imageView!.contentMode = .scaleAspectFit
 		button.contentVerticalAlignment = position
 		button.contentHorizontalAlignment = .right
-	}
-
-	/// Настройка адекватного расположения логотипа
-	/// В зависимости от размера экрана
-	func setUpCorrectLogoPosition() {
-		let width = UIScreen.main.bounds.size.width
-		
-		if width <= 320 {
-			/// SE-1
-			logoVerticalPosition.constant = 40
-			logoWidth.constant = 180
-			logoHeight.constant = 55
-			aboutButtonHeight.constant = 95
-			aboutButtonWidth.constant = 210
-			aboutButtonVerticalPosition.constant = 20
-		} else if width <= 410 {
-			/// 8, SE-2
-			logoVerticalPosition.constant = 55
-			logoWidth.constant = 200
-			logoHeight.constant = 80
-			aboutButtonHeight.constant = 105
-			aboutButtonWidth.constant = 240
-			aboutButtonVerticalPosition.constant = 55
-		} else if width > 410 && width < 500 {
-			/// 8+, 11, 7+, 11 Pro Max
-			logoVerticalPosition.constant = 90
-			logoWidth.constant = 220
-			logoHeight.constant = 100
-			aboutButtonHeight.constant = 120
-			aboutButtonWidth.constant = 260
-			aboutButtonVerticalPosition.constant = 75
-		} else {
-			/// ipads
-			logoVerticalPosition.constant = 100
-			logoWidth.constant = 400
-			logoHeight.constant = 180
-			aboutButtonHeight.constant = 200
-			aboutButtonWidth.constant = 440
-			aboutButtonVerticalPosition.constant = 85
-		}
 	}
 }
 
