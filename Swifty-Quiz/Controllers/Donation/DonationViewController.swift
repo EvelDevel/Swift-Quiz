@@ -12,13 +12,13 @@ import StoreKit
 
 class DonationViewController: UIViewController {
 
-    struct Constants {
+    private struct Constants {
         static let ad = "ca-app-pub-8634387759111764/3661782608"
     }
     
-    @IBOutlet weak var watchAdButton: RoundCornerButton!
-    @IBOutlet weak var dismissButton: RoundCornerButton!
-    @IBOutlet weak var donationView: UIView!
+    @IBOutlet private weak var watchAdButton: RoundCornerButton!
+    @IBOutlet private weak var dismissButton: RoundCornerButton!
+    @IBOutlet private weak var donationView: UIView!
     
     private var interstitial: GADInterstitialAd?
     
@@ -26,6 +26,11 @@ class DonationViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+}
+
+
+// MARK: Main
+extension DonationViewController {
     
     private func setup() {
         setAlpha()
@@ -72,21 +77,21 @@ class DonationViewController: UIViewController {
     }
     
     /// Donates buttons
-    @IBAction func donate99(_ sender: Any) {
+    @IBAction private func donate99(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate99)
     }
-    @IBAction func donate179(_ sender: Any) {
+    @IBAction private func donate179(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate179)
     }
-    @IBAction func donate279(_ sender: Any) {
+    @IBAction private func donate279(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate279)
     }
-    @IBAction func donate379(_ sender: Any) {
+    @IBAction private func donate379(_ sender: Any) {
         IAPManager.shared.purchase(product: .swiftyQuizDonate379)
     }
     
     /// Watch Ad button
-    @IBAction func watchAdTapped(_ sender: Any) {
+    @IBAction private func watchAdTapped(_ sender: Any) {
         if interstitial != nil {
             interstitial?.present(fromRootViewController: self)
         } else {
@@ -120,7 +125,7 @@ extension DonationViewController: GADFullScreenContentDelegate {
 // MARK: Dismissing
 extension DonationViewController {
     
-    @IBAction func backInGameButton(_ sender: UIButton) {
+    @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
         dismissing()
     }

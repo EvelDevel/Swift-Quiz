@@ -103,6 +103,7 @@ extension InitialViewController {
             let help = records.first?.helpCounter ?? 0
             let correct = records.first?.score ?? 0
             let roundedPercents = String(format: "%.1f", records.first?.percentOfCorrectAnswer ?? 0)
+            
             lastTopic.text = "Категория: \(category)"
             totalQuestions.text = "Вопросы: \(played) из \(total) (подсказок: \(help))"
             lastScore.text = "Правильных ответов: \(correct) (\(roundedPercents)%)"
@@ -123,17 +124,15 @@ extension InitialViewController {
 // MARK: Interface
 extension InitialViewController {
 
-	/// Показываем или скрываем кноп "продолжить"
+	/// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            
 			if self.continueGameButton.isHidden == true {
                 SoundPlayer.shared.playSound(sound: .showContinueButton)
             }
 			self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
 			self.continueGameButton.isHidden = false
 		} else {
-            
 			if self.continueGameButton.isHidden == false {
                 SoundPlayer.shared.playSound(sound: .hideContinueButton)
             }
