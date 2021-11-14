@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,9 +47,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-OT-CUg">
-                                <rect key="frame" x="55" y="367" width="304" height="162"/>
+                                <rect key="frame" x="137" y="410.5" width="140" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jdu-OT-CUg" secondAttribute="height" multiplier="15:8" id="f1B-Qc-8Ag"/>
+                                    <constraint firstAttribute="width" constant="140" id="glZ-uG-guU"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -57,8 +58,7 @@
                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Jdu-OT-CUg" firstAttribute="centerY" secondItem="IWE-bf-pj2" secondAttribute="centerY" id="BGz-ma-wsP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jdu-OT-CUg" secondAttribute="trailing" constant="35" id="oET-P7-kNP"/>
-                            <constraint firstItem="Jdu-OT-CUg" firstAttribute="leading" secondItem="IWE-bf-pj2" secondAttribute="leadingMargin" constant="35" id="vwl-ge-5mV"/>
+                            <constraint firstItem="Jdu-OT-CUg" firstAttribute="centerX" secondItem="IWE-bf-pj2" secondAttribute="centerX" id="ajL-Kh-QN5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -440,7 +440,7 @@
         <image name="RightChevrone" width="50" height="50"/>
         <image name="RightChevroneFill" width="50" height="50"/>
         <image name="donates" width="96" height="96"/>
-        <image name="launch" width="800" height="300"/>
+        <image name="launch" width="409" height="140"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
     </resources>
