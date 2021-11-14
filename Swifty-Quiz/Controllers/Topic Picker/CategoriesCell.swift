@@ -7,7 +7,7 @@
 /// - Присвоить кнопке tag по порядку
 /// - Создать outlet-collection с названием раздела или добавить в массив существующего раздела
 /// - Добавить элементы этой коллекции в общий массив для работы с UI (функция unificationOfOutlets)
-/// - Добавить необходимые действия по этим кнопкам в addQuestionsToArray
+/// - Добавить необходимые действия по этим кнопкам в addQuestionsToArray / topicButtonPressed
 /// - Добавить новую категорию в RandomSetManager
 
 // MARK: При добавлении новых "случайных" сетов
@@ -26,10 +26,11 @@ class CategoriesCell: UITableViewCell {
     
     var allButtons: [UIButton] = []
     
-    @IBOutlet var random: [UIButton]!
-    @IBOutlet var guide: [UIButton]!
-    @IBOutlet var patterns: [UIButton]!
-    @IBOutlet var new: [UIButton]!
+    @IBOutlet private var random: [UIButton]!
+    @IBOutlet private var uikit: [UIButton]!
+    @IBOutlet private var guide: [UIButton]!
+    @IBOutlet private var patterns: [UIButton]!
+    @IBOutlet private var others: [UIButton]!
     
     weak var delegate: CategoriesCellDelegate?
     
@@ -47,7 +48,7 @@ class CategoriesCell: UITableViewCell {
         delegate?.showAlert()
     }
 
-    @IBAction func topicButtonPressed(_ sender: UIButton) {
+    @IBAction private func topicButtonPressed(_ sender: UIButton) {
         DispatchQueue.main.async {
             if sender.tag - 1 != self.currentPosition {
                 self.updateTopicButtons()
@@ -71,7 +72,8 @@ extension CategoriesCell {
         allButtons.append(contentsOf: random)
         allButtons.append(contentsOf: guide)
         allButtons.append(contentsOf: patterns)
-        allButtons.append(contentsOf: new)
+        allButtons.append(contentsOf: others)
+        allButtons.append(contentsOf: uikit)
     }
     
     /// Добавляем тени кнопкам

@@ -399,8 +399,8 @@
 			children = (
 				FB291D2526D223FF00A40679 /* TopicPicker.storyboard */,
 				FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */,
-				FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */,
 				FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */,
+				FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */,
 			);
 			path = "Topic Picker";
 			sourceTree = "<group>";
