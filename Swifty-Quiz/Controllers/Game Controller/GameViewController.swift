@@ -12,25 +12,25 @@ protocol GameViewControllerDelegate: AnyObject {
 
 class GameViewController: UIViewController {
 	
-	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var headerTopMargin: NSLayoutConstraint!
+	@IBOutlet private weak var backButton: UIButton!
+	@IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
 	
-	@IBOutlet var answerButtonsCollection: [UIButton]!
-    @IBOutlet weak var optionA: UIButton!
-    @IBOutlet weak var optionB: UIButton!
-    @IBOutlet weak var optionC: UIButton!
-    @IBOutlet weak var optionD: UIButton!
-    @IBOutlet weak var questionCounterLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var helpCounterLabel: UILabel!
-    @IBOutlet weak var progressView: UIView!
-    @IBOutlet weak var progressWhite: UIView!
-    @IBOutlet weak var questionArea: UIView!
-    @IBOutlet weak var questionImageView: UIImageView!
-    @IBOutlet weak var questionImageHeight: NSLayoutConstraint!
+	@IBOutlet private var answerButtonsCollection: [UIButton]!
+    @IBOutlet private weak var optionA: UIButton!
+    @IBOutlet private weak var optionB: UIButton!
+    @IBOutlet private weak var optionC: UIButton!
+    @IBOutlet private weak var optionD: UIButton!
+    @IBOutlet private weak var questionCounterLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var questionLabel: UILabel!
+    @IBOutlet private weak var helpCounterLabel: UILabel!
+    @IBOutlet private weak var progressView: UIView!
+    @IBOutlet private weak var progressWhite: UIView!
+    @IBOutlet private weak var questionArea: UIView!
+    @IBOutlet private weak var questionImageView: UIImageView!
+    @IBOutlet private weak var questionImageHeight: NSLayoutConstraint!
 
-    @IBOutlet var GameComtrollerViews: [UIView]!
+    @IBOutlet private var GameComtrollerViews: [UIView]!
     
     private let gameHelper = GameHelper()
     private let buttons = AnswerButtonsView()
@@ -54,22 +54,21 @@ class GameViewController: UIViewController {
     
     weak var delegate: GameViewControllerDelegate?
     
-    @IBAction func helpSound(_ sender: Any) {
+    @IBAction private func helpSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpValuesIfWeContinue()
-        addQuestionSet()
-        updateQuestion()
-        addShadows()
-        showAlertIfNeeded()
+        setup()
     }
     
-    /// Swipe-down, сохраняем если не запрашивалось сохранение текущей игры и ответили хотя-бы на один вопрос
     override func viewDidDisappear(_ animated: Bool) {
+        
+        /// Swipe-down, сохраняем если не запрашивалось сохранение текущей игры
+        /// и ответили хотя-бы на один вопрос
         if endGameFlag == false && currentQuestionIndex > 0 { gameEnding(path: 2) }
+        
         delegate?.updateInitialView()
 		delegate?.showReviewRequest()
     }
@@ -82,15 +81,29 @@ class GameViewController: UIViewController {
 		}
 	}
 	/// < 13.0 iOS Navigation
-	@IBAction func dismissGame(_ sender: Any) {
+	@IBAction private func dismissGame(_ sender: Any) {
 		SoundPlayer.shared.playSound(sound: .menuMainButton)
 		dismiss(animated: true, completion: nil)
 	}
-	
+}
+
+
+// MARK: Main
+extension GameViewController {
+    
+    private func setup() {
+        setUpValuesIfWeContinue()
+        addQuestionSet()
+        updateQuestion()
+        addShadows()
+        showAlertIfNeeded()
+    }
+    
     func addShadows() {
         Shadow().addStaticShadows(GameComtrollerViews)
         Shadow().addButtonShadows(answerButtonsCollection)
     }
+    
     func showAlertIfNeeded() {
         gameHelper.showAlertIfNeeded(weContinueLastGame, self)
     }
@@ -101,7 +114,7 @@ class GameViewController: UIViewController {
 extension GameViewController {
     
     /// Установка значений при продолжении
-    func setUpValuesIfWeContinue() {
+    private func setUpValuesIfWeContinue() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame {
                 self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
@@ -117,7 +130,7 @@ extension GameViewController {
     }
     
     /// Загружаем сет вопросов для новой игры
-    func addQuestionSet() {
+    private func addQuestionSet() {
         if !weContinueLastGame {
             if questionOrderSetting == 0 {
                 localQuestionSet = SelectedTopic.shared.topic.questionSet
@@ -128,7 +141,7 @@ extension GameViewController {
     }
     
     /// Апдейт вопроса
-    func updateQuestion() {
+    private func updateQuestion() {
         /// У последнего вопроса не обновляем интерфейс
         if currentQuestionIndex < localQuestionSet.count {
             buttons.refreshButtonsVisibility(currentQuestionIndex, localQuestionSet.count, answerButtonsCollection)
@@ -145,7 +158,7 @@ extension GameViewController {
     }
     
     /// Установка контента
-    func addQuestionContent() {
+    private func addQuestionContent() {
         if currentQuestionIndex <= localQuestionSet.count - 1 {
             buttons.makeCorrectButtonsSet(
                 currentQuestionIndex,
@@ -177,12 +190,13 @@ extension GameViewController {
     }
     
     /// Обновляем прогресс
-    func updateUI() {
+    private func updateUI() {
         scoreLabel.text = "\(score) | \(updatePercentage())%"
         questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
         progressView.frame.size.width = ((view.frame.size.width - 40) / CGFloat(localQuestionSet.count)) * CGFloat(currentQuestionIndex)
     }
-    func updatePercentage() -> Double {
+    
+    private func updatePercentage() -> Double {
         return Double(String(format: "%.1f", (Double(self.score) / Double(self.localQuestionSet.count) * 100))) ?? 0
     }
 }
@@ -191,7 +205,7 @@ extension GameViewController {
 // MARK: Нажатие на ответ
 extension GameViewController {
 
-    @IBAction func answerPressed(_ sender: UIButton) {
+    @IBAction private func answerPressed(_ sender: UIButton) {
         if answerPressed == false {
             
             /// Как только нажали, до выполнения каких либо манипуляций с ответом и флагами
@@ -251,7 +265,7 @@ extension GameViewController {
         }
     }
     
-    func showHelpAfterWrongAnswer() {
+    private func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Help", bundle: nil)
         let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         helpView.delegate = self
@@ -268,7 +282,7 @@ extension GameViewController {
 // MARK: Завершение игры
 extension GameViewController {
     
-    func gameEnding(path: Int) {
+    private func gameEnding(path: Int) {
         switch path {
         case 1: /// Доиграли до конца
             callDelegateAndSaveRecord(continueStatus: false, autoHelp: weDidGetAutoHelp)
@@ -279,7 +293,7 @@ extension GameViewController {
         }
     }
     
-    func callDelegateAndSaveRecord(continueStatus: Bool, autoHelp: Bool) {
+    private func callDelegateAndSaveRecord(continueStatus: Bool, autoHelp: Bool) {
         var continueStatus = continueStatus
         endGameFlag = true
         
@@ -342,7 +356,7 @@ extension GameViewController {
         )
     }
     
-    func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: "\(title): \(score)", message: "\(message)", preferredStyle: .alert)
         let restartAction = UIAlertAction(title: "Перезапустить", style: .default, handler: { action in self.restartGame() })
         let quitAction = UIAlertAction(title: "Выйти", style: .default, handler: { action in self.quitGame() })
@@ -352,12 +366,12 @@ extension GameViewController {
         currentQuestionNumber -= 1
     }
     
-    func quitGame() {
+    private func quitGame() {
         gameHelper.refreshRandomSet(tag: SelectedTopic.shared.topic.topicTag)
         self.dismiss(animated: true, completion: nil)
     }
     
-    func restartGame() {
+    private func restartGame() {
         weContinueLastGame = false
         helpCounterLabel.text = ""
         currentQuestionNumber = 1
