@@ -6,8 +6,8 @@ import UIKit
 
 class AboutProjectController: UIViewController {
 
-	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var titleHeight: NSLayoutConstraint!
+	@IBOutlet private weak var backButton: UIButton!
+	@IBOutlet private weak var titleHeight: NSLayoutConstraint!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,43 +25,44 @@ class AboutProjectController: UIViewController {
 		SoundPlayer.shared.playSound(sound: .menuMainButton)
 		dismiss(animated: true, completion: nil)
 	}
-	
-	
-	// MARK: Links
-	
-	@IBAction func author(_ sender: Any) {
+}
+
+// MARK: Links
+extension AboutProjectController {
+    
+    @IBAction private func author(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/ev.nikitin")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func design(_ sender: Any) {
+    @IBAction private func design(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/shlehanov")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func corrector(_ sender: Any) {
+    @IBAction private func corrector(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/id2312583")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func refactorGuru(_ sender: Any) {
+    @IBAction private func refactorGuru(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://refactoring.guru/ru")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func swiftbookRu(_ sender: Any) {
+    @IBAction private func swiftbookRu(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://swiftbook.ru/content/languageguide/")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func swiftMe(_ sender: Any) {
+    @IBAction private func swiftMe(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://swiftme.ru/")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
-    @IBAction func telegramLibrary(_ sender: Any) {
+    @IBAction private func telegramLibrary(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://t.me/mobileproglib")!
         UIApplication.shared.open(urlComponents.url!)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .menuMainButton)
     }
 }
