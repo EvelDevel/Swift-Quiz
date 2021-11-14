@@ -17,8 +17,10 @@ class TopicViewController: UIViewController {
 	@IBOutlet weak var backButton: UIButton!
 	@IBOutlet weak var numberOfQuestions: UILabel!
 	@IBOutlet weak var tableView: UITableView!
-	
+    @IBOutlet weak var successRating: UILabel!
+    
     weak var delegate: TopicViewControllerDelegate?
+    private let progress = ProgressService()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -53,8 +55,10 @@ class TopicViewController: UIViewController {
 	func setDefaultNumberOfQuestions() {
 		if SelectedTopic.shared.topic.topicTag < 10 {
 			numberOfQuestions.text = SelectedTopic.shared.topic.topicName
+            successRating.text = ""
 		} else {
 			numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+            successRating.text = "Закреплено: \(progress.getProgressCounter(for: SelectedTopic.shared.topic.topicName))%"
 		}
 	}
 
@@ -102,6 +106,14 @@ extension TopicViewController: CategoriesCellDelegate {
 			numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
 		}
 	}
+    
+    func updateSuccessRate(rate: Int) {
+        successRating.text = "Закреплено: \(rate)%"
+    }
+    
+    func removeSuccessRateLabel() {
+        successRating.text = ""
+    }
 
 	func showAlert() {
 		self.showAlertIfNeeded()
