@@ -11,31 +11,44 @@ protocol HelpViewControllerDelegate: AnyObject {
 
 class HelpViewController: UIViewController {
 
-    @IBOutlet weak var helpView: UIView!
-    @IBOutlet weak var helpTextLabel: UILabel!
-    @IBOutlet weak var dismissButton: UIButton!
-    @IBOutlet weak var separatorHeight: NSLayoutConstraint!
+    @IBOutlet private weak var helpView: UIView!
+    @IBOutlet private weak var helpTextLabel: UILabel!
+    @IBOutlet private weak var dismissButton: UIButton!
+    @IBOutlet private weak var separatorHeight: NSLayoutConstraint!
     
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if Game.shared.settings.changeAfterHelp == 1 {
+            /// Если после подсказки переходим
+            delegate?.updateAfterHelp()
+        } else {
+            /// Если после подсказки мы остаемся на вопросе
+            /// Даем пользователю нажать второй ответ
+            delegate?.refreshTappedAnswerStatus()
+        }
+    }
+}
+
+
+// MARK: Main
+extension HelpViewController {
+    
+    private func setup() {
         setHelpText()
         setShadows()
         setBlur()
         setFontSize()
         setThinSeparator()
         setAlpha()
-    }
-    
-    /// Переход к следующему вопросу, обновление статуса нажатого ответа
-    override func viewWillDisappear(_ animated: Bool) {
-        if Game.shared.settings.changeAfterHelp == 1 {
-            delegate?.updateAfterHelp()
-        } else {
-            delegate?.refreshTappedAnswerStatus()
-        }
     }
     
     private func setHelpText() {
@@ -82,7 +95,7 @@ class HelpViewController: UIViewController {
 // MARK: Dismissing 
 extension HelpViewController {
 
-    @IBAction func backInGameButton(_ sender: UIButton) {
+    @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
         dismissing()
     }
