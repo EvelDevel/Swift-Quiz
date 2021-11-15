@@ -44,7 +44,10 @@ class ProgressService {
             }
         
             alpha = (Double(succsessRate / recordCounter) / 100)
-            if alpha <= 0.15 { alpha = 0.15 }
+            
+            if alpha <= 0.15 {
+                alpha = 0.15
+            }
             
             return color.withAlphaComponent(alpha).cgColor
         }
