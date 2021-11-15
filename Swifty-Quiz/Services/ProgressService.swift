@@ -24,10 +24,8 @@ class ProgressService {
             }
         }
         
-        if topic == "20 случайных вопросов" ||
-            topic == "50 случайных вопросов" ||
-            topic == "100 случайных вопросов" ||
-            topic == "The Death Match" {
+        if topic == "20 случайных вопросов" || topic == "50 случайных вопросов" ||
+            topic == "100 случайных вопросов" || topic == "The Death Match" {
             return UIColor.white.cgColor
         }
         
@@ -37,15 +35,16 @@ class ProgressService {
             let recordCounter = currentTopicRecords.count
             var succsessRate = 0
             
-            for record in currentTopicRecords {
-                succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
+            if currentTopicRecords.first?.percentOfCorrectAnswer == 100 {
+                return color.withAlphaComponent(1).cgColor
+            } else {
+                for record in currentTopicRecords {
+                    succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
+                }
             }
+        
             alpha = (Double(succsessRate / recordCounter) / 100)
-            // print("alpha \(alpha) for topic \(topic) (success rate: \(succsessRate / recordCounter))")
-            
-            if alpha <= 0.15 {
-                alpha = 0.15
-            }
+            if alpha <= 0.15 { alpha = 0.15 }
             
             return color.withAlphaComponent(alpha).cgColor
         }
@@ -56,10 +55,8 @@ class ProgressService {
         var currentTopicRecords: [Record] = []
         var succsessRate = 0
         
-        if topic == "20 случайных вопросов" ||
-            topic == "50 случайных вопросов" ||
-            topic == "100 случайных вопросов" ||
-            topic == "The Death Match" {
+        if topic == "20 случайных вопросов" || topic == "50 случайных вопросов" ||
+            topic == "100 случайных вопросов" || topic == "The Death Match" {
             return 0
         }
         
@@ -71,8 +68,12 @@ class ProgressService {
         
         let recordCounter = currentTopicRecords.count
         
-        for record in currentTopicRecords {
-            succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
+        if currentTopicRecords.first?.percentOfCorrectAnswer == 100 {
+            return 100
+        } else {
+            for record in currentTopicRecords {
+                succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
+            }
         }
         
         if succsessRate != 0 {
