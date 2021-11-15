@@ -270,19 +270,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		2C85725726803F5C00642E74 /* New */ = {
+		2C85725726803F5C00642E74 /* Others */ = {
 			isa = PBXGroup;
 			children = (
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
-				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
-				FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */,
-				FB0C05B226E88936006744CB /* FramesAndBounds.swift */,
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
-				FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */,
-				FB5D2BA12737F8E400515B08 /* AutoLayout.swift */,
 			);
-			path = New;
+			path = Others;
 			sourceTree = "<group>";
 		};
 		FB08DD8726D48AD400112058 /* Frameworks */ = {
@@ -309,7 +304,8 @@
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				2C85725726803F5C00642E74 /* New */,
+				FB5208DA274241BF0058F3F8 /* UIKit */,
+				2C85725726803F5C00642E74 /* Others */,
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
 			);
@@ -408,6 +404,18 @@
 				FB554D24274156D300B7696B /* CategoriesNames.swift */,
 			);
 			path = "Topic Picker";
+			sourceTree = "<group>";
+		};
+		FB5208DA274241BF0058F3F8 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FB291CF226C982A800A40679 /* VCLifecycleSet.swift */,
+				FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */,
+				FB0C05B226E88936006744CB /* FramesAndBounds.swift */,
+				FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */,
+				FB5D2BA12737F8E400515B08 /* AutoLayout.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
