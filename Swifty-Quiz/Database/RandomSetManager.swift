@@ -9,7 +9,8 @@ class RandomSetManager {
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []
-    private static var new: [Question] = []
+    private static var others: [Question] = []
+    private static var uikit: [Question] = []
 	
     // Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
     // Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
@@ -25,6 +26,7 @@ class RandomSetManager {
 			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
 			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
             all.append(contentsOf: RandomSetManager.setAndGetOtherQuestions())
+            all.append(contentsOf: RandomSetManager.setAndGetUIKitQuestions())
 		}
 		return all
 	}
@@ -82,17 +84,23 @@ class RandomSetManager {
 	}
     
     static func setAndGetOtherQuestions() -> [Question] {
-        if new.isEmpty {
-            new.append(contentsOf: ExtremeProgrammingSet.getQuestions())
-            new.append(contentsOf: MobileSecuritySet.getQuestions())
-            new.append(contentsOf: VCLifecycleSet.getQuestions())
-            new.append(contentsOf: AppLifecycleSet.getQuestions())
-            new.append(contentsOf: FramesAndBounds.getQuestions())
-            new.append(contentsOf: Multithreading.getQuestions())
-            new.append(contentsOf: UIViewSet.getQuestions())
-            new.append(contentsOf: AutoLayout.getQuestions())
+        if others.isEmpty {
+            others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
+            others.append(contentsOf: MobileSecuritySet.getQuestions())
+            others.append(contentsOf: Multithreading.getQuestions())
         }
-        return new
+        return others
+    }
+    
+    static func setAndGetUIKitQuestions() -> [Question] {
+        if uikit.isEmpty {
+            uikit.append(contentsOf: VCLifecycleSet.getQuestions())
+            uikit.append(contentsOf: AppLifecycleSet.getQuestions())
+            uikit.append(contentsOf: FramesAndBounds.getQuestions())
+            uikit.append(contentsOf: UIViewSet.getQuestions())
+            uikit.append(contentsOf: AutoLayout.getQuestions())
+        }
+        return uikit
     }
     
 	static func getQuestions(_ limit: Int) -> [Question] {
