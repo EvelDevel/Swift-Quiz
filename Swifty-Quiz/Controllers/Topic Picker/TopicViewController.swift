@@ -55,10 +55,17 @@ class TopicViewController: UIViewController {
 	func setDefaultNumberOfQuestions() {
 		if SelectedTopic.shared.topic.topicTag < 10 {
 			numberOfQuestions.text = SelectedTopic.shared.topic.topicName
-            successRating.text = ""
+            
+            UIView.animate(withDuration: 0.3) {
+                self.successRating.alpha = 0
+            }
 		} else {
 			numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
-            successRating.text = "Закреплено: \(progress.getProgressCounter(for: SelectedTopic.shared.topic.topicName))%"
+            
+            UIView.animate(withDuration: 0.3) {
+                self.successRating.alpha = 1
+                self.successRating.text = "Закреплено: \(self.progress.getProgressCounter(for: SelectedTopic.shared.topic.topicName))%"
+            }
 		}
 	}
 
@@ -99,7 +106,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: Работа с делегатом CategoriesCell
 extension TopicViewController: CategoriesCellDelegate {
 
-	func updateNumberOfQuestions() {
+	func updateSelectedTopic() {
 		if SelectedTopic.shared.topic.topicTag < 10 {
 			numberOfQuestions.text = SelectedTopic.shared.topic.topicName
 		} else {
@@ -108,11 +115,16 @@ extension TopicViewController: CategoriesCellDelegate {
 	}
     
     func updateSuccessRate(rate: Int) {
-        successRating.text = "Закреплено: \(rate)%"
+        UIView.animate(withDuration: 0.3) {
+            self.successRating.alpha = 1
+            self.successRating.text = "Закреплено: \(rate)%"
+        }
     }
     
     func removeSuccessRateLabel() {
-        successRating.text = ""
+        UIView.animate(withDuration: 0.3) {
+            self.successRating.alpha = 0
+        }
     }
 
 	func showAlert() {
