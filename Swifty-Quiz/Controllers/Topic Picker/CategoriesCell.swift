@@ -84,9 +84,11 @@ class CategoriesCell: UITableViewCell {
                 sender.layer.borderColor = Interface.borderColor
                 
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
-                self.addQuestionsToArray(sender: sender)
-                
-                self.delegate?.updateNumberOfQuestions()
+               
+                DispatchQueue.main.async {
+                    self.addQuestionsToArray(sender: sender)
+                    self.delegate?.updateNumberOfQuestions()
+                }
                 
                 if sender.tag > 10 {
                     self.delegate?.updateSuccessRate(
