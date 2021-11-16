@@ -20,7 +20,7 @@ class FramesAndBounds {
                      questionId: 198327605,
                      helpText: "Начало системы координат (origin) в iOS находится слева вверху. Мы можем поместить view в начало superview установив x-y координаты на (0, 0)."),
             
-            Question(question: ["Что мы обязтельно должны задать для frame нашего view, помимо его исходной точки (origin)?"],
+            Question(question: ["Что мы обязательно должны задать для frame нашего view, помимо его исходной точки (origin)?"],
                      image: "",
                      optionA: "Width & height",
                      optionB: "Width & bounds",
