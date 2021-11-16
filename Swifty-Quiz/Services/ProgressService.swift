@@ -11,6 +11,7 @@ import UIKit
 class ProgressService {
     
     private let records = Game.shared.getRecordsList()
+    private let success: Double = 100
     
     /// Get color for each category button
     func getProgressColor(for topic: String) -> CGColor {
@@ -24,8 +25,10 @@ class ProgressService {
             }
         }
         
-        if topic == "20 случайных вопросов" || topic == "50 случайных вопросов" ||
-            topic == "100 случайных вопросов" || topic == "The Death Match" {
+        if topic == CategoriesNames.random20.rawValue
+            || topic == CategoriesNames.random50.rawValue
+            || topic == CategoriesNames.random100.rawValue
+            || topic == CategoriesNames.deathMatch.rawValue {
             return UIColor.white.cgColor
         }
         
@@ -35,7 +38,7 @@ class ProgressService {
             let recordCounter = currentTopicRecords.count
             var succsessRate = 0
             
-            if currentTopicRecords.first?.percentOfCorrectAnswer == 100 {
+            if currentTopicRecords.first?.percentOfCorrectAnswer == success {
                 return color.withAlphaComponent(1).cgColor
             } else {
                 for record in currentTopicRecords {
@@ -58,8 +61,10 @@ class ProgressService {
         var currentTopicRecords: [Record] = []
         var succsessRate = 0
         
-        if topic == "20 случайных вопросов" || topic == "50 случайных вопросов" ||
-            topic == "100 случайных вопросов" || topic == "The Death Match" {
+        if topic == CategoriesNames.random20.rawValue
+            || topic == CategoriesNames.random50.rawValue
+            || topic == CategoriesNames.random100.rawValue
+            || topic == CategoriesNames.deathMatch.rawValue {
             return 0
         }
         
@@ -71,7 +76,7 @@ class ProgressService {
         
         let recordCounter = currentTopicRecords.count
         
-        if currentTopicRecords.first?.percentOfCorrectAnswer == 100 {
+        if currentTopicRecords.first?.percentOfCorrectAnswer == success {
             return 100
         } else {
             for record in currentTopicRecords {
