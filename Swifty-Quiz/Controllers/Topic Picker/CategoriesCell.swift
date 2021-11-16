@@ -18,7 +18,7 @@
 import UIKit
 
 protocol CategoriesCellDelegate: AnyObject {
-    func updateNumberOfQuestions()
+    func updateSelectedTopic()
     func updateSuccessRate(rate: Int)
     func removeSuccessRateLabel()
     func showAlert()
@@ -78,16 +78,17 @@ class CategoriesCell: UITableViewCell {
     @IBAction private func topicButtonPressed(_ sender: UIButton) {
         DispatchQueue.main.async {
             if sender.tag - 1 != self.currentPosition {
-                
                 self.setupProgressToButtons()
                 sender.layer.borderWidth = Interface.borderWidth
                 sender.layer.borderColor = Interface.borderColor
                 
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
                
+                /// Небольшой разгон по отработке UI
+                /// В основном для death match
                 DispatchQueue.main.async {
                     self.addQuestionsToArray(sender: sender)
-                    self.delegate?.updateNumberOfQuestions()
+                    self.delegate?.updateSelectedTopic()
                 }
                 
                 if sender.tag > 10 {
