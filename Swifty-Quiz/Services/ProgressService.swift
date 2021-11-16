@@ -35,7 +35,6 @@ class ProgressService {
         if currentTopicRecords.isEmpty {
             return UIColor.white.cgColor
         } else {
-            let recordCounter = currentTopicRecords.count
             var succsessRate = 0
             
             if currentTopicRecords.first?.percentOfCorrectAnswer == success {
@@ -46,7 +45,7 @@ class ProgressService {
                 }
             }
         
-            alpha = (Double(succsessRate / recordCounter) / 100)
+            alpha = (Double(succsessRate / currentTopicRecords.count) / 100)
             
             if alpha <= 0.15 {
                 alpha = 0.15
@@ -74,8 +73,6 @@ class ProgressService {
             }
         }
         
-        let recordCounter = currentTopicRecords.count
-        
         if currentTopicRecords.first?.percentOfCorrectAnswer == success {
             return 100
         } else {
@@ -85,7 +82,7 @@ class ProgressService {
         }
         
         if succsessRate != 0 {
-            return succsessRate / recordCounter
+            return succsessRate / currentTopicRecords.count
         } else {
             return 0
         }
