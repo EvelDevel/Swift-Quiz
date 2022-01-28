@@ -66,4 +66,7 @@ enum CategoriesNames: String {
     case boundsAndFrame = "Bounds and Frame"
     case uiview = "UIView"
     case autoLayout = "Auto Layout"
+    case dependencyInjection = "DI - Внедрение зависимостей"
+    case inversionOfControl = "IoC - Инверсия управления"
+    case serviceLocator = "SI - Сервис локатор"
 }

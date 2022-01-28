@@ -2,19 +2,6 @@
 //  Created by Евгений Никитин on 14.05.2020.
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
-// MARK: Как добавлять категории
-/// Добавить необходимые кнопки раздела в CategoriesCell.xib
-/// Присвоить кнопке tag по порядку
-/// Создать outlet-collection с названием раздела или добавить в массив существующего раздела
-/// Добавить элементы этой коллекции в общий массив для работы с UI (функция unificationOfOutlets)
-/// Добавить необходимые действия по этим кнопкам в addQuestionsToArray / topicButtonPressed
-/// Добавить новую категорию в RandomSetManager
-
-// MARK: При добавлении новых "случайных" сетов
-/// При добавлении новых сетов с подборками случайных вопросов
-/// Добавлять рефреш в refreshRandomSets() внутри GameViewController
-/// Это обновляет случайный сет, когда мы его доиграли (чтобы не играть его снова)
-
 import UIKit
 
 protocol CategoriesCellDelegate: AnyObject {
@@ -471,6 +458,24 @@ extension CategoriesCell {
                 topic: CategoriesNames.autoLayout.rawValue,
                 tag: 66
             )
+        case 68:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsDependencyInjection(),
+                topic: CategoriesNames.dependencyInjection.rawValue,
+                tag: 67
+            )
+        case 69:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsInversionOfControl(),
+                topic: CategoriesNames.inversionOfControl.rawValue,
+                tag: 68
+            )
+        case 70:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsServiceLocator(),
+                topic: CategoriesNames.serviceLocator.rawValue,
+                tag: 69
+            )
             
         default:
             allButtons.forEach { button in
@@ -484,6 +489,7 @@ extension CategoriesCell {
     
     /// Get topic name for button
     private func getTopicName(for tag: Int) -> String {
+        
         switch tag {
         case 1: return CategoriesNames.random20.rawValue
         case 2: return CategoriesNames.random50.rawValue
@@ -542,8 +548,26 @@ extension CategoriesCell {
         case 66: return CategoriesNames.uiview.rawValue
         case 67: return CategoriesNames.autoLayout.rawValue
             
+        case 68: return CategoriesNames.dependencyInjection.rawValue
+        case 69: return CategoriesNames.inversionOfControl.rawValue
+        case 70: return CategoriesNames.serviceLocator.rawValue
+            
         default:
             return ""
         }
     }
 }
+
+
+// MARK: Как добавлять категории
+/// Добавить необходимые кнопки раздела в CategoriesCell.xib
+/// Присвоить кнопке tag по порядку
+/// Создать outlet-collection с названием раздела или добавить в массив существующего раздела
+/// Добавить элементы этой коллекции в общий массив для работы с UI (appendAllButtons)
+/// Добавить необходимые действия по этим кнопкам в addQuestionsToArray / topicButtonPressed
+/// Добавить новую категорию в RandomSetManager
+
+// MARK: При добавлении новых "случайных" сетов
+/// При добавлении новых сетов с подборками случайных вопросов
+/// Добавлять рефреш в refreshRandomSets() внутри GameViewController
+/// Это обновляет случайный сет, когда мы его доиграли (чтобы не играть его снова)
