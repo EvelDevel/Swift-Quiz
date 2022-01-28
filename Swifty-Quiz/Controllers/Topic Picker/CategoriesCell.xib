@@ -1090,7 +1090,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="SI - Service Locator">
+                                                        <state key="normal" title="SL - Service Locator">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1331,7 +1331,7 @@
             <size key="intrinsicContentSize" width="80" height="26"/>
         </designable>
         <designable name="W0q-vB-BXf">
-            <size key="intrinsicContentSize" width="96" height="24"/>
+            <size key="intrinsicContentSize" width="99" height="24"/>
         </designable>
         <designable name="WhH-am-kbD">
             <size key="intrinsicContentSize" width="161" height="26"/>
