@@ -63,7 +63,6 @@
 		FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB39FCBC24FFAD7200B0685D /* error.mp3 */; };
 		FB3F91C72737A1C3008E46C3 /* UIViewSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */; };
 		FB478E8627A3CB2200816CFB /* DepenpencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */; };
-		FB478E8827A3CB2F00816CFB /* InversionOfControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB478E8727A3CB2F00816CFB /* InversionOfControl.swift */; };
 		FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */; };
 		FB553EBD2515236C0037A287 /* rightAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB553EBC2515236B0037A287 /* rightAnswer.mp3 */; };
 		FB554D232741215A00B7696B /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D222741215A00B7696B /* ProgressService.swift */; };
@@ -191,7 +190,6 @@
 		FB39FCBC24FFAD7200B0685D /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSet.swift; sourceTree = "<group>"; };
 		FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenpencyInjection.swift; sourceTree = "<group>"; };
-		FB478E8727A3CB2F00816CFB /* InversionOfControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InversionOfControl.swift; sourceTree = "<group>"; };
 		FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		FB553EBC2515236B0037A287 /* rightAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightAnswer.mp3; sourceTree = "<group>"; };
 		FB554D222741215A00B7696B /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
@@ -548,7 +546,6 @@
 				FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */,
 				FB99F891247B98E40053166C /* AntipatternsSet.swift */,
 				FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */,
-				FB478E8727A3CB2F00816CFB /* InversionOfControl.swift */,
 				FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */,
 			);
 			path = Patterns;
@@ -799,7 +796,6 @@
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
-				FB478E8827A3CB2F00816CFB /* InversionOfControl.swift in Sources */,
 				FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
