@@ -468,7 +468,7 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsServiceLocator(),
                 topic: CategoriesNames.serviceLocator.rawValue,
-                tag: 69
+                tag: 68
             )
             
         default:
