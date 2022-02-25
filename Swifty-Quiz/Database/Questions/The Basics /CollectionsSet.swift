@@ -246,8 +246,8 @@ class CollectionsSet {
             
             Question(question: ["Корректен ли данный код работы с массивом в Swift?"],
                      image: "Collections14",
-                     optionA: "Да, корректен",
-                     optionB: "Нет, будет ошибка",
+                     optionA: "Нет, будет ошибка",
+                     optionB: "Да, корректен",
                      optionC: "",
                      optionD: "",
                      questionId: 994895160,
