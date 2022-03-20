@@ -11,7 +11,7 @@ import Foundation
 class DepenpencyInjection {
     static func getQuestions() -> [Question] {
         return [
-            Question(question: ["В Swift есть нативные библиотеки, которые поддерживают паттерн Dependency Injection из коробки. Правда ли это?"],
+            Question(question: ["Есть ли в Swift нативные библиотеки, которые поддерживают паттерн Dependency Injection из коробки?"],
                      image: "",
                      optionA: "Нет",
                      optionB: "Да",
