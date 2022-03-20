@@ -466,9 +466,15 @@ extension CategoriesCell {
             )
         case 69:
             SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsInversionOfControl(),
+                topic: CategoriesNames.inversionOfControl.rawValue,
+                tag: 68
+            )
+        case 70:
+            SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsServiceLocator(),
                 topic: CategoriesNames.serviceLocator.rawValue,
-                tag: 68
+                tag: 69
             )
             
         default:
@@ -543,7 +549,8 @@ extension CategoriesCell {
         case 67: return CategoriesNames.autoLayout.rawValue
             
         case 68: return CategoriesNames.dependencyInjection.rawValue
-        case 69: return CategoriesNames.serviceLocator.rawValue
+        case 69: return CategoriesNames.inversionOfControl.rawValue
+        case 70: return CategoriesNames.serviceLocator.rawValue
             
         default:
             return ""

@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="16" width="382" height="1496"/>
+                        <rect key="frame" x="16" y="16" width="382" height="1544"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
@@ -933,7 +933,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="1166" width="382" height="176"/>
+                                <rect key="frame" x="0.0" y="1166" width="382" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -945,7 +945,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pLn-8m-84D" userLabel="Patterns">
-                                        <rect key="frame" x="0.0" y="40" width="382" height="136"/>
+                                        <rect key="frame" x="0.0" y="40" width="382" height="184"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-W0-nCM" userLabel="01">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -1047,7 +1047,7 @@
                                                 <rect key="frame" x="0.0" y="96" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="68" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ll-j0-T1a" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="DI - Dependency Injection">
@@ -1062,8 +1062,32 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a8Z-qa-mcW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="69" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-vB-BXf" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="214.5" y="0.0" width="167.5" height="40"/>
+                                                    <button opaque="NO" tag="69" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFE-s8-1Dd" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="196" y="0.0" width="186" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="IoC - Inversion of Control">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gYi-0B-jWe"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="1W1-Yy-GfZ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p2X-ut-tzV" userLabel="04">
+                                                <rect key="frame" x="0.0" y="144" width="382" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="70" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-vB-BXf" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="SL - Service Locator">
@@ -1080,7 +1104,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="1W1-Yy-GfZ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="m3d-wH-Zvo"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -1088,7 +1112,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                                <rect key="frame" x="0.0" y="1368" width="382" height="128"/>
+                                <rect key="frame" x="0.0" y="1416" width="382" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1235,6 +1259,7 @@
                 <outletCollection property="uikit" destination="e96-ca-V52" collectionClass="NSMutableArray" id="UNr-4d-YwW"/>
                 <outletCollection property="uikit" destination="BoN-Ac-gqZ" collectionClass="NSMutableArray" id="PfB-Ge-blr"/>
                 <outletCollection property="uikit" destination="EtF-Vu-csp" collectionClass="NSMutableArray" id="J5i-T1-VLU"/>
+                <outletCollection property="patterns" destination="wFE-s8-1Dd" collectionClass="NSMutableArray" id="DYN-GD-ILC"/>
                 <outletCollection property="patterns" destination="1ll-j0-T1a" collectionClass="NSMutableArray" id="BGV-tY-fLE"/>
                 <outletCollection property="patterns" destination="W0q-vB-BXf" collectionClass="NSMutableArray" id="DEt-UA-dLv"/>
             </connections>
@@ -1382,6 +1407,9 @@
         </designable>
         <designable name="wEp-ll-eTI">
             <size key="intrinsicContentSize" width="43" height="26"/>
+        </designable>
+        <designable name="wFE-s8-1Dd">
+            <size key="intrinsicContentSize" width="122" height="24"/>
         </designable>
         <designable name="wPb-9Y-l3t">
             <size key="intrinsicContentSize" width="61" height="26"/>

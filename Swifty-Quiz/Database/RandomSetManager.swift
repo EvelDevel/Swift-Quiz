@@ -89,6 +89,7 @@ class RandomSetManager {
             others.append(contentsOf: MobileSecuritySet.getQuestions())
             others.append(contentsOf: Multithreading.getQuestions())
             others.append(contentsOf: DepenpencyInjection.getQuestions())
+            others.append(contentsOf: InversionOfControl.getQuestions())
             others.append(contentsOf: ServiceLocator.getQuestions())
         }
         return others

@@ -22,6 +22,7 @@ class TopicOperator {
     static func getQuestionsAutoLayout() -> [Question] { return AutoLayout.getQuestions() }
     
     static func getQuestionsDependencyInjection() -> [Question] { return DepenpencyInjection.getQuestions() }
+    static func getQuestionsInversionOfControl() -> [Question] { return InversionOfControl.getQuestions() }
     static func getQuestionsServiceLocator() -> [Question] { return ServiceLocator.getQuestions() }
     
     static func getTheBasics() -> [Question] { return TheBasicsSet.getQuestions() }

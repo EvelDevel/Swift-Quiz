@@ -97,6 +97,7 @@
 		FB87420D24605BF500247923 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB87420924605BF500247923 /* trash.mp3 */; };
 		FB87420E24605BF500247923 /* button1.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB87420A24605BF500247923 /* button1.wav */; };
 		FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8742112461ABA600247923 /* SoundPlayer.swift */; };
+		FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8CDD5527E7530100A79744 /* InversionOfControl.swift */; };
 		FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91255C26D360E200C1DFEB /* Donation.storyboard */; };
 		FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91255E26D360ED00C1DFEB /* DonationViewController.swift */; };
 		FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91256226D3E63E00C1DFEB /* IAPManager.swift */; };
@@ -222,6 +223,7 @@
 		FB87420924605BF500247923 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
 		FB87420A24605BF500247923 /* button1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button1.wav; sourceTree = "<group>"; };
 		FB8742112461ABA600247923 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		FB8CDD5527E7530100A79744 /* InversionOfControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InversionOfControl.swift; sourceTree = "<group>"; };
 		FB91255C26D360E200C1DFEB /* Donation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		FB91256226D3E63E00C1DFEB /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */,
 				FB99F891247B98E40053166C /* AntipatternsSet.swift */,
 				FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */,
+				FB8CDD5527E7530100A79744 /* InversionOfControl.swift */,
 				FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */,
 			);
 			path = Patterns;
@@ -814,6 +817,7 @@
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
+				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,

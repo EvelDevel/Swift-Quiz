@@ -1,14 +1,14 @@
 //
-//  DepenpencyInjection.swift
+//  InversionOfControl.swift
 //  Swifty-Quiz
 //
-//  Created by Евгений Никитин on 28.01.2022.
+//  Created by Евгений Никитин on 20.03.2022.
 //  Copyright © 2022 Evel-Devel. All rights reserved.
 //
 
 import Foundation
 
-class DepenpencyInjection {
+class InversionOfControl {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что представляет из себя Инверсия управления?",
