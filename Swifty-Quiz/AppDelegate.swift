@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Пуш-сообщения с рандомными вопросами в разное время
     // Приложение на часы, с тем же функционалом?
 
-    
 	/// For under 13.0
 	var window: UIWindow?
 	

@@ -951,7 +951,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G39-3i-Oox" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="223.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Общие вопросы">
@@ -967,10 +967,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EE-qQ-BEr" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="198" y="0.0" width="184" height="40"/>
+                                                        <rect key="frame" x="231.5" y="0.0" width="150.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Порождающие">
+                                                        <state key="normal" title="Creational">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -991,10 +991,10 @@
                                                 <rect key="frame" x="0.0" y="48" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-Eu-Kjd" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Структурные">
+                                                        <state key="normal" title="Structural">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1007,10 +1007,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePD-0W-Wt5" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="116" y="0.0" width="129.5" height="40"/>
+                                                        <rect key="frame" x="106" y="0.0" width="104" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Поведенческие">
+                                                        <state key="normal" title="Behavioral">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1023,7 +1023,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ja-zl-HbK" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="253.5" y="0.0" width="128.5" height="40"/>
+                                                        <rect key="frame" x="218" y="0.0" width="164" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Антипаттерны">
@@ -1047,10 +1047,10 @@
                                                 <rect key="frame" x="0.0" y="96" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="68" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ll-j0-T1a" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="193" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="DI - Dependency Injection">
+                                                        <state key="normal" title="Dependency Injection">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1063,10 +1063,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="69" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFE-s8-1Dd" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="196" y="0.0" width="186" height="40"/>
+                                                        <rect key="frame" x="201" y="0.0" width="181" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="IoC - Inversion of Control">
+                                                        <state key="normal" title="Inversion of Control">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1090,7 +1090,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="SL - Service Locator">
+                                                        <state key="normal" title="Service Locator">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -1271,13 +1271,13 @@
             <size key="intrinsicContentSize" width="62" height="26"/>
         </designable>
         <designable name="1EE-qQ-BEr">
-            <size key="intrinsicContentSize" width="75" height="24"/>
+            <size key="intrinsicContentSize" width="50" height="24"/>
         </designable>
         <designable name="1Ja-zl-HbK">
             <size key="intrinsicContentSize" width="72" height="24"/>
         </designable>
         <designable name="1ll-j0-T1a">
-            <size key="intrinsicContentSize" width="126" height="24"/>
+            <size key="intrinsicContentSize" width="105" height="24"/>
         </designable>
         <designable name="252-im-U99">
             <size key="intrinsicContentSize" width="69" height="26"/>
@@ -1331,7 +1331,7 @@
             <size key="intrinsicContentSize" width="80" height="26"/>
         </designable>
         <designable name="W0q-vB-BXf">
-            <size key="intrinsicContentSize" width="99" height="24"/>
+            <size key="intrinsicContentSize" width="76" height="24"/>
         </designable>
         <designable name="WhH-am-kbD">
             <size key="intrinsicContentSize" width="161" height="26"/>
@@ -1361,7 +1361,7 @@
             <size key="intrinsicContentSize" width="90" height="24"/>
         </designable>
         <designable name="ePD-0W-Wt5">
-            <size key="intrinsicContentSize" width="79" height="24"/>
+            <size key="intrinsicContentSize" width="51" height="24"/>
         </designable>
         <designable name="efU-AZ-oTf">
             <size key="intrinsicContentSize" width="70" height="24"/>
@@ -1373,7 +1373,7 @@
             <size key="intrinsicContentSize" width="110" height="26"/>
         </designable>
         <designable name="fgV-Eu-Kjd">
-            <size key="intrinsicContentSize" width="66" height="24"/>
+            <size key="intrinsicContentSize" width="48" height="24"/>
         </designable>
         <designable name="gAi-7Y-eFa">
             <size key="intrinsicContentSize" width="87" height="26"/>
@@ -1409,7 +1409,7 @@
             <size key="intrinsicContentSize" width="43" height="26"/>
         </designable>
         <designable name="wFE-s8-1Dd">
-            <size key="intrinsicContentSize" width="122" height="24"/>
+            <size key="intrinsicContentSize" width="95" height="24"/>
         </designable>
         <designable name="wPb-9Y-l3t">
             <size key="intrinsicContentSize" width="61" height="26"/>
