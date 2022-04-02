@@ -19,6 +19,7 @@ class DonationViewController: UIViewController {
     @IBOutlet private weak var watchAdButton: RoundCornerButton!
     @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var donationView: UIView!
+    @IBOutlet private weak var tinkoff: RoundCornerButton!
     
     private var interstitial: GADInterstitialAd?
     
@@ -96,6 +97,15 @@ extension DonationViewController {
             interstitial?.present(fromRootViewController: self)
         } else {
             print("Ad wasn't ready")
+        }
+    }
+    
+    /// Donate Tinkoff
+    @IBAction private func tinkoffTapped(_ sender: Any) {
+        let url = URL(
+            string: "https://www.tinkoff.ru/collectmoney/crowd/nikitin.evgeniy547/xdyrc84044/?short_link=2PG5freJRUM&httpMethod=GET")
+        if let url = url {
+            UIApplication.shared.open(url)
         }
     }
 }
