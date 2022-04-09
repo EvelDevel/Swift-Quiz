@@ -343,7 +343,7 @@
                                     <constraint firstAttribute="width" constant="40" id="zvq-ds-Ym6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" image="donates">
+                                <state key="normal" image="DollarCoin">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -440,9 +440,9 @@
         <segue reference="hqs-Mj-uIf"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="DollarCoin" width="40" height="40"/>
         <image name="RightChevrone" width="50" height="50"/>
         <image name="RightChevroneFill" width="50" height="50"/>
-        <image name="donates" width="96" height="96"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
         <namedColor name="MainBackground">
