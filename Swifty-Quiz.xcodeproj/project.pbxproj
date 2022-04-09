@@ -112,8 +112,6 @@
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
 		FBA764FB246331E400D567D0 /* button3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764F9246331E400D567D0 /* button3.mp3 */; };
 		FBA764FC246331E400D567D0 /* button4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FBA764FA246331E400D567D0 /* button4.mp3 */; };
-		FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA97902247CF43200228FB5 /* SettingCell.swift */; };
-		FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA97903247CF43200228FB5 /* SettingCell.xib */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
@@ -237,8 +235,6 @@
 		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
 		FBA764F9246331E400D567D0 /* button3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button3.mp3; sourceTree = "<group>"; };
 		FBA764FA246331E400D567D0 /* button4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button4.mp3; sourceTree = "<group>"; };
-		FBA97902247CF43200228FB5 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		FBA97903247CF43200228FB5 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
@@ -441,8 +437,6 @@
 			children = (
 				FB291D2E26D2279300A40679 /* Settings.storyboard */,
 				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
-				FBA97902247CF43200228FB5 /* SettingCell.swift */,
-				FBA97903247CF43200228FB5 /* SettingCell.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -623,7 +617,6 @@
 				FB2EAC8C243EEE0F0098FAC3 /* Sources */,
 				FB2EAC8D243EEE0F0098FAC3 /* Frameworks */,
 				FB2EAC8E243EEE0F0098FAC3 /* Resources */,
-				78A8BD1A867E20753C030341 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -696,7 +689,6 @@
 				FB291D2F26D2279300A40679 /* Settings.storyboard in Resources */,
 				FB291D2626D223FF00A40679 /* TopicPicker.storyboard in Resources */,
 				FB87420E24605BF500247923 /* button1.wav in Resources */,
-				FBA97905247CF43200228FB5 /* SettingCell.xib in Resources */,
 				FB7BCD5124BDCDA700B8F6BA /* showContinue.mp3 in Resources */,
 				FB87420C24605BF500247923 /* button2.wav in Resources */,
 			);
@@ -725,23 +717,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78A8BD1A867E20753C030341 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -832,7 +807,6 @@
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,
 				FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */,
-				FBA97904247CF43200228FB5 /* SettingCell.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				2CD0C32D2692007C00871C14 /* DictionariesSet.swift in Sources */,
 				FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */,

@@ -7,25 +7,29 @@
 //
 
 import UIKit
-import GoogleMobileAds
 import StoreKit
 
 class DonationViewController: UIViewController {
 
-    private struct Constants {
-        static let ad = "ca-app-pub-8634387759111764/3661782608"
-    }
-    
-    @IBOutlet private weak var watchAdButton: RoundCornerButton!
     @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var donationView: UIView!
     @IBOutlet private weak var tinkoff: RoundCornerButton!
     
-    private var interstitial: GADInterstitialAd?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.alpha = 0
+        
+        UIView.animate(
+            withDuration: 0.3,
+            animations: ({
+                self.view.alpha = 1
+            })
+        )
     }
 }
 
@@ -37,23 +41,6 @@ extension DonationViewController {
         setAlpha()
         setBlur()
         setShadows()
-        requestAd()
-    }
-    
-    private func requestAd() {
-        let request = GADRequest()
-        GADInterstitialAd.load(
-            withAdUnitID: Constants.ad,
-            request: request,
-            completionHandler: { [self] ad, error in
-                if let error = error {
-                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                    return
-                }
-                interstitial = ad
-                interstitial?.fullScreenContentDelegate = self
-            }
-        )
     }
     
     private func setAlpha() {
@@ -91,15 +78,6 @@ extension DonationViewController {
         IAPManager.shared.purchase(product: .swiftyQuizDonate379)
     }
     
-    /// Watch Ad button
-    @IBAction private func watchAdTapped(_ sender: Any) {
-        if interstitial != nil {
-            interstitial?.present(fromRootViewController: self)
-        } else {
-            print("Ad wasn't ready")
-        }
-    }
-    
     /// Donate Tinkoff
     @IBAction private func tinkoffTapped(_ sender: Any) {
         let url = URL(
@@ -107,27 +85,6 @@ extension DonationViewController {
         if let url = url {
             UIApplication.shared.open(url)
         }
-    }
-}
-
-
-// MARK: GADFullScreenContentDelegate
-extension DonationViewController: GADFullScreenContentDelegate {
-    
-    /// Tells the delegate that the ad failed to present full screen content.
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("Ad did fail to present full screen content.")
-    }
-    
-    /// Tells the delegate that the ad presented full screen content.
-    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad did present full screen content.")
-    }
-    
-    /// Tells the delegate that the ad dismissed full screen content.
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        //interstitial = requestAd()
-        print("Ad did dismiss full screen content.")
     }
 }
 
@@ -148,10 +105,14 @@ extension DonationViewController {
     }
     
     private func dismissing() {
-        dismiss(animated: true)
-        
-        UIView.animate(withDuration: 0.22) {
-            self.view.alpha = 0
-        }
+        UIView.animate(
+            withDuration: 0.3,
+            animations: ({
+                self.view.alpha = 0
+            }),
+            completion: ({ _ in
+                self.dismiss(animated: false)
+            })
+        )
     }
 }

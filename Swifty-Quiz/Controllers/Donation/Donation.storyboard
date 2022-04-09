@@ -17,36 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="20" y="194.5" width="374" height="517"/>
+                                <rect key="frame" x="20" y="230" width="374" height="446.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="517"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="446.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поддержка " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-Zd-OyQ">
-                                                <rect key="frame" x="16" y="25" width="342" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="16" y="16" width="342" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
-                                                <rect key="frame" x="24" y="65.5" width="326" height="117"/>
-                                                <string key="text">Спасибо, что поддерживаете меня, я стараюсь держать приложение в актуальном состоянии, и постоянно добавляю новые вопросы и функционал. Сейчас актуальный способ доната - через сбор средств от Тинькоф. Остальные, к сожалению, "отвалились" на неопределенный срок. </string>
+                                                <rect key="frame" x="24" y="51.5" width="326" height="67"/>
+                                                <string key="text">Спасибо за поддержку, друзья! И приятной вам учебы! Вы можете поддержать меня закинув копеечку на Тиньков, поскольку остальные способы пока "отвалились"</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-Pa-RwL">
-                                                <rect key="frame" x="20" y="207.5" width="334" height="208.5"/>
+                                                <rect key="frame" x="20" y="134.5" width="334" height="211"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="atO-dd-boo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="63.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-Ln-8Gu" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="63"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-Ln-8Gu" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="63.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <state key="normal" title="99 ₽">
+                                                                <state key="normal" title="99 ₽" image="DollarCoin">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
@@ -58,12 +58,12 @@
                                                                     <action selector="donate99:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="fsb-rj-GkH"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjw-LC-a3o" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="63"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjw-LC-a3o" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="63.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <state key="normal" title="179 ₽">
+                                                                <state key="normal" title="179 ₽" image="DollarCoin">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
@@ -78,14 +78,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XIa-lJ-8ok">
-                                                        <rect key="frame" x="0.0" y="73" width="334" height="62.5"/>
+                                                        <rect key="frame" x="0.0" y="73.5" width="334" height="63.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztt-nM-XvU" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="62.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="63.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <state key="normal" title="279 ₽">
+                                                                <state key="normal" title="279 ₽" image="DollarCoin">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
@@ -98,11 +98,11 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-zd-nta" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="62.5"/>
+                                                                <rect key="frame" x="172" y="0.0" width="162" height="63.5"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <state key="normal" title="379 ₽">
+                                                                <state key="normal" title="379 ₽" image="DollarCoin">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
@@ -117,27 +117,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pIA-pw-Zmb">
-                                                        <rect key="frame" x="0.0" y="145.5" width="334" height="63"/>
+                                                        <rect key="frame" x="0.0" y="147" width="334" height="64"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53y-I0-POd" userLabel="Ad" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162" height="63"/>
-                                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                <state key="normal" title="Реклама">
-                                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="16"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="watchAdTapped:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="jvs-qD-gNH"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-vR-6UZ" userLabel="Ad" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                                <rect key="frame" x="172" y="0.0" width="162" height="63"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-vR-6UZ" userLabel="Ad" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="64"/>
                                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -162,7 +145,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-Cf-xuE" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="449" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="378.5" width="342" height="52"/>
                                                 <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
@@ -181,7 +164,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J13-df-caQ" userLabel="Separator">
-                                                <rect key="frame" x="50" y="432" width="274" height="1"/>
+                                                <rect key="frame" x="50" y="361.5" width="274" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="DmY-dq-oa7"/>
@@ -193,7 +176,7 @@
                                             <constraint firstAttribute="trailing" secondItem="dNA-Pa-RwL" secondAttribute="trailing" constant="20" id="5ze-JE-hdB"/>
                                             <constraint firstAttribute="trailing" secondItem="J13-df-caQ" secondAttribute="trailing" constant="50" id="69j-2n-JOu"/>
                                             <constraint firstItem="J13-df-caQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="50" id="BWt-Ia-X1S"/>
-                                            <constraint firstItem="29d-TE-wSR" firstAttribute="top" secondItem="vhY-Zd-OyQ" secondAttribute="bottom" constant="20" id="Dbj-aM-M9y"/>
+                                            <constraint firstItem="29d-TE-wSR" firstAttribute="top" secondItem="vhY-Zd-OyQ" secondAttribute="bottom" constant="16" id="Dbj-aM-M9y"/>
                                             <constraint firstItem="29d-TE-wSR" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="24" id="Hfz-LT-tFY"/>
                                             <constraint firstAttribute="trailing" secondItem="ghE-Cf-xuE" secondAttribute="trailing" constant="16" id="J0U-VE-bdz"/>
                                             <constraint firstItem="ghE-Cf-xuE" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="PWX-3D-h9h"/>
@@ -203,8 +186,8 @@
                                             <constraint firstItem="J13-df-caQ" firstAttribute="top" secondItem="dNA-Pa-RwL" secondAttribute="bottom" constant="16" id="fL3-2e-tZN"/>
                                             <constraint firstItem="vhY-Zd-OyQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="glG-Zq-myj"/>
                                             <constraint firstAttribute="bottom" secondItem="ghE-Cf-xuE" secondAttribute="bottom" constant="16" id="hIs-J7-zIe"/>
-                                            <constraint firstItem="vhY-Zd-OyQ" firstAttribute="top" secondItem="pqf-sx-Kb4" secondAttribute="top" constant="25" id="igk-ex-p9V"/>
-                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="top" secondItem="29d-TE-wSR" secondAttribute="bottom" constant="25" id="wIU-39-hVY"/>
+                                            <constraint firstItem="vhY-Zd-OyQ" firstAttribute="top" secondItem="pqf-sx-Kb4" secondAttribute="top" constant="16" id="igk-ex-p9V"/>
+                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="top" secondItem="29d-TE-wSR" secondAttribute="bottom" constant="16" id="wIU-39-hVY"/>
                                             <constraint firstItem="ghE-Cf-xuE" firstAttribute="top" secondItem="J13-df-caQ" secondAttribute="bottom" constant="16" id="wrt-oA-UoU"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -226,9 +209,8 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="ghE-Cf-xuE" id="D2w-k0-iI3"/>
-                        <outlet property="donationView" destination="pqf-sx-Kb4" id="KaV-Qw-KuV"/>
+                        <outlet property="donationView" destination="pqf-sx-Kb4" id="3fl-W0-xfb"/>
                         <outlet property="tinkoff" destination="ndC-vR-6UZ" id="S6a-73-HtM"/>
-                        <outlet property="watchAdButton" destination="53y-I0-POd" id="nD8-Ee-Cfi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyE-5Y-gWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,26 +219,23 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="53y-I0-POd">
-            <size key="intrinsicContentSize" width="73" height="34"/>
-        </designable>
         <designable name="Pjw-LC-a3o">
-            <size key="intrinsicContentSize" width="44" height="34"/>
+            <size key="intrinsicContentSize" width="84" height="40"/>
         </designable>
         <designable name="ghE-Cf-xuE">
             <size key="intrinsicContentSize" width="159" height="30"/>
         </designable>
         <designable name="hD3-Ln-8Gu">
-            <size key="intrinsicContentSize" width="38" height="34"/>
+            <size key="intrinsicContentSize" width="78" height="40"/>
         </designable>
         <designable name="ndC-vR-6UZ">
             <size key="intrinsicContentSize" width="100" height="40"/>
         </designable>
         <designable name="zPc-zd-nta">
-            <size key="intrinsicContentSize" width="47" height="34"/>
+            <size key="intrinsicContentSize" width="87" height="40"/>
         </designable>
         <designable name="ztt-nM-XvU">
-            <size key="intrinsicContentSize" width="47" height="34"/>
+            <size key="intrinsicContentSize" width="87" height="40"/>
         </designable>
     </designables>
     <resources>

@@ -3,15 +3,9 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
-import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    // MARK: TODO
-    
-    // Пуш-сообщения с рандомными вопросами в разное время
-    // Приложение на часы, с тем же функционалом?
 
 	/// For under 13.0
 	var window: UIWindow?
@@ -19,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
         IAPManager.shared.fetchProducts()
         return true
     }

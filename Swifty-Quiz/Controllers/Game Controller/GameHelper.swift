@@ -141,7 +141,7 @@ class GameHelper {
     func setQuestionText(_ set: [Question],
                          _ index: Int) -> String {
         
-        if  Game.shared.settings.questionTextShuffeling == 1 {
+        if  Game.shared.settings.questionTextShuffling == 1 {
             return set[index].question.shuffled()[0]
         } else {
             return set[index].question[0]

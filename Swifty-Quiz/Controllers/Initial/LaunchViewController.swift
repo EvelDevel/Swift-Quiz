@@ -9,13 +9,17 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
         setAudioSettings()
         transitionFromLaunch()
     }
     
-    // Set audio session, app won't stop music
     func setAudioSettings() {
         do {
+            // Set audio session, app won't stop phone music
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
         } catch {
             print("Some problems with AVAudioSession.sharedInstance())")
@@ -23,12 +27,25 @@ class LaunchViewController: UIViewController {
     }
     
     func transitionFromLaunch() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initial = mainStoryboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
+        DispatchQueue.main.asyncAfter(
+            deadline: .now() + 0.5
+        ) {
+            let mainStoryboard: UIStoryboard = UIStoryboard(
+                name: "Main",
+                bundle: nil
+            )
+            
+            let initial = mainStoryboard.instantiateViewController(
+                withIdentifier: "InitialViewController"
+            ) as! InitialViewController
+            
             initial.modalPresentationStyle = .overFullScreen
-            self.present(initial, animated: true, completion: nil)
-            SoundPlayer.shared.playSound(sound: .theAppIsLoading)
+            
+            self.present(
+                initial,
+                animated: true,
+                completion: nil
+            )
         }
     }
 }

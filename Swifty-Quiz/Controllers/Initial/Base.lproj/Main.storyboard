@@ -271,7 +271,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="XWP-N3-PbW"/>
-                                                    <segue destination="iN0-B6-NlH" kind="show" identifier="toSettingsViewController" id="t75-oh-t47"/>
+                                                    <segue destination="iN0-B6-NlH" kind="presentation" identifier="toSettingsViewController" animates="NO" modalPresentationStyle="overFullScreen" id="t75-oh-t47"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -348,7 +348,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToDonations:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="0XY-xj-6DA"/>
-                                    <segue destination="fIJ-8O-b7h" kind="show" identifier="toDonation" id="B42-l4-R3R"/>
+                                    <segue destination="fIJ-8O-b7h" kind="presentation" identifier="toDonation" animates="NO" modalPresentationStyle="overFullScreen" id="B42-l4-R3R"/>
                                 </connections>
                             </button>
                         </subviews>

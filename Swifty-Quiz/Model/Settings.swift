@@ -7,7 +7,7 @@ import Foundation
 struct Settings: Codable {
     
     var questionOrder: Int          // Порядок вопросов
-    var questionTextShuffeling: Int // Изменение формулировок вопроса
+    var questionTextShuffling: Int // Изменение формулировок вопроса
     var sound: Int                  // Звук
     var changeAfterHelp: Int        // Поведение после подсказки (меняем вопрос или остаемся)
     var helpAfterWrong: Int         // Поведение после неправильного ответа (показываем подсказку или переходим)

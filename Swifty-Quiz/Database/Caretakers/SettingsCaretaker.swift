@@ -22,7 +22,7 @@ class SettingsCaretaker {
     func getSettings() -> Settings {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             return Settings(questionOrder: 0,
-                            questionTextShuffeling: 0,
+                            questionTextShuffling: 0,
                             sound: 0,
                             changeAfterHelp: 0,
                             helpAfterWrong: 0,
@@ -33,7 +33,7 @@ class SettingsCaretaker {
         } catch {
             print("We have some problems with retrieving settings from memory")
             return Settings(questionOrder: 0, 
-                            questionTextShuffeling: 0, 
+                            questionTextShuffling: 0, 
                             sound: 0,
                             changeAfterHelp: 0,
                             helpAfterWrong: 0,

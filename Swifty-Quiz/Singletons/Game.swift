@@ -115,9 +115,9 @@ extension Game {
     /// Настройки: Смена формулировок вопроса
     func setQuestionTextShuffeling(setting: QuestionText) {
         if setting == .random {
-            self.settings.questionTextShuffeling = 1
+            self.settings.questionTextShuffling = 1
         } else {
-            self.settings.questionTextShuffeling = 0
+            self.settings.questionTextShuffling = 0
         }
     }
     

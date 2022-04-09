@@ -13,7 +13,7 @@ class InitialViewController: UIViewController {
 	@IBOutlet private weak var totalQuestionsLabel: UILabel!
 	@IBOutlet private weak var selectedTopic: UILabel!
 	@IBOutlet private weak var lastTopic: UILabel!
-	@IBOutlet private weak var lastScore: UILabel!
+    @IBOutlet private weak var lastScore: UILabel!
 	@IBOutlet private weak var totalQuestions: UILabel!
 	@IBOutlet private weak var continueGameButton: UIButton!
 	@IBOutlet private weak var topicPicker: UIButton!
