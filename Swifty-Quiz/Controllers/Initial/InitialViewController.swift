@@ -158,7 +158,10 @@ extension InitialViewController {
 	}
 
 	/// Корректного отображение дополнительных картинок у кнопок
-    private func imageTuning(button: UIButton, position: UIControl.ContentVerticalAlignment) {
+    private func imageTuning(
+        button: UIButton,
+        position: UIControl.ContentVerticalAlignment
+    ) {
 		button.imageView!.contentMode = .scaleAspectFit
 		button.contentVerticalAlignment = position
 		button.contentHorizontalAlignment = .right
@@ -166,10 +169,18 @@ extension InitialViewController {
     
     /// Donation button animation
     private func showAnimation() {
-        let pulse = PulseAnimation(numberOfPulse: 10, radius: 23, postion: donationButton.center)
-        pulse.animationDuration = 1.5
-        pulse.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        view.layer.insertSublayer(pulse, below: donationButton.layer)
+        let pulse = PulseAnimation(
+            numberOfPulse: 15,
+            radius: 23,
+            postion: donationButton.center
+        )
+        pulse.animationDuration = 1
+        pulse.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        
+        view.layer.insertSublayer(
+            pulse,
+            below: donationButton.layer
+        )
     }
 }
 
