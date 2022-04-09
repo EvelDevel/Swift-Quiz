@@ -9,8 +9,20 @@ protocol SettingsViewControllerDelegate: AnyObject {
 }
 
 class SettingsViewController: UIViewController {
+    
     @IBOutlet private var settingsView: UIView!
     @IBOutlet private weak var dismissButton: RoundCornerButton!
+    
+    @IBOutlet private weak var questionOrderControl: UISegmentedControl!
+    @IBOutlet private weak var questionTextControl: UISegmentedControl!
+    @IBOutlet private weak var helpAfterWrongAnswerControl: UISegmentedControl!
+    @IBOutlet private weak var changeAfterHelpControl: UISegmentedControl!
+    @IBOutlet private weak var soundControl: UISegmentedControl!
+    @IBOutlet private var allControls: [UISegmentedControl]!
+    
+    @IBAction func settingSwitchSound(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
+    }
     
     weak var delegate: SettingsViewControllerDelegate?
     
@@ -39,6 +51,9 @@ class SettingsViewController: UIViewController {
         setupAlpha()
         setupBlur()
         setupShadows()
+        setupControlsTintColors()
+        setupTargets()
+        setupInitialControlsState()
     }
     
     private func setupAlpha() {
@@ -60,36 +75,6 @@ class SettingsViewController: UIViewController {
     private func setupShadows() {
         let shadows = Shadow()
         shadows.addHalfButtonShadows([dismissButton])
-    }
-}
-
-
-// MARK: SettingCellDelegate
-extension SettingsViewController: SettingCellDelegate {
-    
-    func showInformationAlert(
-        _ title: String,
-        _ message: String
-    ) {
-        let alert = UIAlertController(
-            title: "\(title)",
-            message: "\(message)",
-            preferredStyle: .alert
-        )
-        
-        let quitAction = UIAlertAction(
-            title: "Вернуться в игру",
-            style: .default,
-            handler: nil
-        )
-        
-        alert.addAction(quitAction)
-        
-        present(
-            alert,
-            animated: true,
-            completion: nil
-        )
     }
 }
 
@@ -122,69 +107,20 @@ extension SettingsViewController {
     }
 }
 
-enum QuestionOrder {
-    case straight
-    case random
-}
 
-enum QuestionText {
-    case same
-    case random
-}
-
-enum HelpAfterWrong {
-    case proceed
-    case help
-}
-
-enum Sound {
-    case on
-    case off
-}
-
-enum ChangeAfterHelp {
-    case change
-    case dontChange
-}
-
-protocol SettingCellDelegate: AnyObject {
-    func showInformationAlert(_ title: String, _ message: String)
-}
-
-class SettingCell: UITableViewCell {
-
-    @IBOutlet private weak var questionOrderControl: UISegmentedControl!
-    @IBOutlet private weak var questionTextControl: UISegmentedControl!
-    @IBOutlet private weak var helpAfterWrongAnswerControl: UISegmentedControl!
-    @IBOutlet private weak var changeAfterHelpControl: UISegmentedControl!
-    @IBOutlet private weak var soundControl: UISegmentedControl!
-    @IBOutlet private var allControls: [UISegmentedControl]!
-    
-    weak var delegate: SettingCellDelegate?
-    
-    @IBAction func settingSwitchSound(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupControlsTintColors()
-        setupTargets()
-        setupInitialControlsState()
-    }
-}
-
-
-// MARK: Default setup
-extension SettingCell {
+// MARK: Controls handler
+extension SettingsViewController {
     
     func setupControlsTintColors() {
         let inactive: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 0.5)
         let active: UIColor = #colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1)
+        
         let normalColor = [NSAttributedString.Key.foregroundColor: inactive]
         let selectedColor = [NSAttributedString.Key.foregroundColor: active]
         
         for control in allControls {
+            control.backgroundColor = UIColor.white
+            
             control.setTitleTextAttributes(
                 normalColor,
                 for: .normal
@@ -269,7 +205,7 @@ extension SettingCell {
 
 
 // MARK: Detect changes
-extension SettingCell {
+extension SettingsViewController {
     
     @objc func questionOrderValue(target: UISegmentedControl) {
         if target == self.questionOrderControl {
@@ -334,7 +270,32 @@ extension SettingCell {
 
 
 // MARK: Help text
-extension SettingCell {
+extension SettingsViewController {
+    
+    func showInformationAlert(
+        _ title: String,
+        _ message: String
+    ) {
+        let alert = UIAlertController(
+            title: "\(title)",
+            message: "\(message)",
+            preferredStyle: .alert
+        )
+        
+        let quitAction = UIAlertAction(
+            title: "Вернуться в игру",
+            style: .default,
+            handler: nil
+        )
+        
+        alert.addAction(quitAction)
+        
+        present(
+            alert,
+            animated: true,
+            completion: nil
+        )
+    }
     
     @IBAction func informationAboutSettingPressed(_ sender: UIButton) {
         var title = ""
@@ -360,6 +321,6 @@ extension SettingCell {
             print("Error with information about setting")
         }
         
-        delegate?.showInformationAlert(title, message)
+        showInformationAlert(title, message)
     }
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,6 +38,9 @@
                                                         <state key="normal" title="Последовательность вопросов">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="p0H-O8-qWp"/>
+                                                        </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-xR-Fa0">
                                                         <rect key="frame" x="0.0" y="40" width="342" height="41"/>
@@ -52,6 +56,9 @@
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="1bd-SB-ULj"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACg-EJ-kPL" userLabel="questionText">
                                                         <rect key="frame" x="0.0" y="80" width="342" height="40"/>
@@ -59,6 +66,9 @@
                                                         <state key="normal" title="Менять формулировки вопросов?">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="cGv-kX-R11"/>
+                                                        </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZB5-ea-qK4">
                                                         <rect key="frame" x="0.0" y="120" width="342" height="41"/>
@@ -74,6 +84,9 @@
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="Upp-o2-hvy"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-h8-5gV" userLabel="questionText">
                                                         <rect key="frame" x="0.0" y="160" width="342" height="40"/>
@@ -81,6 +94,9 @@
                                                         <state key="normal" title="При неправильном ответе">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="uzs-6g-ugB"/>
+                                                        </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-rl-zQj">
                                                         <rect key="frame" x="0.0" y="200" width="342" height="41"/>
@@ -96,6 +112,9 @@
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="TDW-QS-wBj"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUX-Ue-2ny" userLabel="questionText">
                                                         <rect key="frame" x="0.0" y="240" width="342" height="40"/>
@@ -103,6 +122,9 @@
                                                         <state key="normal" title="Переход после подсказки">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="snR-01-hJn"/>
+                                                        </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJk-yF-2Tm">
                                                         <rect key="frame" x="0.0" y="280" width="342" height="41"/>
@@ -118,8 +140,11 @@
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="uof-dj-bcd"/>
+                                                        </connections>
                                                     </segmentedControl>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-aI-mCU" userLabel="questionText">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-aI-mCU" userLabel="questionText">
                                                         <rect key="frame" x="0.0" y="320" width="342" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="Звуки в игре: ">
@@ -140,6 +165,9 @@
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="yCS-UR-Ndj"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -164,7 +192,7 @@
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRX-Ef-wO3" userLabel="Separator">
                                                 <rect key="frame" x="50" y="469.5" width="274" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="MainBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="CWd-vd-XFW"/>
                                                 </constraints>
@@ -196,7 +224,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUG-4F-ejc"/>
-                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OcX-HB-6Na" firstAttribute="leading" secondItem="KUG-4F-ejc" secondAttribute="leading" constant="20" id="Juj-W6-GJl"/>
                             <constraint firstItem="OcX-HB-6Na" firstAttribute="centerY" secondItem="KUG-4F-ejc" secondAttribute="centerY" id="URA-fO-uOB"/>
@@ -204,8 +232,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeAfterHelpControl" destination="YJk-yF-2Tm" id="3th-2f-ali"/>
                         <outlet property="dismissButton" destination="ikU-zo-iV4" id="pbu-iC-TDj"/>
+                        <outlet property="helpAfterWrongAnswerControl" destination="6Ph-rl-zQj" id="fbQ-Tl-KND"/>
+                        <outlet property="questionOrderControl" destination="JQb-xR-Fa0" id="Ubv-go-YST"/>
+                        <outlet property="questionTextControl" destination="ZB5-ea-qK4" id="WLn-8u-Ec7"/>
                         <outlet property="settingsView" destination="d0j-HN-wNV" id="EXL-bz-4lz"/>
+                        <outlet property="soundControl" destination="rWC-bA-ACu" id="tDm-DJ-yUC"/>
+                        <outletCollection property="allControls" destination="JQb-xR-Fa0" collectionClass="NSMutableArray" id="5e1-d8-qku"/>
+                        <outletCollection property="allControls" destination="ZB5-ea-qK4" collectionClass="NSMutableArray" id="Nm3-Iz-Frp"/>
+                        <outletCollection property="allControls" destination="6Ph-rl-zQj" collectionClass="NSMutableArray" id="rXE-DH-zNB"/>
+                        <outletCollection property="allControls" destination="YJk-yF-2Tm" collectionClass="NSMutableArray" id="7TJ-ZW-Aw2"/>
+                        <outletCollection property="allControls" destination="rWC-bA-ACu" collectionClass="NSMutableArray" id="d9v-JG-BPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjy-Lm-anb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,4 +256,9 @@
             <size key="intrinsicContentSize" width="159" height="30"/>
         </designable>
     </designables>
+    <resources>
+        <namedColor name="MainBackground">
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

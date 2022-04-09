@@ -44,7 +44,7 @@
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
-		FB2558712801E19A00B01390 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = FB2558702801E19A00B01390 /* Configuration.storekit */; };
+		FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2558732801E35700B01390 /* SettingsEnums.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
 		FB291D2226D2211400A40679 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2126D2211400A40679 /* Help.storyboard */; };
@@ -166,7 +166,7 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		FB2558702801E19A00B01390 /* Configuration.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		FB2558732801E35700B01390 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
 		FB291D2126D2211400A40679 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
@@ -324,15 +324,6 @@
 			path = Singletons;
 			sourceTree = "<group>";
 		};
-		FB2558722801E1AA00B01390 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				FB91256226D3E63E00C1DFEB /* IAPManager.swift */,
-				FB2558702801E19A00B01390 /* Configuration.storekit */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		FB291D1C26D2167600A40679 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +437,7 @@
 			children = (
 				FB291D2E26D2279300A40679 /* Settings.storyboard */,
 				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
+				FB2558732801E35700B01390 /* SettingsEnums.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -494,7 +486,7 @@
 			children = (
 				FB91255C26D360E200C1DFEB /* Donation.storyboard */,
 				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
-				FB2558722801E1AA00B01390 /* Utils */,
+				FB91256226D3E63E00C1DFEB /* IAPManager.swift */,
 			);
 			path = Donation;
 			sourceTree = "<group>";
@@ -678,7 +670,6 @@
 				FBA764FB246331E400D567D0 /* button3.mp3 in Resources */,
 				FB291D2226D2211400A40679 /* Help.storyboard in Resources */,
 				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
-				FB2558712801E19A00B01390 /* Configuration.storekit in Resources */,
 				FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */,
 				FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
@@ -803,6 +794,7 @@
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
+				FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,

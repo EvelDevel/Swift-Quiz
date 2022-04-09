@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +29,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lqh-dK-0TY">
-                                                <rect key="frame" x="24" y="57.5" width="326" height="67"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lqh-dK-0TY">
+                                                <rect key="frame" x="20" y="57.5" width="334" height="72"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ka2-2t-URQ">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ka2-2t-URQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="1d5-0b-IqT"/>
@@ -39,7 +40,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спасибо вам за поддержку, друзья, и приятной учебы! Вы можете помочь проекту с помощью Тинькофф! " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29d-TE-wSR">
-                                                        <rect key="frame" x="75" y="0.0" width="251" height="67"/>
+                                                        <rect key="frame" x="81" y="0.0" width="253" height="67"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -176,7 +177,7 @@
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J13-df-caQ" userLabel="Separator">
                                                 <rect key="frame" x="50" y="345.5" width="274" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="MainBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="DmY-dq-oa7"/>
                                                 </constraints>
@@ -187,18 +188,18 @@
                                             <constraint firstItem="lqh-dK-0TY" firstAttribute="top" secondItem="vhY-Zd-OyQ" secondAttribute="bottom" constant="20" id="5E7-f9-jDx"/>
                                             <constraint firstAttribute="trailing" secondItem="dNA-Pa-RwL" secondAttribute="trailing" constant="20" id="5ze-JE-hdB"/>
                                             <constraint firstAttribute="trailing" secondItem="J13-df-caQ" secondAttribute="trailing" constant="50" id="69j-2n-JOu"/>
-                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="top" secondItem="lqh-dK-0TY" secondAttribute="bottom" constant="25" id="BCT-lC-B9d"/>
+                                            <constraint firstItem="dNA-Pa-RwL" firstAttribute="top" secondItem="lqh-dK-0TY" secondAttribute="bottom" constant="20" id="BCT-lC-B9d"/>
                                             <constraint firstItem="J13-df-caQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="50" id="BWt-Ia-X1S"/>
                                             <constraint firstAttribute="trailing" secondItem="ghE-Cf-xuE" secondAttribute="trailing" constant="16" id="J0U-VE-bdz"/>
                                             <constraint firstItem="ghE-Cf-xuE" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="PWX-3D-h9h"/>
                                             <constraint firstItem="dNA-Pa-RwL" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="20" id="Vfl-xG-Al7"/>
                                             <constraint firstAttribute="trailing" secondItem="vhY-Zd-OyQ" secondAttribute="trailing" constant="16" id="ViO-Ja-DPT"/>
-                                            <constraint firstAttribute="trailing" secondItem="lqh-dK-0TY" secondAttribute="trailing" constant="24" id="dgT-dG-ond"/>
+                                            <constraint firstAttribute="trailing" secondItem="lqh-dK-0TY" secondAttribute="trailing" constant="20" id="dgT-dG-ond"/>
                                             <constraint firstItem="J13-df-caQ" firstAttribute="top" secondItem="dNA-Pa-RwL" secondAttribute="bottom" constant="16" id="fL3-2e-tZN"/>
                                             <constraint firstItem="vhY-Zd-OyQ" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="16" id="glG-Zq-myj"/>
                                             <constraint firstAttribute="bottom" secondItem="ghE-Cf-xuE" secondAttribute="bottom" constant="16" id="hIs-J7-zIe"/>
                                             <constraint firstItem="vhY-Zd-OyQ" firstAttribute="top" secondItem="pqf-sx-Kb4" secondAttribute="top" constant="16" id="igk-ex-p9V"/>
-                                            <constraint firstItem="lqh-dK-0TY" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="24" id="rFn-wH-Gag"/>
+                                            <constraint firstItem="lqh-dK-0TY" firstAttribute="leading" secondItem="pqf-sx-Kb4" secondAttribute="leading" constant="20" id="rFn-wH-Gag"/>
                                             <constraint firstItem="ghE-Cf-xuE" firstAttribute="top" secondItem="J13-df-caQ" secondAttribute="bottom" constant="16" id="wrt-oA-UoU"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -211,7 +212,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U6O-pb-vYA"/>
-                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.80313570209999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Wk-Mg-uxB" firstAttribute="leading" secondItem="U6O-pb-vYA" secondAttribute="leading" constant="20" id="84m-7g-gf9"/>
                             <constraint firstItem="U6O-pb-vYA" firstAttribute="trailing" secondItem="3Wk-Mg-uxB" secondAttribute="trailing" constant="20" id="nK2-G2-8pu"/>
@@ -253,5 +254,8 @@
     <resources>
         <image name="DollarCoin" width="40" height="40"/>
         <image name="Photo" width="1446" height="1514"/>
+        <namedColor name="MainBackground">
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
