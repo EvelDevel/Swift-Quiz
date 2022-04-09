@@ -13,6 +13,7 @@ class DonationViewController: UIViewController {
 
     @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var donationView: UIView!
+    @IBOutlet private weak var myAvatar: UIImageView!
     @IBOutlet private weak var tinkoff: RoundCornerButton!
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class DonationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.alpha = 0
+        view.alpha = 0
         
         UIView.animate(
             withDuration: 0.3,
@@ -41,6 +42,8 @@ extension DonationViewController {
         setAlpha()
         setBlur()
         setShadows()
+        
+        myAvatar.layer.cornerRadius = myAvatar.frame.size.height / 2
     }
     
     private func setAlpha() {
