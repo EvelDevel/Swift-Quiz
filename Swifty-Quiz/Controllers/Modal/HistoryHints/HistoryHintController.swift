@@ -58,7 +58,7 @@ class HistoryHintController: UIViewController {
 extension HistoryHintController {
 	
     @IBAction func backToHistoryTapped(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
         dismissView()
     }
     

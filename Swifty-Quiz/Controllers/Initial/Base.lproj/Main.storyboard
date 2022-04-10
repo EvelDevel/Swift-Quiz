@@ -19,20 +19,20 @@
             </objects>
             <point key="canvasLocation" x="981" y="-58"/>
         </scene>
-        <!--Game-->
+        <!--GameViewController-->
         <scene sceneID="E12-Eb-zA6">
             <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="cis-0o-Enk" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="GameViewController" id="cis-0o-Enk" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hps-6a-ipU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uE8-EW-Dma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982" y="137"/>
         </scene>
-        <!--Donation-->
+        <!--DonationViewController-->
         <scene sceneID="aaZ-wS-6TG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Donation" id="fIJ-8O-b7h" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DonationViewController" id="fIJ-8O-b7h" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="i4r-Mv-aTY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-SI-abW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="298" y="657"/>
         </scene>
-        <!--Settings-->
+        <!--SettingsViewController-->
         <scene sceneID="SVo-qx-HFB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="iN0-B6-NlH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SettingsViewController" id="iN0-B6-NlH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hFo-dY-9Jd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7S-TO-zVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

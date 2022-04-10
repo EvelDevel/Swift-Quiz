@@ -66,7 +66,7 @@ extension SettingsViewController {
     
     @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(
-            sound: .menuMainButton
+            sound: .buttonTapped
         )
         
         dismissView()

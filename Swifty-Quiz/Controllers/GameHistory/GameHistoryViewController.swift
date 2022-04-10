@@ -30,7 +30,7 @@ class GameHistoryViewController: UIViewController {
 	}
 	/// < 13.0 iOS Navigation
 	@IBAction func dismissGameHistory(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
 }
@@ -72,13 +72,17 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
 // MARK: Работа с делегатом
 extension GameHistoryViewController: GameHistoryCellDelegate {
 	func showHint(index: Int) {
-		let mainStoryboard: UIStoryboard = UIStoryboard(
-            name: "HistoryHint",
+        let mainStoryboard: UIStoryboard = UIStoryboard(
+            name: String(
+                describing: HistoryHintController.self
+            ),
             bundle: nil
         )
         
 		let historyHintView  = mainStoryboard.instantiateViewController(
-            withIdentifier: "HistoryHintController"
+            withIdentifier: String(
+                describing: HistoryHintController.self
+            )
         ) as! HistoryHintController
         
 		historyHintView.helpText = history[index].helpText
@@ -97,42 +101,73 @@ extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
     
     func reportButtonPressed(id: Int) {
         showMailComposer(id: id)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     
     func showMailComposer(id: Int) {
         /// Проверяем, может ли девайс пользователя отправлять мэйлы
         guard MFMailComposeViewController.canSendMail() else {
-            let alert = UIAlertController(  title: "Вы хотели сообщить о проблеме с вопросом",
-                                            message: "К сожалению ваше устройство не может отправлять почту. Скорее всего, у вас нет ни одной активной учетной записи в приложении \"почта\".",
-                                            preferredStyle: .alert)
-            let ok = UIAlertAction(         title: "Понятно",
-                                            style: .default,
-                                            handler: { action in })
+            let alert = UIAlertController(
+                title: "Вы хотели сообщить о проблеме с вопросом",
+                message: "К сожалению ваше устройство не может отправлять почту. Скорее всего, у вас нет ни одной активной учетной записи в приложении \"почта\".",
+                preferredStyle: .alert
+            )
+            
+            let ok = UIAlertAction(
+                title: "Понятно",
+                style: .default,
+                handler: nil
+            )
+            
             alert.addAction(ok)
-            present(alert, animated: true, completion: nil)
+            
+            present(
+                alert,
+                animated: true,
+                completion: nil
+            )
             return
         }
         
         let composer = MFMailComposeViewController()
+        
         composer.mailComposeDelegate = self
         composer.setToRecipients(["hello@swifty-quiz.ru"])
         composer.setSubject("Вопрос №\(id)")
-        composer.setMessageBody("Обнаружил(а) ошибку с вопросом №\(id), она заключается в следующем: ", isHTML: false)
+        
+        composer.setMessageBody(
+            "Обнаружил(а) ошибку с вопросом №\(id), она заключается в следующем: ",
+            isHTML: false
+        )
+        
         present(composer, animated: true)
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        
+    func mailComposeController(
+        _ controller: MFMailComposeViewController,
+        didFinishWith result: MFMailComposeResult,
+        error: Error?
+    ) {
         if let _ = error {
-            let alert = UIAlertController(  title: "Возникла ошибка при отправке письма",
-                                            message: "",
-                                            preferredStyle: .alert)
-            let ok = UIAlertAction(         title: "Понятно",
-                                            style: .default,
-                                            handler: { action in })
+            let alert = UIAlertController(
+                title: "Возникла ошибка при отправке письма",
+                message: "",
+                preferredStyle: .alert
+            )
+            
+            let ok = UIAlertAction(
+                title: "Понятно",
+                style: .default,
+                handler: nil
+            )
+            
             alert.addAction(ok)
-            present(alert, animated: true, completion: nil)
+            present(
+                alert,
+                animated: true,
+                completion: nil
+            )
+            
             controller.dismiss(animated: true)
             return
         }

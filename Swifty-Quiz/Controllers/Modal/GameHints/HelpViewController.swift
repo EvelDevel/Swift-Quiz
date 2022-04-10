@@ -95,7 +95,7 @@ extension HelpViewController {
 extension HelpViewController {
 
     @IBAction private func backInGameButton(_ sender: UIButton) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
         dismissView()
     }
     

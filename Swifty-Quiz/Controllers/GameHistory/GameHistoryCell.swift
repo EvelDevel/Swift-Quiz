@@ -76,6 +76,6 @@ class GameHistoryCell: UITableViewCell {
 	
 	@IBAction func showHintTapped(_ sender: Any) {
 		delegate?.showHint(index: cellIndex)
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 	}
 }

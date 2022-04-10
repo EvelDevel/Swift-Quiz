@@ -22,7 +22,7 @@ class AboutProjectController: UIViewController {
 	}
 	/// < 13.0 iOS Navigation
 	@IBAction func dismissAbout(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
 }
@@ -33,36 +33,36 @@ extension AboutProjectController {
     @IBAction private func author(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/ev.nikitin")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func design(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/shlehanov")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func corrector(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/id2312583")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func refactorGuru(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://refactoring.guru/ru")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func swiftbookRu(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://swiftbook.ru/content/languageguide/")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func swiftMe(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://swiftme.ru/")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func telegramLibrary(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://t.me/mobileproglib")!
         UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
 }

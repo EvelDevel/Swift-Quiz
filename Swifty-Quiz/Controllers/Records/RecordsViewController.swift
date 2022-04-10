@@ -41,13 +41,13 @@ class RecordsViewController: UIViewController {
 	}
 	/// < 13.0 iOS Navigation
     @IBAction func dismissHistory(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
 	
     /// Звуки нажатия кнопки и стирания рекордов
     @IBAction func clearRecordSound(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
 	
     func playTrashSound() {
@@ -124,7 +124,7 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
             let gameHistory = mainStoryboard.instantiateViewController(withIdentifier: "GameHistoryViewController") as! GameHistoryViewController
             gameHistory.history = Game.shared.records[indexPath.row].gameHistory ?? []
             self.present(gameHistory, animated: true, completion: nil)
-            SoundPlayer.shared.playSound(sound: .menuMainButton)
+            SoundPlayer.shared.playSound(sound: .buttonTapped)
         }
     }
 }

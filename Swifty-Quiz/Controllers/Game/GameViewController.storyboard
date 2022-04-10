@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="-177" y="17"/>
         </scene>
-        <!--Help-->
+        <!--HelpViewController-->
         <scene sceneID="CUi-nh-P0O">
             <objects>
-                <viewControllerPlaceholder storyboardName="Help" id="QqG-FA-u16" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HelpViewController" id="QqG-FA-u16" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="lq2-fA-W2g"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMA-mC-Jhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

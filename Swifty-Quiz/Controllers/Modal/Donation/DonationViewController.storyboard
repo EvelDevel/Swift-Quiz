@@ -95,7 +95,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="tinkoffTapped:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="t5y-oL-UrX"/>
+                                                                    <action selector="tinkoffTapped:" destination="DCb-W3-Bo0" eventType="touchUpInside" id="Tnw-Gl-1uo"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -172,6 +172,7 @@
                         <outlet property="dismissButton" destination="ghE-Cf-xuE" id="D2w-k0-iI3"/>
                         <outlet property="donationView" destination="pqf-sx-Kb4" id="3fl-W0-xfb"/>
                         <outlet property="myAvatar" destination="ka2-2t-URQ" id="kis-E8-DYU"/>
+                        <outlet property="tinkoff" destination="1if-cs-9cp" id="eVP-bY-diX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyE-5Y-gWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

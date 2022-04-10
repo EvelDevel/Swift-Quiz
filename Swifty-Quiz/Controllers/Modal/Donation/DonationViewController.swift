@@ -53,6 +53,10 @@ extension DonationViewController {
     }
     
     @IBAction private func tinkoffTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
         let url = URL(
             string: "https://www.tinkoff.ru/collectmoney/crowd/nikitin.evgeniy547/xdyrc84044/?short_link=2PG5freJRUM&httpMethod=GET")
         if let url = url {
@@ -61,8 +65,12 @@ extension DonationViewController {
     }
     
     @IBAction func shareAppTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
         let firstActivityItem = "Поделитесь приложением Свифти-Квиз"
-        let secondActivityItem = URL(string: "https://apps.apple.com/ru/app/%D1%81%D0%B2%D0%B8%D1%84%D1%82%D0%B8-%D0%BA%D0%B2%D0%B8%D0%B7/id1525844750")!
+        let secondActivityItem = URL(string: "https://inlnk.ru/84jzoG")!
         
         let activityViewController = UIActivityViewController(
             activityItems: [
@@ -118,7 +126,7 @@ extension DonationViewController {
     
     @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(
-            sound: .menuMainButton
+            sound: .buttonTapped
         )
         
         dismissView()

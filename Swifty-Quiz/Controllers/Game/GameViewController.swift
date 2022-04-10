@@ -55,7 +55,7 @@ class GameViewController: UIViewController {
     weak var delegate: GameViewControllerDelegate?
     
     @IBAction private func helpSound(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     
     override func viewDidLoad() {
@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
 	}
 	/// < 13.0 iOS Navigation
 	@IBAction private func dismissGame(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
 }
@@ -267,12 +267,17 @@ extension GameViewController {
     
     private func showHelpAfterWrongAnswer() {
         let mainStoryboard: UIStoryboard = UIStoryboard(
-            name: "Help",
+            name: String(
+                describing:
+                    HelpViewController.self
+            ),
             bundle: nil
         )
         
         let helpView  = mainStoryboard.instantiateViewController(
-            withIdentifier: "HelpViewController"
+            withIdentifier: String(
+                describing: HelpViewController.self
+            )
         ) as! HelpViewController
         
         helpView.delegate = self
@@ -289,7 +294,7 @@ extension GameViewController {
         
         self.present(
             helpView,
-            animated: true,
+            animated: false,
             completion: nil
         )
     }

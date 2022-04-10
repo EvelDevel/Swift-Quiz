@@ -23,13 +23,13 @@ class InitialViewController: UIViewController {
 	@IBOutlet private var initialButtons: [UIButton]!
 
 	@IBAction private func goToAbout(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 	}
 	@IBAction private func tapButtonSounds(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 	}
     @IBAction private func goToDonations(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     
 	private let currentAppVersion = Bundle.main.object(

@@ -48,7 +48,7 @@ class TopicViewController: UIViewController {
 	}
 	/// < 13.0 iOS Navigation
 	@IBAction func dismissTopicView(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .menuMainButton)
+		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
 

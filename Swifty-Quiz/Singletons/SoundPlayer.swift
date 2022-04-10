@@ -6,7 +6,7 @@ import UIKit
 import AVFoundation
 
 enum Sounds {
-    case menuMainButton
+    case buttonTapped
     case topicAndSettingsButton
     case correctAnswer
     case answerButtonWrong
@@ -41,7 +41,7 @@ class SoundPlayer {
             var soundExtension: String = ""
             
             switch sound {
-            case .topicAndSettingsButton, .menuMainButton, .answerButtonWrong:
+            case .topicAndSettingsButton, .buttonTapped, .answerButtonWrong:
                 name = "click"
                 soundExtension = "mp3"
             
