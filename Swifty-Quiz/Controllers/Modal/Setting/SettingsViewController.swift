@@ -52,7 +52,6 @@ class SettingsViewController: UIViewController {
         setupControlsTintColors()
         setupTargets()
         setupInitialControlsState()
-        setupSwipeGestureRecognizer()
     }
     
     private func setupViewCornerCurve() {
@@ -310,29 +309,5 @@ extension SettingsViewController {
         }
         
         showInformationAlert(title, message)
-    }
-}
-
-
-// MARK: Swipe gesture
-extension SettingsViewController: UIGestureRecognizerDelegate {
-    
-    private func setupSwipeGestureRecognizer() {
-        let swipeRecognizer = UISwipeGestureRecognizer(
-            target: self,
-            action: #selector(handleSwipeGesture)
-        )
-        
-        swipeRecognizer.direction = .down
-        view.addGestureRecognizer(swipeRecognizer)
-    }
-
-    @objc
-    private func handleSwipeGesture(
-        gesture: UISwipeGestureRecognizer
-    ) {
-        if gesture.direction == .down {
-            dismissView()
-        }
     }
 }

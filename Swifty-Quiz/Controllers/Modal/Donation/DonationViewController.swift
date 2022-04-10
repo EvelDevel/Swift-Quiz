@@ -39,8 +39,6 @@ extension DonationViewController {
     
     private func setup() {
         setupViewCornerCurve()
-        setupAlpha()
-        setupSwipeGestureRecognizer()
         setupAvatar()
     }
     
@@ -50,21 +48,67 @@ extension DonationViewController {
         } else {}
     }
     
-    private func setupAlpha() {
-        view.alpha = 1
-    }
-    
     private func setupAvatar() {
         myAvatar.layer.cornerRadius = myAvatar.frame.size.height / 2
     }
     
-    /// Tinkoff
     @IBAction private func tinkoffTapped(_ sender: Any) {
         let url = URL(
             string: "https://www.tinkoff.ru/collectmoney/crowd/nikitin.evgeniy547/xdyrc84044/?short_link=2PG5freJRUM&httpMethod=GET")
         if let url = url {
             UIApplication.shared.open(url)
         }
+    }
+    
+    @IBAction func shareAppTapped(_ sender: Any) {
+        let firstActivityItem = "Поделитесь приложением Свифти-Квиз"
+        let secondActivityItem = URL(string: "https://apps.apple.com/ru/app/%D1%81%D0%B2%D0%B8%D1%84%D1%82%D0%B8-%D0%BA%D0%B2%D0%B8%D0%B7/id1525844750")!
+        
+        let activityViewController = UIActivityViewController(
+            activityItems: [
+                firstActivityItem,
+                secondActivityItem
+            ],
+            applicationActivities: nil
+        )
+        
+        activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+        activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+        
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(
+            x: 150,
+            y: 150,
+            width: 0,
+            height: 0
+        )
+        
+        if #available(iOS 13.0, *) {
+            activityViewController.activityItemsConfiguration = [
+                UIActivity.ActivityType.message
+            ] as? UIActivityItemsConfigurationReading
+        }
+        
+        activityViewController.excludedActivityTypes = [
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTencentWeibo,
+            UIActivity.ActivityType.postToFacebook
+        ]
+        
+        if #available(iOS 13.0, *) {
+            activityViewController.isModalInPresentation = true
+        }
+        
+        self.present(
+            activityViewController,
+            animated: true,
+            completion: nil
+        )
     }
 }
 
@@ -101,29 +145,5 @@ extension DonationViewController {
                 self.dismiss(animated: false)
             })
         )
-    }
-}
-
-
-// MARK: Swipe gesture
-extension DonationViewController: UIGestureRecognizerDelegate {
-    
-    private func setupSwipeGestureRecognizer() {
-        let swipeRecognizer = UISwipeGestureRecognizer(
-            target: self,
-            action: #selector(handleSwipeGesture)
-        )
-        
-        swipeRecognizer.direction = .down
-        view.addGestureRecognizer(swipeRecognizer)
-    }
-
-    @objc
-    private func handleSwipeGesture(
-        gesture: UISwipeGestureRecognizer
-    ) {
-        if gesture.direction == .down {
-            dismissView()
-        }
     }
 }

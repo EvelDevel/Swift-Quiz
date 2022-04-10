@@ -23,7 +23,6 @@ class HistoryHintController: UIViewController {
         setupViewCornerCurve()
         setupThinSeparator()
         setupFontSize()
-        setupSwipeGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,28 +80,4 @@ extension HistoryHintController {
             })
         )
 	}
-}
-
-
-// MARK: Swipe gesture
-extension HistoryHintController: UIGestureRecognizerDelegate {
-    
-    private func setupSwipeGestureRecognizer() {
-        let swipeRecognizer = UISwipeGestureRecognizer(
-            target: self,
-            action: #selector(handleSwipeGesture)
-        )
-        
-        swipeRecognizer.direction = .down
-        view.addGestureRecognizer(swipeRecognizer)
-    }
-
-    @objc
-    private func handleSwipeGesture(
-        gesture: UISwipeGestureRecognizer
-    ) {
-        if gesture.direction == .down {
-            dismissView()
-        }
-    }
 }

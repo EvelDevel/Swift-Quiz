@@ -45,7 +45,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A06-ZF-3X3" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
-                                        <color key="backgroundColor" name="BackButton"/>
+                                        <color key="backgroundColor" name="MainYellow"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="dWU-IF-drD"/>
                                         </constraints>
@@ -118,6 +118,9 @@
         </namedColor>
         <namedColor name="BackgroundForModals">
             <color red="0.80784313725490198" green="0.80784313725490198" blue="0.81960784313725488" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainYellow">
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
