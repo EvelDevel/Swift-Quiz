@@ -395,6 +395,17 @@
 			path = "Topic Picker";
 			sourceTree = "<group>";
 		};
+		FB4C7EBA2802D1DF00D05837 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				FB91255B26D360C800C1DFEB /* Donation */,
+				FB291D1E26D2169200A40679 /* GameHints */,
+				FB291D2B26D2268700A40679 /* HistoryHints */,
+				FB66C05624559197009FADDE /* Setting */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		FB5208DA274241BF0058F3F8 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,15 +575,12 @@
 			isa = PBXGroup;
 			children = (
 				FB291D1D26D2168100A40679 /* Initial */,
-				FB91255B26D360C800C1DFEB /* Donation */,
 				FB291D1C26D2167600A40679 /* About */,
-				FB291D1E26D2169200A40679 /* GameHints */,
 				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
 				FB0E0290246CF334005CA792 /* Records */,
 				FB6624E624E01FEB008C9CE5 /* GameHistory */,
-				FB291D2B26D2268700A40679 /* HistoryHints */,
-				FB66C05624559197009FADDE /* Setting */,
+				FB4C7EBA2802D1DF00D05837 /* Modal */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
