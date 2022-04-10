@@ -54,6 +54,7 @@ class SettingsViewController: UIViewController {
         setupControlsTintColors()
         setupTargets()
         setupInitialControlsState()
+        setupSwipeGestureRecognizer()
     }
     
     private func setupAlpha() {
@@ -82,19 +83,25 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController {
     
     @IBAction private func backInGameButton(_ sender: UIButton) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
-        dismissing()
+        SoundPlayer.shared.playSound(
+            sound: .menuMainButton
+        )
+        
+        dismissView()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?
+    ) {
         let touch = touches.first
         
         if touch?.view != self.settingsView {
-            dismissing()
+            dismissView()
         }
     }
     
-    private func dismissing() {
+    private func dismissView() {
         UIView.animate(
             withDuration: 0.3,
             animations: ({
@@ -322,5 +329,29 @@ extension SettingsViewController {
         }
         
         showInformationAlert(title, message)
+    }
+}
+
+
+// MARK: Swipe gesture
+extension SettingsViewController: UIGestureRecognizerDelegate {
+    
+    private func setupSwipeGestureRecognizer() {
+        let swipeRecognizer = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(handleSwipeGesture)
+        )
+        
+        swipeRecognizer.direction = .down
+        view.addGestureRecognizer(swipeRecognizer)
+    }
+
+    @objc
+    private func handleSwipeGesture(
+        gesture: UISwipeGestureRecognizer
+    ) {
+        if gesture.direction == .down {
+            dismissView()
+        }
     }
 }

@@ -39,18 +39,18 @@ class DonationViewController: UIViewController {
 extension DonationViewController {
     
     private func setup() {
-        setAlpha()
-        setBlur()
-        setShadows()
-        
-        myAvatar.layer.cornerRadius = myAvatar.frame.size.height / 2
+        setupAlpha()
+        setupBlur()
+        setupShadows()
+        setupSwipeGestureRecognizer()
+        setupAvatar()
     }
     
-    private func setAlpha() {
+    private func setupAlpha() {
         view.alpha = 1
     }
     
-    private func setBlur() {
+    private func setupBlur() {
         if #available(iOS 13, *) {
             let effect = UIBlurEffect(style: .regular)
             let blur = UIVisualEffectView(effect: effect)
@@ -62,9 +62,13 @@ extension DonationViewController {
         }
     }
     
-    private func setShadows() {
+    private func setupShadows() {
         let shadows = Shadow()
         shadows.addHalfButtonShadows([dismissButton])
+    }
+    
+    private func setupAvatar() {
+        myAvatar.layer.cornerRadius = myAvatar.frame.size.height / 2
     }
     
     /// Donates buttons
@@ -96,18 +100,25 @@ extension DonationViewController {
 extension DonationViewController {
     
     @IBAction private func backInGameButton(_ sender: UIButton) {
-        SoundPlayer.shared.playSound(sound: .menuMainButton)
-        dismissing()
+        SoundPlayer.shared.playSound(
+            sound: .menuMainButton
+        )
+        
+        dismissView()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?
+    ) {
          let touch = touches.first
-         if touch?.view != self.donationView {
-            dismissing()
+         
+        if touch?.view != self.donationView {
+            dismissView()
         }
     }
     
-    private func dismissing() {
+    private func dismissView() {
         UIView.animate(
             withDuration: 0.3,
             animations: ({
@@ -117,5 +128,29 @@ extension DonationViewController {
                 self.dismiss(animated: false)
             })
         )
+    }
+}
+
+
+// MARK: Swipe gesture
+extension DonationViewController: UIGestureRecognizerDelegate {
+    
+    private func setupSwipeGestureRecognizer() {
+        let swipeRecognizer = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(handleSwipeGesture)
+        )
+        
+        swipeRecognizer.direction = .down
+        view.addGestureRecognizer(swipeRecognizer)
+    }
+
+    @objc
+    private func handleSwipeGesture(
+        gesture: UISwipeGestureRecognizer
+    ) {
+        if gesture.direction == .down {
+            dismissView()
+        }
     }
 }
