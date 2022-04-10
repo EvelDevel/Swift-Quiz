@@ -50,9 +50,6 @@
             ReferencedContainer = "container:Swifty-Quiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <StoreKitConfigurationFileReference
-         identifier = "../Swifty-Quiz/Controllers/Donation/Configuration.storekit">
-      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

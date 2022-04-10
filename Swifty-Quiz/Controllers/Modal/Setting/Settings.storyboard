@@ -18,32 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OcX-HB-6Na">
-                                <rect key="frame" x="20" y="176" width="374" height="554.5"/>
+                                <rect key="frame" x="20" y="182.5" width="374" height="541"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0j-HN-wNV">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="554.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="541"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-Tl-KoW">
-                                                <rect key="frame" x="16" y="16" width="342" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Tuj-6Q-4FU"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DpC-8o-Etv">
-                                                <rect key="frame" x="16" y="53.5" width="342" height="400"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DpC-8o-Etv">
+                                                <rect key="frame" x="16" y="55" width="342" height="381"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-Sh-JsU" userLabel="questionOrder">
-                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="Последовательность вопросов">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="p0H-O8-qWp"/>
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-xR-Fa0">
-                                                        <rect key="frame" x="0.0" y="40" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="36.5" width="342" height="41"/>
                                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="VY4-1s-AmQ">
@@ -61,17 +64,17 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACg-EJ-kPL" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="80" width="342" height="40"/>
+                                                        <rect key="frame" x="0.0" y="76.5" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="Менять формулировки вопросов?">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="cGv-kX-R11"/>
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZB5-ea-qK4">
-                                                        <rect key="frame" x="0.0" y="120" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="112.5" width="342" height="41"/>
                                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="GiL-KO-FCY">
@@ -89,17 +92,17 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-h8-5gV" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="160" width="342" height="40"/>
+                                                        <rect key="frame" x="0.0" y="152.5" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="При неправильном ответе">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="uzs-6g-ugB"/>
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-rl-zQj">
-                                                        <rect key="frame" x="0.0" y="200" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="188.5" width="342" height="41"/>
                                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="8Wt-gH-jg8">
@@ -117,17 +120,17 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUX-Ue-2ny" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="240" width="342" height="40"/>
+                                                        <rect key="frame" x="0.0" y="228.5" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="Переход после подсказки">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="informationAboutSettingPressed:" destination="zxW-Z1-FgW" eventType="touchUpInside" id="snR-01-hJn"/>
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJk-yF-2Tm">
-                                                        <rect key="frame" x="0.0" y="280" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="264.5" width="342" height="41"/>
                                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Xc2-Yt-DlM">
@@ -145,14 +148,14 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-aI-mCU" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="320" width="342" height="40"/>
+                                                        <rect key="frame" x="0.0" y="304.5" width="342" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                         <state key="normal" title="Звуки в игре: ">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rWC-bA-ACu">
-                                                        <rect key="frame" x="0.0" y="360" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="341" width="342" height="41"/>
                                                         <color key="backgroundColor" red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Kcf-aO-3lx">
@@ -172,14 +175,14 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikU-zo-iV4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="486.5" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="473" width="342" height="52"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="ml4-UN-laE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Вернуться на главную">
-                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -191,8 +194,8 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRX-Ef-wO3" userLabel="Separator">
-                                                <rect key="frame" x="50" y="469.5" width="274" height="1"/>
-                                                <color key="backgroundColor" name="MainBackground"/>
+                                                <rect key="frame" x="50" y="456" width="274" height="1"/>
+                                                <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="CWd-vd-XFW"/>
                                                 </constraints>
@@ -200,19 +203,19 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="FL3-Tl-KoW" firstAttribute="top" secondItem="d0j-HN-wNV" secondAttribute="top" constant="16" id="69q-3x-ZLI"/>
+                                            <constraint firstItem="FL3-Tl-KoW" firstAttribute="top" secondItem="d0j-HN-wNV" secondAttribute="top" id="69q-3x-ZLI"/>
                                             <constraint firstAttribute="trailing" secondItem="ikU-zo-iV4" secondAttribute="trailing" constant="16" id="RFI-h4-Ndv"/>
                                             <constraint firstAttribute="bottom" secondItem="ikU-zo-iV4" secondAttribute="bottom" constant="16" id="Si9-Er-VdP"/>
                                             <constraint firstItem="DpC-8o-Etv" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="16" id="VCg-pF-qcv"/>
                                             <constraint firstAttribute="trailing" secondItem="DpC-8o-Etv" secondAttribute="trailing" constant="16" id="YKE-OY-5tH"/>
                                             <constraint firstItem="ikU-zo-iV4" firstAttribute="top" secondItem="eRX-Ef-wO3" secondAttribute="bottom" constant="16" id="fEQ-Vb-YDm"/>
-                                            <constraint firstItem="FL3-Tl-KoW" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="16" id="gHM-kd-JdR"/>
-                                            <constraint firstAttribute="trailing" secondItem="FL3-Tl-KoW" secondAttribute="trailing" constant="16" id="i2B-pd-xKR"/>
+                                            <constraint firstItem="FL3-Tl-KoW" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" id="gHM-kd-JdR"/>
+                                            <constraint firstAttribute="trailing" secondItem="FL3-Tl-KoW" secondAttribute="trailing" id="i2B-pd-xKR"/>
                                             <constraint firstItem="ikU-zo-iV4" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="16" id="jCC-Dr-9yu"/>
                                             <constraint firstItem="DpC-8o-Etv" firstAttribute="top" secondItem="FL3-Tl-KoW" secondAttribute="bottom" constant="10" id="l5K-Vw-yk6"/>
                                             <constraint firstAttribute="trailing" secondItem="eRX-Ef-wO3" secondAttribute="trailing" constant="50" id="lgq-6l-0lq"/>
                                             <constraint firstItem="eRX-Ef-wO3" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="50" id="mhC-jy-z56"/>
-                                            <constraint firstItem="eRX-Ef-wO3" firstAttribute="top" secondItem="DpC-8o-Etv" secondAttribute="bottom" constant="16" id="nu9-Cr-Wgz"/>
+                                            <constraint firstItem="eRX-Ef-wO3" firstAttribute="top" secondItem="DpC-8o-Etv" secondAttribute="bottom" constant="20" id="nu9-Cr-Wgz"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -258,16 +261,16 @@
     </designables>
     <resources>
         <namedColor name="BackButton">
-            <color red="0.89387863869999995" green="0.89789056779999998" blue="0.91022044420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89399999380111694" green="0.89800000190734863" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundForModals">
-            <color red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MainBackground">
-            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.81960784313725488" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellow">
             <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

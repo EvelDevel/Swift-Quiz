@@ -20,25 +20,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-qo-UL3">
                                 <rect key="frame" x="20" y="320.5" width="374" height="215"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-Fm-tVe">
-                                        <rect key="frame" x="20" y="70" width="334" height="52"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-Mk-qp2">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="dnS-Do-XJ5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-Mk-qp2">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="dnS-Do-XJ5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-Fm-tVe">
+                                        <rect key="frame" x="20" y="65" width="334" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMA-E0-5sO" userLabel="Separator">
-                                        <rect key="frame" x="16" y="48" width="342" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="50" y="130" width="274" height="1"/>
+                                        <color key="backgroundColor" name="BackButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="i7i-eU-Xrd"/>
                                         </constraints>
@@ -51,7 +51,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Вернуться в историю">
-                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="TextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -65,17 +65,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="vMA-E0-5sO" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="16" id="3cY-qE-gPY"/>
-                                    <constraint firstItem="A06-ZF-3X3" firstAttribute="top" secondItem="Opr-Fm-tVe" secondAttribute="bottom" constant="25" id="BQo-GL-kte"/>
+                                    <constraint firstItem="vMA-E0-5sO" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="50" id="3cY-qE-gPY"/>
                                     <constraint firstItem="5fe-Mk-qp2" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" id="NOp-5N-UEE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="215" id="UYE-br-Htm"/>
-                                    <constraint firstAttribute="trailing" secondItem="vMA-E0-5sO" secondAttribute="trailing" constant="16" id="Z0G-an-dq7"/>
+                                    <constraint firstAttribute="trailing" secondItem="vMA-E0-5sO" secondAttribute="trailing" constant="50" id="Z0G-an-dq7"/>
                                     <constraint firstAttribute="trailing" secondItem="Opr-Fm-tVe" secondAttribute="trailing" constant="20" id="Ziv-YX-GyG"/>
                                     <constraint firstAttribute="bottom" secondItem="A06-ZF-3X3" secondAttribute="bottom" constant="16" id="cAS-LX-AXM"/>
                                     <constraint firstItem="Opr-Fm-tVe" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="20" id="gPq-u4-rpI"/>
-                                    <constraint firstItem="vMA-E0-5sO" firstAttribute="top" secondItem="Omw-qo-UL3" secondAttribute="top" constant="48" id="gsj-qV-S2A"/>
+                                    <constraint firstItem="Opr-Fm-tVe" firstAttribute="top" secondItem="5fe-Mk-qp2" secondAttribute="bottom" constant="20" id="hFB-Rj-k7V"/>
                                     <constraint firstItem="A06-ZF-3X3" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="16" id="iDz-E1-K19"/>
-                                    <constraint firstItem="Opr-Fm-tVe" firstAttribute="top" secondItem="Omw-qo-UL3" secondAttribute="top" constant="70" id="nxR-9c-zxb"/>
+                                    <constraint firstItem="vMA-E0-5sO" firstAttribute="top" secondItem="Opr-Fm-tVe" secondAttribute="bottom" constant="20" id="php-CR-Tse"/>
+                                    <constraint firstItem="A06-ZF-3X3" firstAttribute="top" secondItem="vMA-E0-5sO" secondAttribute="bottom" constant="16" id="uAF-EY-Azt"/>
                                     <constraint firstAttribute="trailing" secondItem="A06-ZF-3X3" secondAttribute="trailing" constant="16" id="uOA-St-Xfz"/>
                                     <constraint firstItem="5fe-Mk-qp2" firstAttribute="top" secondItem="Omw-qo-UL3" secondAttribute="top" id="vgK-CP-OyP"/>
                                     <constraint firstAttribute="trailing" secondItem="5fe-Mk-qp2" secondAttribute="trailing" id="wrL-p8-SkY"/>
@@ -114,10 +114,13 @@
     </designables>
     <resources>
         <namedColor name="BackButton">
-            <color red="0.89387863869999995" green="0.89789056779999998" blue="0.91022044420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89399999380111694" green="0.89800000190734863" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundForModals">
-            <color red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.81960784313725488" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
