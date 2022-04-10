@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import StoreKit
 
 class DonationViewController: UIViewController {
 
@@ -26,7 +25,7 @@ class DonationViewController: UIViewController {
         view.alpha = 0
         
         UIView.animate(
-            withDuration: 0.3,
+            withDuration: 0.2,
             animations: ({
                 self.view.alpha = 1
             })
@@ -39,53 +38,27 @@ class DonationViewController: UIViewController {
 extension DonationViewController {
     
     private func setup() {
+        setupViewCornerCurve()
         setupAlpha()
-        setupBlur()
-        setupShadows()
         setupSwipeGestureRecognizer()
         setupAvatar()
+    }
+    
+    private func setupViewCornerCurve() {
+        if #available(iOS 13.0, *) {
+            donationView.layer.cornerCurve = .continuous
+        } else {}
     }
     
     private func setupAlpha() {
         view.alpha = 1
     }
     
-    private func setupBlur() {
-        if #available(iOS 13, *) {
-            let effect = UIBlurEffect(style: .regular)
-            let blur = UIVisualEffectView(effect: effect)
-            blur.frame = self.view.bounds
-            blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            view.insertSubview(blur, at: 0)
-        } else {
-            view.backgroundColor = #colorLiteral(red: 0.8084501554, green: 0.8112918123, blue: 0.819816783, alpha: 0.8)
-        }
-    }
-    
-    private func setupShadows() {
-        let shadows = Shadow()
-        shadows.addHalfButtonShadows([dismissButton])
-    }
-    
     private func setupAvatar() {
         myAvatar.layer.cornerRadius = myAvatar.frame.size.height / 2
     }
     
-    /// Donates buttons
-    @IBAction private func donate99(_ sender: Any) {
-        IAPManager.shared.purchase(product: .swiftyQuizDonate99)
-    }
-    @IBAction private func donate179(_ sender: Any) {
-        IAPManager.shared.purchase(product: .swiftyQuizDonate179)
-    }
-    @IBAction private func donate279(_ sender: Any) {
-        IAPManager.shared.purchase(product: .swiftyQuizDonate279)
-    }
-    @IBAction private func donate379(_ sender: Any) {
-        IAPManager.shared.purchase(product: .swiftyQuizDonate379)
-    }
-    
-    /// Donate Tinkoff
+    /// Tinkoff
     @IBAction private func tinkoffTapped(_ sender: Any) {
         let url = URL(
             string: "https://www.tinkoff.ru/collectmoney/crowd/nikitin.evgeniy547/xdyrc84044/?short_link=2PG5freJRUM&httpMethod=GET")

@@ -266,15 +266,32 @@ extension GameViewController {
     }
     
     private func showHelpAfterWrongAnswer() {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Help", bundle: nil)
-        let helpView  = mainStoryboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(
+            name: "Help",
+            bundle: nil
+        )
+        
+        let helpView  = mainStoryboard.instantiateViewController(
+            withIdentifier: "HelpViewController"
+        ) as! HelpViewController
+        
         helpView.delegate = self
         helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
-        if weDidTakeHelp == false { helpCounter += 1 }
+        
+        if weDidTakeHelp == false {
+            helpCounter += 1
+        }
+        
         helpCounterLabel.text = "\(helpCounter)"
+        
         weDidTakeHelp = true
         weDidGetAutoHelp = true
-        self.present(helpView, animated: true, completion: nil)
+        
+        self.present(
+            helpView,
+            animated: true,
+            completion: nil
+        )
     }
 }
 

@@ -19,7 +19,6 @@
 		2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C332269200EE00871C14 /* ConcurrencySet.swift */; };
 		2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */; };
 		83E44495A8C3E985C0A3C3CD /* Pods_Swifty_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33112C16028C293499B8B70 /* Pods_Swifty_Quiz.framework */; };
-		FB08DD8926D48AD400112058 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08DD8826D48AD400112058 /* StoreKit.framework */; };
 		FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* RandomSetManager.swift */; };
 		FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C05B026E4D46D006744CB /* PulseAnimation.swift */; };
 		FB0C05B326E88936006744CB /* FramesAndBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C05B226E88936006744CB /* FramesAndBounds.swift */; };
@@ -99,7 +98,6 @@
 		FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8CDD5527E7530100A79744 /* InversionOfControl.swift */; };
 		FB91255D26D360E300C1DFEB /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91255C26D360E200C1DFEB /* Donation.storyboard */; };
 		FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91255E26D360ED00C1DFEB /* DonationViewController.swift */; };
-		FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91256226D3E63E00C1DFEB /* IAPManager.swift */; };
 		FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */; };
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
@@ -138,7 +136,6 @@
 		2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypeSet.swift; sourceTree = "<group>"; };
 		8991AD9095DB730613ACEAB6 /* Pods-Swifty-Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty-Quiz.debug.xcconfig"; path = "Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		C33112C16028C293499B8B70 /* Pods_Swifty_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swifty_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB08DD8826D48AD400112058 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FB0B96A125262192006C986D /* RandomSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSetManager.swift; sourceTree = "<group>"; };
 		FB0C05B026E4D46D006744CB /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		FB0C05B226E88936006744CB /* FramesAndBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesAndBounds.swift; sourceTree = "<group>"; };
@@ -220,7 +217,6 @@
 		FB8CDD5527E7530100A79744 /* InversionOfControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InversionOfControl.swift; sourceTree = "<group>"; };
 		FB91255C26D360E200C1DFEB /* Donation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
-		FB91256226D3E63E00C1DFEB /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
@@ -249,7 +245,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB08DD8926D48AD400112058 /* StoreKit.framework in Frameworks */,
 				83E44495A8C3E985C0A3C3CD /* Pods_Swifty_Quiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,22 +274,20 @@
 		FB08DD8726D48AD400112058 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB08DD8826D48AD400112058 /* StoreKit.framework */,
 				C33112C16028C293499B8B70 /* Pods_Swifty_Quiz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FB0E0290246CF334005CA792 /* GameHistory */ = {
+		FB0E0290246CF334005CA792 /* Records */ = {
 			isa = PBXGroup;
 			children = (
 				FB291D2726D224EA00A40679 /* Records.storyboard */,
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
 				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
 				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
-				FB6624E624E01FEB008C9CE5 /* GameHistory */,
 			);
-			path = GameHistory;
+			path = Records;
 			sourceTree = "<group>";
 		};
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
@@ -338,22 +331,22 @@
 			path = Initial;
 			sourceTree = "<group>";
 		};
-		FB291D1E26D2169200A40679 /* Help */ = {
+		FB291D1E26D2169200A40679 /* GameHints */ = {
 			isa = PBXGroup;
 			children = (
 				FB291D2126D2211400A40679 /* Help.storyboard */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
 			);
-			path = Help;
+			path = GameHints;
 			sourceTree = "<group>";
 		};
-		FB291D2B26D2268700A40679 /* Theory */ = {
+		FB291D2B26D2268700A40679 /* HistoryHints */ = {
 			isa = PBXGroup;
 			children = (
 				FB291D2C26D226C500A40679 /* HistoryHint.storyboard */,
 				FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */,
 			);
-			path = Theory;
+			path = HistoryHints;
 			sourceTree = "<group>";
 		};
 		FB2EAC87243EEE0F0098FAC3 = {
@@ -421,7 +414,6 @@
 				FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */,
 				FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */,
 				FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */,
-				FB291D2B26D2268700A40679 /* Theory */,
 			);
 			path = GameHistory;
 			sourceTree = "<group>";
@@ -477,7 +469,6 @@
 			children = (
 				FB91255C26D360E200C1DFEB /* Donation.storyboard */,
 				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
-				FB91256226D3E63E00C1DFEB /* IAPManager.swift */,
 			);
 			path = Donation;
 			sourceTree = "<group>";
@@ -575,10 +566,12 @@
 				FB291D1D26D2168100A40679 /* Initial */,
 				FB91255B26D360C800C1DFEB /* Donation */,
 				FB291D1C26D2167600A40679 /* About */,
-				FB291D1E26D2169200A40679 /* Help */,
+				FB291D1E26D2169200A40679 /* GameHints */,
 				FBC1D4822474EDCD0055FF62 /* Game Controller */,
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
-				FB0E0290246CF334005CA792 /* GameHistory */,
+				FB0E0290246CF334005CA792 /* Records */,
+				FB6624E624E01FEB008C9CE5 /* GameHistory */,
+				FB291D2B26D2268700A40679 /* HistoryHints */,
 				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;
@@ -797,7 +790,6 @@
 				FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */,
 				FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */,
 				2CD0C32D2692007C00871C14 /* DictionariesSet.swift in Sources */,
-				FB91256326D3E63E00C1DFEB /* IAPManager.swift in Sources */,
 				FB8606AA2441D4B300A692AD /* InitialViewController.swift in Sources */,
 				FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */,
 				FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */,

@@ -40,7 +40,7 @@ class SettingsViewController: UIViewController {
         self.view.alpha = 0
         
         UIView.animate(
-            withDuration: 0.3,
+            withDuration: 0.2,
             animations: ({
                 self.view.alpha = 1
             })
@@ -48,34 +48,17 @@ class SettingsViewController: UIViewController {
     }
     
     private func setup() {
-        setupAlpha()
-        setupBlur()
-        setupShadows()
+        setupViewCornerCurve()
         setupControlsTintColors()
         setupTargets()
         setupInitialControlsState()
         setupSwipeGestureRecognizer()
     }
     
-    private func setupAlpha() {
-        view.alpha = 1
-    }
-    
-    private func setupBlur() {
-        if #available(iOS 13, *) {
-            let effect = UIBlurEffect(style: .regular)
-            let blur = UIVisualEffectView(effect: effect)
-            blur.frame = self.view.bounds
-            blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            view.insertSubview(blur, at: 0)
-        } else {
-            view.backgroundColor = #colorLiteral(red: 0.8084501554, green: 0.8112918123, blue: 0.819816783, alpha: 0.8)
-        }
-    }
-    
-    private func setupShadows() {
-        let shadows = Shadow()
-        shadows.addHalfButtonShadows([dismissButton])
+    private func setupViewCornerCurve() {
+        if #available(iOS 13.0, *) {
+            settingsView.layer.cornerCurve = .continuous
+        } else {}
     }
 }
 
@@ -126,8 +109,6 @@ extension SettingsViewController {
         let selectedColor = [NSAttributedString.Key.foregroundColor: active]
         
         for control in allControls {
-            control.backgroundColor = UIColor.white
-            
             control.setTitleTextAttributes(
                 normalColor,
                 for: .normal

@@ -23,6 +23,18 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.alpha = 0
+        
+        UIView.animate(
+            withDuration: 0.2,
+            animations: ({
+                self.view.alpha = 1
+            })
+        )
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -43,15 +55,20 @@ class HelpViewController: UIViewController {
 extension HelpViewController {
     
     private func setup() {
-        setHelpText()
-        setShadows()
-        setBlur()
-        setFontSize()
-        setThinSeparator()
-        setAlpha()
+        setupViewCornerCurve()
+        setupSwipeGestureRecognizer()
+        setupHelpText()
+        setupFontSize()
+        setupThinSeparator()
     }
     
-    private func setHelpText() {
+    private func setupViewCornerCurve() {
+        if #available(iOS 13.0, *) {
+            helpView.layer.cornerCurve = .continuous
+        } else {}
+    }
+    
+    private func setupHelpText() {
         for question in SelectedTopic.shared.topic.questionSet {
             if question.questionId == questionID {
                 helpTextLabel.text = question.helpText
@@ -59,28 +76,11 @@ extension HelpViewController {
         }
     }
     
-    private func setAlpha() {
-        view.alpha = 1
-    }
-    
-    private func setBlur() {
-        let effect = UIBlurEffect(style: .regular)
-        let blur = UIVisualEffectView(effect: effect)
-        blur.frame = self.view.bounds
-        blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.insertSubview(blur, at: 0)
-    }
-    
-    private func setShadows() {
-        let shadows = Shadow()
-        shadows.addHalfButtonShadows([dismissButton])
-    }
-    
-    private func setThinSeparator() {
+    private func setupThinSeparator() {
         separatorHeight.constant = 1.0 / UIScreen.main.scale
     }
     
-    private func setFontSize() {
+    private func setupFontSize() {
         let width = UIScreen.main.bounds.size.width
         
         if width <= 320 {
@@ -97,21 +97,50 @@ extension HelpViewController {
 
     @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .menuMainButton)
-        dismissing()
+        dismissView()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          let touch = touches.first
-         if touch?.view != self.helpView {
-            dismissing()
+         
+        if touch?.view != self.helpView {
+             dismissView()
         }
     }
     
-    private func dismissing() {
-        dismiss(animated: true)
+    private func dismissView() {
+        UIView.animate(
+            withDuration: 0.3,
+            animations: ({
+                self.view.alpha = 0
+            }),
+            completion: ({ _ in
+                self.dismiss(animated: false)
+            })
+        )
+    }
+}
+
+
+// MARK: Swipe gesture
+extension HelpViewController: UIGestureRecognizerDelegate {
+    
+    private func setupSwipeGestureRecognizer() {
+        let swipeRecognizer = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(handleSwipeGesture)
+        )
         
-        UIView.animate(withDuration: 0.22) {
-            self.view.alpha = 0
+        swipeRecognizer.direction = .down
+        view.addGestureRecognizer(swipeRecognizer)
+    }
+
+    @objc
+    private func handleSwipeGesture(
+        gesture: UISwipeGestureRecognizer
+    ) {
+        if gesture.direction == .down {
+            dismissView()
         }
     }
 }

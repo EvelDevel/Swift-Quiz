@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="554.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-Tl-KoW">
-                                                <rect key="frame" x="16" y="16" width="342" height="21.5"/>
+                                                <rect key="frame" x="16" y="16" width="342" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                                             <segment title="Случайная"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="1bd-SB-ULj"/>
                                                         </connections>
@@ -83,7 +83,7 @@
                                                             <segment title="Да"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="Upp-o2-hvy"/>
                                                         </connections>
@@ -111,7 +111,7 @@
                                                             <segment title="Показать подсказку"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="TDW-QS-wBj"/>
                                                         </connections>
@@ -139,7 +139,7 @@
                                                             <segment title="Переходить "/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="uof-dj-bcd"/>
                                                         </connections>
@@ -164,7 +164,7 @@
                                                             <segment title="Выключены"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="yCS-UR-Ndj"/>
                                                         </connections>
@@ -173,11 +173,11 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikU-zo-iV4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="486.5" width="342" height="52"/>
-                                                <color key="backgroundColor" name="MainYellow"/>
+                                                <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="ml4-UN-laE"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Вернуться на главную">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -209,14 +209,14 @@
                                             <constraint firstItem="FL3-Tl-KoW" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="16" id="gHM-kd-JdR"/>
                                             <constraint firstAttribute="trailing" secondItem="FL3-Tl-KoW" secondAttribute="trailing" constant="16" id="i2B-pd-xKR"/>
                                             <constraint firstItem="ikU-zo-iV4" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="16" id="jCC-Dr-9yu"/>
-                                            <constraint firstItem="DpC-8o-Etv" firstAttribute="top" secondItem="FL3-Tl-KoW" secondAttribute="bottom" constant="16" id="l5K-Vw-yk6"/>
+                                            <constraint firstItem="DpC-8o-Etv" firstAttribute="top" secondItem="FL3-Tl-KoW" secondAttribute="bottom" constant="10" id="l5K-Vw-yk6"/>
                                             <constraint firstAttribute="trailing" secondItem="eRX-Ef-wO3" secondAttribute="trailing" constant="50" id="lgq-6l-0lq"/>
                                             <constraint firstItem="eRX-Ef-wO3" firstAttribute="leading" secondItem="d0j-HN-wNV" secondAttribute="leading" constant="50" id="mhC-jy-z56"/>
                                             <constraint firstItem="eRX-Ef-wO3" firstAttribute="top" secondItem="DpC-8o-Etv" secondAttribute="bottom" constant="16" id="nu9-Cr-Wgz"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="18"/>
+                                                <integer key="value" value="24"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -224,7 +224,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUG-4F-ejc"/>
-                        <color key="backgroundColor" red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="BackgroundForModals"/>
                         <constraints>
                             <constraint firstItem="OcX-HB-6Na" firstAttribute="leading" secondItem="KUG-4F-ejc" secondAttribute="leading" constant="20" id="Juj-W6-GJl"/>
                             <constraint firstItem="OcX-HB-6Na" firstAttribute="centerY" secondItem="KUG-4F-ejc" secondAttribute="centerY" id="URA-fO-uOB"/>
@@ -253,15 +253,21 @@
     </scenes>
     <designables>
         <designable name="ikU-zo-iV4">
-            <size key="intrinsicContentSize" width="159" height="30"/>
+            <size key="intrinsicContentSize" width="169" height="32"/>
         </designable>
     </designables>
     <resources>
+        <namedColor name="BackButton">
+            <color red="0.89387863869999995" green="0.89789056779999998" blue="0.91022044420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundForModals">
+            <color red="0.80845015539999998" green="0.81129181230000003" blue="0.81981678300000005" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellow">
-            <color red="0.97778004409999997" green="0.86067664619999995" blue="0.30962711570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

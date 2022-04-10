@@ -72,10 +72,22 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
 // MARK: Работа с делегатом
 extension GameHistoryViewController: GameHistoryCellDelegate {
 	func showHint(index: Int) {
-		let mainStoryboard: UIStoryboard = UIStoryboard(name: "HistoryHint", bundle: nil)
-		let historyHintView  = mainStoryboard.instantiateViewController(withIdentifier: "HistoryHintController") as! HistoryHintController
+		let mainStoryboard: UIStoryboard = UIStoryboard(
+            name: "HistoryHint",
+            bundle: nil
+        )
+        
+		let historyHintView  = mainStoryboard.instantiateViewController(
+            withIdentifier: "HistoryHintController"
+        ) as! HistoryHintController
+        
 		historyHintView.helpText = history[index].helpText
-		present(historyHintView, animated: true, completion: nil)
+        
+		present(
+            historyHintView,
+            animated: false,
+            completion: nil
+        )
 	}
 }
 

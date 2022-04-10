@@ -167,7 +167,7 @@
                                         <state key="highlighted" image="InfoFill"/>
                                         <connections>
                                             <action selector="helpSound:" destination="xs9-d7-5PS" eventType="touchUpInside" id="AHf-vd-2ls"/>
-                                            <segue destination="QqG-FA-u16" kind="show" identifier="toHelpViewController" id="uKI-X4-dRP"/>
+                                            <segue destination="QqG-FA-u16" kind="presentation" identifier="toHelpViewController" animates="NO" modalPresentationStyle="overFullScreen" id="uKI-X4-dRP"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-pA-zXh" userLabel="Help Counter">
@@ -334,7 +334,7 @@
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellow">
-            <color red="0.99599999189376831" green="0.84899997711181641" blue="0.22599999606609344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

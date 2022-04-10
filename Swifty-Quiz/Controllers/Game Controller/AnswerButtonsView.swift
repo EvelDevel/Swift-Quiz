@@ -10,7 +10,11 @@ class AnswerButtonsView: UIView {
     private var finalButtonsSetToSend: [String] = []
     
     /// Восстановление видимости всех кнопок
-    func refreshButtonsVisibility(_ index: Int, _ count: Int, _ buttons: [UIButton]) {
+    func refreshButtonsVisibility(
+        _ index: Int,
+        _ count: Int,
+        _ buttons: [UIButton]
+    ) {
         if index < count {
             for button in buttons {
                 animationChanging(true, button)
@@ -21,8 +25,16 @@ class AnswerButtonsView: UIView {
     /// Установка дефолтного цвета
     func setDefaultButtonsColor(_ buttons: [UIButton]) {
         for button in buttons {
-            button.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 1), for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.9964529872, green: 0.8487327695, blue: 0.225723803, alpha: 1)
+            button.setTitleColor(
+                #colorLiteral(
+                    red: 0.2377000451,
+                    green: 0.2814793885,
+                    blue: 0.335570693,
+                    alpha: 1
+                ),
+                for: .normal
+            )
+            button.backgroundColor = UIColor(named: "MainYellow")
         }
     }
     
@@ -30,13 +42,14 @@ class AnswerButtonsView: UIView {
     /// Фиксируем правильный ответ
     /// Шафлим положение всех ответов
     /// Устанавливаем на новые места
-    func makeCorrectButtonsSet(_ index: Int,
-                               _ array: [Question],
-                               _ optionA: UIButton,
-                               _ optionB: UIButton,
-                               _ optionC: UIButton,
-                               _ optionD: UIButton) {
-        
+    func makeCorrectButtonsSet(
+        _ index: Int,
+        _ array: [Question],
+        _ optionA: UIButton,
+        _ optionB: UIButton,
+        _ optionC: UIButton,
+        _ optionD: UIButton
+    ) {
         var tempArrayForShuffeling: [String] = []
         var arrayWithShuffledAnswers: [String] = []
         var finalAnswersSet: [String] = []
