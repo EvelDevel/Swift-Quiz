@@ -173,7 +173,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikU-zo-iV4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="486.5" width="342" height="52"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="ml4-UN-laE"/>
                                                 </constraints>
@@ -259,6 +259,9 @@
     <resources>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainYellow">
+            <color red="0.97778004409999997" green="0.86067664619999995" blue="0.30962711570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

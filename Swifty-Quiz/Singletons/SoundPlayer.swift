@@ -22,16 +22,15 @@ class SoundPlayer {
     
     static let shared = SoundPlayer()
     var player = AVAudioPlayer()
-    
     private init() { }
 
     func playSound(sound: Sounds) {
         
-        /// Фикс для симуляторов ниже 13.0 - сильные лаги, если оставить AVAudioPlayer
+        /// Фикс для симуляторов ниже 13.0
+        /// Сильные лаги, если оставить AVAudioPlayer
         #if targetEnvironment(simulator)
-        if #available(iOS 14, *) {
-            
-        } else {
+        if #available(iOS 14, *) {}
+        else {
             return
         }
         #endif
@@ -42,18 +41,13 @@ class SoundPlayer {
             var soundExtension: String = ""
             
             switch sound {
-            case .menuMainButton:
-                name = "button1"
-                soundExtension = "wav"
-            case .topicAndSettingsButton:
-                name = "button2"
-                soundExtension = "wav"
+            case .topicAndSettingsButton, .menuMainButton, .answerButtonWrong:
+                name = "click"
+                soundExtension = "mp3"
+            
             case .correctAnswer:
                 name = "rightAnswer"
                 soundExtension = "mp3"
-            case .answerButtonWrong:
-                name = "button2"
-                soundExtension = "wav"
             case .clearRecordsSound:
                 name = "trash"
                 soundExtension = "mp3"
@@ -74,7 +68,10 @@ class SoundPlayer {
                 soundExtension = "mp3"
             }
             
-            guard let url = Bundle.main.url(forResource: name, withExtension: soundExtension) else {
+            guard let url = Bundle.main.url(
+                forResource: name,
+                withExtension: soundExtension
+            ) else {
                 return
             }
             

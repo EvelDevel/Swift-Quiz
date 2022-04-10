@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,7 +45,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
-                                        <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="MainYellow"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
                                         </constraints>
@@ -111,4 +112,9 @@
             <size key="intrinsicContentSize" width="123" height="30"/>
         </designable>
     </designables>
+    <resources>
+        <namedColor name="MainYellow">
+            <color red="0.97778004409999997" green="0.86067664619999995" blue="0.30962711570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

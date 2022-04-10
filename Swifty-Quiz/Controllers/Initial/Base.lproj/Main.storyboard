@@ -237,7 +237,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="История игр">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,7 +254,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="240" y="0.0" width="48" height="48"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="48" id="MFP-cx-ZJB"/>
                                                 </constraints>
@@ -284,7 +284,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="u18-MC-pOa"/>
                                                 </constraints>
@@ -304,7 +304,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-NM-9Qp" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="66" width="288" height="56"/>
-                                                <color key="backgroundColor" red="0.99645298719999997" green="0.84873276949999998" blue="0.225723803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="zg8-CA-eai"/>
                                                 </constraints>
@@ -447,6 +447,9 @@
         <image name="n-gear-lighter" width="89" height="96"/>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainYellow">
+            <color red="0.97778004409999997" green="0.86067664619999995" blue="0.30962711570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
