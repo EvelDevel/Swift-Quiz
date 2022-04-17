@@ -11,12 +11,15 @@ protocol RecordsViewControllerDelegate: AnyObject {
 
 class RecordsViewController: UIViewController {
     
-	@IBOutlet weak var headerHeight: NSLayoutConstraint!
-	@IBOutlet weak var titleTopMargin: NSLayoutConstraint!
-	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var cleanRecords: UIButton!
-    @IBAction func cleanRecords(_ sender: UIButton) { showAlert() }
+	@IBOutlet private weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
+	@IBOutlet private weak var backButton: UIButton!
+	@IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var cleanRecords: UIButton!
+    
+    @IBAction private func cleanRecords(_ sender: UIButton) {
+        showAlert()
+    }
     
     weak var delegate: RecordsViewControllerDelegate?
     
@@ -25,7 +28,6 @@ class RecordsViewController: UIViewController {
         cellRegistration()
     }
 	
-	/// Call delegates
 	override func viewDidDisappear(_ animated: Bool) {
         delegate?.updateInitialView()
 		delegate?.refreshLastGameInfo()
@@ -45,7 +47,6 @@ class RecordsViewController: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	
-    /// Звуки нажатия кнопки и стирания рекордов
     @IBAction func clearRecordSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }

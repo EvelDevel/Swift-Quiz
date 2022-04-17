@@ -12,7 +12,7 @@
         <!--Donation View Controller-->
         <scene sceneID="dgj-p8-2Ua">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="DCb-W3-Bo0" customClass="DonationViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DonationViewController" modalPresentationStyle="overCurrentContext" id="DCb-W3-Bo0" customClass="DonationViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WVf-W5-8bQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
             <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

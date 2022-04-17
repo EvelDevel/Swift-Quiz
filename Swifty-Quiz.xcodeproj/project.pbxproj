@@ -284,8 +284,7 @@
 			children = (
 				FB291D2726D224EA00A40679 /* Records.storyboard */,
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
-				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
-				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
+				FBC96F2C280BFF220094FDD2 /* Cells */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -423,8 +422,7 @@
 			children = (
 				FB291D2926D2256A00A40679 /* GameHistory.storyboard */,
 				FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */,
-				FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */,
-				FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */,
+				FBC96F2B280BFF010094FDD2 /* Cells */,
 			);
 			path = GameHistory;
 			sourceTree = "<group>";
@@ -560,6 +558,24 @@
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
 			);
 			path = Caretakers;
+			sourceTree = "<group>";
+		};
+		FBC96F2B280BFF010094FDD2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */,
+				FB6624E824E0202C008C9CE5 /* GameHistoryCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FBC96F2C280BFF220094FDD2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB1D0BAD244D918900E9C56D /* RecordCell.swift */,
+				FB1D0BAE244D918900E9C56D /* RecordCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FBDECD7C24839924004695FB /* Assets */ = {

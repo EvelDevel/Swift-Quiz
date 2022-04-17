@@ -15,6 +15,8 @@ class DonationViewController: UIViewController {
     @IBOutlet private weak var myAvatar: UIImageView!
     @IBOutlet private weak var tinkoff: RoundCornerButton!
     
+    var viewWasDismissed: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -153,5 +155,6 @@ extension DonationViewController {
                 self.dismiss(animated: false)
             })
         )
+        viewWasDismissed?()
     }
 }

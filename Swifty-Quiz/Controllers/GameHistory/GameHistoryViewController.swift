@@ -40,15 +40,23 @@ class GameHistoryViewController: UIViewController {
 extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func cellRegistration() {
-        tableView.register(UINib(nibName: "GameHistoryCell", bundle: nil), forCellReuseIdentifier: "GameHistoryCell")
+        tableView.register(
+            UINib(
+                nibName: "GameHistoryCell",
+                bundle: nil),
+            forCellReuseIdentifier: "GameHistoryCell"
+        )
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameHistoryCell", for: indexPath) as? GameHistoryCell else {
             return UITableViewCell()
         }
+        
 		cell.delegate = self
 		cell.history = history
 		cell.tableView = tableView
