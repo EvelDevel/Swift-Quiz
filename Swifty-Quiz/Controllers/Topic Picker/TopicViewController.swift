@@ -30,8 +30,12 @@ class TopicViewController: UIViewController {
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		delegate?.selectedCategory()
-		let currentAppVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-		Game.shared.saveAppVersion(version: currentAppVersion)
+        
+        let currentAppVersion = Bundle.main.object(
+            forInfoDictionaryKey: "CFBundleShortVersionString"
+        ) as? String ?? ""
+        
+        Game.shared.saveAppVersion(version: currentAppVersion)
 	}
 
 	override func viewDidDisappear(_ animated: Bool) {
@@ -90,13 +94,39 @@ class TopicViewController: UIViewController {
 extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 
 	func cellRegistration() {
-		tableView.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: "CategoriesCell")
+		tableView.register(
+            UINib(
+                nibName: String(
+                    describing: CategoriesCell.self
+                ),
+                bundle: nil
+            ),
+            forCellReuseIdentifier: String(
+                describing: CategoriesCell.self
+            )
+        )
 	}
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+	func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
 		return 1
 	}
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath) as? CategoriesCell else { return UITableViewCell() }
+    
+	func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(
+                describing: CategoriesCell.self
+            ),
+            for: indexPath
+        ) as? CategoriesCell else {
+                return UITableViewCell()
+            }
+        
 		cell.delegate = self
 		return cell
 	}

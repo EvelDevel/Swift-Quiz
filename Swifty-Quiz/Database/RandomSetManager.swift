@@ -28,6 +28,7 @@ class RandomSetManager {
             all.append(contentsOf: RandomSetManager.setAndGetOtherQuestions())
             all.append(contentsOf: RandomSetManager.setAndGetUIKitQuestions())
 		}
+        
 		return all
 	}
 	
@@ -69,6 +70,7 @@ class RandomSetManager {
 			guide.append(contentsOf: MemorySafetySet.getQuestions())
 			guide.append(contentsOf: AdvancedOperatorsSet.getQuestions())
 		}
+        
 		return guide
 	}
 	
@@ -80,6 +82,7 @@ class RandomSetManager {
 			patterns.append(contentsOf: BehavioralPatternsSet.getQuestions())
 			patterns.append(contentsOf: AntipatternsSet.getQuestions())
 		}
+        
 		return patterns
 	}
     
@@ -92,6 +95,7 @@ class RandomSetManager {
             others.append(contentsOf: InversionOfControl.getQuestions())
             others.append(contentsOf: ServiceLocator.getQuestions())
         }
+        
         return others
     }
     
@@ -103,6 +107,7 @@ class RandomSetManager {
             uikit.append(contentsOf: UIViewSet.getQuestions())
             uikit.append(contentsOf: AutoLayout.getQuestions())
         }
+        
         return uikit
     }
     
@@ -113,6 +118,7 @@ class RandomSetManager {
 		for index in 0..<limit {
 			final.append(shuffled[index])
 		}
+        
 		return final
 	}
 }

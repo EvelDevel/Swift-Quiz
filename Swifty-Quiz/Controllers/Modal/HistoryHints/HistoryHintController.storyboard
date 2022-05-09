@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-qo-UL3">
-                                <rect key="frame" x="20" y="320.5" width="374" height="215"/>
+                                <rect key="frame" x="20" y="345.5" width="374" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-Mk-qp2">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -90,7 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="hLU-3P-xIJ"/>
                         <color key="backgroundColor" name="BackgroundForModals"/>
                         <constraints>
-                            <constraint firstItem="Omw-qo-UL3" firstAttribute="centerY" secondItem="hLU-3P-xIJ" secondAttribute="centerY" constant="-25" id="Fy4-qQ-epL"/>
+                            <constraint firstItem="Omw-qo-UL3" firstAttribute="centerY" secondItem="hLU-3P-xIJ" secondAttribute="centerY" id="Fy4-qQ-epL"/>
                             <constraint firstItem="Omw-qo-UL3" firstAttribute="leading" secondItem="hLU-3P-xIJ" secondAttribute="leading" constant="20" id="arz-cH-6II"/>
                             <constraint firstItem="hLU-3P-xIJ" firstAttribute="trailing" secondItem="Omw-qo-UL3" secondAttribute="trailing" constant="20" id="n0F-8g-9vK"/>
                         </constraints>
@@ -123,7 +123,7 @@
             <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
