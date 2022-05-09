@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-EG-eZt">
-                                <rect key="frame" x="20" y="320.5" width="374" height="215"/>
+                                <rect key="frame" x="20" y="345.5" width="374" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-yC-Tz6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvt-oR-Eki">
-                                        <rect key="frame" x="20" y="65" width="334" height="45"/>
+                                        <rect key="frame" x="20" y="50" width="334" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" name="TextColor"/>
@@ -72,7 +72,7 @@
                                     <constraint firstItem="ODb-va-1rm" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="16" id="AQi-yj-hNm"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" id="Gpc-dS-rhL"/>
                                     <constraint firstItem="ODb-va-1rm" firstAttribute="top" secondItem="v5X-vJ-qhb" secondAttribute="bottom" constant="16" id="Hah-Z4-Cwi"/>
-                                    <constraint firstItem="kvt-oR-Eki" firstAttribute="top" secondItem="7Y5-yC-Tz6" secondAttribute="bottom" constant="20" id="JMe-ur-STZ"/>
+                                    <constraint firstItem="kvt-oR-Eki" firstAttribute="top" secondItem="7Y5-yC-Tz6" secondAttribute="bottom" constant="5" id="JMe-ur-STZ"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" id="RKG-Sf-t8T"/>
                                     <constraint firstItem="v5X-vJ-qhb" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="50" id="dRz-YI-q1Q"/>
                                     <constraint firstAttribute="trailing" secondItem="ODb-va-1rm" secondAttribute="trailing" constant="16" id="jOK-eK-YCI"/>
@@ -92,7 +92,7 @@
                         <constraints>
                             <constraint firstItem="fsr-EG-eZt" firstAttribute="leading" secondItem="0k4-Sb-gVi" secondAttribute="leading" constant="20" id="6Y6-kw-514"/>
                             <constraint firstItem="0k4-Sb-gVi" firstAttribute="trailing" secondItem="fsr-EG-eZt" secondAttribute="trailing" constant="20" id="R0l-mq-k9r"/>
-                            <constraint firstItem="fsr-EG-eZt" firstAttribute="centerY" secondItem="0k4-Sb-gVi" secondAttribute="centerY" constant="-25" id="WkM-UH-gMB"/>
+                            <constraint firstItem="fsr-EG-eZt" firstAttribute="centerY" secondItem="0k4-Sb-gVi" secondAttribute="centerY" id="WkM-UH-gMB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -123,7 +123,7 @@
             <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
