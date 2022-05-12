@@ -523,7 +523,7 @@ extension GameViewController {
                 helpCounter += 1
                 
                 saveToGameHistory(
-                    answer: "Взяли подсказку"
+                    answer: Constants.tookHint
                 )
             }
             

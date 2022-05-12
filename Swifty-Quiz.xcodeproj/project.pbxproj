@@ -79,6 +79,7 @@
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
+		FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB781B89282CCE6900DF1EC1 /* Constants.swift */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
@@ -199,6 +200,7 @@
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
+		FB781B89282CCE6900DF1EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
@@ -374,7 +376,7 @@
 				FBECDC5C243F30D700BD5583 /* Model */,
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
-				FB8606B32444771300A692AD /* Services */,
+				FB8606B32444771300A692AD /* Utilities */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
@@ -448,15 +450,16 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
-		FB8606B32444771300A692AD /* Services */ = {
+		FB8606B32444771300A692AD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				FBC1D489247574730055FF62 /* Shadow.swift */,
 				FBDECD832484D073004695FB /* RoundCornerButton.swift */,
 				FB0C05B026E4D46D006744CB /* PulseAnimation.swift */,
 				FB554D222741215A00B7696B /* ProgressService.swift */,
+				FB781B89282CCE6900DF1EC1 /* Constants.swift */,
 			);
-			path = Services;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		FB87420624605B9C00247923 /* Sounds */ = {
@@ -765,6 +768,7 @@
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FB554D232741215A00B7696B /* ProgressService.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
+				FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */,
 				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
 				FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */,
 				2CD0C32F2692009B00871C14 /* TuplesSet.swift in Sources */,
