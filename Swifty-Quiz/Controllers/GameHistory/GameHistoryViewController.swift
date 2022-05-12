@@ -7,16 +7,21 @@ import MessageUI
 
 class GameHistoryViewController: UIViewController {
 	
-	@IBOutlet weak var headerHeight: NSLayoutConstraint!
-	@IBOutlet weak var titleTopMargin: NSLayoutConstraint!
-	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
+	@IBOutlet private weak var backButton: UIButton!
+	@IBOutlet private weak var tableView: UITableView!
     
 	var history: [GameHistory] = []
-    var cellWidth: CGFloat = 0
+    
+    private var cellWidth: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
         cellRegistration()
     }
 	
@@ -39,21 +44,36 @@ class GameHistoryViewController: UIViewController {
 // MARK: Работа с таблицей
 extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func cellRegistration() {
+    private func cellRegistration() {
         tableView.register(
             UINib(
-                nibName: "GameHistoryCell",
+                nibName: String(
+                    describing: GameHistoryCell.self
+                ),
                 bundle: nil),
-            forCellReuseIdentifier: "GameHistoryCell"
+            forCellReuseIdentifier: String(
+                describing: GameHistoryCell.self
+            )
         )
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         return history.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameHistoryCell", for: indexPath) as? GameHistoryCell else {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(
+                describing: GameHistoryCell.self
+            ),
+            for: indexPath
+        ) as? GameHistoryCell else {
             return UITableViewCell()
         }
         
@@ -62,15 +82,26 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
 		cell.tableView = tableView
 		cell.width = tableView.frame.size.width
 		cell.cellIndex = indexPath.row
+        
         return cell
     }
     
     /// Обработка свайпа ячейки влево (для репорта)
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let reportAction = UIContextualAction(style: .normal, title: "Сообщить о проблеме") { (action, view, completion) in
-            self.reportButtonPressed(id: self.history[indexPath.row].questionId)
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        let reportAction = UIContextualAction(
+            style: .normal,
+            title: "Сообщить о проблеме"
+        ) { (action, view, completion) in
+            self.reportButtonPressed(
+                id: self.history[indexPath.row].questionId
+            )
+            
             completion(true)
         }
+        
         reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.5)
         return UISwipeActionsConfiguration(actions: [reportAction])
     }

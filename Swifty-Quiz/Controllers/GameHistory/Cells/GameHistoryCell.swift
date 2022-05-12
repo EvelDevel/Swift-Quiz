@@ -58,11 +58,11 @@ class GameHistoryCell: UITableViewCell {
 			showHintButton.backgroundColor = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 0.7)
 			showHintButton.setTitleColor(#colorLiteral(red: 0.2377000451, green: 0.2814793885, blue: 0.335570693, alpha: 0.8), for: .normal)
 			
-			/// Цвет: Правильный или неправильный ответ
+			/// Цвет
 			if history[cellIndex].correctAnswer == history[cellIndex].userAnswer {
 				colorBack.backgroundColor = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 0.85)
 				questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-			} else if history[cellIndex].userAnswer != "Подсказка" {
+			} else if history[cellIndex].userAnswer != "Взяли подсказку" {
 				colorBack.backgroundColor = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.7)
 				userAnswer.text = "Ваш ответ: \(history[cellIndex].userAnswer)"
 				questionNumber.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
