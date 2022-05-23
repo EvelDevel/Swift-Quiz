@@ -520,8 +520,8 @@
 				2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */,
 				FB119C37246A5B3C005F5289 /* GenericsSet.swift */,
 				FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */,
-				FB966288246E6D8C000B82B9 /* AccessControlSet.swift */,
 				FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */,
+				FB966288246E6D8C000B82B9 /* AccessControlSet.swift */,
 				FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */,
 			);
 			path = "The Basics ";
@@ -978,7 +978,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1001,7 +1001,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";

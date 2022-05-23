@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-Fm-tVe">
-                                        <rect key="frame" x="20" y="65" width="334" height="45"/>
+                                        <rect key="frame" x="20" y="50" width="334" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" name="TextColor"/>
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Opr-Fm-tVe" secondAttribute="trailing" constant="20" id="Ziv-YX-GyG"/>
                                     <constraint firstAttribute="bottom" secondItem="A06-ZF-3X3" secondAttribute="bottom" constant="16" id="cAS-LX-AXM"/>
                                     <constraint firstItem="Opr-Fm-tVe" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="20" id="gPq-u4-rpI"/>
-                                    <constraint firstItem="Opr-Fm-tVe" firstAttribute="top" secondItem="5fe-Mk-qp2" secondAttribute="bottom" constant="20" id="hFB-Rj-k7V"/>
+                                    <constraint firstItem="Opr-Fm-tVe" firstAttribute="top" secondItem="5fe-Mk-qp2" secondAttribute="bottom" constant="5" id="hFB-Rj-k7V"/>
                                     <constraint firstItem="A06-ZF-3X3" firstAttribute="leading" secondItem="Omw-qo-UL3" secondAttribute="leading" constant="16" id="iDz-E1-K19"/>
                                     <constraint firstItem="vMA-E0-5sO" firstAttribute="top" secondItem="Opr-Fm-tVe" secondAttribute="bottom" constant="20" id="php-CR-Tse"/>
                                     <constraint firstItem="A06-ZF-3X3" firstAttribute="top" secondItem="vMA-E0-5sO" secondAttribute="bottom" constant="16" id="uAF-EY-Azt"/>
