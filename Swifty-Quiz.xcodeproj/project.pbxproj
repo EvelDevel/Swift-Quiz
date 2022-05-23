@@ -19,6 +19,7 @@
 		2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C332269200EE00871C14 /* ConcurrencySet.swift */; };
 		2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */; };
 		83E44495A8C3E985C0A3C3CD /* Pods_Swifty_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33112C16028C293499B8B70 /* Pods_Swifty_Quiz.framework */; };
+		FB00651C283B3CAC00417F59 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00651B283B3CAC00417F59 /* String+Extension.swift */; };
 		FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B96A125262192006C986D /* RandomSetManager.swift */; };
 		FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C05B026E4D46D006744CB /* PulseAnimation.swift */; };
 		FB0C05B326E88936006744CB /* FramesAndBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C05B226E88936006744CB /* FramesAndBounds.swift */; };
@@ -137,6 +138,7 @@
 		2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueTypeSet.swift; sourceTree = "<group>"; };
 		8991AD9095DB730613ACEAB6 /* Pods-Swifty-Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty-Quiz.debug.xcconfig"; path = "Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		C33112C16028C293499B8B70 /* Pods_Swifty_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swifty_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB00651B283B3CAC00417F59 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FB0B96A125262192006C986D /* RandomSetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSetManager.swift; sourceTree = "<group>"; };
 		FB0C05B026E4D46D006744CB /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 		FB0C05B226E88936006744CB /* FramesAndBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesAndBounds.swift; sourceTree = "<group>"; };
@@ -273,6 +275,14 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		FB00651A283B3C9200417F59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB00651B283B3CAC00417F59 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FB08DD8726D48AD400112058 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
 				FB8606B32444771300A692AD /* Utilities */,
+				FB00651A283B3C9200417F59 /* Extensions */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
@@ -513,13 +524,13 @@
 				FB119C2A246A5AE4005F5289 /* ErrorHandlingSet.swift */,
 				2CD0C332269200EE00871C14 /* ConcurrencySet.swift */,
 				FB119C2C246A5AF0005F5289 /* OptionalChainingSet.swift */,
-				FB119C3D246A5B63005F5289 /* ARCSet.swift */,
 				FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */,
 				FB119C33246A5B23005F5289 /* NestedTypesSet.swift */,
 				FB119C31246A5B12005F5289 /* ExtensionsSet.swift */,
 				2CD0C3342692010900871C14 /* OpaqueTypeSet.swift */,
 				FB119C37246A5B3C005F5289 /* GenericsSet.swift */,
 				FB119C35246A5B2F005F5289 /* ProtocolsSet.swift */,
+				FB119C3D246A5B63005F5289 /* ARCSet.swift */,
 				FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */,
 				FB966288246E6D8C000B82B9 /* AccessControlSet.swift */,
 				FB96628C246E6E85000B82B9 /* AdvancedOperatorsSet.swift */,
@@ -804,6 +815,7 @@
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
 				FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */,
+				FB00651C283B3CAC00417F59 /* String+Extension.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
