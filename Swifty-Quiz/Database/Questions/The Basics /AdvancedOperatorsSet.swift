@@ -96,7 +96,7 @@ class AdvancedOperatorsSet {
 					 optionD: "XOR (^)",
 					 questionId: 721323377,
                      helpText: """
-                     Это побитовый оператор NOT (~), который инвертирует все битовые числа.
+                     NOT (~). Это побитовый оператор NOT (~), который инвертирует все битовые числа.
                      """),
 			
 			Question(question: [

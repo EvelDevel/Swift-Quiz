@@ -51,7 +51,6 @@
 		FB291D2626D223FF00A40679 /* TopicPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2526D223FF00A40679 /* TopicPicker.storyboard */; };
 		FB291D2826D224EA00A40679 /* Records.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2726D224EA00A40679 /* Records.storyboard */; };
 		FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2926D2256A00A40679 /* GameHistory.storyboard */; };
-		FB291D2D26D226C500A40679 /* HistoryHintController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2C26D226C500A40679 /* HistoryHintController.storyboard */; };
 		FB291D2F26D2279300A40679 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2E26D2279300A40679 /* SettingsViewController.storyboard */; };
 		FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */; };
 		FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */; };
@@ -79,6 +78,7 @@
 		FB66C0532454782B009FADDE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C0522454782B009FADDE /* Topic.swift */; };
 		FB66C05524547916009FADDE /* TopicCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66C05424547916009FADDE /* TopicCaretaker.swift */; };
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
+		FB6A690C28424CB2008227EE /* BoldTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A690B28424CB2008227EE /* BoldTextService.swift */; };
 		FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB781B89282CCE6900DF1EC1 /* Constants.swift */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
@@ -116,7 +116,6 @@
 		FBC1D48A247574730055FF62 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* Shadow.swift */; };
 		FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */; };
 		FBC34FE726E08EEE00120FB4 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE626E08EEE00120FB4 /* GameResult.swift */; };
-		FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* TopicOperator.swift */; };
@@ -169,7 +168,6 @@
 		FB291D2526D223FF00A40679 /* TopicPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopicPicker.storyboard; sourceTree = "<group>"; };
 		FB291D2726D224EA00A40679 /* Records.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Records.storyboard; sourceTree = "<group>"; };
 		FB291D2926D2256A00A40679 /* GameHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameHistory.storyboard; sourceTree = "<group>"; };
-		FB291D2C26D226C500A40679 /* HistoryHintController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryHintController.storyboard; sourceTree = "<group>"; };
 		FB291D2E26D2279300A40679 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		FB2EAC90243EEE0F0098FAC3 /* Свифти-Квиз.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Свифти-Квиз.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +198,7 @@
 		FB66C0522454782B009FADDE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FB66C05424547916009FADDE /* TopicCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCaretaker.swift; sourceTree = "<group>"; };
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
+		FB6A690B28424CB2008227EE /* BoldTextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldTextService.swift; sourceTree = "<group>"; };
 		FB781B89282CCE6900DF1EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +234,6 @@
 		FBC1D489247574730055FF62 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleSet.swift; sourceTree = "<group>"; };
 		FBC34FE626E08EEE00120FB4 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
-		FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryHintController.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -332,22 +330,13 @@
 			path = Initial;
 			sourceTree = "<group>";
 		};
-		FB291D1E26D2169200A40679 /* GameHints */ = {
+		FB291D1E26D2169200A40679 /* HelpViewController */ = {
 			isa = PBXGroup;
 			children = (
 				FB291D2126D2211400A40679 /* HelpViewController.storyboard */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
 			);
-			path = GameHints;
-			sourceTree = "<group>";
-		};
-		FB291D2B26D2268700A40679 /* HistoryHints */ = {
-			isa = PBXGroup;
-			children = (
-				FB291D2C26D226C500A40679 /* HistoryHintController.storyboard */,
-				FBD3AE3A25317AE300C13AE4 /* HistoryHintController.swift */,
-			);
-			path = HistoryHints;
+			path = HelpViewController;
 			sourceTree = "<group>";
 		};
 		FB2EAC87243EEE0F0098FAC3 = {
@@ -376,7 +365,7 @@
 				FBECDC5C243F30D700BD5583 /* Model */,
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
-				FB8606B32444771300A692AD /* Utilities */,
+				FB8606B32444771300A692AD /* Services */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
@@ -400,8 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				FB91255B26D360C800C1DFEB /* Donation */,
-				FB291D1E26D2169200A40679 /* GameHints */,
-				FB291D2B26D2268700A40679 /* HistoryHints */,
+				FB291D1E26D2169200A40679 /* HelpViewController */,
 				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Modal;
@@ -450,7 +438,7 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
-		FB8606B32444771300A692AD /* Utilities */ = {
+		FB8606B32444771300A692AD /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				FBC1D489247574730055FF62 /* Shadow.swift */,
@@ -458,8 +446,9 @@
 				FB0C05B026E4D46D006744CB /* PulseAnimation.swift */,
 				FB554D222741215A00B7696B /* ProgressService.swift */,
 				FB781B89282CCE6900DF1EC1 /* Constants.swift */,
+				FB6A690B28424CB2008227EE /* BoldTextService.swift */,
 			);
-			path = Utilities;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		FB87420624605B9C00247923 /* Sounds */ = {
@@ -694,7 +683,6 @@
 				FB4C7EB52802AFA300D05837 /* click.mp3 in Resources */,
 				FB291D2826D224EA00A40679 /* Records.storyboard in Resources */,
 				FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */,
-				FB291D2D26D226C500A40679 /* HistoryHintController.storyboard in Resources */,
 				FB291D2F26D2279300A40679 /* SettingsViewController.storyboard in Resources */,
 				FB291D2626D223FF00A40679 /* TopicPicker.storyboard in Resources */,
 				FB7BCD5124BDCDA700B8F6BA /* showContinue.mp3 in Resources */,
@@ -745,6 +733,7 @@
 				FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */,
 				FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */,
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
+				FB6A690C28424CB2008227EE /* BoldTextService.swift in Sources */,
 				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
 				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
 				FB554D25274156D300B7696B /* CategoriesNames.swift in Sources */,
@@ -782,7 +771,6 @@
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
-				FBD3AE3B25317AE300C13AE4 /* HistoryHintController.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,

@@ -113,21 +113,22 @@ extension GameHistoryViewController: GameHistoryCellDelegate {
 	func showHint(index: Int) {
         let mainStoryboard: UIStoryboard = UIStoryboard(
             name: String(
-                describing: HistoryHintController.self
+                describing: HelpViewController.self
             ),
             bundle: nil
         )
         
-		let historyHintView  = mainStoryboard.instantiateViewController(
+		let helpViewController = mainStoryboard.instantiateViewController(
             withIdentifier: String(
-                describing: HistoryHintController.self
+                describing: HelpViewController.self
             )
-        ) as! HistoryHintController
+        ) as! HelpViewController
         
-		historyHintView.helpText = history[index].helpText
+        helpViewController.helpText = history[index].helpText
+        helpViewController.isFromHistory = true
         
 		present(
-            historyHintView,
+            helpViewController,
             animated: false,
             completion: nil
         )

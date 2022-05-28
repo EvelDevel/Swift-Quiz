@@ -16,8 +16,13 @@ class HelpViewController: UIViewController {
     @IBOutlet private weak var dismissButton: UIButton!
     @IBOutlet private weak var separatorHeight: NSLayoutConstraint!
     
+    private var boldTextService = BoldTextService()
+    
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
+    var fontSize: CGFloat = 12
+    var helpText: String = ""
+    var isFromHistory: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +60,9 @@ class HelpViewController: UIViewController {
 extension HelpViewController {
     
     private func setup() {
+        setupFontSize()
         setupViewCornerCurve()
         setupHelpText()
-        setupFontSize()
         setupThinSeparator()
     }
     
@@ -68,9 +73,19 @@ extension HelpViewController {
     }
     
     private func setupHelpText() {
-        for question in SelectedTopic.shared.topic.questionSet {
-            if question.questionId == questionID {
-                helpTextLabel.text = question.helpText
+        if isFromHistory {
+            helpTextLabel.attributedText = boldTextService.createBoldTextAnswer(
+                helpText,
+                fontSize: fontSize
+            )
+        } else {
+            for question in SelectedTopic.shared.topic.questionSet {
+                if question.questionId == questionID {
+                    helpTextLabel.attributedText = boldTextService.createBoldTextAnswer(
+                        question.helpText,
+                        fontSize: fontSize
+                    )
+                }
             }
         }
     }
@@ -83,9 +98,19 @@ extension HelpViewController {
         let width = UIScreen.main.bounds.size.width
         
         if width <= 320 {
-            helpTextLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .light)
+            fontSize = 12
+            
+            helpTextLabel.font = UIFont.systemFont(
+                ofSize: 12.0,
+                weight: .light
+            )
         } else {
-            helpTextLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .light)
+            fontSize = 14
+            
+            helpTextLabel.font = UIFont.systemFont(
+                ofSize: 14.0,
+                weight: .light
+            )
         }
     }
 }
