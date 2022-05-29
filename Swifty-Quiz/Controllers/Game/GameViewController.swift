@@ -20,7 +20,8 @@ class GameViewController: UIViewController {
 	@IBOutlet private weak var backButton: UIButton!
 	@IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
 	
-	@IBOutlet private var answerButtonsCollection: [UIButton]!
+    @IBOutlet private weak var helpButton: UIButton!
+    @IBOutlet private var answerButtonsCollection: [UIButton]!
     @IBOutlet private weak var optionA: UIButton!
     @IBOutlet private weak var optionB: UIButton!
     @IBOutlet private weak var optionC: UIButton!
@@ -52,7 +53,7 @@ class GameViewController: UIViewController {
     private let topic = SelectedTopic.shared.topic.topicName
     private let topicTag = SelectedTopic.shared.topic.topicTag
     
-    private var hintWasTaken = false           // Предотвращает повторное засчитывание подсказки
+    private var hintWasTaken = false            // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false  // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false             // Предотвращает повторное сохранение одного рекорда
     private var answerPressed = false           // Уже нажали один ответ (чтобы второе нажатие не срабатывало)
@@ -72,7 +73,6 @@ class GameViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
         /// Save if didn't save before
         /// And answer at least 1 question
         if endGameFlag == false && currentQuestionIndex > 0 {
@@ -530,6 +530,8 @@ extension GameViewController {
             helpCounterLabel.text = "\(helpCounter)"
             hintWasTaken = true
         }
+        
+        helpButton.isEnabled = false
     }
     
     private func saveToGameHistory(
@@ -555,6 +557,7 @@ extension GameViewController: HelpViewControllerDelegate {
     func updateAfterHelp() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             if Game.shared.settings.changeAfterHelp == 1 {
+                self.helpButton.isEnabled = true
                 self.currentQuestionNumber += 1
                 self.currentQuestionIndex += 1
                 self.weDidGetAutoHelp = false
@@ -565,6 +568,7 @@ extension GameViewController: HelpViewControllerDelegate {
     }
     
     func refreshTappedAnswerStatus() {
-        self.answerPressed = false
+        helpButton.isEnabled = true
+        answerPressed = false
     }
 }

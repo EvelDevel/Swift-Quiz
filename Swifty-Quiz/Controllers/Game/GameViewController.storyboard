@@ -275,6 +275,7 @@
                     <connections>
                         <outlet property="backButton" destination="Wmt-dS-x2e" id="Vwc-y2-teH"/>
                         <outlet property="headerTopMargin" destination="C3M-1i-kUm" id="SZj-xU-yfA"/>
+                        <outlet property="helpButton" destination="rOG-af-yk0" id="Fv9-wi-gYp"/>
                         <outlet property="helpCounterLabel" destination="ABl-pA-zXh" id="OzM-uG-gty"/>
                         <outlet property="optionA" destination="hhO-1q-oQJ" id="Nmj-IS-zhM"/>
                         <outlet property="optionB" destination="Rh9-fa-Dhg" id="LGW-Cy-euY"/>
