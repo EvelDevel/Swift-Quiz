@@ -4,10 +4,7 @@
 
 import Foundation
 
-// MARK: Memento
-
 class TopicCaretaker {
-    
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     private let key = "topic"
@@ -15,7 +12,11 @@ class TopicCaretaker {
     func saveTopic(topic: Topic) {
         do {
             let data = try self.encoder.encode(topic)
-            UserDefaults.standard.set(data, forKey: key)
+            
+            UserDefaults.standard.set(
+                data,
+                forKey: key
+            )
         } catch {
             print("We have some problems with saving topic")
         }
@@ -23,19 +24,27 @@ class TopicCaretaker {
     
     func getTopic() -> Topic {
         guard let data = UserDefaults.standard.data(forKey: key) else {
-            return Topic(questionSet: [],
-                         continueQuestionSet: [],
-                         topicTag: 0,
-                         topicName: "")
+            return Topic(
+                questionSet: [],
+                continueQuestionSet: [],
+                topicTag: 0,
+                topicName: ""
+            )
         }
+        
         do {
-            return try self.decoder.decode(Topic.self, from: data)
+            return try self.decoder.decode(
+                Topic.self,
+                from: data
+            )
         } catch {
-            print("We have some problems with retrieving topic from memory")
-            return Topic(questionSet: [],
-                         continueQuestionSet: [],
-                         topicTag: 0,
-                         topicName: "")
+            NSLog("We have some problems with retrieving topic from memory")
+            return Topic(
+                questionSet: [],
+                continueQuestionSet: [],
+                topicTag: 0,
+                topicName: ""
+            )
         }
     }
 }
