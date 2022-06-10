@@ -82,7 +82,9 @@ class CategoriesCell: UITableViewCell {
                     self.delegate?.updateSuccessRate(
                         rate: self.progress.getProgressCounter(
                             for: self.getTopicName(
-                                for: sender.tag))
+                                for: sender.tag
+                            )
+                        )
                     )
                 } else {
                     self.delegate?.removeSuccessRateLabel()

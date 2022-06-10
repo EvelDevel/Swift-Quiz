@@ -16,7 +16,6 @@ enum GameStatus: Int {
 }
 
 class GameViewController: UIViewController {
-	
 	@IBOutlet private weak var backButton: UIButton!
 	@IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
 	
