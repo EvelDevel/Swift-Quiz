@@ -366,6 +366,7 @@
 				FB1D0B9A2448235F00E9C56D /* Singletons */,
 				FBECDC58243F241B00BD5583 /* Controllers */,
 				FB8606B32444771300A692AD /* Services */,
+				FBC34FE526DF99F100120FB4 /* Caretakers */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
@@ -430,7 +431,6 @@
 		FB8606B0244458E300A692AD /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				FBC34FE526DF99F100120FB4 /* Caretakers */,
 				FB1D0B952446E76F00E9C56D /* Questions */,
 				FB0B96A125262192006C986D /* RandomSetManager.swift */,
 				FBECDC5F243F352D00BD5583 /* TopicOperator.swift */,
@@ -549,7 +549,8 @@
 				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
 			);
-			path = Caretakers;
+			name = Caretakers;
+			path = Database/Caretakers;
 			sourceTree = "<group>";
 		};
 		FBC96F2B280BFF010094FDD2 /* Cells */ = {
