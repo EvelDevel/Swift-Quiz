@@ -14,7 +14,9 @@ class ProgressService {
     private let success: Double = 100
     
     /// Get color for each category button
-    func getProgressColor(for topic: String) -> CGColor {
+    func getProgressColor(
+        for topic: String
+    ) -> CGColor {
         var alpha: Double
         var currentTopicRecords: [Record] = []
         let color = UIColor(named: "MainYellow") ?? .yellow
