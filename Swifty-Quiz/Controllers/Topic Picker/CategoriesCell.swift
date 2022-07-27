@@ -53,12 +53,8 @@ class CategoriesCell: UITableViewCell {
             button.layer.backgroundColor = progress.getProgressColor(
                 for: getTopicName(for: button.tag)
             )
-            button.layer.borderWidth = 0
             
-            if button.layer.backgroundColor?.alpha ?? 0 >= 0.75
-                && button.layer.backgroundColor != UIColor.white.cgColor {
-                
-            }
+            button.layer.borderWidth = 0
         }
     }
     

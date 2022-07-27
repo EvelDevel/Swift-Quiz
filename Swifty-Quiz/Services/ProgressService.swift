@@ -21,17 +21,19 @@ class ProgressService {
         var currentTopicRecords: [Record] = []
         let color = UIColor(named: "MainYellow") ?? .yellow
         
-        for record in records {
-            if record.topic == topic {
-                currentTopicRecords.append(record)
-            }
+        let topic = CategoriesNames(rawValue: topic)
+        
+        switch topic {
+        case .random20, .random50, .random100, .deathMatch:
+            return UIColor.white.cgColor
+        default:
+            break
         }
         
-        if topic == CategoriesNames.random20.rawValue
-            || topic == CategoriesNames.random50.rawValue
-            || topic == CategoriesNames.random100.rawValue
-            || topic == CategoriesNames.deathMatch.rawValue {
-            return UIColor.white.cgColor
+        for record in records {
+            if record.topic == topic?.rawValue {
+                currentTopicRecords.append(record)
+            }
         }
         
         if currentTopicRecords.isEmpty {
@@ -50,7 +52,7 @@ class ProgressService {
             alpha = (Double(succsessRate / currentTopicRecords.count) / 100)
             
             if alpha <= 0.15 {
-                alpha = 0.15
+                return UIColor.white.cgColor
             }
             
             return color.withAlphaComponent(alpha).cgColor
@@ -58,19 +60,23 @@ class ProgressService {
     }
     
     /// Get percent of success for each category button
-    func getProgressCounter(for topic: String) -> Int {
+    func getProgressCounter(
+        for topic: String
+    ) -> Int {
         var currentTopicRecords: [Record] = []
         var succsessRate = 0
         
-        if topic == CategoriesNames.random20.rawValue
-            || topic == CategoriesNames.random50.rawValue
-            || topic == CategoriesNames.random100.rawValue
-            || topic == CategoriesNames.deathMatch.rawValue {
+        let topic = CategoriesNames(rawValue: topic)
+        
+        switch topic {
+        case .random20, .random50, .random100, .deathMatch:
             return 0
+        default:
+            break
         }
         
         for record in records {
-            if record.topic == topic {
+            if record.topic == topic?.rawValue {
                 currentTopicRecords.append(record)
             }
         }
