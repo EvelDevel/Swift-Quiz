@@ -103,14 +103,14 @@ extension InitialViewController {
             let help = records.first?.helpCounter ?? 0
             let correct = records.first?.score ?? 0
             let roundedPercents = String(format: "%.1f", records.first?.percentOfCorrectAnswer ?? 0)
-            
-            lastTopic.text = "Категория: \(category)"
-            totalQuestions.text = "Вопросы: \(played) из \(total) (подсказок: \(help))"
-            lastScore.text = "Правильных ответов: \(correct) (\(roundedPercents)%)"
+          
+            changeLabelWithAnimation(label: lastTopic, text: "Категория: \(category)")
+            changeLabelWithAnimation(label: totalQuestions, text: "Вопросы: \(played) из \(total) (подсказок: \(help))")
+            changeLabelWithAnimation(label: lastScore, text: "Правильных ответов: \(correct) (\(roundedPercents)%)")
         } else {
-            lastTopic.text = "Категория: "
-            totalQuestions.text = "Вопросы: "
-            lastScore.text = "Правильных ответов: "
+            changeLabelWithAnimation(label: lastTopic, text: "Категория: ")
+            changeLabelWithAnimation(label: totalQuestions, text: "Вопросы: ")
+            changeLabelWithAnimation(label: lastScore, text: "Правильных ответов: ")
         }
     }
 
@@ -127,24 +127,25 @@ extension InitialViewController {
 	/// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-			if self.continueGameButton.isHidden == true {
+			if continueGameButton.isHidden == true {
                 SoundPlayer.shared.playSound(sound: .showContinueButton)
             }
-			self.contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
-			self.continueGameButton.isHidden = false
+			contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
+			continueGameButton.isHidden = false
 		} else {
-			if self.continueGameButton.isHidden == false {
+			if continueGameButton.isHidden == false {
                 SoundPlayer.shared.playSound(sound: .hideContinueButton)
             }
-			self.contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
-			self.continueGameButton.isHidden = true
+			contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
+			continueGameButton.isHidden = true
 		}
 	}
 	
 	/// Показываем корректный заголовок последней игры
     private func updateLastGameLabel() {
 		lastGameTitle.text = "Информация о прошлой игре: "
-		if Game.shared.records.count != 0 {
+		
+        if Game.shared.records.count != 0 {
 			if Game.shared.records.first?.continueGameStatus ?? false {
 				lastGameTitle.text = "Информация о текущей игре: "
 			}
@@ -182,6 +183,21 @@ extension InitialViewController {
             below: donationButton.layer
         )
     }
+    
+    private func changeLabelWithAnimation(
+        label: UILabel,
+        text: String
+    ) {
+        UIView.transition(
+            with: label,
+            duration: 0.25,
+            options: .transitionCrossDissolve,
+            animations: {
+                label.text = text
+            },
+            completion: nil
+        )
+    }
 }
 
 
@@ -189,17 +205,17 @@ extension InitialViewController {
 extension InitialViewController {
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier  == "toGameViewController" {
+		if segue.identifier  == "newGame" {
 			let gameView = segue.destination as! GameViewController
 			gameView.delegate = self
 			gameView.weContinueLastGame = false
-		} else if segue.identifier == "toTopicSelection" {
+		} else if segue.identifier == "continueGame" {
+            let gameView = segue.destination as! GameViewController
+            gameView.delegate = self
+            gameView.weContinueLastGame = true
+        } else if segue.identifier == "toTopicSelection" {
 			let topicView = segue.destination as! TopicViewController
 			topicView.delegate = self
-		} else if segue.identifier == "continueGame" {
-			let gameView = segue.destination as! GameViewController
-			gameView.delegate = self
-			gameView.weContinueLastGame = true
 		} else if segue.identifier == "toResultsViewController" {
 			let recordView = segue.destination as! RecordsViewController
 			recordView.delegate = self
@@ -218,9 +234,18 @@ extension InitialViewController: GameViewControllerDelegate,
                                  SettingsViewControllerDelegate {
 
     func didEndGame(_ result: GameResult) {
-        lastTopic.text = "Категория: \(result.topic)"
-        totalQuestions.text = "Вопросы: \(result.playedNum) из \(result.totalQuestion) (подсказок: \(result.helpCounter))"
-        lastScore.text = "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
+        changeLabelWithAnimation(
+            label: lastTopic,
+            text: "Категория: \(result.topic)"
+        )
+        changeLabelWithAnimation(
+            label: totalQuestions,
+            text: "Вопросы: \(result.playedNum) из \(result.totalQuestion) (подсказок: \(result.helpCounter))"
+        )
+        changeLabelWithAnimation(
+            label: lastScore,
+            text: "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
+        )
 	}
 	
 	func updateInitialView() {
