@@ -12,50 +12,47 @@ class ProgressService {
     private let records = Game.shared.getRecordsList()
     private let success: Double = 100
     
-    func getProgressColor(
-        for topic: String
-    ) -> CGColor {
-        let color = UIColor(named: "MainYellow") ?? .yellow
-        let records = appendTopicRecords(for: topic)
-        
-        if isRandom(topic: topic) || records.isEmpty {
-            return UIColor.white.cgColor
-        }
-        
-        if isSuccess(records: records) {
-            return color.cgColor
-        } else {
-            let rate = calculateRate(records: records)
-            let alpha = (Double(rate / records.count) / 100)
-            
-            if alpha <= 0.15 {
-                return UIColor.white.cgColor
-            } else {
-                return color.withAlphaComponent(alpha).cgColor
-            }
-        }
+    struct ProgressValue {
+        let progressRate: Int
+        let progressColor: CGColor
     }
     
-    func getProgressPercent(
+    func getProgress(
         for topic: String
-    ) -> Int {
-        let records = appendTopicRecords(for: topic)
+    ) -> ProgressValue {
+        let mainColor = UIColor(named: "MainYellow") ?? .yellow
+        let records = getTopicRecords(for: topic)
+        
+        var rate: Int
+        var color: CGColor
         
         if isRandom(topic: topic) || records.isEmpty {
-            return 0
-        }
-        
-        if isSuccess(records: records) {
-            return 100
+            color = UIColor.white.cgColor
+            rate = 0
+        } else if isSuccess(records: records) {
+            color = mainColor.cgColor
+            rate = 100
         } else {
-            let rate = calculateRate(records: records)
+            let currentRate = calculateCurrentRate(records: records)
+            let alpha = (Double(currentRate / records.count) / 100)
             
-            if rate != 0 {
-                return rate / records.count
+            if alpha <= 0.15 {
+                color = UIColor.white.cgColor
             } else {
-                return 0
+                color = mainColor.withAlphaComponent(alpha).cgColor
+            }
+            
+            if currentRate != 0 {
+                rate = currentRate / records.count
+            } else {
+                rate = 0
             }
         }
+        
+        return ProgressValue(
+            progressRate: rate,
+            progressColor: color
+        )
     }
 }
 
@@ -85,7 +82,7 @@ extension ProgressService {
         }
     }
     
-    private func calculateRate(
+    private func calculateCurrentRate(
         records: [Record]
     ) -> Int {
         var rate = 0
@@ -97,7 +94,7 @@ extension ProgressService {
         return rate
     }
     
-    private func appendTopicRecords(
+    private func getTopicRecords(
         for topic: String
     ) -> [Record] {
         var currentRecords: [Record] = []

@@ -50,9 +50,9 @@ class CategoriesCell: UITableViewCell {
     
     private func setupProgressToButtons() {
         for button in allButtons {
-            button.layer.backgroundColor = progress.getProgressColor(
+            button.layer.backgroundColor = progress.getProgress(
                 for: getTopicName(for: button.tag)
-            )
+            ).progressColor
             
             button.layer.borderWidth = 0
         }
@@ -76,11 +76,11 @@ class CategoriesCell: UITableViewCell {
                 
                 if sender.tag > 10 {
                     self.delegate?.updateSuccessRate(
-                        rate: self.progress.getProgressPercent(
+                        rate: self.progress.getProgress(
                             for: self.getTopicName(
                                 for: sender.tag
                             )
-                        )
+                        ).progressRate
                     )
                 } else {
                     self.delegate?.removeSuccessRateLabel()
