@@ -9,90 +9,105 @@
 import UIKit
 
 class ProgressService {
-    
     private let records = Game.shared.getRecordsList()
     private let success: Double = 100
     
-    /// Get color for each category button
     func getProgressColor(
         for topic: String
     ) -> CGColor {
-        var alpha: Double
-        var currentTopicRecords: [Record] = []
         let color = UIColor(named: "MainYellow") ?? .yellow
+        let records = appendTopicRecords(for: topic)
         
-        let topic = CategoriesNames(rawValue: topic)
-        
-        switch topic {
-        case .random20, .random50, .random100, .deathMatch:
+        if isRandom(topic: topic) || records.isEmpty {
             return UIColor.white.cgColor
-        default:
-            break
         }
         
-        for record in records {
-            if record.topic == topic?.rawValue {
-                currentTopicRecords.append(record)
-            }
-        }
-        
-        if currentTopicRecords.isEmpty {
-            return UIColor.white.cgColor
+        if isSuccess(records: records) {
+            return color.cgColor
         } else {
-            var succsessRate = 0
-            
-            if currentTopicRecords.first?.percentOfCorrectAnswer == success {
-                return color.withAlphaComponent(1).cgColor
-            } else {
-                for record in currentTopicRecords {
-                    succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
-                }
-            }
-        
-            alpha = (Double(succsessRate / currentTopicRecords.count) / 100)
+            let rate = calculateRate(records: records)
+            let alpha = (Double(rate / records.count) / 100)
             
             if alpha <= 0.15 {
                 return UIColor.white.cgColor
+            } else {
+                return color.withAlphaComponent(alpha).cgColor
             }
-            
-            return color.withAlphaComponent(alpha).cgColor
         }
     }
     
-    /// Get percent of success for each category button
-    func getProgressCounter(
+    func getProgressPercent(
         for topic: String
     ) -> Int {
-        var currentTopicRecords: [Record] = []
-        var succsessRate = 0
+        let records = appendTopicRecords(for: topic)
         
-        let topic = CategoriesNames(rawValue: topic)
+        if isRandom(topic: topic) || records.isEmpty {
+            return 0
+        }
+        
+        if isSuccess(records: records) {
+            return 100
+        } else {
+            let rate = calculateRate(records: records)
+            
+            if rate != 0 {
+                return rate / records.count
+            } else {
+                return 0
+            }
+        }
+    }
+}
+
+
+// MARK: Privates
+extension ProgressService {
+    private func isRandom(
+        topic: String
+    ) -> Bool {
+        let topic = CategoriesName(rawValue: topic)
         
         switch topic {
         case .random20, .random50, .random100, .deathMatch:
-            return 0
+            return true
         default:
-            break
+            return false
         }
+    }
+    
+    private func isSuccess(
+        records: [Record]
+    ) -> Bool {
+        if records.first?.percentOfCorrectAnswer == success {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    private func calculateRate(
+        records: [Record]
+    ) -> Int {
+        var rate = 0
         
         for record in records {
-            if record.topic == topic?.rawValue {
-                currentTopicRecords.append(record)
+            rate += Int(record.percentOfCorrectAnswer ?? 0)
+        }
+        
+        return rate
+    }
+    
+    private func appendTopicRecords(
+        for topic: String
+    ) -> [Record] {
+        var currentRecords: [Record] = []
+        
+        for record in records {
+            if record.topic == topic {
+                currentRecords.append(record)
             }
         }
         
-        if currentTopicRecords.first?.percentOfCorrectAnswer == success {
-            return 100
-        } else {
-            for record in currentTopicRecords {
-                succsessRate += Int(record.percentOfCorrectAnswer ?? 0)
-            }
-        }
-        
-        if succsessRate != 0 {
-            return succsessRate / currentTopicRecords.count
-        } else {
-            return 0
-        }
+        return currentRecords
     }
 }

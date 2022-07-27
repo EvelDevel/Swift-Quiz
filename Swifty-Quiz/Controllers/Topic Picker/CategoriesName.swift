@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CategoriesNames: String {
+enum CategoriesName: String {
     
     case random20 = "20 случайных вопросов"
     case random50 = "50 случайных вопросов"

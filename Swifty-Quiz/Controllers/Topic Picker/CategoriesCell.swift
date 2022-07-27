@@ -76,7 +76,7 @@ class CategoriesCell: UITableViewCell {
                 
                 if sender.tag > 10 {
                     self.delegate?.updateSuccessRate(
-                        rate: self.progress.getProgressCounter(
+                        rate: self.progress.getProgressPercent(
                             for: self.getTopicName(
                                 for: sender.tag
                             )
@@ -141,25 +141,25 @@ extension CategoriesCell {
         case 1:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getRandom20(),
-                topic: CategoriesNames.random20.rawValue,
+                topic: CategoriesName.random20.rawValue,
                 tag: 0
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getRandom50(),
-                topic: CategoriesNames.random50.rawValue,
+                topic: CategoriesName.random50.rawValue,
                 tag: 1
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getRandom100(),
-                topic: CategoriesNames.random100.rawValue,
+                topic: CategoriesName.random100.rawValue,
                 tag: 2
             )
         case 4:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.deathMatch(),
-                topic: CategoriesNames.deathMatch.rawValue,
+                topic: CategoriesName.deathMatch.rawValue,
                 tag: 3
             )
             
@@ -167,211 +167,211 @@ extension CategoriesCell {
         case 12:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getTheBasics(),
-                topic: CategoriesNames.basic.rawValue,
+                topic: CategoriesName.basic.rawValue,
                 tag: 11
             )
         case 13:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getIntegersAndBooleans(),
-                topic: CategoriesNames.integersAndBooleans.rawValue,
+                topic: CategoriesName.integersAndBooleans.rawValue,
                 tag: 12
             )
         case 14:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getBasicOperators(),
-                topic: CategoriesNames.basicOperators.rawValue,
+                topic: CategoriesName.basicOperators.rawValue,
                 tag: 13
             )
         case 15:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getRangeOperators(),
-                topic: CategoriesNames.rangeOperators.rawValue,
+                topic: CategoriesName.rangeOperators.rawValue,
                 tag: 14
             )
         case 16:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getBooleanOperators(),
-                topic: CategoriesNames.booleanOperators.rawValue,
+                topic: CategoriesName.booleanOperators.rawValue,
                 tag: 15
             )
         case 17:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getStringAndCharacters(),
-                topic: CategoriesNames.stringAndCharacters.rawValue,
+                topic: CategoriesName.stringAndCharacters.rawValue,
                 tag: 16
             )
         case 18:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getCollections(),
-                topic: CategoriesNames.collections.rawValue,
+                topic: CategoriesName.collections.rawValue,
                 tag: 17
             )
         case 19:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getSets(),
-                topic: CategoriesNames.sets.rawValue,
+                topic: CategoriesName.sets.rawValue,
                 tag: 18
             )
         case 20:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getDictionaries(),
-                topic: CategoriesNames.dictionaries.rawValue,
+                topic: CategoriesName.dictionaries.rawValue,
                 tag: 19
             )
         case 21:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getTuples(),
-                topic: CategoriesNames.tuples.rawValue,
+                topic: CategoriesName.tuples.rawValue,
                 tag: 20
             )
         case 22:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getControlFlow(),
-                topic: CategoriesNames.controlFlow.rawValue,
+                topic: CategoriesName.controlFlow.rawValue,
                 tag: 21
             )
         case 23:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getOptionalTypes(),
-                topic: CategoriesNames.optionals.rawValue,
+                topic: CategoriesName.optionals.rawValue,
                 tag: 22
             )
         case 24:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getFunctions(),
-                topic: CategoriesNames.functions.rawValue,
+                topic: CategoriesName.functions.rawValue,
                 tag: 23
             )
         case 25:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getClosures(),
-                topic: CategoriesNames.closures.rawValue,
+                topic: CategoriesName.closures.rawValue,
                 tag: 24
             )
         case 26:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getEnums(),
-                topic: CategoriesNames.enums.rawValue,
+                topic: CategoriesName.enums.rawValue,
                 tag: 25
             )
         case 27:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getStructuresAndClasses(),
-                topic: CategoriesNames.structuresAndClasses.rawValue,
+                topic: CategoriesName.structuresAndClasses.rawValue,
                 tag: 26
             )
         case 28:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getProperties(),
-                topic: CategoriesNames.properties.rawValue,
+                topic: CategoriesName.properties.rawValue,
                 tag: 27
             )
         case 29:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getMethods(),
-                topic: CategoriesNames.methods.rawValue,
+                topic: CategoriesName.methods.rawValue,
                 tag: 28
             )
         case 30:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getSubscripts(),
-                topic: CategoriesNames.subscripts.rawValue,
+                topic: CategoriesName.subscripts.rawValue,
                 tag: 29
             )
         case 31:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getInheritance(),
-                topic: CategoriesNames.inheritance.rawValue,
+                topic: CategoriesName.inheritance.rawValue,
                 tag: 30
             )
         case 32:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getInitialization(),
-                topic: CategoriesNames.initialization.rawValue,
+                topic: CategoriesName.initialization.rawValue,
                 tag: 31
             )
         case 33:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getDeinitialization(),
-                topic: CategoriesNames.deinitialization.rawValue,
+                topic: CategoriesName.deinitialization.rawValue,
                 tag: 32
             )
         case 34:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getErrorHandling(),
-                topic: CategoriesNames.errorHandling.rawValue,
+                topic: CategoriesName.errorHandling.rawValue,
                 tag: 33
             )
         case 35:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getConcurrency(),
-                topic: CategoriesNames.concurrency.rawValue,
+                topic: CategoriesName.concurrency.rawValue,
                 tag: 34
             )
         case 36:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getOptionalChaining(),
-                topic: CategoriesNames.optionalChaining.rawValue,
+                topic: CategoriesName.optionalChaining.rawValue,
                 tag: 35
             )
         case 37:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getARC(),
-                topic: CategoriesNames.arc.rawValue,
+                topic: CategoriesName.arc.rawValue,
                 tag: 36
             )
         case 38:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getTypeCasting(),
-                topic: CategoriesNames.typeCasting.rawValue,
+                topic: CategoriesName.typeCasting.rawValue,
                 tag: 37
             )
         case 39:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getNestedTypes(),
-                topic: CategoriesNames.nestedTypes.rawValue,
+                topic: CategoriesName.nestedTypes.rawValue,
                 tag: 38
             )
         case 40:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getExtensions(),
-                topic: CategoriesNames.extensions.rawValue,
+                topic: CategoriesName.extensions.rawValue,
                 tag: 39
             )
         case 41:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getOpaqueTypes(),
-                topic: CategoriesNames.opaqueType.rawValue,
+                topic: CategoriesName.opaqueType.rawValue,
                 tag: 40
             )
         case 42:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getGenerics(),
-                topic: CategoriesNames.generics.rawValue,
+                topic: CategoriesName.generics.rawValue,
                 tag: 41
             )
         case 43:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getProtocols(),
-                topic: CategoriesNames.protocols.rawValue,
+                topic: CategoriesName.protocols.rawValue,
                 tag: 42
             )
         case 44:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getAccessControl(),
-                topic: CategoriesNames.accessControl.rawValue,
+                topic: CategoriesName.accessControl.rawValue,
                 tag: 43
             )
         case 45:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getMemorySafety(),
-                topic: CategoriesNames.memorySafety.rawValue,
+                topic: CategoriesName.memorySafety.rawValue,
                 tag: 44
             )
         case 46:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getAdvancedOperators(),
-                topic: CategoriesNames.advancedOperators.rawValue,
+                topic: CategoriesName.advancedOperators.rawValue,
                 tag: 45
             )
             
@@ -379,19 +379,19 @@ extension CategoriesCell {
         case 50:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsBasicsAboutPatterns(),
-                topic: CategoriesNames.patterns.rawValue,
+                topic: CategoriesName.patterns.rawValue,
                 tag: 49
             )
         case 51:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsCreationalPatterns(),
-                topic: CategoriesNames.creationalPatterns.rawValue,
+                topic: CategoriesName.creationalPatterns.rawValue,
                 tag: 50
             )
         case 52:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsStructuralPatterns(),
-                topic: CategoriesNames.structuralPatterns.rawValue,
+                topic: CategoriesName.structuralPatterns.rawValue,
                 tag: 51
             )
         case 53:
@@ -403,7 +403,7 @@ extension CategoriesCell {
         case 54:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsAntipatterns(),
-                topic: CategoriesNames.antipatterns.rawValue,
+                topic: CategoriesName.antipatterns.rawValue,
                 tag: 53
             )
         
@@ -411,67 +411,67 @@ extension CategoriesCell {
         case 60:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsExtremeProgramming(),
-                topic: CategoriesNames.extremeProgramming.rawValue,
+                topic: CategoriesName.extremeProgramming.rawValue,
                 tag: 59
             )
         case 61:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsMobileSecurity(),
-                topic: CategoriesNames.masvs.rawValue,
+                topic: CategoriesName.masvs.rawValue,
                 tag: 60
             )
         case 62:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsLifecycle(),
-                topic: CategoriesNames.controllerLifecycle.rawValue,
+                topic: CategoriesName.controllerLifecycle.rawValue,
                 tag: 61
             )
         case 63:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsAppLifecycle(),
-                topic: CategoriesNames.appLifecycle.rawValue,
+                topic: CategoriesName.appLifecycle.rawValue,
                 tag: 62
             )
         case 64:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsFramesAndBounds(),
-                topic: CategoriesNames.boundsAndFrame.rawValue,
+                topic: CategoriesName.boundsAndFrame.rawValue,
                 tag: 63
             )
         case 65:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsMultithreading(),
-                topic: CategoriesNames.multithreading.rawValue,
+                topic: CategoriesName.multithreading.rawValue,
                 tag: 64
             )
         case 66:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsUIViewSet(),
-                topic: CategoriesNames.uiview.rawValue,
+                topic: CategoriesName.uiview.rawValue,
                 tag: 65
             )
         case 67:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsAutoLayout(),
-                topic: CategoriesNames.autoLayout.rawValue,
+                topic: CategoriesName.autoLayout.rawValue,
                 tag: 66
             )
         case 68:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsDependencyInjection(),
-                topic: CategoriesNames.dependencyInjection.rawValue,
+                topic: CategoriesName.dependencyInjection.rawValue,
                 tag: 67
             )
         case 69:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsInversionOfControl(),
-                topic: CategoriesNames.inversionOfControl.rawValue,
+                topic: CategoriesName.inversionOfControl.rawValue,
                 tag: 68
             )
         case 70:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getQuestionsServiceLocator(),
-                topic: CategoriesNames.serviceLocator.rawValue,
+                topic: CategoriesName.serviceLocator.rawValue,
                 tag: 69
             )
             
@@ -489,66 +489,66 @@ extension CategoriesCell {
     private func getTopicName(for tag: Int) -> String {
         
         switch tag {
-        case 1: return CategoriesNames.random20.rawValue
-        case 2: return CategoriesNames.random50.rawValue
-        case 3: return CategoriesNames.random100.rawValue
-        case 4: return CategoriesNames.deathMatch.rawValue
+        case 1: return CategoriesName.random20.rawValue
+        case 2: return CategoriesName.random50.rawValue
+        case 3: return CategoriesName.random100.rawValue
+        case 4: return CategoriesName.deathMatch.rawValue
             
-        case 12: return CategoriesNames.basic.rawValue
-        case 13: return CategoriesNames.integersAndBooleans.rawValue
-        case 14: return CategoriesNames.basicOperators.rawValue
-        case 15: return CategoriesNames.rangeOperators.rawValue
-        case 16: return CategoriesNames.booleanOperators.rawValue
-        case 17: return CategoriesNames.stringAndCharacters.rawValue
-        case 18: return CategoriesNames.collections.rawValue
-        case 19: return CategoriesNames.sets.rawValue
-        case 20: return CategoriesNames.dictionaries.rawValue
-        case 21: return CategoriesNames.tuples.rawValue
-        case 22: return CategoriesNames.controlFlow.rawValue
-        case 23: return CategoriesNames.optionals.rawValue
-        case 24: return CategoriesNames.functions.rawValue
-        case 25: return CategoriesNames.closures.rawValue
-        case 26: return CategoriesNames.enums.rawValue
-        case 27: return CategoriesNames.structuresAndClasses.rawValue
-        case 28: return CategoriesNames.properties.rawValue
-        case 29: return CategoriesNames.methods.rawValue
-        case 30: return CategoriesNames.subscripts.rawValue
-        case 31: return CategoriesNames.inheritance.rawValue
-        case 32: return CategoriesNames.initialization.rawValue
-        case 33: return CategoriesNames.deinitialization.rawValue
-        case 34: return CategoriesNames.errorHandling.rawValue
-        case 35: return CategoriesNames.concurrency.rawValue
-        case 36: return CategoriesNames.optionalChaining.rawValue
-        case 37: return CategoriesNames.arc.rawValue
-        case 38: return CategoriesNames.typeCasting.rawValue
-        case 39: return CategoriesNames.nestedTypes.rawValue
-        case 40: return CategoriesNames.extensions.rawValue
-        case 41: return CategoriesNames.opaqueType.rawValue
-        case 42: return CategoriesNames.generics.rawValue
-        case 43: return CategoriesNames.protocols.rawValue
-        case 44: return CategoriesNames.accessControl.rawValue
-        case 45: return CategoriesNames.memorySafety.rawValue
-        case 46: return CategoriesNames.advancedOperators.rawValue
+        case 12: return CategoriesName.basic.rawValue
+        case 13: return CategoriesName.integersAndBooleans.rawValue
+        case 14: return CategoriesName.basicOperators.rawValue
+        case 15: return CategoriesName.rangeOperators.rawValue
+        case 16: return CategoriesName.booleanOperators.rawValue
+        case 17: return CategoriesName.stringAndCharacters.rawValue
+        case 18: return CategoriesName.collections.rawValue
+        case 19: return CategoriesName.sets.rawValue
+        case 20: return CategoriesName.dictionaries.rawValue
+        case 21: return CategoriesName.tuples.rawValue
+        case 22: return CategoriesName.controlFlow.rawValue
+        case 23: return CategoriesName.optionals.rawValue
+        case 24: return CategoriesName.functions.rawValue
+        case 25: return CategoriesName.closures.rawValue
+        case 26: return CategoriesName.enums.rawValue
+        case 27: return CategoriesName.structuresAndClasses.rawValue
+        case 28: return CategoriesName.properties.rawValue
+        case 29: return CategoriesName.methods.rawValue
+        case 30: return CategoriesName.subscripts.rawValue
+        case 31: return CategoriesName.inheritance.rawValue
+        case 32: return CategoriesName.initialization.rawValue
+        case 33: return CategoriesName.deinitialization.rawValue
+        case 34: return CategoriesName.errorHandling.rawValue
+        case 35: return CategoriesName.concurrency.rawValue
+        case 36: return CategoriesName.optionalChaining.rawValue
+        case 37: return CategoriesName.arc.rawValue
+        case 38: return CategoriesName.typeCasting.rawValue
+        case 39: return CategoriesName.nestedTypes.rawValue
+        case 40: return CategoriesName.extensions.rawValue
+        case 41: return CategoriesName.opaqueType.rawValue
+        case 42: return CategoriesName.generics.rawValue
+        case 43: return CategoriesName.protocols.rawValue
+        case 44: return CategoriesName.accessControl.rawValue
+        case 45: return CategoriesName.memorySafety.rawValue
+        case 46: return CategoriesName.advancedOperators.rawValue
             
-        case 50: return CategoriesNames.patterns.rawValue
-        case 51: return CategoriesNames.creationalPatterns.rawValue
-        case 52: return CategoriesNames.structuralPatterns.rawValue
-        case 53: return CategoriesNames.behavioralPatterns.rawValue
-        case 54: return CategoriesNames.antipatterns.rawValue
+        case 50: return CategoriesName.patterns.rawValue
+        case 51: return CategoriesName.creationalPatterns.rawValue
+        case 52: return CategoriesName.structuralPatterns.rawValue
+        case 53: return CategoriesName.behavioralPatterns.rawValue
+        case 54: return CategoriesName.antipatterns.rawValue
             
-        case 60: return CategoriesNames.extremeProgramming.rawValue
-        case 61: return CategoriesNames.masvs.rawValue
-        case 65: return CategoriesNames.multithreading.rawValue
+        case 60: return CategoriesName.extremeProgramming.rawValue
+        case 61: return CategoriesName.masvs.rawValue
+        case 65: return CategoriesName.multithreading.rawValue
             
-        case 62: return CategoriesNames.controllerLifecycle.rawValue
-        case 63: return CategoriesNames.appLifecycle.rawValue
-        case 64: return CategoriesNames.boundsAndFrame.rawValue
-        case 66: return CategoriesNames.uiview.rawValue
-        case 67: return CategoriesNames.autoLayout.rawValue
+        case 62: return CategoriesName.controllerLifecycle.rawValue
+        case 63: return CategoriesName.appLifecycle.rawValue
+        case 64: return CategoriesName.boundsAndFrame.rawValue
+        case 66: return CategoriesName.uiview.rawValue
+        case 67: return CategoriesName.autoLayout.rawValue
             
-        case 68: return CategoriesNames.dependencyInjection.rawValue
-        case 69: return CategoriesNames.inversionOfControl.rawValue
-        case 70: return CategoriesNames.serviceLocator.rawValue
+        case 68: return CategoriesName.dependencyInjection.rawValue
+        case 69: return CategoriesName.inversionOfControl.rawValue
+        case 70: return CategoriesName.serviceLocator.rawValue
             
         default:
             return ""

@@ -68,7 +68,7 @@ class TopicViewController: UIViewController {
             
             UIView.animate(withDuration: 0.3) {
                 self.successRating.alpha = 1
-                self.successRating.text = "Закреплено: \(self.progress.getProgressCounter(for: SelectedTopic.shared.topic.topicName))%"
+                self.successRating.text = "Закреплено: \(self.progress.getProgressPercent(for: SelectedTopic.shared.topic.topicName))%"
             }
 		}
 	}
