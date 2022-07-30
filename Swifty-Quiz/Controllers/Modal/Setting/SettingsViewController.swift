@@ -12,13 +12,13 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet private var settingsView: UIView!
     @IBOutlet private weak var dismissButton: RoundCornerButton!
-    
     @IBOutlet private weak var questionOrderControl: UISegmentedControl!
     @IBOutlet private weak var questionTextControl: UISegmentedControl!
     @IBOutlet private weak var helpAfterWrongAnswerControl: UISegmentedControl!
     @IBOutlet private weak var changeAfterHelpControl: UISegmentedControl!
     @IBOutlet private weak var soundControl: UISegmentedControl!
     @IBOutlet private var allControls: [UISegmentedControl]!
+    @IBOutlet private weak var separatorHeightConstraint: NSLayoutConstraint!
     
     @IBAction func settingSwitchSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
@@ -52,12 +52,17 @@ class SettingsViewController: UIViewController {
         setupControlsTintColors()
         setupTargets()
         setupInitialControlsState()
+        setupSeparator()
     }
     
     private func setupViewCornerCurve() {
         if #available(iOS 13.0, *) {
             settingsView.layer.cornerCurve = .continuous
         } else {}
+    }
+    
+    private func setupSeparator() {
+        separatorHeightConstraint.constant = 1 / UIScreen.main.scale
     }
 }
 

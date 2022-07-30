@@ -7,7 +7,8 @@ import StoreKit
 
 class InitialViewController: UIViewController {
 
-	@IBOutlet private weak var lastGameTitle: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var lastGameTitle: UILabel!
 	@IBOutlet private weak var contentCenter: NSLayoutConstraint!
     @IBOutlet private weak var donationButton: UIButton!
 	@IBOutlet private weak var totalQuestionsLabel: UILabel!
@@ -59,21 +60,37 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
 
     private func setup() {
-        setupInformation()
-        setupInterface()
-    }
-    
-    private func setupInformation() {
-		setupStartQuestionSet()
-		updateLastGameInfo()
-		updateTotalQuestionCounter()
-	}
-    
-    private func setupInterface() {
+        setupStartQuestionSet()
+        updateLastGameInfo()
+        updateTotalQuestionLabel()
         updateContinueButton()
         addShadows()
         imageTuning(button: topicPicker, position: .center)
         imageTuning(button: logoButton, position: .top)
+        updateScoreLabel()
+    }
+    
+    private func updateScoreLabel() {
+        let records = Game.shared.getRecordsList()
+        var score = 0
+        
+        records.forEach { record in
+            score += record.score ?? 0
+        }
+        
+        UIView.transition(
+            with: scoreLabel,
+            duration: 0.4,
+            options: .transitionFlipFromLeft,
+            animations: { [weak self] in
+                self?.scoreLabel.text = "\(score)"
+            },
+            completion: nil
+        )
+    }
+    
+    private func updateTotalQuestionLabel() {
+        totalQuestionsLabel.text = "\(RandomSetManager.showAllQuestionsNumber())"
     }
 }
 
@@ -113,11 +130,6 @@ extension InitialViewController {
             changeLabelWithAnimation(label: lastScore, text: "Правильных ответов: ")
         }
     }
-
-    /// Показываем общее количество вопросов в игре
-    private func updateTotalQuestionCounter() {
-        totalQuestionsLabel.text = "Вопросов в игре: \(RandomSetManager.showAllQuestionsNumber())"
-    }
 }
 
 
@@ -126,6 +138,8 @@ extension InitialViewController {
 
 	/// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
+        updateScoreLabel()
+        
 		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
 			if continueGameButton.isHidden == true {
                 SoundPlayer.shared.playSound(sound: .showContinueButton)

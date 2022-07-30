@@ -12,20 +12,19 @@ protocol TopicViewControllerDelegate: AnyObject {
 
 class TopicViewController: UIViewController {
 	
-	@IBOutlet weak var headerHeight: NSLayoutConstraint!
-	@IBOutlet weak var titleTopMargin: NSLayoutConstraint!
-	@IBOutlet weak var backButton: UIButton!
-	@IBOutlet weak var numberOfQuestions: UILabel!
-	@IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var successRating: UILabel!
+    @IBOutlet private weak var mainTitleLabel: UILabel!
+    @IBOutlet private weak var headerHeight: NSLayoutConstraint!
+	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
+	@IBOutlet private weak var backButton: UIButton!
+	@IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var successRating: UILabel!
     
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		cellRegistration()
-		setDefaultNumberOfQuestions()
+        setup()
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -55,16 +54,21 @@ class TopicViewController: UIViewController {
 		SoundPlayer.shared.playSound(sound: .buttonTapped)
 		dismiss(animated: true, completion: nil)
 	}
+    
+    private func setup() {
+        cellRegistration()
+        setupDefaultNumberOfQuestions()
+    }
 
-	func setDefaultNumberOfQuestions() {
+	func setupDefaultNumberOfQuestions() {
 		if SelectedTopic.shared.topic.topicTag < 10 {
-			numberOfQuestions.text = SelectedTopic.shared.topic.topicName
+            mainTitleLabel.text = SelectedTopic.shared.topic.topicName
             
             UIView.animate(withDuration: 0.3) {
                 self.successRating.alpha = 0
             }
 		} else {
-			numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+            mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
             
             UIView.animate(withDuration: 0.3) {
                 self.successRating.alpha = 1
@@ -138,9 +142,9 @@ extension TopicViewController: CategoriesCellDelegate {
 
 	func updateSelectedTopic() {
 		if SelectedTopic.shared.topic.topicTag < 10 {
-			numberOfQuestions.text = SelectedTopic.shared.topic.topicName
+            mainTitleLabel.text = SelectedTopic.shared.topic.topicName
 		} else {
-			numberOfQuestions.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
+            mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
 		}
 	}
     

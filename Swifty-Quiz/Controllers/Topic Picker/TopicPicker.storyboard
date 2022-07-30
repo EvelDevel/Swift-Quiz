@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="89g-57-hW8">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="89g-57-hW8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,22 +14,16 @@
             <objects>
                 <viewController id="89g-57-hW8" customClass="TopicViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uag-PD-PKo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZC-aw-Mio" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="45" width="414" height="110"/>
+                                <rect key="frame" x="0.0" y="45" width="390" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-Tb-uuD">
-                                        <rect key="frame" x="16" y="50" width="382" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Количество вопросов: 0" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-bL-oyi">
-                                        <rect key="frame" x="16" y="79" width="142" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="16" y="50" width="358" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjI-qX-KXp">
@@ -45,41 +39,28 @@
                                             <action selector="dismissTopicView:" destination="89g-57-hW8" eventType="touchUpInside" id="zHA-RU-JCa"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Закреплено: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-O9-bzc">
-                                        <rect key="frame" x="321" y="79" width="77" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Закреплено: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-O9-bzc">
+                                        <rect key="frame" x="16" y="79.666666666666671" width="77" height="15"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="1yo-ZR-jZh"/>
-                                    <constraint firstItem="Igd-bL-oyi" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="Gb7-HB-pgU"/>
-                                    <constraint firstItem="y79-O9-bzc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Igd-bL-oyi" secondAttribute="trailing" constant="25" id="J6X-Pd-rrx"/>
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="top" secondItem="tjI-qX-KXp" secondAttribute="bottom" constant="15" id="OVn-57-9EC"/>
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="top" secondItem="tZC-aw-Mio" secondAttribute="top" constant="50" id="QGM-MW-5Ag"/>
-                                    <constraint firstAttribute="trailing" secondItem="fIj-Tb-uuD" secondAttribute="trailing" constant="16" id="RZb-u0-ih6"/>
                                     <constraint firstItem="tjI-qX-KXp" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" id="Rrz-0x-GZy"/>
-                                    <constraint firstItem="y79-O9-bzc" firstAttribute="centerY" secondItem="Igd-bL-oyi" secondAttribute="centerY" id="jmT-Pa-652"/>
-                                    <constraint firstAttribute="height" constant="110" id="rDC-uH-dL3"/>
-                                    <constraint firstItem="Igd-bL-oyi" firstAttribute="top" secondItem="fIj-Tb-uuD" secondAttribute="bottom" constant="5" id="xyY-Nh-jDt"/>
-                                    <constraint firstAttribute="trailing" secondItem="y79-O9-bzc" secondAttribute="trailing" constant="16" id="yuv-HY-sW3"/>
+                                    <constraint firstAttribute="trailing" secondItem="fIj-Tb-uuD" secondAttribute="trailing" constant="16" id="UoT-dx-zLP"/>
+                                    <constraint firstItem="y79-O9-bzc" firstAttribute="top" secondItem="fIj-Tb-uuD" secondAttribute="bottom" constant="8" id="YLt-aj-1N4"/>
+                                    <constraint firstAttribute="height" constant="125" id="rDC-uH-dL3"/>
+                                    <constraint firstItem="y79-O9-bzc" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="vCh-eu-4nP"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="98N-qV-2J9" userLabel="Categories">
-                                <rect key="frame" x="0.0" y="155" width="414" height="741"/>
+                                <rect key="frame" x="0.0" y="170" width="390" height="674"/>
                                 <color key="backgroundColor" name="MainBackground"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCategory" id="YpY-Mg-zBE">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YpY-Mg-zBE" id="sLN-9j-kIm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="89g-57-hW8" id="QGI-Z1-qZL"/>
                                     <outlet property="delegate" destination="89g-57-hW8" id="Y6N-oi-3GO"/>
@@ -102,7 +83,7 @@
                     <connections>
                         <outlet property="backButton" destination="tjI-qX-KXp" id="uRq-tq-F5A"/>
                         <outlet property="headerHeight" destination="rDC-uH-dL3" id="AYX-pY-MjH"/>
-                        <outlet property="numberOfQuestions" destination="Igd-bL-oyi" id="o1r-sw-Ebf"/>
+                        <outlet property="mainTitleLabel" destination="fIj-Tb-uuD" id="PC3-NJ-blp"/>
                         <outlet property="successRating" destination="y79-O9-bzc" id="W53-Vt-2DO"/>
                         <outlet property="tableView" destination="98N-qV-2J9" id="VgJ-V6-wq5"/>
                         <outlet property="titleTopMargin" destination="QGM-MW-5Ag" id="zyn-Sb-Raz"/>
@@ -117,7 +98,10 @@
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>
         <namedColor name="MainBackground">
-            <color red="0.95662969350000004" green="0.96071344609999998" blue="0.96887880559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

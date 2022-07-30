@@ -329,12 +329,23 @@
                                     <constraint firstAttribute="width" constant="288" id="CB1-jd-ZYu"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
-                                <rect key="frame" x="142.5" y="625" width="90" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-N4-XJ3" userLabel="ScoreLabelsStack">
+                                <rect key="frame" x="128.5" y="632" width="118" height="12"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счет: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-Bw-pf0">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5801244112" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
+                                        <rect key="frame" x="56" y="0.0" width="62" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <color key="textColor" name="CustomGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
                                 <rect key="frame" x="291.5" y="611" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -351,18 +362,37 @@
                                     <segue destination="fIJ-8O-b7h" kind="presentation" identifier="toDonation" animates="NO" modalPresentationStyle="overFullScreen" id="B42-l4-R3R"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-q6-kNi" userLabel="TotalQuestionsLabel">
+                                <rect key="frame" x="129" y="616" width="117.5" height="12"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-s7-SjL">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1418 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
+                                        <rect key="frame" x="91" y="0.0" width="26.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <color key="textColor" name="CustomGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="4PP-v1-kH7" secondAttribute="bottom" constant="30" id="C0F-fT-JC0"/>
-                            <constraint firstItem="kaM-Au-o8t" firstAttribute="centerY" secondItem="DQZ-bR-P5Q" secondAttribute="centerY" id="DpB-GN-cxx"/>
+                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="top" secondItem="kaM-Au-o8t" secondAttribute="top" constant="5" id="E3o-IB-NzJ"/>
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="kaM-Au-o8t" secondAttribute="bottom" constant="16" id="FHp-ch-1gq"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
-                            <constraint firstItem="DQZ-bR-P5Q" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="TO0-gY-iRv"/>
+                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="cfo-Yn-01r"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="kaM-Au-o8t" firstAttribute="trailing" secondItem="mO1-NM-9Qp" secondAttribute="trailing" id="ij7-zK-GlG"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="DQZ-bR-P5Q" secondAttribute="bottom" constant="30" id="uLq-MP-k4C"/>
+                            <constraint firstItem="dYf-N4-XJ3" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="prP-OW-Z0a"/>
+                            <constraint firstItem="dYf-N4-XJ3" firstAttribute="top" secondItem="Yvf-q6-kNi" secondAttribute="bottom" constant="4" id="uaj-XJ-LFb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
@@ -374,6 +404,7 @@
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
                         <outlet property="logoButton" destination="rPr-C7-FGY" id="A8u-Ac-tgU"/>
+                        <outlet property="scoreLabel" destination="z6w-8R-QcX" id="evI-n4-haz"/>
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
@@ -445,11 +476,17 @@
         <image name="RightChevroneFill" width="50" height="50"/>
         <image name="logo" width="409" height="140"/>
         <image name="n-gear-lighter" width="89" height="96"/>
+        <namedColor name="CustomGreen">
+            <color red="0.14499999582767487" green="0.79400002956390381" blue="0.41699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellow">
             <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
