@@ -379,6 +379,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-wB-HEB" userLabel="ShareButton">
+                                <rect key="frame" x="107.5" y="613" width="160" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="042-Hx-5qP"/>
+                                    <constraint firstAttribute="width" constant="160" id="8wL-3p-saw"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="IYa-9S-RiR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                         <color key="backgroundColor" name="MainBackground"/>
@@ -388,11 +399,13 @@
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="kaM-Au-o8t" secondAttribute="bottom" constant="16" id="FHp-ch-1gq"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
+                            <constraint firstItem="H2o-wB-HEB" firstAttribute="centerX" secondItem="dYf-N4-XJ3" secondAttribute="centerX" id="Vmw-JK-d22"/>
                             <constraint firstItem="Yvf-q6-kNi" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="cfo-Yn-01r"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="kaM-Au-o8t" firstAttribute="trailing" secondItem="mO1-NM-9Qp" secondAttribute="trailing" id="ij7-zK-GlG"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="prP-OW-Z0a"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="top" secondItem="Yvf-q6-kNi" secondAttribute="bottom" constant="4" id="uaj-XJ-LFb"/>
+                            <constraint firstItem="H2o-wB-HEB" firstAttribute="centerY" secondItem="dYf-N4-XJ3" secondAttribute="centerY" id="yiU-Sf-6ar"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
@@ -406,6 +419,7 @@
                         <outlet property="logoButton" destination="rPr-C7-FGY" id="A8u-Ac-tgU"/>
                         <outlet property="scoreLabel" destination="z6w-8R-QcX" id="evI-n4-haz"/>
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
+                        <outlet property="shareButton" destination="H2o-wB-HEB" id="tD7-3L-5RK"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
                         <outlet property="totalQuestionsLabel" destination="DQZ-bR-P5Q" id="6Z6-p2-RmZ"/>
@@ -420,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-MD-aOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.55072463768118" y="111.83035714285714"/>
+            <point key="canvasLocation" x="298.39999999999998" y="111.0944527736132"/>
         </scene>
         <!--TopicPicker-->
         <scene sceneID="AtU-yC-cOA">
