@@ -89,7 +89,7 @@ extension RecordsViewController {
 			/// То есть если мы удаляем все игры до этой игры - ее можно будет доиграть
 			/// Если захочется сделать возможность доигрывать все игры незавершенные (после удаления предыдущей сверху) - закомментировать
 			if indexPath.row == 0 {
-				Game.shared.changeContinueStatus()
+				Game.shared.updateContinueStatus()
 			}
 		}
 		reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2371389396, blue: 0.1065657165, alpha: 0.5)

@@ -7,7 +7,6 @@ import UIKit
 protocol CategoriesCellDelegate: AnyObject {
     func updateSelectedTopic()
     func updateSuccessRate(rate: Int)
-    func removeSuccessRateLabel()
     func showAlert()
 }
 
@@ -82,11 +81,9 @@ class CategoriesCell: UITableViewCell {
                             )
                         ).progressRate
                     )
-                } else {
-                    self.delegate?.removeSuccessRateLabel()
                 }
                 
-                Game.shared.changeContinueStatus()
+                Game.shared.updateContinueStatus()
                 self.currentPosition = sender.tag - 1
             }
         }

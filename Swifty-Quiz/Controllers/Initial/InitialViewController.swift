@@ -47,6 +47,7 @@ class InitialViewController: UIViewController {
 	
 	override func viewWillLayoutSubviews() {
 		updateLastGameLabel()
+        updateScoreLabel()
 	}
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,18 +61,17 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
 
     private func setup() {
-        setupStartQuestionSet()
+        setupCurrentQuestionSet()
         updateLastGameInfo()
         updateTotalQuestionLabel()
         updateContinueButton()
         addShadows()
         imageTuning(button: topicPicker, position: .center)
         imageTuning(button: logoButton, position: .top)
-        updateScoreLabel()
     }
     
     private func updateScoreLabel() {
-        let records = Game.shared.getRecordsList()
+        let records = recordCaretaker.getRecordsList()
         var score = 0
         
         records.forEach { record in
@@ -80,8 +80,8 @@ extension InitialViewController {
         
         UIView.transition(
             with: scoreLabel,
-            duration: 0.4,
-            options: .transitionFlipFromLeft,
+            duration: 0.3,
+            options: .transitionCrossDissolve,
             animations: { [weak self] in
                 self?.scoreLabel.text = "\(score)"
             },
@@ -98,21 +98,28 @@ extension InitialViewController {
 // MARK: Information
 extension InitialViewController {
     
-    /// Загружаем дефолтный сет
-    private func setupStartQuestionSet() {
-        if SelectedTopic.shared.topic.questionSet.isEmpty || Game.shared.settings.appLastVersion != currentAppVersion {
+    private func setupCurrentQuestionSet() {
+        let lastVersion = Game.shared.settings.appLastVersion
+        let appVersionHasChange = lastVersion != currentAppVersion
+        let isFirstTime = SelectedTopic.shared.topic.questionSet.isEmpty
+        
+        if isFirstTime || appVersionHasChange {
             let newSet = TopicOperator.getTheBasics()
-            SelectedTopic.shared.saveQuestionSet(newSet, topic: "Основы", tag: 11)
+            
+            SelectedTopic.shared.saveQuestionSet(
+                newSet, topic: "Основы", tag: 11
+            )
+            
             selectedTopic.text = "Основы"
-            Game.shared.changeContinueStatus()
+            Game.shared.updateContinueStatus()
         } else {
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
         }
     }
 
-    /// Устанавливаем информацию о последней игре
     private func updateLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
+        
         if records.count != 0 {
             let category = records.first?.topic ?? ""
             let played = records.first?.playedNum ?? 0
@@ -121,13 +128,35 @@ extension InitialViewController {
             let correct = records.first?.score ?? 0
             let roundedPercents = String(format: "%.1f", records.first?.percentOfCorrectAnswer ?? 0)
           
-            changeLabelWithAnimation(label: lastTopic, text: "Категория: \(category)")
-            changeLabelWithAnimation(label: totalQuestions, text: "Вопросы: \(played) из \(total) (подсказок: \(help))")
-            changeLabelWithAnimation(label: lastScore, text: "Правильных ответов: \(correct) (\(roundedPercents)%)")
+            changeLabelWithAnimation(
+                label: lastTopic,
+                text: "\(Constants.category)\(category)"
+            )
+            
+            changeLabelWithAnimation(
+                label: totalQuestions,
+                text: "\(Constants.questionsText)\(played) из \(total) (\(Constants.hintsText)\(help))"
+            )
+            
+            changeLabelWithAnimation(
+                label: lastScore,
+                text: "\(Constants.correctAnswers)\(correct) (\(roundedPercents)%)"
+            )
         } else {
-            changeLabelWithAnimation(label: lastTopic, text: "Категория: ")
-            changeLabelWithAnimation(label: totalQuestions, text: "Вопросы: ")
-            changeLabelWithAnimation(label: lastScore, text: "Правильных ответов: ")
+            changeLabelWithAnimation(
+                label: lastTopic,
+                text: Constants.category
+            )
+            
+            changeLabelWithAnimation(
+                label: totalQuestions,
+                text: Constants.questionsText
+            )
+            
+            changeLabelWithAnimation(
+                label: lastScore,
+                text: Constants.correctAnswers
+            )
         }
     }
 }
@@ -138,9 +167,7 @@ extension InitialViewController {
 
 	/// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
-        updateScoreLabel()
-        
-		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
+        if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
 			if continueGameButton.isHidden == true {
                 SoundPlayer.shared.playSound(sound: .showContinueButton)
             }
@@ -252,21 +279,25 @@ extension InitialViewController: GameViewControllerDelegate,
             label: lastTopic,
             text: "Категория: \(result.topic)"
         )
+        
         changeLabelWithAnimation(
             label: totalQuestions,
             text: "Вопросы: \(result.playedNum) из \(result.totalQuestion) (подсказок: \(result.helpCounter))"
         )
+        
         changeLabelWithAnimation(
             label: lastScore,
             text: "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
         )
+        
+        // updateScoreLabel()
 	}
 	
 	func updateInitialView() {
 		updateContinueButton()
 	}
     
-	func selectedCategory() {
+	func categoryWasSelected() {
 		updateLastGameLabel()
 		selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
 	}
@@ -278,7 +309,11 @@ extension InitialViewController: GameViewControllerDelegate,
     
 	func showReviewRequest() {
 		let recordsNumber = Game.shared.records.count
-		if recordsNumber == 50 || recordsNumber == 150 {
+		if recordsNumber == 50
+            || recordsNumber == 150
+            || recordsNumber == 250
+            || recordsNumber == 350 {
+            
 			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
 				SKStoreReviewController.requestReview()
 			}

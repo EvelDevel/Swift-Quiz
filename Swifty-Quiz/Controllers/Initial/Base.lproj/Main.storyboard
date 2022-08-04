@@ -330,7 +330,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-N4-XJ3" userLabel="ScoreLabelsStack">
-                                <rect key="frame" x="128.5" y="632" width="118" height="12"/>
+                                <rect key="frame" x="143.5" y="633" width="88" height="12"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счет: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-Bw-pf0">
                                         <rect key="frame" x="0.0" y="0.0" width="52" height="12"/>
@@ -338,8 +338,8 @@
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5801244112" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
-                                        <rect key="frame" x="56" y="0.0" width="62" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
+                                        <rect key="frame" x="56" y="0.0" width="32" height="12"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                         <color key="textColor" name="CustomGreen"/>
                                         <nil key="highlightedColor"/>
@@ -363,7 +363,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-q6-kNi" userLabel="TotalQuestionsLabel">
-                                <rect key="frame" x="129" y="616" width="117.5" height="12"/>
+                                <rect key="frame" x="129" y="617" width="117.5" height="12"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-s7-SjL">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="12"/>
@@ -384,7 +384,7 @@
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="4PP-v1-kH7" secondAttribute="bottom" constant="30" id="C0F-fT-JC0"/>
-                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="top" secondItem="kaM-Au-o8t" secondAttribute="top" constant="5" id="E3o-IB-NzJ"/>
+                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="top" secondItem="kaM-Au-o8t" secondAttribute="top" constant="6" id="E3o-IB-NzJ"/>
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="kaM-Au-o8t" secondAttribute="bottom" constant="16" id="FHp-ch-1gq"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>

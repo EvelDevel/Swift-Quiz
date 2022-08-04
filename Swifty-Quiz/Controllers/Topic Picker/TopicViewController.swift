@@ -6,18 +6,21 @@ import UIKit
 import MessageUI
 
 protocol TopicViewControllerDelegate: AnyObject {
-	func selectedCategory()
+	func categoryWasSelected()
 	func updateInitialView()
 }
 
 class TopicViewController: UIViewController {
 	
+    @IBOutlet private weak var countValueLabel: UILabel!
+    @IBOutlet private weak var countTextLabel: UILabel!
     @IBOutlet private weak var mainTitleLabel: UILabel!
     @IBOutlet private weak var headerHeight: NSLayoutConstraint!
 	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
 	@IBOutlet private weak var backButton: UIButton!
 	@IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var successRating: UILabel!
+    @IBOutlet private weak var successValueLabel: UILabel!
+    @IBOutlet private weak var successTextLabel: UILabel!
     
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
@@ -28,13 +31,8 @@ class TopicViewController: UIViewController {
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
-		delegate?.selectedCategory()
-        
-        let currentAppVersion = Bundle.main.object(
-            forInfoDictionaryKey: "CFBundleShortVersionString"
-        ) as? String ?? ""
-        
-        Game.shared.saveAppVersion(version: currentAppVersion)
+		delegate?.categoryWasSelected()
+        saveAppVersion()
 	}
 
 	override func viewDidDisappear(_ animated: Bool) {
@@ -57,40 +55,91 @@ class TopicViewController: UIViewController {
     
     private func setup() {
         cellRegistration()
-        setupDefaultNumberOfQuestions()
+        setupGameInformationUI()
     }
 
-	func setupDefaultNumberOfQuestions() {
-		if SelectedTopic.shared.topic.topicTag < 10 {
-            mainTitleLabel.text = SelectedTopic.shared.topic.topicName
-            
-            UIView.animate(withDuration: 0.3) {
-                self.successRating.alpha = 0
-            }
+	func setupGameInformationUI() {
+        let tag = SelectedTopic.shared.topic.topicTag
+        
+		if tag < 10 {
+            setRandomGameUI()
 		} else {
-            mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
-            
-            UIView.animate(withDuration: 0.3) {
-                self.successRating.alpha = 1
-                self.successRating.text = "Закреплено: \(self.progress.getProgress(for: SelectedTopic.shared.topic.topicName).progressRate)%"
-            }
+            setCategoryGameUI()
 		}
 	}
+    
+    private func setRandomGameUI() {
+        mainTitleLabel.text = SelectedTopic.shared.topic.topicName
+        let total = SelectedTopic.shared.topic.questionSet.count
+        
+        UIView.animate(withDuration: 0.3) {
+            self.successValueLabel.text = self.getRandomGamesCounter()
+            self.countValueLabel.text = "\(total)"
+            self.successTextLabel.text = Constants.playedCounter
+            self.countTextLabel.text = Constants.totalQuestions
+        }
+    }
+    
+    private func setCategoryGameUI() {
+        mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName)"
+        successTextLabel.text = Constants.learnedText
+        
+        UIView.animate(withDuration: 0.3) {
+            self.successValueLabel.text = "\(self.progress.getProgress(for: SelectedTopic.shared.topic.topicName).progressRate)%"
+            self.countValueLabel.text = "\(SelectedTopic.shared.topic.questionSet.count)"
+        }
+    }
 
 	func showAlertIfNeeded() {
-		/// Показываем алерт о том, что есть незавершенная игра, чтобы пользователь не сбросил ее
-		/// Проверяем, что у нас есть незавершенная игра, проверяем, что алерт еще не был показан
-		if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-			if Game.shared.showTopicAlertStatus() != true {
-				let alert = UIAlertController(title: "Незавершенная игра", message: "Если вы выберете другую тему или ответите хотя бы на один вопрос новой игры, вы потеряете возможность закончить незавершенную игру", preferredStyle: .alert)
-				let okAction = UIAlertAction(title: "Продолжить", style: .default, handler: { action in })
+		if Game.shared.records.count != 0
+            && Game.shared.records[0].continueGameStatus == true {
+			
+            if Game.shared.showTopicAlertStatus() != true {
+				let alert = UIAlertController(
+                    title: "Незавершенная игра",
+                    message: "Если вы выберете другую тему или ответите хотя бы на один вопрос новой игры, вы потеряете возможность закончить незавершенную игру",
+                    preferredStyle: .alert
+                )
+                
+				let okAction = UIAlertAction(
+                    title: "Продолжить",
+                    style: .default,
+                    handler: nil
+                )
+                
 				alert.addAction(okAction)
-				present(alert, animated: true, completion: nil)
+				
+                present(
+                    alert,
+                    animated: true,
+                    completion: nil
+                )
 			}
-			/// Выставляем что показали алерт, и больше не показываем до перезапуска приложения
+            
 			Game.shared.setThatWeShowedAlert()
 		}
 	}
+    
+    private func saveAppVersion() {
+        let currentAppVersion = Bundle.main.object(
+            forInfoDictionaryKey: "CFBundleShortVersionString"
+        ) as? String ?? ""
+        
+        Game.shared.saveAppVersion(version: currentAppVersion)
+    }
+    
+    private func getRandomGamesCounter() -> String {
+        let records = Game.shared.getRecordsList()
+        var counter = 0
+        
+        records.forEach { record in
+            if record.topic == SelectedTopic.shared.topic.topicName {
+                counter += 1
+            }
+        }
+        
+        return "\(counter)"
+    }
 }
 
 
@@ -141,23 +190,13 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 extension TopicViewController: CategoriesCellDelegate {
 
 	func updateSelectedTopic() {
-		if SelectedTopic.shared.topic.topicTag < 10 {
-            mainTitleLabel.text = SelectedTopic.shared.topic.topicName
-		} else {
-            mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName) (\(SelectedTopic.shared.topic.questionSet.count))"
-		}
+        setupGameInformationUI()
 	}
     
     func updateSuccessRate(rate: Int) {
         UIView.animate(withDuration: 0.3) {
-            self.successRating.alpha = 1
-            self.successRating.text = "Закреплено: \(rate)%"
-        }
-    }
-    
-    func removeSuccessRateLabel() {
-        UIView.animate(withDuration: 0.3) {
-            self.successRating.alpha = 0
+            self.successValueLabel.alpha = 1
+            self.successValueLabel.text = "\(rate)%"
         }
     }
 

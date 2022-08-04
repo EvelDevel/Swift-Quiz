@@ -11,4 +11,13 @@ import Foundation
 class Constants {
     
     static var tookHint = "Взяли подсказку"
+    
+    static var playedCounter = "Сыграно раз:"
+    static var totalQuestions = "Вопросов в теме:"
+    static var learnedText = "Тема закреплена на:"
+    
+    static var category = "Категория: "
+    static var correctAnswers = "Правильных ответов: "
+    static var questionsText = "Вопросы: "
+    static var hintsText = "подсказок: "
 }

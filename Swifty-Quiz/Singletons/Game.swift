@@ -76,7 +76,7 @@ extension Game {
         self.records.remove(at: index)
     }
     
-    func changeContinueStatus() {
+    func updateContinueStatus() {
         if self.records.count != 0 {
             var lastRecord = self.records[0]
             lastRecord.continueGameStatus = false

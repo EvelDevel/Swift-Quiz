@@ -39,12 +39,40 @@
                                             <action selector="dismissTopicView:" destination="89g-57-hW8" eventType="touchUpInside" id="zHA-RU-JCa"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Закреплено: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-O9-bzc">
-                                        <rect key="frame" x="16" y="79.666666666666671" width="77" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" name="TextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R7k-tt-fxw" userLabel="LearnedLabelStack">
+                                        <rect key="frame" x="16" y="81.666666666666671" width="105" height="14.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Закреплено: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuc-oA-G5T">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="10%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-O9-bzc">
+                                                <rect key="frame" x="79" y="0.0" width="26" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" name="CustomGreen"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9KM-7j-y8D" userLabel="CounterLabel">
+                                        <rect key="frame" x="297" y="81.666666666666671" width="77" height="14.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Вопросов:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-HA-2sg">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-HS-JQg">
+                                                <rect key="frame" x="63" y="0.0" width="14" height="14.333333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" name="CustomGreen"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
@@ -53,9 +81,11 @@
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="top" secondItem="tZC-aw-Mio" secondAttribute="top" constant="50" id="QGM-MW-5Ag"/>
                                     <constraint firstItem="tjI-qX-KXp" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" id="Rrz-0x-GZy"/>
                                     <constraint firstAttribute="trailing" secondItem="fIj-Tb-uuD" secondAttribute="trailing" constant="16" id="UoT-dx-zLP"/>
-                                    <constraint firstItem="y79-O9-bzc" firstAttribute="top" secondItem="fIj-Tb-uuD" secondAttribute="bottom" constant="8" id="YLt-aj-1N4"/>
+                                    <constraint firstItem="R7k-tt-fxw" firstAttribute="top" secondItem="fIj-Tb-uuD" secondAttribute="bottom" constant="10" id="WPR-PC-JBT"/>
+                                    <constraint firstItem="R7k-tt-fxw" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="cXe-a9-whe"/>
+                                    <constraint firstAttribute="trailing" secondItem="9KM-7j-y8D" secondAttribute="trailing" constant="16" id="f8r-Ng-wQI"/>
+                                    <constraint firstItem="9KM-7j-y8D" firstAttribute="centerY" secondItem="R7k-tt-fxw" secondAttribute="centerY" id="pm1-fx-t9A"/>
                                     <constraint firstAttribute="height" constant="125" id="rDC-uH-dL3"/>
-                                    <constraint firstItem="y79-O9-bzc" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="vCh-eu-4nP"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="98N-qV-2J9" userLabel="Categories">
@@ -82,9 +112,12 @@
                     <navigationItem key="navigationItem" id="bAn-7T-rcs"/>
                     <connections>
                         <outlet property="backButton" destination="tjI-qX-KXp" id="uRq-tq-F5A"/>
+                        <outlet property="countTextLabel" destination="Jcx-HA-2sg" id="YU0-MR-TKa"/>
+                        <outlet property="countValueLabel" destination="6SV-HS-JQg" id="mpJ-HQ-2Kh"/>
                         <outlet property="headerHeight" destination="rDC-uH-dL3" id="AYX-pY-MjH"/>
                         <outlet property="mainTitleLabel" destination="fIj-Tb-uuD" id="PC3-NJ-blp"/>
-                        <outlet property="successRating" destination="y79-O9-bzc" id="W53-Vt-2DO"/>
+                        <outlet property="successTextLabel" destination="xuc-oA-G5T" id="nzf-dh-8tL"/>
+                        <outlet property="successValueLabel" destination="y79-O9-bzc" id="W53-Vt-2DO"/>
                         <outlet property="tableView" destination="98N-qV-2J9" id="VgJ-V6-wq5"/>
                         <outlet property="titleTopMargin" destination="QGM-MW-5Ag" id="zyn-Sb-Raz"/>
                     </connections>
@@ -97,6 +130,9 @@
     <resources>
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>
+        <namedColor name="CustomGreen">
+            <color red="0.14499999582767487" green="0.79400002956390381" blue="0.41699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

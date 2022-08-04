@@ -348,17 +348,6 @@ extension GameViewController {
                 continueStatus = false
             }
         }
-        
-        delegate?.didEndGame(
-            GameResult(
-                result: score,
-                totalQuestion: localQuestionSet.count,
-                percentOfCorrect: updatePercentage(),
-                topic: topic,
-                helpCounter: helpCounter,
-                playedNum: currentQuestionIndex
-            )
-        )
 
         let record = Record(
             date: Date(),
@@ -379,6 +368,17 @@ extension GameViewController {
         } else {
             Game.shared.addRecord(record)
         }
+        
+        delegate?.didEndGame(
+            GameResult(
+                result: score,
+                totalQuestion: localQuestionSet.count,
+                percentOfCorrect: updatePercentage(),
+                topic: topic,
+                helpCounter: helpCounter,
+                playedNum: currentQuestionIndex
+            )
+        )
         
         /// Detect iOS updates (-> refresh game)
         let currentAppVersion = Bundle.main.object(
