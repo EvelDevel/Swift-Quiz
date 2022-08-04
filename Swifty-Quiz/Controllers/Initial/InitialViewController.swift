@@ -158,6 +158,8 @@ extension InitialViewController {
                 text: Constants.correctAnswers
             )
         }
+        
+        updateScoreLabel()
     }
 }
 
@@ -180,6 +182,8 @@ extension InitialViewController {
 			contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
 			continueGameButton.isHidden = true
 		}
+        
+        updateScoreLabel()
 	}
 	
 	/// Показываем корректный заголовок последней игры
@@ -191,6 +195,8 @@ extension InitialViewController {
 				lastGameTitle.text = "Информация о текущей игре: "
 			}
 		}
+        
+        updateScoreLabel()
 	}
 
 	/// Добавляем тени на элементы
@@ -289,8 +295,6 @@ extension InitialViewController: GameViewControllerDelegate,
             label: lastScore,
             text: "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
         )
-        
-        // updateScoreLabel()
 	}
 	
 	func updateInitialView() {

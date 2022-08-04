@@ -253,8 +253,8 @@ class SetsSet {
                      image: "",
                      optionA: "isSubset(of:)",
                      optionB: "isSuperset(of:)",
-                     optionC: "isStrictSubset(of:)",
-                     optionD: "isStrictSuperset(of:)",
+                     optionC: "",
+                     optionD: "",
                      questionId: 315801845,
                      helpText: """
                      isSubset(of:). Используйте метод isSubset(of:) для определения все ли значения множества содержатся в указанном множестве.
@@ -270,7 +270,7 @@ class SetsSet {
                      optionA: "isSuperset(of:)",
                      optionB: "isSubset(of:)",
                      optionC: "isStrictSubset(of:)",
-                     optionD: "isStrictSuperset(of:)",
+                     optionD: "",
                      questionId: 195360097,
                      helpText: """
                      isSuperset(of:). Используйте метод isSuperset(of:), чтобы определить содержит ли множество все значения указанного множества.
