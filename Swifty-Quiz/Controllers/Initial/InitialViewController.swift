@@ -109,8 +109,9 @@ extension InitialViewController {
         let lastVersion = Game.shared.settings.appLastVersion
         let appVersionHasChange = lastVersion != currentAppVersion
         let isFirstTime = SelectedTopic.shared.topic.questionSet.isEmpty
+        let lastGameWasFinished = Game.shared.records.first?.continueGameStatus == false
         
-        if isFirstTime || appVersionHasChange {
+        if (isFirstTime || appVersionHasChange) && lastGameWasFinished {
             let newSet = TopicOperator.getTheBasics()
             
             SelectedTopic.shared.saveQuestionSet(
