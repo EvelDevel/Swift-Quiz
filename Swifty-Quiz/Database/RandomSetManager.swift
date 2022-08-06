@@ -18,21 +18,21 @@ class RandomSetManager {
     // Пустыми они быть не могут, но главное - чтобы отработала эта функция
     
 	static func showAllQuestionsNumber() -> Int {
-		return getAllQuestions().count
+        return all.count == 0 ? getAllQuestions().count : all.count
 	}
 	
 	static func getAllQuestions() -> [Question] {
 		if all.isEmpty {
-			all.append(contentsOf: RandomSetManager.setAndGetGuideQuestions())
-			all.append(contentsOf: RandomSetManager.setAndGetPatternsQuestions())
-            all.append(contentsOf: RandomSetManager.setAndGetOtherQuestions())
-            all.append(contentsOf: RandomSetManager.setAndGetUIKitQuestions())
+			all.append(contentsOf: RandomSetManager.getGuide())
+			all.append(contentsOf: RandomSetManager.getPatterns())
+            all.append(contentsOf: RandomSetManager.getOthers())
+            all.append(contentsOf: RandomSetManager.getUIKit())
 		}
         
 		return all
 	}
 	
-	static func setAndGetGuideQuestions() -> [Question] {
+	static func getGuide() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
             guide.append(contentsOf: IntegersAndBooleansSet.getQuestions())
@@ -74,32 +74,33 @@ class RandomSetManager {
 		return guide
 	}
 	
-	static func setAndGetPatternsQuestions() -> [Question] {
+	static func getPatterns() -> [Question] {
 		if patterns.isEmpty {
 			patterns.append(contentsOf: BasicsAboutPatternsSet.getQuestions())
 			patterns.append(contentsOf: CreationalPatternsSet.getQuestions())
 			patterns.append(contentsOf: StructuralPatternsSet.getQuestions())
 			patterns.append(contentsOf: BehavioralPatternsSet.getQuestions())
 			patterns.append(contentsOf: AntipatternsSet.getQuestions())
+            patterns.append(contentsOf: DepenpencyInjection.getQuestions())
+            patterns.append(contentsOf: InversionOfControl.getQuestions())
+            patterns.append(contentsOf: ServiceLocator.getQuestions())
 		}
         
 		return patterns
 	}
     
-    static func setAndGetOtherQuestions() -> [Question] {
+    static func getOthers() -> [Question] {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
             others.append(contentsOf: MobileSecuritySet.getQuestions())
             others.append(contentsOf: Multithreading.getQuestions())
-            others.append(contentsOf: DepenpencyInjection.getQuestions())
-            others.append(contentsOf: InversionOfControl.getQuestions())
-            others.append(contentsOf: ServiceLocator.getQuestions())
+            others.append(contentsOf: Networking.getQuestions())
         }
         
         return others
     }
     
-    static func setAndGetUIKitQuestions() -> [Question] {
+    static func getUIKit() -> [Question] {
         if uikit.isEmpty {
             uikit.append(contentsOf: VCLifecycleSet.getQuestions())
             uikit.append(contentsOf: AppLifecycleSet.getQuestions())

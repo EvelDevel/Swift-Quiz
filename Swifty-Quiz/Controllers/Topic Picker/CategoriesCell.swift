@@ -66,8 +66,6 @@ class CategoriesCell: UITableViewCell {
                 
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
                
-                /// Небольшой разгон по отработке UI
-                /// В основном для death match
                 DispatchQueue.main.async {
                     self.addQuestionsToArray(sender: sender)
                     self.delegate?.updateSelectedTopic()
@@ -471,6 +469,13 @@ extension CategoriesCell {
                 topic: CategoriesName.serviceLocator.rawValue,
                 tag: 69
             )
+        case 71:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getQuestionsNetworking(),
+                topic: CategoriesName.networking.rawValue,
+                tag: 70
+            )
+            
             
         default:
             allButtons.forEach { button in
@@ -546,6 +551,8 @@ extension CategoriesCell {
         case 68: return CategoriesName.dependencyInjection.rawValue
         case 69: return CategoriesName.inversionOfControl.rawValue
         case 70: return CategoriesName.serviceLocator.rawValue
+            
+        case 71: return CategoriesName.networking.rawValue
             
         default:
             return ""

@@ -69,4 +69,6 @@ enum CategoriesName: String {
     case dependencyInjection = "DI - Внедрение зависимостей"
     case inversionOfControl = "IoC - Инверсия управления"
     case serviceLocator = "SL - Сервис локатор"
+    
+    case networking = "Работа с сетью"
 }

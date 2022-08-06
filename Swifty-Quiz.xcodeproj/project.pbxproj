@@ -108,6 +108,7 @@
 		FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */; };
 		FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* AntipatternsSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
+		FBA3F0E4289E710F0014222F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3F0E3289E710F0014222F /* Networking.swift */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
@@ -226,6 +227,7 @@
 		FB99F88C247B978C0053166C /* StructuralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuralPatternsSet.swift; sourceTree = "<group>"; };
 		FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralPatternsSet.swift; sourceTree = "<group>"; };
 		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
+		FBA3F0E3289E710F0014222F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
+				FBA3F0E3289E710F0014222F /* Networking.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
+				FBA3F0E4289E710F0014222F /* Networking.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
 				FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */,
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
@@ -967,7 +971,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -990,7 +994,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";

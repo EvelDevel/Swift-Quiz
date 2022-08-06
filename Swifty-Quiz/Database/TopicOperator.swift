@@ -66,4 +66,6 @@ class TopicOperator {
     static func getQuestionsStructuralPatterns() -> [Question] { return StructuralPatternsSet.getQuestions() }
     static func getQuestionsBehavioralPatterns() -> [Question] { return BehavioralPatternsSet.getQuestions() }
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
+    
+    static func getQuestionsNetworking() -> [Question] { return Networking.getQuestions() }
 }
