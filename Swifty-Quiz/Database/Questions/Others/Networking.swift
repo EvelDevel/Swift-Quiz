@@ -422,6 +422,36 @@ class Networking {
                      helpText: """
                      Да. JSON поддерживает следующие типы данных: Объекты { ... }; Массивы [ ... ], строки, числа, логические значения true / false, null.
                      """),
+            
+            Question(question: [
+                "Какой протокол мы должны присвоить пользовательскому типу, чтобы с его помощью можно было кодировать / декодировать JSON объект в Swift?"
+            ],
+                     image: "",
+                     optionA: "Codable",
+                     optionB: "Equtable",
+                     optionC: "CodingKeys",
+                     optionD: "",
+                     questionId: 639758050,
+                     helpText: """
+                     Codable. Чтобы кодировать и декодировать пользовательский тип, мы должны сделать его Codable.
+                     
+                     typealias Codable = Decodable & Encodable. Содержит методы, объявленные в Encodable и Decodable.
+                     """),
+            
+            Question(question: [
+                "Имеет ли Swift нативные типы данных, отвечающие протоколу Codable?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 66632545,
+                     helpText: """
+                     Да. Нативные Codable типы в Swift:  String, Int, Double, Data, URL, Bool.
+                     
+                     Массивы, словари и опционалы являются Codable, только если содержат Codable типы внутри себя (все объекты, входящие в них, являются нативными Codable типами).
+                     """),
         ]
     }
 }
