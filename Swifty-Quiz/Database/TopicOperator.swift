@@ -68,4 +68,9 @@ class TopicOperator {
     static func getQuestionsAntipatterns() -> [Question] { return AntipatternsSet.getQuestions() }
     
     static func getQuestionsNetworking() -> [Question] { return Networking.getQuestions() }
+    
+    static func getSwiftUIEssentials() -> [Question] { return SwiftUIEssentials.getQuestions() }
+    static func getSwiftUIDrawing() -> [Question] { return DrawingAndAnimation.getQuestions() }
+    static func getSwiftUIDesign() -> [Question] { return AppDesignAndLayout.getQuestions() }
+    static func getSwiftUIFrameworks() -> [Question] { return FrameworkIntegration.getQuestions() }
 }

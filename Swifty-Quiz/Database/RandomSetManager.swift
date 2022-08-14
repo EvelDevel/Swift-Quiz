@@ -11,6 +11,7 @@ class RandomSetManager {
 	private static var patterns: [Question] = []
     private static var others: [Question] = []
     private static var uikit: [Question] = []
+    private static var swiftui: [Question] = []
 	
     // Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
     // Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
@@ -27,6 +28,7 @@ class RandomSetManager {
 			all.append(contentsOf: RandomSetManager.getPatterns())
             all.append(contentsOf: RandomSetManager.getOthers())
             all.append(contentsOf: RandomSetManager.getUIKit())
+            all.append(contentsOf: RandomSetManager.getswiftUI())
 		}
         
 		return all
@@ -110,6 +112,17 @@ class RandomSetManager {
         }
         
         return uikit
+    }
+    
+    static func getswiftUI() -> [Question] {
+        if swiftui.isEmpty {
+            swiftui.append(contentsOf: SwiftUIEssentials.getQuestions())
+            swiftui.append(contentsOf: DrawingAndAnimation.getQuestions())
+            swiftui.append(contentsOf: AppDesignAndLayout.getQuestions())
+            swiftui.append(contentsOf: FrameworkIntegration.getQuestions())
+        }
+        
+        return swiftui
     }
     
 	static func getQuestions(_ limit: Int) -> [Question] {

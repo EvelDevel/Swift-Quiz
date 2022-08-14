@@ -71,4 +71,9 @@ enum CategoriesName: String {
     case serviceLocator = "SL - Сервис локатор"
     
     case networking = "Работа с сетью"
+    
+    case swiftUIEssentials = "SwiftUI Essentials"
+    case swiftUIDrawing = "Drawing and Animation"
+    case swiftUILayout = "App Design and Layout"
+    case swiftUIFrameworks = "Framework Integration"
 }

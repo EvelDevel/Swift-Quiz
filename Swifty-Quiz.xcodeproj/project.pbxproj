@@ -80,6 +80,10 @@
 		FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB69CBEC24ACFD64007506F6 /* swipe.mp3 */; };
 		FB6A690C28424CB2008227EE /* BoldTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A690B28424CB2008227EE /* BoldTextService.swift */; };
 		FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB781B89282CCE6900DF1EC1 /* Constants.swift */; };
+		FB795CD628A914AC001B6CAA /* SwiftUIEssentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */; };
+		FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */; };
+		FB795CDA28A914D4001B6CAA /* AppDesignAndLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */; };
+		FB795CDD28A914E8001B6CAA /* FrameworkIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
@@ -201,6 +205,10 @@
 		FB69CBEC24ACFD64007506F6 /* swipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swipe.mp3; sourceTree = "<group>"; };
 		FB6A690B28424CB2008227EE /* BoldTextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldTextService.swift; sourceTree = "<group>"; };
 		FB781B89282CCE6900DF1EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEssentials.swift; sourceTree = "<group>"; };
+		FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAndAnimation.swift; sourceTree = "<group>"; };
+		FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesignAndLayout.swift; sourceTree = "<group>"; };
+		FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkIntegration.swift; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
@@ -295,6 +303,7 @@
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FB795CD428A91494001B6CAA /* SwiftUI */,
 				FB5208DA274241BF0058F3F8 /* UIKit */,
 				2C85725726803F5C00642E74 /* Others */,
 				FB99F887247B85FE0053166C /* The Basics  */,
@@ -429,6 +438,17 @@
 				FB2558732801E35700B01390 /* SettingsEnums.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		FB795CD428A91494001B6CAA /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */,
+				FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */,
+				FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */,
+				FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		FB8606B0244458E300A692AD /* Database */ = {
@@ -775,8 +795,10 @@
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
+				FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
+				FB795CDD28A914E8001B6CAA /* FrameworkIntegration.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
@@ -791,6 +813,7 @@
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
+				FB795CDA28A914D4001B6CAA /* AppDesignAndLayout.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
@@ -801,6 +824,7 @@
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
+				FB795CD628A914AC001B6CAA /* SwiftUIEssentials.swift in Sources */,
 				FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */,
 				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
 				2CD0C3232691FE2200871C14 /* IntegersAndBooleansSet.swift in Sources */,

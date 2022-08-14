@@ -20,6 +20,7 @@ class CategoriesCell: UITableViewCell {
     var allButtons: [UIButton] = []
     
     @IBOutlet private var random: [UIButton]!
+    @IBOutlet private var swiftui: [UIButton]!
     @IBOutlet private var uikit: [UIButton]!
     @IBOutlet private var guide: [UIButton]!
     @IBOutlet private var patterns: [UIButton]!
@@ -99,6 +100,7 @@ extension CategoriesCell {
         allButtons.append(contentsOf: patterns)
         allButtons.append(contentsOf: others)
         allButtons.append(contentsOf: uikit)
+        allButtons.append(contentsOf: swiftui)
     }
     
     /// Добавляем тени кнопкам
@@ -475,7 +477,30 @@ extension CategoriesCell {
                 topic: CategoriesName.networking.rawValue,
                 tag: 70
             )
-            
+        case 72:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getSwiftUIEssentials(),
+                topic: CategoriesName.swiftUIEssentials.rawValue,
+                tag: 71
+            )
+        case 73:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getSwiftUIDrawing(),
+                topic: CategoriesName.swiftUIDrawing.rawValue,
+                tag: 72
+            )
+        case 74:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getSwiftUIDesign(),
+                topic: CategoriesName.swiftUILayout.rawValue,
+                tag: 73
+            )
+        case 75:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getSwiftUIFrameworks(),
+                topic: CategoriesName.swiftUIFrameworks.rawValue,
+                tag: 74
+            )
             
         default:
             allButtons.forEach { button in
@@ -553,6 +578,11 @@ extension CategoriesCell {
         case 70: return CategoriesName.serviceLocator.rawValue
             
         case 71: return CategoriesName.networking.rawValue
+            
+        case 72: return CategoriesName.swiftUIEssentials.rawValue
+        case 73: return CategoriesName.swiftUIDrawing.rawValue
+        case 74: return CategoriesName.swiftUILayout.rawValue
+        case 75: return CategoriesName.swiftUIFrameworks.rawValue
             
         default:
             return ""
