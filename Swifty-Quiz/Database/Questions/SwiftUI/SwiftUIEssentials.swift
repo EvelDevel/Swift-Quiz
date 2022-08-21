@@ -12,8 +12,8 @@ class SwiftUIEssentials {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [
-                "Какому протоколу соответствует основная структура (struct) проекта, используещего SwiftUI Lifecycle?",
-                "Когда приложение использует жизненный цикл SwiftUI, основная структура, отвечающая за отображение контента соответствует этому протоколу"
+                "Какому протоколу соответствует основная структура проекта, используещего SwiftUI Lifecycle?",
+                "Когда приложение использует жизненный цикл SwiftUI, основная структура, отвечающая за отображение контента, соответствует этому протоколу"
             ],
                      image: "",
                      optionA: "App",
@@ -238,7 +238,7 @@ class SwiftUIEssentials {
                      """),
             
             Question(question: [
-                "С помощью какого объекта в SwiftUI можно добавить изображение на экран?"
+                "С помощью какого типа в SwiftUI можно добавить изображение на экран?"
             ],
                      image: "",
                      optionA: "Image(_:)",
@@ -406,7 +406,7 @@ class SwiftUIEssentials {
                      """),
             
             Question(question: [
-                "Когда вы создаете кастомное SwiftUI View, где необходимо указывать его лейаут (layout)?"
+                "Когда вы создаете кастомное SwiftUI View, где необходимо создавать его макет (layout)?"
             ],
                      image: "",
                      optionA: "Внутри свойства body",
@@ -415,9 +415,104 @@ class SwiftUIEssentials {
                      optionD: "",
                      questionId: 554041601,
                      helpText: """
-                     Внутри свойства body. Пользовательские view обязательно реализуют свойство body, которое является требованием публичного протокола View. Внутри него мы размещаем весь layout нашего кастомного вью.
+                     Внутри свойства body. Пользовательские view обязательно реализуют внутри себя свойство body, которое является требованием публичного протокола View. Внутри body мы размещаем весь layout нашего кастомного вью.
                      """),
-        
+            
+            Question(question: [
+                "Какой модификатор в SwiftUI может переопределить размер контейнера для предпросмотра (canvas)?"
+            ],
+                     image: "",
+                     optionA: ".previewLayout()",
+                     optionB: ".previewDevice()",
+                     optionC: ".compositioningGroup()",
+                     optionD: "",
+                     questionId: 817702693,
+                     helpText: """
+                     previewLayout(). Данный модификатор переопределяет размер контейнера для предварительного просмотра (canvas).
+                     
+                     По умолчанию предварительный просмотр использует макет «PreviewLayout/device», который помещает интерфейс в выбранное "устройство" (например: iPhone 12 mini).
+                     
+                     Вместо этого вы можете указать предварительному просмотру использовать другие значения: sizeThatFits  или fixed.
+                     """),
+            
+            Question(question: [
+                "С помощью какого типа в SwiftUI можно объединить несколько разных content type вместе, не влияя при этом на их макеты (layout)?"
+            ],
+                     image: "",
+                     optionA: "Group",
+                     optionB: "VStack",
+                     optionC: "GridItem",
+                     optionD: "Section",
+                     questionId: 225908548,
+                     helpText: """
+                     Group. Group является типом, который может собирать несколько экземпляров content type — например, View, Scene или Commands в единый модуль.
+                     
+                     Используйте группу (Group), чтобы объединить несколько View в один экземпляр, без влияния на их макеты (layout), в отличие от SwiftUI/HStack, SwiftUI/VStack или SwiftUI/Section, использование которых - повлечет за собой непосредственные изменения (расположение элементов, отступы, и т.д).
+                     
+                     После создания группы - любой модификатор, который вы применяете к ней, повлияет на всех членов этой группы. Например:
+                     
+                     Group {
+                         Text("SwiftUI")
+                         Text("Combine")
+                         Text("Swift System")
+                     }
+                     .font(.headline)
+                     """),
+            
+            Question(question: [
+                "Если в SwiftUI применить модификатор к типу Group, он применится ко всем членам этой группы. Так ли это?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 544449077,
+                     helpText: """
+                     Да. После создания группы - любой модификатор, который вы применяете к ней, повлияет на всех членов этой группы. Например:
+                     
+                     Group {
+                         Text("SwiftUI")
+                         Text("Combine")
+                         Text("Swift System")
+                     }
+                     .font(.headline)
+                     """),
+            
+            Question(question: [
+                "Можете ли вы объединить типы Scene, View и ToolbarContent в тип Group в SwiftUI?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 853685500,
+                     helpText: """
+                     Вы можете инициализировать группы (Group) в SwiftUI с несколькими разными типами, а не только с SwiftUI/View. Вы можете использовать, например SwiftUI/Scene и SwiftUI/ToolbarContent.
+                     """),
+            
+            Question(question: [
+                "Если в SwiftUI объединить 2 объекта внутри типа Group, сколько окон предварительного просмотра вы увидите на холсте (canvas)?"
+            ],
+                     image: "",
+                     optionA: "2",
+                     optionB: "1",
+                     optionC: "3",
+                     optionD: "",
+                     questionId: 493190017,
+                     helpText: """
+                     2. Группа (Group) — это контейнер для группировки разных типов View. Xcode отображает дочерние view группы как отдельные окна предварительного просмотра на холсте (canvas).
+                     
+                     Если ваша группа содержит два элемента - вы увидите два отдельных окна предварительного просмотра. Пример:
+                     
+                     Group {
+                         SomeView()
+                             .previewLayout(.sizeThatFits)
+                         SomeView()
+                             .previewLayout(.sizeThatFits)
+                     }
+                     """),
         ]
     }
 }
