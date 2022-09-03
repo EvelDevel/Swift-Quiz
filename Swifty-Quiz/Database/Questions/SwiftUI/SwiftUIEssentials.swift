@@ -513,6 +513,39 @@ class SwiftUIEssentials {
                              .previewLayout(.sizeThatFits)
                      }
                      """),
+            
+            Question(question: [
+                "Применится ли SwiftUI модификатор .foregroundColor к данному тексту?"
+            ],
+                     image: "SwiftUIEssentials03",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 762898627,
+                     helpText: """
+                     Нет. Из-за того, что наш текст оканчивается на .com - он будет определяться как гиперссылка и будет покрашен в нативный синий цвет ссылок. Модификатор foregroundColor не применится.
+                     
+                     Чтобы данный модификатор применялся к подобным текстам - нам необходимо поставить перед текстом ключевое слово verbatim с последующим двоеточием.
+                     
+                     Text(verbatim: "test@swifty.com")
+                        .foregroundColor(.green)
+                     """),
+            
+            Question(question: [
+                "Применится ли SwiftUI модификатор .foregroundColor к данному тексту?"
+            ],
+                     image: "SwiftUIEssentials04",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 831791923,
+                     helpText: """
+                     Да. Из-за того, что наш текст оканчивается на .com - он определяется как гиперссылка, а модификатор foregroundColor не применяется к гиперссылкам.
+                     
+                     Но поскольку мы поставили перед текстом ключевое слово verbatim с последующим двоеточием - SwiftUI проигнорирует вложенную гиперссылку и обработает ее как текст.
+                     """),
         ]
     }
 }
