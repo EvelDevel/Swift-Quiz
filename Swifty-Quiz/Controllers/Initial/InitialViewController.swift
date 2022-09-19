@@ -6,52 +6,52 @@ import UIKit
 import StoreKit
 
 class InitialViewController: UIViewController {
-
+    
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var lastGameTitle: UILabel!
-	@IBOutlet private weak var contentCenter: NSLayoutConstraint!
+    @IBOutlet private weak var contentCenter: NSLayoutConstraint!
     @IBOutlet private weak var donationButton: UIButton!
-	@IBOutlet private weak var totalQuestionsLabel: UILabel!
-	@IBOutlet private weak var selectedTopic: UILabel!
-	@IBOutlet private weak var lastTopic: UILabel!
+    @IBOutlet private weak var totalQuestionsLabel: UILabel!
+    @IBOutlet private weak var selectedTopic: UILabel!
+    @IBOutlet private weak var lastTopic: UILabel!
     @IBOutlet private weak var lastScore: UILabel!
-	@IBOutlet private weak var totalQuestions: UILabel!
-	@IBOutlet private weak var continueGameButton: UIButton!
-	@IBOutlet private weak var topicPicker: UIButton!
-	@IBOutlet private weak var logoButton: UIButton!
+    @IBOutlet private weak var totalQuestions: UILabel!
+    @IBOutlet private weak var continueGameButton: UIButton!
+    @IBOutlet private weak var topicPicker: UIButton!
+    @IBOutlet private weak var logoButton: UIButton!
     @IBOutlet private weak var shareButton: UIButton!
     
-	@IBOutlet private var initialWhiteViews: [UIView]!
-	@IBOutlet private var initialButtons: [UIButton]!
-
-	@IBAction private func goToAbout(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .buttonTapped)
-	}
+    @IBOutlet private var initialWhiteViews: [UIView]!
+    @IBOutlet private var initialButtons: [UIButton]!
     
-	@IBAction private func tapButtonSounds(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .buttonTapped)
-	}
+    @IBAction private func goToAbout(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
+    }
+    
+    @IBAction private func tapButtonSounds(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
+    }
     
     @IBAction private func goToDonations(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     
-	private let currentAppVersion = Bundle.main.object(
+    private let currentAppVersion = Bundle.main.object(
         forInfoDictionaryKey: "CFBundleShortVersionString"
     ) as? String ?? ""
     
-	private let shadows = Shadow()
-	private let recordCaretaker = RecordsCaretaker()
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		setup()
-	}
-	
-	override func viewWillLayoutSubviews() {
-		updateLastGameLabel()
+    private let shadows = Shadow()
+    private let recordCaretaker = RecordsCaretaker()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        updateLastGameLabel()
         updateScoreLabel()
-	}
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -66,7 +66,7 @@ class InitialViewController: UIViewController {
 
 // MARK: Main
 extension InitialViewController {
-
+    
     private func setup() {
         setupCurrentQuestionSet()
         updateLastGameInfo()
@@ -124,7 +124,7 @@ extension InitialViewController {
             selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
         }
     }
-
+    
     private func updateLastGameInfo() {
         let records: [Record] = recordCaretaker.getRecordsList()
         
@@ -135,7 +135,7 @@ extension InitialViewController {
             let help = records.first?.helpCounter ?? 0
             let correct = records.first?.score ?? 0
             let roundedPercents = String(format: "%.1f", records.first?.percentOfCorrectAnswer ?? 0)
-          
+            
             changeLabelWithAnimation(
                 label: lastTopic,
                 text: "\(Constants.category)\(category)"
@@ -204,54 +204,54 @@ extension InitialViewController {
 
 // MARK: Interface
 extension InitialViewController {
-
-	/// Показываем или скрываем кнопку "продолжить"
+    
+    /// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-			if continueGameButton.isHidden == true {
+            if continueGameButton.isHidden == true {
                 SoundPlayer.shared.playSound(sound: .showContinueButton)
             }
-			contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
-			continueGameButton.isHidden = false
-		} else {
-			if continueGameButton.isHidden == false {
+            contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
+            continueGameButton.isHidden = false
+        } else {
+            if continueGameButton.isHidden == false {
                 SoundPlayer.shared.playSound(sound: .hideContinueButton)
             }
-			contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
-			continueGameButton.isHidden = true
-		}
+            contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
+            continueGameButton.isHidden = true
+        }
         
         updateScoreLabel()
-	}
-	
-	/// Показываем корректный заголовок последней игры
+    }
+    
+    /// Показываем корректный заголовок последней игры
     private func updateLastGameLabel() {
-		lastGameTitle.text = "Информация о прошлой игре: "
-		
+        lastGameTitle.text = "Информация о прошлой игре: "
+        
         if Game.shared.records.count != 0 {
-			if Game.shared.records.first?.continueGameStatus ?? false {
-				lastGameTitle.text = "Информация о текущей игре: "
-			}
-		}
+            if Game.shared.records.first?.continueGameStatus ?? false {
+                lastGameTitle.text = "Информация о текущей игре: "
+            }
+        }
         
         updateScoreLabel()
-	}
-
-	/// Добавляем тени на элементы
+    }
+    
+    /// Добавляем тени на элементы
     private func addShadows() {
-		shadows.addStaticShadows(initialWhiteViews)
-		shadows.addButtonShadows(initialButtons)
-	}
-
-	/// Корректного отображение дополнительных картинок у кнопок
+        shadows.addStaticShadows(initialWhiteViews)
+        shadows.addButtonShadows(initialButtons)
+    }
+    
+    /// Корректного отображение дополнительных картинок у кнопок
     private func imageTuning(
         button: UIButton,
         position: UIControl.ContentVerticalAlignment
     ) {
-		button.imageView!.contentMode = .scaleAspectFit
-		button.contentVerticalAlignment = position
-		button.contentHorizontalAlignment = .right
-	}
+        button.imageView!.contentMode = .scaleAspectFit
+        button.contentVerticalAlignment = position
+        button.contentHorizontalAlignment = .right
+    }
     
     /// Donation button animation
     private func showAnimation() {
@@ -288,27 +288,27 @@ extension InitialViewController {
 
 // MARK: Set delegates
 extension InitialViewController {
-
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier  == "newGame" {
-			let gameView = segue.destination as! GameViewController
-			gameView.delegate = self
-			gameView.weContinueLastGame = false
-		} else if segue.identifier == "continueGame" {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "newGame" {
+            let gameView = segue.destination as! GameViewController
+            gameView.delegate = self
+            gameView.weContinueLastGame = false
+        } else if segue.identifier == "continueGame" {
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
             gameView.weContinueLastGame = true
         } else if segue.identifier == "toTopicSelection" {
-			let topicView = segue.destination as! TopicViewController
-			topicView.delegate = self
-		} else if segue.identifier == "toResultsViewController" {
-			let recordView = segue.destination as! RecordsViewController
-			recordView.delegate = self
-		} else if segue.identifier == "toSettingsViewController" {
-			let settingView = segue.destination as! SettingsViewController
-			settingView.delegate = self
-		}
-	}
+            let topicView = segue.destination as! TopicViewController
+            topicView.delegate = self
+        } else if segue.identifier == "toResultsViewController" {
+            let recordView = segue.destination as! RecordsViewController
+            recordView.delegate = self
+        } else if segue.identifier == "toSettingsViewController" {
+            let settingView = segue.destination as! SettingsViewController
+            settingView.delegate = self
+        }
+    }
 }
 
 
@@ -317,7 +317,7 @@ extension InitialViewController: GameViewControllerDelegate,
                                  TopicViewControllerDelegate,
                                  RecordsViewControllerDelegate,
                                  SettingsViewControllerDelegate {
-
+    
     func didEndGame(_ result: GameResult) {
         changeLabelWithAnimation(
             label: lastTopic,
@@ -333,32 +333,31 @@ extension InitialViewController: GameViewControllerDelegate,
             label: lastScore,
             text: "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
         )
-	}
-	
-	func updateInitialView() {
-		updateContinueButton()
-	}
+    }
     
-	func categoryWasSelected() {
-		updateLastGameLabel()
-		selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
-	}
+    func updateInitialView() {
+        updateContinueButton()
+    }
     
-	func refreshLastGameInfo() {
-		updateLastGameInfo()
-		updateLastGameLabel()
-	}
+    func categoryWasSelected() {
+        updateLastGameLabel()
+        selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+    }
     
-	func showReviewRequest() {
-		let recordsNumber = Game.shared.records.count
-		if recordsNumber == 50
-            || recordsNumber == 150
-            || recordsNumber == 250
-            || recordsNumber == 350 {
+    func refreshLastGameInfo() {
+        updateLastGameInfo()
+        updateLastGameLabel()
+    }
+    
+    func showReviewRequest() {
+        let records = Game.shared.records.count
+        if records == 50 || records == 100 || records == 150 {
             
-			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-				SKStoreReviewController.requestReview()
-			}
-		}
-	}
+            DispatchQueue.main.asyncAfter(
+                deadline: DispatchTime.now() + 1.0
+            ) {
+                SKStoreReviewController.requestReview()
+            }
+        }
+    }
 }

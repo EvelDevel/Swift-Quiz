@@ -6,7 +6,7 @@ import UIKit
 
 protocol GameViewControllerDelegate: AnyObject {
     func didEndGame(_ result: GameResult)
-	func showReviewRequest()
+    func showReviewRequest()
     func updateInitialView()
 }
 
@@ -16,11 +16,9 @@ enum GameStatus: Int {
 }
 
 class GameViewController: UIViewController {
-	@IBOutlet private weak var backButton: UIButton!
-	@IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
-	
+    @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
     @IBOutlet private weak var helpButton: UIButton!
-    @IBOutlet private var answerButtonsCollection: [UIButton]!
     @IBOutlet private weak var optionA: UIButton!
     @IBOutlet private weak var optionB: UIButton!
     @IBOutlet private weak var optionC: UIButton!
@@ -34,17 +32,17 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var questionArea: UIView!
     @IBOutlet private weak var questionImageView: UIImageView!
     @IBOutlet private weak var questionImageHeight: NSLayoutConstraint!
-
+    
+    @IBOutlet private var answerButtonsCollection: [UIButton]!
     @IBOutlet private var GameComtrollerViews: [UIView]!
     
-    private var localQuestionSet: [Question] = []
+    private var questions: [Question] = []
     private var currentQuestionNumber: Int = 1
-    private var currentQuestionIndex = 0
+    private var currentIndex = 0
     private var score: Int = 0
     private var helpCounter = 0
     private var alreadyTappedIncorrect: [Int] = []
     private var gameHistory: [GameHistory] = []
-    
     private let gameHelper = GameHelper()
     private let buttons = AnswerButtonsView()
     private let questionOrderSetting = Game.shared.settings.questionOrder
@@ -52,11 +50,11 @@ class GameViewController: UIViewController {
     private let topic = SelectedTopic.shared.topic.topicName
     private let topicTag = SelectedTopic.shared.topic.topicTag
     
-    private var hintWasTaken = false            // Предотвращает повторное засчитывание подсказки
+    private var doesWeGetAutoHint = false       // Пользователь получил автоматическую подсказку (настройки)
+    private var doesUserTookHint = false        // Предотвращает повторное засчитывание подсказки
     private var dontUpdateQuestionFlag = false  // Предотвращает updateQuestion, когда это не нужно
     private var endGameFlag = false             // Предотвращает повторное сохранение одного рекорда
     private var answerPressed = false           // Уже нажали один ответ (чтобы второе нажатие не срабатывало)
-    private var weDidGetAutoHelp = false        // Пользователь получил автоматическую подсказку (настройки)
     
     var weContinueLastGame = false              // Продолжаем игру или играем новую
     
@@ -72,32 +70,34 @@ class GameViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        /// Save if didn't save before
-        /// And answer at least 1 question
-        if endGameFlag == false && currentQuestionIndex > 0 {
-            gameEnding(status: .notFinished)
+        /// Save if it wasn't saved before
+        /// And user answered at least for 1 question
+        if endGameFlag == false && currentIndex > 0 {
+            endGame(
+                status: .notFinished
+            )
         }
         
         delegate?.updateInitialView()
-		delegate?.showReviewRequest()
+        delegate?.showReviewRequest()
     }
-	
-	/// > 13.0 iOS Navigation settings
-	override func viewWillAppear(_ animated: Bool) {
-		if #available(iOS 13.0, *) {
-			backButton.isHidden = true
-			headerTopMargin.constant = 0
-		}
-	}
-	/// < 13.0 iOS Navigation
-	@IBAction private func dismissGame(_ sender: Any) {
-		SoundPlayer.shared.playSound(sound: .buttonTapped)
-		
+    
+    /// > 13.0 iOS Navigation settings
+    override func viewWillAppear(_ animated: Bool) {
+        if #available(iOS 13.0, *) {
+            backButton.isHidden = true
+            headerTopMargin.constant = 0
+        }
+    }
+    /// < 13.0 iOS Navigation
+    @IBAction private func dismissGame(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
+        
         dismiss(
             animated: true,
             completion: nil
         )
-	}
+    }
 }
 
 
@@ -128,11 +128,11 @@ extension GameViewController {
     private func setupContinueValues() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame {
-                self.localQuestionSet = SelectedTopic.shared.topic.continueQuestionSet
+                self.questions = SelectedTopic.shared.topic.continueQuestionSet
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
-                self.hintWasTaken = Game.shared.records[0].helpFlag!
+                self.doesUserTookHint = Game.shared.records[0].helpFlag!
                 self.gameHistory = Game.shared.records[0].gameHistory!
-                self.currentQuestionIndex = Game.shared.records[0].playedNum!
+                self.currentIndex = Game.shared.records[0].playedNum!
                 self.score = Game.shared.records[0].score!
                 self.helpCounter = Game.shared.records[0].helpCounter!
                 if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
@@ -143,18 +143,18 @@ extension GameViewController {
     private func addQuestionSet() {
         if !weContinueLastGame {
             if questionOrderSetting == 0 {
-                localQuestionSet = SelectedTopic.shared.topic.questionSet
+                questions = SelectedTopic.shared.topic.questionSet
             } else {
-                localQuestionSet = SelectedTopic.shared.topic.questionSet.shuffled()
+                questions = SelectedTopic.shared.topic.questionSet.shuffled()
             }
         }
     }
     
     private func updateQuestion() {
-        if currentQuestionIndex < localQuestionSet.count {
+        if currentIndex < questions.count {
             buttons.refreshButtonsVisibility(
-                currentQuestionIndex,
-                localQuestionSet.count,
+                currentIndex,
+                questions.count,
                 answerButtonsCollection
             )
             
@@ -164,18 +164,18 @@ extension GameViewController {
         
         answerPressed = false
         dontUpdateQuestionFlag = false
-        weDidGetAutoHelp = false
-        hintWasTaken = false
+        doesWeGetAutoHint = false
+        doesUserTookHint = false
         alreadyTappedIncorrect = []
         addQuestionContent()
         updateUIAndProgress()
     }
     
     private func addQuestionContent() {
-        if currentQuestionIndex <= localQuestionSet.count - 1 {
+        if currentIndex <= questions.count - 1 {
             buttons.makeCorrectButtonsSet(
-                currentQuestionIndex,
-                localQuestionSet,
+                currentIndex,
+                questions,
                 optionA,
                 optionB,
                 optionC,
@@ -183,8 +183,8 @@ extension GameViewController {
             )
             
             gameHelper.setQuestionImageAndTextSizes(
-                localQuestionSet,
-                currentQuestionIndex,
+                questions,
+                currentIndex,
                 questionImageView,
                 questionImageHeight,
                 view,
@@ -193,27 +193,27 @@ extension GameViewController {
             )
             
             questionLabel.text = gameHelper.setQuestionText(
-                localQuestionSet,
-                currentQuestionIndex
+                questions,
+                currentIndex
             )
             
         } else if endGameFlag == false {
-            gameEnding(status: .finished)
+            endGame(status: .finished)
         }
     }
     
     private func updateUIAndProgress() {
         scoreLabel.text = "\(score) | \(updatePercentage())%"
-        questionCounterLabel.text = "\(currentQuestionNumber) / \(localQuestionSet.count)"
-        let oneQuestionWidth = (view.frame.size.width - 40) / CGFloat(localQuestionSet.count)
-        progressView.frame.size.width = oneQuestionWidth * CGFloat(currentQuestionIndex)
+        questionCounterLabel.text = "\(currentQuestionNumber) / \(questions.count)"
+        let oneQuestionWidth = (view.frame.size.width - 40) / CGFloat(questions.count)
+        progressView.frame.size.width = oneQuestionWidth * CGFloat(currentIndex)
     }
     
     private func updatePercentage() -> Double {
         return Double(
             String(
                 format: "%.1f",
-                (Double(self.score) / Double(self.localQuestionSet.count) * 100)
+                (Double(self.score) / Double(self.questions.count) * 100)
             )
         ) ?? 0
     }
@@ -226,14 +226,14 @@ extension GameViewController {
         if answerPressed == false {
             
             /// Save q to history
-            if !hintWasTaken {
+            if !doesUserTookHint {
                 saveToGameHistory(
                     answer: buttons.showFinalButtonsSet()[sender.tag - 1]
                 )
             }
             
             if sender.tag == buttons.showCorrectPosition() {
-                if !hintWasTaken {
+                if !doesUserTookHint {
                     score += 1
                 }
                 
@@ -259,8 +259,8 @@ extension GameViewController {
                 }
             }
             
-            if currentQuestionIndex < localQuestionSet.count && dontUpdateQuestionFlag == false {
-                currentQuestionIndex += 1
+            if currentIndex < questions.count && dontUpdateQuestionFlag == false {
+                currentIndex += 1
                 currentQuestionNumber += 1
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -286,16 +286,16 @@ extension GameViewController {
         ) as! HelpViewController
         
         helpView.delegate = self
-        helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
+        helpView.questionID = questions[currentIndex].questionId
         
-        if !hintWasTaken {
+        if !doesUserTookHint {
             helpCounter += 1
         }
         
         helpCounterLabel.text = "\(helpCounter)"
         
-        hintWasTaken = true
-        weDidGetAutoHelp = true
+        doesUserTookHint = true
+        doesWeGetAutoHint = true
         
         self.present(
             helpView,
@@ -309,7 +309,7 @@ extension GameViewController {
 // MARK: Завершение игры
 extension GameViewController {
     
-    private func gameEnding(
+    private func endGame(
         status: GameStatus
     ) {
         switch status {
@@ -335,26 +335,26 @@ extension GameViewController {
         var continueStatus = continueStatus
         endGameFlag = true
         
-        if weDidGetAutoHelp || hintWasTaken {
-            if currentQuestionNumber < localQuestionSet.count {
-                currentQuestionIndex = currentQuestionIndex + 1
-                hintWasTaken = false
+        if doesWeGetAutoHint || doesUserTookHint {
+            if currentQuestionNumber < questions.count {
+                currentIndex = currentIndex + 1
+                doesUserTookHint = false
             } else {
                 continueStatus = false
             }
         }
-
+        
         let record = Record(
             date: Date(),
             score: score,
             topic: topic,
-            totalQuestion: localQuestionSet.count,
+            totalQuestion: questions.count,
             percentOfCorrectAnswer: updatePercentage(),
             helpCounter: helpCounter,
-            playedNum: currentQuestionIndex,
+            playedNum: currentIndex,
             continueGameStatus: continueStatus,
             gameHistory: gameHistory,
-            helpFlag: hintWasTaken
+            helpFlag: doesUserTookHint
         )
         
         /// Save or replace record
@@ -367,11 +367,11 @@ extension GameViewController {
         delegate?.didEndGame(
             GameResult(
                 result: score,
-                totalQuestion: localQuestionSet.count,
+                totalQuestion: questions.count,
                 percentOfCorrect: updatePercentage(),
                 topic: topic,
                 helpCounter: helpCounter,
-                playedNum: currentQuestionIndex
+                playedNum: currentIndex
             )
         )
         
@@ -385,7 +385,7 @@ extension GameViewController {
         )
         
         /// Save shuffled set for "continue"
-        SelectedTopic.shared.saveShuffledSet(localQuestionSet)
+        SelectedTopic.shared.saveShuffledSet(questions)
         
         /// Save default set for new games
         SelectedTopic.shared.saveQuestionSet(
@@ -489,9 +489,9 @@ extension GameViewController {
         weContinueLastGame = false
         helpCounterLabel.text = ""
         currentQuestionNumber = 1
-        weDidGetAutoHelp = false
-        currentQuestionIndex = 0
-        hintWasTaken = false
+        doesWeGetAutoHint = false
+        currentIndex = 0
+        doesUserTookHint = false
         endGameFlag = false
         gameHistory = []
         updateQuestion()
@@ -511,9 +511,9 @@ extension GameViewController {
         if segue.identifier  == "toHelpViewController" {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
-            helpView.questionID = localQuestionSet[currentQuestionIndex].questionId
+            helpView.questionID = questions[currentIndex].questionId
             
-            if !hintWasTaken {
+            if !doesUserTookHint {
                 helpCounter += 1
                 
                 saveToGameHistory(
@@ -522,7 +522,7 @@ extension GameViewController {
             }
             
             helpCounterLabel.text = "\(helpCounter)"
-            hintWasTaken = true
+            doesUserTookHint = true
         }
         
         helpButton.isEnabled = false
@@ -534,11 +534,11 @@ extension GameViewController {
         gameHistory.append(
             GameHistory(
                 question: questionLabel.text ?? "",
-                correctAnswer: localQuestionSet[currentQuestionIndex].optionA,
+                correctAnswer: questions[currentIndex].optionA,
                 userAnswer: answer,
-                questionId: localQuestionSet[currentQuestionIndex].questionId,
-                image: localQuestionSet[currentQuestionIndex].image,
-                helpText: localQuestionSet[currentQuestionIndex].helpText
+                questionId: questions[currentIndex].questionId,
+                image: questions[currentIndex].image,
+                helpText: questions[currentIndex].helpText
             )
         )
     }
@@ -547,15 +547,16 @@ extension GameViewController {
 
 // MARK: Работа с делегатом HelpViewController
 extension GameViewController: HelpViewControllerDelegate {
-    
     func updateAfterHelp() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+        DispatchQueue.main.asyncAfter(
+            deadline: .now() + 0.25
+        ) {
             if Game.shared.settings.changeAfterHelp == 1 {
                 self.helpButton.isEnabled = true
                 self.currentQuestionNumber += 1
-                self.currentQuestionIndex += 1
-                self.weDidGetAutoHelp = false
-                self.hintWasTaken = false
+                self.currentIndex += 1
+                self.doesWeGetAutoHint = false
+                self.doesUserTookHint = false
                 self.updateQuestion()
             }
         }
