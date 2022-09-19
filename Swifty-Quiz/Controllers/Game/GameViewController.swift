@@ -103,7 +103,6 @@ class GameViewController: UIViewController {
 
 // MARK: Main
 extension GameViewController {
-    
     private func setup() {
         setupContinueValues()
         addQuestionSet()
@@ -112,12 +111,12 @@ extension GameViewController {
         showAlertIfNeeded()
     }
     
-    func addShadows() {
+    private func addShadows() {
         Shadow().addStaticShadows(GameComtrollerViews)
         Shadow().addButtonShadows(answerButtonsCollection)
     }
     
-    func showAlertIfNeeded() {
+    private func showAlertIfNeeded() {
         gameHelper.showAlertIfNeeded(weContinueLastGame, self)
     }
 }
@@ -223,7 +222,6 @@ extension GameViewController {
 
 // MARK: Нажатие на ответ
 extension GameViewController {
-
     @IBAction private func answerPressed(_ sender: UIButton) {
         if answerPressed == false {
             
@@ -317,8 +315,7 @@ extension GameViewController {
         switch status {
         case .finished:
             callDelegateAndSaveRecord(
-                continueStatus: false,
-                autoHelp: weDidGetAutoHelp
+                continueStatus: false
             )
             
             showAlert(
@@ -327,15 +324,13 @@ extension GameViewController {
             )
         case .notFinished:
             callDelegateAndSaveRecord(
-                continueStatus: true,
-                autoHelp: weDidGetAutoHelp
+                continueStatus: true
             )
         }
     }
     
     private func callDelegateAndSaveRecord(
-        continueStatus: Bool,
-        autoHelp: Bool
+        continueStatus: Bool
     ) {
         var continueStatus = continueStatus
         endGameFlag = true

@@ -16,8 +16,7 @@ private class Interface {
 }
 
 class CategoriesCell: UITableViewCell {
-    
-    var allButtons: [UIButton] = []
+    private var allButtons: [UIButton] = []
     
     @IBOutlet private var random: [UIButton]!
     @IBOutlet private var swiftui: [UIButton]!
@@ -92,7 +91,6 @@ class CategoriesCell: UITableViewCell {
 
 // MARK: Работа с UI наших аутлетов
 extension CategoriesCell {
-    
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
         allButtons.append(contentsOf: random)
@@ -500,6 +498,18 @@ extension CategoriesCell {
                 TopicOperator.getSwiftUIFrameworks(),
                 topic: CategoriesName.swiftUIFrameworks.rawValue,
                 tag: 74
+            )
+        case 76:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getAPNS(),
+                topic: CategoriesName.apns.rawValue,
+                tag: 75
+            )
+        case 77:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getFCM(),
+                topic: CategoriesName.fcm.rawValue,
+                tag: 76
             )
             
         default:

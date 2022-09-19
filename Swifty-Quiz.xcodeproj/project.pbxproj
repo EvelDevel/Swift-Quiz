@@ -43,6 +43,8 @@
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
+		FB23035928D8ADB600F86348 /* APNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035828D8ADB600F86348 /* APNS.swift */; };
+		FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035A28D8ADBE00F86348 /* FCM.swift */; };
 		FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2558732801E35700B01390 /* SettingsEnums.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
@@ -165,6 +167,8 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		FB23035828D8ADB600F86348 /* APNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS.swift; sourceTree = "<group>"; };
+		FB23035A28D8ADBE00F86348 /* FCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
 		FB2558732801E35700B01390 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
 				FBA3F0E3289E710F0014222F /* Networking.swift */,
+				FB23035828D8ADB600F86348 /* APNS.swift */,
+				FB23035A28D8ADBE00F86348 /* FCM.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -800,6 +806,7 @@
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
 				FB795CDD28A914E8001B6CAA /* FrameworkIntegration.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
+				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FBA3F0E4289E710F0014222F /* Networking.swift in Sources */,
@@ -809,6 +816,7 @@
 				FB3F91C72737A1C3008E46C3 /* UIViewSet.swift in Sources */,
 				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
+				FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,

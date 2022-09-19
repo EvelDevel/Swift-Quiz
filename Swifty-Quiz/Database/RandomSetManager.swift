@@ -97,6 +97,8 @@ class RandomSetManager {
             others.append(contentsOf: MobileSecuritySet.getQuestions())
             others.append(contentsOf: Multithreading.getQuestions())
             others.append(contentsOf: Networking.getQuestions())
+            others.append(contentsOf: APNS.getQuestions())
+            others.append(contentsOf: FCM.getQuestions())
         }
         
         return others

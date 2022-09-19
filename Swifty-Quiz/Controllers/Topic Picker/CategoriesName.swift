@@ -9,7 +9,6 @@
 import Foundation
 
 enum CategoriesName: String {
-    
     case random20 = "20 случайных вопросов"
     case random50 = "50 случайных вопросов"
     case random100 = "100 случайных вопросов"
@@ -76,4 +75,7 @@ enum CategoriesName: String {
     case swiftUIDrawing = "Drawing and Animation"
     case swiftUILayout = "App Design and Layout"
     case swiftUIFrameworks = "Framework Integration"
+    
+    case apns = "Apple Push Notification Service"
+    case fcm = "Firebase Cloud Messaging"
 }
