@@ -241,6 +241,92 @@ class DrawingAndAnimation {
                      helpText: """
                      На 180°. Константа .pi развернет View вверх-ногами на 180 градусов.
                      """),
+            
+            Question(question: [
+                "Этот модификатор в SwiftUI применяет выбранную анимацию к view, когда изменяется указанное значение (value)"
+            ],
+                     image: "",
+                     optionA: ".animation",
+                     optionB: ".rotate",
+                     optionC: ".easeInOut",
+                     optionD: "",
+                     questionId: 854510570,
+                     helpText: """
+                     animation. Модификатор animation применяет заданную (из перечисления) анимацию к вашему view при изменении указанного значения (например: Когда изменяется флаг какой-нибудь кнопки после нажатия).
+                     
+                     Данный модификатор принимает два параметра: _ animation: Animation?, value: V, а возвращает какое-то абстрактное view, которое отвечает протоколу Equatable (some View where V : Equatable).
+                     """),
+            
+            Question(question: [
+                "Модификатор .animation в SwiftUI принимает именно такие входящие параметры"
+            ],
+                     image: "",
+                     optionA: "animation, value",
+                     optionB: "animation, view, value",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 554440557,
+                     helpText: """
+                     animation, value. Animation модификатор принимает два параметра: _ animation: Animation?, value: V, а возвращает какое-то абстрактное view, которое отвечает протоколу Equatable (some View where V : Equatable).
+                     """),
+            
+            Question(question: [
+                "Что возвращает модификатор .animation в SwiftUI?"
+            ],
+                     image: "",
+                     optionA: "-> some View",
+                     optionB: "-> Bool",
+                     optionC: "-> Animation?",
+                     optionD: "",
+                     questionId: 955935092,
+                     helpText: """
+                     -> some View. Animation модификатор принимает два параметра: _ animation: Animation?, value: V, а возвращает какое-то абстрактное view, которое отвечает протоколу Equatable (some View where V : Equatable).
+                     """),
+            
+            Question(question: [
+                "Какой модификатор SwiftUI мы будем использовать, если необходимо добавить анимацию для view, которая сработает сразу после изменения выбранного значения в коде?"
+            ],
+                     image: "",
+                     optionA: ".animation",
+                     optionB: ".rotationEffect",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 119460518,
+                     helpText: """
+                     animation. Модификатор .animation применяется, когда нам необходимо воспроизвести заданную (из перечисления) анимацию (animation: Animation?), при изменении указанного value (например: Когда изменяется булевый флаг нажатия кнопки).
+                     """),
+            
+            Question(question: [
+                "Какой модификатор SwiftUI позволяет создать переход (transition), у которого будут разные появление на экране (insertion) и удаление с экрана (removal)?"
+            ],
+                     image: "",
+                     optionA: ".asymmetric",
+                     optionB: ".transition",
+                     optionC: ".insertion",
+                     optionD: "",
+                     questionId: 987774923,
+                     helpText: """
+                     asymmetric. Данный модификатор позволяет создавать составные переходы (composite transitions), которые будут использовать разные эффекты для появления view на экране (transition), и для удаления его с экрана (removal).
+                     
+                     Данный модификатор принимает два входящих параметра:
+                     - insertion: AnyTransition
+                     - removal: AnyTransition
+                     """),
+            
+            Question(question: [
+                "Что вернет модификатор .asymmetric в SwiftUI?"
+            ],
+                     image: "",
+                     optionA: "AnyTransition",
+                     optionB: "AnyAnimation",
+                     optionC: "ContentTransition",
+                     optionD: "",
+                     questionId: 987774923,
+                     helpText: """
+                     AnyTransition. Модификатор .asymmetric позволяет создавать составные переходы (composite transitions), которые будут использовать разные эффекты для появления view на экране (transition), и для удаления его с экрана (removal).
+                     
+                     Данный модификатор возвращает значение AnyTransition.
+                     """),
         ]
     }
 }
