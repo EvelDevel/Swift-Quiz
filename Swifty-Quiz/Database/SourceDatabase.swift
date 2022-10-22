@@ -16,10 +16,8 @@ class SourceDatabase {
         var url = ""
         
         switch questionId {
-        case 320291560:
-            url = "https://stackoverflow.com/questions/25597092/how-to-load-url-in-uiwebview-in-swift"
         default:
-            break
+            url = ""
         }
         
         return URL(string: url)
