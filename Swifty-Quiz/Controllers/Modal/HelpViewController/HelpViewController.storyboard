@@ -54,7 +54,7 @@
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4g-t1-PcG" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="52"/>
                                                 <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fhh-3F-jai"/>
@@ -73,13 +73,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="125.66666666666664" y="0.0" width="216.33333333333337" height="52"/>
+                                                <rect key="frame" x="180.33333333333337" y="0.0" width="161.66666666666663" height="52"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Вернуться в игру">
+                                                <state key="normal" title="Закрыть">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -172,7 +172,7 @@
                                             <constraint firstAttribute="height" constant="52" id="aYA-vI-7AA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Закрыть источник">
+                                        <state key="normal" title="Закрыть">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -245,10 +245,10 @@
     </scenes>
     <designables>
         <designable name="713-oN-GJ3">
-            <size key="intrinsicContentSize" width="138" height="32"/>
+            <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
         <designable name="ODb-va-1rm">
-            <size key="intrinsicContentSize" width="131" height="32"/>
+            <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
         <designable name="Q4g-t1-PcG">
             <size key="intrinsicContentSize" width="73" height="32"/>
