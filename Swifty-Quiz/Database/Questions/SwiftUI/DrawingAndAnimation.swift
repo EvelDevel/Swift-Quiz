@@ -327,6 +327,23 @@ class DrawingAndAnimation {
                      
                      Данный модификатор возвращает значение AnyTransition.
                      """),
+            
+            Question(question: [
+                "Какой тип в SwiftUI передает в замыкании GraphicsContext и CGSize для отрисовки 2D графики?"
+            ],
+                     image: "",
+                     optionA: "Canvas",
+                     optionB: "Gradient",
+                     optionC: "Path",
+                     optionD: "",
+                     questionId: 810341480,
+                     helpText: """
+                     Canvas. Используйте Canvas, чтобы отрисовать 2д графику внутри SwiftUI view.
+                     
+                     Canvas передает внутрь замыкания context (GraphicsContext), чтобы вы могли использовать все операции по отрисовке (immediate mode drawing operations). Так же Canvas передает size (CGSize), который вы также можете использовать для кастомизации того, что вы отрисовываете.
+                     
+                     Например: вы можете использовать у context команду stroke(_:with:lineWidth:), чтобы отрисовать Path(ellipseIn: CGRect(origin: .zero, size: size)).
+                     """),
         ]
     }
 }

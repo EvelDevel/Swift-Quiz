@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="HelpViewController" modalPresentationStyle="overFullScreen" id="7Sc-Eu-tmJ" customClass="HelpViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u53-Mp-X7s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-EG-eZt">
-                                <rect key="frame" x="20" y="345.5" width="374" height="215"/>
+                                <rect key="frame" x="20" y="260.66666666666669" width="374" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-yC-Tz6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvt-oR-Eki">
-                                        <rect key="frame" x="20" y="50" width="334" height="60"/>
+                                        <rect key="frame" x="20" y="50" width="334" height="68"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Текст ">
@@ -44,46 +44,70 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5X-vJ-qhb" userLabel="Separator">
-                                        <rect key="frame" x="50" y="130" width="274" height="1"/>
+                                        <rect key="frame" x="50" y="138" width="274" height="1"/>
                                         <color key="backgroundColor" name="BackButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="HXC-5f-IRj"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-8g-vXD">
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
-                                        <color key="backgroundColor" name="MainYellow"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Вернуться в игру">
-                                            <color key="titleColor" name="TextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="backInGameButton:" destination="7Sc-Eu-tmJ" eventType="touchUpInside" id="e3V-wC-tV5"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4g-t1-PcG" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="52"/>
+                                                <color key="backgroundColor" name="MainYellow"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="fhh-3F-jai"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="Источник">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="luY-eA-XyA" kind="show" identifier="toSourceViewController" id="c1q-m4-XKV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="125.66666666666664" y="0.0" width="216.33333333333337" height="52"/>
+                                                <color key="backgroundColor" name="BackButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="Вернуться в игру">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backInGameButton:" destination="7Sc-Eu-tmJ" eventType="touchUpInside" id="e3V-wC-tV5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="215" id="30m-IJ-dbh"/>
                                     <constraint firstItem="kvt-oR-Eki" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="20" id="3el-od-AGo"/>
-                                    <constraint firstAttribute="bottom" secondItem="ODb-va-1rm" secondAttribute="bottom" constant="16" id="5fZ-91-8IU"/>
                                     <constraint firstItem="v5X-vJ-qhb" firstAttribute="top" secondItem="kvt-oR-Eki" secondAttribute="bottom" constant="20" id="7iH-5K-4qG"/>
-                                    <constraint firstItem="ODb-va-1rm" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="16" id="AQi-yj-hNm"/>
+                                    <constraint firstAttribute="bottom" secondItem="aqW-8g-vXD" secondAttribute="bottom" constant="16" id="9qN-48-U6y"/>
+                                    <constraint firstAttribute="trailing" secondItem="aqW-8g-vXD" secondAttribute="trailing" constant="16" id="Bbc-Ts-0fJ"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="top" secondItem="fsr-EG-eZt" secondAttribute="top" id="Gpc-dS-rhL"/>
-                                    <constraint firstItem="ODb-va-1rm" firstAttribute="top" secondItem="v5X-vJ-qhb" secondAttribute="bottom" constant="16" id="Hah-Z4-Cwi"/>
                                     <constraint firstItem="kvt-oR-Eki" firstAttribute="top" secondItem="7Y5-yC-Tz6" secondAttribute="bottom" constant="5" id="JMe-ur-STZ"/>
                                     <constraint firstItem="7Y5-yC-Tz6" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" id="RKG-Sf-t8T"/>
                                     <constraint firstItem="v5X-vJ-qhb" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="50" id="dRz-YI-q1Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="ODb-va-1rm" secondAttribute="trailing" constant="16" id="jOK-eK-YCI"/>
+                                    <constraint firstItem="aqW-8g-vXD" firstAttribute="top" secondItem="v5X-vJ-qhb" secondAttribute="bottom" constant="8" id="f0U-l1-eU4"/>
                                     <constraint firstAttribute="trailing" secondItem="7Y5-yC-Tz6" secondAttribute="trailing" id="oED-VI-Pyf"/>
+                                    <constraint firstItem="aqW-8g-vXD" firstAttribute="leading" secondItem="fsr-EG-eZt" secondAttribute="leading" constant="16" id="pUf-Sd-Zik"/>
                                     <constraint firstAttribute="trailing" secondItem="v5X-vJ-qhb" secondAttribute="trailing" constant="50" id="qnN-Zj-kCo"/>
                                     <constraint firstAttribute="trailing" secondItem="kvt-oR-Eki" secondAttribute="trailing" constant="20" id="tIy-AS-uiV"/>
                                 </constraints>
@@ -107,16 +131,127 @@
                         <outlet property="helpTextLabel" destination="kvt-oR-Eki" id="y8O-CL-hcV"/>
                         <outlet property="helpView" destination="fsr-EG-eZt" id="IRt-so-zfk"/>
                         <outlet property="separatorHeight" destination="HXC-5f-IRj" id="2Gj-qX-GZo"/>
+                        <outlet property="sourceButton" destination="Q4g-t1-PcG" id="NwJ-GM-h2b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcl-H8-WlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="113"/>
+            <point key="canvasLocation" x="613" y="126"/>
+        </scene>
+        <!--Source View Controller-->
+        <scene sceneID="MVG-nN-zCQ">
+            <objects>
+                <viewController storyboardIdentifier="SourceViewController" modalPresentationStyle="overFullScreen" id="luY-eA-XyA" customClass="SourceViewController" customModule="Свифти_Квиз" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6k-IK-EaE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaJ-VG-VLc" userLabel="Content">
+                                <rect key="frame" x="16" y="24" width="382" height="688"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Источник" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-LU-tWY">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="97T-cg-pnE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGe-uq-qKY" userLabel="Separator">
+                                        <rect key="frame" x="50" y="603" width="282" height="1"/>
+                                        <color key="backgroundColor" name="BackButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="iaE-2q-kMX"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="713-oN-GJ3" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="620" width="350" height="52"/>
+                                        <color key="backgroundColor" name="MainYellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="aYA-vI-7AA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Закрыть источник">
+                                            <color key="titleColor" name="TextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="9SU-yj-ynZ"/>
+                                        </connections>
+                                    </button>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VP-BC-DD0">
+                                        <rect key="frame" x="0.0" y="53" width="382" height="542"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-GH-paM">
+                                        <rect key="frame" x="172.66666666666666" y="325.66666666666669" width="37" height="37"/>
+                                        <color key="color" red="1" green="0.83893619539999997" blue="0.25352705660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TZ0-LU-tWY" secondAttribute="trailing" id="5bN-fW-VNY"/>
+                                    <constraint firstItem="BjZ-GH-paM" firstAttribute="centerY" secondItem="vaJ-VG-VLc" secondAttribute="centerY" id="5mA-Mg-e4U"/>
+                                    <constraint firstItem="TZ0-LU-tWY" firstAttribute="top" secondItem="vaJ-VG-VLc" secondAttribute="top" id="Fq6-gj-YQ5"/>
+                                    <constraint firstItem="TZ0-LU-tWY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="JHq-Ec-bhp"/>
+                                    <constraint firstItem="9VP-BC-DD0" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="Rh0-of-mIn"/>
+                                    <constraint firstItem="713-oN-GJ3" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="Ucr-Zh-bmz"/>
+                                    <constraint firstAttribute="trailing" secondItem="BGe-uq-qKY" secondAttribute="trailing" constant="50" id="YWS-Qj-Nd9"/>
+                                    <constraint firstAttribute="trailing" secondItem="713-oN-GJ3" secondAttribute="trailing" constant="16" id="bEJ-fE-V0n"/>
+                                    <constraint firstItem="BGe-uq-qKY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="50" id="cej-yt-WlM"/>
+                                    <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="9VP-BC-DD0" secondAttribute="bottom" constant="8" symbolic="YES" id="iFd-ab-xax"/>
+                                    <constraint firstAttribute="bottom" secondItem="713-oN-GJ3" secondAttribute="bottom" constant="16" id="lp9-hW-vCD"/>
+                                    <constraint firstAttribute="trailing" secondItem="9VP-BC-DD0" secondAttribute="trailing" id="niM-06-URE"/>
+                                    <constraint firstItem="BjZ-GH-paM" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="trT-uN-cjE"/>
+                                    <constraint firstItem="9VP-BC-DD0" firstAttribute="top" secondItem="TZ0-LU-tWY" secondAttribute="bottom" constant="8" symbolic="YES" id="uEi-cX-Li7"/>
+                                    <constraint firstItem="713-oN-GJ3" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="16" id="vDK-AD-wl8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cTS-Ky-D2C"/>
+                        <color key="backgroundColor" name="BackgroundForModals"/>
+                        <constraints>
+                            <constraint firstItem="cTS-Ky-D2C" firstAttribute="bottom" secondItem="vaJ-VG-VLc" secondAttribute="bottom" constant="24" id="GgW-AZ-lyB"/>
+                            <constraint firstItem="vaJ-VG-VLc" firstAttribute="top" secondItem="cTS-Ky-D2C" secondAttribute="top" constant="24" id="Mav-wo-xCs"/>
+                            <constraint firstItem="vaJ-VG-VLc" firstAttribute="leading" secondItem="cTS-Ky-D2C" secondAttribute="leading" constant="16" id="cEU-Wn-lLb"/>
+                            <constraint firstItem="cTS-Ky-D2C" firstAttribute="trailing" secondItem="vaJ-VG-VLc" secondAttribute="trailing" constant="16" id="zhS-EH-g6A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7tA-Vf-B3l"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BjZ-GH-paM" id="IZO-Bg-TEu"/>
+                        <outlet property="dismissButton" destination="713-oN-GJ3" id="gOf-V4-yEK"/>
+                        <outlet property="webView" destination="9VP-BC-DD0" id="vi3-VR-b6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sds-hx-vAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494.2028985507247" y="125.89285714285714"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="713-oN-GJ3">
+            <size key="intrinsicContentSize" width="138" height="32"/>
+        </designable>
         <designable name="ODb-va-1rm">
             <size key="intrinsicContentSize" width="131" height="32"/>
+        </designable>
+        <designable name="Q4g-t1-PcG">
+            <size key="intrinsicContentSize" width="73" height="32"/>
         </designable>
     </designables>
     <resources>

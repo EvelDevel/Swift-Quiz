@@ -123,6 +123,8 @@
 		FBC1D48A247574730055FF62 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* Shadow.swift */; };
 		FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */; };
 		FBC34FE726E08EEE00120FB4 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE626E08EEE00120FB4 /* GameResult.swift */; };
+		FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC809422903BFC300E043F8 /* SourceViewController.swift */; };
+		FBC809452903C1B800E043F8 /* SourceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC809442903C1B800E043F8 /* SourceDatabase.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* TopicOperator.swift */; };
@@ -248,6 +250,8 @@
 		FBC1D489247574730055FF62 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		FBC34FE326DF8E4800120FB4 /* AppLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleSet.swift; sourceTree = "<group>"; };
 		FBC34FE626E08EEE00120FB4 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
+		FBC809422903BFC300E043F8 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		FBC809442903C1B800E043F8 /* SourceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDatabase.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 			children = (
 				FB291D2126D2211400A40679 /* HelpViewController.storyboard */,
 				FB1D0BB12450133200E9C56D /* HelpViewController.swift */,
+				FBC809422903BFC300E043F8 /* SourceViewController.swift */,
 			);
 			path = HelpViewController;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				FB1D0B952446E76F00E9C56D /* Questions */,
 				FB0B96A125262192006C986D /* RandomSetManager.swift */,
 				FBECDC5F243F352D00BD5583 /* TopicOperator.swift */,
+				FBC809442903C1B800E043F8 /* SourceDatabase.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -753,6 +759,7 @@
 			files = (
 				FB119C1A246A5522005F5289 /* PropertiesSet.swift in Sources */,
 				FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */,
+				FBC809452903C1B800E043F8 /* SourceDatabase.swift in Sources */,
 				FB119C2D246A5AF0005F5289 /* OptionalChainingSet.swift in Sources */,
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB0C05B326E88936006744CB /* FramesAndBounds.swift in Sources */,
@@ -824,6 +831,7 @@
 				FB795CDA28A914D4001B6CAA /* AppDesignAndLayout.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
+				FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */,
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,

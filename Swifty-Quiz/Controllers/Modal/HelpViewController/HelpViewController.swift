@@ -10,13 +10,16 @@ protocol HelpViewControllerDelegate: AnyObject {
 }
 
 class HelpViewController: UIViewController {
-
     @IBOutlet private weak var helpView: UIView!
     @IBOutlet private weak var helpTextLabel: UILabel!
     @IBOutlet private weak var dismissButton: UIButton!
     @IBOutlet private weak var separatorHeight: NSLayoutConstraint!
+    @IBOutlet private weak var sourceButton: RoundCornerButton!
+    
     
     private var boldTextService = BoldTextService()
+    private let sourceService = SourceDatabase()
+    private var sourceUrl = URL(string: "")
     
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
@@ -58,12 +61,12 @@ class HelpViewController: UIViewController {
 
 // MARK: Main
 extension HelpViewController {
-    
     private func setup() {
         setupFontSize()
         setupViewCornerCurve()
         setupHelpText()
         setupThinSeparator()
+        updateSourceButton()
     }
     
     private func setupViewCornerCurve() {
@@ -113,12 +116,28 @@ extension HelpViewController {
             )
         }
     }
+    
+    private func updateSourceButton() {
+        sourceButton.isHidden = true
+        
+        if let url = sourceService.getSourceUrl(questionId: questionID) {
+            sourceButton.isHidden = false
+            sourceUrl = url
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSourceViewController" {
+            if let controller = segue.destination as? SourceViewController {
+                controller.url = sourceUrl
+            }
+        }
+    }
 }
 
 
 // MARK: Dismissing 
 extension HelpViewController {
-
     @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
         dismissView()
