@@ -20,6 +20,9 @@ class DrawingAndAnimation {
                      optionC: "Path",
                      optionD: "",
                      questionId: 320291560,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/geometryreader"
+                     ),
                      helpText: """
                      GeometryReader. Контейнер, который определяет свое содержимое как функцию собственного размера и пространства координат.
                      
@@ -37,6 +40,9 @@ class DrawingAndAnimation {
                      optionC: "Text",
                      optionD: "",
                      questionId: 453982010,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/path"
+                     ),
                      helpText: """
                      Path. SwiftUI предоставляет нам специальный тип Path для рисования пользовательских фигур.
 
@@ -52,6 +58,9 @@ class DrawingAndAnimation {
                      optionC: "",
                      optionD: "",
                      questionId: 481923730,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/gradient"
+                     ),
                      helpText: """
                      Gradient. Эта структура позволяет создать цветовой градиент, представленный в виде массива цветовых точек - Gradient(colors: [Color]).
                      
@@ -67,6 +76,9 @@ class DrawingAndAnimation {
                      optionC: ".fill",
                      optionD: "",
                      questionId: 202976277,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/lineargradient"
+                     ),
                      helpText: """
                      linearGradient. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
                      """),
@@ -80,6 +92,9 @@ class DrawingAndAnimation {
                      optionC: "startPoint, endPoint, shape",
                      optionD: "",
                      questionId: 595530231,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/lineargradient"
+                     ),
                      helpText: """
                      startPoint и endPoint. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
                      """),
@@ -93,6 +108,9 @@ class DrawingAndAnimation {
                      optionC: "addPath",
                      optionD: "",
                      questionId: 622755780,
+                     source: URL(
+                        string: "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
+                     ),
                      helpText: """
                      addLines. addLines добавляет к Path последовательность соединенных прямолинейных сегментов (прямые линии).
                      

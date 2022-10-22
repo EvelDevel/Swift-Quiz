@@ -125,6 +125,7 @@ extension GameHistoryViewController: GameHistoryCellDelegate {
         ) as! HelpViewController
         
         helpViewController.helpText = history[index].helpText
+        helpViewController.source = history[index].source
         helpViewController.isFromHistory = true
         
 		present(

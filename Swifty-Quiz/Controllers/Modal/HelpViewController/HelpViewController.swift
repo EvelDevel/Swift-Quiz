@@ -16,16 +16,14 @@ class HelpViewController: UIViewController {
     @IBOutlet private weak var separatorHeight: NSLayoutConstraint!
     @IBOutlet private weak var sourceButton: RoundCornerButton!
     
-    
     private var boldTextService = BoldTextService()
-    private let sourceService = SourceDatabase()
-    private var sourceUrl = URL(string: "")
     
     weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
     var fontSize: CGFloat = 12
     var helpText: String = ""
     var isFromHistory: Bool = false
+    var source: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,16 +118,15 @@ extension HelpViewController {
     private func updateSourceButton() {
         sourceButton.isHidden = true
         
-        if let url = sourceService.getSourceUrl(questionId: questionID) {
+        if let _ = source {
             sourceButton.isHidden = false
-            sourceUrl = url
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSourceViewController" {
             if let controller = segue.destination as? SourceViewController {
-                controller.url = sourceUrl
+                controller.url = source
             }
         }
     }

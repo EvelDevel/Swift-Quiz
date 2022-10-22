@@ -5,7 +5,6 @@
 import Foundation
 
 struct Question: Codable {
-    
     let question: [String]  // Массив с формулировками вопроса
     let image: String       // Изображение для вопроса
     let optionA: String     // Варианты ответа (4 варианта, вариативно может быть от 2 до 4)
@@ -13,5 +12,6 @@ struct Question: Codable {
     let optionC: String
     let optionD: String
     let questionId: Int     // Уникальный номер вопроса
+    var source: URL?
     let helpText: String    // Теоретическая подсказка
 }

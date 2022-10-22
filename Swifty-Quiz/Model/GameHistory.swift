@@ -5,13 +5,13 @@
 import Foundation
 
 class GameHistory: Codable {
-    
     var question: String
     var correctAnswer: String
     var userAnswer: String
     var questionId: Int
     var image: String
     var helpText: String
+    var source: URL?
     
     init(
         question: String,
@@ -19,7 +19,8 @@ class GameHistory: Codable {
         userAnswer: String,
         questionId: Int,
         image: String,
-        helpText: String
+        helpText: String,
+        source: URL?
     ) {
         self.question = question
         self.correctAnswer = correctAnswer
@@ -27,5 +28,6 @@ class GameHistory: Codable {
         self.questionId = questionId
         self.image = image
         self.helpText = helpText
+        self.source = source
     }
 }
