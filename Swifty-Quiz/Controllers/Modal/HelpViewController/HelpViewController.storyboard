@@ -196,23 +196,37 @@
                                         <rect key="frame" x="172.66666666666666" y="325.66666666666669" width="37" height="37"/>
                                         <color key="color" red="1" green="0.83893619539999997" blue="0.25352705660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </activityIndicatorView>
-                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
                                         <rect key="frame" x="133.33333333333334" y="569" width="115.66666666666666" height="26"/>
                                         <color key="pageIndicatorTintColor" red="0.96022727269999997" green="0.8055694149" blue="0.24344359409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pageControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe &gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-Tb-S0t">
-                                        <rect key="frame" x="273" y="574.66666666666663" width="52" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" name="MainYellow"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt; Swipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-Ne-enX">
-                                        <rect key="frame" x="57.333333333333329" y="574.66666666666663" width="52" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <color key="textColor" name="MainYellow"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFm-iA-IQ0">
+                                        <rect key="frame" x="77.333333333333329" y="562" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="R9l-os-hd8"/>
+                                            <constraint firstAttribute="height" constant="40" id="l2e-Uy-Vbp"/>
+                                        </constraints>
+                                        <color key="tintColor" name="MainYellow"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="swipeLeftTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="TSU-fn-uhB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-nG-jS8">
+                                        <rect key="frame" x="265" y="562" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="NcB-Ds-01I"/>
+                                            <constraint firstAttribute="height" constant="40" id="y9h-ob-1bp"/>
+                                        </constraints>
+                                        <color key="tintColor" name="MainYellow"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.right" catalog="system"/>
+                                        <connections>
+                                            <action selector="swipeRightTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="TYp-dA-vLN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -220,19 +234,19 @@
                                     <constraint firstItem="BjZ-GH-paM" firstAttribute="centerY" secondItem="vaJ-VG-VLc" secondAttribute="centerY" id="5mA-Mg-e4U"/>
                                     <constraint firstItem="5TP-qH-vNY" firstAttribute="top" secondItem="9VP-BC-DD0" secondAttribute="bottom" constant="8" id="6kA-9r-vlX"/>
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="top" secondItem="vaJ-VG-VLc" secondAttribute="top" id="Fq6-gj-YQ5"/>
-                                    <constraint firstItem="DgW-Ne-enX" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="Hlu-Ne-h9O"/>
                                     <constraint firstItem="5TP-qH-vNY" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="IjJ-DO-Uf1"/>
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="JHq-Ec-bhp"/>
-                                    <constraint firstItem="Fpj-Tb-S0t" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="24" id="LYO-IE-Lut"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="Rh0-of-mIn"/>
-                                    <constraint firstItem="Fpj-Tb-S0t" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="UGP-9H-iPC"/>
                                     <constraint firstItem="713-oN-GJ3" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="Ucr-Zh-bmz"/>
+                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="zFm-iA-IQ0" secondAttribute="trailing" constant="16" id="Vym-Te-36n"/>
                                     <constraint firstAttribute="trailing" secondItem="BGe-uq-qKY" secondAttribute="trailing" constant="50" id="YWS-Qj-Nd9"/>
                                     <constraint firstAttribute="trailing" secondItem="713-oN-GJ3" secondAttribute="trailing" constant="16" id="bEJ-fE-V0n"/>
-                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="DgW-Ne-enX" secondAttribute="trailing" constant="24" id="cdn-3T-ChN"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="50" id="cej-yt-WlM"/>
+                                    <constraint firstItem="zFm-iA-IQ0" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="doQ-9q-9Og"/>
                                     <constraint firstAttribute="bottom" secondItem="713-oN-GJ3" secondAttribute="bottom" constant="16" id="lp9-hW-vCD"/>
+                                    <constraint firstItem="p1Q-nG-jS8" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="16" id="m6D-Mc-gJU"/>
                                     <constraint firstAttribute="trailing" secondItem="9VP-BC-DD0" secondAttribute="trailing" id="niM-06-URE"/>
+                                    <constraint firstItem="p1Q-nG-jS8" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="pZO-Gq-Hmm"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="5TP-qH-vNY" secondAttribute="bottom" constant="8" id="qAo-nD-v4U"/>
                                     <constraint firstItem="BjZ-GH-paM" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="trT-uN-cjE"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="top" secondItem="TZ0-LU-tWY" secondAttribute="bottom" constant="8" symbolic="YES" id="uEi-cX-Li7"/>
@@ -259,8 +273,8 @@
                         <outlet property="activityIndicator" destination="BjZ-GH-paM" id="IZO-Bg-TEu"/>
                         <outlet property="dismissButton" destination="713-oN-GJ3" id="gOf-V4-yEK"/>
                         <outlet property="pageControl" destination="5TP-qH-vNY" id="fX5-vx-Dii"/>
-                        <outlet property="swipeLeftLabel" destination="DgW-Ne-enX" id="do1-Aq-WAx"/>
-                        <outlet property="swipeRightLabel" destination="Fpj-Tb-S0t" id="YJQ-TI-EEI"/>
+                        <outlet property="swipeLeftButton" destination="zFm-iA-IQ0" id="Jnp-3d-WEs"/>
+                        <outlet property="swipeRightButton" destination="p1Q-nG-jS8" id="jmN-eF-nfU"/>
                         <outlet property="webView" destination="9VP-BC-DD0" id="vi3-VR-b6z"/>
                     </connections>
                 </viewController>
@@ -281,6 +295,8 @@
         </designable>
     </designables>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <namedColor name="BackButton">
             <color red="0.89399999380111694" green="0.89800000190734863" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -14,8 +14,8 @@ class SourceViewController: UIViewController {
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var pageControl: UIPageControl!
-    @IBOutlet private weak var swipeRightLabel: UILabel!
-    @IBOutlet private weak var swipeLeftLabel: UILabel!
+    @IBOutlet private weak var swipeRightButton: UIButton!
+    @IBOutlet private weak var swipeLeftButton: UIButton!
     
     var links: [URL]? = []
     private var position = 0
@@ -25,7 +25,7 @@ class SourceViewController: UIViewController {
         setupWebView()
         setupSwipeGestures()
         setupPageControl()
-        setupSwipeLabels()
+        setupSwipeButtons()
     }
     
     private func setupWebView() {
@@ -77,32 +77,47 @@ class SourceViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func swipeLeftTapped(_ sender: Any) {
+        swipeToRightTapped()
+    }
+    
+    @IBAction func swipeRightTapped(_ sender: Any) {
+        swipeToLeftTapped()
+    }
+    
     @objc func handleGesture(
         gesture: UISwipeGestureRecognizer
     ) -> Void {
+        if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            swipeToLeftTapped()
+        } else if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            swipeToRightTapped()
+        }
+    }
+    
+    private func swipeToLeftTapped() {
         guard let links = links else {
             return
         }
         
-        if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            if position < links.count - 1 {
-                position = position + 1
-                pageControl.currentPage = position
-                setupWebView()
-            }
+        if position < links.count - 1 {
+            position = position + 1
+            pageControl.currentPage = position
+            setupWebView()
+            setupSwipeButtons()
         }
-        else if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            if position > 0 {
-                position = position - 1
-                pageControl.currentPage = position
-                setupWebView()
-            }
-        }
-        
-        setupSwipeLabels()
     }
     
-    private func setupSwipeLabels() {
+    private func swipeToRightTapped() {
+        if position > 0 {
+            position = position - 1
+            pageControl.currentPage = position
+            setupWebView()
+            setupSwipeButtons()
+        }
+    }
+    
+    private func setupSwipeButtons() {
         UIView.animate(
             withDuration: 0.25
         ) {
@@ -111,16 +126,17 @@ class SourceViewController: UIViewController {
             }
             
             if links.count == 1 {
-                self.swipeLeftLabel.isHidden = true
-                self.swipeRightLabel.isHidden = true
+                self.swipeLeftButton.isHidden = true
+                self.swipeRightButton.isHidden = true
             } else if self.position == 0 {
-                self.swipeLeftLabel.isHidden = true
+                self.swipeLeftButton.isHidden = true
+                self.swipeRightButton.isHidden = false
             } else if self.position + 1 == links.count {
-                self.swipeLeftLabel.isHidden = false
-                self.swipeRightLabel.isHidden = true
+                self.swipeLeftButton.isHidden = false
+                self.swipeRightButton.isHidden = true
             } else if self.position > 0 {
-                self.swipeLeftLabel.isHidden = false
-                self.swipeRightLabel.isHidden = false
+                self.swipeLeftButton.isHidden = false
+                self.swipeRightButton.isHidden = false
             }
         }
     }

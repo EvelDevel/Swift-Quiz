@@ -21,9 +21,8 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 320291560,
                      links: [
-                        URL(
-                            string: "https://www.hackingwithswift.com/quick-start/swiftui/how-to-provide-relative-sizes-using-geometryreader"
-                        )!
+                        URL(string: "https://developer.apple.com/documentation/swiftui/geometryreader")!,
+                        URL(string: "https://www.hackingwithswift.com/quick-start/swiftui/how-to-provide-relative-sizes-using-geometryreader")!
                      ],
                      helpText: """
                      GeometryReader. Контейнер, который определяет свое содержимое как функцию собственного размера и пространства координат.
