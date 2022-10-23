@@ -43,7 +43,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 453982010,
                      links: [
-                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
+                        "https://developer.apple.com/documentation/swiftui/path",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
+                        "https://sarunw.com/posts/how-to-draw-custom-paths-and-shapes-in-swiftui/"
                      ],
                      helpText: """
                      Path. SwiftUI предоставляет нам специальный тип Path для рисования пользовательских фигур.
@@ -61,7 +63,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 481923730,
                      links: [
-                        "https://sarunw.com/posts/gradient-in-swiftui"
+                        "https://sarunw.com/posts/gradient-in-swiftui",
+                        "https://www.swiftanytime.com/colors-and-gradient-in-swiftui/",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-render-a-gradient"
                      ],
                      helpText: """
                      Gradient. Эта структура позволяет создать цветовой градиент, представленный в виде массива цветовых точек - Gradient(colors: [Color]).
@@ -79,7 +83,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 202976277,
                      links: [
-                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
+                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient",
+                        "https://sarunw.com/posts/gradient-in-swiftui",
+                        "https://www.swiftanytime.com/colors-and-gradient-in-swiftui/"
                      ],
                      helpText: """
                      linearGradient. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
@@ -95,7 +101,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 595530231,
                      links: [
-                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
+                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient",
+                        "https://sarunw.com/posts/gradient-in-swiftui",
+                        "https://www.swiftanytime.com/colors-and-gradient-in-swiftui/"
                      ],
                      helpText: """
                      startPoint и endPoint. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
@@ -111,7 +119,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 622755780,
                      links: [
-                        "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
+                        "https://developer.apple.com/documentation/swiftui/path/addlines(_:)",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
+                        "https://sarunw.com/posts/how-to-draw-custom-paths-and-shapes-in-swiftui/"
                      ],
                      helpText: """
                      addLines. addLines добавляет к Path последовательность соединенных прямолинейных сегментов (прямые линии).
@@ -129,7 +139,8 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 501601837,
                      links: [
-                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
+                        "https://sarunw.com/posts/how-to-draw-custom-paths-and-shapes-in-swiftui/"
                      ],
                      helpText: """
                      addLine. Метод addLine в Path позволяет добавлять отрезок прямой линии из текущей точки в указанную точку.
@@ -149,7 +160,8 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 122340441,
                      links: [
-                        "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)"
+                        "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)",
+                        "https://schwiftyui.com/swiftui/paths-in-swiftui/"
                      ],
                      helpText: """
                      addRoundedRect. Метод addRoundedRect добавляет прямоугольник со скругленными углами к вашему объекту Path.
@@ -172,6 +184,10 @@ class DrawingAndAnimation {
                      optionC: "ellipse",
                      optionD: "",
                      questionId: 821840989,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/path/addellipse(in:transform:)",
+                        "https://www.hackingwithswift.com/example-code/core-graphics/how-to-draw-a-circle-using-core-graphics-addellipsein"
+                     ],
                      helpText: """
                      addEllipse. Метод addEllipse позволяет добавить к Path эллипс. Эллипс создается последовательностью кривых Безье (Bézier curves). Его центр — это середина прямоугольника, заданного параметром rect.
                      
@@ -189,6 +205,10 @@ class DrawingAndAnimation {
                      optionC: "beginPath",
                      optionD: "",
                      questionId: 118990891,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/path/move(to:)",
+                        "https://developer.apple.com/documentation/swiftui/path/element/move(to:)"
+                     ],
                      helpText: """
                      move. В качестве входящего параметра этот метод принимает стартовую точку для вашего будущего подпути / subpath (to point: CGPoint).
                      
@@ -204,6 +224,10 @@ class DrawingAndAnimation {
                      optionC: ".radialGradient",
                      optionD: "",
                      questionId: 789698273,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/shape/fill(style:)",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-fill-and-stroke-shapes-at-the-same-time"
+                     ],
                      helpText: """
                      fill. Данный модификатор позволяет заливать Shape любым цветом или градиентом, принимает два параметра:
                      
@@ -222,6 +246,10 @@ class DrawingAndAnimation {
                      optionC: "Path",
                      optionD: "",
                      questionId: 698674104,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/angle",
+                        "https://swiftui-lab.com/trigonometric-recipes-for-swiftui/"
+                     ],
                      helpText: """
                      Angle. Геометрический угол в SwiftUI, значение которого вы получаете в радианах или градусах.
                      """),
@@ -235,6 +263,10 @@ class DrawingAndAnimation {
                      optionC: "transition",
                      optionD: "",
                      questionId: 491514774,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
+                     ],
                      helpText: """
                      rotationEffect. Данный модификатор позволяет повернуть View вокруг якоря (anchor point). Метод принимает два входящих параметра:
                      
@@ -251,6 +283,10 @@ class DrawingAndAnimation {
                      optionC: "",
                      optionD: "",
                      questionId: 650979466,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
+                     ],
                      helpText: """
                      Против часовой. Отрицательный градус поворачивает View против часовой стрелки.
                      """),
@@ -264,6 +300,10 @@ class DrawingAndAnimation {
                      optionC: "Вправо на 90°",
                      optionD: "Никак",
                      questionId: 195234230,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
+                     ],
                      helpText: """
                      На 180°. Константа .pi развернет View вверх-ногами на 180 градусов.
                      """),
@@ -277,6 +317,11 @@ class DrawingAndAnimation {
                      optionC: ".easeInOut",
                      optionD: "",
                      questionId: 854510570,
+                     links: [
+                        "https://habr.com/ru/post/504198/",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/customizing-animations-in-swiftui",
+                        "https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions"
+                     ],
                      helpText: """
                      animation. Модификатор animation применяет заданную (из перечисления) анимацию к вашему view при изменении указанного значения (например: Когда изменяется флаг какой-нибудь кнопки после нажатия).
                      

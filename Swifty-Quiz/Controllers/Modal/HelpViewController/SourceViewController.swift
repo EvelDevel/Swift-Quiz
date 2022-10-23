@@ -61,14 +61,26 @@ class SourceViewController: UIViewController {
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
         dismiss(animated: true)
     }
     
     @IBAction func goRightTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .topicAndSettingsButton
+        )
+        
         goToRightTapped()
     }
     
     @IBAction func goLeftTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .topicAndSettingsButton
+        )
+        
         goToLeftTapped()
     }
     
@@ -153,5 +165,68 @@ extension SourceViewController: WKNavigationDelegate, WKUIDelegate{
         ) {
             self.webView.alpha = 1
         }
+    }
+}
+
+
+// MARK: Share
+extension SourceViewController {
+    @IBAction func shareAppTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
+        guard let links = links,
+              let url = URL(string: links[position]) else {
+            showIncorrectUrlAlert()
+            return
+        }
+        
+        let secondActivityItem = url
+        
+        let activityViewController = UIActivityViewController(
+            activityItems: [
+                secondActivityItem
+            ],
+            applicationActivities: nil
+        )
+        
+        activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+        activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+        
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(
+            x: 150,
+            y: 150,
+            width: 0,
+            height: 0
+        )
+        
+        if #available(iOS 13.0, *) {
+            activityViewController.activityItemsConfiguration = [
+                UIActivity.ActivityType.message
+            ] as? UIActivityItemsConfigurationReading
+        }
+        
+        activityViewController.excludedActivityTypes = [
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTencentWeibo,
+            UIActivity.ActivityType.postToFacebook
+        ]
+        
+        if #available(iOS 13.0, *) {
+            activityViewController.isModalInPresentation = true
+        }
+        
+        self.present(
+            activityViewController,
+            animated: true,
+            completion: nil
+        )
     }
 }

@@ -165,25 +165,51 @@
                                             <constraint firstAttribute="height" constant="1" id="iaE-2q-kMX"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="713-oN-GJ3" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-es-iNW">
                                         <rect key="frame" x="16" y="620" width="350" height="52"/>
-                                        <color key="backgroundColor" name="BackButton"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="aYA-vI-7AA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Закрыть">
-                                            <color key="titleColor" name="TextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="16"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="dismissButtonTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="9SU-yj-ynZ"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="713-oN-GJ3" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="52"/>
+                                                <color key="backgroundColor" name="BackButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="aYA-vI-7AA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="Закрыть">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dismissButtonTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="9SU-yj-ynZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0r-2m-6dj" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="298" y="0.0" width="52" height="52"/>
+                                                <color key="backgroundColor" name="BackButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="Qft-rc-e38"/>
+                                                    <constraint firstAttribute="width" constant="52" id="cGU-IK-KEF"/>
+                                                </constraints>
+                                                <color key="tintColor" name="TextColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
+                                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                    <color key="titleColor" name="TextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shareAppTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="XXW-R9-W8d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VP-BC-DD0">
                                         <rect key="frame" x="0.0" y="53" width="382" height="508"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,21 +262,21 @@
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="top" secondItem="vaJ-VG-VLc" secondAttribute="top" id="Fq6-gj-YQ5"/>
                                     <constraint firstItem="5TP-qH-vNY" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="IjJ-DO-Uf1"/>
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="JHq-Ec-bhp"/>
+                                    <constraint firstItem="3cH-es-iNW" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="16" id="L4H-CI-v5C"/>
+                                    <constraint firstAttribute="trailing" secondItem="3cH-es-iNW" secondAttribute="trailing" constant="16" id="PHz-uS-hGh"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="Rh0-of-mIn"/>
-                                    <constraint firstItem="713-oN-GJ3" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="Ucr-Zh-bmz"/>
+                                    <constraint firstItem="3cH-es-iNW" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="U7f-91-YD1"/>
                                     <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="zFm-iA-IQ0" secondAttribute="trailing" constant="8" id="Vym-Te-36n"/>
                                     <constraint firstAttribute="trailing" secondItem="BGe-uq-qKY" secondAttribute="trailing" constant="50" id="YWS-Qj-Nd9"/>
-                                    <constraint firstAttribute="trailing" secondItem="713-oN-GJ3" secondAttribute="trailing" constant="16" id="bEJ-fE-V0n"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="50" id="cej-yt-WlM"/>
                                     <constraint firstItem="zFm-iA-IQ0" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="doQ-9q-9Og"/>
-                                    <constraint firstAttribute="bottom" secondItem="713-oN-GJ3" secondAttribute="bottom" constant="16" id="lp9-hW-vCD"/>
+                                    <constraint firstAttribute="bottom" secondItem="3cH-es-iNW" secondAttribute="bottom" constant="16" id="gli-EF-Ql3"/>
                                     <constraint firstItem="p1Q-nG-jS8" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="8" id="m6D-Mc-gJU"/>
                                     <constraint firstAttribute="trailing" secondItem="9VP-BC-DD0" secondAttribute="trailing" id="niM-06-URE"/>
                                     <constraint firstItem="p1Q-nG-jS8" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="pZO-Gq-Hmm"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="5TP-qH-vNY" secondAttribute="bottom" constant="8" id="qAo-nD-v4U"/>
                                     <constraint firstItem="BjZ-GH-paM" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="trT-uN-cjE"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="top" secondItem="TZ0-LU-tWY" secondAttribute="bottom" constant="8" symbolic="YES" id="uEi-cX-Li7"/>
-                                    <constraint firstItem="713-oN-GJ3" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="16" id="vDK-AD-wl8"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -293,10 +319,14 @@
         <designable name="Q4g-t1-PcG">
             <size key="intrinsicContentSize" width="91" height="32"/>
         </designable>
+        <designable name="t0r-2m-6dj">
+            <size key="intrinsicContentSize" width="19" height="22.333333333333332"/>
+        </designable>
     </designables>
     <resources>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="BackButton">
             <color red="0.89399999380111694" green="0.89800000190734863" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -124,6 +124,10 @@ extension HelpViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
         if segue.identifier == "toSourceViewController" {
             if let controller = segue.destination as? SourceViewController {
                 controller.links = links

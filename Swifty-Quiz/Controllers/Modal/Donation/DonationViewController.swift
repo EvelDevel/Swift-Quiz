@@ -125,7 +125,6 @@ extension DonationViewController {
 
 // MARK: Dismissing
 extension DonationViewController {
-    
     @IBAction private func backInGameButton(_ sender: UIButton) {
         SoundPlayer.shared.playSound(
             sound: .buttonTapped
