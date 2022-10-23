@@ -140,14 +140,6 @@ extension HelpViewController {
         dismissView()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-         let touch = touches.first
-         
-        if touch?.view != self.helpView {
-             dismissView()
-        }
-    }
-    
     private func dismissView() {
         UIView.animate(
             withDuration: 0.3,

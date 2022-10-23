@@ -54,13 +54,13 @@
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4g-t1-PcG" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="52"/>
                                                 <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fhh-3F-jai"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Источник">
+                                                <state key="normal" title="Материалы">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="180.33333333333337" y="0.0" width="161.66666666666663" height="52"/>
+                                                <rect key="frame" x="195" y="0.0" width="147" height="52"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
@@ -149,7 +149,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaJ-VG-VLc" userLabel="Content">
                                 <rect key="frame" x="16" y="24" width="382" height="688"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Источник" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-LU-tWY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Материалы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-LU-tWY">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="97T-cg-pnE"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9VP-BC-DD0">
-                                        <rect key="frame" x="0.0" y="53" width="382" height="542"/>
+                                        <rect key="frame" x="0.0" y="53" width="382" height="508"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -196,21 +196,44 @@
                                         <rect key="frame" x="172.66666666666666" y="325.66666666666669" width="37" height="37"/>
                                         <color key="color" red="1" green="0.83893619539999997" blue="0.25352705660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </activityIndicatorView>
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
+                                        <rect key="frame" x="133.33333333333334" y="569" width="115.66666666666666" height="26"/>
+                                        <color key="pageIndicatorTintColor" red="0.96022727269999997" green="0.8055694149" blue="0.24344359409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pageControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe &gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-Tb-S0t">
+                                        <rect key="frame" x="273" y="574.66666666666663" width="52" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" name="MainYellow"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt; Swipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgW-Ne-enX">
+                                        <rect key="frame" x="57.333333333333329" y="574.66666666666663" width="52" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <color key="textColor" name="MainYellow"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="TZ0-LU-tWY" secondAttribute="trailing" id="5bN-fW-VNY"/>
                                     <constraint firstItem="BjZ-GH-paM" firstAttribute="centerY" secondItem="vaJ-VG-VLc" secondAttribute="centerY" id="5mA-Mg-e4U"/>
+                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="top" secondItem="9VP-BC-DD0" secondAttribute="bottom" constant="8" id="6kA-9r-vlX"/>
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="top" secondItem="vaJ-VG-VLc" secondAttribute="top" id="Fq6-gj-YQ5"/>
+                                    <constraint firstItem="DgW-Ne-enX" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="Hlu-Ne-h9O"/>
+                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="IjJ-DO-Uf1"/>
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="JHq-Ec-bhp"/>
+                                    <constraint firstItem="Fpj-Tb-S0t" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="24" id="LYO-IE-Lut"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="Rh0-of-mIn"/>
+                                    <constraint firstItem="Fpj-Tb-S0t" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="UGP-9H-iPC"/>
                                     <constraint firstItem="713-oN-GJ3" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="Ucr-Zh-bmz"/>
                                     <constraint firstAttribute="trailing" secondItem="BGe-uq-qKY" secondAttribute="trailing" constant="50" id="YWS-Qj-Nd9"/>
                                     <constraint firstAttribute="trailing" secondItem="713-oN-GJ3" secondAttribute="trailing" constant="16" id="bEJ-fE-V0n"/>
+                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="DgW-Ne-enX" secondAttribute="trailing" constant="24" id="cdn-3T-ChN"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="50" id="cej-yt-WlM"/>
-                                    <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="9VP-BC-DD0" secondAttribute="bottom" constant="8" symbolic="YES" id="iFd-ab-xax"/>
                                     <constraint firstAttribute="bottom" secondItem="713-oN-GJ3" secondAttribute="bottom" constant="16" id="lp9-hW-vCD"/>
                                     <constraint firstAttribute="trailing" secondItem="9VP-BC-DD0" secondAttribute="trailing" id="niM-06-URE"/>
+                                    <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="5TP-qH-vNY" secondAttribute="bottom" constant="8" id="qAo-nD-v4U"/>
                                     <constraint firstItem="BjZ-GH-paM" firstAttribute="centerX" secondItem="vaJ-VG-VLc" secondAttribute="centerX" id="trT-uN-cjE"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="top" secondItem="TZ0-LU-tWY" secondAttribute="bottom" constant="8" symbolic="YES" id="uEi-cX-Li7"/>
                                     <constraint firstItem="713-oN-GJ3" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="16" id="vDK-AD-wl8"/>
@@ -235,12 +258,15 @@
                     <connections>
                         <outlet property="activityIndicator" destination="BjZ-GH-paM" id="IZO-Bg-TEu"/>
                         <outlet property="dismissButton" destination="713-oN-GJ3" id="gOf-V4-yEK"/>
+                        <outlet property="pageControl" destination="5TP-qH-vNY" id="fX5-vx-Dii"/>
+                        <outlet property="swipeLeftLabel" destination="DgW-Ne-enX" id="do1-Aq-WAx"/>
+                        <outlet property="swipeRightLabel" destination="Fpj-Tb-S0t" id="YJQ-TI-EEI"/>
                         <outlet property="webView" destination="9VP-BC-DD0" id="vi3-VR-b6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sds-hx-vAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494.2028985507247" y="125.89285714285714"/>
+            <point key="canvasLocation" x="1494.2028985507247" y="125.54347826086958"/>
         </scene>
     </scenes>
     <designables>
@@ -251,7 +277,7 @@
             <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
         <designable name="Q4g-t1-PcG">
-            <size key="intrinsicContentSize" width="73" height="32"/>
+            <size key="intrinsicContentSize" width="87" height="32"/>
         </designable>
     </designables>
     <resources>
