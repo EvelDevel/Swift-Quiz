@@ -196,7 +196,7 @@
                                         <rect key="frame" x="172.66666666666666" y="325.66666666666669" width="37" height="37"/>
                                         <color key="color" red="1" green="0.83893619539999997" blue="0.25352705660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </activityIndicatorView>
-                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
                                         <rect key="frame" x="133.33333333333334" y="569" width="115.66666666666666" height="26"/>
                                         <color key="pageIndicatorTintColor" red="0.96022727269999997" green="0.8055694149" blue="0.24344359409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

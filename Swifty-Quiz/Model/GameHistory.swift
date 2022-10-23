@@ -11,7 +11,7 @@ class GameHistory: Codable {
     var questionId: Int
     var image: String
     var helpText: String
-    var source: URL?
+    var links: [URL]?
     
     init(
         question: String,
@@ -20,7 +20,7 @@ class GameHistory: Codable {
         questionId: Int,
         image: String,
         helpText: String,
-        source: URL?
+        links: [URL]?
     ) {
         self.question = question
         self.correctAnswer = correctAnswer
@@ -28,6 +28,6 @@ class GameHistory: Codable {
         self.questionId = questionId
         self.image = image
         self.helpText = helpText
-        self.source = source
+        self.links = links
     }
 }

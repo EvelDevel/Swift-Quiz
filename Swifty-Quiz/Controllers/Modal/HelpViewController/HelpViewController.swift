@@ -23,7 +23,7 @@ class HelpViewController: UIViewController {
     var fontSize: CGFloat = 12
     var helpText: String = ""
     var isFromHistory: Bool = false
-    var source: URL?
+    var links: [URL]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +118,7 @@ extension HelpViewController {
     private func updateSourceButton() {
         sourceButton.isHidden = true
         
-        if let _ = source {
+        if links != nil {
             sourceButton.isHidden = false
         }
     }
@@ -126,7 +126,7 @@ extension HelpViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSourceViewController" {
             if let controller = segue.destination as? SourceViewController {
-                controller.url = source
+                controller.links = links
             }
         }
     }

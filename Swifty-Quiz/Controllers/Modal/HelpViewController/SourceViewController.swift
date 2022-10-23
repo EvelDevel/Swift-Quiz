@@ -17,22 +17,8 @@ class SourceViewController: UIViewController {
     @IBOutlet private weak var swipeRightLabel: UILabel!
     @IBOutlet private weak var swipeLeftLabel: UILabel!
     
-    var url = URL(string: "")
+    var links: [URL]? = []
     private var position = 0
-    private let links: [URL?] = [
-        URL(
-           string: "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)"
-        ),
-        URL(
-           string: "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
-        ),
-        URL(
-           string: "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
-        ),
-        URL(
-           string: "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
-        )
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +34,11 @@ class SourceViewController: UIViewController {
         webView.navigationDelegate = self
         webView.uiDelegate = self
         
-        guard let url = links[position] else {
+        guard let links = links else {
             return
         }
+        
+        let url = links[position]
         
         webView.load(
             NSURLRequest(
@@ -78,6 +66,10 @@ class SourceViewController: UIViewController {
     }
     
     private func setupPageControl() {
+        guard let links = links else {
+            return
+        }
+        
         pageControl.numberOfPages = links.count
     }
     
@@ -88,6 +80,10 @@ class SourceViewController: UIViewController {
     @objc func handleGesture(
         gesture: UISwipeGestureRecognizer
     ) -> Void {
+        guard let links = links else {
+            return
+        }
+        
         if gesture.direction == UISwipeGestureRecognizer.Direction.left {
             if position < links.count - 1 {
                 position = position + 1
@@ -110,9 +106,16 @@ class SourceViewController: UIViewController {
         UIView.animate(
             withDuration: 0.25
         ) {
-            if self.position == 0 {
+            guard let links = self.links else {
+                return
+            }
+            
+            if links.count == 1 {
                 self.swipeLeftLabel.isHidden = true
-            } else if self.position + 1 == self.links.count {
+                self.swipeRightLabel.isHidden = true
+            } else if self.position == 0 {
+                self.swipeLeftLabel.isHidden = true
+            } else if self.position + 1 == links.count {
                 self.swipeLeftLabel.isHidden = false
                 self.swipeRightLabel.isHidden = true
             } else if self.position > 0 {
