@@ -23,7 +23,7 @@ class HelpViewController: UIViewController {
     var fontSize: CGFloat = 12
     var helpText: String = ""
     var isFromHistory: Bool = false
-    var links: [URL]?
+    var links: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,6 +127,7 @@ extension HelpViewController {
         if segue.identifier == "toSourceViewController" {
             if let controller = segue.destination as? SourceViewController {
                 controller.links = links
+                controller.id = questionID
             }
         }
     }

@@ -17,52 +17,39 @@ class SourceViewController: UIViewController {
     @IBOutlet private weak var swipeRightButton: UIButton!
     @IBOutlet private weak var swipeLeftButton: UIButton!
     
-    var links: [URL]? = []
+    var links: [String]? = []
+    var id = 0
     private var position = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
-        setupSwipeGestures()
         setupPageControl()
         setupSwipeButtons()
     }
     
     private func setupWebView() {
-        activityIndicator.isHidden = false
+        UIView.animate(
+            withDuration: 0.25
+        ) {
+            self.webView.alpha = 0.2
+        }
+        
         activityIndicator.startAnimating()
         webView.navigationDelegate = self
         webView.uiDelegate = self
         
-        guard let links = links else {
+        guard let links = links,
+              let url = URL(string: links[position]) else {
+            showIncorrectUrlAlert()
             return
         }
-        
-        let url = links[position]
         
         webView.load(
             NSURLRequest(
                 url: url
             ) as URLRequest
         )
-    }
-    
-    private func setupSwipeGestures() {
-        let swipeLeft = UISwipeGestureRecognizer(
-            target: self,
-            action: #selector(handleGesture)
-        )
-        
-        swipeLeft.direction = .left
-        self.view!.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(
-            target: self,
-            action: #selector(handleGesture)
-        )
-        
-        swipeRight.direction = .right
-        self.view!.addGestureRecognizer(swipeRight)
     }
     
     private func setupPageControl() {
@@ -83,16 +70,6 @@ class SourceViewController: UIViewController {
     
     @IBAction func goLeftTapped(_ sender: Any) {
         goToLeftTapped()
-    }
-    
-    @objc func handleGesture(
-        gesture: UISwipeGestureRecognizer
-    ) -> Void {
-        if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            goToRightTapped()
-        } else if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            goToLeftTapped()
-        }
     }
     
     private func goToRightTapped() {
@@ -140,6 +117,26 @@ class SourceViewController: UIViewController {
             }
         }
     }
+    
+    private func showIncorrectUrlAlert() {
+        let alert = UIAlertController(
+            title: "Упс, кажется эта ссылка кривая",
+            message: "Вы можете сообщить на hello@swifty-quiz.ru о проблеме со ссылкой в вопросе №\(id)",
+            preferredStyle: UIAlertController.Style.alert
+        )
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "Закрыть",
+                style: UIAlertAction.Style.default
+            )
+        )
+        
+        present(
+            alert,
+            animated: true
+        )
+    }
 }
 
 
@@ -150,6 +147,11 @@ extension SourceViewController: WKNavigationDelegate, WKUIDelegate{
         didFinish navigation: WKNavigation!
     ) {
         self.activityIndicator.stopAnimating()
-        self.activityIndicator.isHidden = true
+        
+        UIView.animate(
+            withDuration: 0.8
+        ) {
+            self.webView.alpha = 1
+        }
     }
 }

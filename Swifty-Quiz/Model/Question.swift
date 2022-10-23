@@ -12,6 +12,6 @@ struct Question: Codable {
     let optionC: String
     let optionD: String
     let questionId: Int     // Уникальный номер вопроса
-    var links: [URL]?
+    var links: [String]?
     let helpText: String    // Теоретическая подсказка
 }

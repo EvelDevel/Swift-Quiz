@@ -21,8 +21,9 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 320291560,
                      links: [
-                        URL(string: "https://developer.apple.com/documentation/swiftui/geometryreader")!,
-                        URL(string: "https://www.hackingwithswift.com/quick-start/swiftui/how-to-provide-relative-sizes-using-geometryreader")!
+                        "https://developer.apple.com/documentation/swiftui/geometryreader",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-provide-relative-sizes-using-geometryreader",
+                        "https://swiftui-lab.com/geometryreader-to-the-rescue/"
                      ],
                      helpText: """
                      GeometryReader. Контейнер, который определяет свое содержимое как функцию собственного размера и пространства координат.
@@ -42,9 +43,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 453982010,
                      links: [
-                        URL(
-                            string: "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
-                        )!
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
                      ],
                      helpText: """
                      Path. SwiftUI предоставляет нам специальный тип Path для рисования пользовательских фигур.
@@ -62,9 +61,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 481923730,
                      links: [
-                        URL(
-                            string: "https://sarunw.com/posts/gradient-in-swiftui"
-                        )!
+                        "https://sarunw.com/posts/gradient-in-swiftui"
                      ],
                      helpText: """
                      Gradient. Эта структура позволяет создать цветовой градиент, представленный в виде массива цветовых точек - Gradient(colors: [Color]).
@@ -82,9 +79,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 202976277,
                      links: [
-                        URL(
-                            string: "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
-                        )!
+                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
                      ],
                      helpText: """
                      linearGradient. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
@@ -100,9 +95,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 595530231,
                      links: [
-                        URL(
-                            string: "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
-                        )!
+                        "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient"
                      ],
                      helpText: """
                      startPoint и endPoint. linearGradient - это функция (модификатор), позволяющая создавать заливку с градиентом, используя дополнительные параметры (startPoint:, endPoint:).
@@ -118,9 +111,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 622755780,
                      links: [
-                        URL(
-                            string: "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
-                        )!
+                        "https://developer.apple.com/documentation/swiftui/path/addlines(_:)"
                      ],
                      helpText: """
                      addLines. addLines добавляет к Path последовательность соединенных прямолинейных сегментов (прямые линии).
@@ -138,9 +129,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 501601837,
                      links: [
-                        URL(
-                            string: "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
-                        )!
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui"
                      ],
                      helpText: """
                      addLine. Метод addLine в Path позволяет добавлять отрезок прямой линии из текущей точки в указанную точку.
@@ -160,9 +149,7 @@ class DrawingAndAnimation {
                      optionD: "",
                      questionId: 122340441,
                      links: [
-                        URL(
-                            string: "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)"
-                        )!
+                        "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)"
                      ],
                      helpText: """
                      addRoundedRect. Метод addRoundedRect добавляет прямоугольник со скругленными углами к вашему объекту Path.

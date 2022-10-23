@@ -50,16 +50,16 @@
                                             <constraint firstAttribute="height" constant="1" id="HXC-5f-IRj"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-8g-vXD">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-8g-vXD">
                                         <rect key="frame" x="16" y="147" width="342" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4g-t1-PcG" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="52"/>
                                                 <color key="backgroundColor" name="MainYellow"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fhh-3F-jai"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <state key="normal" title="Материалы">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-va-1rm" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="195" y="0.0" width="147" height="52"/>
+                                                <rect key="frame" x="175" y="0.0" width="167" height="52"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="k7C-RN-87K"/>
@@ -192,22 +192,22 @@
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-GH-paM">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-GH-paM">
                                         <rect key="frame" x="172.66666666666666" y="325.66666666666669" width="37" height="37"/>
-                                        <color key="color" red="1" green="0.83893619539999997" blue="0.25352705660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="color" name="TextColor"/>
                                     </activityIndicatorView>
                                     <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
                                         <rect key="frame" x="133.33333333333334" y="569" width="115.66666666666666" height="26"/>
                                         <color key="pageIndicatorTintColor" red="0.96022727269999997" green="0.8055694149" blue="0.24344359409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" name="TextColor"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFm-iA-IQ0">
-                                        <rect key="frame" x="77.333333333333329" y="562" width="40" height="40"/>
+                                        <rect key="frame" x="25.333333333333343" y="562" width="100" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="R9l-os-hd8"/>
+                                            <constraint firstAttribute="width" constant="100" id="R9l-os-hd8"/>
                                             <constraint firstAttribute="height" constant="40" id="l2e-Uy-Vbp"/>
                                         </constraints>
-                                        <color key="tintColor" name="MainYellow"/>
+                                        <color key="tintColor" name="TextColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                         <connections>
@@ -215,12 +215,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-nG-jS8">
-                                        <rect key="frame" x="265" y="562" width="40" height="40"/>
+                                        <rect key="frame" x="257" y="562" width="100" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="NcB-Ds-01I"/>
+                                            <constraint firstAttribute="width" constant="100" id="NcB-Ds-01I"/>
                                             <constraint firstAttribute="height" constant="40" id="y9h-ob-1bp"/>
                                         </constraints>
-                                        <color key="tintColor" name="MainYellow"/>
+                                        <color key="tintColor" name="TextColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
                                         <connections>
@@ -238,13 +238,13 @@
                                     <constraint firstItem="TZ0-LU-tWY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="JHq-Ec-bhp"/>
                                     <constraint firstItem="9VP-BC-DD0" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" id="Rh0-of-mIn"/>
                                     <constraint firstItem="713-oN-GJ3" firstAttribute="top" secondItem="BGe-uq-qKY" secondAttribute="bottom" constant="16" id="Ucr-Zh-bmz"/>
-                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="zFm-iA-IQ0" secondAttribute="trailing" constant="16" id="Vym-Te-36n"/>
+                                    <constraint firstItem="5TP-qH-vNY" firstAttribute="leading" secondItem="zFm-iA-IQ0" secondAttribute="trailing" constant="8" id="Vym-Te-36n"/>
                                     <constraint firstAttribute="trailing" secondItem="BGe-uq-qKY" secondAttribute="trailing" constant="50" id="YWS-Qj-Nd9"/>
                                     <constraint firstAttribute="trailing" secondItem="713-oN-GJ3" secondAttribute="trailing" constant="16" id="bEJ-fE-V0n"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="leading" secondItem="vaJ-VG-VLc" secondAttribute="leading" constant="50" id="cej-yt-WlM"/>
                                     <constraint firstItem="zFm-iA-IQ0" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="doQ-9q-9Og"/>
                                     <constraint firstAttribute="bottom" secondItem="713-oN-GJ3" secondAttribute="bottom" constant="16" id="lp9-hW-vCD"/>
-                                    <constraint firstItem="p1Q-nG-jS8" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="16" id="m6D-Mc-gJU"/>
+                                    <constraint firstItem="p1Q-nG-jS8" firstAttribute="leading" secondItem="5TP-qH-vNY" secondAttribute="trailing" constant="8" id="m6D-Mc-gJU"/>
                                     <constraint firstAttribute="trailing" secondItem="9VP-BC-DD0" secondAttribute="trailing" id="niM-06-URE"/>
                                     <constraint firstItem="p1Q-nG-jS8" firstAttribute="centerY" secondItem="5TP-qH-vNY" secondAttribute="centerY" id="pZO-Gq-Hmm"/>
                                     <constraint firstItem="BGe-uq-qKY" firstAttribute="top" secondItem="5TP-qH-vNY" secondAttribute="bottom" constant="8" id="qAo-nD-v4U"/>
@@ -291,7 +291,7 @@
             <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
         <designable name="Q4g-t1-PcG">
-            <size key="intrinsicContentSize" width="87" height="32"/>
+            <size key="intrinsicContentSize" width="91" height="32"/>
         </designable>
     </designables>
     <resources>
