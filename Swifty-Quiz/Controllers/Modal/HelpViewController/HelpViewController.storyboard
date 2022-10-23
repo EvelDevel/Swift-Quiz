@@ -167,7 +167,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="713-oN-GJ3" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="16" y="620" width="350" height="52"/>
-                                        <color key="backgroundColor" name="MainYellow"/>
+                                        <color key="backgroundColor" name="BackButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="aYA-vI-7AA"/>
                                         </constraints>
@@ -211,7 +211,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                         <connections>
-                                            <action selector="swipeLeftTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="TSU-fn-uhB"/>
+                                            <action selector="goLeftTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="s7f-YJ-tz1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-nG-jS8">
@@ -224,7 +224,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
                                         <connections>
-                                            <action selector="swipeRightTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="TYp-dA-vLN"/>
+                                            <action selector="goRightTapped:" destination="luY-eA-XyA" eventType="touchUpInside" id="wRR-e3-i9D"/>
                                         </connections>
                                     </button>
                                 </subviews>

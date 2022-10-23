@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCb-W3-Bo0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCb-W3-Bo0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-Mg-uxB">
-                                <rect key="frame" x="20" y="263" width="374" height="380"/>
+                                <rect key="frame" x="20" y="265" width="374" height="380"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-sx-Kb4">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="380"/>
@@ -112,7 +112,7 @@
                                                     <constraint firstAttribute="height" constant="52" id="teb-dh-5A8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Вернуться на главную">
+                                                <state key="normal" title="Закрыть">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -185,7 +185,7 @@
             <size key="intrinsicContentSize" width="94" height="40"/>
         </designable>
         <designable name="ghE-Cf-xuE">
-            <size key="intrinsicContentSize" width="169" height="32"/>
+            <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
         <designable name="ndC-vR-6UZ">
             <size key="intrinsicContentSize" width="201" height="32"/>

@@ -77,25 +77,25 @@ class SourceViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @IBAction func swipeLeftTapped(_ sender: Any) {
-        swipeToRightTapped()
+    @IBAction func goRightTapped(_ sender: Any) {
+        goToRightTapped()
     }
     
-    @IBAction func swipeRightTapped(_ sender: Any) {
-        swipeToLeftTapped()
+    @IBAction func goLeftTapped(_ sender: Any) {
+        goToLeftTapped()
     }
     
     @objc func handleGesture(
         gesture: UISwipeGestureRecognizer
     ) -> Void {
         if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            swipeToLeftTapped()
+            goToRightTapped()
         } else if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            swipeToRightTapped()
+            goToLeftTapped()
         }
     }
     
-    private func swipeToLeftTapped() {
+    private func goToRightTapped() {
         guard let links = links else {
             return
         }
@@ -108,7 +108,7 @@ class SourceViewController: UIViewController {
         }
     }
     
-    private func swipeToRightTapped() {
+    private func goToLeftTapped() {
         if position > 0 {
             position = position - 1
             pageControl.currentPage = position
