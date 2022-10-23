@@ -320,7 +320,8 @@ class DrawingAndAnimation {
                      links: [
                         "https://habr.com/ru/post/504198/",
                         "https://www.hackingwithswift.com/books/ios-swiftui/customizing-animations-in-swiftui",
-                        "https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions"
+                        "https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions",
+                        "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)"
                      ],
                      helpText: """
                      animation. Модификатор animation применяет заданную (из перечисления) анимацию к вашему view при изменении указанного значения (например: Когда изменяется флаг какой-нибудь кнопки после нажатия).
@@ -337,6 +338,12 @@ class DrawingAndAnimation {
                      optionC: "",
                      optionD: "",
                      questionId: 554440557,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)",
+                        "https://habr.com/ru/post/504198/",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/customizing-animations-in-swiftui",
+                        "https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions"
+                     ],
                      helpText: """
                      animation, value. Animation модификатор принимает два параметра: _ animation: Animation?, value: V, а возвращает какое-то абстрактное view, которое отвечает протоколу Equatable (some View where V : Equatable).
                      """),
@@ -350,6 +357,9 @@ class DrawingAndAnimation {
                      optionC: "-> Animation?",
                      optionD: "",
                      questionId: 955935092,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)"
+                     ],
                      helpText: """
                      -> some View. Animation модификатор принимает два параметра: _ animation: Animation?, value: V, а возвращает какое-то абстрактное view, которое отвечает протоколу Equatable (some View where V : Equatable).
                      """),
@@ -363,6 +373,12 @@ class DrawingAndAnimation {
                      optionC: "",
                      optionD: "",
                      questionId: 119460518,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)",
+                        "https://habr.com/ru/post/504198/",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/customizing-animations-in-swiftui",
+                        "https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions"
+                     ],
                      helpText: """
                      animation. Модификатор .animation применяется, когда нам необходимо воспроизвести заданную (из перечисления) анимацию (animation: Animation?), при изменении указанного value (например: Когда изменяется булевый флаг нажатия кнопки).
                      """),
@@ -376,6 +392,10 @@ class DrawingAndAnimation {
                      optionC: ".insertion",
                      optionD: "",
                      questionId: 987774923,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/anytransition/asymmetric(insertion:removal:)",
+                        "https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-asymmetric-transitions"
+                     ],
                      helpText: """
                      asymmetric. Данный модификатор позволяет создавать составные переходы (composite transitions), которые будут использовать разные эффекты для появления view на экране (transition), и для удаления его с экрана (removal).
                      
@@ -393,6 +413,9 @@ class DrawingAndAnimation {
                      optionC: "ContentTransition",
                      optionD: "",
                      questionId: 987774923,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/anytransition/asymmetric(insertion:removal:)"
+                     ],
                      helpText: """
                      AnyTransition. Модификатор .asymmetric позволяет создавать составные переходы (composite transitions), которые будут использовать разные эффекты для появления view на экране (transition), и для удаления его с экрана (removal).
                      
@@ -408,6 +431,9 @@ class DrawingAndAnimation {
                      optionC: "Path",
                      optionD: "",
                      questionId: 810341480,
+                     links: [
+                        "https://developer.apple.com/documentation/swiftui/canvas"
+                     ],
                      helpText: """
                      Canvas. Используйте Canvas, чтобы отрисовать 2д графику внутри SwiftUI view.
                      
