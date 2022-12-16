@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zxW-Z1-FgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zxW-Z1-FgW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OcX-HB-6Na">
-                                <rect key="frame" x="20" y="182.5" width="374" height="545"/>
+                                <rect key="frame" x="20" y="171" width="374" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0j-HN-wNV">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="545"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-Tl-KoW">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -32,11 +32,11 @@
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DpC-8o-Etv">
-                                                <rect key="frame" x="16" y="55" width="342" height="381"/>
+                                            <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DpC-8o-Etv">
+                                                <rect key="frame" x="16" y="55" width="342" height="404"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYU-Sh-JsU" userLabel="questionOrder">
-                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="36.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="Последовательность вопросов">
                                                             <color key="titleColor" name="TextColor"/>
@@ -46,7 +46,7 @@
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-xR-Fa0">
-                                                        <rect key="frame" x="0.0" y="36.5" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="38" width="342" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="VY4-1s-AmQ">
@@ -58,13 +58,13 @@
                                                             <segment title="Случайная"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
+                                                        <color key="selectedSegmentTintColor" name="MainBackground"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="1bd-SB-ULj"/>
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACg-EJ-kPL" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="76.5" width="342" height="36"/>
+                                                        <rect key="frame" x="0.0" y="80" width="342" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="Менять формулировки вопросов?">
                                                             <color key="titleColor" name="TextColor"/>
@@ -74,7 +74,7 @@
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZB5-ea-qK4">
-                                                        <rect key="frame" x="0.0" y="112.5" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="118.5" width="342" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="GiL-KO-FCY">
@@ -86,15 +86,15 @@
                                                             <segment title="Да"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
+                                                        <color key="selectedSegmentTintColor" name="MainBackground"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="Upp-o2-hvy"/>
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUC-h8-5gV" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="152.5" width="342" height="36"/>
+                                                        <rect key="frame" x="0.0" y="160.5" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <state key="normal" title="При неправильном ответе">
+                                                        <state key="normal" title="Показывать теорию / подсказку">
                                                             <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                         <connections>
@@ -102,7 +102,7 @@
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ph-rl-zQj">
-                                                        <rect key="frame" x="0.0" y="188.5" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="198.5" width="342" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="8Wt-gH-jg8">
@@ -110,17 +110,17 @@
                                                             </constraint>
                                                         </constraints>
                                                         <segments>
-                                                            <segment title="Продолжать"/>
-                                                            <segment title="Показать подсказку"/>
+                                                            <segment title="Никогда"/>
+                                                            <segment title="После ошибки"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
+                                                        <color key="selectedSegmentTintColor" name="MainBackground"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="TDW-QS-wBj"/>
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUX-Ue-2ny" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="228.5" width="342" height="36"/>
+                                                        <rect key="frame" x="0.0" y="240.5" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="Переход после подсказки">
                                                             <color key="titleColor" name="TextColor"/>
@@ -130,7 +130,7 @@
                                                         </connections>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJk-yF-2Tm">
-                                                        <rect key="frame" x="0.0" y="264.5" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="278.5" width="342" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Xc2-Yt-DlM">
@@ -142,20 +142,20 @@
                                                             <segment title="Переходить "/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
+                                                        <color key="selectedSegmentTintColor" name="MainBackground"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="uof-dj-bcd"/>
                                                         </connections>
                                                     </segmentedControl>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-aI-mCU" userLabel="questionText">
-                                                        <rect key="frame" x="0.0" y="304.5" width="342" height="36.5"/>
+                                                        <rect key="frame" x="0.0" y="320.5" width="342" height="41.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="Звуки в игре: ">
                                                             <color key="titleColor" name="TextColor"/>
                                                         </state>
                                                     </button>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rWC-bA-ACu">
-                                                        <rect key="frame" x="0.0" y="341" width="342" height="41"/>
+                                                        <rect key="frame" x="0.0" y="364" width="342" height="41"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Kcf-aO-3lx">
@@ -167,7 +167,7 @@
                                                             <segment title="Выключены"/>
                                                         </segments>
                                                         <color key="tintColor" red="1" green="0.85297226910000001" blue="0.11313194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="selectedSegmentTintColor" name="MainYellow"/>
+                                                        <color key="selectedSegmentTintColor" name="MainBackground"/>
                                                         <connections>
                                                             <action selector="settingSwitchSound:" destination="zxW-Z1-FgW" eventType="valueChanged" id="yCS-UR-Ndj"/>
                                                         </connections>
@@ -175,13 +175,13 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikU-zo-iV4" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="477" width="342" height="52"/>
+                                                <rect key="frame" x="16" y="500" width="342" height="52"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="ml4-UN-laE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Закрыть">
+                                                <state key="normal" title="Выйти">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -194,7 +194,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRX-Ef-wO3" userLabel="Separator">
-                                                <rect key="frame" x="50" y="456" width="274" height="1"/>
+                                                <rect key="frame" x="50" y="479" width="274" height="1"/>
                                                 <color key="backgroundColor" name="BackButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="CWd-vd-XFW"/>
@@ -257,7 +257,7 @@
     </scenes>
     <designables>
         <designable name="ikU-zo-iV4">
-            <size key="intrinsicContentSize" width="64" height="32"/>
+            <size key="intrinsicContentSize" width="49" height="32"/>
         </designable>
     </designables>
     <resources>
@@ -267,8 +267,8 @@
         <namedColor name="BackgroundForModals">
             <color red="0.80784313725490198" green="0.80784313725490198" blue="0.81960784313725488" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="MainYellow">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="MainBackground">
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

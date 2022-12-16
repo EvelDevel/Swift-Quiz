@@ -39,13 +39,11 @@
 		FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB119C3D246A5B63005F5289 /* ARCSet.swift */; };
 		FB1D0B972446E7A600E9C56D /* TheBasicsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */; };
 		FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */; };
-		FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */; };
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
 		FB23035928D8ADB600F86348 /* APNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035828D8ADB600F86348 /* APNS.swift */; };
 		FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035A28D8ADBE00F86348 /* FCM.swift */; };
-		FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2558732801E35700B01390 /* SettingsEnums.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
 		FB291D2226D2211400A40679 /* HelpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2126D2211400A40679 /* HelpViewController.storyboard */; };
@@ -53,7 +51,6 @@
 		FB291D2626D223FF00A40679 /* TopicPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2526D223FF00A40679 /* TopicPicker.storyboard */; };
 		FB291D2826D224EA00A40679 /* Records.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2726D224EA00A40679 /* Records.storyboard */; };
 		FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2926D2256A00A40679 /* GameHistory.storyboard */; };
-		FB291D2F26D2279300A40679 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2E26D2279300A40679 /* SettingsViewController.storyboard */; };
 		FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */; };
 		FB2EAC96243EEE0F0098FAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */; };
 		FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2EAC97243EEE0F0098FAC3 /* GameViewController.swift */; };
@@ -70,6 +67,9 @@
 		FB554D232741215A00B7696B /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D222741215A00B7696B /* ProgressService.swift */; };
 		FB554D25274156D300B7696B /* CategoriesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D24274156D300B7696B /* CategoriesName.swift */; };
 		FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2BA12737F8E400515B08 /* AutoLayout.swift */; };
+		FB614F1A294C95C000C57BCF /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB614F17294C95C000C57BCF /* SettingsEnums.swift */; };
+		FB614F1B294C95C000C57BCF /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB614F18294C95C000C57BCF /* SettingsViewController.storyboard */; };
+		FB614F1C294C95C000C57BCF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB614F19294C95C000C57BCF /* SettingsViewController.swift */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
 		FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */; };
@@ -164,13 +164,11 @@
 		FB119C3D246A5B63005F5289 /* ARCSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCSet.swift; sourceTree = "<group>"; };
 		FB1D0B962446E7A600E9C56D /* TheBasicsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBasicsSet.swift; sourceTree = "<group>"; };
 		FB1D0B9824470D7E00E9C56D /* BasicOperatorsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicOperatorsSet.swift; sourceTree = "<group>"; };
-		FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FB23035828D8ADB600F86348 /* APNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS.swift; sourceTree = "<group>"; };
 		FB23035A28D8ADBE00F86348 /* FCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
-		FB2558732801E35700B01390 /* SettingsEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
 		FB291D2126D2211400A40679 /* HelpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpViewController.storyboard; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		FB291D2526D223FF00A40679 /* TopicPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopicPicker.storyboard; sourceTree = "<group>"; };
 		FB291D2726D224EA00A40679 /* Records.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Records.storyboard; sourceTree = "<group>"; };
 		FB291D2926D2256A00A40679 /* GameHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameHistory.storyboard; sourceTree = "<group>"; };
-		FB291D2E26D2279300A40679 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		FB2EAC90243EEE0F0098FAC3 /* Свифти-Квиз.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Свифти-Квиз.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2EAC93243EEE0F0098FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2EAC95243EEE0F0098FAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +196,9 @@
 		FB554D222741215A00B7696B /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
 		FB554D24274156D300B7696B /* CategoriesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesName.swift; sourceTree = "<group>"; };
 		FB5D2BA12737F8E400515B08 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
+		FB614F17294C95C000C57BCF /* SettingsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsEnums.swift; path = "Swifty-Quiz/Controllers/Modal/Setting/SettingsEnums.swift"; sourceTree = SOURCE_ROOT; };
+		FB614F18294C95C000C57BCF /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SettingsViewController.storyboard; path = "Swifty-Quiz/Controllers/Modal/Setting/SettingsViewController.storyboard"; sourceTree = SOURCE_ROOT; };
+		FB614F19294C95C000C57BCF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "Swifty-Quiz/Controllers/Modal/Setting/SettingsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
 		FB6624E724E0202C008C9CE5 /* GameHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryCell.swift; sourceTree = "<group>"; };
@@ -407,16 +407,6 @@
 			path = "Topic Picker";
 			sourceTree = "<group>";
 		};
-		FB4C7EBA2802D1DF00D05837 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				FB91255B26D360C800C1DFEB /* Donation */,
-				FB291D1E26D2169200A40679 /* HelpViewController */,
-				FB66C05624559197009FADDE /* Setting */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
 		FB5208DA274241BF0058F3F8 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,9 +432,9 @@
 		FB66C05624559197009FADDE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				FB291D2E26D2279300A40679 /* SettingsViewController.storyboard */,
-				FB1D0B9C244C45AD00E9C56D /* SettingsViewController.swift */,
-				FB2558732801E35700B01390 /* SettingsEnums.swift */,
+				FB614F18294C95C000C57BCF /* SettingsViewController.storyboard */,
+				FB614F19294C95C000C57BCF /* SettingsViewController.swift */,
+				FB614F17294C95C000C57BCF /* SettingsEnums.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -621,7 +611,9 @@
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
 				FB0E0290246CF334005CA792 /* Records */,
 				FB6624E624E01FEB008C9CE5 /* GameHistory */,
-				FB4C7EBA2802D1DF00D05837 /* Modal */,
+				FB91255B26D360C800C1DFEB /* Donation */,
+				FB291D1E26D2169200A40679 /* HelpViewController */,
+				FB66C05624559197009FADDE /* Setting */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -710,13 +702,13 @@
 				FB291D2426D221B700A40679 /* GameViewController.storyboard in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB6624EB24E02552008C9CE5 /* Main.storyboard in Resources */,
+				FB614F1B294C95C000C57BCF /* SettingsViewController.storyboard in Resources */,
 				FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */,
 				FB553EBD2515236C0037A287 /* rightAnswer.mp3 in Resources */,
 				FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */,
 				FB4C7EB52802AFA300D05837 /* click.mp3 in Resources */,
 				FB291D2826D224EA00A40679 /* Records.storyboard in Resources */,
 				FB69CBED24ACFD64007506F6 /* swipe.mp3 in Resources */,
-				FB291D2F26D2279300A40679 /* SettingsViewController.storyboard in Resources */,
 				FB291D2626D223FF00A40679 /* TopicPicker.storyboard in Resources */,
 				FB7BCD5124BDCDA700B8F6BA /* showContinue.mp3 in Resources */,
 			);
@@ -760,6 +752,7 @@
 				FB66C05124544125009FADDE /* SettingsCaretaker.swift in Sources */,
 				FB0C05B326E88936006744CB /* FramesAndBounds.swift in Sources */,
 				FBC34FE726E08EEE00120FB4 /* GameResult.swift in Sources */,
+				FB614F1A294C95C000C57BCF /* SettingsEnums.swift in Sources */,
 				FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */,
 				FBBAF83A26EF231A001780C4 /* Multithreading.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
@@ -817,7 +810,6 @@
 				FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */,
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
 				FB3F91C72737A1C3008E46C3 /* UIViewSet.swift in Sources */,
-				FB1D0B9D244C45AD00E9C56D /* SettingsViewController.swift in Sources */,
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
 				FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
@@ -831,11 +823,11 @@
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
-				FB2558742801E35700B01390 /* SettingsEnums.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
 				FB66C04F24542587009FADDE /* Settings.swift in Sources */,
 				FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */,
+				FB614F1C294C95C000C57BCF /* SettingsViewController.swift in Sources */,
 				FB795CD628A914AC001B6CAA /* SwiftUIEssentials.swift in Sources */,
 				FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */,
 				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
