@@ -231,7 +231,7 @@ class APNS {
                     ),
             
             Question(question: [
-                "Эта опция UNAuthorizationOptions, отправленная единственной при запросе, не станет запрашивать разрешение на пуш уведомления у пользователя."
+                "Эта опция UNAuthorizationOptions используется, если вы хотите оповестить систему, что имеете свой кастомный UI для настроек пуш уведомлений"
             ],
                      image: "",
                      optionA: ".providesAppNotificationSettings",

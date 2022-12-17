@@ -6,7 +6,6 @@ import UIKit
 import StoreKit
 
 class InitialViewController: UIViewController {
-    
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var lastGameTitle: UILabel!
     @IBOutlet private weak var contentCenter: NSLayoutConstraint!

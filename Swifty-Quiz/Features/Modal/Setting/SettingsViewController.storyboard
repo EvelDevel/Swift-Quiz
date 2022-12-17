@@ -181,7 +181,7 @@
                                                     <constraint firstAttribute="height" constant="52" id="ml4-UN-laE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Выйти">
+                                                <state key="normal" title="Закрыть">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -257,7 +257,7 @@
     </scenes>
     <designables>
         <designable name="ikU-zo-iV4">
-            <size key="intrinsicContentSize" width="49" height="32"/>
+            <size key="intrinsicContentSize" width="64" height="32"/>
         </designable>
     </designables>
     <resources>
