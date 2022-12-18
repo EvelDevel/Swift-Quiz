@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,7 +90,7 @@
                                             </preferredSymbolConfiguration>
                                         </state>
                                         <connections>
-                                            <action selector="goToAbout:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rXK-s6-XMj"/>
+                                            <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Sab-X2-5Qn"/>
                                             <segue destination="EZ7-oU-xxJ" kind="show" identifier="toAbout" id="jZi-Zc-Bsw"/>
                                         </connections>
                                     </button>
@@ -145,7 +145,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="Y03-Wu-b7m"/>
+                                                            <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rQz-fs-dNf"/>
                                                             <segue destination="Qaw-Eg-fyh" kind="show" identifier="toTopicSelection" id="Pog-c8-FFY"/>
                                                         </connections>
                                                     </button>
@@ -248,7 +248,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="wS7-pz-ute"/>
+                                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="WqC-8X-J4A"/>
                                                     <segue destination="6vK-r8-XKT" kind="show" identifier="toResultsViewController" id="CJh-Mg-eUL"/>
                                                 </connections>
                                             </button>
@@ -270,7 +270,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="XWP-N3-PbW"/>
+                                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="rRA-5f-Ynb"/>
                                                     <segue destination="iN0-B6-NlH" kind="presentation" identifier="toSettingsViewController" animates="NO" modalPresentationStyle="overFullScreen" id="t75-oh-t47"/>
                                                 </connections>
                                             </button>
@@ -298,7 +298,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="hE6-Bb-3eY"/>
+                                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="yK0-p9-KVq"/>
                                                     <segue destination="cis-0o-Enk" kind="show" identifier="newGame" id="hqs-Mj-uIf"/>
                                                 </connections>
                                             </button>
@@ -318,7 +318,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tapButtonSounds:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="yQX-t3-jRv"/>
+                                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="DHh-Mn-UIj"/>
                                                     <segue destination="cis-0o-Enk" kind="show" identifier="continueGame" id="Dhm-c7-6Gb"/>
                                                 </connections>
                                             </button>
@@ -358,7 +358,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToDonations:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="0XY-xj-6DA"/>
+                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="e5M-vl-dxN"/>
                                     <segue destination="fIJ-8O-b7h" kind="presentation" identifier="toDonation" animates="NO" modalPresentationStyle="overFullScreen" id="B42-l4-R3R"/>
                                 </connections>
                             </button>

@@ -23,24 +23,9 @@ class InitialViewController: UIViewController {
     @IBOutlet private var initialWhiteViews: [UIView]!
     @IBOutlet private var initialButtons: [UIButton]!
     
-    @IBAction private func goToAbout(_ sender: Any) {
+    @IBAction private func buttonTapped(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
-    
-    @IBAction private func tapButtonSounds(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
-    
-    @IBAction private func goToDonations(_ sender: Any) {
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
-    
-    private let currentAppVersion = Bundle.main.object(
-        forInfoDictionaryKey: "CFBundleShortVersionString"
-    ) as? String ?? ""
-    
-    private let shadows = Shadow()
-    private let recordCaretaker = RecordsCaretaker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +45,6 @@ class InitialViewController: UIViewController {
     @IBAction func shareButtonTapped(_ sender: Any) {
         share(sender: view)
     }
-}
-
-
-// MARK: Main
-extension InitialViewController {
     
     private func setup() {
         setupCurrentQuestionSet()
@@ -77,7 +57,7 @@ extension InitialViewController {
     }
     
     private func updateScoreLabel() {
-        let records = recordCaretaker.getRecordsList()
+        let records = RecordsCaretaker().getRecordsList()
         var score = 0
         
         records.forEach { record in
@@ -101,10 +81,14 @@ extension InitialViewController {
 }
 
 
-// MARK: Information
+// MARK: - Information
+
 extension InitialViewController {
-    
     private func setupCurrentQuestionSet() {
+        let currentAppVersion = Bundle.main.object(
+            forInfoDictionaryKey: "CFBundleShortVersionString"
+        ) as? String ?? ""
+        
         let lastVersion = Game.shared.settings.appLastVersion
         let appVersionHasChange = lastVersion != currentAppVersion
         let isFirstTime = SelectedTopic.shared.topic.questionSet.isEmpty
@@ -125,7 +109,7 @@ extension InitialViewController {
     }
     
     private func updateLastGameInfo() {
-        let records: [Record] = recordCaretaker.getRecordsList()
+        let records: [Record] = RecordsCaretaker().getRecordsList()
         
         if records.count != 0 {
             let category = records.first?.topic ?? ""
@@ -201,10 +185,9 @@ extension InitialViewController {
 }
 
 
-// MARK: Interface
+// MARK: - Interface
+
 extension InitialViewController {
-    
-    /// Показываем или скрываем кнопку "продолжить"
     private func updateContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             if continueGameButton.isHidden == true {
@@ -223,7 +206,6 @@ extension InitialViewController {
         updateScoreLabel()
     }
     
-    /// Показываем корректный заголовок последней игры
     private func updateLastGameLabel() {
         lastGameTitle.text = "Информация о прошлой игре: "
         
@@ -236,13 +218,11 @@ extension InitialViewController {
         updateScoreLabel()
     }
     
-    /// Добавляем тени на элементы
     private func addShadows() {
-        shadows.addStaticShadows(initialWhiteViews)
-        shadows.addButtonShadows(initialButtons)
+        Shadow().addStaticShadows(initialWhiteViews)
+        Shadow().addButtonShadows(initialButtons)
     }
     
-    /// Корректного отображение дополнительных картинок у кнопок
     private func imageTuning(
         button: UIButton,
         position: UIControl.ContentVerticalAlignment
@@ -252,7 +232,6 @@ extension InitialViewController {
         button.contentHorizontalAlignment = .right
     }
     
-    /// Donation button animation
     private func showAnimation() {
         let pulse = PulseAnimation(
             numberOfPulse: 15,
@@ -285,9 +264,9 @@ extension InitialViewController {
 }
 
 
-// MARK: Set delegates
+// MARK: - Set delegates
+
 extension InitialViewController {
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "newGame" {
             let gameView = segue.destination as! GameViewController
@@ -311,7 +290,8 @@ extension InitialViewController {
 }
 
 
-// MARK: Handle delegates
+// MARK: - Handle delegates
+
 extension InitialViewController: GameViewControllerDelegate,
                                  TopicViewControllerDelegate,
                                  RecordsViewControllerDelegate,
