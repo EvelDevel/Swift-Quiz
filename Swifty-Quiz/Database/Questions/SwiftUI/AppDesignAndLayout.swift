@@ -11,18 +11,18 @@ import Foundation
 class AppDesignAndLayout {
     static func getQuestions() -> [Question] {
         return [
-            Question(question: [
-                ""
-            ],
-                     image: "",
-                     optionA: "",
-                     optionB: "",
-                     optionC: "",
-                     optionD: "",
-                     questionId: 000_000_000,
-                     helpText: """
-                     text
-                     """),
+            //            Question(question: [
+            //                ""
+            //            ],
+            //                     image: "",
+            //                     optionA: "",
+            //                     optionB: "",
+            //                     optionC: "",
+            //                     optionD: "",
+            //                     questionId: 000_000_000,
+            //                     helpText: """
+            //                     text
+            //                     """),
         ]
     }
 }
