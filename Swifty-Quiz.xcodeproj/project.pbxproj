@@ -284,6 +284,7 @@
 				FBA3F0E3289E710F0014222F /* Networking.swift */,
 				FB23035828D8ADB600F86348 /* APNS.swift */,
 				FB23035A28D8ADBE00F86348 /* FCM.swift */,
+				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -323,7 +324,6 @@
 				2C85725726803F5C00642E74 /* Others */,
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
-				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
