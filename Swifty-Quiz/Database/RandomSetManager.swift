@@ -99,6 +99,7 @@ class RandomSetManager {
             others.append(contentsOf: Networking.getQuestions())
             others.append(contentsOf: APNS.getQuestions())
             others.append(contentsOf: FCM.getQuestions())
+            others.append(contentsOf: Interview.getQuestions())
         }
         
         return others

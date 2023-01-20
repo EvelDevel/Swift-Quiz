@@ -103,8 +103,6 @@
 		FB87420D24605BF500247923 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB87420924605BF500247923 /* trash.mp3 */; };
 		FB8742122461ABA600247923 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8742112461ABA600247923 /* SoundPlayer.swift */; };
 		FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8CDD5527E7530100A79744 /* InversionOfControl.swift */; };
-		FB91255D26D360E300C1DFEB /* DonationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB91255C26D360E200C1DFEB /* DonationViewController.storyboard */; };
-		FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91255E26D360ED00C1DFEB /* DonationViewController.swift */; };
 		FB954D4A246E5BD0000C952E /* StringAndCharactersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */; };
 		FB966289246E6D8C000B82B9 /* AccessControlSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB966288246E6D8C000B82B9 /* AccessControlSet.swift */; };
 		FB96628B246E6D9B000B82B9 /* MemorySafetySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */; };
@@ -115,6 +113,7 @@
 		FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* AntipatternsSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
 		FBA3F0E4289E710F0014222F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3F0E3289E710F0014222F /* Networking.swift */; };
+		FBA9D61D297A57E300A6EF3E /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D61C297A57E300A6EF3E /* Interview.swift */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
@@ -230,8 +229,6 @@
 		FB87420924605BF500247923 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
 		FB8742112461ABA600247923 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		FB8CDD5527E7530100A79744 /* InversionOfControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InversionOfControl.swift; sourceTree = "<group>"; };
-		FB91255C26D360E200C1DFEB /* DonationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonationViewController.storyboard; sourceTree = "<group>"; };
-		FB91255E26D360ED00C1DFEB /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		FB954D49246E5BD0000C952E /* StringAndCharactersSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndCharactersSet.swift; sourceTree = "<group>"; };
 		FB966288246E6D8C000B82B9 /* AccessControlSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlSet.swift; sourceTree = "<group>"; };
 		FB96628A246E6D9B000B82B9 /* MemorySafetySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorySafetySet.swift; sourceTree = "<group>"; };
@@ -241,6 +238,7 @@
 		FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralPatternsSet.swift; sourceTree = "<group>"; };
 		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
 		FBA3F0E3289E710F0014222F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		FBA9D61C297A57E300A6EF3E /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
@@ -325,6 +323,7 @@
 				2C85725726803F5C00642E74 /* Others */,
 				FB99F887247B85FE0053166C /* The Basics  */,
 				FB99F888247B86320053166C /* Patterns */,
+				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -494,15 +493,6 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		FB91255B26D360C800C1DFEB /* Donation */ = {
-			isa = PBXGroup;
-			children = (
-				FB91255C26D360E200C1DFEB /* DonationViewController.storyboard */,
-				FB91255E26D360ED00C1DFEB /* DonationViewController.swift */,
-			);
-			path = Donation;
-			sourceTree = "<group>";
-		};
 		FB99F887247B85FE0053166C /* The Basics  */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,7 +609,6 @@
 				FB37AA39246D2CAA001E08CE /* Topic Picker */,
 				FB0E0290246CF334005CA792 /* Records */,
 				FB6624E624E01FEB008C9CE5 /* GameHistory */,
-				FB91255B26D360C800C1DFEB /* Donation */,
 				FB291D1E26D2169200A40679 /* HelpViewController */,
 				FB66C05624559197009FADDE /* Setting */,
 			);
@@ -703,7 +692,6 @@
 				FB291D2226D2211400A40679 /* HelpViewController.storyboard in Resources */,
 				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
 				FB7BCD5024BDCDA700B8F6BA /* hideContinue.mp3 in Resources */,
-				FB91255D26D360E300C1DFEB /* DonationViewController.storyboard in Resources */,
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
 				FB6624EA24E0202C008C9CE5 /* GameHistoryCell.xib in Resources */,
@@ -764,7 +752,6 @@
 				FBBAF83A26EF231A001780C4 /* Multithreading.swift in Sources */,
 				FB86ACA22469A3F8002BA8B3 /* FunctionsSet.swift in Sources */,
 				FB0C05B126E4D46D006744CB /* PulseAnimation.swift in Sources */,
-				FB91255F26D360ED00C1DFEB /* DonationViewController.swift in Sources */,
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
 				FB6A690C28424CB2008227EE /* BoldTextService.swift in Sources */,
 				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
@@ -794,6 +781,7 @@
 				FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */,
 				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
 				FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */,
+				FBA9D61D297A57E300A6EF3E /* Interview.swift in Sources */,
 				2CD0C32F2692009B00871C14 /* TuplesSet.swift in Sources */,
 				2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */,
 				FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */,

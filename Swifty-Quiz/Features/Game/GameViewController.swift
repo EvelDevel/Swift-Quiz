@@ -414,14 +414,6 @@ extension GameViewController {
             }
         )
         
-        let donationAction = UIAlertAction(
-            title: "Поддержать проект",
-            style: .destructive,
-            handler: {
-                action in self.showDonation()
-            }
-        )
-        
         let quitAction = UIAlertAction(
             title: "Выйти",
             style: .default,
@@ -431,7 +423,6 @@ extension GameViewController {
         )
         
         alert.addAction(restartAction)
-        alert.addAction(donationAction)
         alert.addAction(quitAction)
         
         present(
@@ -441,38 +432,6 @@ extension GameViewController {
         )
         
         currentQuestionNumber -= 1
-    }
-    
-    private func showDonation() {
-        let mainStoryboard: UIStoryboard = UIStoryboard(
-            name: String(
-                describing:
-                    DonationViewController.self
-            ),
-            bundle: nil
-        )
-        
-        let donationView  = mainStoryboard.instantiateViewController(
-            withIdentifier: String(
-                describing: DonationViewController.self
-            )
-        ) as! DonationViewController
-        
-        donationView.viewWasDismissed = {
-            self.view.isUserInteractionEnabled = false
-            
-            DispatchQueue.main.asyncAfter(
-                deadline: .now() + 0.5
-            ) {
-                self.dismiss(animated: true)
-            }
-        }
-        
-        self.present(
-            donationView,
-            animated: false,
-            completion: nil
-        )
     }
     
     private func quitGame() {

@@ -9,7 +9,6 @@ class InitialViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var lastGameTitle: UILabel!
     @IBOutlet private weak var contentCenter: NSLayoutConstraint!
-    @IBOutlet private weak var donationButton: UIButton!
     @IBOutlet private weak var totalQuestionsLabel: UILabel!
     @IBOutlet private weak var selectedTopic: UILabel!
     @IBOutlet private weak var lastTopic: UILabel!
@@ -35,11 +34,6 @@ class InitialViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         updateLastGameLabel()
         updateScoreLabel()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showAnimation()
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
@@ -230,21 +224,6 @@ extension InitialViewController {
         button.imageView!.contentMode = .scaleAspectFit
         button.contentVerticalAlignment = position
         button.contentHorizontalAlignment = .right
-    }
-    
-    private func showAnimation() {
-        let pulse = PulseAnimation(
-            numberOfPulse: 15,
-            radius: 23,
-            postion: donationButton.center
-        )
-        pulse.animationDuration = 1
-        pulse.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        
-        view.layer.insertSublayer(
-            pulse,
-            below: donationButton.layer
-        )
     }
     
     private func changeLabelWithAnimation(

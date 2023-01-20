@@ -29,16 +29,6 @@
             </objects>
             <point key="canvasLocation" x="982" y="137"/>
         </scene>
-        <!--DonationViewController-->
-        <scene sceneID="aaZ-wS-6TG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DonationViewController" id="fIJ-8O-b7h" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="i4r-Mv-aTY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k4r-SI-abW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="982" y="362"/>
-        </scene>
         <!--Launch View Controller-->
         <scene sceneID="K1c-Td-h8m">
             <objects>
@@ -346,22 +336,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Au-o8t">
-                                <rect key="frame" x="291.5" y="611" width="40" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="8yO-NU-6Oc"/>
-                                    <constraint firstAttribute="width" constant="40" id="zvq-ds-Ym6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" image="DollarCoin">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="x3Z-s5-6cX" eventType="touchUpInside" id="e5M-vl-dxN"/>
-                                    <segue destination="fIJ-8O-b7h" kind="presentation" identifier="toDonation" animates="NO" modalPresentationStyle="overFullScreen" id="B42-l4-R3R"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-q6-kNi" userLabel="TotalQuestionsLabel">
                                 <rect key="frame" x="129" y="617" width="117.5" height="12"/>
                                 <subviews>
@@ -395,14 +369,12 @@
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="4PP-v1-kH7" secondAttribute="bottom" constant="30" id="C0F-fT-JC0"/>
-                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="top" secondItem="kaM-Au-o8t" secondAttribute="top" constant="6" id="E3o-IB-NzJ"/>
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
-                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="kaM-Au-o8t" secondAttribute="bottom" constant="16" id="FHp-ch-1gq"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
                             <constraint firstItem="H2o-wB-HEB" firstAttribute="centerX" secondItem="dYf-N4-XJ3" secondAttribute="centerX" id="Vmw-JK-d22"/>
                             <constraint firstItem="Yvf-q6-kNi" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="cfo-Yn-01r"/>
+                            <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="H2o-wB-HEB" secondAttribute="bottom" constant="2" id="eSK-No-4wa"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
-                            <constraint firstItem="kaM-Au-o8t" firstAttribute="trailing" secondItem="mO1-NM-9Qp" secondAttribute="trailing" id="ij7-zK-GlG"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="prP-OW-Z0a"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="top" secondItem="Yvf-q6-kNi" secondAttribute="bottom" constant="4" id="uaj-XJ-LFb"/>
                             <constraint firstItem="H2o-wB-HEB" firstAttribute="centerY" secondItem="dYf-N4-XJ3" secondAttribute="centerY" id="yiU-Sf-6ar"/>
@@ -412,7 +384,6 @@
                     <connections>
                         <outlet property="contentCenter" destination="hs6-n2-mIT" id="t92-a9-86Y"/>
                         <outlet property="continueGameButton" destination="mO1-NM-9Qp" id="Q6k-rs-nB8"/>
-                        <outlet property="donationButton" destination="kaM-Au-o8t" id="O54-G2-KV0"/>
                         <outlet property="lastGameTitle" destination="ZWi-6k-ilE" id="mqF-ba-ezj"/>
                         <outlet property="lastScore" destination="Rx9-6v-JaH" id="GC5-uV-UCl"/>
                         <outlet property="lastTopic" destination="VKW-XW-9Qq" id="fLQ-DY-Dpp"/>
@@ -485,7 +456,6 @@
         <segue reference="Dhm-c7-6Gb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="DollarCoin" width="40" height="40"/>
         <image name="RightChevrone" width="50" height="50"/>
         <image name="RightChevroneFill" width="50" height="50"/>
         <image name="logo" width="409" height="140"/>
