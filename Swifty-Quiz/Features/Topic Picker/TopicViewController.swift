@@ -143,7 +143,7 @@ class TopicViewController: UIViewController {
 }
 
 
-// MARK: Настройка таблицы
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 
 	func cellRegistration() {
@@ -186,7 +186,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 
-// MARK: Работа с делегатом CategoriesCell
+// MARK: - CategoriesCellDelegate
 extension TopicViewController: CategoriesCellDelegate {
 
 	func updateSelectedTopic() {

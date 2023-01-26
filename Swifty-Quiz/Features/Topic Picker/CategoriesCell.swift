@@ -157,13 +157,6 @@ extension CategoriesCell {
                 tag: 3
             )
             
-        case 5:
-            SelectedTopic.shared.saveQuestionSet(
-                TopicOperator.getInterview(),
-                topic: CategoriesName.interview.rawValue,
-                tag: 4
-            )
-            
         case 12:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getTheBasics(),
@@ -516,6 +509,18 @@ extension CategoriesCell {
                 topic: CategoriesName.fcm.rawValue,
                 tag: 76
             )
+        case 78:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getInterview(),
+                topic: CategoriesName.interview.rawValue,
+                tag: 77
+            )
+        case 79:
+            SelectedTopic.shared.saveQuestionSet(
+                TopicOperator.getRXSwift(),
+                topic: CategoriesName.rxswift.rawValue,
+                tag: 78
+            )
             
         default:
             allButtons.forEach { button in
@@ -534,7 +539,6 @@ extension CategoriesCell {
         case 2: return CategoriesName.random50.rawValue
         case 3: return CategoriesName.random100.rawValue
         case 4: return CategoriesName.deathMatch.rawValue
-        case 5: return CategoriesName.interview.rawValue
             
         case 12: return CategoriesName.basic.rawValue
         case 13: return CategoriesName.integersAndBooleans.rawValue
@@ -601,6 +605,8 @@ extension CategoriesCell {
             
         case 76: return CategoriesName.apns.rawValue
         case 77: return CategoriesName.fcm.rawValue
+        case 78: return CategoriesName.interview.rawValue
+        case 79: return CategoriesName.rxswift.rawValue
             
         default:
             return ""

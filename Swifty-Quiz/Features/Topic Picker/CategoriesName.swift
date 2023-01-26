@@ -13,7 +13,6 @@ enum CategoriesName: String {
     case random50 = "50 случайных вопросов"
     case random100 = "100 случайных вопросов"
     case deathMatch = "The Death Match"
-    case interview = "Собеседование"
         
     case basic = "Основы"
     case integersAndBooleans = "Числовые и логические типы"
@@ -79,4 +78,6 @@ enum CategoriesName: String {
     
     case apns = "Apple Push Notification Service"
     case fcm = "Firebase Cloud Messaging"
+    case interview = "Собеседование"
+    case rxswift = "RXSwift"
 }

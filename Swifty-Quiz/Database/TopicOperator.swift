@@ -11,7 +11,6 @@ class TopicOperator {
     static func getRandom50() -> [Question] { return RandomSetManager.getQuestions(50) }
     static func getRandom100() -> [Question] { return RandomSetManager.getQuestions(100) }
     static func deathMatch() -> [Question] { return RandomSetManager.getAllQuestions() }
-    static func getInterview() -> [Question] { return Interview.getQuestions() }
     
     static func getQuestionsExtremeProgramming() -> [Question] { return ExtremeProgrammingSet.getQuestions() }
     static func getQuestionsMobileSecurity() -> [Question] { return MobileSecuritySet.getQuestions() }
@@ -77,4 +76,6 @@ class TopicOperator {
     
     static func getAPNS() -> [Question] { return APNS.getQuestions() }
     static func getFCM() -> [Question] { return FCM.getQuestions() }
+    static func getInterview() -> [Question] { return Interview.getQuestions() }
+    static func getRXSwift() -> [Question] { return RXSwift.getQuestions() }
 }
