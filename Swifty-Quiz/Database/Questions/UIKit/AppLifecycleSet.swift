@@ -204,15 +204,15 @@ class AppLifecycleSet {
                      questionId: 339572396,
                      helpText: "sceneDidBecomeActive. Метод sceneDidBecomeActive вызывается, когда сцена перемещается из неактивного состояния в активное. Используйте его для того, чтобы перезапустить все задачи, которые были на паузе в момент неактивности (inactive), или запустить новые задачи для активного состояния."),
             
-            Question(question: ["Какое количество состояний (state) приложения происходят на переднем плане (foreground)?"],
+            Question(question: ["Какие состояния (state) приложения происходят на переднем плане (foreground)?"],
                      image: "",
-                     optionA: "2",
-                     optionB: "1",
-                     optionC: "3",
+                     optionA: "Inactive, Active",
+                     optionB: "Active",
+                     optionC: "Inactive, Suspended",
                      optionD: "",
                      questionId: 910884914,
                      helpText: """
-                     2. Есть два основных состояния, которые происходят на переднем плане:
+                     Inactive, Active. Есть два основных состояния, которые происходят на переднем плане:
                      
                      Неактивное состояние - Inactive state - приложение переходит в состояние переднего плана, но не получает и не обрабатывает события.
                      
@@ -290,15 +290,15 @@ class AppLifecycleSet {
                      В этом метод можно сохранять текущий статус изменяемых данных. Этот метод вызывается во время непреднамеренных прерываний (пришла смс / входящий звонок).
                      """),
             
-            Question(question: ["Какое количество состояний (state) приложения происходят на заднем плане, в фоновом режиме (background)?"],
+            Question(question: ["Какие состояния (state) приложения происходят на заднем плане, в фоновом режиме (background)?"],
                      image: "",
-                     optionA: "2",
-                     optionB: "1",
-                     optionC: "3",
+                     optionA: "Background, Suspended",
+                     optionB: "Suspended, Active",
+                     optionC: "Background, Inactive",
                      optionD: "",
                      questionId: 276654213,
                      helpText: """
-                     2. На заднем плане (background) существует два состояния:
+                     Background, Suspended. На заднем плане (background) существует два состояния:
                      
                      Фоновое состояние - Background state - в этом состоянии, если есть исполняемый код, он будет выполняться, а если исполняемого кода нет или выполнение завершено, приложение будет немедленно приостановлено.
                      
@@ -572,6 +572,40 @@ class AppLifecycleSet {
                      optionD: "",
                      questionId: 122596182,
                      helpText: "Да. UIKit может отключить фоновую или приостановленную сцену в любое время, чтобы восстановить свои ресурсы, вернув эту сцену в неподключенное (unattached) состояние."),
+            
+            Question(question: [
+                "Этот метод вашего приложения позволяет вам выполнять код во время запуска приложения"
+            ],
+                     image: "",
+                     optionA: "willFinishLaunchingWithOptions",
+                     optionB: "didFinishLaunchingWithOptions",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 943894001,
+                     links: [
+                        "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
+                     ],
+                     helpText: """
+                     willFinishLaunchingWithOptions. Этот метод позволит исполнить код во время запуска приложения.
+                     """
+                    ),
+            
+            Question(question: [
+                "Этот метод вашего приложения позволит вам выполнить код после успешного запуска приложения"
+            ],
+                     image: "",
+                     optionA: "didFinishLaunchingWithOptions",
+                     optionB: "willFinishLaunchingWithOptions",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 901404500,
+                     links: [
+                        "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
+                     ],
+                     helpText: """
+                     didFinishLaunchingWithOptions. Этот метод позволит исполнить код после успешного запуска приложения.
+                     """
+                    ),
         ]
     }
 }

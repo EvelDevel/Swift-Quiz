@@ -465,7 +465,15 @@ class VCLifecycleSet {
                      optionC: "viewWillAppear",
                      optionD: "viewWillDisappear",
                      questionId: 968252448,
-                     helpText: "viewWillLayoutSubviews. Если вы не используете autolayout, то подходящим местом для работы с вашими вью и сабвью будет метод viewWillLayoutSubviews, который, как раз, вызывается перед тем как происходит рассчет и расстановка всей иерархии вью на экране."),
+                     links: [
+                        "https://habr.com/ru/post/654517/",
+                        "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
+                     ],
+                     helpText: """
+                     viewWillLayoutSubviews. Если вы не используете autolayout, то подходящим местом для работы с вашими вью и сабвью будет метод viewWillLayoutSubviews, который, как раз, вызывается перед тем как происходит рассчет и расстановка всей иерархии вью на экране.
+                     
+                     Этот метод сообщает, что сейчас размеры вью будут изменены под размер экрана.
+                     """),
             
             Question(question: ["Если мы переопределяем метод viewWillTransition() для обработки анимации экрана при смене ориентации, должны ли мы обращаться к суперклассу super.viewWillTransition()?"],
                      image: "",
@@ -682,6 +690,24 @@ class VCLifecycleSet {
                      optionD: "",
                      questionId: 890793497,
                      helpText: "updateViewConstraints(). Вызов происходит перед методом viewWillLayoutSubviews()."),
+            
+            Question(question: [
+                "Расстановка автолейаута происходит между методами viewDidLayoutSubviews и viewWillLayoutSubviews. Правда ли это?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     questionId: 459489072,
+                     links: [
+                        "https://habr.com/ru/post/654517/",
+                        "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
+                     ],
+                     helpText: """
+                     Да. Между методами viewDidLayoutSubviews и viewWillLayoutSubviews происходит расстановка автолейаута.
+                     """
+                    ),
         ]
     }
 }
