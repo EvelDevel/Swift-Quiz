@@ -12,7 +12,7 @@ protocol CategoriesCellDelegate: AnyObject {
 
 private class Interface {
     static var borderWidth = 1.0
-    static var borderColor = UIColor.darkGray.cgColor
+    static var borderColor = UIColor.lightGray.cgColor
 }
 
 class CategoriesCell: UITableViewCell {
@@ -485,29 +485,11 @@ extension CategoriesCell {
                 topic: CategoriesName.swiftUIDrawing.rawValue,
                 tag: 72
             )
-        case 74:
-            SelectedTopic.shared.saveQuestionSet(
-                TopicOperator.getSwiftUIDesign(),
-                topic: CategoriesName.swiftUILayout.rawValue,
-                tag: 73
-            )
-        case 75:
-            SelectedTopic.shared.saveQuestionSet(
-                TopicOperator.getSwiftUIFrameworks(),
-                topic: CategoriesName.swiftUIFrameworks.rawValue,
-                tag: 74
-            )
         case 76:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getAPNS(),
                 topic: CategoriesName.apns.rawValue,
                 tag: 75
-            )
-        case 77:
-            SelectedTopic.shared.saveQuestionSet(
-                TopicOperator.getFCM(),
-                topic: CategoriesName.fcm.rawValue,
-                tag: 76
             )
         case 78:
             SelectedTopic.shared.saveQuestionSet(
@@ -600,11 +582,8 @@ extension CategoriesCell {
             
         case 72: return CategoriesName.swiftUIEssentials.rawValue
         case 73: return CategoriesName.swiftUIDrawing.rawValue
-        case 74: return CategoriesName.swiftUILayout.rawValue
-        case 75: return CategoriesName.swiftUIFrameworks.rawValue
             
         case 76: return CategoriesName.apns.rawValue
-        case 77: return CategoriesName.fcm.rawValue
         case 78: return CategoriesName.interview.rawValue
         case 79: return CategoriesName.rxswift.rawValue
             

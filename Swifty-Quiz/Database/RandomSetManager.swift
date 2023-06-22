@@ -98,7 +98,6 @@ class RandomSetManager {
             others.append(contentsOf: Multithreading.getQuestions())
             others.append(contentsOf: Networking.getQuestions())
             others.append(contentsOf: APNS.getQuestions())
-            others.append(contentsOf: FCM.getQuestions())
             others.append(contentsOf: Interview.getQuestions())
         }
         
@@ -121,8 +120,6 @@ class RandomSetManager {
         if swiftui.isEmpty {
             swiftui.append(contentsOf: SwiftUIEssentials.getQuestions())
             swiftui.append(contentsOf: DrawingAndAnimation.getQuestions())
-            swiftui.append(contentsOf: AppDesignAndLayout.getQuestions())
-            swiftui.append(contentsOf: FrameworkIntegration.getQuestions())
         }
         
         return swiftui

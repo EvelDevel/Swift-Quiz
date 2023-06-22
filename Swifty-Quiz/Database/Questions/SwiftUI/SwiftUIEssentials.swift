@@ -748,6 +748,46 @@ class SwiftUIEssentials {
                      При этом VoiceOver будет использовать его для улучшения специальных возможностей и доступности, так что добавлять их желательно.
                      """),
             
+            Question(question: [
+                "Максимальное количество дочерних элементов, которые можно поместить внутрь Form без группирования (SwiftUI)?",
+                "Максимальное количество дочерних элементов, которые можно поместить внутрь HStack без группирования (SwiftUI)?",
+                "Максимальное количество дочерних элементов, которые можно поместить внутрь VStack без группирования (SwiftUI)?"
+            ],
+                     image: "",
+                     optionA: "10",
+                     optionB: "15",
+                     optionC: "4",
+                     optionD: "1",
+                     questionId: 820959610,
+                     links: [
+                        "https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form",
+                        "https://www.hackingwithswift.com/books/ios-swiftui/using-stacks-to-arrange-views"
+                     ],
+                     helpText: """
+                     10. Внутрь структуры Form, или любой другой структуры (например VStack, HStack, ZStack), можно размещать до 10 отдельных объектов (включительно), при попытке разместить 11 элементов - икскод выдаст ошибку компиляции.
+                     
+                     В SwiftUI есть негласное, номинальное ограничение в 10 элементов. Чтобы исправить - поместите объекты внутрь Group или Section.
+                     """
+                    ),
+            
+            Question(question: [
+                "Какой текст будет самым верхним на экране (SwiftUI)?"
+            ],
+                     image: "SwiftUIEssentials06",
+                     optionA: "first",
+                     optionB: "second",
+                     optionC: "last",
+                     optionD: "",
+                     questionId: 495131401,
+                     links: [
+                        "https://www.hackingwithswift.com/books/ios-swiftui/using-stacks-to-arrange-views"
+                     ],
+                     helpText: """
+                     first. Элементы внутри ZStack располагаются друг над другом, и отрисовываются по порядку, с первого до последнего.
+                     
+                     Последним элементом в нашем случае будет отрисовываться Text("first") - то есть он будет самым верхним.
+                     """
+                    ),
         ]
     }
 }

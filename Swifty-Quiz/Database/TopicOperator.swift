@@ -71,11 +71,8 @@ class TopicOperator {
     
     static func getSwiftUIEssentials() -> [Question] { return SwiftUIEssentials.getQuestions() }
     static func getSwiftUIDrawing() -> [Question] { return DrawingAndAnimation.getQuestions() }
-    static func getSwiftUIDesign() -> [Question] { return AppDesignAndLayout.getQuestions() }
-    static func getSwiftUIFrameworks() -> [Question] { return FrameworkIntegration.getQuestions() }
     
     static func getAPNS() -> [Question] { return APNS.getQuestions() }
-    static func getFCM() -> [Question] { return FCM.getQuestions() }
     static func getInterview() -> [Question] { return Interview.getQuestions() }
     static func getRXSwift() -> [Question] { return RXSwift.getQuestions() }
 }

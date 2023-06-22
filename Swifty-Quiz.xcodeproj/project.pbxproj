@@ -46,7 +46,6 @@
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
 		FB23035928D8ADB600F86348 /* APNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035828D8ADB600F86348 /* APNS.swift */; };
-		FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035A28D8ADBE00F86348 /* FCM.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
 		FB291D2226D2211400A40679 /* HelpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D2126D2211400A40679 /* HelpViewController.storyboard */; };
@@ -84,8 +83,6 @@
 		FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB781B89282CCE6900DF1EC1 /* Constants.swift */; };
 		FB795CD628A914AC001B6CAA /* SwiftUIEssentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */; };
 		FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */; };
-		FB795CDA28A914D4001B6CAA /* AppDesignAndLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */; };
-		FB795CDD28A914E8001B6CAA /* FrameworkIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
@@ -171,7 +168,6 @@
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FB23035828D8ADB600F86348 /* APNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS.swift; sourceTree = "<group>"; };
-		FB23035A28D8ADBE00F86348 /* FCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCM.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
 		FB291D2126D2211400A40679 /* HelpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpViewController.storyboard; sourceTree = "<group>"; };
@@ -212,8 +208,6 @@
 		FB781B89282CCE6900DF1EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEssentials.swift; sourceTree = "<group>"; };
 		FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAndAnimation.swift; sourceTree = "<group>"; };
-		FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesignAndLayout.swift; sourceTree = "<group>"; };
-		FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkIntegration.swift; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
@@ -285,7 +279,6 @@
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
 				FBA3F0E3289E710F0014222F /* Networking.swift */,
 				FB23035828D8ADB600F86348 /* APNS.swift */,
-				FB23035A28D8ADBE00F86348 /* FCM.swift */,
 				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
 				FBE79DD22982243100EE613C /* RXSwift.swift */,
 			);
@@ -453,8 +446,6 @@
 			children = (
 				FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */,
 				FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */,
-				FB795CD928A914D4001B6CAA /* AppDesignAndLayout.swift */,
-				FB795CDC28A914E8001B6CAA /* FrameworkIntegration.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -800,7 +791,6 @@
 				FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
-				FB795CDD28A914E8001B6CAA /* FrameworkIntegration.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
@@ -811,12 +801,10 @@
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
 				FB3F91C72737A1C3008E46C3 /* UIViewSet.swift in Sources */,
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
-				FB23035B28D8ADBE00F86348 /* FCM.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
-				FB795CDA28A914D4001B6CAA /* AppDesignAndLayout.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
 				FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */,
