@@ -20,4 +20,11 @@ class Constants {
     static var correctAnswers = "Правильных ответов: "
     static var questionsText = "Вопросы: "
     static var hintsText = "подсказок: "
+    
+    // Segue
+    static var newGame = "newGame"
+    static var continueGame = "continueGame"
+    static var toTopicSelection = "toTopicSelection"
+    static var toResultsViewController = "toResultsViewController"
+    static var toSettingsViewController = "toSettingsViewController"
 }

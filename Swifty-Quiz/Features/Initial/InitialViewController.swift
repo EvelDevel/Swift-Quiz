@@ -246,31 +246,35 @@ extension InitialViewController {
 // MARK: - Set delegates
 
 extension InitialViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier  == "newGame" {
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
+    ) {
+        switch segue.identifier {
+        case Constants.newGame:
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
-            gameView.weContinueLastGame = false
-        } else if segue.identifier == "continueGame" {
+        case Constants.continueGame:
             let gameView = segue.destination as! GameViewController
             gameView.delegate = self
             gameView.weContinueLastGame = true
-        } else if segue.identifier == "toTopicSelection" {
+        case Constants.toTopicSelection:
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
-        } else if segue.identifier == "toResultsViewController" {
+        case Constants.toResultsViewController:
             let recordView = segue.destination as! RecordsViewController
             recordView.delegate = self
-        } else if segue.identifier == "toSettingsViewController" {
+        case Constants.toSettingsViewController:
             let settingView = segue.destination as! SettingsViewController
             settingView.delegate = self
+        default:
+            break
         }
     }
 }
 
 
 // MARK: - Handle delegates
-
 extension InitialViewController: GameViewControllerDelegate,
                                  TopicViewControllerDelegate,
                                  RecordsViewControllerDelegate,
