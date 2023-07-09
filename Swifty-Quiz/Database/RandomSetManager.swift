@@ -5,7 +5,6 @@
 import Foundation
 
 class RandomSetManager {
-	
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []
@@ -21,18 +20,34 @@ class RandomSetManager {
 	static func showAllQuestionsNumber() -> Int {
         return all.count == 0 ? getAllQuestions().count : all.count
 	}
-	
-	static func getAllQuestions() -> [Question] {
-		if all.isEmpty {
-			all.append(contentsOf: RandomSetManager.getGuide())
-			all.append(contentsOf: RandomSetManager.getPatterns())
-            all.append(contentsOf: RandomSetManager.getOthers())
-            all.append(contentsOf: RandomSetManager.getUIKit())
-            all.append(contentsOf: RandomSetManager.getswiftUI())
-		}
+    
+    static func getAllQuestions() -> [Question] {
+        var all: [Question] = []
+        let lock = NSLock()
+        let startTime = CFAbsoluteTimeGetCurrent()
         
-		return all
-	}
+        addQuestions(&all, lock: lock, questions: RandomSetManager.getGuide())
+        addQuestions(&all, lock: lock, questions: RandomSetManager.getPatterns())
+        addQuestions(&all, lock: lock, questions: RandomSetManager.getOthers())
+        addQuestions(&all, lock: lock, questions: RandomSetManager.getUIKit())
+        addQuestions(&all, lock: lock, questions: RandomSetManager.getswiftUI())
+        
+        let endTime = CFAbsoluteTimeGetCurrent()
+        let executionTime = endTime - startTime
+        print("Выполнение getAllQuestions: \(executionTime) секунд")
+        
+        return all
+    }
+
+    private static func addQuestions(
+        _ all: inout [Question],
+        lock: NSLock,
+        questions: [Question]
+    ) {
+        lock.lock()
+        all.append(contentsOf: questions)
+        lock.unlock()
+    }
 	
 	static func getGuide() -> [Question] {
 		if guide.isEmpty {
