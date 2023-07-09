@@ -12,15 +12,12 @@ class RandomSetManager {
     private static var uikit: [Question] = []
     private static var swiftui: [Question] = []
 	
-    // Эта функция всегда запускается при старте приложения, чтобы показать общее кол-во вопросов
-    // Это вызывает цепную реакцию, которая запускает наполнение общего массива, массива по руководству и паттернам
-    // То есть при старте программы, все эти основные массивы наполняются, и освобождаются только при выходе из приложение
-    // Пустыми они быть не могут, но главное - чтобы отработала эта функция
-    
+    // Общее количество вопросов в игре
 	static func showAllQuestionsNumber() -> Int {
         return all.count == 0 ? getAllQuestions().count : all.count
 	}
     
+    // Массив всех вопросов игры
     static func getAllQuestions() -> [Question] {
         var all: [Question] = []
         let lock = NSLock()
@@ -39,6 +36,7 @@ class RandomSetManager {
         return all
     }
 
+    // Обработка через мьютекс
     private static func addQuestions(
         _ all: inout [Question],
         lock: NSLock,
@@ -49,6 +47,7 @@ class RandomSetManager {
         lock.unlock()
     }
 	
+    // Массив по руководству
 	static func getGuide() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
@@ -91,6 +90,7 @@ class RandomSetManager {
 		return guide
 	}
 	
+    // Массив по паттернам
 	static func getPatterns() -> [Question] {
 		if patterns.isEmpty {
 			patterns.append(contentsOf: BasicsAboutPatternsSet.getQuestions())
@@ -106,6 +106,7 @@ class RandomSetManager {
 		return patterns
 	}
     
+    // Массив по "Разное"
     static func getOthers() -> [Question] {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
@@ -119,6 +120,7 @@ class RandomSetManager {
         return others
     }
     
+    // Массив по UIKit
     static func getUIKit() -> [Question] {
         if uikit.isEmpty {
             uikit.append(contentsOf: VCLifecycleSet.getQuestions())
@@ -131,6 +133,7 @@ class RandomSetManager {
         return uikit
     }
     
+    // Массив по СвифтЮай
     static func getswiftUI() -> [Question] {
         if swiftui.isEmpty {
             swiftui.append(contentsOf: SwiftUIEssentials.getQuestions())
@@ -140,6 +143,7 @@ class RandomSetManager {
         return swiftui
     }
     
+    // Получить порцию случайных вопросов из общего массива
 	static func getQuestions(_ limit: Int) -> [Question] {
 		let shuffled = all.isEmpty ? getAllQuestions().shuffled() : all.shuffled()
 		var final: [Question] = []

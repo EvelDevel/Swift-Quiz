@@ -21,7 +21,7 @@ class LaunchViewController: UIViewController {
     
     private func transitionFromLaunch() {
         DispatchQueue.main.asyncAfter(
-            deadline: .now() + 0.5
+            deadline: .now() + 0.2
         ) {
             let main: UIStoryboard = UIStoryboard(
                 name: "Main",

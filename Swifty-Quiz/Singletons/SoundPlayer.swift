@@ -19,7 +19,6 @@ enum Sounds {
 }
 
 class SoundPlayer {
-    
     static let shared = SoundPlayer()
     var player = AVAudioPlayer()
     private init() { }

@@ -44,7 +44,7 @@ class CategoriesCell: UITableViewCell {
         setFontSize()
         addShadows()
         setupProgressToButtons()
-        addQuestionsToArray(sender: UIButton())
+        addQuestionsToArray(tag: 0)
     }
     
     private func setupProgressToButtons() {
@@ -65,10 +65,14 @@ class CategoriesCell: UITableViewCell {
                 sender.layer.borderColor = Interface.borderColor
                 
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
-               
-                DispatchQueue.main.async {
-                    self.addQuestionsToArray(sender: sender)
-                    self.delegate?.updateSelectedTopic()
+                
+                let tag = sender.tag
+                DispatchQueue.global().async {
+                    self.addQuestionsToArray(tag: tag)
+                    
+                    DispatchQueue.main.async {
+                        self.delegate?.updateSelectedTopic()
+                    }
                 }
                 
                 if sender.tag > 10 {
@@ -89,7 +93,8 @@ class CategoriesCell: UITableViewCell {
 }
 
 
-// MARK: Работа с UI наших аутлетов
+// MARK: - Работа с UI наших аутлетов
+
 extension CategoriesCell {
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
@@ -126,12 +131,13 @@ extension CategoriesCell {
 }
 
 
-// MARK: Выбор категории
+// MARK: - Выбор категории
+
 extension CategoriesCell {
-    func addQuestionsToArray(sender: UIButton) {
+    func addQuestionsToArray(tag: Int) {
         let currentTag = SelectedTopic.shared.topic.topicTag
         
-        switch sender.tag {
+        switch tag {
         case 1:
             SelectedTopic.shared.saveQuestionSet(
                 TopicOperator.getRandom20(),
@@ -399,7 +405,7 @@ extension CategoriesCell {
                 topic: CategoriesName.antipatterns.rawValue,
                 tag: 53
             )
-        
+            
             
         case 60:
             SelectedTopic.shared.saveQuestionSet(
@@ -594,7 +600,8 @@ extension CategoriesCell {
 }
 
 
-// MARK: Как добавлять категории
+// MARK: - Как добавлять категории
+
 /// Добавить необходимые кнопки раздела в CategoriesCell.xib
 /// Присвоить кнопке tag по порядку
 /// Создать outlet-collection с названием раздела или добавить в массив существующего раздела
@@ -602,7 +609,8 @@ extension CategoriesCell {
 /// Добавить необходимые действия по этим кнопкам в addQuestionsToArray / topicButtonPressed
 /// Добавить новую категорию в RandomSetManager
 
-// MARK: При добавлении новых "случайных" сетов
+// MARK: - При добавлении новых "случайных" сетов
+
 /// При добавлении новых сетов с подборками случайных вопросов
 /// Добавлять рефреш в refreshRandomSets() внутри GameViewController
 /// Это обновляет случайный сет, когда мы его доиграли (чтобы не играть его снова)

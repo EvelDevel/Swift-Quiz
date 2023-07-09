@@ -69,25 +69,20 @@ class TopicViewController: UIViewController {
 	}
     
     private func setRandomGameUI() {
-        mainTitleLabel.text = SelectedTopic.shared.topic.topicName
         let total = SelectedTopic.shared.topic.questionSet.count
         
-        UIView.animate(withDuration: 0.3) {
-            self.successValueLabel.text = self.getRandomGamesCounter()
-            self.countValueLabel.text = "\(total)"
-            self.successTextLabel.text = Constants.playedCounter
-            self.countTextLabel.text = Constants.totalQuestions
-        }
+        mainTitleLabel.animateLabelChanges(SelectedTopic.shared.topic.topicName)
+        successValueLabel.animateLabelChanges(getRandomGamesCounter())
+        countValueLabel.animateLabelChanges("\(total)")
+        successTextLabel.animateLabelChanges(Constants.playedCounter)
+        countTextLabel.animateLabelChanges(Constants.totalQuestions)
     }
-    
+
     private func setCategoryGameUI() {
-        mainTitleLabel.text = "\(SelectedTopic.shared.topic.topicName)"
-        successTextLabel.text = Constants.learnedText
-        
-        UIView.animate(withDuration: 0.3) {
-            self.successValueLabel.text = "\(self.progress.getProgress(for: SelectedTopic.shared.topic.topicName).progressRate)%"
-            self.countValueLabel.text = "\(SelectedTopic.shared.topic.questionSet.count)"
-        }
+        mainTitleLabel.animateLabelChanges("\(SelectedTopic.shared.topic.topicName)")
+        successTextLabel.animateLabelChanges(Constants.learnedText)
+        successValueLabel.animateLabelChanges("\(progress.getProgress(for: SelectedTopic.shared.topic.topicName).progressRate)%")
+        countValueLabel.animateLabelChanges("\(SelectedTopic.shared.topic.questionSet.count)")
     }
 
 	func showAlertIfNeeded() {
