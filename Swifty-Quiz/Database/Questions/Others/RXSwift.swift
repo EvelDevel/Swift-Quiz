@@ -414,7 +414,7 @@ class RXSwift {
                      optionB: "PublishSubject",
                      optionC: "ReplaySubject",
                      optionD: "",
-                     questionId: 164201975,
+                     questionId: 667479545,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],

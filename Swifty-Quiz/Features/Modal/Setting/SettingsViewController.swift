@@ -11,14 +11,16 @@ protocol SettingsViewControllerDelegate: AnyObject {
 class SettingsViewController: UIViewController {
     
     @IBOutlet private var settingsView: UIView!
+    
     @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var questionOrderControl: UISegmentedControl!
     @IBOutlet private weak var questionTextControl: UISegmentedControl!
     @IBOutlet private weak var helpAfterWrongAnswerControl: UISegmentedControl!
     @IBOutlet private weak var changeAfterHelpControl: UISegmentedControl!
     @IBOutlet private weak var soundControl: UISegmentedControl!
-    @IBOutlet private var allControls: [UISegmentedControl]!
     @IBOutlet private weak var separatorHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet private var allControls: [UISegmentedControl]!
     
     @IBAction func settingSwitchSound(_ sender: Any) {
         SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
