@@ -123,7 +123,6 @@
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBE79DD32982243100EE613C /* RXSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE79DD22982243100EE613C /* RXSwift.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
-		FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5F243F352D00BD5583 /* TopicOperator.swift */; };
 		FBF9EECE2A5AD78800433FAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EECD2A5AD78800433FAA /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -248,7 +247,6 @@
 		FBE79DD22982243100EE613C /* RXSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXSwift.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		FBECDC5F243F352D00BD5583 /* TopicOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicOperator.swift; sourceTree = "<group>"; };
 		FBF9EECD2A5AD78800433FAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,7 +390,6 @@
 				FBECDC58243F241B00BD5583 /* Features */,
 				FBF9EECA2A5AD75800433FAA /* Extensions */,
 				FB8606B32444771300A692AD /* Services */,
-				FBC34FE526DF99F100120FB4 /* Caretakers */,
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
@@ -456,9 +453,9 @@
 		FB8606B0244458E300A692AD /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				FB1D0B952446E76F00E9C56D /* Questions */,
 				FB0B96A125262192006C986D /* RandomSetManager.swift */,
-				FBECDC5F243F352D00BD5583 /* TopicOperator.swift */,
+				FBC34FE526DF99F100120FB4 /* Caretakers */,
+				FB1D0B952446E76F00E9C56D /* Questions */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -565,8 +562,7 @@
 				FB66C05024544125009FADDE /* SettingsCaretaker.swift */,
 				FB66C05424547916009FADDE /* TopicCaretaker.swift */,
 			);
-			name = Caretakers;
-			path = Database/Caretakers;
+			path = Caretakers;
 			sourceTree = "<group>";
 		};
 		FBC96F2B280BFF010094FDD2 /* Cells */ = {
@@ -760,7 +756,6 @@
 				FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */,
 				FB6A690C28424CB2008227EE /* BoldTextService.swift in Sources */,
 				FB6624E924E0202C008C9CE5 /* GameHistoryCell.swift in Sources */,
-				FBECDC60243F352D00BD5583 /* TopicOperator.swift in Sources */,
 				FB554D25274156D300B7696B /* CategoriesName.swift in Sources */,
 				FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */,
 				FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */,
@@ -999,7 +994,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1022,7 +1017,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";
