@@ -19,19 +19,20 @@ class RandomSetManager {
     
     // Массив всех вопросов игры
     static func getAllQuestions() -> [Question] {
-        var all: [Question] = []
-        let lock = NSLock()
-        let startTime = CFAbsoluteTimeGetCurrent()
-        
-        addQuestions(&all, lock: lock, questions: RandomSetManager.getGuide())
-        addQuestions(&all, lock: lock, questions: RandomSetManager.getPatterns())
-        addQuestions(&all, lock: lock, questions: RandomSetManager.getOthers())
-        addQuestions(&all, lock: lock, questions: RandomSetManager.getUIKit())
-        addQuestions(&all, lock: lock, questions: RandomSetManager.getswiftUI())
-        
-        let endTime = CFAbsoluteTimeGetCurrent()
-        let executionTime = endTime - startTime
-        print("Выполнение getAllQuestions: \(executionTime) секунд")
+        if all.isEmpty {
+            let lock = NSLock()
+            let startTime = CFAbsoluteTimeGetCurrent()
+            
+            addQuestions(&all, lock: lock, questions: RandomSetManager.getGuide())
+            addQuestions(&all, lock: lock, questions: RandomSetManager.getPatterns())
+            addQuestions(&all, lock: lock, questions: RandomSetManager.getOthers())
+            addQuestions(&all, lock: lock, questions: RandomSetManager.getUIKit())
+            addQuestions(&all, lock: lock, questions: RandomSetManager.getswiftUI())
+            
+            let endTime = CFAbsoluteTimeGetCurrent()
+            let executionTime = endTime - startTime
+            print("Выполнение getAllQuestions: \(executionTime) секунд")
+        }
         
         return all
     }
