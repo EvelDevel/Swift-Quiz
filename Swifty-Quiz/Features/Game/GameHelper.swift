@@ -15,25 +15,25 @@ class GameHelper {
         case 0:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(20),
-                topic: "20 случайных вопросов",
+                category: "20 случайных вопросов",
                 tag: 0
             )
         case 1:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(50),
-                topic: "50 случайных вопросов",
+                category: "50 случайных вопросов",
                 tag: 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(100),
-                topic: "100 случайных вопросов",
+                category: "100 случайных вопросов",
                 tag: 2
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getAllQuestions(),
-                topic: "Все вопросы приложения",
+                category: "Все вопросы приложения",
                 tag: 3
             )
         default:

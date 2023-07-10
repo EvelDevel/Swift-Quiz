@@ -90,20 +90,20 @@ extension InitialViewController {
         
         let lastVersion = Game.shared.settings.appLastVersion
         let appVersionHasChange = lastVersion != currentAppVersion
-        let isFirstTime = SelectedTopic.shared.topic.questionSet.isEmpty
+        let isFirstTime = SelectedTopic.shared.selectedCategory.questionSet.isEmpty
         let lastGameWasFinished = Game.shared.records.first?.continueGameStatus == false
         
         if isFirstTime || (appVersionHasChange && lastGameWasFinished) {
             let newSet = TheBasicsSet.getQuestions()
             
             SelectedTopic.shared.saveQuestionSet(
-                newSet, topic: "Основы", tag: 11
+                newSet, category: "Основы", tag: 11
             )
             
             selectedTopic.text = "Основы"
             Game.shared.updateContinueStatus()
         } else {
-            selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+            selectedTopic.text = "\(SelectedTopic.shared.selectedCategory.topicName)"
         }
     }
     
@@ -314,7 +314,7 @@ extension InitialViewController: GameViewControllerDelegate,
     
     func categoryWasSelected() {
         updateLastGameLabel()
-        selectedTopic.text = "\(SelectedTopic.shared.topic.topicName)"
+        selectedTopic.text = "\(SelectedTopic.shared.selectedCategory.topicName)"
     }
     
     func refreshLastGameInfo() {

@@ -5,7 +5,6 @@
 import Foundation
 
 class Game {
-    
     static let shared = Game()
     
     private let recordCaretaker = RecordsCaretaker()

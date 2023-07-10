@@ -5,34 +5,34 @@
 import Foundation
 
 class SelectedTopic {
-    
     static let shared = SelectedTopic()
-    
     private let topicCaretaker = TopicCaretaker()
     
-    private(set) var topic: Topic {
+    private init() {
+        selectedCategory = self.topicCaretaker.getTopic()
+    }
+    
+    private(set) var selectedCategory: Topic {
         didSet {
             topicCaretaker.saveTopic(
-                topic: self.topic
+                topic: self.selectedCategory
             )
         }
     }
     
-    private init() {
-        self.topic = self.topicCaretaker.getTopic()
-    }
-    
     func saveQuestionSet(
         _ questionSet: [Question],
-        topic: String,
+        category: String,
         tag: Int
     ) {
-        self.topic.questionSet = questionSet
-        self.topic.topicName = topic
-        self.topic.topicTag = tag
+        selectedCategory.questionSet = questionSet
+        selectedCategory.topicName = category
+        selectedCategory.topicTag = tag
     }
     
-    func saveShuffledSet(_ continueSet: [Question]) {
-        self.topic.continueQuestionSet = continueSet
+    func saveShuffledSet(
+        _ continueSet: [Question]
+    ) {
+        self.selectedCategory.continueQuestionSet = continueSet
     }
 }

@@ -59,7 +59,7 @@ class TopicViewController: UIViewController {
     }
 
 	func setupGameInformationUI() {
-        let tag = SelectedTopic.shared.topic.topicTag
+        let tag = SelectedTopic.shared.selectedCategory.topicTag
         
 		if tag < 10 {
             setRandomGameUI()
@@ -69,9 +69,9 @@ class TopicViewController: UIViewController {
 	}
     
     private func setRandomGameUI() {
-        let total = SelectedTopic.shared.topic.questionSet.count
+        let total = SelectedTopic.shared.selectedCategory.questionSet.count
         
-        mainTitleLabel.animateLabelChanges(SelectedTopic.shared.topic.topicName)
+        mainTitleLabel.animateLabelChanges(SelectedTopic.shared.selectedCategory.topicName)
         successValueLabel.animateLabelChanges(getRandomGamesCounter())
         countValueLabel.animateLabelChanges("\(total)")
         successTextLabel.animateLabelChanges(Constants.playedCounter)
@@ -79,10 +79,10 @@ class TopicViewController: UIViewController {
     }
 
     private func setCategoryGameUI() {
-        mainTitleLabel.animateLabelChanges("\(SelectedTopic.shared.topic.topicName)")
+        mainTitleLabel.animateLabelChanges("\(SelectedTopic.shared.selectedCategory.topicName)")
         successTextLabel.animateLabelChanges(Constants.learnedText)
-        successValueLabel.animateLabelChanges("\(progress.getProgress(for: SelectedTopic.shared.topic.topicName).progressRate)%")
-        countValueLabel.animateLabelChanges("\(SelectedTopic.shared.topic.questionSet.count)")
+        successValueLabel.animateLabelChanges("\(progress.getProgress(for: SelectedTopic.shared.selectedCategory.topicName).progressRate)%")
+        countValueLabel.animateLabelChanges("\(SelectedTopic.shared.selectedCategory.questionSet.count)")
     }
 
 	func showAlertIfNeeded() {
@@ -128,7 +128,7 @@ class TopicViewController: UIViewController {
         var counter = 0
         
         records.forEach { record in
-            if record.topic == SelectedTopic.shared.topic.topicName {
+            if record.topic == SelectedTopic.shared.selectedCategory.topicName {
                 counter += 1
             }
         }

@@ -80,7 +80,7 @@ extension HelpViewController {
                 fontSize: fontSize
             )
         } else {
-            for question in SelectedTopic.shared.topic.questionSet {
+            for question in SelectedTopic.shared.selectedCategory.questionSet {
                 if question.questionId == questionID {
                     helpTextLabel.attributedText = boldTextService.createBoldTextAnswer(
                         question.helpText,

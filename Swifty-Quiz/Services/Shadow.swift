@@ -5,7 +5,6 @@
 import UIKit
 
 class Shadow {
-    
     /// Основные кнопки - черная тень
     func addButtonShadows(_ buttons: [UIButton]) {
         for button in buttons {

@@ -47,8 +47,8 @@ class GameViewController: UIViewController {
     private let buttons = AnswerButtonsView()
     private let questionOrderSetting = Game.shared.settings.questionOrder
     private let shouldShowAutoHelp = Game.shared.settings.helpAfterWrong
-    private let topic = SelectedTopic.shared.topic.topicName
-    private let topicTag = SelectedTopic.shared.topic.topicTag
+    private let topic = SelectedTopic.shared.selectedCategory.topicName
+    private let topicTag = SelectedTopic.shared.selectedCategory.topicTag
     
     private var doesWeGetAutoHint = false       // Пользователь получил автоматическую подсказку (настройки)
     private var doesUserTookHint = false        // Предотвращает повторное засчитывание подсказки
@@ -128,7 +128,7 @@ extension GameViewController {
     private func setupContinueValues() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame {
-                self.questions = SelectedTopic.shared.topic.continueQuestionSet
+                self.questions = SelectedTopic.shared.selectedCategory.continueQuestionSet
                 self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
                 self.doesUserTookHint = Game.shared.records[0].helpFlag!
                 self.gameHistory = Game.shared.records[0].gameHistory!
@@ -143,9 +143,9 @@ extension GameViewController {
     private func addQuestionSet() {
         if !weContinueLastGame {
             if questionOrderSetting == 0 {
-                questions = SelectedTopic.shared.topic.questionSet
+                questions = SelectedTopic.shared.selectedCategory.questionSet
             } else {
-                questions = SelectedTopic.shared.topic.questionSet.shuffled()
+                questions = SelectedTopic.shared.selectedCategory.questionSet.shuffled()
             }
         }
     }
@@ -390,8 +390,8 @@ extension GameViewController {
         
         /// Save default set for new games
         SelectedTopic.shared.saveQuestionSet(
-            SelectedTopic.shared.topic.questionSet,
-            topic: topic,
+            SelectedTopic.shared.selectedCategory.questionSet,
+            category: topic,
             tag: topicTag
         )
     }

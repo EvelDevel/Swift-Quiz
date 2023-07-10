@@ -27,7 +27,7 @@ class CategoriesCell: UITableViewCell {
     
     weak var delegate: CategoriesCellDelegate?
     
-    private var currentPosition = SelectedTopic.shared.topic.topicTag
+    private var currentPosition = SelectedTopic.shared.selectedCategory.topicTag
     private let progress = ProgressService()
     
     override func awakeFromNib() {
@@ -135,373 +135,373 @@ extension CategoriesCell {
 
 extension CategoriesCell {
     func addQuestionsToArray(tag: Int) {
-        let currentTag = SelectedTopic.shared.topic.topicTag
+        let currentTag = SelectedTopic.shared.selectedCategory.topicTag
         
         switch tag {
         case 1:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(20),
-                topic: CategoriesName.random20.rawValue,
+                category: CategoriesName.random20.rawValue,
                 tag: tag - 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(50),
-                topic: CategoriesName.random50.rawValue,
+                category: CategoriesName.random50.rawValue,
                 tag: tag - 1
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(100),
-                topic: CategoriesName.random100.rawValue,
+                category: CategoriesName.random100.rawValue,
                 tag: tag - 1
             )
         case 4:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getAllQuestions(),
-                topic: CategoriesName.deathMatch.rawValue,
+                category: CategoriesName.deathMatch.rawValue,
                 tag: tag - 1
             )
         case 12:
             SelectedTopic.shared.saveQuestionSet(
                 TheBasicsSet.getQuestions(),
-                topic: CategoriesName.basic.rawValue,
+                category: CategoriesName.basic.rawValue,
                 tag: tag - 1
             )
         case 13:
             SelectedTopic.shared.saveQuestionSet(
                 IntegersAndBooleansSet.getQuestions(),
-                topic: CategoriesName.integersAndBooleans.rawValue,
+                category: CategoriesName.integersAndBooleans.rawValue,
                 tag: tag - 1
             )
         case 14:
             SelectedTopic.shared.saveQuestionSet(
                 BasicOperatorsSet.getQuestions(),
-                topic: CategoriesName.basicOperators.rawValue,
+                category: CategoriesName.basicOperators.rawValue,
                 tag: tag - 1
             )
         case 15:
             SelectedTopic.shared.saveQuestionSet(
                 RangeOperatorsSet.getQuestions(),
-                topic: CategoriesName.rangeOperators.rawValue,
+                category: CategoriesName.rangeOperators.rawValue,
                 tag: tag - 1
             )
         case 16:
             SelectedTopic.shared.saveQuestionSet(
                 BooleanOperatorsSet.getQuestions(),
-                topic: CategoriesName.booleanOperators.rawValue,
+                category: CategoriesName.booleanOperators.rawValue,
                 tag: tag - 1
             )
         case 17:
             SelectedTopic.shared.saveQuestionSet(
                 StringAndCharactersSet.getQuestions(),
-                topic: CategoriesName.stringAndCharacters.rawValue,
+                category: CategoriesName.stringAndCharacters.rawValue,
                 tag: tag - 1
             )
         case 18:
             SelectedTopic.shared.saveQuestionSet(
                 CollectionsSet.getQuestions(),
-                topic: CategoriesName.collections.rawValue,
+                category: CategoriesName.collections.rawValue,
                 tag: tag - 1
             )
         case 19:
             SelectedTopic.shared.saveQuestionSet(
                 SetsSet.getQuestions(),
-                topic: CategoriesName.sets.rawValue,
+                category: CategoriesName.sets.rawValue,
                 tag: tag - 1
             )
         case 20:
             SelectedTopic.shared.saveQuestionSet(
                 DictionariesSet.getQuestions(),
-                topic: CategoriesName.dictionaries.rawValue,
+                category: CategoriesName.dictionaries.rawValue,
                 tag: tag - 1
             )
         case 21:
             SelectedTopic.shared.saveQuestionSet(
                 TuplesSet.getQuestions(),
-                topic: CategoriesName.tuples.rawValue,
+                category: CategoriesName.tuples.rawValue,
                 tag: tag - 1
             )
         case 22:
             SelectedTopic.shared.saveQuestionSet(
                 ControlFlowSet.getQuestions(),
-                topic: CategoriesName.controlFlow.rawValue,
+                category: CategoriesName.controlFlow.rawValue,
                 tag: tag - 1
             )
         case 23:
             SelectedTopic.shared.saveQuestionSet(
                 OptionalTypesSet.getQuestions(),
-                topic: CategoriesName.optionals.rawValue,
+                category: CategoriesName.optionals.rawValue,
                 tag: tag - 1
             )
         case 24:
             SelectedTopic.shared.saveQuestionSet(
                 FunctionsSet.getQuestions(),
-                topic: CategoriesName.functions.rawValue,
+                category: CategoriesName.functions.rawValue,
                 tag: tag - 1
             )
         case 25:
             SelectedTopic.shared.saveQuestionSet(
                 ClosuresSet.getQuestions(),
-                topic: CategoriesName.closures.rawValue,
+                category: CategoriesName.closures.rawValue,
                 tag: tag - 1
             )
         case 26:
             SelectedTopic.shared.saveQuestionSet(
                 EnumerationsSet.getQuestions(),
-                topic: CategoriesName.enums.rawValue,
+                category: CategoriesName.enums.rawValue,
                 tag: tag - 1
             )
         case 27:
             SelectedTopic.shared.saveQuestionSet(
                 StructuresAndClassesSet.getQuestions(),
-                topic: CategoriesName.structuresAndClasses.rawValue,
+                category: CategoriesName.structuresAndClasses.rawValue,
                 tag: tag - 1
             )
         case 28:
             SelectedTopic.shared.saveQuestionSet(
                 PropertiesSet.getQuestions(),
-                topic: CategoriesName.properties.rawValue,
+                category: CategoriesName.properties.rawValue,
                 tag: tag - 1
             )
         case 29:
             SelectedTopic.shared.saveQuestionSet(
                 MethodsSet.getQuestions(),
-                topic: CategoriesName.methods.rawValue,
+                category: CategoriesName.methods.rawValue,
                 tag: tag - 1
             )
         case 30:
             SelectedTopic.shared.saveQuestionSet(
                 SubscriptsSet.getQuestions(),
-                topic: CategoriesName.subscripts.rawValue,
+                category: CategoriesName.subscripts.rawValue,
                 tag: tag - 1
             )
         case 31:
             SelectedTopic.shared.saveQuestionSet(
                 InheritanceSet.getQuestions(),
-                topic: CategoriesName.inheritance.rawValue,
+                category: CategoriesName.inheritance.rawValue,
                 tag: tag - 1
             )
         case 32:
             SelectedTopic.shared.saveQuestionSet(
                 InitializationSet.getQuestions(),
-                topic: CategoriesName.initialization.rawValue,
+                category: CategoriesName.initialization.rawValue,
                 tag: tag - 1
             )
         case 33:
             SelectedTopic.shared.saveQuestionSet(
                 DeinitializationSet.getQuestions(),
-                topic: CategoriesName.deinitialization.rawValue,
+                category: CategoriesName.deinitialization.rawValue,
                 tag: tag - 1
             )
         case 34:
             SelectedTopic.shared.saveQuestionSet(
                 ErrorHandlingSet.getQuestions(),
-                topic: CategoriesName.errorHandling.rawValue,
+                category: CategoriesName.errorHandling.rawValue,
                 tag: tag - 1
             )
         case 35:
             SelectedTopic.shared.saveQuestionSet(
                 ConcurrencySet.getQuestions(),
-                topic: CategoriesName.concurrency.rawValue,
+                category: CategoriesName.concurrency.rawValue,
                 tag: tag - 1
             )
         case 36:
             SelectedTopic.shared.saveQuestionSet(
                 OptionalChainingSet.getQuestions(),
-                topic: CategoriesName.optionalChaining.rawValue,
+                category: CategoriesName.optionalChaining.rawValue,
                 tag: tag - 1
             )
         case 37:
             SelectedTopic.shared.saveQuestionSet(
                 ARCSet.getQuestions(),
-                topic: CategoriesName.arc.rawValue,
+                category: CategoriesName.arc.rawValue,
                 tag: tag - 1
             )
         case 38:
             SelectedTopic.shared.saveQuestionSet(
                 TypeCastingSet.getQuestions(),
-                topic: CategoriesName.typeCasting.rawValue,
+                category: CategoriesName.typeCasting.rawValue,
                 tag: tag - 1
             )
         case 39:
             SelectedTopic.shared.saveQuestionSet(
                 NestedTypesSet.getQuestions(),
-                topic: CategoriesName.nestedTypes.rawValue,
+                category: CategoriesName.nestedTypes.rawValue,
                 tag: tag - 1
             )
         case 40:
             SelectedTopic.shared.saveQuestionSet(
                 ExtensionsSet.getQuestions(),
-                topic: CategoriesName.extensions.rawValue,
+                category: CategoriesName.extensions.rawValue,
                 tag: tag - 1
             )
         case 41:
             SelectedTopic.shared.saveQuestionSet(
                 OpaqueTypeSet.getQuestions(),
-                topic: CategoriesName.opaqueType.rawValue,
+                category: CategoriesName.opaqueType.rawValue,
                 tag: tag - 1
             )
         case 42:
             SelectedTopic.shared.saveQuestionSet(
                 GenericsSet.getQuestions(),
-                topic: CategoriesName.generics.rawValue,
+                category: CategoriesName.generics.rawValue,
                 tag: tag - 1
             )
         case 43:
             SelectedTopic.shared.saveQuestionSet(
                 ProtocolsSet.getQuestions(),
-                topic: CategoriesName.protocols.rawValue,
+                category: CategoriesName.protocols.rawValue,
                 tag: tag - 1
             )
         case 44:
             SelectedTopic.shared.saveQuestionSet(
                 AccessControlSet.getQuestions(),
-                topic: CategoriesName.accessControl.rawValue,
+                category: CategoriesName.accessControl.rawValue,
                 tag: tag - 1
             )
         case 45:
             SelectedTopic.shared.saveQuestionSet(
                 MemorySafetySet.getQuestions(),
-                topic: CategoriesName.memorySafety.rawValue,
+                category: CategoriesName.memorySafety.rawValue,
                 tag: tag - 1
             )
         case 46:
             SelectedTopic.shared.saveQuestionSet(
                 AdvancedOperatorsSet.getQuestions(),
-                topic: CategoriesName.advancedOperators.rawValue,
+                category: CategoriesName.advancedOperators.rawValue,
                 tag: tag - 1
             )
         case 50:
             SelectedTopic.shared.saveQuestionSet(
                 BasicsAboutPatternsSet.getQuestions(),
-                topic: CategoriesName.patterns.rawValue,
+                category: CategoriesName.patterns.rawValue,
                 tag: tag - 1
             )
         case 51:
             SelectedTopic.shared.saveQuestionSet(
                 CreationalPatternsSet.getQuestions(),
-                topic: CategoriesName.creationalPatterns.rawValue,
+                category: CategoriesName.creationalPatterns.rawValue,
                 tag: tag - 1
             )
         case 52:
             SelectedTopic.shared.saveQuestionSet(
                 StructuralPatternsSet.getQuestions(),
-                topic: CategoriesName.structuralPatterns.rawValue,
+                category: CategoriesName.structuralPatterns.rawValue,
                 tag: tag - 1
             )
         case 53:
             SelectedTopic.shared.saveQuestionSet(
                 BehavioralPatternsSet.getQuestions(),
-                topic: CategoriesName.behavioralPatterns.rawValue,
+                category: CategoriesName.behavioralPatterns.rawValue,
                 tag: tag - 1
             )
         case 54:
             SelectedTopic.shared.saveQuestionSet(
                 AntipatternsSet.getQuestions(),
-                topic: CategoriesName.antipatterns.rawValue,
+                category: CategoriesName.antipatterns.rawValue,
                 tag: tag - 1
             )
         case 60:
             SelectedTopic.shared.saveQuestionSet(
                 ExtremeProgrammingSet.getQuestions(),
-                topic: CategoriesName.extremeProgramming.rawValue,
+                category: CategoriesName.extremeProgramming.rawValue,
                 tag: tag - 1
             )
         case 61:
             SelectedTopic.shared.saveQuestionSet(
                 MobileSecuritySet.getQuestions(),
-                topic: CategoriesName.masvs.rawValue,
+                category: CategoriesName.masvs.rawValue,
                 tag: tag - 1
             )
         case 62:
             SelectedTopic.shared.saveQuestionSet(
                 VCLifecycleSet.getQuestions(),
-                topic: CategoriesName.controllerLifecycle.rawValue,
+                category: CategoriesName.controllerLifecycle.rawValue,
                 tag: tag - 1
             )
         case 63:
             SelectedTopic.shared.saveQuestionSet(
                 AppLifecycleSet.getQuestions(),
-                topic: CategoriesName.appLifecycle.rawValue,
+                category: CategoriesName.appLifecycle.rawValue,
                 tag: tag - 1
             )
         case 64:
             SelectedTopic.shared.saveQuestionSet(
                 FramesAndBounds.getQuestions(),
-                topic: CategoriesName.boundsAndFrame.rawValue,
+                category: CategoriesName.boundsAndFrame.rawValue,
                 tag: tag - 1
             )
         case 65:
             SelectedTopic.shared.saveQuestionSet(
                 Multithreading.getQuestions(),
-                topic: CategoriesName.multithreading.rawValue,
+                category: CategoriesName.multithreading.rawValue,
                 tag: tag - 1
             )
         case 66:
             SelectedTopic.shared.saveQuestionSet(
                 UIViewSet.getQuestions(),
-                topic: CategoriesName.uiview.rawValue,
+                category: CategoriesName.uiview.rawValue,
                 tag: tag - 1
             )
         case 67:
             SelectedTopic.shared.saveQuestionSet(
                 AutoLayout.getQuestions(),
-                topic: CategoriesName.autoLayout.rawValue,
+                category: CategoriesName.autoLayout.rawValue,
                 tag: tag - 1
             )
         case 68:
             SelectedTopic.shared.saveQuestionSet(
                 DepenpencyInjection.getQuestions(),
-                topic: CategoriesName.dependencyInjection.rawValue,
+                category: CategoriesName.dependencyInjection.rawValue,
                 tag: tag - 1
             )
         case 69:
             SelectedTopic.shared.saveQuestionSet(
                 InversionOfControl.getQuestions(),
-                topic: CategoriesName.inversionOfControl.rawValue,
+                category: CategoriesName.inversionOfControl.rawValue,
                 tag: tag - 1
             )
         case 70:
             SelectedTopic.shared.saveQuestionSet(
                 ServiceLocator.getQuestions(),
-                topic: CategoriesName.serviceLocator.rawValue,
+                category: CategoriesName.serviceLocator.rawValue,
                 tag: tag - 1
             )
         case 71:
             SelectedTopic.shared.saveQuestionSet(
                 Networking.getQuestions(),
-                topic: CategoriesName.networking.rawValue,
+                category: CategoriesName.networking.rawValue,
                 tag: tag - 1
             )
         case 72:
             SelectedTopic.shared.saveQuestionSet(
                 SwiftUIEssentials.getQuestions(),
-                topic: CategoriesName.swiftUIEssentials.rawValue,
+                category: CategoriesName.swiftUIEssentials.rawValue,
                 tag: tag - 1
             )
         case 73:
             SelectedTopic.shared.saveQuestionSet(
                 DrawingAndAnimation.getQuestions(),
-                topic: CategoriesName.swiftUIDrawing.rawValue,
+                category: CategoriesName.swiftUIDrawing.rawValue,
                 tag: tag - 1
             )
         case 76:
             SelectedTopic.shared.saveQuestionSet(
                 APNS.getQuestions(),
-                topic: CategoriesName.apns.rawValue,
+                category: CategoriesName.apns.rawValue,
                 tag: tag - 1
             )
         case 78:
             SelectedTopic.shared.saveQuestionSet(
                 Interview.getQuestions(),
-                topic: CategoriesName.interview.rawValue,
+                category: CategoriesName.interview.rawValue,
                 tag: tag - 1
             )
         case 79:
             SelectedTopic.shared.saveQuestionSet(
                 RXSwift.getQuestions(),
-                topic: CategoriesName.rxswift.rawValue,
+                category: CategoriesName.rxswift.rawValue,
                 tag: tag - 1
             )
             
