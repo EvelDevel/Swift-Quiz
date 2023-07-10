@@ -26,6 +26,9 @@ class InitialViewController: UIViewController {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     
+    private let showContinueAdditions = 22.5
+    private let hideContinueAdditions = 10.5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -44,10 +47,12 @@ class InitialViewController: UIViewController {
         setupCurrentQuestionSet()
         updateLastGameInfo()
         updateTotalQuestionLabel()
-        updateContinueButton()
+        updateContinueButton(fromStart: true)
         addShadows()
+        
         imageTuning(button: topicPicker, position: .center)
         imageTuning(button: logoButton, position: .top)
+        SoundPlayer.shared.playSound(sound: .theAppIsLoading)
     }
     
     private func updateScoreLabel() {
@@ -89,7 +94,7 @@ extension InitialViewController {
         let lastGameWasFinished = Game.shared.records.first?.continueGameStatus == false
         
         if isFirstTime || (appVersionHasChange && lastGameWasFinished) {
-            let newSet = TopicOperator.getTheBasics()
+            let newSet = TheBasicsSet.getQuestions()
             
             SelectedTopic.shared.saveQuestionSet(
                 newSet, topic: "Основы", tag: 11
@@ -182,18 +187,24 @@ extension InitialViewController {
 // MARK: - Interface
 
 extension InitialViewController {
-    private func updateContinueButton() {
+    private func updateContinueButton(
+        fromStart: Bool
+    ) {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             if continueGameButton.isHidden == true {
-                SoundPlayer.shared.playSound(sound: .showContinueButton)
+                if !fromStart {
+                    SoundPlayer.shared.playSound(sound: .showContinueButton)
+                }
             }
-            contentCenter.constant = (UIScreen.main.scale / 2) + 22.5
+            contentCenter.constant = (UIScreen.main.scale / 2) + showContinueAdditions
             continueGameButton.isHidden = false
         } else {
             if continueGameButton.isHidden == false {
-                SoundPlayer.shared.playSound(sound: .hideContinueButton)
+                if !fromStart {
+                    SoundPlayer.shared.playSound(sound: .hideContinueButton)
+                }
             }
-            contentCenter.constant = (UIScreen.main.scale / 2) - 10.5
+            contentCenter.constant = (UIScreen.main.scale / 2) - hideContinueAdditions
             continueGameButton.isHidden = true
         }
         
@@ -298,7 +309,7 @@ extension InitialViewController: GameViewControllerDelegate,
     }
     
     func updateInitialView() {
-        updateContinueButton()
+        updateContinueButton(fromStart: false)
     }
     
     func categoryWasSelected() {
