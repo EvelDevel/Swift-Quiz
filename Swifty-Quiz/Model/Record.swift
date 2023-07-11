@@ -5,7 +5,6 @@
 import Foundation
 
 struct Record: Codable {
-    
     var date: Date?                         // Дата
     var score: Int?                         // Общий счет
     var topic: String?                      // Тема игры (название категории)

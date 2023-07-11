@@ -36,7 +36,6 @@ class Game {
 
 // MARK: Работа с подсказкой по незавершенной игре
 extension Game {
-    
     func showSettingsAlertStatus() -> Bool {
         return self.weShowedAlert
     }
@@ -55,9 +54,9 @@ extension Game {
 }
 
 
-// MARK: Сохранение, удаление, редактирование рекордов
+// MARK: - Сохранение, удаление, редактирование рекордов
+
 extension Game {
-    
     func addRecord(_ record: Record) {
         self.records.insert(record, at: 0)
     }
@@ -90,7 +89,8 @@ extension Game {
 }
 
 
-// MARK: Сохранение настроек
+// MARK: - Сохранение настроек
+
 extension Game {
     
     func saveSettings(_ settings: Settings) {
@@ -99,7 +99,8 @@ extension Game {
 }
 
 
-// MARK: Установка значений настроек
+// MARK: - Установка значений настроек
+
 extension Game {
     
     /// Настройки: Порядок вопросов в теме

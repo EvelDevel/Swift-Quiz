@@ -9,7 +9,6 @@
 import Foundation
 
 class Constants {
-    
     static var tookHint = "Взяли подсказку"
     
     static var playedCounter = "Сыграно раз:"

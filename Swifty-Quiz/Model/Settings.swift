@@ -5,7 +5,6 @@
 import Foundation
 
 struct Settings: Codable {
-    
     var questionOrder: Int          // Порядок вопросов
     var questionTextShuffling: Int // Изменение формулировок вопроса
     var sound: Int                  // Звук
