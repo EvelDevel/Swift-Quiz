@@ -14,7 +14,6 @@ final class StatsViewController: UIViewController {
     private enum StatsCellType {
         case totalQuestions(String, Double)
         case correctAnswers(String, Double)
-        case percentOfCorrectAnswers(String, Double)
         case incorrectAnswers(String, Double)
         case tips(String, Double)
         case playedTopics(String, Double)
@@ -33,22 +32,22 @@ final class StatsViewController: UIViewController {
     }
     
     private func loadData() {
+        let playedQuestions = findPlayedAnswersNumber()
+        let allQuestions = RandomSetManager.showAllQuestionsNumber()
+        let correctAnswers = findCorrectAnswersNumber()
+        
         statsItems = [
             .totalQuestions(
-                "Всего пройдено вопросов",
+                "Пройдено вопросов: \(playedQuestions) из \(allQuestions)",
                 findTotalAnsweredQuestions()
             ),
             .correctAnswers(
-                "Правильных ответов",
+                "Правильных ответов: \(correctAnswers) из \(allQuestions)",
                 findTotalCorrectAnsweredQuestions()
-            ),
-            .percentOfCorrectAnswers(
-                "Процент правильных ответов",
-                50
             ),
             .incorrectAnswers(
                 "Неправильных ответов",
-                30
+                findTotalIncorrectAnsweredQuestions()
             ),
             .tips(
                 "Подсказок взято",
@@ -62,6 +61,34 @@ final class StatsViewController: UIViewController {
     }
     
     // MARK: - Privates calculate methods
+    
+    private func findPlayedAnswersNumber() -> Int {
+        let records = Game.shared.records
+        var uniqueIDsSet = Set<Int>()
+        
+        records.forEach { record in
+            record.gameHistory?.forEach({ history in
+                uniqueIDsSet.insert(history.questionId)
+            })
+        }
+        
+        return uniqueIDsSet.count
+    }
+    
+    private func findCorrectAnswersNumber() -> Int {
+        let records = Game.shared.records
+        var uniqueIDsSet = Set<Int>()
+        
+        records.forEach { record in
+            record.gameHistory?.forEach({ history in
+                if history.userAnswer == history.correctAnswer {
+                    uniqueIDsSet.insert(history.questionId)
+                }
+            })
+        }
+        
+        return uniqueIDsSet.count
+    }
     
     private func findTotalAnsweredQuestions() -> Double {
         let records = Game.shared.records
@@ -97,6 +124,25 @@ final class StatsViewController: UIViewController {
         let percentOfCorrectAnswers = part * 100
         
         return Double(percentOfCorrectAnswers)
+    }
+    
+    private func findTotalIncorrectAnsweredQuestions() -> Double {
+        let records = Game.shared.records
+        var uniqueIDsSet = Set<Int>()
+        
+        records.forEach { record in
+            record.gameHistory?.forEach({ history in
+                if history.userAnswer != history.correctAnswer {
+                    uniqueIDsSet.insert(history.questionId)
+                }
+            })
+        }
+        
+        let allQuestion = RandomSetManager.showAllQuestionsNumber()
+        let part = Double(uniqueIDsSet.count) / Double(allQuestion)
+        let percentOfIncorrectAnswers = part * 100
+        
+        return Double(percentOfIncorrectAnswers)
     }
 }
 
@@ -149,7 +195,7 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         let type: Any.Type
 
         switch model {
-        case .correctAnswers, .percentOfCorrectAnswers, .totalQuestions:
+        case .correctAnswers, .totalQuestions:
             type = ProgressBarTableViewCell.self
         case .incorrectAnswers, .tips, .playedTopics:
             type = ProgressBarTableViewCell.self
@@ -170,12 +216,6 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
                 value: value
             )
         case let .correctAnswers(title, value):
-            createProgressBarCell(
-                cell: cell,
-                title: title,
-                value: value
-            )
-        case let .percentOfCorrectAnswers(title, value):
             createProgressBarCell(
                 cell: cell,
                 title: title,
