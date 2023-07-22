@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgressBarTableViewCell" rowHeight="92" id="KGk-i7-Jjw" customClass="ProgressBarTableViewCell" customModule="Свифти_Квиз" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название параметра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLb-c5-RSP">
+                        <rect key="frame" x="16" y="8" width="409" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" name="TextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16d-LP-K3C">
+                        <rect key="frame" x="16" y="34" width="353" height="12"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="pQA-cX-oX0">
+                                <rect key="frame" x="0.0" y="0.0" width="8" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="CustomGreen"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="7zJ-sC-ncy"/>
+                            <constraint firstItem="pQA-cX-oX0" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="HZG-Ze-FKV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-TO-evq">
+                        <rect key="frame" x="385" y="32" width="56" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                        <color key="textColor" name="CustomGreen"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="MainBackground"/>
+                <constraints>
+                    <constraint firstItem="cgV-TO-evq" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="1yG-XZ-lJ4"/>
+                    <constraint firstItem="cgV-TO-evq" firstAttribute="leading" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="16" id="A4e-SC-Fy3"/>
+                    <constraint firstItem="NLb-c5-RSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="C5I-0y-aEH"/>
+                    <constraint firstAttribute="trailing" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="72" id="PZI-56-xoA"/>
+                    <constraint firstItem="NLb-c5-RSP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="VQM-sq-OvZ"/>
+                    <constraint firstItem="16d-LP-K3C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WHY-yO-XpH"/>
+                    <constraint firstItem="16d-LP-K3C" firstAttribute="top" secondItem="NLb-c5-RSP" secondAttribute="bottom" constant="8" id="kGU-DD-qeN"/>
+                    <constraint firstAttribute="trailing" secondItem="cgV-TO-evq" secondAttribute="trailing" id="oSY-BB-gN6"/>
+                    <constraint firstAttribute="trailing" secondItem="NLb-c5-RSP" secondAttribute="trailing" constant="16" id="red-51-riV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="greenProgressView" destination="pQA-cX-oX0" id="2EN-bN-Qpd"/>
+                <outlet property="percentageLabel" destination="cgV-TO-evq" id="eXd-hu-hLo"/>
+                <outlet property="titleLabel" destination="NLb-c5-RSP" id="G8f-0P-Hdl"/>
+                <outlet property="whiteProgressView" destination="16d-LP-K3C" id="YnX-3f-N66"/>
+            </connections>
+            <point key="canvasLocation" x="231.29770992366412" y="32.394366197183103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CustomGreen">
+            <color red="0.14499999582767487" green="0.79400002956390381" blue="0.41699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBackground">
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

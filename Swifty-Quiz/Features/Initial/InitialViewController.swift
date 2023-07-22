@@ -45,6 +45,7 @@ class InitialViewController: UIViewController {
             bundle: nil
         )
         
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
         present(viewController, animated: true)
     }
     
@@ -156,36 +157,6 @@ extension InitialViewController {
         
         updateScoreLabel()
     }
-    
-//    private func share(sender: UIView) {
-//        let score = Int(scoreLabel.text ?? "0") ?? 0
-//        
-//        let text = """
-//                     Изучаю теорию Swift в этом приложении 🤙🏻
-//                     Уже закрепил на \(score) очков
-//                     
-//                     #SwiftyQuiz #СвифтиКвиз #iOS
-//                     """
-//        
-//        let image = UIImage(named: "Share")
-//        
-//        if let myWebsite = URL(
-//            string: "https://apps.apple.com/ru/app/%D1%81%D0%B2%D0%B8%D1%84%D1%82%D0%B8-%D0%BA%D0%B2%D0%B8%D0%B7/id1525844750"
-//        ) {
-//            
-//            let objectsToShare = [text, myWebsite, image ?? UIImage()] as [Any]
-//            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-//            
-//            // Excluded Activities
-//            activityVC.excludedActivityTypes = [
-//                UIActivity.ActivityType.airDrop,
-//                UIActivity.ActivityType.addToReadingList
-//            ]
-//            
-//            activityVC.popoverPresentationController?.sourceView = sender
-//            self.present(activityVC, animated: true, completion: nil)
-//        }
-//    }
 }
 
 

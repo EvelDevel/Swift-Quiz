@@ -69,6 +69,8 @@
 		FB554D25274156D300B7696B /* CategoriesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D24274156D300B7696B /* CategoriesName.swift */; };
 		FB5BDCF82A6BF74000A7CA0D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */; };
 		FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */; };
+		FB5BDCFD2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */; };
+		FB5BDCFE2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */; };
 		FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2BA12737F8E400515B08 /* AutoLayout.swift */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
@@ -196,6 +198,8 @@
 		FB554D24274156D300B7696B /* CategoriesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesName.swift; sourceTree = "<group>"; };
 		FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarTableViewCell.swift; sourceTree = "<group>"; };
+		FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarTableViewCell.xib; sourceTree = "<group>"; };
 		FB5D2BA12737F8E400515B08 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
@@ -426,10 +430,20 @@
 		FB5BDCF52A6BF72C00A7CA0D /* Stats */ = {
 			isa = PBXGroup;
 			children = (
+				FB5BDCFA2A6BFB9C00A7CA0D /* Cells */,
 				FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */,
 				FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		FB5BDCFA2A6BFB9C00A7CA0D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */,
+				FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
@@ -701,6 +715,7 @@
 			files = (
 				FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */,
 				FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */,
+				FB5BDCFE2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib in Resources */,
 				FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */,
 				FB291D2226D2211400A40679 /* HelpViewController.storyboard in Resources */,
 				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
@@ -812,6 +827,7 @@
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
+				FB5BDCFD2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FBA3F0E4289E710F0014222F /* Networking.swift in Sources */,

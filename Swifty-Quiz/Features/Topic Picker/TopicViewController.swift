@@ -166,14 +166,14 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(
+        guard let cell = tableView.dequeueReusableCell(
             withIdentifier: String(
                 describing: CategoriesCell.self
             ),
             for: indexPath
         ) as? CategoriesCell else {
-                return UITableViewCell()
-            }
+            return UITableViewCell()
+        }
         
 		cell.delegate = self
 		return cell
