@@ -67,6 +67,8 @@
 		FB553EBD2515236C0037A287 /* rightAnswer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB553EBC2515236B0037A287 /* rightAnswer.mp3 */; };
 		FB554D232741215A00B7696B /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D222741215A00B7696B /* ProgressService.swift */; };
 		FB554D25274156D300B7696B /* CategoriesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB554D24274156D300B7696B /* CategoriesName.swift */; };
+		FB5BDCF82A6BF74000A7CA0D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */; };
+		FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */; };
 		FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2BA12737F8E400515B08 /* AutoLayout.swift */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
@@ -192,6 +194,8 @@
 		FB553EBC2515236B0037A287 /* rightAnswer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightAnswer.mp3; sourceTree = "<group>"; };
 		FB554D222741215A00B7696B /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
 		FB554D24274156D300B7696B /* CategoriesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesName.swift; sourceTree = "<group>"; };
+		FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		FB5D2BA12737F8E400515B08 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +423,15 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		FB5BDCF52A6BF72C00A7CA0D /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				FB5BDCF62A6BF74000A7CA0D /* StatsViewController.swift */,
+				FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +605,7 @@
 		FBECDC58243F241B00BD5583 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FB5BDCF52A6BF72C00A7CA0D /* Stats */,
 				FB291D1D26D2168100A40679 /* Launch */,
 				FB002466294DE09A008110D6 /* Initial */,
 				FB291D1C26D2167600A40679 /* About */,
@@ -686,6 +700,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */,
+				FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */,
 				FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */,
 				FB291D2226D2211400A40679 /* HelpViewController.storyboard in Resources */,
 				FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */,
@@ -774,6 +789,7 @@
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FB00246A294DE13E008110D6 /* SettingsViewController.swift in Sources */,
 				FB554D232741215A00B7696B /* ProgressService.swift in Sources */,
+				FB5BDCF82A6BF74000A7CA0D /* StatsViewController.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
 				FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */,
 				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
