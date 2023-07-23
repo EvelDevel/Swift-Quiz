@@ -20,7 +20,7 @@ final class ProgressBarTableViewCell: UITableViewCell {
     @IBOutlet private weak var whiteProgressView: UIView!
     @IBOutlet private weak var greenProgressView: UIView!
     
-    private let progressBarPadding: CGFloat = 88
+    private let progressBarPadding: CGFloat = 92
     private let cornerRadius: CGFloat = 4
     
     override func awakeFromNib() {

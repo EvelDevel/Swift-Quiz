@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatsViewController" customModule="Свифти_Квиз" customModuleProvider="target">
             <connections>
+                <outlet property="emptyStatsLabel" destination="5mQ-Yx-aSb" id="A8q-zS-L9c"/>
                 <outlet property="tableView" destination="Ehe-4x-nbh" id="NAU-Dq-KFg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,9 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-4x-nbh">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-4x-nbh">
                     <rect key="frame" x="0.0" y="113" width="393" height="739"/>
-                    <color key="backgroundColor" name="MainBackground"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статистика" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-q3-8qI">
                     <rect key="frame" x="16" y="75" width="361" height="22"/>
@@ -30,16 +30,26 @@
                     <color key="textColor" name="TextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статистики пока нет, вы еще не сыграли" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mQ-Yx-aSb">
+                    <rect key="frame" x="40" y="403.33333333333331" width="313" height="45.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                    <color key="textColor" name="TextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="MainBackground"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5mQ-Yx-aSb" secondAttribute="trailing" constant="40" id="5XU-Cq-uKL"/>
                 <constraint firstItem="Ehe-4x-nbh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8JK-iE-Xcc"/>
+                <constraint firstItem="5mQ-Yx-aSb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HL2-3S-BCV"/>
                 <constraint firstItem="e5c-q3-8qI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PDD-rL-aqd"/>
                 <constraint firstItem="Ehe-4x-nbh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="REg-Ax-g3C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e5c-q3-8qI" secondAttribute="trailing" constant="16" id="UA3-yr-1mr"/>
                 <constraint firstAttribute="bottom" secondItem="Ehe-4x-nbh" secondAttribute="bottom" id="aMB-q4-Ooz"/>
+                <constraint firstItem="5mQ-Yx-aSb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fbb-hP-jne"/>
                 <constraint firstItem="Ehe-4x-nbh" firstAttribute="top" secondItem="e5c-q3-8qI" secondAttribute="bottom" constant="16" id="phd-N1-wnX"/>
+                <constraint firstItem="5mQ-Yx-aSb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="yE6-kE-9At"/>
                 <constraint firstItem="e5c-q3-8qI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="yYt-av-oC5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -71,6 +71,10 @@
 		FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */; };
 		FB5BDCFD2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */; };
 		FB5BDCFE2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */; };
+		FB5BDD032A6CE4C900A7CA0D /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDD012A6CE4C900A7CA0D /* InformationTableViewCell.swift */; };
+		FB5BDD042A6CE4C900A7CA0D /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDD022A6CE4C900A7CA0D /* InformationTableViewCell.xib */; };
+		FB5BDD082A6CF1B400A7CA0D /* SpacerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BDD062A6CF1B400A7CA0D /* SpacerTableViewCell.swift */; };
+		FB5BDD092A6CF1B400A7CA0D /* SpacerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5BDD072A6CF1B400A7CA0D /* SpacerTableViewCell.xib */; };
 		FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2BA12737F8E400515B08 /* AutoLayout.swift */; };
 		FB6624E324DFF4B7008C9CE5 /* GameHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */; };
 		FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */; };
@@ -200,6 +204,10 @@
 		FB5BDCF72A6BF74000A7CA0D /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarTableViewCell.swift; sourceTree = "<group>"; };
 		FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressBarTableViewCell.xib; sourceTree = "<group>"; };
+		FB5BDD012A6CE4C900A7CA0D /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		FB5BDD022A6CE4C900A7CA0D /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
+		FB5BDD062A6CF1B400A7CA0D /* SpacerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerTableViewCell.swift; sourceTree = "<group>"; };
+		FB5BDD072A6CF1B400A7CA0D /* SpacerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpacerTableViewCell.xib; sourceTree = "<group>"; };
 		FB5D2BA12737F8E400515B08 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		FB6624E224DFF4B7008C9CE5 /* GameHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistory.swift; sourceTree = "<group>"; };
 		FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
@@ -440,10 +448,38 @@
 		FB5BDCFA2A6BFB9C00A7CA0D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FB5BDD052A6CF19400A7CA0D /* SpacerCell */,
+				FB5BDD002A6CE4A500A7CA0D /* InformationCell */,
+				FB5BDCFF2A6CE49700A7CA0D /* ProgressBarCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FB5BDCFF2A6CE49700A7CA0D /* ProgressBarCell */ = {
+			isa = PBXGroup;
+			children = (
 				FB5BDCFB2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift */,
 				FB5BDCFC2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib */,
 			);
-			path = Cells;
+			path = ProgressBarCell;
+			sourceTree = "<group>";
+		};
+		FB5BDD002A6CE4A500A7CA0D /* InformationCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB5BDD012A6CE4C900A7CA0D /* InformationTableViewCell.swift */,
+				FB5BDD022A6CE4C900A7CA0D /* InformationTableViewCell.xib */,
+			);
+			path = InformationCell;
+			sourceTree = "<group>";
+		};
+		FB5BDD052A6CF19400A7CA0D /* SpacerCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB5BDD062A6CF1B400A7CA0D /* SpacerTableViewCell.swift */,
+				FB5BDD072A6CF1B400A7CA0D /* SpacerTableViewCell.xib */,
+			);
+			path = SpacerCell;
 			sourceTree = "<group>";
 		};
 		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
@@ -714,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */,
+				FB5BDD092A6CF1B400A7CA0D /* SpacerTableViewCell.xib in Resources */,
 				FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */,
 				FB5BDCFE2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib in Resources */,
 				FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */,
@@ -723,6 +760,7 @@
 				FB2EACA0243EEE130098FAC3 /* LaunchScreen.storyboard in Resources */,
 				FB87420D24605BF500247923 /* trash.mp3 in Resources */,
 				FB6624EA24E0202C008C9CE5 /* GameHistoryCell.xib in Resources */,
+				FB5BDD042A6CE4C900A7CA0D /* InformationTableViewCell.xib in Resources */,
 				FB291D2426D221B700A40679 /* GameViewController.storyboard in Resources */,
 				FB2EAC9D243EEE130098FAC3 /* Assets.xcassets in Resources */,
 				FB6624EB24E02552008C9CE5 /* Main.storyboard in Resources */,
@@ -824,6 +862,7 @@
 				FBE79DD32982243100EE613C /* RXSwift.swift in Sources */,
 				FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
+				FB5BDD032A6CE4C900A7CA0D /* InformationTableViewCell.swift in Sources */,
 				FBC1D48A247574730055FF62 /* Shadow.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
@@ -846,6 +885,7 @@
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
+				FB5BDD082A6CF1B400A7CA0D /* SpacerTableViewCell.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,
 				FB00246B294DE13E008110D6 /* SettingsEnums.swift in Sources */,
 				FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */,
