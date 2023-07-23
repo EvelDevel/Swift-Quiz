@@ -9,7 +9,6 @@ class InitialViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var lastGameTitle: UILabel!
     @IBOutlet private weak var contentCenter: NSLayoutConstraint!
-    @IBOutlet private weak var totalQuestionsLabel: UILabel!
     @IBOutlet private weak var selectedTopic: UILabel!
     @IBOutlet private weak var lastTopic: UILabel!
     @IBOutlet private weak var lastScore: UILabel!
@@ -52,13 +51,13 @@ class InitialViewController: UIViewController {
     private func setup() {
         setupCurrentQuestionSet()
         updateLastGameInfo()
-        updateTotalQuestionLabel()
         updateContinueButton(fromStart: true)
         addShadows()
         
         imageTuning(button: topicPicker, position: .center)
         imageTuning(button: logoButton, position: .top)
         SoundPlayer.shared.playSound(sound: .theAppIsLoading)
+        // RandomSetManager.showAllQuestionsNumber()
     }
     
     private func updateScoreLabel() {
@@ -78,10 +77,6 @@ class InitialViewController: UIViewController {
             },
             completion: nil
         )
-    }
-    
-    private func updateTotalQuestionLabel() {
-        totalQuestionsLabel.text = "\(RandomSetManager.showAllQuestionsNumber())"
     }
 }
 

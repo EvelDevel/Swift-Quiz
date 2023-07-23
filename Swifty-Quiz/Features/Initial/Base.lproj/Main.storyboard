@@ -320,34 +320,17 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-N4-XJ3" userLabel="ScoreLabelsStack">
-                                <rect key="frame" x="143.5" y="633" width="88" height="12"/>
+                                <rect key="frame" x="149.5" y="632" width="76.5" height="14.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счет: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-Bw-pf0">
-                                        <rect key="frame" x="0.0" y="0.0" width="52" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
-                                        <rect key="frame" x="56" y="0.0" width="32" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                        <color key="textColor" name="CustomGreen"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-q6-kNi" userLabel="TotalQuestionsLabel">
-                                <rect key="frame" x="129" y="617" width="117.5" height="12"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в игре:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-s7-SjL">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" name="TextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1418 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQZ-bR-P5Q">
-                                        <rect key="frame" x="91" y="0.0" width="26.5" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
+                                        <rect key="frame" x="67.5" y="0.0" width="9" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                         <color key="textColor" name="CustomGreen"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -372,11 +355,9 @@
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
                             <constraint firstItem="H2o-wB-HEB" firstAttribute="centerX" secondItem="dYf-N4-XJ3" secondAttribute="centerX" id="Vmw-JK-d22"/>
-                            <constraint firstItem="Yvf-q6-kNi" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="cfo-Yn-01r"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="H2o-wB-HEB" secondAttribute="bottom" constant="2" id="eSK-No-4wa"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="prP-OW-Z0a"/>
-                            <constraint firstItem="dYf-N4-XJ3" firstAttribute="top" secondItem="Yvf-q6-kNi" secondAttribute="bottom" constant="4" id="uaj-XJ-LFb"/>
                             <constraint firstItem="H2o-wB-HEB" firstAttribute="centerY" secondItem="dYf-N4-XJ3" secondAttribute="centerY" id="yiU-Sf-6ar"/>
                         </constraints>
                     </view>
@@ -393,7 +374,6 @@
                         <outlet property="shareButton" destination="H2o-wB-HEB" id="tD7-3L-5RK"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
-                        <outlet property="totalQuestionsLabel" destination="DQZ-bR-P5Q" id="6Z6-p2-RmZ"/>
                         <outletCollection property="initialWhiteViews" destination="O4g-5e-qkn" collectionClass="NSMutableArray" id="y40-xE-ZLg"/>
                         <outletCollection property="initialWhiteViews" destination="Jty-Zp-18d" collectionClass="NSMutableArray" id="QIC-jc-Wcv"/>
                         <outletCollection property="initialButtons" destination="SXd-ZC-ZJT" collectionClass="NSMutableArray" id="Sqb-6h-YPd"/>

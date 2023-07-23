@@ -14,8 +14,12 @@ final class StatsViewController: UIViewController {
     
     private var statsItems: [[StatsCellType]] = [[]]
     private var correctAnswers = 0
-    private let records = RecordsCaretaker().getRecordsList()
-    private let allQuestions = RandomSetManager.showAllQuestionsNumber()
+    private let sectionHeaderHeight: CGFloat = 32
+    private let defaultHeaderHeight: CGFloat = 8
+    
+    private lazy var records = RecordsCaretaker().getRecordsList()
+    private lazy var allQuestionsCount = RandomSetManager.showAllQuestionsNumber()
+    private lazy var allQuestions = RandomSetManager.getAllQuestions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,32 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
                     describing: type
                 )
             )
+        }
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        titleForHeaderInSection section: Int
+    ) -> String? {
+        switch section {
+        case 0:
+            return Constants.scoreSectionHeader
+        case 3:
+            return Constants.gameSectionHeader
+        default:
+            return ""
+        }
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        heightForHeaderInSection section: Int
+    ) -> CGFloat {
+        switch section {
+        case 0, 3:
+            return sectionHeaderHeight
+        default:
+            return defaultHeaderHeight
         }
     }
     
@@ -190,51 +220,66 @@ extension StatsViewController {
             statsItems = [
                 [
                     .infoCell(
-                        "Вопросов в игре",
-                        allQuestions,
-                        "Я прошел",
+                        Constants.totalQuesionsTitle,
+                        allQuestionsCount,
+                        Constants.playedQuestionTitle,
                         uniquePlayedQuestions
                     ),
                     .infoCell(
-                        "Сыграл игр",
-                        getAllGames(),
-                        "Не завершил игр",
-                        getUnfinished()
-                    ),
-                    .infoCell(
-                        "Дал ответов",
+                        Constants.givenAnswersTitle,
                         allPlayedQuestions,
-                        "Из них правильных",
+                        Constants.correctGivenAnswersTitle,
                         correctAnswers
                     ),
                     .infoCell(
-                        "Неправильных",
+                        Constants.incorrectAnswersTitle,
                         allPlayedQuestions - correctAnswers,
-                        "Заработал очков",
+                        Constants.scorePointsTitle,
                         getScore()
                     )
                 ],
                 [
                     .progressBarCell(
-                        "Процент прохождения",
+                        Constants.progressPercentageTitle,
                         Double(findTotalAnsweredQuestions())
                     ),
                     .progressBarCell(
-                        "Процент правильных ответов",
+                        Constants.correctPercentageTitle,
                         correctAnswersFromPlayed()
                     ),
                     .progressBarCell(
-                        "Процент неправильных ответов",
+                        Constants.incorrectPercentageTitle,
                         findTotalIncorrectAnsweredQuestions()
                     ),
                     .progressBarCell(
-                        "Процент взятых подсказок",
+                        Constants.tipsPercentageTitle,
                         hintsNumber()
-                    )//,
-//                    .progressBarCell(
-//                        "Тем пройдено",
-//                        100
-//                    )
+                    )
+                ],
+                [.spacer],
+                [
+                    .infoCell(
+                        Constants.gamesPlayedTitle,
+                        getAllGames(),
+                        Constants.unfinishedGamesTitle,
+                        getUnfinished()
+                    ),
+                    .infoCell(
+                        Constants.allTopicsCountTitle,
+                        getAllTopics(),
+                        Constants.userPlayedTitle,
+                        topicsIHavePlayed()
+                    )
+                ],
+                [
+                    .progressBarCell(
+                        Constants.topicsPlayedTitle,
+                        getPlayedTopicsPercentage()
+                    ),
+                    .progressBarCell(
+                        Constants.unfinishedPercentageTitle,
+                        getUnfinishedGamesPercentage()
+                    )
                 ]
             ]
         } else {
@@ -333,7 +378,7 @@ extension StatsViewController {
             })
         }
         
-        let part = Double(uniqueIDsSet.count) / Double(allQuestions)
+        let part = Double(uniqueIDsSet.count) / Double(allQuestionsCount)
         let percentOfCorrectAnswers = part * 100
         
         return Int(percentOfCorrectAnswers)
@@ -347,6 +392,24 @@ extension StatsViewController {
         return percentOfIncorrect
     }
     
+    // MARK: - Third section
+    
+    private func getAllTopics() -> Int {
+        CategoriesName.allCases.count - 4
+    }
+    
+    private func topicsIHavePlayed() -> Int {
+        var uniqueTopics = Set<String>()
+        
+        records.forEach { record in
+            uniqueTopics.insert(record.topic ?? "Основы")
+        }
+        
+        return uniqueTopics.count
+    }
+    
+    // MARK: - Fourth section
+    
     private func hintsNumber() -> Double {
         var hints: Double = 0
         
@@ -358,5 +421,13 @@ extension StatsViewController {
         let percentOfHints = (hints / allPlayed) * 100
         
         return percentOfHints
+    }
+    
+    private func getPlayedTopicsPercentage() -> Double {
+        return Double(Double(topicsIHavePlayed()) / Double(getAllTopics())  * 100)
+    }
+    
+    private func getUnfinishedGamesPercentage() -> Double {
+        return Double(Double(getUnfinished()) / Double(records.count) * 100)
     }
 }

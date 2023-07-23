@@ -15,6 +15,7 @@ final class InformationTableViewCell: UITableViewCell {
     @IBOutlet private weak var rightValueLabel: UILabel!
     
     private let cornerRadius: CGFloat = 8
+    private var needAnimate = true
     
     struct CellModel {
         let leftTitle: String
@@ -28,6 +29,10 @@ final class InformationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
+    }
+    
+    override func prepareForReuse() {
+        needAnimate = false 
     }
     
     func fill(_ data: CellModel) {
@@ -59,20 +64,22 @@ final class InformationTableViewCell: UITableViewCell {
         label: UILabel
     ) {
         let duration: CGFloat = 1
-        
-        DispatchQueue.global().async {
-            if value != 0 {
-                for num in 0 ..< (value + 1) {
-                    let sleepTime = UInt32((duration - 0.4) / Double(value) * 1000000.0)
-                    usleep(sleepTime)
-                    
-                    DispatchQueue.main.async {
-                        label.text = "\(num)"
+
+        if needAnimate {
+            DispatchQueue.global().async {
+                if value != 0 {
+                    for num in 0 ..< (value + 1) {
+                        let sleepTime = UInt32((duration - 0.4) / Double(value) * 1000000.0)
+                        usleep(sleepTime)
+
+                        DispatchQueue.main.async {
+                            label.text = "\(num)"
+                        }
                     }
-                }
-            } else {
-                DispatchQueue.main.async {
-                    label.text = "0"
+                } else {
+                    DispatchQueue.main.async {
+                        label.text = "0"
+                    }
                 }
             }
         }
