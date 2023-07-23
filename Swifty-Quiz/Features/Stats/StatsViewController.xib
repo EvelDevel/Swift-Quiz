@@ -21,8 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-4x-nbh">
-                    <rect key="frame" x="0.0" y="113" width="393" height="739"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-4x-nbh">
+                    <rect key="frame" x="0.0" y="105" width="393" height="747"/>
+                    <color key="backgroundColor" name="MainBackground"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статистика" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5c-q3-8qI">
                     <rect key="frame" x="16" y="75" width="361" height="22"/>
@@ -48,7 +49,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e5c-q3-8qI" secondAttribute="trailing" constant="16" id="UA3-yr-1mr"/>
                 <constraint firstAttribute="bottom" secondItem="Ehe-4x-nbh" secondAttribute="bottom" id="aMB-q4-Ooz"/>
                 <constraint firstItem="5mQ-Yx-aSb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fbb-hP-jne"/>
-                <constraint firstItem="Ehe-4x-nbh" firstAttribute="top" secondItem="e5c-q3-8qI" secondAttribute="bottom" constant="16" id="phd-N1-wnX"/>
+                <constraint firstItem="Ehe-4x-nbh" firstAttribute="top" secondItem="e5c-q3-8qI" secondAttribute="bottom" constant="8" id="phd-N1-wnX"/>
                 <constraint firstItem="5mQ-Yx-aSb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="yE6-kE-9At"/>
                 <constraint firstItem="e5c-q3-8qI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="yYt-av-oC5"/>
             </constraints>

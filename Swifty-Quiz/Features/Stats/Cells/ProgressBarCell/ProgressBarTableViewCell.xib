@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название параметра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLb-c5-RSP">
-                        <rect key="frame" x="20" y="8" width="405" height="18"/>
+                        <rect key="frame" x="20" y="16" width="405" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16d-LP-K3C">
-                        <rect key="frame" x="20" y="38" width="349" height="10"/>
+                        <rect key="frame" x="20" y="46" width="349" height="10"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="pQA-cX-oX0">
                                 <rect key="frame" x="0.0" y="0.0" width="8" height="10"/>
@@ -33,24 +33,24 @@
                                 <color key="backgroundColor" name="CustomGreen"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="7zJ-sC-ncy"/>
                             <constraint firstItem="pQA-cX-oX0" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="HZG-Ze-FKV"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-TO-evq">
-                        <rect key="frame" x="389" y="35" width="52" height="16"/>
+                        <rect key="frame" x="389" y="43" width="52" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" name="MainBackground"/>
+                <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="cgV-TO-evq" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="1yG-XZ-lJ4"/>
                     <constraint firstItem="cgV-TO-evq" firstAttribute="leading" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="20" id="A4e-SC-Fy3"/>
-                    <constraint firstItem="NLb-c5-RSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="C5I-0y-aEH"/>
+                    <constraint firstItem="NLb-c5-RSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="C5I-0y-aEH"/>
                     <constraint firstAttribute="trailing" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="72" id="PZI-56-xoA"/>
                     <constraint firstItem="NLb-c5-RSP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VQM-sq-OvZ"/>
                     <constraint firstItem="16d-LP-K3C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WHY-yO-XpH"/>

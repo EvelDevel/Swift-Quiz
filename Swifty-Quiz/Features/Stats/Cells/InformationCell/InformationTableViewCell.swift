@@ -9,17 +9,20 @@
 import UIKit
 
 final class InformationTableViewCell: UITableViewCell {
-    @IBOutlet private weak var totalGamesLabel: UILabel!
-    @IBOutlet private weak var unfinishedGamesLabel: UILabel!
-    @IBOutlet private weak var ratingLabel: UILabel!
-    @IBOutlet private weak var whiteBackgroundView: UIView!
+    @IBOutlet private weak var leftTitleLabel: UILabel!
+    @IBOutlet private weak var leftValueLabel: UILabel!
+    @IBOutlet private weak var rightTitleLabel: UILabel!
+    @IBOutlet private weak var rightValueLabel: UILabel!
     
     private let cornerRadius: CGFloat = 8
     
     struct CellModel {
-        let total: Int
-        let notOver: Int
-        let rating: Int
+        let leftTitle: String
+        let leftValue: Int
+        let rightTitle: String
+        let rightValue: Int
+        let leftValueColor: UIColor? = nil
+        let rightValueColor: UIColor? = nil
     }
     
     override func awakeFromNib() {
@@ -28,28 +31,27 @@ final class InformationTableViewCell: UITableViewCell {
     }
     
     func fill(_ data: CellModel) {
+        leftTitleLabel.text = data.leftTitle
+        rightTitleLabel.text = data.rightTitle
+        
         setupAnimatedProgress(
-            data.total,
-            label: totalGamesLabel
+            data.leftValue,
+            label: leftValueLabel
         )
         setupAnimatedProgress(
-            data.notOver,
-            label: unfinishedGamesLabel
+            data.rightValue,
+            label: rightValueLabel
         )
-        setupAnimatedProgress(
-            data.rating,
-            label: ratingLabel
-        )
+        
+        if rightTitleLabel.text == "Заработал очков" {
+            rightValueLabel.textColor = UIColor(named: "CustomGreen")
+        }
     }
     
     // MARK: - Privates
     
     private func setup() {
-        setupUI()
-    }
-    
-    private func setupUI() {
-        whiteBackgroundView.layer.cornerRadius = cornerRadius
+        //
     }
     
     private func setupAnimatedProgress(
