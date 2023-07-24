@@ -60,6 +60,8 @@ class InitialViewController: UIViewController {
     }
     
     private func updateScoreLabel() {
+        // TODO: Put that "getScore" logic inside RecordCaretaker
+        
         let records = RecordsCaretaker().getRecordsList()
         var score = 0
         

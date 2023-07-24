@@ -15,4 +15,10 @@ struct Record: Codable {
     var continueGameStatus: Bool?           // Статус "продолжаем" игру или нет
     var gameHistory: [GameHistory]?         // История игры
     var helpFlag: Bool?                     // Флаг "Брали подсказку или нет"
+    
+    // Computed properties
+    
+    var gameIsFinished: Bool {
+        totalQuestion == playedNum
+    }
 }

@@ -12,14 +12,61 @@ final class StatsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var emptyStatsLabel: UILabel!
     
-    private var statsItems: [[StatsCellType]] = [[]]
-    private var correctAnswers = 0
-    private let sectionHeaderHeight: CGFloat = 32
-    private let defaultHeaderHeight: CGFloat = 8
-    
     private lazy var records = RecordsCaretaker().getRecordsList()
     private lazy var allQuestionsCount = RandomSetManager.showAllQuestionsNumber()
     private lazy var allQuestions = RandomSetManager.getAllQuestions()
+    
+    private var statsItems: [[StatsCellType]] = [[]]
+    private let sectionHeaderHeight: CGFloat = 32
+    private let defaultHeaderHeight: CGFloat = 8
+
+    // MARK: - Computed properties
+    
+    private var uniquePlayedQuestions: Int {
+        Set(records.compactMap {
+            $0.gameHistory?
+            .map { $0.questionId } }
+            .flatMap { $0 }
+        ).count
+    }
+    
+    private var uniquePlayedQuestionsPercentage: Double {
+        let percentage = Double(uniquePlayedQuestions) / Double(allQuestionsCount) * 100
+        return percentage
+    }
+    
+    private var allGivenAnswers: Int {
+        records.reduce(into: 0) { $0 += $1.playedNum ?? 1 }
+    }
+    
+    private var correctAnswers: Int {
+        records.compactMap { $0.gameHistory }
+            .flatMap { $0 }
+            .filter { $0.userAnswer == $0.correctAnswer }
+            .count
+    }
+
+    private var incorrectAnswers: Int {
+        allGivenAnswers - correctAnswers
+    }
+    
+    private var totalScore: Int {
+        return records.reduce(0) {
+            $0 + ($1.score ?? 0)
+        }
+    }
+    
+    private var playedFinishedTopics: Int {
+        return Set<String>(records.compactMap { record in
+            guard let topic = record.topic, !isExcludedTopic(topic) && record.gameIsFinished else {
+                return nil
+            }
+            
+            return topic
+        }).count
+    }
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -206,16 +253,9 @@ extension StatsViewController {
     }
     
     private func loadData() {
-        correctAnswers = findCorrectAnswersNumber()
-        
         if records.count > 0 {
             tableView.isHidden = false
             emptyStatsLabel.isHidden = true
-            
-            let uniquePlayedQuestions = uniquePlayedQuestions()
-            let allPlayedQuestions = allPlayedQuestions()
-            
-            let incorrectAnswers = uniquePlayedQuestions - correctAnswers
             
             statsItems = [
                 [
@@ -227,21 +267,21 @@ extension StatsViewController {
                     ),
                     .infoCell(
                         Constants.givenAnswersTitle,
-                        allPlayedQuestions,
+                        allGivenAnswers,
                         Constants.correctGivenAnswersTitle,
                         correctAnswers
                     ),
                     .infoCell(
                         Constants.incorrectAnswersTitle,
-                        allPlayedQuestions - correctAnswers,
+                        incorrectAnswers,
                         Constants.scorePointsTitle,
-                        getScore()
+                        totalScore
                     )
                 ],
                 [
                     .progressBarCell(
                         Constants.progressPercentageTitle,
-                        Double(findTotalAnsweredQuestions())
+                        uniquePlayedQuestionsPercentage
                     ),
                     .progressBarCell(
                         Constants.correctPercentageTitle,
@@ -268,7 +308,7 @@ extension StatsViewController {
                         Constants.allTopicsCountTitle,
                         getAllTopics(),
                         Constants.userPlayedTitle,
-                        topicsIHavePlayed()
+                        playedFinishedTopics
                     )
                 ],
                 [
@@ -301,7 +341,7 @@ extension StatsViewController {
         var unfinished = 0
         
         records.forEach { record in
-            if record.playedNum != record.totalQuestion {
+            if !record.gameIsFinished {
                 unfinished += 1
             }
         }
@@ -309,83 +349,17 @@ extension StatsViewController {
         return unfinished
     }
     
-    /// Сколько не уникальных вопросов ответил пользователь
-    /// Общее количество ответов
-    private func allPlayedQuestions() -> Int {
-        var questions = 0
-        
-        records.forEach { record in
-            questions += record.playedNum ?? 1
-        }
-        
-        return questions
-    }
-    
-    /// Общий счет
-    private func getScore() -> Int {
-        var score = 0
-        
-        records.forEach { record in
-            score += record.score ?? 0
-        }
-        
-        return score
-    }
-    
     // MARK: - Second Section private methods
     
-    /// Сколько уникальных вопросов пройдено (из всех)
-    private func uniquePlayedQuestions() -> Int {
-        let records = RecordsCaretaker().getRecordsList()
-        var uniqueIDsSet = Set<Int>()
-        
-        records.forEach { record in
-            record.gameHistory?.forEach({ history in
-                uniqueIDsSet.insert(history.questionId)
-            })
-        }
-        
-        return uniqueIDsSet.count
-    }
-    
     private func correctAnswersFromPlayed() -> Double {
-        let part = Double(findCorrectAnswersNumber()) / Double(allPlayedQuestions())
+        let part = Double(correctAnswers) / Double(allGivenAnswers)
         let percentOfCorrectAnswers = part * 100
         
         return Double(percentOfCorrectAnswers)
     }
     
-    private func findCorrectAnswersNumber() -> Int {
-        var uniqueIDsSet = Set<Int>()
-        
-        records.forEach { record in
-            record.gameHistory?.forEach({ history in
-                if history.userAnswer == history.correctAnswer {
-                    uniqueIDsSet.insert(history.questionId)
-                }
-            })
-        }
-        
-        return uniqueIDsSet.count
-    }
-    
-    private func findTotalAnsweredQuestions() -> Int {
-        var uniqueIDsSet = Set<Int>()
-        
-        records.forEach { record in
-            record.gameHistory?.forEach({ history in
-                uniqueIDsSet.insert(history.questionId)
-            })
-        }
-        
-        let part = Double(uniqueIDsSet.count) / Double(allQuestionsCount)
-        let percentOfCorrectAnswers = part * 100
-        
-        return Int(percentOfCorrectAnswers)
-    }
-    
     private func findTotalIncorrectAnsweredQuestions() -> Double {
-        let allPlayed = Double(allPlayedQuestions())
+        let allPlayed = Double(allGivenAnswers)
         let incorrect = Double(allPlayed - Double(correctAnswers))
         let percentOfIncorrect = (incorrect / allPlayed) * 100
         
@@ -397,16 +371,7 @@ extension StatsViewController {
     private func getAllTopics() -> Int {
         CategoriesName.allCases.count - 4
     }
-    
-    private func topicsIHavePlayed() -> Int {
-        var uniqueTopics = Set<String>()
-        
-        records.forEach { record in
-            uniqueTopics.insert(record.topic ?? "Основы")
-        }
-        
-        return uniqueTopics.count
-    }
+
     
     // MARK: - Fourth section
     
@@ -417,17 +382,28 @@ extension StatsViewController {
             hints += Double(record.helpCounter ?? 1)
         }
         
-        let allPlayed = Double(allPlayedQuestions())
+        let allPlayed = Double(allGivenAnswers)
         let percentOfHints = (hints / allPlayed) * 100
         
         return percentOfHints
     }
     
     private func getPlayedTopicsPercentage() -> Double {
-        return Double(Double(topicsIHavePlayed()) / Double(getAllTopics())  * 100)
+        return Double(Double(playedFinishedTopics) / Double(getAllTopics())  * 100)
     }
     
     private func getUnfinishedGamesPercentage() -> Double {
         return Double(Double(getUnfinished()) / Double(records.count) * 100)
+    }
+    
+    private func isExcludedTopic(_ topic: String) -> Bool {
+        let excluded: Set<String> = [
+            CategoriesName.random20.rawValue,
+            CategoriesName.random50.rawValue,
+            CategoriesName.random100.rawValue,
+            CategoriesName.deathMatch.rawValue
+        ]
+
+        return excluded.contains(topic)
     }
 }

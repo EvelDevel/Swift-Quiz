@@ -40,10 +40,10 @@ class Constants {
     static var correctPercentageTitle = "Процент правильных ответов"
     static var incorrectPercentageTitle = "Процент неправильных ответов"
     static var tipsPercentageTitle = "Процент взятых подсказок"
-    static var gamesPlayedTitle = "Сыграл игр"
+    static var gamesPlayedTitle = "Завершил игр"
     static var unfinishedGamesTitle = "Не завершил игр"
     static var allTopicsCountTitle = "Всего категорий"
-    static var userPlayedTitle = "Я сыграл"
-    static var topicsPlayedTitle = "Сыграно категорий"
+    static var userPlayedTitle = "Я прошел"
+    static var topicsPlayedTitle = "Пройдено категорий"
     static var unfinishedPercentageTitle = "Процент незавершенных игр"
 }
