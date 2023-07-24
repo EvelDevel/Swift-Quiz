@@ -57,7 +57,6 @@ class InitialViewController: UIViewController {
         imageTuning(button: topicPicker, position: .center)
         imageTuning(button: logoButton, position: .top)
         SoundPlayer.shared.playSound(sound: .theAppIsLoading)
-        // RandomSetManager.showAllQuestionsNumber()
     }
     
     private func updateScoreLabel() {

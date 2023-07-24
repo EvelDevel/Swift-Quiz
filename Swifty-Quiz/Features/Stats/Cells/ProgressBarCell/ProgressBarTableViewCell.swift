@@ -53,7 +53,7 @@ final class ProgressBarTableViewCell: UITableViewCell {
         _ value: Double
     ) {
         if needAnimate {
-            let progressWidth = value >= 5 ? value : 5
+            let progressWidth = value >= 2 ? value : 2
             let fullWidth = frame.width - progressBarPadding
             let actualProgressValue = CGFloat(Double(progressWidth) / 100)
             let newWidth = fullWidth * actualProgressValue

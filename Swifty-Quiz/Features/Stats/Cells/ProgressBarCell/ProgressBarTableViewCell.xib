@@ -28,7 +28,7 @@
                         <rect key="frame" x="20" y="46" width="349" height="10"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="pQA-cX-oX0">
-                                <rect key="frame" x="0.0" y="0.0" width="8" height="10"/>
+                                <rect key="frame" x="0.0" y="0.0" width="2" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="CustomGreen"/>
                             </view>
