@@ -22,6 +22,18 @@ final class StatsViewController: UIViewController {
 
     // MARK: - Computed properties
     
+    private var allGamesCount: Int {
+        records.count
+    }
+    
+    private var allTopicsCount: Int {
+        CategoriesName.allCases.count - 4
+    }
+    
+    private var unfinishedGamesCount: Int {
+        records.reduce(0) { $0 + ($1.gameIsFinished ? 0 : 1) }
+    }
+    
     private var uniquePlayedQuestions: Int {
         Set(records.compactMap {
             $0.gameHistory?
@@ -45,9 +57,17 @@ final class StatsViewController: UIViewController {
             .filter { $0.userAnswer == $0.correctAnswer }
             .count
     }
+    
+    private var percentOfCorrectAnswers: Double {
+        Double(correctAnswers) / Double(allGivenAnswers) * 100
+    }
 
-    private var incorrectAnswers: Int {
+    private var incorrectAnswersCount: Int {
         allGivenAnswers - correctAnswers
+    }
+    
+    private var percentOfIncorrectAnswers: Double {
+        Double(incorrectAnswersCount) / Double(allGivenAnswers) * 100
     }
     
     private var totalScore: Int {
@@ -56,7 +76,7 @@ final class StatsViewController: UIViewController {
         }
     }
     
-    private var playedFinishedTopics: Int {
+    private var finishedTopicsCount: Int {
         return Set<String>(records.compactMap { record in
             guard let topic = record.topic, !isExcludedTopic(topic) && record.gameIsFinished else {
                 return nil
@@ -65,6 +85,23 @@ final class StatsViewController: UIViewController {
             return topic
         }).count
     }
+    
+    private var percentOfFinishedTopics: Double {
+        Double(finishedTopicsCount) / Double(allTopicsCount)  * 100
+    }
+    
+    private var percentOfUnfinishedGames: Double {
+        Double(unfinishedGamesCount) / Double(records.count) * 100
+    }
+    
+    private var hintsTakenCount: Int {
+        records.reduce(0) { $0 + ($1.helpCounter ?? 1) }
+    }
+    
+    private var percentOfTakenHints: Double {
+        Double(hintsTakenCount) / Double(allGivenAnswers) * 100
+    }
+
     
     // MARK: - Lifecycle
     
@@ -81,6 +118,7 @@ final class StatsViewController: UIViewController {
 
 
 // MARK: - Table View Handling
+
 extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     private func setupTableView() {
         tableView.dataSource = self
@@ -244,6 +282,7 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 // MARK: - Data Handling
+
 extension StatsViewController {
     
     private enum StatsCellType {
@@ -273,10 +312,14 @@ extension StatsViewController {
                     ),
                     .infoCell(
                         Constants.incorrectAnswersTitle,
-                        incorrectAnswers,
+                        incorrectAnswersCount,
                         Constants.scorePointsTitle,
                         totalScore
                     )
+                    
+                    // TODO: Добавить количество взятых подсказок
+                    // Отделить очки от количества правильных ответов, одинаковые цифры выглядят плохо
+                    
                 ],
                 [
                     .progressBarCell(
@@ -285,40 +328,40 @@ extension StatsViewController {
                     ),
                     .progressBarCell(
                         Constants.correctPercentageTitle,
-                        correctAnswersFromPlayed()
+                        percentOfCorrectAnswers
                     ),
                     .progressBarCell(
                         Constants.incorrectPercentageTitle,
-                        findTotalIncorrectAnsweredQuestions()
+                        percentOfIncorrectAnswers
                     ),
                     .progressBarCell(
                         Constants.tipsPercentageTitle,
-                        hintsNumber()
+                        percentOfTakenHints
                     )
                 ],
                 [.spacer],
                 [
                     .infoCell(
                         Constants.gamesPlayedTitle,
-                        getAllGames(),
+                        allGamesCount,
                         Constants.unfinishedGamesTitle,
-                        getUnfinished()
+                        unfinishedGamesCount
                     ),
                     .infoCell(
                         Constants.allTopicsCountTitle,
-                        getAllTopics(),
+                        allTopicsCount,
                         Constants.userPlayedTitle,
-                        playedFinishedTopics
+                        finishedTopicsCount
                     )
                 ],
                 [
                     .progressBarCell(
                         Constants.topicsPlayedTitle,
-                        getPlayedTopicsPercentage()
+                        percentOfFinishedTopics
                     ),
                     .progressBarCell(
                         Constants.unfinishedPercentageTitle,
-                        getUnfinishedGamesPercentage()
+                        percentOfUnfinishedGames
                     )
                 ]
             ]
@@ -326,74 +369,6 @@ extension StatsViewController {
             tableView.isHidden = true
             emptyStatsLabel.isHidden = false
         }
-    }
-    
-    // MARK: - First Section private methods
-    
-    /// Сколько всего игр сыграл пользователь
-    /// Не важно, завершил или нет
-    private func getAllGames() -> Int {
-        records.count
-    }
-    
-    /// Количество незавершенных игр
-    private func getUnfinished() -> Int {
-        var unfinished = 0
-        
-        records.forEach { record in
-            if !record.gameIsFinished {
-                unfinished += 1
-            }
-        }
-        
-        return unfinished
-    }
-    
-    // MARK: - Second Section private methods
-    
-    private func correctAnswersFromPlayed() -> Double {
-        let part = Double(correctAnswers) / Double(allGivenAnswers)
-        let percentOfCorrectAnswers = part * 100
-        
-        return Double(percentOfCorrectAnswers)
-    }
-    
-    private func findTotalIncorrectAnsweredQuestions() -> Double {
-        let allPlayed = Double(allGivenAnswers)
-        let incorrect = Double(allPlayed - Double(correctAnswers))
-        let percentOfIncorrect = (incorrect / allPlayed) * 100
-        
-        return percentOfIncorrect
-    }
-    
-    // MARK: - Third section
-    
-    private func getAllTopics() -> Int {
-        CategoriesName.allCases.count - 4
-    }
-
-    
-    // MARK: - Fourth section
-    
-    private func hintsNumber() -> Double {
-        var hints: Double = 0
-        
-        records.forEach { record in
-            hints += Double(record.helpCounter ?? 1)
-        }
-        
-        let allPlayed = Double(allGivenAnswers)
-        let percentOfHints = (hints / allPlayed) * 100
-        
-        return percentOfHints
-    }
-    
-    private func getPlayedTopicsPercentage() -> Double {
-        return Double(Double(playedFinishedTopics) / Double(getAllTopics())  * 100)
-    }
-    
-    private func getUnfinishedGamesPercentage() -> Double {
-        return Double(Double(getUnfinished()) / Double(records.count) * 100)
     }
     
     private func isExcludedTopic(_ topic: String) -> Bool {
