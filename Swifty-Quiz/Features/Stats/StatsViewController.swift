@@ -8,6 +8,12 @@
 
 import UIKit
 
+private enum StatsCellType {
+    case spacer
+    case infoCell(String, Int, String, Int)
+    case progressBarCell(String, Double)
+}
+
 final class StatsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var emptyStatsLabel: UILabel!
@@ -19,7 +25,7 @@ final class StatsViewController: UIViewController {
     private var statsItems: [[StatsCellType]] = [[]]
     private let sectionHeaderHeight: CGFloat = 32
     private let defaultHeaderHeight: CGFloat = 8
-
+    
     // MARK: - Computed properties
     
     private var allGamesCount: Int {
@@ -113,6 +119,98 @@ final class StatsViewController: UIViewController {
     private func setup() {
         loadData()
         setupTableView()
+    }
+    
+    // MARK: - Data Handling
+    
+    private func loadData() {
+        if records.count > 0 {
+            tableView.isHidden = false
+            emptyStatsLabel.isHidden = true
+            
+            statsItems = [
+                [
+                    .infoCell(
+                        Constants.totalQuesionsTitle,
+                        allQuestionsCount,
+                        Constants.playedQuestionTitle,
+                        uniquePlayedQuestions
+                    ),
+                    .infoCell(
+                        Constants.correctGivenAnswersTitle,
+                        correctAnswers,
+                        Constants.incorrectAnswersTitle,
+                        incorrectAnswersCount
+                    ),
+                    .infoCell(
+                        Constants.givenAnswersTitle,
+                        allGivenAnswers,
+                        Constants.scorePointsTitle,
+                        totalScore
+                    )
+                    
+                    // TODO: Добавить количество взятых подсказок
+                    
+                ],
+                [
+                    .progressBarCell(
+                        Constants.progressPercentageTitle,
+                        uniquePlayedQuestionsPercentage
+                    ),
+                    .progressBarCell(
+                        Constants.correctPercentageTitle,
+                        percentOfCorrectAnswers
+                    ),
+                    .progressBarCell(
+                        Constants.incorrectPercentageTitle,
+                        percentOfIncorrectAnswers
+                    ),
+                    .progressBarCell(
+                        Constants.tipsPercentageTitle,
+                        percentOfTakenHints
+                    )
+                ],
+                [.spacer],
+                [
+                    .infoCell(
+                        Constants.gamesPlayedTitle,
+                        allGamesCount,
+                        Constants.unfinishedGamesTitle,
+                        unfinishedGamesCount
+                    ),
+                    .infoCell(
+                        Constants.allTopicsCountTitle,
+                        allTopicsCount,
+                        Constants.userPlayedTitle,
+                        finishedTopicsCount
+                    )
+                ],
+                [
+                    .progressBarCell(
+                        Constants.topicsPlayedTitle,
+                        percentOfFinishedTopics
+                    ),
+                    .progressBarCell(
+                        Constants.unfinishedPercentageTitle,
+                        percentOfUnfinishedGames
+                    )
+                ]
+            ]
+        } else {
+            tableView.isHidden = true
+            emptyStatsLabel.isHidden = false
+        }
+    }
+    
+    private func isExcludedTopic(_ topic: String) -> Bool {
+        let excluded: Set<String> = [
+            CategoriesName.random20.rawValue,
+            CategoriesName.random50.rawValue,
+            CategoriesName.random100.rawValue,
+            CategoriesName.deathMatch.rawValue
+        ]
+        
+        return excluded.contains(topic)
     }
 }
 
@@ -277,108 +375,5 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
                 rightValue: rightValue
             )
         )
-    }
-}
-
-
-// MARK: - Data Handling
-
-extension StatsViewController {
-    
-    private enum StatsCellType {
-        case spacer
-        case infoCell(String, Int, String, Int)
-        case progressBarCell(String, Double)
-    }
-    
-    private func loadData() {
-        if records.count > 0 {
-            tableView.isHidden = false
-            emptyStatsLabel.isHidden = true
-            
-            statsItems = [
-                [
-                    .infoCell(
-                        Constants.totalQuesionsTitle,
-                        allQuestionsCount,
-                        Constants.playedQuestionTitle,
-                        uniquePlayedQuestions
-                    ),
-                    .infoCell(
-                        Constants.givenAnswersTitle,
-                        allGivenAnswers,
-                        Constants.correctGivenAnswersTitle,
-                        correctAnswers
-                    ),
-                    .infoCell(
-                        Constants.incorrectAnswersTitle,
-                        incorrectAnswersCount,
-                        Constants.scorePointsTitle,
-                        totalScore
-                    )
-                    
-                    // TODO: Добавить количество взятых подсказок
-                    // Отделить очки от количества правильных ответов, одинаковые цифры выглядят плохо
-                    
-                ],
-                [
-                    .progressBarCell(
-                        Constants.progressPercentageTitle,
-                        uniquePlayedQuestionsPercentage
-                    ),
-                    .progressBarCell(
-                        Constants.correctPercentageTitle,
-                        percentOfCorrectAnswers
-                    ),
-                    .progressBarCell(
-                        Constants.incorrectPercentageTitle,
-                        percentOfIncorrectAnswers
-                    ),
-                    .progressBarCell(
-                        Constants.tipsPercentageTitle,
-                        percentOfTakenHints
-                    )
-                ],
-                [.spacer],
-                [
-                    .infoCell(
-                        Constants.gamesPlayedTitle,
-                        allGamesCount,
-                        Constants.unfinishedGamesTitle,
-                        unfinishedGamesCount
-                    ),
-                    .infoCell(
-                        Constants.allTopicsCountTitle,
-                        allTopicsCount,
-                        Constants.userPlayedTitle,
-                        finishedTopicsCount
-                    )
-                ],
-                [
-                    .progressBarCell(
-                        Constants.topicsPlayedTitle,
-                        percentOfFinishedTopics
-                    ),
-                    .progressBarCell(
-                        Constants.unfinishedPercentageTitle,
-                        percentOfUnfinishedGames
-                    )
-                ]
-            ]
-        } else {
-            tableView.isHidden = true
-            emptyStatsLabel.isHidden = false
-        }
-    }
-    
-    private func isExcludedTopic(_ topic: String) -> Bool {
-        let excluded: Set<String> = [
-            CategoriesName.random20.rawValue,
-            CategoriesName.random50.rawValue,
-            CategoriesName.random100.rawValue,
-            CategoriesName.deathMatch.rawValue
-        ]
-
-        return excluded.contains(topic)
     }
 }
