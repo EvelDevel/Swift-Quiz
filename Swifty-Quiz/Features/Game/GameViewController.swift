@@ -15,7 +15,7 @@ enum GameStatus: Int {
     case notFinished
 }
 
-class GameViewController: UIViewController {
+final class GameViewController: UIViewController {
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
     @IBOutlet private weak var helpButton: UIButton!
@@ -122,20 +122,24 @@ extension GameViewController {
 }
 
 
-// MARK: Установка и обновление основных игровых параметров
+// MARK: - Установка и обновление основных игровых параметров
+
 extension GameViewController {
     
     private func setupContinueValues() {
         if Game.shared.records.count != 0 {
             if weContinueLastGame {
-                self.questions = SelectedTopic.shared.selectedCategory.continueQuestionSet
-                self.currentQuestionNumber = Game.shared.records[0].playedNum! + 1
-                self.doesUserTookHint = Game.shared.records[0].helpFlag!
-                self.gameHistory = Game.shared.records[0].gameHistory!
-                self.currentIndex = Game.shared.records[0].playedNum!
-                self.score = Game.shared.records[0].score!
-                self.helpCounter = Game.shared.records[0].helpCounter!
-                if helpCounter != 0 { self.helpCounterLabel.text = "\(helpCounter)" }
+                questions = SelectedTopic.shared.selectedCategory.continueQuestionSet
+                currentQuestionNumber = Game.shared.records[0].playedNum! + 1
+                doesUserTookHint = Game.shared.records[0].helpFlag!
+                gameHistory = Game.shared.records[0].gameHistory!
+                currentIndex = Game.shared.records[0].playedNum!
+                score = Game.shared.records[0].score!
+                helpCounter = Game.shared.records[0].helpCounter!
+                
+                if helpCounter != 0 {
+                    self.helpCounterLabel.text = "\(helpCounter)"
+                }
             }
         }
     }
@@ -220,7 +224,8 @@ extension GameViewController {
 }
 
 
-// MARK: Нажатие на ответ
+// MARK: - Нажатие на ответ
+
 extension GameViewController {
     @IBAction private func answerPressed(_ sender: UIButton) {
         if answerPressed == false {

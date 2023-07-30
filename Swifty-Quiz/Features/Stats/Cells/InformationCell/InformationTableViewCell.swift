@@ -18,10 +18,10 @@ final class InformationTableViewCell: UITableViewCell {
     private var needAnimate = true
     
     struct CellModel {
-        let leftTitle: String
-        let leftValue: Int
-        let rightTitle: String
-        let rightValue: Int
+        let leftTitle: String?
+        let leftValue: Int?
+        let rightTitle: String?
+        let rightValue: Int?
         let leftValueColor: UIColor? = nil
         let rightValueColor: UIColor? = nil
     }
@@ -39,14 +39,23 @@ final class InformationTableViewCell: UITableViewCell {
         leftTitleLabel.text = data.leftTitle
         rightTitleLabel.text = data.rightTitle
         
-        setupAnimatedProgress(
-            data.leftValue,
-            label: leftValueLabel
-        )
-        setupAnimatedProgress(
-            data.rightValue,
-            label: rightValueLabel
-        )
+        if let data = data.leftValue {
+            setupAnimatedProgress(
+                data,
+                label: leftValueLabel
+            )
+        } else {
+            leftValueLabel.isHidden = true
+        }
+        
+        if let data = data.rightValue {
+            setupAnimatedProgress(
+                data,
+                label: rightValueLabel
+            )
+        } else {
+            rightValueLabel.isHidden = true
+        }
         
         if rightTitleLabel.text == "Заработал очков" {
             rightValueLabel.textColor = UIColor(named: "CustomGreen")
@@ -67,7 +76,7 @@ final class InformationTableViewCell: UITableViewCell {
 
         if needAnimate {
             DispatchQueue.global().async {
-                if value != 0 {
+                if value > 5 {
                     for num in 0 ..< (value + 1) {
                         let sleepTime = UInt32((duration - 0.4) / Double(value) * 1000000.0)
                         usleep(sleepTime)
@@ -78,7 +87,7 @@ final class InformationTableViewCell: UITableViewCell {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        label.text = "0"
+                        label.text = "\(value)"
                     }
                 }
             }

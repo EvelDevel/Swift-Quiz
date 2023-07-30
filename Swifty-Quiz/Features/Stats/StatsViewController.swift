@@ -10,7 +10,7 @@ import UIKit
 
 private enum StatsCellType {
     case spacer
-    case infoCell(String, Int, String, Int)
+    case infoCell(String?, Int?, String?, Int?)
     case progressBarCell(String, Double)
 }
 
@@ -30,6 +30,16 @@ final class StatsViewController: UIViewController {
     
     private var allGamesCount: Int {
         records.count
+    }
+    
+    private var wordingsCount: Int {
+        let questions = RandomSetManager.getAllQuestions()
+            
+        let allQuestions = questions.reduce([]) { result, question in
+            return result + question.question
+        }
+        
+        return allQuestions.count
     }
     
     private var allTopicsCount: Int {
@@ -137,25 +147,23 @@ final class StatsViewController: UIViewController {
                         uniquePlayedQuestions
                     ),
                     .infoCell(
-                        Constants.correctGivenAnswersTitle,
-                        correctAnswers,
-                        Constants.incorrectAnswersTitle,
-                        incorrectAnswersCount
-                    ),
-                    .infoCell(
                         Constants.givenAnswersTitle,
                         allGivenAnswers,
                         Constants.scorePointsTitle,
                         totalScore
-                    )
-                    
-                    // TODO: Добавить количество взятых подсказок
-                    
-                ],
-                [
+                    ),
                     .progressBarCell(
                         Constants.progressPercentageTitle,
                         uniquePlayedQuestionsPercentage
+                    )
+                ],
+                [.spacer],
+                [
+                    .infoCell(
+                        Constants.correctGivenAnswersTitle,
+                        correctAnswers,
+                        Constants.incorrectAnswersTitle,
+                        incorrectAnswersCount
                     ),
                     .progressBarCell(
                         Constants.correctPercentageTitle,
@@ -183,9 +191,7 @@ final class StatsViewController: UIViewController {
                         allTopicsCount,
                         Constants.userPlayedTitle,
                         finishedTopicsCount
-                    )
-                ],
-                [
+                    ),
                     .progressBarCell(
                         Constants.topicsPlayedTitle,
                         percentOfFinishedTopics
@@ -246,7 +252,9 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case 0:
             return Constants.scoreSectionHeader
-        case 3:
+        case 2:
+            return Constants.correctnessSectionHeader
+        case 4:
             return Constants.gameSectionHeader
         default:
             return ""
@@ -258,7 +266,7 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         heightForHeaderInSection section: Int
     ) -> CGFloat {
         switch section {
-        case 0, 3:
+        case 0, 2, 4:
             return sectionHeaderHeight
         default:
             return defaultHeaderHeight
@@ -288,7 +296,7 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         case .spacer:
             return 16
         case .infoCell:
-            return 72
+            return 78
         case .progressBarCell:
             return 80
         }
@@ -358,10 +366,10 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     
     private func createInformationCell(
         cell: UITableViewCell,
-        leftTitle: String,
-        leftValue: Int,
-        rightTitle: String,
-        rightValue: Int
+        leftTitle: String?,
+        leftValue: Int?,
+        rightTitle: String?,
+        rightValue: Int?
     ) {
         guard let cell = cell as? InformationTableViewCell else {
             return

@@ -24,43 +24,59 @@
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16d-LP-K3C">
-                        <rect key="frame" x="20" y="46" width="349" height="10"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="pQA-cX-oX0">
-                                <rect key="frame" x="0.0" y="0.0" width="2" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="CustomGreen"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" name="MainBackground"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="10" id="7zJ-sC-ncy"/>
-                            <constraint firstItem="pQA-cX-oX0" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="HZG-Ze-FKV"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-TO-evq">
-                        <rect key="frame" x="389" y="43" width="52" height="16"/>
+                        <rect key="frame" x="381" y="44" width="60" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Np9-6T-Zn3"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                         <color key="textColor" name="TextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LK-ri-eyT" userLabel="Clear Rounded View">
+                        <rect key="frame" x="20" y="46" width="341" height="12"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16d-LP-K3C" userLabel="Gray Progress View">
+                                <rect key="frame" x="0.0" y="0.0" width="349" height="12"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="pQA-cX-oX0">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="CustomGreen"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="MainBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="7zJ-sC-ncy"/>
+                                    <constraint firstItem="pQA-cX-oX0" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="HZG-Ze-FKV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="-8" id="1Cf-EB-pp8"/>
+                            <constraint firstItem="16d-LP-K3C" firstAttribute="leading" secondItem="6LK-ri-eyT" secondAttribute="leading" id="ApO-RS-vWX"/>
+                            <constraint firstAttribute="height" constant="12" id="ZCX-R1-opS"/>
+                            <constraint firstItem="16d-LP-K3C" firstAttribute="centerY" secondItem="6LK-ri-eyT" secondAttribute="centerY" id="fe1-Ov-Aex"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="cgV-TO-evq" firstAttribute="centerY" secondItem="16d-LP-K3C" secondAttribute="centerY" id="1yG-XZ-lJ4"/>
-                    <constraint firstItem="cgV-TO-evq" firstAttribute="leading" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="20" id="A4e-SC-Fy3"/>
+                    <constraint firstItem="cgV-TO-evq" firstAttribute="leading" secondItem="6LK-ri-eyT" secondAttribute="trailing" constant="20" id="BD6-fJ-zYJ"/>
                     <constraint firstItem="NLb-c5-RSP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="C5I-0y-aEH"/>
-                    <constraint firstAttribute="trailing" secondItem="16d-LP-K3C" secondAttribute="trailing" constant="72" id="PZI-56-xoA"/>
                     <constraint firstItem="NLb-c5-RSP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VQM-sq-OvZ"/>
-                    <constraint firstItem="16d-LP-K3C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WHY-yO-XpH"/>
-                    <constraint firstItem="16d-LP-K3C" firstAttribute="top" secondItem="NLb-c5-RSP" secondAttribute="bottom" constant="12" id="kGU-DD-qeN"/>
+                    <constraint firstAttribute="trailing" secondItem="cgV-TO-evq" secondAttribute="trailing" id="aJy-JG-LSu"/>
+                    <constraint firstItem="6LK-ri-eyT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="axB-ha-Sm7"/>
+                    <constraint firstItem="6LK-ri-eyT" firstAttribute="top" secondItem="NLb-c5-RSP" secondAttribute="bottom" constant="12" id="k3H-KY-q0L"/>
                     <constraint firstAttribute="trailing" secondItem="cgV-TO-evq" secondAttribute="trailing" id="oSY-BB-gN6"/>
+                    <constraint firstItem="cgV-TO-evq" firstAttribute="centerY" secondItem="6LK-ri-eyT" secondAttribute="centerY" id="oq3-7n-0jw"/>
                     <constraint firstAttribute="trailing" secondItem="NLb-c5-RSP" secondAttribute="trailing" constant="16" id="red-51-riV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="clearRoundedView" destination="6LK-ri-eyT" id="ciq-1o-x0O"/>
                 <outlet property="greenProgressView" destination="pQA-cX-oX0" id="2EN-bN-Qpd"/>
                 <outlet property="percentageLabel" destination="cgV-TO-evq" id="eXd-hu-hLo"/>
                 <outlet property="titleLabel" destination="NLb-c5-RSP" id="G8f-0P-Hdl"/>

@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OAD-eg-M89">
-                        <rect key="frame" x="8" y="8.6666666666666643" width="475" height="47.999999999999993"/>
+                        <rect key="frame" x="8" y="8.6666666666666643" width="475" height="48"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="udg-Ri-k4f">
                                 <rect key="frame" x="0.0" y="0.0" width="237.66666666666666" height="48"/>
@@ -72,7 +72,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="leftTitleLabel" destination="J4Y-2K-B0T" id="D5i-yq-1bu"/>
                 <outlet property="leftValueLabel" destination="U1y-37-7u3" id="9bK-Xf-rXJ"/>

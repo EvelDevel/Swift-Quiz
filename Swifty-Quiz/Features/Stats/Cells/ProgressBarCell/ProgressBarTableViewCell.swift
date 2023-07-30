@@ -19,6 +19,7 @@ final class ProgressBarTableViewCell: UITableViewCell {
     @IBOutlet private weak var percentageLabel: UILabel!
     @IBOutlet private weak var whiteProgressView: UIView!
     @IBOutlet private weak var greenProgressView: UIView!
+    @IBOutlet private weak var clearRoundedView: UIView!
     
     private let progressBarPadding: CGFloat = 92
     private let cornerRadius: CGFloat = 4
@@ -45,47 +46,53 @@ final class ProgressBarTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        whiteProgressView.layer.cornerRadius = cornerRadius
-        greenProgressView.layer.cornerRadius = cornerRadius
+        clearRoundedView.layer.cornerRadius = cornerRadius
     }
     
     private func setupAnimatedProgress(
         _ value: Double
     ) {
-        if needAnimate {
-            let progressWidth = value >= 2 ? value : 2
-            let fullWidth = frame.width - progressBarPadding
-            let actualProgressValue = CGFloat(Double(progressWidth) / 100)
-            let newWidth = fullWidth * actualProgressValue
-            let duration = CGFloat(actualProgressValue) + 0.4
+        if value <= 0.5 {
+            greenProgressView.frame.size.width = 0
+            percentageLabel.text = "0%"
             
-            DispatchQueue.main.async {
-                UIView.animate(
-                    withDuration: duration,
-                    delay: 0.0,
-                    options: .curveEaseInOut,
-                    animations: {
-                        self.greenProgressView.frame.size.width = newWidth
-                    },
-                    completion: nil
-                )
-            }
-            
-            DispatchQueue.global().async {
-                if value > 0 {
-                    let roundedValue = Int(value.rounded())
-                    
-                    for num in 0 ..< (roundedValue + 1) {
-                        let sleepTime = UInt32((duration - 0.4) / Double(roundedValue) * 1000000.0)
-                        usleep(sleepTime)
+            return
+        } else {
+            if needAnimate {
+                let progressWidth = value >= 1 ? value : 1
+                let fullWidth = frame.width - progressBarPadding
+                let actualProgressValue = CGFloat(Double(progressWidth) / 100)
+                let newWidth = fullWidth * actualProgressValue
+                let duration = CGFloat(actualProgressValue) + 0.4
+                
+                DispatchQueue.main.async {
+                    UIView.animate(
+                        withDuration: duration,
+                        delay: 0.0,
+                        options: .curveEaseInOut,
+                        animations: {
+                            self.greenProgressView.frame.size.width = newWidth
+                        },
+                        completion: nil
+                    )
+                }
+                
+                DispatchQueue.global().async {
+                    if value > 0 {
+                        let roundedValue = Int(value.rounded())
                         
-                        DispatchQueue.main.async {
-                            self.percentageLabel.text = "\(num)%"
+                        for num in 0 ..< (roundedValue + 1) {
+                            let sleepTime = UInt32((duration - 0.4) / Double(roundedValue) * 1000000.0)
+                            usleep(sleepTime)
+                            
+                            DispatchQueue.main.async {
+                                self.percentageLabel.text = "\(num)%"
+                            }
                         }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.percentageLabel.text = "0%"
+                    } else {
+                        DispatchQueue.main.async {
+                            self.percentageLabel.text = "0%"
+                        }
                     }
                 }
             }
