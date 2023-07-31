@@ -15,82 +15,28 @@ final class InformationTableViewCell: UITableViewCell {
     @IBOutlet private weak var rightValueLabel: UILabel!
     
     private let cornerRadius: CGFloat = 8
-    private var needAnimate = true
     
     struct CellModel {
-        let leftTitle: String?
-        let leftValue: Int?
-        let rightTitle: String?
-        let rightValue: Int?
+        let leftTitle: String
+        let leftValue: Int
+        let rightTitle: String
+        let rightValue: Int
         let leftValueColor: UIColor? = nil
         let rightValueColor: UIColor? = nil
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
-    
     override func prepareForReuse() {
-        needAnimate = false 
+        rightValueLabel.textColor = UIColor(named: "darkText")
     }
     
     func fill(_ data: CellModel) {
         leftTitleLabel.text = data.leftTitle
         rightTitleLabel.text = data.rightTitle
-        
-        if let data = data.leftValue {
-            setupAnimatedProgress(
-                data,
-                label: leftValueLabel
-            )
-        } else {
-            leftValueLabel.isHidden = true
-        }
-        
-        if let data = data.rightValue {
-            setupAnimatedProgress(
-                data,
-                label: rightValueLabel
-            )
-        } else {
-            rightValueLabel.isHidden = true
-        }
+        leftValueLabel.text = "\(data.leftValue)"
+        rightValueLabel.text = "\(data.rightValue)"
         
         if rightTitleLabel.text == "Заработал очков" {
             rightValueLabel.textColor = UIColor(named: "CustomGreen")
-        }
-    }
-    
-    // MARK: - Privates
-    
-    private func setup() {
-        //
-    }
-    
-    private func setupAnimatedProgress(
-        _ value: Int,
-        label: UILabel
-    ) {
-        let duration: CGFloat = 1
-
-        if needAnimate {
-            DispatchQueue.global().async {
-                if value > 5 {
-                    for num in 0 ..< (value + 1) {
-                        let sleepTime = UInt32((duration - 0.4) / Double(value) * 1000000.0)
-                        usleep(sleepTime)
-
-                        DispatchQueue.main.async {
-                            label.text = "\(num)"
-                        }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        label.text = "\(value)"
-                    }
-                }
-            }
         }
     }
 }

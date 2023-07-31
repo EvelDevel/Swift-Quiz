@@ -62,6 +62,7 @@ class InitialViewController: UIViewController {
     private func updateScoreLabel() {
         // TODO: Put that "getScore" logic inside RecordCaretaker
         
+        let _ = RandomSetManager.getAllQuestions()
         let records = RecordsCaretaker().getRecordsList()
         var score = 0
         

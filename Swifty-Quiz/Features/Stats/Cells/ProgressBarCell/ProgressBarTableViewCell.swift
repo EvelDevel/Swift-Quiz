@@ -58,13 +58,15 @@ final class ProgressBarTableViewCell: UITableViewCell {
             
             return
         } else {
+            let progressWidth = value >= 1 ? value : 1
+            let fullWidth = frame.width - progressBarPadding
+            let actualProgressValue = CGFloat(Double(progressWidth) / 100)
+            let newWidth = fullWidth * actualProgressValue
+            let duration = CGFloat(actualProgressValue) + 0.4
+            
+            percentageLabel.text = "\(Int(value))%"
+            
             if needAnimate {
-                let progressWidth = value >= 1 ? value : 1
-                let fullWidth = frame.width - progressBarPadding
-                let actualProgressValue = CGFloat(Double(progressWidth) / 100)
-                let newWidth = fullWidth * actualProgressValue
-                let duration = CGFloat(actualProgressValue) + 0.4
-                
                 DispatchQueue.main.async {
                     UIView.animate(
                         withDuration: duration,
@@ -76,25 +78,8 @@ final class ProgressBarTableViewCell: UITableViewCell {
                         completion: nil
                     )
                 }
-                
-                DispatchQueue.global().async {
-                    if value > 0 {
-                        let roundedValue = Int(value.rounded())
-                        
-                        for num in 0 ..< (roundedValue + 1) {
-                            let sleepTime = UInt32((duration - 0.4) / Double(roundedValue) * 1000000.0)
-                            usleep(sleepTime)
-                            
-                            DispatchQueue.main.async {
-                                self.percentageLabel.text = "\(num)%"
-                            }
-                        }
-                    } else {
-                        DispatchQueue.main.async {
-                            self.percentageLabel.text = "0%"
-                        }
-                    }
-                }
+            } else {
+                greenProgressView.frame.size.width = newWidth
             }
         }
     }

@@ -10,8 +10,9 @@ import UIKit
 
 private enum StatsCellType {
     case spacer
-    case infoCell(String?, Int?, String?, Int?)
+    case infoCell(String, Int, String, Int)
     case progressBarCell(String, Double)
+    case calendarCell
 }
 
 final class StatsViewController: UIViewController {
@@ -33,13 +34,11 @@ final class StatsViewController: UIViewController {
     }
     
     private var wordingsCount: Int {
-        let questions = RandomSetManager.getAllQuestions()
-            
-        let allQuestions = questions.reduce([]) { result, question in
-            return result + question.question
-        }
-        
-        return allQuestions.count
+        RandomSetManager.getAllQuestions().reduce([]) { $0 + $1.question }.count
+    }
+    
+    private var imagesCount: Int {
+        return RandomSetManager.getAllQuestions().map { $0.image != "" ? 1 : 0 }.reduce(0, +)
     }
     
     private var allTopicsCount: Int {
@@ -143,6 +142,13 @@ final class StatsViewController: UIViewController {
                     .infoCell(
                         Constants.totalQuesionsTitle,
                         allQuestionsCount,
+                        "Формулировок",
+                        wordingsCount
+                        
+                    ),
+                    .infoCell(
+                        "Вопросов с картинкой",
+                        imagesCount,
                         Constants.playedQuestionTitle,
                         uniquePlayedQuestions
                     ),
@@ -157,7 +163,7 @@ final class StatsViewController: UIViewController {
                         uniquePlayedQuestionsPercentage
                     )
                 ],
-                [.spacer],
+                [],
                 [
                     .infoCell(
                         Constants.correctGivenAnswersTitle,
@@ -178,7 +184,7 @@ final class StatsViewController: UIViewController {
                         percentOfTakenHints
                     )
                 ],
-                [.spacer],
+                [],
                 [
                     .infoCell(
                         Constants.gamesPlayedTitle,
@@ -200,6 +206,9 @@ final class StatsViewController: UIViewController {
                         Constants.unfinishedPercentageTitle,
                         percentOfUnfinishedGames
                     )
+                ],
+                [
+                    .calendarCell
                 ]
             ]
         } else {
@@ -231,7 +240,8 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         [
             SpacerTableViewCell.self,
             ProgressBarTableViewCell.self,
-            InformationTableViewCell.self
+            InformationTableViewCell.self,
+            CalendarTableViewCell.self
         ].forEach { [weak self] type in
             self?.tableView.register(
                 UINib(
@@ -299,6 +309,8 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
             return 78
         case .progressBarCell:
             return 80
+        case .calendarCell:
+            return 300
         }
     }
     
@@ -316,6 +328,8 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
             type = InformationTableViewCell.self
         case .progressBarCell:
             type = ProgressBarTableViewCell.self
+        case .calendarCell:
+            type = CalendarTableViewCell.self
         }
         
         let cell = tableView.dequeueReusableCell(
@@ -342,6 +356,8 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
                 title: title,
                 value: value
             )
+        case .calendarCell:
+            break
         }
         
         return cell
@@ -366,10 +382,10 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     
     private func createInformationCell(
         cell: UITableViewCell,
-        leftTitle: String?,
-        leftValue: Int?,
-        rightTitle: String?,
-        rightValue: Int?
+        leftTitle: String,
+        leftValue: Int,
+        rightTitle: String,
+        rightValue: Int
     ) {
         guard let cell = cell as? InformationTableViewCell else {
             return

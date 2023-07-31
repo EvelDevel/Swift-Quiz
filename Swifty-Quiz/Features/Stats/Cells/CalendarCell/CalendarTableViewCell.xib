@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="CalendarTableViewCell" customModule="Свифти_Квиз" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-Py-0J2">
+                        <rect key="frame" x="0.0" y="0.0" width="368" height="226"/>
+                        <color key="backgroundColor" name="MainBackground"/>
+                        <color key="tintColor" name="CustomGreen"/>
+                        <date key="minimumDate" timeIntervalSinceReferenceDate="568033200">
+                            <!--2019-01-01 11:00:00 +0000-->
+                        </date>
+                        <locale key="locale" localeIdentifier="ru"/>
+                    </datePicker>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YWh-Py-0J2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6da-X7-Sc9"/>
+                    <constraint firstItem="YWh-Py-0J2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FOp-sb-ZU3"/>
+                    <constraint firstAttribute="bottom" secondItem="YWh-Py-0J2" secondAttribute="bottom" id="TY0-yG-Axq"/>
+                    <constraint firstAttribute="trailing" secondItem="YWh-Py-0J2" secondAttribute="trailing" id="caB-xU-fFV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="157.25190839694656" y="83.802816901408448"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CustomGreen">
+            <color red="0.14499999582767487" green="0.79400002956390381" blue="0.41699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBackground">
+            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

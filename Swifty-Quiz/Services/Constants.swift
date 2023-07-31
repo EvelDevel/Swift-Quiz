@@ -31,7 +31,7 @@ class Constants {
     static var scoreSectionHeader = "Счет и прохождение"
     static var gameSectionHeader = "Категории и игры"
     static var totalQuesionsTitle = "Вопросов в игре"
-    static var playedQuestionTitle = "Пройдено"
+    static var playedQuestionTitle = "Вопросов прошел"
     static var givenAnswersTitle = "Всего ответов"
     static var correctGivenAnswersTitle = "Правильных ответов"
     static var incorrectAnswersTitle = "Неправильных"
