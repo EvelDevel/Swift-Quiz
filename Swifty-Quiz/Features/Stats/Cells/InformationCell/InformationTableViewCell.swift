@@ -26,7 +26,7 @@ final class InformationTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        rightValueLabel.textColor = UIColor(named: "darkText")
+        rightValueLabel.textColor = UIColor(named: "TextColor")
     }
     
     func fill(_ data: CellModel) {
@@ -35,7 +35,7 @@ final class InformationTableViewCell: UITableViewCell {
         leftValueLabel.text = "\(data.leftValue)"
         rightValueLabel.text = "\(data.rightValue)"
         
-        if rightTitleLabel.text == "Заработал очков" {
+        if rightTitleLabel.text == Constants.scorePointsTitle {
             rightValueLabel.textColor = UIColor(named: "CustomGreen")
         }
     }

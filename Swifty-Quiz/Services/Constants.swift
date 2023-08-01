@@ -47,4 +47,6 @@ class Constants {
     static var topicsPlayedTitle = "Прогресс по категориям"
     static var unfinishedPercentageTitle = "Процент незавершенных игр"
     static var correctnessSectionHeader = "Успеваемость"
+    static var wordingsTitle = "Формулировок"
+    static var withImageTitle = "Вопросов с картинкой"
 }

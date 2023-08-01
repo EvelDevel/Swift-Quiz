@@ -9,10 +9,8 @@
 import UIKit
 
 private enum StatsCellType {
-    case spacer
     case infoCell(String, Int, String, Int)
     case progressBarCell(String, Double)
-    case calendarCell
 }
 
 final class StatsViewController: UIViewController {
@@ -142,12 +140,12 @@ final class StatsViewController: UIViewController {
                     .infoCell(
                         Constants.totalQuesionsTitle,
                         allQuestionsCount,
-                        "Формулировок",
+                        Constants.wordingsTitle,
                         wordingsCount
                         
                     ),
                     .infoCell(
-                        "Вопросов с картинкой",
+                        Constants.withImageTitle,
                         imagesCount,
                         Constants.playedQuestionTitle,
                         uniquePlayedQuestions
@@ -206,9 +204,6 @@ final class StatsViewController: UIViewController {
                         Constants.unfinishedPercentageTitle,
                         percentOfUnfinishedGames
                     )
-                ],
-                [
-                    .calendarCell
                 ]
             ]
         } else {
@@ -238,10 +233,8 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         
         [
-            SpacerTableViewCell.self,
             ProgressBarTableViewCell.self,
-            InformationTableViewCell.self,
-            CalendarTableViewCell.self
+            InformationTableViewCell.self
         ].forEach { [weak self] type in
             self?.tableView.register(
                 UINib(
@@ -303,14 +296,10 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         let model = statsItems[indexPath.section][indexPath.row]
         
         switch model {
-        case .spacer:
-            return 16
         case .infoCell:
             return 78
         case .progressBarCell:
             return 80
-        case .calendarCell:
-            return 300
         }
     }
     
@@ -322,14 +311,10 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         let type: Any.Type
         
         switch model {
-        case .spacer:
-            type = SpacerTableViewCell.self
         case .infoCell:
             type = InformationTableViewCell.self
         case .progressBarCell:
             type = ProgressBarTableViewCell.self
-        case .calendarCell:
-            type = CalendarTableViewCell.self
         }
         
         let cell = tableView.dequeueReusableCell(
@@ -340,8 +325,6 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
         )
         
         switch model {
-        case .spacer:
-            break
         case let .infoCell(title, value, rightTitle, rightValue):
             createInformationCell(
                 cell: cell,
@@ -356,8 +339,6 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
                 title: title,
                 value: value
             )
-        case .calendarCell:
-            break
         }
         
         return cell

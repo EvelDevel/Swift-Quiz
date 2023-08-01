@@ -4,8 +4,7 @@
 
 import UIKit
 
-class AboutProjectController: UIViewController {
-
+final class AboutProjectController: UIViewController {
 	@IBOutlet private weak var backButton: UIButton!
 	@IBOutlet private weak var titleHeight: NSLayoutConstraint!
 	
@@ -32,16 +31,6 @@ extension AboutProjectController {
     
     @IBAction private func author(_ sender: Any) {
         let urlComponents = URLComponents(string: "https://vk.com/ev.nikitin")!
-        UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
-    @IBAction private func design(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://vk.com/shlehanov")!
-        UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
-    @IBAction private func corrector(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://vk.com/id2312583")!
         UIApplication.shared.open(urlComponents.url!)
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
