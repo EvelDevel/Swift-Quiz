@@ -9,21 +9,22 @@ protocol HelpViewControllerDelegate: AnyObject {
     func refreshTappedAnswerStatus()
 }
 
-class HelpViewController: UIViewController {
+final class HelpViewController: UIViewController {
     @IBOutlet private weak var helpView: UIView!
     @IBOutlet private weak var helpTextLabel: UILabel!
     @IBOutlet private weak var dismissButton: UIButton!
     @IBOutlet private weak var separatorHeight: NSLayoutConstraint!
     @IBOutlet private weak var sourceButton: RoundCornerButton!
     
+    private var fontSize: CGFloat = 12
     private var boldTextService = BoldTextService()
     
-    weak var delegate: HelpViewControllerDelegate?
     var questionID: Int = 0
-    var fontSize: CGFloat = 12
     var helpText: String = ""
     var isFromHistory: Bool = false
     var links: [String]?
+    
+    weak var delegate: HelpViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,8 @@ class HelpViewController: UIViewController {
 }
 
 
-// MARK: Main
+// MARK: - Main
+
 extension HelpViewController {
     private func setup() {
         setupFontSize()
@@ -123,12 +125,15 @@ extension HelpViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
+    ) {
         SoundPlayer.shared.playSound(
             sound: .buttonTapped
         )
         
-        if segue.identifier == "toSourceViewController" {
+        if segue.identifier == Constants.toSourceViewController {
             if let controller = segue.destination as? SourceViewController {
                 controller.links = links
                 controller.id = questionID
@@ -138,10 +143,16 @@ extension HelpViewController {
 }
 
 
-// MARK: Dismissing 
+// MARK: - Dismissing
+
 extension HelpViewController {
-    @IBAction private func backInGameButton(_ sender: UIButton) {
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
+    @IBAction private func backInGameButton(
+        _ sender: UIButton
+    ) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+
         dismissView()
     }
     

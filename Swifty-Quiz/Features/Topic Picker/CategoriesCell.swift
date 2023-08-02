@@ -15,7 +15,7 @@ private class Interface {
     static var borderColor = UIColor.lightGray.cgColor
 }
 
-class CategoriesCell: UITableViewCell {
+final class CategoriesCell: UITableViewCell {
     private var allButtons: [UIButton] = []
     
     @IBOutlet private var random: [UIButton]!

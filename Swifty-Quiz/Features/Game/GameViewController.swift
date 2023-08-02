@@ -312,7 +312,8 @@ extension GameViewController {
 }
 
 
-// MARK: Завершение игры
+// MARK: - Завершение игры
+
 extension GameViewController {
     
     private func endGame(
@@ -325,7 +326,7 @@ extension GameViewController {
             )
             
             showAlert(
-                title: "Ваш счет",
+                title: Constants.scoreTitle,
                 message: "\(gameHelper.updatedAlertMessage(score: updatePercentage()))"
             )
         case .notFinished:
@@ -383,7 +384,7 @@ extension GameViewController {
         
         /// Detect iOS updates (-> refresh game)
         let currentAppVersion = Bundle.main.object(
-            forInfoDictionaryKey: "CFBundleShortVersionString"
+            forInfoDictionaryKey: Constants.appVersionKey
         ) as? String ?? ""
         
         Game.shared.saveAppVersion(
@@ -412,7 +413,7 @@ extension GameViewController {
         )
         
         let restartAction = UIAlertAction(
-            title: "Перезапустить",
+            title: Constants.restartActionAlert,
             style: .default,
             handler: {
                 action in self.restartGame()
@@ -420,7 +421,7 @@ extension GameViewController {
         )
         
         let quitAction = UIAlertAction(
-            title: "Выйти",
+            title: Constants.quitActionAlert,
             style: .default,
             handler: {
                 action in self.quitGame()
@@ -466,13 +467,14 @@ extension GameViewController {
 }
 
 
-// MARK: Активация делегатов
+// MARK: - Активация делегатов
+
 extension GameViewController {
     override func prepare(
         for segue: UIStoryboardSegue,
         sender: Any?
     ) {
-        if segue.identifier  == "toHelpViewController" {
+        if segue.identifier  == Constants.toHelpViewController {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
             helpView.questionID = questions[currentIndex].id
@@ -511,7 +513,8 @@ extension GameViewController {
 }
 
 
-// MARK: Работа с делегатом HelpViewController
+// MARK: - HelpViewController delegate
+
 extension GameViewController: HelpViewControllerDelegate {
     func updateAfterHelp() {
         DispatchQueue.main.asyncAfter(

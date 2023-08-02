@@ -5,7 +5,7 @@
 import UIKit
 import StoreKit
 
-class InitialViewController: UIViewController {
+final class InitialViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var lastGameTitle: UILabel!
     @IBOutlet private weak var contentCenter: NSLayoutConstraint!
@@ -60,8 +60,6 @@ class InitialViewController: UIViewController {
     }
     
     private func updateScoreLabel() {
-        // TODO: Put that "getScore" logic inside RecordCaretaker
-        
         let _ = RandomSetManager.getAllQuestions()
         let records = RecordsCaretaker().getRecordsList()
         var score = 0
@@ -88,7 +86,7 @@ class InitialViewController: UIViewController {
 extension InitialViewController {
     private func setupCurrentQuestionSet() {
         let currentAppVersion = Bundle.main.object(
-            forInfoDictionaryKey: "CFBundleShortVersionString"
+            forInfoDictionaryKey: Constants.appVersionKey
         ) as? String ?? ""
         
         let lastVersion = Game.shared.settings.appLastVersion
@@ -100,10 +98,12 @@ extension InitialViewController {
             let newSet = TheBasicsSet.getQuestions()
             
             SelectedTopic.shared.saveQuestionSet(
-                newSet, category: "Основы", tag: 11
+                newSet,
+                category: CategoriesName.basic.rawValue,
+                tag: 11
             )
             
-            selectedTopic.text = "Основы"
+            selectedTopic.text = CategoriesName.basic.rawValue
             Game.shared.updateContinueStatus()
         } else {
             selectedTopic.text = "\(SelectedTopic.shared.selectedCategory.topicName)"
@@ -185,11 +185,11 @@ extension InitialViewController {
     }
     
     private func updateLastGameLabel() {
-        lastGameTitle.text = "Информация о прошлой игре: "
+        lastGameTitle.text = Constants.lastGameInfoTitle
         
         if Game.shared.records.count != 0 {
             if Game.shared.records.first?.continueGameStatus ?? false {
-                lastGameTitle.text = "Информация о текущей игре: "
+                lastGameTitle.text = Constants.currentGameInfoTitle
             }
         }
         
@@ -259,6 +259,7 @@ extension InitialViewController {
 
 
 // MARK: - Handle delegates
+
 extension InitialViewController: GameViewControllerDelegate,
                                  TopicViewControllerDelegate,
                                  RecordsViewControllerDelegate,
@@ -267,17 +268,17 @@ extension InitialViewController: GameViewControllerDelegate,
     func didEndGame(_ result: GameResult) {
         changeLabelWithAnimation(
             label: lastTopic,
-            text: "Категория: \(result.topic)"
+            text: "\(Constants.topicTitle)\(result.topic)"
         )
         
         changeLabelWithAnimation(
             label: totalQuestions,
-            text: "Вопросы: \(result.playedNum) из \(result.totalQuestion) (подсказок: \(result.helpCounter))"
+            text: "\(Constants.questionsTitle)\(result.playedNum) из \(result.totalQuestion) (\(Constants.hintsTitle)\(result.helpCounter))"
         )
         
         changeLabelWithAnimation(
             label: lastScore,
-            text: "Правильных ответов: \(result.result) (\(result.percentOfCorrect)%)"
+            text: "\(Constants.correctAnswersTitle)\(result.result) (\(result.percentOfCorrect)%)"
         )
     }
     

@@ -5,8 +5,7 @@
 import UIKit
 import MessageUI
 
-class GameHistoryViewController: UIViewController {
-	
+final class GameHistoryViewController: UIViewController {
 	@IBOutlet private weak var headerHeight: NSLayoutConstraint!
 	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
 	@IBOutlet private weak var backButton: UIButton!
@@ -41,9 +40,9 @@ class GameHistoryViewController: UIViewController {
 }
 
 
-// MARK: Работа с таблицей
+// MARK: - Работа с таблицей
+
 extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource {
-    
     private func cellRegistration() {
         tableView.register(
             UINib(
@@ -79,21 +78,19 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
         
 		cell.delegate = self
 		cell.history = history
-		cell.tableView = tableView
 		cell.width = tableView.frame.size.width
 		cell.cellIndex = indexPath.row
         
         return cell
     }
     
-    /// Обработка свайпа ячейки влево (для репорта)
     func tableView(
         _ tableView: UITableView,
         trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
     ) -> UISwipeActionsConfiguration? {
         let reportAction = UIContextualAction(
             style: .normal,
-            title: "Сообщить о проблеме"
+            title: Constants.historyProblemTitle
         ) { (action, view, completion) in
             self.reportButtonPressed(
                 id: self.history[indexPath.row].questionId
@@ -108,7 +105,8 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 
-// MARK: Работа с делегатом
+// MARK: - Работа с делегатом
+
 extension GameHistoryViewController: GameHistoryCellDelegate {
 	func showHint(index: Int) {
         let mainStoryboard: UIStoryboard = UIStoryboard(
@@ -137,7 +135,8 @@ extension GameHistoryViewController: GameHistoryCellDelegate {
 }
 
 
-// MARK: Работа c отправкой почты
+// MARK: - Работа c отправкой почты
+
 extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
     
     func reportButtonPressed(id: Int) {
@@ -149,13 +148,13 @@ extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
         /// Проверяем, может ли девайс пользователя отправлять мэйлы
         guard MFMailComposeViewController.canSendMail() else {
             let alert = UIAlertController(
-                title: "Вы хотели сообщить о проблеме с вопросом",
-                message: "К сожалению ваше устройство не может отправлять почту. Скорее всего, у вас нет ни одной активной учетной записи в приложении \"почта\".",
+                title: Constants.historyProblemSendTitle,
+                message: Constants.historyProblemSendMessage,
                 preferredStyle: .alert
             )
             
             let ok = UIAlertAction(
-                title: "Понятно",
+                title: Constants.historyUnderstandTitle,
                 style: .default,
                 handler: nil
             )
@@ -191,13 +190,13 @@ extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
     ) {
         if let _ = error {
             let alert = UIAlertController(
-                title: "Возникла ошибка при отправке письма",
+                title: Constants.historyProblemSendError,
                 message: "",
                 preferredStyle: .alert
             )
             
             let ok = UIAlertAction(
-                title: "Понятно",
+                title: Constants.historyUnderstandTitle,
                 style: .default,
                 handler: nil
             )
@@ -226,6 +225,8 @@ extension GameHistoryViewController: MFMailComposeViewControllerDelegate {
             print("we have some poroblems with e-mail sending")
         }
         
-        controller.dismiss(animated: true)
+        controller.dismiss(
+            animated: true
+        )
     }
 }

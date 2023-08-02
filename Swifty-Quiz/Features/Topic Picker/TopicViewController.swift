@@ -10,8 +10,7 @@ protocol TopicViewControllerDelegate: AnyObject {
 	func updateInitialView()
 }
 
-class TopicViewController: UIViewController {
-	
+final class TopicViewController: UIViewController {
     @IBOutlet private weak var countValueLabel: UILabel!
     @IBOutlet private weak var countTextLabel: UILabel!
     @IBOutlet private weak var mainTitleLabel: UILabel!
@@ -91,13 +90,13 @@ class TopicViewController: UIViewController {
 			
             if Game.shared.showTopicAlertStatus() != true {
 				let alert = UIAlertController(
-                    title: "Незавершенная игра",
-                    message: "Если вы выберете другую тему или ответите хотя бы на один вопрос новой игры, вы потеряете возможность закончить незавершенную игру",
+                    title: Constants.unfinishedGameTitle,
+                    message: Constants.unfinishedGameMessage,
                     preferredStyle: .alert
                 )
                 
 				let okAction = UIAlertAction(
-                    title: "Продолжить",
+                    title: Constants.continueGameTitle,
                     style: .default,
                     handler: nil
                 )
@@ -117,7 +116,7 @@ class TopicViewController: UIViewController {
     
     private func saveAppVersion() {
         let currentAppVersion = Bundle.main.object(
-            forInfoDictionaryKey: "CFBundleShortVersionString"
+            forInfoDictionaryKey: Constants.appVersionKey
         ) as? String ?? ""
         
         Game.shared.saveAppVersion(version: currentAppVersion)
@@ -138,7 +137,8 @@ class TopicViewController: UIViewController {
 }
 
 
-// MARK: - UITableViewDataSource, UITableViewDelegate
+// MARK: - Table View Handling
+
 extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 
 	func cellRegistration() {
@@ -182,6 +182,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 // MARK: - CategoriesCellDelegate
+
 extension TopicViewController: CategoriesCellDelegate {
 
 	func updateSelectedTopic() {

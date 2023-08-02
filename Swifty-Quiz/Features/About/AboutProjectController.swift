@@ -26,21 +26,32 @@ final class AboutProjectController: UIViewController {
 	}
 }
 
-// MARK: Links
+
+// MARK: - Links
+
 extension AboutProjectController {
     
     @IBAction private func author(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://vk.com/ev.nikitin")!
+        let urlComponents = URLComponents(
+            string: "https://vk.com/ev.nikitin"
+        )!
+        
         UIApplication.shared.open(urlComponents.url!)
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func refactorGuru(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://refactoring.guru/ru")!
+        let urlComponents = URLComponents(
+            string: "https://refactoring.guru/ru"
+        )!
+        
         UIApplication.shared.open(urlComponents.url!)
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
     @IBAction private func swiftbookRu(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://swiftbook.ru/content/languageguide/")!
+        let urlComponents = URLComponents(
+            string: "https://swiftbook.ru/content/languageguide/"
+        )!
+        
         UIApplication.shared.open(urlComponents.url!)
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }

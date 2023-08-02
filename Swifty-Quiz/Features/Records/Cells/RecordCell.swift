@@ -4,17 +4,16 @@
 
 import UIKit
 
-class RecordCell: UITableViewCell {
-
-    @IBOutlet weak var percentOfCorrect: UILabel!
-    @IBOutlet weak var colorBackground: UIView!
-    @IBOutlet weak var topicLabel: UILabel!
-    @IBOutlet weak var totalQuestionLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var helpCounterLabel: UILabel!
-    @IBOutlet weak var graySeparatorHeight: NSLayoutConstraint!
-	@IBOutlet var infoTitles: [UILabel]!
+final class RecordCell: UITableViewCell {
+    @IBOutlet private weak var percentOfCorrect: UILabel!
+    @IBOutlet private weak var colorBackground: UIView!
+    @IBOutlet private weak var topicLabel: UILabel!
+    @IBOutlet private weak var totalQuestionLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var helpCounterLabel: UILabel!
+    @IBOutlet private weak var graySeparatorHeight: NSLayoutConstraint!
+	@IBOutlet private var infoTitles: [UILabel]!
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,14 +52,14 @@ class RecordCell: UITableViewCell {
 			if record.percentOfCorrectAnswer! < 99 {
 				percentOfCorrect.text = "\(record.percentOfCorrectAnswer ?? 0)%"
 			} else {
-				percentOfCorrect.text = "100%"
+                percentOfCorrect.text = Constants.correctAnswersIs100
 			}
 			
-			helpCounterLabel.text = "Подсказки: \(record.helpCounter ?? 0)"
+            helpCounterLabel.text = "\(Constants.recordCellHintTitle)\(record.helpCounter ?? 0)"
 			topicLabel.text = "\(record.topic ?? "")"
-			dateLabel.text = "Дата: \(dateFormatter.string(from: record.date ?? Date()))"
-			totalQuestionLabel.text = "Вопросы: \(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)"
-			scoreLabel.text = "Очки: \(record.score ?? 0)"
+            dateLabel.text = "\(Constants.recordCellDateTitle)\(dateFormatter.string(from: record.date ?? Date()))"
+            totalQuestionLabel.text = "\(Constants.recordCellQuestionTitle)\(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)"
+            scoreLabel.text = "\(Constants.recordCellScoreTitle)\(record.score ?? 0)"
 		}
 	}
 }

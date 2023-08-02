@@ -4,36 +4,35 @@
 
 import UIKit
 
-class GameHelper {
+final class GameHelper {
     
     /// When we picked "random" set
     /// Shuffle when: change category, finish last random set (quit game)
     /// All other cases - same random set
-    
     func refreshRandomSet(tag: Int) {
         switch tag {
         case 0:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(20),
-                category: "20 случайных вопросов",
+                category: CategoriesName.random20.rawValue,
                 tag: 0
             )
         case 1:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(50),
-                category: "50 случайных вопросов",
+                category: CategoriesName.random50.rawValue,
                 tag: 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getQuestions(100),
-                category: "100 случайных вопросов",
+                category: CategoriesName.random100.rawValue,
                 tag: 2
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
                 RandomSetManager.getAllQuestions(),
-                category: "Все вопросы приложения",
+                category: CategoriesName.deathMatch.rawValue,
                 tag: 3
             )
         default:
@@ -45,14 +44,15 @@ class GameHelper {
         var message = ""
         
         if score < 35 {
-            message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
+            message = Constants.scoreBelow35Message
         } else if score < 55 {
-            message = "Достойный результат, но нужно продолжать работать!"
+            message = Constants.scoreBelow55Message
         } else if score < 85 {
-            message = "Уже хорошо! Но вы можете постараться сделать еще лучше!"
+            message = Constants.scoreBelow85Message
         } else {
-            message = "Превосходно! Продолжайте в том же духе и по остальным темам!"
+            message = Constants.scoreAbove85Message
         }
+        
         return message
     }
     
@@ -67,12 +67,12 @@ class GameHelper {
             
             DispatchQueue.main.async {
                 let alert = UIAlertController(
-                    title: "Незавершенная игра",
-                    message: "Если вы ответите хотя бы на один вопрос или выберете другую тему, вы потеряете возможность закончить незавершенную игру",
+                    title: Constants.unfinishedGameTitle,
+                    message: Constants.unfinishedGameMessage,
                     preferredStyle: .alert
                 )
                 let okAction = UIAlertAction(
-                    title: "Продолжить",
+                    title: Constants.continueGameTitle,
                     style: .default,
                     handler: { action in }
                 )
@@ -84,6 +84,7 @@ class GameHelper {
                     completion: nil
                 )
             }
+            
             Game.shared.setThatWeShowedAlert()
         }
     }
@@ -138,9 +139,10 @@ class GameHelper {
         }
     }
     
-    func setQuestionText(_ set: [Question],
-                         _ index: Int) -> String {
-        
+    func setQuestionText(
+        _ set: [Question],
+        _ index: Int
+    ) -> String {
         if  Game.shared.settings.questionTextShuffling == 1 {
             return set[index].question.shuffled()[0]
         } else {

@@ -9,17 +9,18 @@
 import UIKit
 import WebKit
 
-class SourceViewController: UIViewController {
-    @IBOutlet weak var dismissButton: RoundCornerButton!
+final class SourceViewController: UIViewController {
+    @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var swipeRightButton: UIButton!
     @IBOutlet private weak var swipeLeftButton: UIButton!
     
+    private var position = 0
+    
     var links: [String]? = []
     var id = 0
-    private var position = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,14 +133,14 @@ class SourceViewController: UIViewController {
     
     private func showIncorrectUrlAlert() {
         let alert = UIAlertController(
-            title: "Упс, кажется эта ссылка кривая",
-            message: "Вы можете сообщить на hello@swifty-quiz.ru о проблеме со ссылкой в вопросе №\(id)",
+            title: Constants.sourceLinkTitle,
+            message: "\(Constants.sourceLinkMessage)\(id)",
             preferredStyle: UIAlertController.Style.alert
         )
         
         alert.addAction(
             UIAlertAction(
-                title: "Закрыть",
+                title: Constants.sourceAlertTitle,
                 style: UIAlertAction.Style.default
             )
         )
@@ -152,7 +153,8 @@ class SourceViewController: UIViewController {
 }
 
 
-// MARK: WebView delegate
+// MARK: - WebView delegate
+
 extension SourceViewController: WKNavigationDelegate, WKUIDelegate{
     func webView(
         _ webView: WKWebView,
@@ -169,7 +171,8 @@ extension SourceViewController: WKNavigationDelegate, WKUIDelegate{
 }
 
 
-// MARK: Share
+// MARK: - Share
+
 extension SourceViewController {
     @IBAction func shareAppTapped(_ sender: Any) {
         SoundPlayer.shared.playSound(

@@ -9,8 +9,7 @@ protocol RecordsViewControllerDelegate: AnyObject {
 	func refreshLastGameInfo()
 }
 
-class RecordsViewController: UIViewController {
-    
+final class RecordsViewController: UIViewController {
 	@IBOutlet private weak var headerHeight: NSLayoutConstraint!
 	@IBOutlet private weak var titleTopMargin: NSLayoutConstraint!
 	@IBOutlet private weak var backButton: UIButton!
@@ -57,83 +56,145 @@ class RecordsViewController: UIViewController {
 }
 
 
-// MARK: Алерт на очистку рекордов и удаление по свайпу ячейки
+// MARK: - Алерт на очистку рекордов и удаление по свайпу ячейки
+
 extension RecordsViewController {
-    
-    /// Вызов алерта
     func showAlert() {
         if Game.shared.records.count != 0 {
-            let alert = UIAlertController(title: "Вы уверены?", message: "Рекорды нельзя будет восстановить", preferredStyle: .alert)
-            let deleteAction = UIAlertAction(title: "Удалить", style: .default, handler: { action in self.deleteRecords() })
-            let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: { action in })
+            let alert = UIAlertController(
+                title: Constants.areYouSureTitle,
+                message: Constants.cantRestoreRecordsMessage,
+                preferredStyle: .alert
+            )
+            
+            let deleteAction = UIAlertAction(
+                title: Constants.removeRecordsTitle,
+                style: .default,
+                handler: {
+                    action in self.deleteRecords()
+                }
+            )
+            
+            let cancelAction = UIAlertAction(
+                title: Constants.cancelRemovingRecords,
+                style: .default,
+                handler: { _ in }
+            )
+            
             alert.addAction(deleteAction)
             alert.addAction(cancelAction)
-            present(alert, animated: true, completion: nil)
+            
+            present(
+                alert,
+                animated: true,
+                completion: nil
+            )
         }
     }
-    /// Удаление всех рекордов (очистка)
+    
     func deleteRecords() {
         Game.shared.clearRecords()
         tableView.reloadData()
         playTrashSound()
     }
-	/// Обработка свайпа ячейки влево (удаление)
-	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-		let reportAction = UIContextualAction(style: .normal, title: "Удалить") { (action, view, completion) in
-			Game.shared.deleteOneRecord(index: indexPath.row)
+	
+	func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+		let reportAction = UIContextualAction(
+            style: .normal,
+            title: Constants.removeRecordsTitle
+        ) { [weak self] action, view, completion in
+            guard let self else {
+                return
+            }
+            
+            Game.shared.deleteOneRecord(
+                index: indexPath.row
+            )
+            
 			tableView.reloadData()
-			self.playTrashSound()
 			
-			/// Если удалили последний рекорд - убираем продолжение (предпоследней игре)
-			/// Если убрать эту часть - можно будет продолжать любую не оконченную игру из истории (если она последняя)
-			/// То есть если мы удаляем все игры до этой игры - ее можно будет доиграть
-			/// Если захочется сделать возможность доигрывать все игры незавершенные (после удаления предыдущей сверху) - закомментировать
+            self.playTrashSound()
+			
 			if indexPath.row == 0 {
 				Game.shared.updateContinueStatus()
 			}
 		}
+        
 		reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2371389396, blue: 0.1065657165, alpha: 0.5)
-		return UISwipeActionsConfiguration(actions: [reportAction])
+        
+		return UISwipeActionsConfiguration(
+            actions: [reportAction]
+        )
 	}
 }
 
 
-// MARK: Настройка таблицы
+// MARK: - Table View Handling
+
 extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    /// Регистрация ячейки
     func cellRegistration() {
-        tableView.register(UINib(nibName: "RecordCell", bundle: nil), forCellReuseIdentifier: "RecordCell")
+        tableView.register(
+            UINib(
+                nibName: String(
+                    describing: RecordCell.self
+                ),
+                bundle: nil
+            ),
+            forCellReuseIdentifier: String(
+                describing: RecordCell.self
+            )
+        )
     }
-    /// Количество ячеек в секции
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         return Game.shared.records.count
     }
-    /// Настройка ячейки
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as? RecordCell else {
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(
+                describing: RecordCell.self
+            ),
+            for: indexPath
+        ) as? RecordCell else {
 			return UITableViewCell()
 		}
+        
 		cell.cellIndex = indexPath.row
         return cell
     }
     
-    /// Отработка нажатий
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
         DispatchQueue.main.async {
             let mainStoryboard: UIStoryboard = UIStoryboard(
-                name: "GameHistory",
+                name: Constants.gameHistory,
                 bundle: nil
             )
             
             let gameHistory = mainStoryboard.instantiateViewController(
-                withIdentifier: "GameHistoryViewController"
+                withIdentifier: Constants.gameHistoryIdentifier
             ) as! GameHistoryViewController
             
             gameHistory.history = Game.shared.records[indexPath.row].gameHistory ?? []
-            self.present(gameHistory, animated: true, completion: nil)
-            
             SoundPlayer.shared.playSound(sound: .buttonTapped)
+            
+            self.present(
+                gameHistory,
+                animated: true,
+                completion: nil
+            )
         }
     }
 }

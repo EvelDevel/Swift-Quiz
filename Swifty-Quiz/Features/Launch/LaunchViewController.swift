@@ -5,7 +5,7 @@
 import UIKit
 import AVFoundation
 
-class LaunchViewController: UIViewController {
+final class LaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAudioSettings()
@@ -15,8 +15,12 @@ class LaunchViewController: UIViewController {
     private func setAudioSettings() {
         do {
             /// Set audio session, app won't stop phone music
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
-        } catch {}
+            try AVAudioSession.sharedInstance().setCategory(
+                AVAudioSession.Category.ambient
+            )
+        } catch {
+            print("Failed to set audio category: \(error)")
+        }
     }
     
     private func transitionFromLaunch() {
@@ -24,12 +28,12 @@ class LaunchViewController: UIViewController {
             deadline: .now() + 0.2
         ) {
             let main: UIStoryboard = UIStoryboard(
-                name: "Main",
+                name: Constants.main,
                 bundle: nil
             )
             
             let initial = main.instantiateViewController(
-                withIdentifier: "InitialViewController"
+                withIdentifier: Constants.initialViewIdentifier
             ) as! InitialViewController
             
             initial.modalPresentationStyle = .overFullScreen

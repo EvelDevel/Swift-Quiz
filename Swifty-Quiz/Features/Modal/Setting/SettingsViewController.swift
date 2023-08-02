@@ -8,10 +8,8 @@ protocol SettingsViewControllerDelegate: AnyObject {
     func updateInitialView()
 }
 
-class SettingsViewController: UIViewController {
-    
+final class SettingsViewController: UIViewController {
     @IBOutlet private var settingsView: UIView!
-    
     @IBOutlet private weak var dismissButton: RoundCornerButton!
     @IBOutlet private weak var questionOrderControl: UISegmentedControl!
     @IBOutlet private weak var questionTextControl: UISegmentedControl!
@@ -19,7 +17,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet private weak var changeAfterHelpControl: UISegmentedControl!
     @IBOutlet private weak var soundControl: UISegmentedControl!
     @IBOutlet private weak var separatorHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet private var allControls: [UISegmentedControl]!
     
     @IBAction func settingSwitchSound(_ sender: Any) {
@@ -68,7 +65,9 @@ class SettingsViewController: UIViewController {
     }
 }
 
-// MARK: Dismissing
+
+// MARK: - Dismissing
+
 extension SettingsViewController {
     
     @IBAction private func backInGameButton(_ sender: UIButton) {
@@ -104,7 +103,8 @@ extension SettingsViewController {
 }
 
 
-// MARK: Controls handler
+// MARK: - Controls handler
+
 extension SettingsViewController {
     
     func setupControlsTintColors() {
@@ -159,7 +159,6 @@ extension SettingsViewController {
     }
 
     func setupInitialControlsState() {
-        
         // Question order
         if Game.shared.settings.questionOrder == 0 {
             questionOrderControl.selectedSegmentIndex = 0
@@ -198,7 +197,8 @@ extension SettingsViewController {
 }
 
 
-// MARK: Detect changes
+// MARK: - Detect changes
+
 extension SettingsViewController {
     
     @objc func questionOrderValue(target: UISegmentedControl) {
@@ -263,7 +263,8 @@ extension SettingsViewController {
 }
 
 
-// MARK: Help text
+// MARK: - Help text
+
 extension SettingsViewController {
     
     func showInformationAlert(
@@ -277,7 +278,7 @@ extension SettingsViewController {
         )
         
         let quitAction = UIAlertAction(
-            title: "Вернуться в игру",
+            title: Constants.settingsReturnTitle,
             style: .default,
             handler: nil
         )
@@ -291,7 +292,9 @@ extension SettingsViewController {
         )
     }
     
-    @IBAction func informationAboutSettingPressed(_ sender: UIButton) {
+    @IBAction func informationAboutSettingPressed(
+        _ sender: UIButton
+    ) {
         var title = ""
         var message = ""
         
@@ -299,22 +302,25 @@ extension SettingsViewController {
         
         switch sender.tag {
         case 1:
-            title = "Последовательность вопросов"
-            message = "В случае прямой последовательности вопросы каждую игру будут идти в одном порядке. Если вы выберете случайную последовательность, порядок вопросов никогда не повторится дважды."
+            title = Constants.settingsOrderTitle
+            message = Constants.settingsOrderMessage
         case 2:
-            title = "Формулировка текста вопроса"
-            message = "У каждого вопроса в игре есть несколько формулировок вопроса - от одной до трех. Если вы хотите сделать игру сложнее, включите изменение формулировок, тогда глазу будет труднее вспомнить вопрос."
+            title = Constants.settingsWordingTitle
+            message = Constants.settingsWordingMessage
         case 3:
-            title = "При неправильном ответе"
-            message = "После неправильного ответа вы можете просто идти дальше или получать теоретическую подсказку, которая поможет понимать сразу, какой ответ был правильным. Это замедляет ход игры, но делает ее более информативной."
+            title = Constants.settingsIncorrectTitle
+            message = Constants.settingsIncorrectMessage
         case 4:
-            title = "Переход после подсказки"
-            message = "После каждой подсказки вы можете автоматически переходить к следующему вопросу, а можете оставаться, чтобы еще раз внимательно прочитать вопрос и выбрать правильный ответ. После использования подсказки вам не будут засчитаны очки."
+            title = Constants.settingsHintTitle
+            message = Constants.settingsHintMessage
         
         default:
             print("Error with information about setting")
         }
         
-        showInformationAlert(title, message)
+        showInformationAlert(
+            title,
+            message
+        )
     }
 }

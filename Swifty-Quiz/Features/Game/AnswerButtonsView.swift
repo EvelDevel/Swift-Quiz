@@ -4,8 +4,7 @@
 
 import UIKit
 
-class AnswerButtonsView: UIView {
-    
+final class AnswerButtonsView: UIView {
     private var correctAnswerNewPosition = 0
     private var finalButtonsSetToSend: [String] = []
     
@@ -139,6 +138,7 @@ class AnswerButtonsView: UIView {
     
     
     // MARK: Изменение цвета кнопки при ответе
+    
     func changeColor(sender: UIButton, _ answerIsCorrect: Bool,
                            _ optionA: UIButton, _ optionB: UIButton, _ optionC: UIButton, _ optionD: UIButton) {
         switch sender.tag {
