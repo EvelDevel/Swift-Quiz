@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Sc-Eu-tmJ">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-EG-eZt">
-                                <rect key="frame" x="20" y="260.66666666666669" width="374" height="215"/>
+                                <rect key="frame" x="20" y="270.66666666666669" width="374" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Теория" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y5-yC-Tz6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -55,7 +55,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4g-t1-PcG" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="52"/>
-                                                <color key="backgroundColor" name="MainYellow"/>
+                                                <color key="backgroundColor" name="MainYellowOpacity"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fhh-3F-jai"/>
                                                 </constraints>
@@ -224,7 +224,7 @@
                                     </activityIndicatorView>
                                     <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-qH-vNY">
                                         <rect key="frame" x="133.33333333333334" y="569" width="115.66666666666666" height="26"/>
-                                        <color key="pageIndicatorTintColor" red="0.96022727269999997" green="0.8055694149" blue="0.24344359409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="pageIndicatorTintColor" name="MainYellowOpacity"/>
                                         <color key="currentPageIndicatorTintColor" name="TextColor"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFm-iA-IQ0">
@@ -333,8 +333,8 @@
         <namedColor name="BackgroundForModals">
             <color red="0.80784313725490198" green="0.80784313725490198" blue="0.81960784313725488" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="MainYellow">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="MainYellowOpacity">
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

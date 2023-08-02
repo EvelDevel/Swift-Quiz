@@ -33,7 +33,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-gx-Ie5" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
-                                        <color key="backgroundColor" name="MainYellow"/>
+                                        <color key="backgroundColor" name="MainYellowOpacity"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Автор">
                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,7 +68,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-jW-UdA" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="216" height="52"/>
-                                                <color key="backgroundColor" name="MainYellow"/>
+                                                <color key="backgroundColor" name="MainYellowOpacity"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Refactoring Guru">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,7 +84,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-Md-grQ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="226" y="0.0" width="148" height="52"/>
-                                                <color key="backgroundColor" name="MainYellow"/>
+                                                <color key="backgroundColor" name="MainYellowOpacity"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Swift Book">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,8 +186,8 @@
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="MainYellow">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="MainYellowOpacity">
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

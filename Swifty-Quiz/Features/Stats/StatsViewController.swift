@@ -8,22 +8,24 @@
 
 import UIKit
 
-private enum StatsCellType {
-    case infoCell(String, Int, String, Int)
-    case progressBarCell(String, Double)
-}
+// MARK: - Controller
 
 final class StatsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var emptyStatsLabel: UILabel!
     
-    private lazy var records = RecordsCaretaker().getRecordsList()
-    private lazy var allQuestionsCount = RandomSetManager.showAllQuestionsNumber()
-    private lazy var allQuestions = RandomSetManager.getAllQuestions()
+    private var records = RecordsCaretaker().getRecordsList()
+    private var allQuestionsCount = RandomSetManager.showAllQuestionsNumber()
+    private var allQuestions = RandomSetManager.getAllQuestions()
     
     private var statsItems: [[StatsCellType]] = [[]]
     private let sectionHeaderHeight: CGFloat = 32
     private let defaultHeaderHeight: CGFloat = 8
+    
+    private enum StatsCellType {
+        case infoCell(String, Int, String, Int)
+        case progressBarCell(String, Double)
+    }
     
     // MARK: - Computed properties
     
@@ -124,13 +126,13 @@ final class StatsViewController: UIViewController {
     }
     
     private func setup() {
-        loadData()
+        setupData()
         setupTableView()
     }
     
     // MARK: - Data Handling
     
-    private func loadData() {
+    private func setupData() {
         if records.count > 0 {
             tableView.isHidden = false
             emptyStatsLabel.isHidden = true
@@ -236,9 +238,15 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
             ProgressBarTableViewCell.self,
             InformationTableViewCell.self
         ].forEach { [weak self] type in
-            self?.tableView.register(
+            guard let self else {
+                return
+            }
+            
+            self.tableView.register(
                 UINib(
-                    nibName: String(describing: type),
+                    nibName: String(
+                        describing: type
+                    ),
                     bundle: nil
                 ),
                 forCellReuseIdentifier: String(

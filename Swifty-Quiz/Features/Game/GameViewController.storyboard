@@ -76,7 +76,7 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-1q-oQJ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="80.5"/>
-                                                        <color key="backgroundColor" name="MainYellow"/>
+                                                        <color key="backgroundColor" name="MainYellowOpacity"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="А. Первый вариант ответа">
@@ -93,7 +93,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-fa-Dhg" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="90.5" width="382" height="80"/>
-                                                        <color key="backgroundColor" name="MainYellow"/>
+                                                        <color key="backgroundColor" name="MainYellowOpacity"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="В. Второй вариант ответа">
@@ -110,7 +110,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="urz-g4-9eM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="180.5" width="382" height="80.5"/>
-                                                        <color key="backgroundColor" name="MainYellow"/>
+                                                        <color key="backgroundColor" name="MainYellowOpacity"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="Г. Третий вариант ответа">
@@ -127,7 +127,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-A5-afB" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="271" width="382" height="80"/>
-                                                        <color key="backgroundColor" name="MainYellow"/>
+                                                        <color key="backgroundColor" name="MainYellowOpacity"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="Д. Четвертый вариант ответа">
@@ -338,8 +338,8 @@
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="MainYellow">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="MainYellowOpacity">
+            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
