@@ -242,13 +242,13 @@ extension GameViewController {
                     score += 1
                 }
                 
-                Shadow().addGreenShadow(button: sender)
+                Shadow().addGreenShadow(to: sender)
                 buttons.changeColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .correctAnswer)
                 dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {
-                Shadow().addRedShadow(button: sender)
+                Shadow().addRedShadow(to: sender)
                 buttons.changeColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true

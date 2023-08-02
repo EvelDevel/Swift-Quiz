@@ -6,12 +6,12 @@ import Foundation
 
 struct Question: Codable {
     let question: [String]  // Массив с формулировками вопроса
-    let image: String       // Изображение для вопроса
-    let optionA: String     // Варианты ответа (4 варианта, вариативно может быть от 2 до 4)
+    let image: String
+    let optionA: String
     let optionB: String     // Правильный ответ всегда в optionA
     let optionC: String
     let optionD: String
-    let id: Int             // Уникальный номер вопроса
+    let id: Int
     var links: [String]?
-    let helpText: String    // Теоретическая подсказка
+    let helpText: String
 }

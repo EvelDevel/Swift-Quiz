@@ -33,7 +33,7 @@ class ProgressService {
             color = mainColor.cgColor
             rate = 100
         } else {
-            let currentRate = calculateCurrentRate(records: records)
+            let currentRate = getPercentOfCorrectAnswers(records: records)
             let alpha = (Double(currentRate / records.count) / 100)
             
             if alpha <= 0.15 {
@@ -57,11 +57,10 @@ class ProgressService {
 }
 
 
-// MARK: Privates
+// MARK: - Privates
+
 extension ProgressService {
-    private func isRandom(
-        topic: String
-    ) -> Bool {
+    private func isRandom(topic: String) -> Bool {
         let topic = CategoriesName(rawValue: topic)
         
         switch topic {
@@ -72,39 +71,15 @@ extension ProgressService {
         }
     }
     
-    private func isSuccess(
-        records: [Record]
-    ) -> Bool {
-        if records.first?.percentOfCorrectAnswer == success {
-            return true
-        } else {
-            return false
-        }
+    private func isSuccess(records: [Record]) -> Bool {
+        records.first?.percentOfCorrectAnswer == success
     }
     
-    private func calculateCurrentRate(
-        records: [Record]
-    ) -> Int {
-        var rate = 0
-        
-        for record in records {
-            rate += Int(record.percentOfCorrectAnswer ?? 0)
-        }
-        
-        return rate
+    private func getPercentOfCorrectAnswers(records: [Record]) -> Int {
+        records.reduce(0) { $0 + Int($1.percentOfCorrectAnswer ?? 0) }
     }
     
-    private func getTopicRecords(
-        for topic: String
-    ) -> [Record] {
-        var currentRecords: [Record] = []
-        
-        for record in records {
-            if record.topic == topic {
-                currentRecords.append(record)
-            }
-        }
-        
-        return currentRecords
+    private func getTopicRecords(for topic: String) -> [Record] {
+        records.filter { $0.topic == topic }
     }
 }

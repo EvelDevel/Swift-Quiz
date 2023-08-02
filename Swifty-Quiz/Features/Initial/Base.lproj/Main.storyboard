@@ -109,13 +109,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущая категория:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3m-ip-ljx">
-                                                        <rect key="frame" x="16" y="11" width="256" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <rect key="frame" x="16" y="11" width="256" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название категории" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-or-Ad3">
-                                                        <rect key="frame" x="16" y="31.5" width="159" height="19.5"/>
+                                                        <rect key="frame" x="16" y="33" width="159" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                     <constraint firstItem="T1V-ld-fKj" firstAttribute="top" secondItem="O4g-5e-qkn" secondAttribute="top" constant="1" id="2fK-IP-6Ke"/>
                                                     <constraint firstItem="V3m-ip-ljx" firstAttribute="centerX" secondItem="O4g-5e-qkn" secondAttribute="centerX" id="5mZ-k3-0wq"/>
                                                     <constraint firstItem="V3m-ip-ljx" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" constant="16" id="95f-Jg-kA6"/>
-                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="V3m-ip-ljx" secondAttribute="bottom" constant="6" id="AKC-es-1yU"/>
+                                                    <constraint firstItem="mKv-or-Ad3" firstAttribute="top" secondItem="V3m-ip-ljx" secondAttribute="bottom" constant="5" id="AKC-es-1yU"/>
                                                     <constraint firstItem="T1V-ld-fKj" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" id="CEs-C3-6xS"/>
                                                     <constraint firstAttribute="bottom" secondItem="T1V-ld-fKj" secondAttribute="bottom" id="Pbn-GE-aOa"/>
                                                     <constraint firstItem="mKv-or-Ad3" firstAttribute="leading" secondItem="O4g-5e-qkn" secondAttribute="leading" constant="16" id="a9S-Fq-iZx"/>
@@ -176,24 +176,24 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="k2r-zu-Z7h"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKW-XW-9Qq">
-                                                        <rect key="frame" x="0.0" y="24" width="257" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="24" width="257" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросы:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-G0-Ac5">
-                                                        <rect key="frame" x="0.0" y="45.5" width="257" height="21"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="257" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильных ответов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-6v-JaH">
-                                                        <rect key="frame" x="0.0" y="66.5" width="257" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="64.5" width="257" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>

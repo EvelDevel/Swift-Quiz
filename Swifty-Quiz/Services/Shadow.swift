@@ -5,75 +5,103 @@
 import UIKit
 
 class Shadow {
-    /// Основные кнопки - черная тень
-    func addButtonShadows(_ buttons: [UIButton]) {
+    private func addShadow(
+        to view: UIView,
+        color: UIColor,
+        opacity: Float,
+        radius: CGFloat,
+        offset: CGSize
+    ) {
+        view.layer.shadowColor = color.cgColor
+        view.layer.shadowOpacity = opacity
+        view.layer.shadowRadius = radius
+        view.layer.shadowOffset = offset
+        view.layer.position = view.center
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
+    }
+    
+    func addButtonShadows(
+        _ buttons: [UIButton]
+    ) {
         for button in buttons {
-            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
-            button.layer.shadowOpacity = 1
-            button.layer.shadowRadius = 4
-            button.layer.shadowOffset = CGSize(width: 0, height: 5)
-            button.layer.position = button.center
-            button.layer.shouldRasterize = true
-            button.layer.rasterizationScale = UIScreen.main.scale
+            addShadow(
+                to: button,
+                color: UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1),
+                opacity: 1,
+                radius: 4,
+                offset: CGSize(width: 0, height: 5)
+            )
         }
     }
     
-    /// Основные кнопки - половина черной тени
-    func addHalfButtonShadows(_ buttons: [UIButton]) {
+    func addHalfButtonShadows(
+        _ buttons: [UIButton]
+    ) {
         for button in buttons {
-            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 0.9).cgColor
-            button.layer.shadowOpacity = 1
-            button.layer.shadowRadius = 4
-            button.layer.shadowOffset = CGSize(width: 0, height: 3)
-            button.layer.position = button.center
-            button.layer.shouldRasterize = true
-            button.layer.rasterizationScale = UIScreen.main.scale
+            addShadow(
+                to: button,
+                color: UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 0.9),
+                opacity: 1,
+                radius: 4,
+                offset: CGSize(width: 0, height: 3)
+            )
         }
     }
     
-    /// Кнопки выбора тем - черная тень
-    /// shadowPath - дополнительная оптимизация для большого количества теней
-    func addTopicButtonShadows(_ buttons: [UIButton]) {
+    func addTopicButtonShadows(
+        _ buttons: [UIButton]
+    ) {
         for button in buttons {
-            button.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
-            button.layer.shadowOpacity = 0.6
-            button.layer.shadowRadius = 4
-            button.layer.shadowOffset = CGSize(width: 0, height: 5)
-            button.layer.position = button.center
-            button.layer.shouldRasterize = true
-            button.layer.rasterizationScale = UIScreen.main.scale
-            button.layer.shadowPath = UIBezierPath(rect: button.layer.bounds).cgPath
+            addShadow(
+                to: button,
+                color: UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1),
+                opacity: 0.6,
+                radius: 4,
+                offset: CGSize(width: 0, height: 5)
+            )
+            
+            button.layer.shadowPath = UIBezierPath(
+                rect: button.layer.bounds
+            ).cgPath
         }
     }
     
-    /// Кнопки ответов - красная тень
-    func addRedShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor(red: 0.996, green: 0.353, blue: 0.224, alpha: 0.5).cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 4
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.position = button.center
+    func addRedShadow(
+        to button: UIButton
+    ) {
+        addShadow(
+            to: button,
+            color: UIColor(red: 0.996, green: 0.353, blue: 0.224, alpha: 0.5),
+            opacity: 1,
+            radius: 4,
+            offset: CGSize(width: 0, height: 5)
+        )
     }
     
-    /// Кнопки ответов - зеленая тень
-    func addGreenShadow(button: UIButton) {
-        button.layer.shadowColor = UIColor(red: 0.055, green: 0.8, blue: 0.404, alpha: 0.5).cgColor
-        button.layer.shadowOpacity = 1
-        button.layer.shadowRadius = 4
-        button.layer.shadowOffset = CGSize(width: 0, height: 5)
-        button.layer.position = button.center
+    func addGreenShadow(
+        to button: UIButton
+    ) {
+        addShadow(
+            to: button,
+            color: UIColor(red: 0.055, green: 0.8, blue: 0.404, alpha: 0.5),
+            opacity: 1,
+            radius: 4,
+            offset: CGSize(width: 0, height: 5)
+        )
     }
     
-    /// Черная тень для UIView
-    func addStaticShadows(_ view: [UIView]) {
-        for view in view {
-            view.layer.shadowColor = UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1).cgColor
-            view.layer.shadowOpacity = 1
-            view.layer.shadowRadius = 4
-            view.layer.shadowOffset = CGSize(width: 0, height: 5)
-            view.layer.position = view.center
-            view.layer.shouldRasterize = true
-            view.layer.rasterizationScale = UIScreen.main.scale
+    func addStaticShadows(
+        _ views: [UIView]
+    ) {
+        for view in views {
+            addShadow(
+                to: view,
+                color: UIColor(red: 0.894, green: 0.902, blue: 0.918, alpha: 1),
+                opacity: 1,
+                radius: 4,
+                offset: CGSize(width: 0, height: 5)
+            )
         }
     }
 }
