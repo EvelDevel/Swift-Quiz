@@ -13,7 +13,7 @@ class BehavioralPatternsSet {
                      optionB: "Создание объектов",
                      optionC: "Структурирование кода",
                      optionD: "",
-                     questionId: 999703397,
+                     id: 999703397,
                      helpText: "Управление поведением. Поведенческие паттерны являются самой большой категорией, сюда входят все паттерны, которые так или иначе определяют поведение объектов и их взаимодействие друг с другом."),
             
             Question(question: ["Паттерн, который определяет семейство объектов, каждый из которых реализует один и тот же интерфейс разными алгоритмами",
@@ -24,7 +24,7 @@ class BehavioralPatternsSet {
                      optionB: "Delegate",
                      optionC: "Facade",
                      optionD: "Observer",
-                     questionId: 761143728,
+                     id: 761143728,
                      helpText: """
                      Strategy. Паттерн Strategy (стратегия) — поведенческий шаблон проектирования. Он определяет семейство объектов, каждый из которых реализует один и тот же интерфейс разными алгоритмами.
                      
@@ -38,7 +38,7 @@ class BehavioralPatternsSet {
                      optionB: "Посредник",
                      optionC: "Наблюдатель",
                      optionD: "Шаблонный метод",
-                     questionId: 259630580,
+                     id: 259630580,
                      helpText: "Итератор. Итератор — это поведенческий паттерн проектирования, который даёт возможность последовательно обходить элементы составных объектов, не раскрывая их внутреннего представления."),
             
             Question(question: ["Какой паттерн помогает одним объектам узнавать об изменении других?",
@@ -49,7 +49,7 @@ class BehavioralPatternsSet {
                      optionB: "Adapter",
                      optionC: "Delegate",
                      optionD: "Proxy",
-                     questionId: 131740397,
+                     id: 131740397,
                      helpText: "Observer. Паттерн Observer (наблюдатель) — поведенческий шаблон проектирования. Он используется, когда одни объекты должны узнавать об изменениях состояния других."),
             
             Question(question: ["Паттерн, который позволяет выбрать путь, которым мы получим результат",
@@ -59,7 +59,7 @@ class BehavioralPatternsSet {
                      optionB: "Memento",
                      optionC: "Facade",
                      optionD: "Observer",
-                     questionId: 388029700,
+                     id: 388029700,
                      helpText: "Strategy. Стратегия (Strategy) позволяет выбрать путь, которым мы получим результат. Паттерн очень прост в использовании и практически не имеет минусов. Единственный недостаток — нужно создавать дополнительные классы и сущности, но это свойственно большинству паттернов проектирования."),
             
             Question(question: ["Во время реализации паттерна Стратегия, желательно ли создавать разные файлы для каждой стратегии?",
@@ -69,7 +69,7 @@ class BehavioralPatternsSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 198297244,
+                     id: 198297244,
                      helpText: "Да. На каждую стратегию желательно создавать отдельный файл с кодом."),
             
             Question(question: ["Поведенческий паттерн проектирования, который позволяет добавлять в программу новые операции, не изменяя классы объектов, над которыми эти операции могут выполняться?"],
@@ -78,7 +78,7 @@ class BehavioralPatternsSet {
                      optionB: "Template Method",
                      optionC: "Strategy",
                      optionD: "State",
-                     questionId: 271701180,
+                     id: 271701180,
                      helpText: """
                      Visitor. Visitor (посетитель) — это поведенческий паттерн проектирования, который позволяет добавлять в программу новые операции, не изменяя классы объектов, над которыми эти операции могут выполняться.
                      
@@ -98,7 +98,7 @@ class BehavioralPatternsSet {
                      optionB: "NotificationCenter",
                      optionC: "Собственная обертка",
                      optionD: "",
-                     questionId: 390289708,
+                     id: 390289708,
                      helpText: """
                      KVO (key-value observing). Это механизм для реализации observer, пришедший из Objective-C.
                      
@@ -114,7 +114,7 @@ class BehavioralPatternsSet {
                      optionB: "Снимок",
                      optionC: "Посетитель",
                      optionD: "",
-                     questionId: 416872371,
+                     id: 416872371,
                      helpText: "Наблюдатель. Наблюдатель — это поведенческий паттерн проектирования, который создаёт механизм подписки, позволяющий одним объектам следить и реагировать на события, происходящие в других объектах."),
             
             Question(question: ["Паттерн, который используется для того, чтобы при работе с объектом была возможность его сохранить и впоследствии восстановить",
@@ -124,7 +124,7 @@ class BehavioralPatternsSet {
                      optionB: "Observer",
                      optionC: "State",
                      optionD: "Strategy",
-                     questionId: 607327739,
+                     id: 607327739,
                      helpText: """
                      Memento. Этот паттерн (в переводе — хранитель) используется для того, чтобы при работе с объектом была возможность его сохранить и впоследствии восстановить.
                      
@@ -141,7 +141,7 @@ class BehavioralPatternsSet {
                      optionB: "Singleton",
                      optionC: "Visitor",
                      optionD: "Flyweight",
-                     questionId: 208778977,
+                     id: 208778977,
                      helpText: """
                      Adapter. Adapter (адаптер) — поведенческий шаблон проектирования. Он позволяет несовместимым интерфейсам работать вместе. Представьте, что у вас есть код, который вы или не можете менять (например, он находится внутри закрытого фреймворка), или очень не хотите этого делать.
                      
@@ -156,7 +156,7 @@ class BehavioralPatternsSet {
                      optionB: "Посетитель",
                      optionC: "Цепочка обязанностей",
                      optionD: "",
-                     questionId: 281404818,
+                     id: 281404818,
                      helpText: "Шаблонный метод. Шаблонный метод — это поведенческий паттерн проектирования, который определяет скелет алгоритма, перекладывая ответственность за некоторые его шаги на подклассы. Паттерн позволяет подклассам переопределять шаги алгоритма, не меняя его общей структуры."),
             
             Question(question: ["При использовании какого паттерна мы создаем Originator и Caretaker?",
@@ -167,7 +167,7 @@ class BehavioralPatternsSet {
                      optionB: "State",
                      optionC: "Builder",
                      optionD: "Factory",
-                     questionId: 818955557,
+                     id: 818955557,
                      helpText: """
                      Memento. В паттерне Memento есть три участника:
                      1. Originator — объект, который требуется сохранить и впоследствии восстановить.
@@ -182,7 +182,7 @@ class BehavioralPatternsSet {
                      optionB: "Delegate",
                      optionC: "State",
                      optionD: "Prototype",
-                     questionId: 743799560,
+                     id: 743799560,
                      helpText: """
                      Adapter. В какой-то момент вы решаете улучшить приложение, применив стороннюю библиотеку аналитики. Но вот беда — библиотека поддерживает только формат данных JSON, несовместимый с вашим приложением. Вы смогли бы переписать библиотеку, чтобы та поддерживала формат XML.
                      
@@ -198,7 +198,7 @@ class BehavioralPatternsSet {
                      optionB: "Посредник",
                      optionC: "Цепочка обязанностей",
                      optionD: "",
-                     questionId: 590842551,
+                     id: 590842551,
                      helpText: """
                      Итератор. Нетривиальные алгоритмы обхода структуры данных могут иметь довольно объёмный код. Этот код будет захламлять всё вокруг — будь то сам класс коллекции или часть бизнес-логики программы.
                      
@@ -213,7 +213,7 @@ class BehavioralPatternsSet {
                      optionB: "State",
                      optionC: "Builder",
                      optionD: "Factory",
-                     questionId: 283771135,
+                     id: 283771135,
                      helpText: "Memento. При сохранении игры Memento использует JSONEncoder и сохраняет полученные данные в UserDefaults. Для загрузки он берет данные из UserDefaults и с помощью JSONDecoder превращает их в объект. Если что-то не получилось, то выбрасываем из функции ошибку."),
             
             Question(question: ["Поведенческий паттерн проектирования, который позволяет сохранять и восстанавливать прошлые состояния объектов",
@@ -224,7 +224,7 @@ class BehavioralPatternsSet {
                      optionB: "State",
                      optionC: "Builder",
                      optionD: "Factory",
-                     questionId: 882501707,
+                     id: 882501707,
                      helpText: "Memento. Memento — это поведенческий паттерн проектирования, который позволяет сохранять и восстанавливать прошлые состояния объектов, не раскрывая подробностей их реализации."),
             
             Question(question: ["Поведенческий шаблон проектирования, который предназначен для распределения обработки сообщения / события между разными объектами.",
@@ -235,7 +235,7 @@ class BehavioralPatternsSet {
                      optionB: "Strategy",
                      optionC: "Visitor",
                      optionD: "Observer",
-                     questionId: 310211970,
+                     id: 310211970,
                      helpText: """
                      Chain of Responsibility. Паттерн Chain of Responsibility (цепочка обязанностей) — поведенческий шаблон проектирования. Он предназначен для распределения обработки сообщения / события между разными объектами.
                      
@@ -253,7 +253,7 @@ class BehavioralPatternsSet {
                      optionB: "State",
                      optionC: "Builder",
                      optionD: "Factory",
-                     questionId: 784927707,
+                     id: 784927707,
                      helpText: "Memento."),
             
             Question(question: ["Поведенческий шаблон проектирования, в котором центральную роль играют команды, становящиеся отдельными объектами (то, что должно быть выполнено, но через какое-то время)",
@@ -264,7 +264,7 @@ class BehavioralPatternsSet {
                      optionB: "Composite",
                      optionC: "Chain Of Responsibility",
                      optionD: "Mediator",
-                     questionId: 973552784,
+                     id: 973552784,
                      helpText: """
                      Command. Паттерн Command (команда) — поведенческий шаблон проектирования. В этом паттерне центральную роль играют команды, которые становятся отдельными объектами.
                      
@@ -280,7 +280,7 @@ class BehavioralPatternsSet {
                      optionB: "Mediator",
                      optionC: "Command",
                      optionD: "",
-                     questionId: 678415780,
+                     id: 678415780,
                      helpText: """
                      Iterator. Преимущества и недостатки паттерна \"Итератор (Iterator)\":
                      
@@ -298,7 +298,7 @@ class BehavioralPatternsSet {
                      optionB: "Proxy",
                      optionC: "Memento",
                      optionD: "Delegate",
-                     questionId: 778330262,
+                     id: 778330262,
                      helpText: """
                      Mediator. Паттерн Mediator (посредник) — поведенческий шаблон проектирования. Он применяется в системе, где есть много взаимодействующих друг с другом объектов, чтобы уменьшить связность между ними.
                      
@@ -311,7 +311,7 @@ class BehavioralPatternsSet {
                      optionB: "Prototype",
                      optionC: "Command",
                      optionD: "Mediator",
-                     questionId: 847863600,
+                     id: 847863600,
                      helpText: "State. В зависимости от состояния отображается разная информация, и нажатие обрабатывается по-своему. В этом суть паттерна State."),
             
             Question(question: ["В чем отличие паттерна State от паттерна Strategy?",
@@ -322,7 +322,7 @@ class BehavioralPatternsSet {
                      optionB: "Только в названии",
                      optionC: "State не затрагивает логику",
                      optionD: "Strategy изменяет UI приложения",
-                     questionId: 229965242,
+                     id: 229965242,
                      helpText: """
                      State затрагивает UI и логику. Отличие состоит в том, что состояние хранится приложением, и обязательно произойдет переход из одного состояния в другое.
                      
@@ -338,7 +338,7 @@ class BehavioralPatternsSet {
                      optionB: "Proxy",
                      optionC: "Memento",
                      optionD: "Delegate",
-                     questionId: 842259814,
+                     id: 842259814,
                      helpText: "State."),
             
             Question(question: ["Структура какого паттерна состоит из трех объектов, Invoker -> Command -> Receiver?",
@@ -349,7 +349,7 @@ class BehavioralPatternsSet {
                      optionB: "Receiver",
                      optionC: "Factory",
                      optionD: "Abstract Invoker",
-                     questionId: 635319769,
+                     id: 635319769,
                      helpText: """
                      Command. Рассмотрим структуру паттерна Command. Она состоит из трех объектов: Invoker -> Command -> Receiver.
                      
@@ -368,7 +368,7 @@ class BehavioralPatternsSet {
                      optionB: "Prototype",
                      optionC: "Command",
                      optionD: "Mediator",
-                     questionId: 847937235,
+                     id: 847937235,
                      helpText: "State. Паттерн State (состояние) — поведенческий шаблон проектирования. По его названию понятно, что этот паттерн работает с состояниями объекта. Их может быть несколько, и в зависимости от них будет реализовываться поведение."),
             
             Question(question: ["Какой паттерн позволяет реализовать логирование (запись действий приложения в лог)?",
@@ -379,7 +379,7 @@ class BehavioralPatternsSet {
                      optionB: "Receiver",
                      optionC: "Factory",
                      optionD: "Invoker",
-                     questionId: 867698871,
+                     id: 867698871,
                      helpText: """
                      Command. Логирование. Это запись действий приложения в лог — отдельный файл, который можно хранить на клиенте и при необходимости достать, чтобы отправить на сервер (а там уже разработчики будут смотреть логи и выяснять, что привело к ошибке в приложении).
                      
@@ -396,7 +396,7 @@ class BehavioralPatternsSet {
                      optionB: "Chain of Responsibility",
                      optionC: "Colleague",
                      optionD: "Proxy",
-                     questionId: 791316674,
+                     id: 791316674,
                      helpText: """
                      Mediator. Классический вариант использования паттерна Mediator. По структуре: в паттерне два действующих лица — mediator и colleague.
                      
@@ -412,7 +412,7 @@ class BehavioralPatternsSet {
                      optionB: "Prototype",
                      optionC: "Decorator",
                      optionD: "Visitor",
-                     questionId: 245910024,
+                     id: 245910024,
                      helpText: """
                      State. Паттерн Состояние (State) невозможно рассматривать в отрыве от концепции машины состояний, также известной как стейт-машина или конечный автомат.
                      
@@ -429,7 +429,7 @@ class BehavioralPatternsSet {
                      optionB: "Prototype",
                      optionC: "Delegate",
                      optionD: "Decorator",
-                     questionId: 348678825,
+                     id: 348678825,
                      helpText: """
                      State. Преимущества и недостатки паттерна State (состояние):
                      
@@ -446,7 +446,7 @@ class BehavioralPatternsSet {
                      optionB: "Composite",
                      optionC: "Chain of Responsibility",
                      optionD: "Mediator",
-                     questionId: 464601418,
+                     id: 464601418,
                      helpText: """
                      Command. Преимущества и недостатки паттерна Command (команда):
                      
@@ -464,7 +464,7 @@ class BehavioralPatternsSet {
                      optionB: "Adapter",
                      optionC: "Bridge",
                      optionD: "Composite",
-                     questionId: 473257212,
+                     id: 473257212,
                      helpText: """
                      Chain of Responsibility. Преимущества и недостатки паттерна Chain of Responsibility (цепочка обязанностей):
                      
@@ -481,7 +481,7 @@ class BehavioralPatternsSet {
                      optionB: "Abstract Factory",
                      optionC: "Builder",
                      optionD: "Prototype",
-                     questionId: 749266562,
+                     id: 749266562,
                      helpText: """
                      Mediator. Преимущества и недостатки паттерна Mediator (посредник):
                      
@@ -497,7 +497,7 @@ class BehavioralPatternsSet {
                      optionB: "Delegate",
                      optionC: "Strategy",
                      optionD: "",
-                     questionId: 303753462,
+                     id: 303753462,
                      helpText: "Chain of Responsibility. Цепочка обязанностей — это поведенческий паттерн проектирования, который позволяет передавать запросы последовательно по цепочке обработчиков. Каждый последующий обработчик решает, может ли он обработать запрос сам и стоит ли передавать запрос дальше по цепи."),
             
             Question(question: ["Какой паттерн проиллюстрирован?",
@@ -507,7 +507,7 @@ class BehavioralPatternsSet {
                      optionB: "Command",
                      optionC: "Memento",
                      optionD: "",
-                     questionId: 718307653,
+                     id: 718307653,
                      helpText: "Iterator. Итератор — это поведенческий паттерн проектирования, который даёт возможность последовательно обходить элементы составных объектов, не раскрывая их внутреннего представления."),
             
             Question(question: ["Какой паттерн изображен на иллюстрации?"],
@@ -516,7 +516,7 @@ class BehavioralPatternsSet {
                      optionB: "Команда",
                      optionC: "Наблюдатель",
                      optionD: "Стратегия",
-                     questionId: 773084067,
+                     id: 773084067,
                      helpText: "Посредник. Посредник — это поведенческий паттерн проектирования, который позволяет уменьшить связанность множества классов между собой, благодаря перемещению этих связей в один класс-посредник."),
             
             Question(question: ["Какой паттерн изображен на иллюстрации?"],
@@ -525,7 +525,7 @@ class BehavioralPatternsSet {
                      optionB: "Посетитель (Visitor)",
                      optionC: "Состояние (State)",
                      optionD: "",
-                     questionId: 416518877,
+                     id: 416518877,
                      helpText: "Снимок (Memento). Снимок — это поведенческий паттерн проектирования, который позволяет сохранять и восстанавливать прошлые состояния объектов, не раскрывая подробностей их реализации."),
             
             Question(question: ["Какой паттерн проиллюстрирован на изображении?"],
@@ -534,7 +534,7 @@ class BehavioralPatternsSet {
                      optionB: "Visitor",
                      optionC: "Iterator",
                      optionD: "State",
-                     questionId: 239181695,
+                     id: 239181695,
                      helpText: "Observer. Наблюдатель — это поведенческий паттерн проектирования, который создаёт механизм подписки, позволяющий одним объектам следить и реагировать на события, происходящие в других объектах."),
             
             Question(question: ["Какой поведенческий паттерн на изображении?"],
@@ -543,7 +543,7 @@ class BehavioralPatternsSet {
                      optionB: "Chain of Responsibility",
                      optionC: "Mediator",
                      optionD: "",
-                     questionId: 909903148,
+                     id: 909903148,
                      helpText: "Command. Команда — это поведенческий паттерн проектирования, который превращает запросы в объекты, позволяя передавать их как аргументы при вызове методов, ставить запросы в очередь, логировать их, а также поддерживать отмену операций."),
             
             Question(question: ["Какой поведенческий паттерн на изображении?"],
@@ -552,7 +552,7 @@ class BehavioralPatternsSet {
                      optionB: "Adapter",
                      optionC: "Strategy",
                      optionD: "",
-                     questionId: 589864072,
+                     id: 589864072,
                      helpText: "State. Состояние — это поведенческий паттерн проектирования, который позволяет объектам менять поведение в зависимости от своего состояния. Извне создаётся впечатление, что изменился класс объекта."),
             
             Question(question: ["Какой поведенческий паттерн на изображении?"],
@@ -561,7 +561,7 @@ class BehavioralPatternsSet {
                      optionB: "State (Состояние)",
                      optionC: "",
                      optionD: "",
-                     questionId: 192002175,
+                     id: 192002175,
                      helpText: "Strategy (Стратегия). Стратегия — это поведенческий паттерн проектирования, который определяет семейство схожих алгоритмов и помещает каждый из них в собственный класс, после чего алгоритмы можно взаимозаменять прямо во время исполнения программы."),
             
             Question(question: ["Какой поведенческий паттерн на изображении?"],
@@ -570,7 +570,7 @@ class BehavioralPatternsSet {
                      optionB: "Стратегия",
                      optionC: "Снимок",
                      optionD: "Наблюдатель",
-                     questionId: 236890373,
+                     id: 236890373,
                      helpText: "Шаблонный метод. Template Method — это поведенческий паттерн проектирования, который определяет скелет алгоритма, перекладывая ответственность за некоторые его шаги на подклассы. Паттерн позволяет подклассам переопределять шаги алгоритма, не меняя его общей структуры."),
             
             Question(question: ["Какой поведенческий паттерн на изображении?"],
@@ -579,7 +579,7 @@ class BehavioralPatternsSet {
                      optionB: "Наблюдатель",
                      optionC: "Команда",
                      optionD: "",
-                     questionId: 673309131,
+                     id: 673309131,
                      helpText: "Visitor. Посетитель — это поведенческий паттерн проектирования, который позволяет добавлять в программу новые операции, не изменяя классы объектов, над которыми эти операции могут выполняться.")
         ]
     }

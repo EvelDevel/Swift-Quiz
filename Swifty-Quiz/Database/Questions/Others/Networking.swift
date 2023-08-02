@@ -20,7 +20,7 @@ class Networking {
                      optionB: "Request",
                      optionC: "",
                      optionD: "",
-                     questionId: 712549630,
+                     id: 712549630,
                      helpText: """
                      Response. Взаимодействие с сервером состоит из операций запроса (Request) и ответа (Response). Клиент отправляет на сервер запрос, сервер обрабатывает его и возвращает ответ.
                      
@@ -36,7 +36,7 @@ class Networking {
                      optionB: "Response",
                      optionC: "",
                      optionD: "",
-                     questionId: 938455752,
+                     id: 938455752,
                      helpText: """
                      Request. Взаимодействие с сервером состоит из операций запроса (Request) и ответа (Response). Клиент отправляет на сервер запрос (HTTP Request), сервер обрабатывает его и возвращает ответ.
                                           
@@ -51,7 +51,7 @@ class Networking {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 529876300,
+                     id: 529876300,
                      helpText: """
                      Нет. HTTP протокол описывает взаимодействие между двумя компьютерами (клиентом и сервером), построенное на базе сообщений, называемых запросами (Request) и ответ (Response). Каждое сообщение состоит из трех частей: стартовая строка, заголовки и тело. При этом обязательной является только стартовая строка.
                      """),
@@ -64,7 +64,7 @@ class Networking {
                      optionB: "Заголовок (header)",
                      optionC: "Тело запроса (message body)",
                      optionD: "",
-                     questionId: 490229700,
+                     id: 490229700,
                      helpText: """
                      Тип запроса (HTTP-method). При выполнении HTTP Request - тип запроса определяет действие, которое вы желаете совершить на сервере. Вы можете отправлять запрос на один и тот же URI, но, в зависимости от метода, действия на сервере будут совершаться разные.
                      
@@ -82,7 +82,7 @@ class Networking {
                      optionB: "PUT",
                      optionC: "HEAD",
                      optionD: "",
-                     questionId: 182375931,
+                     id: 182375931,
                      helpText: """
                      GET. При выполнении HTTP Request - тип запроса определяет действие, которое вы желаете совершить на сервере. В зависимости от метода, действия на сервере будут совершаться разные.
                      
@@ -100,7 +100,7 @@ class Networking {
                      optionB: "CONNECT",
                      optionC: "PUT",
                      optionD: "",
-                     questionId: 652587483,
+                     id: 652587483,
                      helpText: """
                      POST. При выполнении HTTP Request - тип запроса определяет действие, которое вы желаете совершить на сервере. В зависимости от метода, действия на сервере будут совершаться разные.
                      
@@ -118,7 +118,7 @@ class Networking {
                      optionB: "PATCH",
                      optionC: "DELETE",
                      optionD: "",
-                     questionId: 457126383,
+                     id: 457126383,
                      helpText: """
                      PUT. При выполнении HTTP Request - тип запроса определяет действие, которое вы желаете совершить на сервере. В зависимости от метода, действия на сервере будут совершаться разные.
                      
@@ -136,7 +136,7 @@ class Networking {
                      optionB: "GET",
                      optionC: "TRACE",
                      optionD: "",
-                     questionId: 423597156,
+                     id: 423597156,
                      helpText: """
                      DELETE. При выполнении HTTP Request - тип запроса определяет действие, которое вы желаете совершить на сервере. В зависимости от метода, действия на сервере будут совершаться разные.
                      
@@ -157,7 +157,7 @@ class Networking {
                      optionB: "В теле (message body)",
                      optionC: "В параметрах",
                      optionD: "",
-                     questionId: 183492562,
+                     id: 183492562,
                      helpText: """
                      В заголовках (headers). Заголовки нужны, чтобы передавать различную вспомогательную информацию.
                      
@@ -172,7 +172,7 @@ class Networking {
                      optionB: "В заголовке (header)",
                      optionC: "Через параметры",
                      optionD: "",
-                     questionId: 608104939,
+                     id: 608104939,
                      helpText: """
                      В теле (message body). Тело запроса может быть пустым либо содержать информацию, которую необходимо передать на сервер, например, там может быть массив параметров или файл для загрузки.
                      """),
@@ -185,7 +185,7 @@ class Networking {
                      optionB: "GET",
                      optionC: "PUT",
                      optionD: "func",
-                     questionId: 820991515,
+                     id: 820991515,
                      helpText: """
                      https. Схема обращения к ресурсу, как правило, имеется в виду сетевая, но могут быть и другие варианты: http, https, ftp, mailto, telnet, file.
                      
@@ -200,7 +200,7 @@ class Networking {
                      optionB: "PUT",
                      optionC: "www",
                      optionD: "",
-                     questionId: 659103651,
+                     id: 659103651,
                      helpText: """
                      http. Схема обращения к ресурсу, как правило, имеется в виду сетевая, но могут быть и другие варианты: http, https, ftp, mailto, telnet, file.
                      
@@ -217,7 +217,7 @@ class Networking {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 330625012,
+                     id: 330625012,
                      helpText: """
                      Да. Чаще всего вы будете работать с json. Это современный, простой и легкий формат, в котором тоже можно описать любую структуру данных.
                      
@@ -234,7 +234,7 @@ class Networking {
                      optionB: "response, error",
                      optionC: "data, error",
                      optionD: "",
-                     questionId: 610015317,
+                     id: 610015317,
                      helpText: """
                      data, response, error.
                      
@@ -263,7 +263,7 @@ class Networking {
                      """,
                      optionC: "",
                      optionD: "",
-                     questionId: 735552965,
+                     id: 735552965,
                      helpText: """
                      Информационные, Успех, Перенаправление, Ошибка клиента, Ошибка сервера.
                      
@@ -283,7 +283,7 @@ class Networking {
                      optionB: "Created (создано)",
                      optionC: "Accepted (принято)",
                      optionD: "",
-                     questionId: 864619326,
+                     id: 864619326,
                      helpText: """
                      OK (хорошо). 200 OK — успешный запрос. Если клиентом были запрошены какие-либо данные, то они находятся в заголовке и/или теле сообщения. Появился в HTTP/1.0.
                      
@@ -298,7 +298,7 @@ class Networking {
                      optionB: "Unauthorized (не авторизован)",
                      optionC: "Forbidden (запрещено)",
                      optionD: "",
-                     questionId: 351801650,
+                     id: 351801650,
                      helpText: """
                      Bad Request (некорректный запрос). 400 Bad Request — сервер обнаружил в запросе клиента синтаксическую ошибку. Появился в HTTP/1.0.
                      
@@ -313,7 +313,7 @@ class Networking {
                      optionB: "Bad Gateway",
                      optionC: "Not Implemented",
                      optionD: "",
-                     questionId: 176421222,
+                     id: 176421222,
                      helpText: """
                      Internal Server Error. 500 Internal Server Error — любая внутренняя ошибка сервера, которая не входит в рамки остальных ошибок класса. Появился в HTTP/1.0.
                      
@@ -328,7 +328,7 @@ class Networking {
                      optionB: "1хх",
                      optionC: "3хх",
                      optionD: "",
-                     questionId: 894945820,
+                     id: 894945820,
                      helpText: """
                      2хх. Успех. Сообщения данного класса информируют о случаях успешного принятия и обработки запроса клиента. В зависимости от статуса сервер может ещё передать заголовки и тело сообщения.
                      
@@ -343,7 +343,7 @@ class Networking {
                      optionB: "2xx",
                      optionC: "5xx",
                      optionD: "",
-                     questionId: 351972900,
+                     id: 351972900,
                      helpText: """
                      3xx. Перенаправление. Коды этого класса сообщают клиенту, что для успешного выполнения операции необходимо сделать другой запрос, как правило, по другому URI.
                      
@@ -358,7 +358,7 @@ class Networking {
                      optionB: "5хх",
                      optionC: "2хх",
                      optionD: "",
-                     questionId: 144779486,
+                     id: 144779486,
                      helpText: """
                      4хх. Ошибка клиента. Класс кодов 4xx предназначен для указания ошибок со стороны клиента.
                      
@@ -375,7 +375,7 @@ class Networking {
                      optionB: "4хх",
                      optionC: "1хх",
                      optionD: "",
-                     questionId: 776876050,
+                     id: 776876050,
                      helpText: """
                      5хх. Ошибка сервера. Коды 5xx выделены под случаи необработанных исключений при выполнении операций на стороне сервера.
                      
@@ -404,7 +404,7 @@ class Networking {
                      null.
                      """,
                      optionD: "",
-                     questionId: 669203162,
+                     id: 669203162,
                      helpText: """
                      Строка; число; логический; null. JSON поддерживает следующие типы данных: Объекты { ... }; Массивы [ ... ], строки, числа, логические значения true / false, null.
                      """),
@@ -418,7 +418,7 @@ class Networking {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 460308922,
+                     id: 460308922,
                      helpText: """
                      Да. JSON поддерживает следующие типы данных: Объекты { ... }; Массивы [ ... ], строки, числа, логические значения true / false, null.
                      """),
@@ -431,7 +431,7 @@ class Networking {
                      optionB: "Equtable",
                      optionC: "CodingKeys",
                      optionD: "",
-                     questionId: 639758050,
+                     id: 639758050,
                      helpText: """
                      Codable. Чтобы кодировать и декодировать пользовательский тип, мы должны сделать его Codable.
                      
@@ -446,7 +446,7 @@ class Networking {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 66632545,
+                     id: 66632545,
                      helpText: """
                      Да. Нативные Codable типы в Swift:  String, Int, Double, Data, URL, Bool.
                      

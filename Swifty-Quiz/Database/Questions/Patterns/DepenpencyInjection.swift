@@ -17,7 +17,7 @@ class DepenpencyInjection {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 656770121,
+                     id: 656770121,
                      helpText: """
                      Нет. Одним из способов доставки зависимостей к классам является DI (Dependency Injection). В настоящее время это наиболее распространенный паттерн.
                      
@@ -30,7 +30,7 @@ class DepenpencyInjection {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 138183352,
+                     id: 138183352,
                      helpText: """
                      Да. D в SOLID отвечает за DIP - dependency inversion principle (принцип инверсии зависимостей), или инверсия управления (IoC - Inversion of Control): «Зависимость на Абстракциях. Нет зависимости на что-то конкретное».
                      
@@ -45,7 +45,7 @@ class DepenpencyInjection {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 915216712,
+                     id: 915216712,
                      helpText: """
                      Да. Одним из способов доставки зависимостей к классам является DI (Dependency Injection). В настоящее время это наиболее распространенный паттерн.
                      
@@ -58,7 +58,7 @@ class DepenpencyInjection {
                      optionB: "Снаружи DI контейнера",
                      optionC: "Оба варианта неверны",
                      optionD: "",
-                     questionId: 561542372,
+                     id: 561542372,
                      helpText: """
                      Внутри DI контейнера. Одним из способов доставки зависимостей к классам является DI (Dependency Injection).
                      
@@ -71,7 +71,7 @@ class DepenpencyInjection {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 718822701,
+                     id: 718822701,
                      helpText: """
                      Да. Dependency Injection поощряет вынос порождающей логики за предели классов. Всю ответственность по сборке на себя берут так называемые «фабрики».
                      
@@ -88,7 +88,7 @@ class DepenpencyInjection {
                      optionB: "Property Injection",
                      optionC: "Method Injection",
                      optionD: "Constructor Injection",
-                     questionId: 208178259,
+                     id: 208178259,
                      helpText: """
                      Strong Injection. Существует три основных разновидности DI:
                      
@@ -105,7 +105,7 @@ class DepenpencyInjection {
                      optionB: "Method Injection",
                      optionC: "",
                      optionD: "",
-                     questionId: 234124975,
+                     id: 234124975,
                      helpText: """
                      Constructor Injection. Constructor Injection / Initializer Injection — внедрение зависимостей через конструктор.
                      
@@ -120,7 +120,7 @@ class DepenpencyInjection {
                      optionB: "Method Injection",
                      optionC: "Strong Injection",
                      optionD: "",
-                     questionId: 773583634,
+                     id: 773583634,
                      helpText: "Property Injection. Property Injection — внедрение зависимостей через свойства. Этот способ используется, когда у класса имеются необязательные зависимости, без которых он может обойтись, или когда зависимости могут изменяться не только на этапе инициализации объекта."),
             
             Question(question: ["Какая разновидность DI используется, когда необходимо внедрить временную зависимость только на момент выполнения какого-либо действия"],
@@ -129,7 +129,7 @@ class DepenpencyInjection {
                      optionB: "Constructor Injection",
                      optionC: "Initializer Injection",
                      optionD: "",
-                     questionId: 418233554,
+                     id: 418233554,
                      helpText: "Method Injection. Method Injection — внедрение зависимостей через метод. Этот способ очень похож на Property Injection, но с его помощью можно внедрить временную зависимость только на момент выполнения какого-либо действия или более тесно связать внедрение зависимости с логикой класса."),
             
             Question(question: ["Эта разновидность DI используется, когда все зависимости объявлены в качестве аргументов инициализатора"],
@@ -138,7 +138,7 @@ class DepenpencyInjection {
                      optionB: "Property Injection",
                      optionC: "",
                      optionD: "",
-                     questionId: 415735572,
+                     id: 415735572,
                      helpText: """
                      Constructor Injection. Constructor Injection / Initializer Injection — внедрение зависимостей через конструктор.
                      
@@ -153,7 +153,7 @@ class DepenpencyInjection {
                      optionB: "Method Injection",
                      optionC: "Interface Injection",
                      optionD: "",
-                     questionId: 773583634,
+                     id: 773583634,
                      helpText: "Property Injection. Property Injection — внедрение зависимостей через свойства. Этот способ используется, когда у класса имеются необязательные зависимости, без которых он может обойтись, или когда зависимости могут изменяться не только на этапе инициализации объекта."),
             
             Question(question: ["Будет ли являться инициализация подобной константы let someService = SomeService() внутри класса - внедрением зависимости?"],
@@ -162,7 +162,7 @@ class DepenpencyInjection {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 771527552,
+                     id: 771527552,
                      helpText: "Нет. Мы создаем внешнюю зависимость, но создаем ее локально. Мы ничего не внедряем в наш класс извне (а это главная отличительная черта внедрения зависимостей). Зависимость - это любой посторонний объект, который используется нашим классом, или на который наш класс рассчитывает."),
             
             Question(question: ["Если наш класс обращается к shared instance другого класса, с намерением стабильно получать определенный функционал - будет ли это считаться зависимостью?"],
@@ -171,7 +171,7 @@ class DepenpencyInjection {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 139027591,
+                     id: 139027591,
                      helpText: """
                      Да. Зависимость - это любой посторонний объект, который используется нашим классом, или на который наш класс рассчитывает.
                      
@@ -184,7 +184,7 @@ class DepenpencyInjection {
                      optionB: "Constructor Injection",
                      optionC: "Ни через какой",
                      optionD: "",
-                     questionId: 872613825,
+                     id: 872613825,
                      helpText: """
                      Property Injection. При всей популярности property injection, он создает большое количество опциональных типов вокруг себя, и лучше использовать внедрение через инициализатор (конструктор).
                      
@@ -199,7 +199,7 @@ class DepenpencyInjection {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 779969533,
+                     id: 779969533,
                      helpText: "Да. Внедрение паттерна Dependency Injection улучшает тестирование вашей архитектуры. После внедрения DI ваши классы зависят от протоколов (чаще всего), объекты которых легко подменить / имитировать фиктивными объектами классов для тестов."),
             
             Question(question: ["Внедрение Dependency Injection ваш проект увеличивает связанность (coupling) объектов в проекте, или уменьшает?"],
@@ -208,7 +208,7 @@ class DepenpencyInjection {
                      optionB: "Увеличивает",
                      optionC: "",
                      optionD: "",
-                     questionId: 173941371,
+                     id: 173941371,
                      helpText: "Уменьшает. Внедрение Dependency Injection в проект уменьшает связь между вашим классом и другими. Все зависимости внедряются в ваш класс извне, и каждый компонент / класс несет свою ответственность (Single-responsibility principle)."),
         ]
     }

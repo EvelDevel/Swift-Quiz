@@ -18,7 +18,7 @@ class AppLifecycleSet {
                      optionB: "UIApplicationDelegate",
                      optionC: "UIWindow",
                      optionD: "",
-                     questionId: 529552751,
+                     id: 529552751,
                      helpText: """
                      UIWindowSceneDelegate. Когда состояние вашего приложения меняется, UIKit уведомляет вас, вызывая соответствующие методы делегата: В iOS 13 и выше, используется объект UISceneDelegate для обработки событий жизненного цикла приложения, а в iOS 12 и ниже - используется объект UIApplicationDelegate для обработки этих же событий.
                      """),
@@ -29,7 +29,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 416919708,
+                     id: 416919708,
                      helpText: """
                      Да. Используйте деактивацию, чтобы сохранить данные пользователя и перевести приложение в \"тихое\" состояние, приостановив всю основную работу; конкретно:
                      
@@ -47,7 +47,7 @@ class AppLifecycleSet {
                      optionB: "applicationWillResignActive(_:)",
                      optionC: "",
                      optionD: "",
-                     questionId: 920106021,
+                     id: 920106021,
                      helpText: "sceneWillResignActive(_:). Во время деактивации UIKit вызывает один из следующих методов вашего приложения: Для приложений, поддерживающих сцены, - метод sceneWillResignActive(_:) соответствующего объекта делегата сцены. Для всех других приложений - метод applicationWillResignActive(_:) объекта делегата приложения."),
             
             Question(question: ["При переходе к какому состоянию вам необходимо завершить важные все задачи и освободите как можно больше памяти (при поддержке UIWindowSceneDelegate)?"],
@@ -56,7 +56,7 @@ class AppLifecycleSet {
                      optionB: "Feroground Active",
                      optionC: "Unnatached",
                      optionD: "",
-                     questionId: 444761302,
+                     id: 444761302,
                      helpText: """
                      Background. Используйте переходы между сценами для выполнения следующих задач: Перед тем как войти в фоновое (Background) состояние, завершите важные задачи и освободите как можно больше памяти.
                      
@@ -69,7 +69,7 @@ class AppLifecycleSet {
                      optionB: "UIApplicationDelegate",
                      optionC: "",
                      optionD: "",
-                     questionId: 338828492,
+                     id: 338828492,
                      helpText: "UIWindowSceneDelegate. Вы можете поддерживать оба типа объектов делегата в своем приложении, но UIKit всегда использует объекты делегата сцены, когда они доступны. UIKit будет уведомлять только делегата конкретной сцены, которая уходит в фоновый режим."),
             
             Question(question: ["Какой метод SceneDelegate будет вызываться, когда сцена переходит в фоновый режим, и освобождается системой?"],
@@ -78,7 +78,7 @@ class AppLifecycleSet {
                      optionB: "sceneDidBecomeActive",
                      optionC: "sceneWillEnterForeground",
                      optionD: "",
-                     questionId: 926366347,
+                     id: 926366347,
                      helpText: """
                      sceneDidDisconnect. Метод sceneDidDisconnect вызывается, когда сцена освобождается системой. Это происходит вскоре после того, как сцена переходит в фоновый режим (background) или когда ее сессия отменяется.
                      
@@ -93,7 +93,7 @@ class AppLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 840329888,
+                     id: 840329888,
                      helpText: "Нет. В версиях iOS до 13, а также в приложениях, не поддерживающих сцены, UIKit доставляет все события жизненного цикла объекту UIApplicationDelegate."),
             
             Question(question: ["Этот метод AppDelegate сообщает вашему приложению, что оно будет завершено и полностью очищено из памяти"],
@@ -102,7 +102,7 @@ class AppLifecycleSet {
                      optionB: "applicationWillResignActive",
                      optionC: "applicationDidEnterBackground",
                      optionD: "",
-                     questionId: 173825679,
+                     id: 173825679,
                      helpText: """
                      applicationWillTerminate. Этот метод (applicationWillTerminate) сообщает вашему приложению, что оно будет завершено и полностью очищено из памяти.
                      
@@ -117,7 +117,7 @@ class AppLifecycleSet {
                      optionB: "applicationDidEnterBackground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "applicationWillTerminate",
-                     questionId: 636844612,
+                     id: 636844612,
                      helpText: "applicationWillResignActive. Когда приложение собирается перейти из состояния Active в состояние Inactive - будет вызываться метод applicationWillResignActive. В этом метод можно сохранять текущий статус изменяемых данных."),
             
             
@@ -140,7 +140,7 @@ class AppLifecycleSet {
                      """,
                      optionC: "",
                      optionD: "",
-                     questionId: 682116083,
+                     id: 682116083,
                      helpText: """
                      Пять: Not Running, Inactive, Active, Background, Suspended.
                      
@@ -157,7 +157,7 @@ class AppLifecycleSet {
                      optionB: "SceneDelegate",
                      optionC: "",
                      optionD: "",
-                     questionId: 754530381,
+                     id: 754530381,
                      helpText: """
                      AppDelegate. На этом рисунке показаны переходы между состояниями приложения с участием объекта UIApplicationDelegate. После запуска система переводит приложение в неактивное (inactive) или фоновое (background) состояние, в зависимости от того, появится ли пользовательский интерфейс на экране.
                      
@@ -170,7 +170,7 @@ class AppLifecycleSet {
                      optionB: "applicationWillEnterForeground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "",
-                     questionId: 203840076,
+                     id: 203840076,
                      helpText: "applicationDidEnterBackground. При переходе приложения в фоновый (background) режим будет вызываться метод applicationDidEnterBackground. Внутри этого метода мы можем сохранять текущую информацию о пользователе, или освобождать все используемые ресурсы, прекращать работу с базами данных."),
             
             Question(question: ["Выберите корректное название состояния: Приложение переходит в состояние переднего плана и может обрабатывать события"],
@@ -179,7 +179,7 @@ class AppLifecycleSet {
                      optionB: "Inactive",
                      optionC: "Not running",
                      optionD: "",
-                     questionId: 651977696,
+                     id: 651977696,
                      helpText: "Active. Активное состояние - Active state - приложение переходит в состояние переднего плана и может обрабатывать события."),
             
             Question(question: ["Какому объекту делегата придет уведомление в версии 12.4 при переходе между состояниями приложения?"],
@@ -188,7 +188,7 @@ class AppLifecycleSet {
                      optionB: "UISceneDelegate",
                      optionC: "Уведомления не отправляются",
                      optionD: "",
-                     questionId: 501012234,
+                     id: 501012234,
                      helpText: """
                      UIApplicationDelegate. Все переходы между состояниями приводят к отправке UIKit уведомлений соответствующему объекту делегата: В iOS 13 и новее - объект UISceneDelegate. В iOS 12 и ранее - объект UIApplicationDelegate.
                      
@@ -201,7 +201,7 @@ class AppLifecycleSet {
                      optionB: "sceneDidDisconnect",
                      optionC: "sceneWillResignActive",
                      optionD: "sceneDidEnterBackground",
-                     questionId: 339572396,
+                     id: 339572396,
                      helpText: "sceneDidBecomeActive. Метод sceneDidBecomeActive вызывается, когда сцена перемещается из неактивного состояния в активное. Используйте его для того, чтобы перезапустить все задачи, которые были на паузе в момент неактивности (inactive), или запустить новые задачи для активного состояния."),
             
             Question(question: ["Какие состояния (state) приложения происходят на переднем плане (foreground)?"],
@@ -210,7 +210,7 @@ class AppLifecycleSet {
                      optionB: "Active",
                      optionC: "Inactive, Suspended",
                      optionD: "",
-                     questionId: 910884914,
+                     id: 910884914,
                      helpText: """
                      Inactive, Active. Есть два основных состояния, которые происходят на переднем плане:
                      
@@ -225,7 +225,7 @@ class AppLifecycleSet {
                      optionB: "applicationWillResignActive",
                      optionC: "applicationWillEnterForeground",
                      optionD: "",
-                     questionId: 456494498,
+                     id: 456494498,
                      helpText: """
                      applicationDidBecomeActive. UIKit вызывает этот метод (applicationDidBecomeActive), чтобы ваше приложение знало, что оно перешло из неактивного состояния в активное.
                      
@@ -240,7 +240,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 461249376,
+                     id: 461249376,
                      helpText: """
                      Да. Убедитесь, что ваше приложение не удерживает системные ресурсы при переходе в фоновый режим.
                      
@@ -255,7 +255,7 @@ class AppLifecycleSet {
                      optionB: "sceneDidEnterBackground(_:)",
                      optionC: "sceneWillResignActive(_:)",
                      optionD: "",
-                     questionId: 144489361,
+                     id: 144489361,
                      helpText: """
                      sceneWillEnterForeground(_:). Во время старта приложения система запускает его в неактивном состоянии перед тем, как перевести его на передний план. Используйте методы этой фазы запуска для выполнения любой работы, необходимой в это время.
                      
@@ -270,7 +270,7 @@ class AppLifecycleSet {
                      optionB: "Feroground Inactive",
                      optionC: "Background",
                      optionD: "Unnatached",
-                     questionId: 414662380,
+                     id: 414662380,
                      helpText: """
                      Feroground Active. Используйте переходы между сценами для выполнения следующих задач: Когда UIKit подключает сцену к вашему приложению, настройте начальный пользовательский интерфейс вашей сцены и загрузите данные, которые нужны для нее.
                      
@@ -283,7 +283,7 @@ class AppLifecycleSet {
                      optionB: "sceneWillEnterForeground",
                      optionC: "sceneDidEnterBackground",
                      optionD: "sceneDidBecomeActive",
-                     questionId: 636844612,
+                     id: 636844612,
                      helpText: """
                      sceneWillResignActive. Когда приложение собирается перейти из состояния Active в состояние Inactive - будет вызываться метод sceneWillResignActive у SceneDelegate.
                      
@@ -296,7 +296,7 @@ class AppLifecycleSet {
                      optionB: "Suspended, Active",
                      optionC: "Background, Inactive",
                      optionD: "",
-                     questionId: 276654213,
+                     id: 276654213,
                      helpText: """
                      Background, Suspended. На заднем плане (background) существует два состояния:
                      
@@ -311,7 +311,7 @@ class AppLifecycleSet {
                      optionB: "Background",
                      optionC: "Not running",
                      optionD: "Inactive",
-                     questionId: 310485773,
+                     id: 310485773,
                      helpText: "Suspended. Приостановленное состояние - Suspended state - приложение находится в фоновом режиме (в памяти), но не выполняет код, и если в системе недостаточно памяти, она завершит работу вашего приложения."),
             
             Question(question: ["Какой метод SceneDelegate вызывается в момент, когда приложение переходит из состояния background в состояние foreground, но еще не становится активным (active)?"],
@@ -320,7 +320,7 @@ class AppLifecycleSet {
                      optionB: "sceneDidEnterBackground",
                      optionC: "sceneWillResignActive",
                      optionD: "",
-                     questionId: 762235574,
+                     id: 762235574,
                      helpText: """
                      sceneWillEnterForeground. Метод sceneWillEnterForeground у SceneDelegate вызывается в момент перехода приложения из background в foreground (перед тем, как оно выйдет на передний план). В этот момент приложение еще не будет активным.
                      
@@ -335,7 +335,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 126590352,
+                     id: 126590352,
                      helpText: """
                      Да. Вы можете реагировать на события жизненного цикла на основе сцен. Если ваше приложение поддерживает сцены, UIKit предоставляет отдельные события жизненного цикла для каждой.
                      
@@ -350,7 +350,7 @@ class AppLifecycleSet {
                      optionB: "Suspended",
                      optionC: "Not running",
                      optionD: "",
-                     questionId: 907149407,
+                     id: 907149407,
                      helpText: "Background. Фоновое состояние - Background state - в этом состоянии, если есть исполняемый код, он будет выполняться, а если исполняемого кода нет или выполнение завершено, приложение будет немедленно приостановлено."),
             
             Question(question: ["Перед выходом приложения в background режим мы должны удалить любую конфиденциальную информацию о пользователе с экрана, потому что будет сделано это"],
@@ -359,7 +359,7 @@ class AppLifecycleSet {
                      optionB: "Форматирование данных",
                      optionC: "Сохранение в песочницу",
                      optionD: "Синхронизация с iCloud",
-                     questionId: 210399725,
+                     id: 210399725,
                      helpText: """
                      Снимок экрана. После того, как ваше приложение переходит в фоновый режим, UIKit делает снимок текущего пользовательского интерфейса вашего приложения. Система отображает получившееся изображение в переключателе приложений (App switcher).
                      
@@ -374,7 +374,7 @@ class AppLifecycleSet {
                      optionB: "AppDelegate",
                      optionC: "",
                      optionD: "",
-                     questionId: 754530381,
+                     id: 754530381,
                      helpText: """
                      SceneDelegate. На этом рисунке отображены переходы состояний приложения для сцен (поддержка UIWindowSceneDelegate). Когда пользователь или система запрашивает новую сцену для вашего приложения, UIKit создает ее и переводит в неподключенное (unattached) состояние. Запрошенные пользователем сцены быстро перемещаются на передний план (foreground), где они появляются на экране.
                      
@@ -389,7 +389,7 @@ class AppLifecycleSet {
                      optionB: "applicationDidEnterBackground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "",
-                     questionId: 244482666,
+                     id: 244482666,
                      helpText: """
                      applicationWillEnterForeground. Метод applicationWillEnterForeground у AppDelegate вызывается в момент перехода приложения из background в foreground (перед тем, как оно выйдет на передний план).
                      
@@ -402,7 +402,7 @@ class AppLifecycleSet {
                      optionB: "sceneWillEnterForeground",
                      optionC: "sceneWillResignActive",
                      optionD: "",
-                     questionId: 887827704,
+                     id: 887827704,
                      helpText: """
                      sceneDidEnterBackground. Когда сцена переходит с переднего плана на задний (из foreground в background) будет вызываться метод sceneDidEnterBackground.
                      
@@ -416,7 +416,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 743099879,
+                     id: 743099879,
                      helpText: """
                      Да. Пользователь может создавать несколько сцен для каждого приложения, а также отображать и скрывать их по отдельности.
                      
@@ -431,7 +431,7 @@ class AppLifecycleSet {
                      optionB: "Да",
                      optionC: "На наше усмотрение",
                      optionD: "",
-                     questionId: 486517064,
+                     id: 486517064,
                      helpText: """
                      Нет. Когда ваше приложение работает в фоновом (background) режиме, оно должно выполнять как можно меньше задач, а желательно - ничего не выполнять.
                      
@@ -446,7 +446,7 @@ class AppLifecycleSet {
                      optionB: "configurationForConnecting:options",
                      optionC: "didDiscardSceneSessions",
                      optionD: "",
-                     questionId: 143287185,
+                     id: 143287185,
                      helpText: """
                      didFinishLaunchingWithOptions. Используйте этот метод у AppDelegate, чтобы завершить инициализацию вашего приложения и внести любые последние изменения.
                      
@@ -459,7 +459,7 @@ class AppLifecycleSet {
                      optionB: "didFinishLaunchingWithOptions",
                      optionC: "didDiscardSceneSessions",
                      optionD: "",
-                     questionId: 719962590,
+                     id: 719962590,
                      helpText: """
                      configurationForConnecting:options. Этот метод извлекает данные конфигурации, и предоставляет их UIKit при создании новой сцены.
                      
@@ -474,7 +474,7 @@ class AppLifecycleSet {
                      optionB: "sceneWillResignActive(_:)",
                      optionC: "",
                      optionD: "",
-                     questionId: 599075515,
+                     id: 599075515,
                      helpText: "applicationWillResignActive(_:). Во время деактивации UIKit вызывает один из следующих методов вашего приложения: Для приложений, поддерживающих сцены, - метод sceneWillResignActive(_:) соответствующего объекта делегата сцены. Для всех других приложений - метод applicationWillResignActive(_:) объекта делегата приложения."),
             
             Question(question: ["Выберите корректное название состояния: Приложение переходит в состояние переднего плана, но не получает и не обрабатывает события"],
@@ -483,7 +483,7 @@ class AppLifecycleSet {
                      optionB: "Active",
                      optionC: "Background",
                      optionD: "",
-                     questionId: 618210111,
+                     id: 618210111,
                      helpText: "Inactive. Неактивное состояние - Inactive state - приложение переходит в состояние переднего плана, но не получает и не обрабатывает события."),
             
             Question(question: ["Выберите корректное название состояния: Приложение не было запущено или остановлено системой"],
@@ -492,7 +492,7 @@ class AppLifecycleSet {
                      optionB: "Suspended",
                      optionC: "Inactive",
                      optionD: "",
-                     questionId: 724140113,
+                     id: 724140113,
                      helpText: "Not running. Состояние «Не запущено» - Not Running state - приложение не было запущено или остановлено системой."),
             
             Question(question: ["Обычно приложения не получают дополнительного времени на выполнение задач после перехода в фоновый режим. Есть ли из этого правила исключения?"],
@@ -501,7 +501,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 966160302,
+                     id: 966160302,
                      helpText: """
                      Да. Обычно приложения не получают дополнительного времени на выполнение задач после перехода в фоновый режим.
                      
@@ -516,7 +516,7 @@ class AppLifecycleSet {
                      optionB: "После перехода",
                      optionC: "Это опционально",
                      optionD: "",
-                     questionId: 123901593,
+                     id: 123901593,
                      helpText: """
                      До перехода в фон. Система деактивирует (deactivate) приложения по нескольким причинам. Когда пользователь выходит из приложения, находяшегося на переднем плане (foreground), система немедленно деактивирует это приложение, прежде чем переместить его в фоновый (background) режим.
                      
@@ -530,7 +530,7 @@ class AppLifecycleSet {
                      optionB: "UIWindowSceneDelegate",
                      optionC: "UIResponder",
                      optionD: "",
-                     questionId: 415181042,
+                     id: 415181042,
                      helpText: "UIApplicationDelegate. Когда состояние вашего приложения меняется, UIKit уведомляет вас, вызывая соответствующие методы делегата: В iOS 13 и выше, используется объект UISceneDelegate для обработки событий жизненного цикла приложения, а в iOS 12 и ниже - используется объект UIApplicationDelegate для обработки этих же событий."),
             
             Question(question: ["Может ли ваше приложение выполнять какие-либо действия в фоновом (background) состоянии?",
@@ -541,7 +541,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 993322551,
+                     id: 993322551,
                      helpText: """
                      Да. Приложения переходят в фоновое (background) состояние по многим причинам. Когда пользователь выходит из приложения, оно ненадолго переходит в фоновое состояние, прежде чем UIKit приостановит его.
                      
@@ -554,7 +554,7 @@ class AppLifecycleSet {
                      optionB: "Отправка в Apple connect",
                      optionC: "Синхронизация с iCloud",
                      optionD: "",
-                     questionId: 210399725,
+                     id: 210399725,
                      helpText: """
                      Показ снимка в app switcher. После того, как ваше приложение переходит в фоновый режим, UIKit делает снимок текущего пользовательского интерфейса вашего приложения.
                      
@@ -570,7 +570,7 @@ class AppLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 122596182,
+                     id: 122596182,
                      helpText: "Да. UIKit может отключить фоновую или приостановленную сцену в любое время, чтобы восстановить свои ресурсы, вернув эту сцену в неподключенное (unattached) состояние."),
             
             Question(question: [
@@ -581,7 +581,7 @@ class AppLifecycleSet {
                      optionB: "didFinishLaunchingWithOptions",
                      optionC: "",
                      optionD: "",
-                     questionId: 943894001,
+                     id: 943894001,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
                      ],
@@ -598,7 +598,7 @@ class AppLifecycleSet {
                      optionB: "willFinishLaunchingWithOptions",
                      optionC: "",
                      optionD: "",
-                     questionId: 901404500,
+                     id: 901404500,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
                      ],

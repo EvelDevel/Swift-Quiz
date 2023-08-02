@@ -19,7 +19,7 @@ class APNS {
                      optionB: "Взаимодействие с сервером",
                      optionC: "Авторизация пользователя",
                      optionD: "",
-                     questionId: 934896209,
+                     id: 934896209,
                      links: [
                         "https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns/",
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
@@ -41,7 +41,7 @@ class APNS {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 573480430,
+                     id: 573480430,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -60,7 +60,7 @@ class APNS {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 921693297,
+                     id: 921693297,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -77,7 +77,7 @@ class APNS {
                      optionB: "Только default",
                      optionC: "Никакой",
                      optionD: "",
-                     questionId: 352083663,
+                     id: 352083663,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -96,7 +96,7 @@ class APNS {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 277679314,
+                     id: 277679314,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -113,7 +113,7 @@ class APNS {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 338120737,
+                     id: 338120737,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -130,7 +130,7 @@ class APNS {
                      optionB: "[.provisional, .badge, .carPlay]",
                      optionC: "[.carPlay, .sound, .criticalAlert]",
                      optionD: "",
-                     questionId: 125519260,
+                     id: 125519260,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -149,7 +149,7 @@ class APNS {
                      optionB: "permission",
                      optionC: "access",
                      optionD: "",
-                     questionId: 938003172,
+                     id: 938003172,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -166,7 +166,7 @@ class APNS {
                      optionB: ".alert",
                      optionC: ".unread",
                      optionD: "",
-                     questionId: 778630518,
+                     id: 778630518,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -185,7 +185,7 @@ class APNS {
                      optionB: ".carPlay",
                      optionC: "",
                      optionD: "",
-                     questionId: 516948379,
+                     id: 516948379,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -204,7 +204,7 @@ class APNS {
                      optionB: ".carPlay",
                      optionC: ".provisional",
                      optionD: ".providesAppNotificationSettings",
-                     questionId: 127445280,
+                     id: 127445280,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -221,7 +221,7 @@ class APNS {
                      optionB: ".badge",
                      optionC: ".providesAppNotificationSettings",
                      optionD: "",
-                     questionId: 812414299,
+                     id: 812414299,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -238,7 +238,7 @@ class APNS {
                      optionB: ".provisional",
                      optionC: ".badge",
                      optionD: "",
-                     questionId: 199399719,
+                     id: 199399719,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -255,7 +255,7 @@ class APNS {
                      optionB: ".badge",
                      optionC: ".alert",
                      optionD: ".allow",
-                     questionId: 913783591,
+                     id: 913783591,
                      links: [
                         "https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started#toc-anchor-001"
                      ],
@@ -272,7 +272,7 @@ class APNS {
                      optionB: ".sound",
                      optionC: ".badge",
                      optionD: "",
-                     questionId: 428807004,
+                     id: 428807004,
                      links: [
                         "https://betterprogramming.pub/the-complete-guide-for-configuring-ios-push-notifications-3161d0cddd46"
                      ],
@@ -289,7 +289,7 @@ class APNS {
                      optionB: ".alert",
                      optionC: ".badge",
                      optionD: "",
-                     questionId: 113697328,
+                     id: 113697328,
                      links: [
                         "https://betterprogramming.pub/the-complete-guide-for-configuring-ios-push-notifications-3161d0cddd46"
                      ],
@@ -306,7 +306,7 @@ class APNS {
                      optionB: ".alert",
                      optionC: ".sound",
                      optionD: "",
-                     questionId: 748610940,
+                     id: 748610940,
                      links: [
                         "https://betterprogramming.pub/the-complete-guide-for-configuring-ios-push-notifications-3161d0cddd46"
                      ],

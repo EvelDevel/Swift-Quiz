@@ -11,7 +11,7 @@ struct Question: Codable {
     let optionB: String     // Правильный ответ всегда в optionA
     let optionC: String
     let optionD: String
-    let questionId: Int     // Уникальный номер вопроса
+    let id: Int             // Уникальный номер вопроса
     var links: [String]?
     let helpText: String    // Теоретическая подсказка
 }

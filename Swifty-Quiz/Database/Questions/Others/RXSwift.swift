@@ -19,7 +19,7 @@ class RXSwift {
                      optionB: "Последовательность выполнения",
                      optionC: "",
                      optionD: "",
-                     questionId: 434088491,
+                     id: 434088491,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -36,7 +36,7 @@ class RXSwift {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 120734534,
+                     id: 120734534,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -55,7 +55,7 @@ class RXSwift {
                      optionB: "Subscript",
                      optionC: "Watchable",
                      optionD: "",
-                     questionId: 443267164,
+                     id: 443267164,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -74,7 +74,7 @@ class RXSwift {
                      optionB: ".observe",
                      optionC: ".just",
                      optionD: "",
-                     questionId: 740813243,
+                     id: 740813243,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -95,7 +95,7 @@ class RXSwift {
                      optionB: "next, completed",
                      optionC: "error, next",
                      optionD: "",
-                     questionId: 803332785,
+                     id: 803332785,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -114,7 +114,7 @@ class RXSwift {
                      optionB: "String",
                      optionC: "Int",
                      optionD: "Array",
-                     questionId: 326196501,
+                     id: 326196501,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -137,7 +137,7 @@ class RXSwift {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 900582941,
+                     id: 900582941,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -162,7 +162,7 @@ class RXSwift {
                      optionB: "Только один",
                      optionC: "До 10",
                      optionD: "",
-                     questionId: 682091656,
+                     id: 682091656,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -181,7 +181,7 @@ class RXSwift {
                      optionB: "Да",
                      optionC: "Иногда",
                      optionD: "",
-                     questionId: 512419609,
+                     id: 512419609,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -200,7 +200,7 @@ class RXSwift {
                      optionB: ".cancel()",
                      optionC: ".turnOff()",
                      optionD: "",
-                     questionId: 909488052,
+                     id: 909488052,
                      links: [
                         "https://habr.com/ru/post/423603/",
                         "https://swiftbook.ru/post/tutorials/rxswift-in-10-minutes/"
@@ -220,7 +220,7 @@ class RXSwift {
                      optionB: ".cancel(by:)",
                      optionC: ".turnOff(by:)",
                      optionD: "",
-                     questionId: 330343763,
+                     id: 330343763,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -243,7 +243,7 @@ class RXSwift {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 846229679,
+                     id: 846229679,
                      links: [
                         "https://habr.com/ru/post/423603/",
                         "https://rxmarbles.com/"
@@ -261,7 +261,7 @@ class RXSwift {
                      optionB: "Filter",
                      optionC: "Distinct",
                      optionD: "",
-                     questionId: 887699291,
+                     id: 887699291,
                      links: [
                         "https://habr.com/ru/post/423603/",
                         "https://rxmarbles.com/"
@@ -281,7 +281,7 @@ class RXSwift {
                      optionB: "Map",
                      optionC: "Distinct",
                      optionD: "",
-                     questionId: 435132771,
+                     id: 435132771,
                      links: [
                         "https://habr.com/ru/post/423603/",
                         "https://rxmarbles.com/"
@@ -299,7 +299,7 @@ class RXSwift {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 187328371,
+                     id: 187328371,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -320,7 +320,7 @@ class RXSwift {
                      optionB: "Filter",
                      optionC: "Throttle",
                      optionD: "DropLast",
-                     questionId: 697429049,
+                     id: 697429049,
                      links: [
                         "https://habr.com/ru/post/423603/",
                         "https://rxmarbles.com/"
@@ -340,7 +340,7 @@ class RXSwift {
                      optionB: "ObserveOn",
                      optionC: "",
                      optionD: "",
-                     questionId: 287287792,
+                     id: 287287792,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -359,7 +359,7 @@ class RXSwift {
                      optionB: "SubscribeOn",
                      optionC: "",
                      optionD: "",
-                     questionId: 194381550,
+                     id: 194381550,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -380,7 +380,7 @@ class RXSwift {
                      optionB: "ReplaySubject",
                      optionC: "BehaviorSubject",
                      optionD: "",
-                     questionId: 324619091,
+                     id: 324619091,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -397,7 +397,7 @@ class RXSwift {
                      optionB: "PublishSubject",
                      optionC: "BehaviorSubject",
                      optionD: "",
-                     questionId: 164201975,
+                     id: 164201975,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],
@@ -414,7 +414,7 @@ class RXSwift {
                      optionB: "PublishSubject",
                      optionC: "ReplaySubject",
                      optionD: "",
-                     questionId: 667479545,
+                     id: 667479545,
                      links: [
                         "https://habr.com/ru/post/423603/"
                      ],

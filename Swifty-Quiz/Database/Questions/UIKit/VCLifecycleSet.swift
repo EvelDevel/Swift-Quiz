@@ -18,7 +18,7 @@ class VCLifecycleSet {
                      optionB: "Создание вью модели",
                      optionC: "Парсинг данных из сети",
                      optionD: "Сбор аналитики данных",
-                     questionId: 942977241,
+                     id: 942977241,
                      helpText: """
                      Обновление содержимого экрана. Основные обязанности вью контроллера включают следующее:
                      
@@ -34,7 +34,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 239137693,
+                     id: 239137693,
                      helpText: "Нет. Чтобы получить доступ ко всем стандартным методам вью контроллера, необходимо, чтобы ваш класс наследовался от UIViewController, и в некоторых переопределенных методах обращался к суперклассу super."),
             
             Question(question: ["В каком из этих методов мы не обращаемся к суперклассу?"],
@@ -43,7 +43,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLoad",
                      optionC: "viewDidAppear",
                      optionD: "",
-                     questionId: 919443416,
+                     id: 919443416,
                      helpText: "viewWillLayoutSubviews. Во всех случаях, кроме viewWillLayoutSubviews и viewDidLayoutSubviews мы должны будем обращаться к суперклассу наших методов через .super"),
             
             Question(question: ["Какой из этих методов жизненного цикла отработает первым?"],
@@ -52,7 +52,7 @@ class VCLifecycleSet {
                      optionB: "viewWillAppear",
                      optionC: "updateViewConstraints",
                      optionD: "",
-                     questionId: 142565571,
+                     id: 142565571,
                      helpText: "viewDidLoad. Самым первым среди указанных отработает viewDidLoad()."),
             
             Question(question: ["Имеет ли deinit() доступ к свойствам экземпляра перед его освобождением?"],
@@ -61,7 +61,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 658675427,
+                     id: 658675427,
                      helpText: "Да. Так как экземпляр не освобождается до тех пор пока не будет вызван деинициализатор, то деинициалиатор может получить доступ ко всем свойствам экземпляра, который он вызывает, и может изменить свое поведение, основываясь на этих свойствах."),
             
             Question(question: ["На каком из этих этапов мы увидим экран с загруженным вью?",
@@ -71,7 +71,7 @@ class VCLifecycleSet {
                      optionB: "Appearing",
                      optionC: "Disappeared",
                      optionD: "",
-                     questionId: 615454268,
+                     id: 615454268,
                      helpText: "Appeared. После вызова viewDidAppear: Этот метод вызывается после того, как вью отобразилось на экране. Обычно в нем сохраняют данные, запускают анимацию, начинают воспроизведение видео или звука или начинают получение данных по сетевым запросам."),
             
             Question(question: ["Будет ли вызываться viewDidAppear(), если мы возвращаемся на экран с дочернего контроллера, который показывали через модальное представление (.popover, .pageSheet)?"],
@@ -80,7 +80,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 344651116,
+                     id: 344651116,
                      helpText: "Нет. Если вы показываете дочерний контроллер через модальное представление внутри popover или page sheet (modalPresentationStyle = .popover / .pageSheet), по возвращению на предыдущий контроллер (сделали swipe down или dismiss текущего экрана) - метод viewDidAppear() вызываться не будет."),
             
             Question(question: ["В каком методе мы можем инициализировать объекты и переменные, которые должны жить весь жизненный цикл вью?"],
@@ -89,7 +89,7 @@ class VCLifecycleSet {
                      optionB: "awakeFromNib()",
                      optionC: "viewWillTransition()",
                      optionD: "deinit()",
-                     questionId: 376396681,
+                     id: 376396681,
                      helpText: "viewDidLoad(). В методе viewDidLoad() вы можете инициализировать переменные и объекты, которые должны жить на протяжении всего жизненного цикла вью."),
             
             Question(question: ["Этот метод отработает последним при закрытии экрана"],
@@ -98,7 +98,7 @@ class VCLifecycleSet {
                      optionB: "viewDidDisappear()",
                      optionC: "loadView()",
                      optionD: "viewWillDisappear()",
-                     questionId: 856520368,
+                     id: 856520368,
                      helpText: "deinit(). Последним всегда вызывается deinit(). Деинициализатор вызывается перед освобождением экземпляра класса. Вы пишите деинициализаторы с ключевого слова deinit, аналогично как вы пишите инициализаторы с ключевого слова init. Деинициализаторы доступны только для классовых типов."),
             
             Question(question: ["В каком из этих методов мы не обращаемся к суперклассу?"],
@@ -107,7 +107,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLoad",
                      optionC: "viewDidAppear",
                      optionD: "viewWillAppear",
-                     questionId: 178466617,
+                     id: 178466617,
                      helpText: "viewDidLayoutSubviews. Во всех основных методах, кроме viewWillLayoutSubviews и viewDidLayoutSubviews мы должны будем обращаться к суперклассу наших методов через .super"),
             
             Question(question: ["Мы ушли с контроллера, который отображался в fullScreen, отработает ли метод viewDidAppear()?",
@@ -119,7 +119,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 955936630,
+                     id: 955936630,
                      helpText: "Да. Если мы возвращаемся на наш контроллер после закрытия дочернего, который показывался на полном экране, (modalPresentationStyle = .fullScreen или .overFullScreen), метод viewDidAppear() будет вызван, так же как viewWillAppear(), viewWillLayoutSubviews() и viewDidLayoutSubviews()."),
             
             Question(question: ["После какого метода у нас начнут устанавливаться свойства и аутлеты нашего контроллера?"],
@@ -128,7 +128,7 @@ class VCLifecycleSet {
                      optionB: "После loadView()",
                      optionC: "После viewDidLoad()",
                      optionD: "",
-                     questionId: 567399116,
+                     id: 567399116,
                      helpText: "После awakeFromNib(). Все свойства и аутлеты устанавливаются после awakeFromNib() и перед loadView()."),
             
             Question(question: ["Требует ли viewDidDisappear обязательного обращения к суперклассу при переопределении?"],
@@ -137,7 +137,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 239282554,
+                     id: 239282554,
                      helpText: """
                      Да. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер).
                      
@@ -150,7 +150,7 @@ class VCLifecycleSet {
                      optionB: "updateViewConstraints",
                      optionC: "viewWillLayoutSubviews",
                      optionD: "",
-                     questionId: 977224853,
+                     id: 977224853,
                      helpText: "viewWillAppear. Самым первым среди указанных отработает viewWillAppear()."),
             
             Question(question: ["Какой метод не входит в жизненный цикл вью контроллера, но фактически вызывается после инициализации контроллера через storyboard?"],
@@ -159,7 +159,7 @@ class VCLifecycleSet {
                      optionB: "loadView()",
                      optionC: "updateViewConstraints()",
                      optionD: "",
-                     questionId: 405126932,
+                     id: 405126932,
                      helpText: "awakeFromNib(). awakeFromNib не является частью ViewController Lifecycle, ну нужно понимать что он вызывается сразу после инициализации, перед подготовкой перехода у контроллера, который задан с помощью storyboard."),
             
             Question(question: ["Какой метод отработает первым при закрытии экрана?"],
@@ -168,7 +168,7 @@ class VCLifecycleSet {
                      optionB: "viewDidDisappear()",
                      optionC: "deinit()",
                      optionD: "",
-                     questionId: 212615901,
+                     id: 212615901,
                      helpText: "viewWillDisappear(). При закрытии экрана первым будет вызван метод viewWillDisappear, который сообщает, что вью скоро будет удалено из иерархии и перестанет отображаться. "),
             
             Question(question: ["Что мы получаем к моменту вызова viewDidAppear()?"],
@@ -177,7 +177,7 @@ class VCLifecycleSet {
                      optionB: "Вью только загружены в память",
                      optionC: "Вью имеют размер, но мы их не видим",
                      optionD: "",
-                     questionId: 608391626,
+                     id: 608391626,
                      helpText: """
                      Вью появилось на экране. Метод viewDidAppear вызывается после того, как все графические элементы добавлены в иерархию view (добавлены и отображаются на экране).
                      
@@ -191,7 +191,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 485945897,
+                     id: 485945897,
                      helpText: """
                      Нет. Согласно документации Apple, вам нежелательно обращаться к этому методу самостоятельно. View controller вызывает этот метод когда запрашивается его view property, но в данный момент оно пустое (nil).
                      
@@ -206,7 +206,7 @@ class VCLifecycleSet {
                      optionB: "viewWillLayoutSubviews()",
                      optionC: "viewDidLoad()",
                      optionD: "",
-                     questionId: 670969436,
+                     id: 670969436,
                      helpText: "viewDidLayoutSubviews(). При вызове этого метода мы уже можем быть уверены, что вью корректно выставило положение всех своих потомков. Именно здесь мы можем сохранять последнее состояние каких-то объектов, например: положение скролл вью, или положение ячейки в таблице."),
             
             Question(question: ["Какой метод говорит нам о том, что вью было успешно удалено из иерархии и больше не отображается на экране?"],
@@ -215,7 +215,7 @@ class VCLifecycleSet {
                      optionB: "viewWillDisappear",
                      optionC: "viewWillTransition",
                      optionD: "",
-                     questionId: 248289859,
+                     id: 248289859,
                      helpText: """
                      viewDidDisappear. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер).
                      
@@ -229,7 +229,7 @@ class VCLifecycleSet {
                      optionB: "Сохранение данных",
                      optionC: "Запуск анимации",
                      optionD: "",
-                     questionId: 590412852,
+                     id: 590412852,
                      helpText: "Создание view. View controller вызывает этот метод когда запрашивается его view property, но в данный момент оно пустое (nil). Он загружает или создает вью и присваивает его view property для этого контроллера."),
             
             Question(question: ["Во время переопределения метода viewDidAppear() должны ли мы обращаться к суперклассу super.viewDidAppear?"],
@@ -238,7 +238,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 136417931,
+                     id: 136417931,
                      helpText: "Да. При вызове viewDidAppear() в тот или иной момент (в начале переопределения, либо в конце) мы должны обращаться к суперклассу super.viewDidAppear()."),
             
             Question(question: ["Сколько раз за жизненный цикл экрана вызывается метод loadView()?",
@@ -248,7 +248,7 @@ class VCLifecycleSet {
                      optionB: "Два раза",
                      optionC: "Три раза",
                      optionD: "Сколько потребуется",
-                     questionId: 826127132,
+                     id: 826127132,
                      helpText: "Один раз. Как и viewDidLoad, метод loadView() вызывается лишь однажды в течение жизненного цикла вашего экрана (при запуске)."),
             
             Question(question: ["Требует ли viewWillDisappear обязательного обращения к суперклассу при переопределении?"],
@@ -257,7 +257,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 184565849,
+                     id: 184565849,
                      helpText: "Да. viewWillDisappear() требует обязательного обращения к суперклассу super.viewWillDisappear()."),
             
             Question(question: ["Должны ли мы обращаться к суперклассу super.viewDidLayoutSubviews()?"],
@@ -266,7 +266,7 @@ class VCLifecycleSet {
                      optionB: "Да, в конце метода",
                      optionC: "Да, в начале метода",
                      optionD: "",
-                     questionId: 192057514,
+                     id: 192057514,
                      helpText: "Нет. Дефолтная реализация viewDidLayoutSubviews() не выполняет никаких действий, поэтому обращаться к super.viewDidLayoutSubviews() не нужно."),
             
             Question(question: ["В каком случае нам стоит переопределить (override) метод loadView()?"],
@@ -275,7 +275,7 @@ class VCLifecycleSet {
                      optionB: "Создаем view из storyboard",
                      optionC: "Создаем view из nib файла",
                      optionD: "",
-                     questionId: 542498123,
+                     id: 542498123,
                      helpText: "Создаем view программно. Вы можете оверрайдить (override) метод loadView() в случае, если создаете свои вью программно. Если вы решили так делать, проинициализируйте ваше рутовое вью (root view) во view property вашего контроллера. Ваша кастомная реализация этого метода не должна вызывать super."),
             
             Question(question: ["Какой метод отработает при смене ориентации экрана, помимо viewWillLayoutSubviews?"],
@@ -284,7 +284,7 @@ class VCLifecycleSet {
                      optionB: "updateViewConstraints",
                      optionC: "viewDidDisappear",
                      optionD: "",
-                     questionId: 918290194,
+                     id: 918290194,
                      helpText: "viewWillTransition. При смене ориентации экрана первым отрабатываем метод viewWillTransition, следом за ним отрабатывают оба метода, ответственные за корректировку визуальных элементов экрана, viewWillLayoutSubviews и viewDidLayoutSubviews."),
             
             Question(question: ["Выполняет ли дефолтная, не переопределенная реализация метода viewDidLayoutSubviews() какие-либо действия с сабвью?"],
@@ -293,7 +293,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 828879628,
+                     id: 828879628,
                      helpText: "Нет. Дефолтная реализация viewDidLayoutSubviews() не выполняет никаких действий, поэтому обращаться к super.viewDidLayoutSubviews() не нужно."),
             
             Question(question: ["Должна ли кастомная версия метода loadView() вызывать внутри себя super.loadView()?"],
@@ -302,7 +302,7 @@ class VCLifecycleSet {
                      optionB: "Да, должна",
                      optionC: "",
                      optionD: "",
-                     questionId: 527779433,
+                     id: 527779433,
                      helpText: """
                      Нет, не должна. Вы можете оверрайдить (override) метод loadView() в случае, если создаете свои вью программно.
                      
@@ -315,7 +315,7 @@ class VCLifecycleSet {
                      optionB: "Перед viewDidLoad()",
                      optionC: "Перед viewWillLayoutSubviews()",
                      optionD: "",
-                     questionId: 303360430,
+                     id: 303360430,
                      helpText: "Перед loadView(). Все свойства и аутлеты устанавливаются перед loadView(), после awakeFromNib()."),
             
             Question(question: ["Какой из этих методов жизненного цикла отработает первым?"],
@@ -324,7 +324,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLoad",
                      optionC: "viewWillAppear",
                      optionD: "",
-                     questionId: 423110531,
+                     id: 423110531,
                      helpText: "loadView. Самым первым среди указанных отработает loadView()."),
             
             Question(question: ["viewWillDessapear вызывается перед удалением вью из иерархии вью контроллера. Так ли это?"],
@@ -333,7 +333,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 309737988,
+                     id: 309737988,
                      helpText: """
                      Да. Метод viewWillDisappear() вызывается перед тем, как вью уходит с экрана (удаляется из иерархии вью контроллера).
                      
@@ -349,7 +349,7 @@ class VCLifecycleSet {
                      optionB: "Два",
                      optionC: "Сколько необходимо",
                      optionD: "",
-                     questionId: 370524130,
+                     id: 370524130,
                      helpText: """
                      Один. Метод viewDidLoad() вызывается только один раз за жизненный цикл экрана. Он вызывается когда все вью и сам контроллер уже загружены в память.
                      
@@ -362,7 +362,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 921715652,
+                     id: 921715652,
                      helpText: "Нет. В данном методе (viewWillLayoutSubviews) обращение к своему суперклассу не требуется, поэтому писать super.viewWillLayoutSubviews() не нужно."),
             
             Question(question: ["Можем ли мы обратиться к view нашего вью контроллера из awakeFromNib или init(nibName:bundle:)?",
@@ -373,7 +373,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 314120503,
+                     id: 314120503,
                      helpText: """
                      Нет. К моменту awakeFromNib, в случае загрузки из сториборда, или init(nibName:bundle:) в случае программного создания вью контроллера, наш экран находится в состоянии Unloaded, то есть его интерфейс еще не загружен, важно знать, что в этот момент графические элементы интерфейса еще не созданы, а ссылки на объекты, которые должны быть доступны через IBOutlets и IBActions еще не назначены и при попытке обратиться к ним мы столкнемся с ошибкой, и ваше приложение упадет (Fatal error).
                      """),
@@ -385,7 +385,7 @@ class VCLifecycleSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 773533335,
+                     id: 773533335,
                      helpText: """
                      Нет. Метод viewDidLoad() вызывается до того, как просчитываются все размеры на экране, и до того, как выполняется установка ориентации экрана, поэтому очень рискованно работать в нем с размерами ваших вью.
                      
@@ -398,7 +398,7 @@ class VCLifecycleSet {
                      optionB: "updateViewConstraints()",
                      optionC: "viewWillTransition()",
                      optionD: "",
-                     questionId: 384118327,
+                     id: 384118327,
                      helpText: """
                      didReceiveMemoryWarning(). В случае нехватки памяти срабатывает метод didReceiveMemoryWarning() (его можно искуственно вызвать через симулятор - Debug / Simulate Memory Warning).
                      
@@ -411,7 +411,7 @@ class VCLifecycleSet {
                      optionB: "Нет, метод не вызывается",
                      optionC: "",
                      optionD: "",
-                     questionId: 183128318,
+                     id: 183128318,
                      helpText: """
                      Да, вызывается. Даже если вы скрыли основное вью внутри вью контроллера (присвоили его свойству isHidden = true), и оно в данный момент не отображается на экране (или скрыли любое другое вью), дефолтный метод viewWillAppear все равно будет вызван, так как с помощью него скрытое вью добавляется в иерархию вью (view hierarchy).
                      """),
@@ -422,7 +422,7 @@ class VCLifecycleSet {
                      optionB: "viewWillLayoutSubviews",
                      optionC: "viewDidLayoutSubviews",
                      optionD: "",
-                     questionId: 843638882,
+                     id: 843638882,
                      helpText: "updateViewConstraints. Самым первым среди указанных методов, при первой загрузке экрана, отработает updateViewConstraints(). Он так же будет срабатывать каждый раз, когда мы показываем дочерний контроллер в модальном представлении (popover, page sheet)."),
             
             Question(question: ["Метод viewDidLoad() вызывается только после того, как вью контроллер загрузил все свои вью в память, так ли это?",
@@ -432,7 +432,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 137416262,
+                     id: 137416262,
                      helpText: "Да. Метод viewDidLoad() вызывается после того, как вью контроллер загрузил иерархию всех своих вью в память. Этот метод вызывается независимо от того, были ли вью загружены из nib файла (.xib) или программно через loadView() метод."),
             
             Question(question: ["Можем ли мы обращаться к свойствам и аутлетам в методе viewDidLoad(), чтобы это не вызвало ошибку по nil?",
@@ -442,7 +442,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 151998172,
+                     id: 151998172,
                      helpText: """
                      Да. В методе viewDidLoad() мы выполняем большинство настроек для нашего вью контроллера, так как в этот момент все свойства и аутлеты уже инициализированы (значит к ним можно обращаться и менять их параметры).
                      
@@ -455,7 +455,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 691599989,
+                     id: 691599989,
                      helpText: "Да. Вы должны вызывать super.awakeFromNib, чтобы дать родительскому классу возможность произвести дополнительную инициализацию, которая им необходима. Хотя дефолтная реализация этого метода ничего не делает, большое количество UIKit классов предоставляют не пустые реализации."),
             
             Question(question: ["Если мы не используем Autolayout, в каком методе жизненного цикла мы можем скорректировать положение и размеры наших сабвью?"],
@@ -464,7 +464,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLayoutSubviews",
                      optionC: "viewWillAppear",
                      optionD: "viewWillDisappear",
-                     questionId: 968252448,
+                     id: 968252448,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -481,7 +481,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 444802935,
+                     id: 444802935,
                      helpText: "Да. Если вы переопределяете метод viewWillTransition(), обязательно вызывайте суперкласс этого метода в тот или иной момент переопределения, поскольку UIKit должен корректным образом передать дальше по цепочке все размеры."),
             
             Question(question: ["Метод viewWillAppear() вызывается каждый раз перед тем, как ___",
@@ -491,7 +491,7 @@ class VCLifecycleSet {
                      optionB: "Все вью загружены в память",
                      optionC: "Вью будет удалено из иерархии",
                      optionD: "",
-                     questionId: 264890650,
+                     id: 264890650,
                      helpText: """
                      Вью станут видимыми. Этот метод вызывается каждый раз перед тем, как ваши вью станут видимыми, а так же до конфигурации анимации.
                      
@@ -506,7 +506,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 646110117,
+                     id: 646110117,
                      helpText: "Да. В методе viewDidAppear() можно размещать ресурсоемкие операции, например, связанные с получением данных. В нем можно вызвать becomeFirstResponder(), чтобы сразу начать ввод в нужное поле."),
             
             Question(question: ["В каком методе жизненного цикла экрана лучше всего переопределять значения constraints (например: динамические размеры сабвью, зависящие от контента), чтобы пользователь визуально не мог видеть перерасчет размеров?"],
@@ -515,7 +515,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLoad",
                      optionC: "viewWillDisappear",
                      optionD: "viewDidAppear",
-                     questionId: 128472720,
+                     id: 128472720,
                      helpText: """
                      viewWillLayoutSubviews. Лучший вариант это viewWillLayoutSubviews или viewDidLayoutSubviews. Эти методы будут вызываться каждый раз при появлении экрана, изменении размеров, смене ориентации и т.д.
                      
@@ -530,7 +530,7 @@ class VCLifecycleSet {
                      optionB: "loadView",
                      optionC: "viewWillLayoutSubviews",
                      optionD: "viewDidLayoutSubviews",
-                     questionId: 527795728,
+                     id: 527795728,
                      helpText: "viewDidLoad. Из представленных методов, к суперклассу обращаться необходимо только внутри viewDidLoad()."),
             
             Question(question: ["Перед каким методом происходит установка свойств в контроллере?"],
@@ -539,7 +539,7 @@ class VCLifecycleSet {
                      optionB: "Перед viewDidLoad()",
                      optionC: "Перед viewWillAppear()",
                      optionD: "",
-                     questionId: 935333634,
+                     id: 935333634,
                      helpText: """
                      Перед loadView(). Все свойства (properties) и аутлеты (outlets) устанавливаются после awakeFromNib() и перед loadView(), чтобы к моменту загрузки нашего экрана в viewDidLoad мы уже могли ими оперировать и не вызывать ошибку.
                      
@@ -552,7 +552,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 846218549,
+                     id: 846218549,
                      helpText: """
                      Да. Отработка поворота экрана отрабатывает автоматически, и устанавливается в настройках проекта.
                      
@@ -567,7 +567,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 327853033,
+                     id: 327853033,
                      helpText: """
                      Да. После вызова метода viewWillAppear устанавливаются границы вью, и геометрические данные становятся доступным к этапу viewWillLayoutSubviews.
                      
@@ -581,7 +581,7 @@ class VCLifecycleSet {
                      optionB: "Да, отработают",
                      optionC: "Только viewWillAppear()",
                      optionD: "Только viewDidAppear()",
-                     questionId: 922512128,
+                     id: 922512128,
                      helpText: """
                      Нет, оба метода не вызываются. Вы можете переписать (override) viewWillAppear() метод, чтобы выполнить задачи, связанные с отображением вью.
                      
@@ -596,7 +596,7 @@ class VCLifecycleSet {
                      optionB: "Один раз",
                      optionC: "Только два раза",
                      optionD: "",
-                     questionId: 709411242,
+                     id: 709411242,
                      helpText: "Многократно. Метод viewWillAppear() вызывается перед тем, как графические элементы экрана будут добавлены в иерархию графических элементов. Но в отличии от viewDidLoad он вызывается не один раз, а каждый раз, когда экран добавляется в иерархию."),
             
             Question(question: ["Будет ли вызван метод viewWillLayoutSubviews() после изменения ориентации экрана?"],
@@ -605,7 +605,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 642683692,
+                     id: 642683692,
                      helpText: "Да. Каждый раз, когда размеры вью меняются (или мы меняем ориентацию экрана), viewWillLayoutSubviews() корректирует размеры и положение своих сабвью. При изменении ориентации экрана этот метод будет вызываться сразу после viewWillTransition()."),
             
             Question(question: ["Какой из этих методов отработает последним при первой загрузке экрана?"],
@@ -614,7 +614,7 @@ class VCLifecycleSet {
                      optionB: "viewDidDisappear",
                      optionC: "viewDidLayoutSubviews",
                      optionD: "",
-                     questionId: 172763936,
+                     id: 172763936,
                      helpText: "viewDidAppear. При загрузке экрана, последним мы увидим вызов метода viewDidAppear, когда наше вью уже загружено в память, и добавлено в иерархию. Дословно он говорит нам \"вью загружено и представлено на экране\""),
             
             Question(question: ["Какой из этих методов отработает первым (вью устанавливается из storyboard)?"],
@@ -623,7 +623,7 @@ class VCLifecycleSet {
                      optionB: "loadView",
                      optionC: "viewDidLoad",
                      optionD: "",
-                     questionId: 737731010,
+                     id: 737731010,
                      helpText: "awakeFromNib. Самым первым среди указанных отработает awakeFromNib()."),
             
             Question(question: ["Если мы с текущего контроллера презентуем следующий через .popover или .pageSheet, какой метод жизненного цикла точно будет вызван?"],
@@ -632,7 +632,7 @@ class VCLifecycleSet {
                      optionB: "viewWillDisappear()",
                      optionC: "viewDidDisappear()",
                      optionD: "viewWillAppear()",
-                     questionId: 254078202,
+                     id: 254078202,
                      helpText: """
                      updateViewConstraints(). В момент презентации модального контроллера (popover, page sheet) у нас не будут вызываться стандартные методы жизненного цикла, которые вызываются во время презентации полного экрана, и мы будем обращаться только в updateViewConstraints().
                      
@@ -646,7 +646,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 589318428,
+                     id: 589318428,
                      helpText: "Да. Если вы переписываете метод viewWillAppear(), в тот или иной момент вы должны будете обратиться к суперклассу super.viewWillAppear(), так же как и у метода viewDidLoad и многих других."),
             
             Question(question: ["В какой момент мы должны обращаться к super.updateViewConstraints() в переопределяемой реализации updateViewConstraints()?"],
@@ -655,7 +655,7 @@ class VCLifecycleSet {
                      optionB: "В начале",
                      optionC: "Без разницы",
                      optionD: "",
-                     questionId: 758933900,
+                     id: 758933900,
                      helpText: "В конце. Вызов данного метода происходит перед методом viewWillLayoutSubviews(), в конце переопределенного метода вы обязательно должны обращаться к суперклассу super.updateViewConstraints()."),
             
             Question(question: ["После какого из указанных методов отрабатывает Autolayout вашего приложения?"],
@@ -664,7 +664,7 @@ class VCLifecycleSet {
                      optionB: "viewDidLayoutSubviews",
                      optionC: "viewWillTransition",
                      optionD: "",
-                     questionId: 218344936,
+                     id: 218344936,
                      helpText: "viewWillLayoutSubviews. Autolayout отрабатывает между методами viewWillLayoutSubviews и viewDidLayoutSubviews, к этому моменту мы имеем доступ ко всем корректным геометрическим данным."),
             
             Question(question: ["Какой метод мы можем использовать для того, чтобы вручную обработать анимацию смены ориентации экрана?"],
@@ -673,7 +673,7 @@ class VCLifecycleSet {
                      optionB: "viewWillLayoutSubviews()",
                      optionC: "viewWillAppear()",
                      optionD: "",
-                     questionId: 961215638,
+                     id: 961215638,
                      helpText: """
                      viewWillTransition(). Отработка поворота экрана отрабатывает автоматически, и устанавливается в настройках проекта.
                      
@@ -688,7 +688,7 @@ class VCLifecycleSet {
                      optionB: "viewWillLayoutSubviews()",
                      optionC: "",
                      optionD: "",
-                     questionId: 890793497,
+                     id: 890793497,
                      helpText: "updateViewConstraints(). Вызов происходит перед методом viewWillLayoutSubviews()."),
             
             Question(question: [
@@ -699,7 +699,7 @@ class VCLifecycleSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 459489072,
+                     id: 459489072,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"

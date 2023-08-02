@@ -17,7 +17,7 @@ class FramesAndBounds {
                      optionB: "Правый верхний угол",
                      optionC: "Левый нижний угол",
                      optionD: "",
-                     questionId: 198327605,
+                     id: 198327605,
                      helpText: "Левый верхний угол. Начало системы координат (origin) в iOS находится слева вверху. Мы можем поместить view в начало superview установив x-y координаты на (0, 0)."),
             
             Question(question: ["Что мы обязательно должны задать для frame нашего view, помимо его исходной точки (origin)?"],
@@ -26,7 +26,7 @@ class FramesAndBounds {
                      optionB: "Width & bounds",
                      optionC: "Height & weight",
                      optionD: "",
-                     questionId: 401910011,
+                     id: 401910011,
                      helpText: "Width & height. View отвечает за рисование и обработку событий в прямоугольной области окна. Чтобы указать этот прямоугольник \"ответственности\", вы определяете его местоположение как исходную точку (origin) и размер (width / height), используя систему координат."),
             
             Question(question: ["С помощью чего мы можем разместить view в системе координат его superview?"],
@@ -35,7 +35,7 @@ class FramesAndBounds {
                      optionB: "bounds",
                      optionC: "",
                      optionD: "",
-                     questionId: 682433098,
+                     id: 682433098,
                      helpText: """
                      frame. Это расположение и размер view относительно системы координат родительского view (важно для размещения view в superview). Чтобы помочь разобраться с тем, что такое frame - воспринимайте его как рамку для картины на стене.
                      
@@ -48,7 +48,7 @@ class FramesAndBounds {
                      optionB: "frame",
                      optionC: "",
                      optionD: "",
-                     questionId: 353806968,
+                     id: 353806968,
                      helpText: """
                      bounds. Это расположение и размер view относительно своей системы координат (важно для размещения контента или subviews внутри себя). Чтобы понять bounds, подумайте о баскетбольной площадке, где иногда игра выходит за пределы площадки.
                      
@@ -63,7 +63,7 @@ class FramesAndBounds {
                      optionB: "CGFloat",
                      optionC: "CGSize",
                      optionD: "",
-                     questionId: 757597993,
+                     id: 757597993,
                      helpText: "CGPoint. origin описывает координаты начальной точки для frame или bounds. Она имеет тип CGPoint, и содержит в себе два параметра, x - y."),
             
             Question(question: ["Какой цвет показывает bounds?"],
@@ -72,7 +72,7 @@ class FramesAndBounds {
                      optionB: "Желтый",
                      optionC: "Красный",
                      optionD: "",
-                     questionId: 721042700,
+                     id: 721042700,
                      helpText: """
                      Зеленый. На первом изображении слева мы видим view, который находится в верхнем левом углу superview. Желтый прямоугольник показывает frame у нашего view.
                      
@@ -87,7 +87,7 @@ class FramesAndBounds {
                      optionB: "CGFloat",
                      optionC: "CGPoint",
                      optionD: "",
-                     questionId: 902146550,
+                     id: 902146550,
                      helpText: "CGSize. Он описывает высоту и ширину нашего прямоугольника, имеет тип CGSize (структура, содержащая значение высоты и значение ширины, height / width)."),
             
             Question(question: ["Будет ли вызываться метод draw(_:) при простом изменении frame?"],
@@ -96,7 +96,7 @@ class FramesAndBounds {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 872856807,
+                     id: 872856807,
                      helpText: "Нет. При изменении прямоугольника frame, view автоматически переотобразится без вызова метода draw(_:). Если вы хотите, чтобы UIKit вызывал метод draw(_:) при изменении прямоугольника frame, установите для свойства contentMode значение UIView.ContentMode.redraw."),
             
             Question(question: ["Какой цвет показывает frame?"],
@@ -105,7 +105,7 @@ class FramesAndBounds {
                      optionB: "Зеленый",
                      optionC: "Серый",
                      optionD: "",
-                     questionId: 597236663,
+                     id: 597236663,
                      helpText: """
                      Желтый. На первом изображении слева мы видим view, который находится в верхнем левом углу superview.
                      
@@ -120,7 +120,7 @@ class FramesAndBounds {
                      optionB: "Желтый",
                      optionC: "Зеленый",
                      optionD: "Серый",
-                     questionId: 857850292,
+                     id: 857850292,
                      helpText: "Красный. Красная точка на обоих изображениях обозначает origin (начало) у frame и bounds."),
             
             Question(question: ["Каким образом мы можем корректно изменить положение view после того, как применили к нему масштабирование или вращение через transform?"],
@@ -129,7 +129,7 @@ class FramesAndBounds {
                      optionB: "Через свойство frame",
                      optionC: "С помощью свойства bounds",
                      optionD: "",
-                     questionId: 979026551,
+                     id: 979026551,
                      helpText: """
                      С помощью center. Центральная точка (.center) указывается в поинтах (points) в системе координат superview. Установка этого свойства соответствующим образом обновляет исходную точку прямоугольника в свойстве frame.
                      
@@ -144,7 +144,7 @@ class FramesAndBounds {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 601981868,
+                     id: 601981868,
                      helpText: "Нет. Если мы повернем view на 20 градусов по часовой стрелке (вращение выполняется с помощью преобразования, описанного в документации, через transform) - bounds останется прежним (origin 0, 0), он не знает что произошло c frame. Однако, все значения frame изменились."),
             
             Question(question: ["Структура, содержащая расположение и размеры прямоугольника"],
@@ -153,7 +153,7 @@ class FramesAndBounds {
                      optionB: "CGAffineTransform",
                      optionC: "CGPoint",
                      optionD: "",
-                     questionId: 600663733,
+                     id: 600663733,
                      helpText: "CGRect. CGRect это структура, содержащая расположение и размеры прямоугольника."),
             
             Question(question: ["Следует ли нам использовать значения frame, после преобразования нашего view через transform?"],
@@ -162,7 +162,7 @@ class FramesAndBounds {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 454326503,
+                     id: 454326503,
                      helpText: "Нет. Если вы трансформируете view, frame становится неопределенным. Это означает, что если вы поворачиваете, масштабируете или выполняете какое-либо другое преобразование вашего view через transform, вам больше не следует использовать значения frame, но вы можете продолжать использовать значения bounds."),
             
             Question(question: ["Мы создаем frame для нашего view используя CGRect. У него есть возможность инициализации как с помощью Int значений, так и с помощью CGFloat значений. Это так?"],
@@ -171,7 +171,7 @@ class FramesAndBounds {
                      optionB: "Только CGFloat",
                      optionC: "Только Int",
                      optionD: "",
-                     questionId: 108982672,
+                     id: 108982672,
                      helpText: """
                      Да. У CGRect есть четыре инициализатора:
                      
@@ -187,7 +187,7 @@ class FramesAndBounds {
                      optionB: "Используя размер frame",
                      optionC: "Через size",
                      optionD: "",
-                     questionId: 998813391,
+                     id: 998813391,
                      helpText: "Используя размер bounds. Когда вы вносите внутренние изменения, например, рисуете объекты или упорядочиваете subviews в вашем view. Также используйте bounds, чтобы получить размер вашего view, если вы его изменяли через transform."),
             
             Question(question: ["Можем ли мы создать CGRect для нашего frame используя CGFloat значения?"],
@@ -196,7 +196,7 @@ class FramesAndBounds {
                      optionB: "Нет, только Int",
                      optionC: "Нет, только Double",
                      optionD: "",
-                     questionId: 885853330,
+                     id: 885853330,
                      helpText: """
                      Да. Конечно можем, у CGRect есть четыре инициализатора:
                      
@@ -212,7 +212,7 @@ class FramesAndBounds {
                      optionB: "CGRect.null",
                      optionC: "CGRect.infinite",
                      optionD: "",
-                     questionId: 861098676,
+                     id: 861098676,
                      helpText: "zero. Прямоугольник со значениями 0 можно создать двумя способами: 1. Через статическое свойство .zero (static var zero: CGRect) - cоздает прямоугольник, у которого origin и размер равны нулю. 2. Через пустую инициализацию - init() - создаст прямоугольник с origin (0,0) и размером (0,0)."),
         ]
     }

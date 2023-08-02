@@ -291,7 +291,7 @@ extension GameViewController {
         ) as! HelpViewController
         
         helpView.delegate = self
-        helpView.questionID = questions[currentIndex].questionId
+        helpView.questionID = questions[currentIndex].id
         helpView.links = questions[currentIndex].links
         
         if !doesUserTookHint {
@@ -475,7 +475,7 @@ extension GameViewController {
         if segue.identifier  == "toHelpViewController" {
             let helpView = segue.destination as! HelpViewController
             helpView.delegate = self
-            helpView.questionID = questions[currentIndex].questionId
+            helpView.questionID = questions[currentIndex].id
             helpView.links = questions[currentIndex].links
             
             if !doesUserTookHint {
@@ -501,7 +501,7 @@ extension GameViewController {
                 question: questionLabel.text ?? "",
                 correctAnswer: questions[currentIndex].optionA,
                 userAnswer: answer,
-                questionId: questions[currentIndex].questionId,
+                questionId: questions[currentIndex].id,
                 image: questions[currentIndex].image,
                 helpText: questions[currentIndex].helpText,
                 links: questions[currentIndex].links

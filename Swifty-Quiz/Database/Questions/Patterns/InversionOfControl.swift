@@ -18,7 +18,7 @@ class InversionOfControl {
                      optionB: "Зависимость",
                      optionC: "Open source библиотека",
                      optionD: "Нативный метод в Swift",
-                     questionId: 419675819,
+                     id: 419675819,
                      helpText: """
                      Паттерн проектирования. Инверсия управления — это паттерн проектирования, позволяющий инвертировать поток управления.
                      
@@ -33,7 +33,7 @@ class InversionOfControl {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 665317739,
+                     id: 665317739,
                      helpText: """
                      Да. Инверсия управления — это шаблон проектирования (паттерн), позволяющий инвертировать поток управления.
                      
@@ -46,7 +46,7 @@ class InversionOfControl {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 138183352,
+                     id: 138183352,
                      helpText: """
                      Да. D в SOLID отвечает за DIP - dependency inversion principle (принцип инверсии зависимостей), или инверсия управления (IoC - Inversion of Control): «Зависимость на Абстракциях.
                      
@@ -61,7 +61,7 @@ class InversionOfControl {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 779969533,
+                     id: 779969533,
                      helpText: "Да. Внедрение паттерна Dependency Inversion улучшает тестирование вашей архитектуры. После внедрения DI ваши классы зависят от протоколов (чаще всего), объекты которых легко подменить / имитировать фиктивными объектами классов для тестов."),
             
             Question(question: ["Внедрение Dependency Inversion ваш проект увеличивает связанность (coupling) объектов в проекте, или уменьшает?"],
@@ -70,7 +70,7 @@ class InversionOfControl {
                      optionB: "Увеличивает",
                      optionC: "",
                      optionD: "",
-                     questionId: 173941371,
+                     id: 173941371,
                      helpText: "Уменьшает. Внедрение Dependency Inversion в проект уменьшает связь между вашим классом и другими. Все зависимости внедряются в ваш класс извне, и каждый компонент / класс несет свою ответственность (Single-responsibility principle)."),
         ]
     }

@@ -17,7 +17,7 @@ class IntegersAndBooleansSet {
                      optionB: "UInt",
                      optionC: "Double",
                      optionD: "",
-                     questionId: 362238452,
+                     id: 362238452,
                      helpText: """
                      Int. Целые числа — это числа, у которых отсутствует дробная часть, например 81 или 18.
                      
@@ -32,7 +32,7 @@ class IntegersAndBooleansSet {
                      optionB: "Int",
                      optionC: "Float",
                      optionD: "",
-                     questionId: 810656942,
+                     id: 810656942,
                      helpText: """
                      UInt. Целые числа — это числа, у которых отсутствует дробная часть, например 81 или 18.
                      
@@ -47,7 +47,7 @@ class IntegersAndBooleansSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 145583162,
+                     id: 145583162,
                      helpText: "Да. Помимо целых чисел, при разработке приложений вы можете использовать дробные числа. Например, 3.14 и -192.884022."),
 
             Question(question: ["Что мы получим, при сравнении переменных name и name2?"],
@@ -56,7 +56,7 @@ class IntegersAndBooleansSet {
                      optionB: "false",
                      optionC: "true",
                      optionD: "",
-                     questionId: 959954910,
+                     id: 959954910,
                      helpText: """
                      Ошибку сравнения. Перед нами две переменных с разными значениями, и если поторопиться, то можно ответить, что результатом сравнения будет false, так как их значения не равны.
                      
@@ -69,7 +69,7 @@ class IntegersAndBooleansSet {
                      optionB: "Double",
                      optionC: "Float",
                      optionD: "",
-                     questionId: 928068168,
+                     id: 928068168,
                      helpText: """
                      Оба типа. Для хранения дробных чисел в большинстве случаев используются всего два типа данных: Float и Double, оба являются знаковыми (позволяют хранить положительные и отрицательные значения).
                      
@@ -86,7 +86,7 @@ class IntegersAndBooleansSet {
                      optionB: "true и not true",
                      optionC: "1 и 0",
                      optionD: "truth и false",
-                     questionId: 349146356,
+                     id: 349146356,
                      helpText: """
                      true и false. В Swift есть простой логический тип Bool. Этот тип называют логическим, потому что он может быть только true или false. Swift предусматривает две логические константы, true и false соответственно.
                      
@@ -103,7 +103,7 @@ class IntegersAndBooleansSet {
                      optionB: "UInt",
                      optionC: "Float",
                      optionD: "Double",
-                     questionId: 315871677,
+                     id: 315871677,
                      helpText: "Int. Целое число со знаком, например, 1, -30, 458. На 32-разрядных платформах эквивалентен Int32, а на 64-разрядных - Int64."),
             
             Question(question: ["Как получить доступ к минимальному и максимальному значению каждого типа целого числа?",
@@ -114,7 +114,7 @@ class IntegersAndBooleansSet {
                      optionB: "first и last",
                      optionC: "count",
                      optionD: "first и max",
-                     questionId: 589985383,
+                     id: 589985383,
                      helpText: "min и max. Вы можете получить минимальное и максимальное значение каждого числа с помощью свойств min и max."),
             
             Question(question: ["Какой тип может хранить более длинные дробные числа?",
@@ -125,7 +125,7 @@ class IntegersAndBooleansSet {
                      optionB: "Float",
                      optionC: "UInt",
                      optionD: "",
-                     questionId: 963998158,
+                     id: 963998158,
                      helpText: "Double. Double является 64 битным числом с плавающей точкой – его следует использовать, когда значения должны быть очень большими или особенно точными. Он имеет точность в 15 десятичных знаков, тогда как Float – только 6."),
             
             Question(question: ["Какой тип хранит только положительные целые числа?",
@@ -136,7 +136,7 @@ class IntegersAndBooleansSet {
                      optionB: "Float",
                      optionC: "Int",
                      optionD: "Double",
-                     questionId: 379442195,
+                     id: 379442195,
                      helpText: """
                      UInt. Swift предусматривает беззнаковый тип целого числа - UInt (Unsigned integer), который имеет тот же размер, что и разрядность системы. Используйте UInt только когда вам действительно нужен тип беззнакового целого числа.
                      
@@ -153,7 +153,7 @@ class IntegersAndBooleansSet {
                      optionB: "Оператор",
                      optionC: "Строковый литерал",
                      optionD: "Случайное число",
-                     questionId: 346029653,
+                     id: 346029653,
                      helpText: "Числовой литерал. Фиксированная последовательность цифр, начинающаяся либо с цифры, либо с префиксного оператора «минус» или «плюс», называется числовым литералом."),
         
             Question(question: ["Если в коде не указать размер целого числа, каким оно будет?",
@@ -164,7 +164,7 @@ class IntegersAndBooleansSet {
                      optionB: "32",
                      optionC: "64",
                      optionD: "128",
-                     questionId: 940187379,
+                     id: 940187379,
                      helpText: "Согласно разрядности системы. Если не указано иного, то размер числа всегда соответствует разрядности системы."),
             
             Question(question: ["Какую точность в десятичных знаках имеет тип Double?",
@@ -175,7 +175,7 @@ class IntegersAndBooleansSet {
                      optionB: "6 десятичных цифр",
                      optionC: "12 десятичных цифр",
                      optionD: "18 десятичных цифр",
-                     questionId: 875301883,
+                     id: 875301883,
                      helpText: "15 десятичных цифр. Double является 64 битным числом с плавающей точкой. Он имеет точность в 15 десятичных знаков."),
             
             Question(question: ["Какую точность в десятичных знаках имеет тип Float?",
@@ -186,7 +186,7 @@ class IntegersAndBooleansSet {
                      optionB: "4 десятичных цифр",
                      optionC: "12 десятичных цифр",
                      optionD: "10 десятичных цифр",
-                     questionId: 434260648,
+                     id: 434260648,
                      helpText: "6 десятичных цифр. Float имеет точность в 6 десятичных знаков."),
             
             Question(question: ["Если равноценно использование обоих типов с плавающей точкой, использование какого предпочтительнее?",
@@ -197,7 +197,7 @@ class IntegersAndBooleansSet {
                      optionB: "Float",
                      optionC: "Character",
                      optionD: "String",
-                     questionId: 632787366,
+                     id: 632787366,
                      helpText: """
                      Double. Double имеет точность минимум 15 десятичных цифр, в то время как точность Float может быть всего лишь 6 десятичных цифр.
                      
@@ -214,7 +214,7 @@ class IntegersAndBooleansSet {
                      optionB: "Только ==",
                      optionC: "Только !=",
                      optionD: "Нет",
-                     questionId: 382243966,
+                     id: 382243966,
                      helpText: """
                      Да. Swift предусматривает три способа сравнения текстовых значений: равенство строк и символов, равенство префиксов, и равенство суффиксов.
                      
@@ -231,7 +231,7 @@ class IntegersAndBooleansSet {
                      optionB: "Float",
                      optionC: "Int",
                      optionD: "Character",
-                     questionId: 775949004,
+                     id: 775949004,
                      helpText: """
                      Double. Если объединить целые литералы и литералы с плавающей точкой в одном выражении, в этом случае тип будет выводиться как Double.
                      
@@ -244,7 +244,7 @@ class IntegersAndBooleansSet {
                      optionB: "UInt8",
                      optionC: "",
                      optionD: "",
-                     questionId: 772645147,
+                     id: 772645147,
                      helpText: "Int8. -128 это минимальное значение типа данных Int8, тип данных UInt8 не может хранить в себе значения ниже 0."),
             
             Question(question: ["Какой тип может хранить любое целое число в пределах от -2 147 483 648 до 2 147 483 647?",
@@ -255,7 +255,7 @@ class IntegersAndBooleansSet {
                      optionB: "Decimal",
                      optionC: "Uint32",
                      optionD: "Int64",
-                     questionId: 385661389,
+                     id: 385661389,
                      helpText: "Int32. Значения от -2 147 483 648 до 2 147 483 647 соответствуют Int32."),
             
             Question(question: ["Какой тип данных имеет максимальное значение равное 255?"],
@@ -264,7 +264,7 @@ class IntegersAndBooleansSet {
                      optionB: "Int8",
                      optionC: "",
                      optionD: "",
-                     questionId: 453940612,
+                     id: 453940612,
                      helpText: "UInt8. 255 это максимальное значение типа данных UInt8, тип данных Int8 может хранить в себе диапазон от -128 до 127."),
             
             Question(question: ["Что вернется, при сравнении двух String?",
@@ -275,7 +275,7 @@ class IntegersAndBooleansSet {
                      optionB: "String",
                      optionC: "Character",
                      optionD: "1 или 0",
-                     questionId: 446852936,
+                     id: 446852936,
                      helpText: "Bool. При сравнении String или Character возвращается Bool-значение (true или false)."),
             
             Question(question: ["Могут ли типы данных Int16 и Int8 взаимодействовать между собой напрямую?"],
@@ -284,7 +284,7 @@ class IntegersAndBooleansSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 618017613,
+                     id: 618017613,
                      helpText: "Нет. Int16 и Int8 это разные целочисленные типы данных, они не могут взаимодействовать между собой напрямую без приведения их к одному типу. Все операции в Swift должны происходить между значениями одного и того же типа данных!"),
             
             Question(question: ["Что мы получим, запустив этот код?"],
@@ -293,7 +293,7 @@ class IntegersAndBooleansSet {
                      optionB: "Переменную Float = 0.12",
                      optionC: "Переменную Double = 0.12",
                      optionD: "",
-                     questionId: 481215233,
+                     id: 481215233,
                      helpText: "Ошибку. Значения типа дробных чисел не могут начинаться с десятичной точки. Вы могли видеть подобный подход в других языках программирования, но в Swift это сделать нельзя. В связи с этим наша конструкция с изображения вызовет ошибку."),
             
             Question(question: ["При приведении числа с плавающей точкой к целочисленному типу, произведет ли Swift округление?"],
@@ -302,7 +302,7 @@ class IntegersAndBooleansSet {
                      optionB: "Да",
                      optionC: "Да, в меньшую сторону",
                      optionD: "",
-                     questionId: 825250207,
+                     id: 825250207,
                      helpText: "Нет. При преобразовании числа с плавающей точкой в целочисленный тип дробная часть отбрасывается, округление не производится."),
             
             Question(question: ["Позволяет ли Swift записывать числовые литералы в двоичной, восьмеричной, шестнадцатеричной системах счисления?"],
@@ -311,7 +311,7 @@ class IntegersAndBooleansSet {
                      optionB: "Нет",
                      optionC: "Только в десятичной",
                      optionD: "",
-                     questionId: 854537612,
+                     id: 854537612,
                      helpText: """
                      Да. Если в школе у вас была информатика, то, возможно, вы знаете, что существуют различные системы счисления, например десятичная или двоичная. В реальном мире используется десятичная система, в то время как в компьютере все вычисления происходят в двоичной системе.
                      
@@ -328,7 +328,7 @@ class IntegersAndBooleansSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 821629835,
+                     id: 821629835,
                      helpText: "Да. Числа с плавающей точкой могут быть десятичными (без префикса) или шестнадцатеричными (с префиксом 0х). Такие числа должны иметь одинаковую форму записи (систему счисления) по обе стороны от точки."),
             
             Question(question: ["В каком примере используется корректное разделение порядков числа?"],
@@ -337,7 +337,7 @@ class IntegersAndBooleansSet {
                      optionB: "let number = 1-000-000",
                      optionC: "let number = 1 000 000",
                      optionD: "",
-                     questionId: 308997635,
+                     id: 308997635,
                      helpText: """
                      let number = 1_000_000. Для визуального отделения порядков числа можно использовать символ нижнего подчеркивания (underscore).
                      
@@ -352,7 +352,7 @@ class IntegersAndBooleansSet {
                      optionB: "Переменную",
                      optionC: "Опционал",
                      optionD: "",
-                     questionId: 208246280,
+                     id: 208246280,
                      helpText: "Константу. На изображении объявляется константа с именем num, которая содержит в себе Int значение (целое число)."),
             
             Question(question: ["Какой тип будет присвоен переменной с изображения?",
@@ -362,7 +362,7 @@ class IntegersAndBooleansSet {
                      optionB: "Float",
                      optionC: "Decimal",
                      optionD: "",
-                     questionId: 711950568,
+                     id: 711950568,
                      helpText: "Double. При неявной типизации, числу с плавающей точкой присваивается тип Double, так как он является предпочтительным выбором."),
             
             Question(question: ["Что мы получим, при сравнении переменных name и char?"],
@@ -371,7 +371,7 @@ class IntegersAndBooleansSet {
                      optionB: "false",
                      optionC: "Ошибку",
                      optionD: "",
-                     questionId: 524904582,
+                     id: 524904582,
                      helpText: "true. Хотя мы и присваиваем переменной char всего один отдельный символ, без явного указания типа данных Swift автоматически присвоит тип String, поэтому две этих переменных могут сравниваться, и результатом сравнения будет true (потому что в данном случае значения у переменных равны)"),
             
             Question(question: ["Какой код мы получим в консоль?"],
@@ -380,7 +380,7 @@ class IntegersAndBooleansSet {
                      optionB: "OFF",
                      optionC: "Столкнемся с ошибкой",
                      optionD: "",
-                     questionId: 352157881,
+                     id: 352157881,
                      helpText: "ON. Так как записи if isON == true { } и if isON { } эквивалентны, а наша константа isON равна true, при запуске тернарного оператора внутри print() мы получим ON в консоль (так как в случае true - выполняется первая часть тернарного оператора)"),
         ]
     }

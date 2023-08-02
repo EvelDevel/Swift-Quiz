@@ -20,7 +20,7 @@ class SwiftUIEssentials {
                      optionB: "AnyObject",
                      optionC: "UIApplicationDelegate",
                      optionD: "",
-                     questionId: 948115569,
+                     id: 948115569,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/app",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-an-appdelegate-to-a-swiftui-app"
@@ -42,7 +42,7 @@ class SwiftUIEssentials {
                      optionB: "@initial",
                      optionC: "@entry",
                      optionD: "",
-                     questionId: 197451092,
+                     id: 197451092,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/app/main()",
                         "https://medium.com/@abedalkareemomreyh/what-is-main-in-swift-bc79fbee741c"
@@ -59,7 +59,7 @@ class SwiftUIEssentials {
                      optionB: "main",
                      optionC: "content",
                      optionD: "",
-                     questionId: 599468478,
+                     id: 599468478,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/body-swift.property",
                         "https://developer.apple.com/documentation/swiftui/view/body-swift.associatedtype"
@@ -90,7 +90,7 @@ class SwiftUIEssentials {
                      """,
                      optionC: "Никакие",
                      optionD: "",
-                     questionId: 130890925,
+                     id: 130890925,
                      links: [
                         "https://developer.apple.com/tutorials/swiftui-concepts/exploring-the-structure-of-a-swiftui-app",
                         "https://www.hackingwithswift.com/books/ios-swiftui/understanding-the-basic-structure-of-a-swiftui-app",
@@ -120,7 +120,7 @@ class SwiftUIEssentials {
                      optionB: "App",
                      optionC: "UIView",
                      optionD: "PreviewProvider",
-                     questionId: 245983055,
+                     id: 245983055,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view",
                         "https://www.kodeco.com/28684524-swiftui-fundamentals/lessons/2"
@@ -137,7 +137,7 @@ class SwiftUIEssentials {
                      optionB: "Veiw",
                      optionC: "App",
                      optionD: "",
-                     questionId: 455895047,
+                     id: 455895047,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/previewprovider",
                         "https://betterprogramming.pub/swiftui-preview-provider-for-uikit-3dd089d77915",
@@ -157,7 +157,7 @@ class SwiftUIEssentials {
                      optionB: "Restart",
                      optionC: "Refresh",
                      optionD: "Continue",
-                     questionId: 125545712,
+                     id: 125545712,
                      helpText: """
                      Resume. На холсте (canvas) нажмите Resume («Возобновить»), чтобы отобразить предварительный просмотр.
                      
@@ -172,7 +172,7 @@ class SwiftUIEssentials {
                      optionB: "Ctrl",
                      optionC: "Option",
                      optionD: "Fn",
-                     questionId: 317756604,
+                     id: 317756604,
                      helpText: """
                      Cmd. В предварительном просмотре щелкните на лейбл, удерживая клавишу Command, чтобы открыть всплывающее окно структурированного редактирования.
                      """),
@@ -185,7 +185,7 @@ class SwiftUIEssentials {
                      optionB: "Кастомайзеры",
                      optionC: "Визуальные параметры",
                      optionD: "",
-                     questionId: 504358274,
+                     id: 504358274,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/viewmodifier",
                         "https://www.kodeco.com/34699757-swiftui-view-modifiers-tutorial-for-ios",
@@ -213,7 +213,7 @@ class SwiftUIEssentials {
                      optionB: "Модификаторы не изменятся",
                      optionC: "Получим ошибку",
                      optionD: "",
-                     questionId: 532082683,
+                     id: 532082683,
                      helpText: """
                      Они обновятся. Ваш код всегда является "источником правды" (the source of truth) для вашего view.
                      
@@ -229,7 +229,7 @@ class SwiftUIEssentials {
                      optionB: ".padding",
                      optionC: "Hstack { // }",
                      optionD: "Divider()",
-                     questionId: 103867572,
+                     id: 103867572,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/spacer",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-fixed-size-spacer",
@@ -252,7 +252,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 851046140,
+                     id: 851046140,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/spacer"
                      ],
@@ -268,7 +268,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "Только в некоторых view",
                      optionD: "",
-                     questionId: 732147881,
+                     id: 732147881,
                      links: [
                         "https://developer.apple.com/documentation/charts/chart/padding(_:_:)"
                      ],
@@ -288,7 +288,7 @@ class SwiftUIEssentials {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 468682159,
+                     id: 468682159,
                      helpText: """
                      Нет. Когда вы используете SwiftUI, вы создаете файлы для кастомных view через сочетание клавиш Cmd+N -> шаблон “SwiftUI View” -> Next -> Введите имя шаблона -> Create.
                      
@@ -303,7 +303,7 @@ class SwiftUIEssentials {
                      optionB: "AddImage(_:)",
                      optionC: "InsertImage(_:)",
                      optionD: "",
-                     questionId: 339501840,
+                     id: 339501840,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/image",
                         "https://codewithchris.com/swiftui/swiftui-image/",
@@ -321,7 +321,7 @@ class SwiftUIEssentials {
                      optionB: "Capsule()",
                      optionC: "Rectangle()",
                      optionD: "",
-                     questionId: 780349105,
+                     id: 780349105,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/circle",
                         "https://www.hackingwithswift.com/quick-start/swiftui/swiftuis-built-in-shapes",
@@ -345,7 +345,7 @@ class SwiftUIEssentials {
                      optionB: "Rectangle()",
                      optionC: "Circle()",
                      optionD: "Ellipse()",
-                     questionId: 105541431,
+                     id: 105541431,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/capsule",
                         "https://www.hackingwithswift.com/quick-start/swiftui/swiftuis-built-in-shapes"
@@ -364,7 +364,7 @@ class SwiftUIEssentials {
                      optionB: "Изображение исчезнет",
                      optionC: "Останется квадратным",
                      optionD: "",
-                     questionId: 466191839,
+                     id: 466191839,
                      helpText: """
                      Получим ровный круг. В отличии от UIKit, какое-бы значение CornerRadius мы не присваивали view в SwiftUI - максимальное скругление произойдет до состояния "ровный круг". Дальше скругление применяться не будет.
                      
@@ -379,7 +379,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 994474814,
+                     id: 994474814,
                      helpText: """
                      Да. Когда вы импортируете SwiftUI и некоторые другие фреймворки (например: MapKit) в один и тот же файл, вы получаете доступ к специфичным для SwiftUI функциям, предоставляемым этим фреймворком.
                      """),
@@ -392,7 +392,7 @@ class SwiftUIEssentials {
                      optionB: "@Binding",
                      optionC: "@ObservedObject",
                      optionD: "@Environment",
-                     questionId: 393824711,
+                     id: 393824711,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/state",
                         "https://habr.com/ru/company/otus/blog/475078/",
@@ -414,7 +414,7 @@ class SwiftUIEssentials {
                      optionB: "Займет половину экрана",
                      optionC: "Останется неизменной",
                      optionD: "",
-                     questionId: 287003972,
+                     id: 287003972,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/frame(width:height:alignment:)"
                      ],
@@ -432,7 +432,7 @@ class SwiftUIEssentials {
                      optionB: ".offset(y: 100)",
                      optionC: ".offset(x: -100)",
                      optionD: "",
-                     questionId: 511384010,
+                     id: 511384010,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/offset(x:y:)"
                      ],
@@ -450,7 +450,7 @@ class SwiftUIEssentials {
                      optionB: ".removeSafeArea",
                      optionC: ".deleteSafeArea",
                      optionD: "",
-                     questionId: 623943874,
+                     id: 623943874,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/grid/ignoressafearea(_:edges:)"
                      ],
@@ -468,7 +468,7 @@ class SwiftUIEssentials {
                      optionB: "Spacer()",
                      optionC: "frame(0, 1, 0)",
                      optionD: "",
-                     questionId: 478944843,
+                     id: 478944843,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/divider"
                      ],
@@ -484,7 +484,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 761758842,
+                     id: 761758842,
                      helpText: """
                      Да. Когда вы применяете модификатор, например, к стеку (VStack, HStack), SwiftUI применяет модификатор ко всем элементам, содержащимся в группе (модификаторы распространяют свое действие на вложенные объекты).
                      """),
@@ -497,7 +497,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 195416164,
+                     id: 195416164,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/grid/ignoressafearea(_:edges:)"
                      ],
@@ -515,7 +515,7 @@ class SwiftUIEssentials {
                      optionB: "В инициализаторе view",
                      optionC: "В методе layoutSubviews()",
                      optionD: "",
-                     questionId: 554041601,
+                     id: 554041601,
                      helpText: """
                      Внутри свойства body. Пользовательские view обязательно реализуют внутри себя свойство body, которое является требованием публичного протокола View. Внутри body мы размещаем весь layout нашего кастомного вью.
                      """),
@@ -528,7 +528,7 @@ class SwiftUIEssentials {
                      optionB: ".previewDevice()",
                      optionC: ".compositioningGroup()",
                      optionD: "",
-                     questionId: 817702693,
+                     id: 817702693,
                      helpText: """
                      previewLayout(). Данный модификатор переопределяет размер контейнера для предварительного просмотра (canvas).
                      
@@ -545,7 +545,7 @@ class SwiftUIEssentials {
                      optionB: "VStack",
                      optionC: "GridItem",
                      optionD: "Section",
-                     questionId: 225908548,
+                     id: 225908548,
                      helpText: """
                      Group. Group является типом, который может собирать несколько экземпляров content type — например, View, Scene или Commands в единый модуль.
                      
@@ -569,7 +569,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 544449077,
+                     id: 544449077,
                      helpText: """
                      Да. После создания группы - любой модификатор, который вы применяете к ней, повлияет на всех членов этой группы. Например:
                      
@@ -589,7 +589,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 853685500,
+                     id: 853685500,
                      helpText: """
                      Вы можете инициализировать группы (Group) в SwiftUI с несколькими разными типами, а не только с SwiftUI/View. Вы можете использовать, например SwiftUI/Scene и SwiftUI/ToolbarContent.
                      """),
@@ -602,7 +602,7 @@ class SwiftUIEssentials {
                      optionB: "1",
                      optionC: "3",
                      optionD: "",
-                     questionId: 493190017,
+                     id: 493190017,
                      helpText: """
                      2. Группа (Group) — это контейнер для группировки разных типов View. Xcode отображает дочерние view группы как отдельные окна предварительного просмотра на холсте (canvas).
                      
@@ -624,7 +624,7 @@ class SwiftUIEssentials {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 762898627,
+                     id: 762898627,
                      helpText: """
                      Нет. Из-за того, что наш текст оканчивается на .com - он будет определяться как гиперссылка и будет покрашен в нативный синий цвет ссылок. Модификатор foregroundColor не применится.
                      
@@ -642,7 +642,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 831791923,
+                     id: 831791923,
                      helpText: """
                      Да. Из-за того, что наш текст оканчивается на .com - он определяется как гиперссылка, а модификатор foregroundColor не применяется к гиперссылкам.
                      
@@ -659,7 +659,7 @@ class SwiftUIEssentials {
                      optionB: "List",
                      optionC: "forEach",
                      optionD: "",
-                     questionId: 480031551,
+                     id: 480031551,
                      helpText: """
                      ForEach. ForEach - это контейнер, который служит для отражения на экране всех элементов переданной коллекции.
                      
@@ -676,7 +676,7 @@ class SwiftUIEssentials {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 299229048,
+                     id: 299229048,
                      helpText: """
                      Да. ForEach должен быть помещен внутрь какого-то другого контейнера, который определяет, как именно сгруппировать эту множественную сущность — расположив по вертикали, по горизонтали, или, например, поместив в список (List).
                      """),
@@ -689,7 +689,7 @@ class SwiftUIEssentials {
                      optionB: "data, id",
                      optionC: "data, content",
                      optionD: "",
-                     questionId: 293733345,
+                     id: 293733345,
                      helpText: """
                      data, id, content.
                      
@@ -709,7 +709,7 @@ class SwiftUIEssentials {
                      optionB: "Да, любая",
                      optionC: "",
                      optionD: "",
-                     questionId: 227977871,
+                     id: 227977871,
                      helpText: """
                      Нет, только RandomAccesCollection.
                      
@@ -724,7 +724,7 @@ class SwiftUIEssentials {
                      optionB: ".stretch()",
                      optionC: ".image()",
                      optionD: "",
-                     questionId: 533354967,
+                     id: 533354967,
                      helpText: """
                      resizable().
                      
@@ -741,7 +741,7 @@ class SwiftUIEssentials {
                      optionB: "Да",
                      optionC: "Только на девайсе",
                      optionD: "",
-                     questionId: 404108238,
+                     id: 404108238,
                      helpText: """
                      Нет. Текст, который вы указываете для Button - не будет отображаться в пользовательском интерфейсе при использовании стиля .iconOnly.
                      
@@ -758,7 +758,7 @@ class SwiftUIEssentials {
                      optionB: "15",
                      optionC: "4",
                      optionD: "1",
-                     questionId: 820959610,
+                     id: 820959610,
                      links: [
                         "https://www.hackingwithswift.com/books/ios-swiftui/creating-a-form",
                         "https://www.hackingwithswift.com/books/ios-swiftui/using-stacks-to-arrange-views"
@@ -778,7 +778,7 @@ class SwiftUIEssentials {
                      optionB: "second",
                      optionC: "last",
                      optionD: "",
-                     questionId: 495131401,
+                     id: 495131401,
                      links: [
                         "https://www.hackingwithswift.com/books/ios-swiftui/using-stacks-to-arrange-views"
                      ],

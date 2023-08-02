@@ -44,14 +44,4 @@ extension AboutProjectController {
         UIApplication.shared.open(urlComponents.url!)
         SoundPlayer.shared.playSound(sound: .buttonTapped)
     }
-    @IBAction private func swiftMe(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://swiftme.ru/")!
-        UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
-    @IBAction private func telegramLibrary(_ sender: Any) {
-        let urlComponents = URLComponents(string: "https://t.me/mobileproglib")!
-        UIApplication.shared.open(urlComponents.url!)
-        SoundPlayer.shared.playSound(sound: .buttonTapped)
-    }
 }

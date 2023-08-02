@@ -13,7 +13,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Готовая библиотека",
                      optionC: "Фреймворк",
                      optionD: "Готовая функция",
-                     questionId: 941076191,
+                     id: 941076191,
                      helpText: """
                      Часто встречающееся решение. Паттерн проектирования — это часто встречающееся решение определённой проблемы при проектировании архитектуры программ.
                      
@@ -29,7 +29,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 294720054,
+                     id: 294720054,
                      helpText: "Нет. Паттерн нельзя просто взять и скопировать в программу. Паттерн представляет собой не какой-то конкретный код, а общую концепцию решения той или иной проблемы, которую нужно будет ещё подстроить под нужды вашей программы."),
             
             Question(question: ["Привязаны ли паттерны проектирования к определенному языку программирования?",
@@ -40,7 +40,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 265999508,
+                     id: 265999508,
                      helpText: """
                      Нет. Паттерны проектирования не привязаны к конкретному языку программирования. В некоторых областях находят более широкое применение одни паттерны и почти не используются остальные, в других направлениях картина может отличаться.
                      
@@ -53,7 +53,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Управление поведением",
                      optionC: "Структурирование кода",
                      optionD: "",
-                     questionId: 187630195,
+                     id: 187630195,
                      helpText: "Создание объектов. В основе порождающих паттернов всегда лежит создание объектов."),
             
             Question(question: ["Кто впервые описал концепцию паттернов?",
@@ -63,7 +63,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Аль-Хорезми",
                      optionC: "Джордж Буль",
                      optionD: "Джон Бэкус",
-                     questionId: 983310880,
+                     id: 983310880,
                      helpText: """
                      Кристофер Александер. Концепцию паттернов впервые описал Кристофер Александер в книге «Язык шаблонов. Города. Здания. Строительство».
                      
@@ -76,7 +76,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Создание объектов",
                      optionC: "Структурирование кода",
                      optionD: "",
-                     questionId: 262045579,
+                     id: 262045579,
                      helpText: "Управление поведением. Поведенческие паттерны являются самой большой категорией, сюда входят все паттерны, которые так или иначе определяют поведение объектов и их взаимодействие друг с другом."),
             
             Question(question: ["Что лежит в основе структурных паттернов?"],
@@ -85,7 +85,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Управление поведением",
                      optionC: "Создание объектов",
                      optionD: "",
-                     questionId: 783021294,
+                     id: 783021294,
                      helpText: "Структурирование кода. Структурные паттерны позволяют лучше структурировать код, чтобы его было легче понимать."),
             
             Question(question: ["Используются ли паттерны в нативных библиотеках Apple?",
@@ -96,7 +96,7 @@ class BasicsAboutPatternsSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 753240553,
+                     id: 753240553,
                      helpText: """
                      Да. Как и делегат, синглтон часто используется в нативных библиотеках Apple. UIApplication.shared предоставляет доступ к экземпляру приложения. Этот объект всегда один в приложении.
                      
@@ -111,7 +111,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Factory method",
 					 optionC: "Prototype",
 					 optionD: "",
-					 questionId: 676668969,
+					 id: 676668969,
                      helpText: """
                      Abstract factory. Абстрактная фабрика (англ. Abstract factory) — порождающий шаблон проектирования, предоставляет интерфейс для создания семейств взаимосвязанных или взаимозависимых объектов, не специфицируя их конкретных классов.
                      
@@ -126,7 +126,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Abstract factory",
 					 optionC: "Command",
 					 optionD: "",
-					 questionId: 877240500,
+					 id: 877240500,
                      helpText: """
                      Chain of responsibility. Цепочка обязанностей (англ. Chain of responsibility) — поведенческий шаблон проектирования, предназначенный для организации в системе уровней ответственности.
                      
@@ -142,7 +142,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Bridge",
 					 optionC: "Factory method",
 					 optionD: "",
-					 questionId: 386143283,
+					 id: 386143283,
                      helpText: """
                      Adapter. Адаптер (англ. Adapter) — структурный шаблон проектирования, предназначенный для организации использования функций объекта, недоступного для модификации, через специально созданный интерфейс.
                      
@@ -155,7 +155,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Composite",
 					 optionC: "Iterator",
 					 optionD: "",
-					 questionId: 788441694,
+					 id: 788441694,
                      helpText: """
                      Builder. Строитель (англ. Builder) — порождающий шаблон проектирования предоставляет способ создания составного объекта.
                      
@@ -170,7 +170,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Prototype",
 					 optionC: "Observer",
 					 optionD: "",
-					 questionId: 925952864,
+					 id: 925952864,
                      helpText: """
                      Bridge. Шаблон мост (англ. Bridge) — структурный шаблон проектирования, используемый для того, чтобы «разделять абстракцию и реализацию так, чтобы они могли изменяться независимо».
                      
@@ -185,7 +185,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Visitor",
 					 optionC: "Strategy",
 					 optionD: "",
-					 questionId: 724363619,
+					 id: 724363619,
                      helpText: """
                      Command. Команда (англ. Command) — поведенческий шаблон проектирования, используемый при объектно-ориентированном программировании, представляющий действие.
                      
@@ -198,7 +198,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Abstract factory",
 					 optionC: "Flyweight",
 					 optionD: "Template method",
-					 questionId: 207701252,
+					 id: 207701252,
                      helpText: """
                      Factory Method. Фабричный метод (англ. Factory Method) — порождающий шаблон проектирования, предоставляющий подклассам интерфейс для создания экземпляров некоторого класса.
                      
@@ -213,7 +213,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Decorator",
 					 optionC: "Iterator",
 					 optionD: "",
-					 questionId: 401396647,
+					 id: 401396647,
                      helpText: """
                      Composite. Компоновщик (англ. Composite pattern) — структурный шаблон проектирования, объединяющий объекты в древовидную структуру для представления иерархии от частного к целому.
                      
@@ -226,7 +226,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Composite",
 					 optionC: "Mediator",
 					 optionD: "",
-					 questionId: 934394978,
+					 id: 934394978,
                      helpText: """
                      Decorator. Декоратор (англ. Decorator) — структурный шаблон проектирования, предназначенный для динамического подключения дополнительного поведения к объекту.
                      
@@ -241,7 +241,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Memento",
 					 optionC: "Mediator",
 					 optionD: "",
-					 questionId: 483949215,
+					 id: 483949215,
                      helpText: """
                      Iterator. Поведенческий шаблон проектирования. Представляет собой объект, позволяющий получить последовательный доступ к элементам объекта-агрегата без использования описаний каждого из агрегированных объектов.
                      
@@ -256,7 +256,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Decorator",
 					 optionC: "Command",
 					 optionD: "",
-					 questionId: 541178825,
+					 id: 541178825,
                      helpText: """
                      Mediator. Посредник (англ. Mediator) — поведенческий шаблон проектирования, обеспечивающий взаимодействие множества объектов, формируя при этом слабую связанность и избавляя объекты от необходимости явно ссылаться друг на друга.
                      
@@ -269,7 +269,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Memento",
 					 optionC: "Observer",
 					 optionD: "",
-					 questionId: 399063832,
+					 id: 399063832,
                      helpText: """
                      Singleton. Одиночка (англ. Singleton) — порождающий шаблон проектирования, гарантирующий, что в однопоточном приложении будет единственный экземпляр некоторого класса, и предоставляющий глобальную точку доступа к этому экземпляру.
                      
@@ -284,7 +284,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "State",
 					 optionC: "Strategy",
 					 optionD: "",
-					 questionId: 168558599,
+					 id: 168558599,
                      helpText: """
                      Memento. Хранитель (англ. Memento) — поведенческий шаблон проектирования, позволяющий, не нарушая инкапсуляцию, зафиксировать и сохранить внутреннее состояние объекта так, чтобы позднее восстановить его в это состояние.
                      
@@ -297,7 +297,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Facade",
 					 optionC: "Flyweight",
 					 optionD: "Delegate",
-					 questionId: 740104237,
+					 id: 740104237,
                      helpText: """
                      Observer. Наблюдатель (англ. Observer) — поведенческий шаблон проектирования. Также известен как «подчинённые» (Dependents).
                      
@@ -312,7 +312,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Observer",
 					 optionC: "Proxy",
 					 optionD: "Decorator",
-					 questionId: 730567715,
+					 id: 730567715,
                      helpText: """
                      Facade. Шаблон фасад (англ. Facade) — структурный шаблон проектирования, позволяющий скрыть сложность системы путём сведения всех возможных внешних вызовов к одному объекту, делегирующему их соответствующим объектам системы.
                      
@@ -327,7 +327,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Singleton",
 					 optionC: "Composite",
 					 optionD: "",
-					 questionId: 195105640,
+					 id: 195105640,
                      helpText: """
                      Flyweight. Приспособленец (англ. flyweight, «легковесный») — структурный шаблон проектирования, при котором объект, представляющий себя как уникальный экземпляр в разных местах программы, по факту не является таковым.
                      
@@ -342,7 +342,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Decorator",
 					 optionC: "Facade",
 					 optionD: "Bridge",
-					 questionId: 897666085,
+					 id: 897666085,
                      helpText: """
                      Proxy. Заместитель (англ. Proxy) — структурный шаблон проектирования, предоставляющий объект, который контролирует доступ к другому объекту, перехватывая все вызовы (выполняет функцию контейнера).
                      
@@ -355,7 +355,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Strategy",
 					 optionC: "Command",
 					 optionD: "Iterator",
-					 questionId: 289102789,
+					 id: 289102789,
                      helpText: """
                      State. Состояние (англ. State) — поведенческий шаблон проектирования. Используется в тех случаях, когда во время выполнения программы объект должен менять своё поведение в зависимости от своего состояния.
                      
@@ -370,7 +370,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "State",
 					 optionC: "Mediator",
 					 optionD: "Builder",
-					 questionId: 281571131,
+					 id: 281571131,
                      helpText: """
                      Strategy. Стратегия (англ. Strategy) — поведенческий шаблон проектирования, предназначенный для определения семейства алгоритмов, инкапсуляции каждого из них и обеспечения их взаимозаменяемости.
                      
@@ -383,7 +383,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Factory method",
 					 optionC: "Abstract Factory",
 					 optionD: "Proxy",
-					 questionId: 554019753,
+					 id: 554019753,
 					 helpText: "Template method. Шаблонный метод (англ. Template method) — поведенческий шаблон проектирования, определяющий основу алгоритма и позволяющий наследникам переопределять некоторые шаги алгоритма, не изменяя его структуру в целом."),
 			
 			Question(question: ["Поведенческий шаблон проектирования, описывающий операцию, которая выполняется над объектами других классов"],
@@ -392,7 +392,7 @@ class BasicsAboutPatternsSet {
 					 optionB: "Strategy",
 					 optionC: "Facade",
 					 optionD: "Prototype",
-					 questionId: 515890421,
+					 id: 515890421,
                      helpText: """
                      Visitor. Посетитель (англ. visitor) — поведенческий шаблон проектирования, описывающий операцию, которая выполняется над объектами других классов. При изменении visitor нет необходимости изменять обслуживаемые классы.
                      

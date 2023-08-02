@@ -17,7 +17,7 @@ class DictionariesSet {
                      optionB: "№2",
                      optionC: "Ни в каком",
                      optionD: "",
-                     questionId: 491309504,
+                     id: 491309504,
                      helpText: "№1. Словарь создается в первом варианте. У нас есть ключ типа String и значение типа String. Второй вариант создает массив из двух элементов типа String."),
             
             Question(question: ["Если массив или словарь присвоены переменной, можем ли мы их изменять?",
@@ -28,7 +28,7 @@ class DictionariesSet {
                      optionB: "Только добавлять элементы",
                      optionC: "Только удалять элементы",
                      optionD: "Нет",
-                     questionId: 297589520,
+                     id: 297589520,
                      helpText: """
                      Да. Когда вы создаете массив или словарь и присваиваете его переменной, то созданная коллекция будет изменяемой.
                      
@@ -43,7 +43,7 @@ class DictionariesSet {
                      optionB: "Dictionary()",
                      optionC: "mapValues(_:)",
                      optionD: "Subscripting",
-                     questionId: 143207269,
+                     id: 143207269,
                      helpText: """
                      zip(_:_:). Она возвращает последовательность пар, основанную на двух базовых последовательностях, после чего должна передавать его свойству uniqueKeysWithValues инициализатора Dictionary.
                      
@@ -57,7 +57,7 @@ class DictionariesSet {
                      optionB: ".map",
                      optionC: ".filter",
                      optionD: ".reduce",
-                     questionId: 224757982,
+                     id: 224757982,
                      helpText: "mapValues. Обработка (маппинг) значений элементов словарей делается с помощью метода mapValues(_:), в который передается замыкание. Доступ осуществляется поочередно к значению каждого элемента словаря."),
             
             Question(question: ["Какие города объединятся в словаре grouped при группировке словаря по такому признаку?"],
@@ -66,7 +66,7 @@ class DictionariesSet {
                      optionB: "Shanghai и Karachi",
                      optionC: "Shanghai и Beijing",
                      optionD: "Beijing и Karachi",
-                     questionId: 833782801,
+                     id: 833782801,
                      helpText: """
                      Shanghai и Seoul. При инициализации словаря используется входной аргумент grouping, в качестве значения которому передается анализируемые ключи словаря cities.
                      
@@ -80,7 +80,7 @@ class DictionariesSet {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 938357634,
+                     id: 938357634,
                      helpText: """
                      Да. Если вы используете доступ к элементам словаря через сабскрипт, то при попытке обратиться по неcуществующему имени вам будет возвращен nil.
                      
@@ -95,7 +95,7 @@ class DictionariesSet {
                      optionB: "3",
                      optionC: "2",
                      optionD: "Столкнемся с ошибкой",
-                     questionId: 119883281,
+                     id: 119883281,
                      helpText: """
                      4. В примере мы объявляем переменную numberOfLegs и инициализируем ее с помощью литерала словаря, который содержит три пары ключ-значение.
                      
@@ -108,7 +108,7 @@ class DictionariesSet {
                      optionB: "true",
                      optionC: "Значение book.id",
                      optionD: "Столкнемся с ошибкой",
-                     questionId: 637371673,
+                     id: 637371673,
                      helpText: """
                      false. Метод updateValue(forKey:) устанавливает значение для ключа если оно не существует, или обновляет значение, если этот ключ уже существует.
                      
@@ -123,7 +123,7 @@ class DictionariesSet {
                      optionB: "false",
                      optionC: "Значение book.id",
                      optionD: "",
-                     questionId: 129673386,
+                     id: 129673386,
                      helpText: """
                      true. Можно удалить пару ключ-значение из словаря с помощью метода removeValue(forKey:). Этот метод удаляет пару ключ-значение если она существует и затем возвращает значение, либо возвращает nil если значения не существует.
                      
@@ -138,7 +138,7 @@ class DictionariesSet {
                      optionB: "Dictionary<KeyType>, <ValueType>",
                      optionC: "Dictionary(KeyType, ValueType)",
                      optionD: "<Dictionary(KeyType, ValueType)>",
-                     questionId: 568668338,
+                     id: 568668338,
                      helpText: """
                      Dictionary<KeyType, ValueType>. В Swift тип словаря в полной форме пишется как Dictionary<KeyType, ValueType>, где KeyType это тип значения который используется как ключ словаря, а ValueType это тип значения который словарь может хранить для этих ключей.
                      
@@ -151,7 +151,7 @@ class DictionariesSet {
                      optionB: "Вариант №1",
                      optionC: "Вариант №2",
                      optionD: "",
-                     questionId: 679959817,
+                     id: 679959817,
                      helpText: "В обоих вариантах. В нашем случае - оба варианта являются корректными с точки зрения инициализации."),
             
             Question(question: ["У типа словаря есть краткая форма записи? Если да, то какая?",
@@ -161,7 +161,7 @@ class DictionariesSet {
                      optionB: "Да, KeyType: ValueType",
                      optionC: "Да, <KeyType, ValueType>",
                      optionD: "Нет",
-                     questionId: 950557602,
+                     id: 950557602,
                      helpText: "Да, [KeyType: ValueType]. Вы можете написать словарь в сокращенной форме как [KeyType: ValueType]. Хотя две формы функционально идентичны (полная и краткая), краткая форма является предпочтительной."),
             
             Question(question: ["Как мы можем создать пустой словарь определенного типа с помощью синтаксиса инициализатора?",
@@ -172,7 +172,7 @@ class DictionariesSet {
                      optionB: "var names = Int: String[]",
                      optionC: "var names: [Int: String] = ()",
                      optionD: "var names: (Int: String) = []",
-                     questionId: 463070928,
+                     id: 463070928,
                      helpText: """
                      var names = [Int: String](). Подобно массивам вы можете создать пустой словарь определенного типа с помощью синтаксиса инициализатора: var names = [Int: String]().
                      
@@ -189,7 +189,7 @@ class DictionariesSet {
                      optionB: "[]",
                      optionC: "[](:)",
                      optionD: "{:}",
-                     questionId: 217639254,
+                     id: 217639254,
                      helpText: "[:]. Если контекст уже предоставляет информацию о типе (ранее мы уже инициализировали значения), вы можете создать пустой словарь с помощью литерала пустого словаря, который пишется как [:] ( двоеточие внутри пары квадратных скобок)."),
             
             Question(question: ["Скомпилируется ли этот код? Если да, то какое значение мы получим в earth?"],
@@ -198,7 +198,7 @@ class DictionariesSet {
                      optionB: "Mars",
                      optionC: "Home",
                      optionD: "Столкнемся с ошибкой",
-                     questionId: 376568312,
+                     id: 376568312,
                      helpText: """
                      Earth. Код является корректным, мы получим значение Earth. Если мы пытаемся получить значение словаря по ключу, которого в нем нет (в нашем случае, например: 2) - мы получим nil.
                      
@@ -213,7 +213,7 @@ class DictionariesSet {
                      optionB: "var b = [Int: String](1: \"Name\")",
                      optionC: "var c: (Int: String)[0: \"Name\"]",
                      optionD: "var d: <Int: String>[0: \"Name\"]",
-                     questionId: 891705705,
+                     id: 891705705,
                      helpText: """
                      var a: [Int: String] = [0: \"Name\"]. Вы можете инициализировать словарь с помощью литерала словаря, который имеет схожий синтаксис с литералом массива.
                      
@@ -230,7 +230,7 @@ class DictionariesSet {
                      optionB: "[Int : Character]",
                      optionC: "[Int : String]",
                      optionD: "[Float : String]",
-                     questionId: 813582489,
+                     id: 813582489,
                      helpText: "[Double : String]. Поскольку стандартно присваивается тип Double любому числу с плавающей точкой, без явного указания типа. Вторая часть, значение словаря, имеет тип String."),
             
             Question(question: ["Каким образом можно добавлять и изменять элементы словаря через синтаксис индексов?",
@@ -240,7 +240,7 @@ class DictionariesSet {
                      optionB: "dictionary.Key(Value)",
                      optionC: "dictionary.Key = [Value]",
                      optionD: "Значения словаря неизменяемы",
-                     questionId: 751274678,
+                     id: 751274678,
                      helpText: """
                      dictionary[Key] = Value. Вы можете добавить новый элемент в словарь с помощью синтаксиса индексов. Используйте новый ключ соответствующего типа в качестве индекса, а затем присвойте новое значение соответствующего типа.
                      
@@ -255,7 +255,7 @@ class DictionariesSet {
                      optionB: "update(key:)",
                      optionC: "changeValue(forKey:)",
                      optionD: "change(key:)",
-                     questionId: 959889447,
+                     id: 959889447,
                      helpText: """
                      updateValue(forKey:). В качестве альтернативы индексам, можно использовать метод словаря updateValue(forKey:), чтобы установить или обновить значение для определенного ключа.
                      
@@ -271,7 +271,7 @@ class DictionariesSet {
                      optionB: "0",
                      optionC: "Ничего",
                      optionD: "Опциональный тип",
-                     questionId: 206704919,
+                     id: 206704919,
                      helpText: """
                      nil. Метод updateValue(forKey:) возвращает опциональное значение соответствующее типу значения словаря.
                      
@@ -285,7 +285,7 @@ class DictionariesSet {
                      optionB: "Ничего",
                      optionC: "Рандомное значение",
                      optionD: "Столкнемся с ошибкой",
-                     questionId: 543232667,
+                     id: 543232667,
                      helpText: """
                      nil. Поскольку есть вероятность запросить ключ для несуществующего значения, индекс словаря возвращает опциональное значение соответствующее типу значений словаря.
                      
@@ -300,7 +300,7 @@ class DictionariesSet {
                      optionB: "dict[Key] = []",
                      optionC: "dict[Key] = 0",
                      optionD: "dict[Key].remove()",
-                     questionId: 255571974,
+                     id: 255571974,
                      helpText: "dict[Key] = nil. Вы можете использовать синтаксис индексов для удаления пары ключ-значение из словаря путем присвоения nil значению для этого ключа."),
             
             Question(question: ["Этот метод удаляет пару ключ-значение если она существует и затем возвращает значение, либо возвращает nil если значения не существует",
@@ -310,7 +310,7 @@ class DictionariesSet {
                      optionB: "remove(forKey:)",
                      optionC: "removeValue(Key:)",
                      optionD: "deleteValue(forKey:)",
-                     questionId: 822224219,
+                     id: 822224219,
                      helpText: """
                      removeValue(forKey:). Можно удалить пару ключ-значение из словаря с помощью метода removeValue(forKey:).
                      
@@ -323,7 +323,7 @@ class DictionariesSet {
                      optionB: "Mars",
                      optionC: "Earth",
                      optionD: "Столкнемся с ошибкой",
-                     questionId: 945589876,
+                     id: 945589876,
                      helpText: """
                      Home. Код скомпилируется и мы получим значение Home. Если мы пытаемся получить значение словаря по ключу, которого в нем нет (как в нашем случае), мы получим nil.
                      
@@ -338,7 +338,7 @@ class DictionariesSet {
                      optionB: "One",
                      optionC: "Two",
                      optionD: "nil",
-                     questionId: 300380657,
+                     id: 300380657,
                      helpText: """
                      Ошибку компиляции. В нашем словаре numbers ключи имеют тип Int.
                      

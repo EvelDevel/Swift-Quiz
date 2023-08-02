@@ -19,7 +19,7 @@ class Interview {
                      optionB: "MRC",
                      optionC: "Вручную",
                      optionD: "",
-                     questionId: 342790056,
+                     id: 342790056,
                      links: [
                         "https://swiftbook.ru/content/languageguide/automatic-reference-counting/#:~:text=Swift%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D1%82%20automatic%20reference%20counting,%D0%B4%D1%83%D0%BC%D0%B0%D1%82%D1%8C%20%D0%BE%20%D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C%D1%8E."
                      ],
@@ -40,7 +40,7 @@ class Interview {
                      optionB: "strong, unowned",
                      optionC: "direct, weak, strong",
                      optionD: "",
-                     questionId: 678255779,
+                     id: 678255779,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -62,7 +62,7 @@ class Interview {
                      optionB: "1",
                      optionC: "Не имеет значения",
                      optionD: "",
-                     questionId: 537225677,
+                     id: 537225677,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -85,7 +85,7 @@ class Interview {
                      optionB: "Reference type",
                      optionC: "Deadlock",
                      optionD: "",
-                     questionId: 713615594,
+                     id: 713615594,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -106,7 +106,7 @@ class Interview {
                      optionB: "Куча",
                      optionC: "",
                      optionD: "",
-                     questionId: 486217799,
+                     id: 486217799,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -127,7 +127,7 @@ class Interview {
                      optionB: "Стек",
                      optionC: "",
                      optionD: "",
-                     questionId: 607469139,
+                     id: 607469139,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -148,7 +148,7 @@ class Interview {
                      optionB: "weak",
                      optionC: "unowned",
                      optionD: "",
-                     questionId: 419647432,
+                     id: 419647432,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -169,7 +169,7 @@ class Interview {
                      optionB: "strong",
                      optionC: "",
                      optionD: "",
-                     questionId: 803856401,
+                     id: 803856401,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -188,7 +188,7 @@ class Interview {
                      optionB: "weak",
                      optionC: "",
                      optionD: "",
-                     questionId: 272844365,
+                     id: 272844365,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -207,7 +207,7 @@ class Interview {
                      optionB: "strong",
                      optionC: "",
                      optionD: "",
-                     questionId: 997363445,
+                     id: 997363445,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -228,7 +228,7 @@ class Interview {
                      optionB: "В куче",
                      optionC: "",
                      optionD: "",
-                     questionId: 582577324,
+                     id: 582577324,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -245,7 +245,7 @@ class Interview {
                      optionB: "Int",
                      optionC: "Enum",
                      optionD: "",
-                     questionId: 974361124,
+                     id: 974361124,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -262,7 +262,7 @@ class Interview {
                      optionB: "Closure",
                      optionC: "Function",
                      optionD: "",
-                     questionId: 620493116,
+                     id: 620493116,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -279,7 +279,7 @@ class Interview {
                      optionB: "Double",
                      optionC: "Struct",
                      optionD: "",
-                     questionId: 949644911,
+                     id: 949644911,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -296,7 +296,7 @@ class Interview {
                      optionB: "В стеке",
                      optionC: "",
                      optionD: "",
-                     questionId: 444268627,
+                     id: 444268627,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -317,7 +317,7 @@ class Interview {
                      optionB: "Class",
                      optionC: "Function",
                      optionD: "",
-                     questionId: 243404298,
+                     id: 243404298,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -334,7 +334,7 @@ class Interview {
                      optionB: "String",
                      optionC: "Dictionary",
                      optionD: "",
-                     questionId: 243404298,
+                     id: 243404298,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -351,7 +351,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 865006077,
+                     id: 865006077,
                      helpText: """
                      Да. deinit вызывается на том потоке, на котором счетчик ссылок стал равен нулю (была удалена последняя ссылка).
                      """
@@ -365,7 +365,7 @@ class Interview {
                      optionB: "Две",
                      optionC: "Неограниченное кол-во",
                      optionD: "",
-                     questionId: 321702655,
+                     id: 321702655,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -383,7 +383,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 198930007,
+                     id: 198930007,
                      links: [
                         "https://habr.com/ru/post/592385/"
                      ],
@@ -400,7 +400,7 @@ class Interview {
                      optionB: "Operation",
                      optionC: "",
                      optionD: "",
-                     questionId: 624591904,
+                     id: 624591904,
                      links: [
                         "https://habr.com/ru/post/320152/",
                         "https://habr.com/ru/post/572316/"
@@ -423,7 +423,7 @@ class Interview {
                      optionB: "Grand Central Dispatch",
                      optionC: "Thread",
                      optionD: "",
-                     questionId: 260560281,
+                     id: 260560281,
                      links: [
                         "https://habr.com/ru/post/320152/"
                      ],
@@ -445,7 +445,7 @@ class Interview {
                      optionB: "Operation",
                      optionC: "Thread",
                      optionD: "UIKit",
-                     questionId: 686933812,
+                     id: 686933812,
                      links: [
                         "https://habr.com/ru/post/578752/"
                      ],
@@ -466,7 +466,7 @@ class Interview {
                      optionB: "LIFO",
                      optionC: "",
                      optionD: "",
-                     questionId: 778454967,
+                     id: 778454967,
                      links: [
                         "https://habr.com/ru/post/320152/",
                         "https://habr.com/ru/post/578752/"
@@ -488,7 +488,7 @@ class Interview {
                      optionB: "concurrent, sync",
                      optionC: "async, serial",
                      optionD: "",
-                     questionId: 621237965,
+                     id: 621237965,
                      links: [
                         "https://habr.com/ru/post/320152/",
                         "https://habr.com/ru/post/578752/"
@@ -508,7 +508,7 @@ class Interview {
                      optionB: "Serial",
                      optionC: "",
                      optionD: "",
-                     questionId: 125382274,
+                     id: 125382274,
                      links: [
                         "https://habr.com/ru/post/320152/",
                         "https://habr.com/ru/post/578752/"
@@ -528,7 +528,7 @@ class Interview {
                      optionB: "Race condition",
                      optionC: "Data race",
                      optionD: "",
-                     questionId: 171028339,
+                     id: 171028339,
                      links: [
                         "https://habr.com/ru/post/578752/"
                      ],
@@ -549,7 +549,7 @@ class Interview {
                      optionB: "Deadlock",
                      optionC: "Data race",
                      optionD: "",
-                     questionId: 783082496,
+                     id: 783082496,
                      links: [
                         "https://habr.com/ru/post/578752/"
                      ],
@@ -566,7 +566,7 @@ class Interview {
                      optionB: "Race condition",
                      optionC: "Deadlock",
                      optionD: "",
-                     questionId: 796024549,
+                     id: 796024549,
                      links: [
                         "https://habr.com/ru/company/otus/blog/353414/",
                         "https://www.avanderlee.com/swift/race-condition-vs-data-race/",
@@ -587,7 +587,7 @@ class Interview {
                      optionB: "1 2 3",
                      optionC: "2 1 3",
                      optionD: "",
-                     questionId: 108073508,
+                     id: 108073508,
                      helpText: """
                      1 3 2. Если функция gsd() вызывается на главном потоке, то вывод всегда будет равен 1 3 2. Потому что главная очередь последовательная, и в момент добавления замыкания print(2), на главной очереди идет выполнение функции gsd().
 
@@ -607,7 +607,7 @@ class Interview {
                      optionB: "DispatchQueue",
                      optionC: "",
                      optionD: "",
-                     questionId: 871980272,
+                     id: 871980272,
                      links: [
                         "https://habr.com/ru/post/578752/#Dispatch%20group"
                      ],
@@ -626,7 +626,7 @@ class Interview {
                      optionB: "Grand Central Dispatch",
                      optionC: "",
                      optionD: "",
-                     questionId: 703367702,
+                     id: 703367702,
                      links: [
                         "https://habr.com/ru/post/578752/#Dispatch%20group"
                      ],
@@ -645,7 +645,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 412214603,
+                     id: 412214603,
                      links: [
                         "https://habr.com/ru/post/578752/#Dispatch%20group"
                      ],
@@ -664,7 +664,7 @@ class Interview {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 868586244,
+                     id: 868586244,
                      links: [
                         "https://habr.com/ru/post/578752/#Dispatch%20group"
                      ],
@@ -683,7 +683,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "Только по отдельности",
                      optionD: "",
-                     questionId: 977593992,
+                     id: 977593992,
                      links: [
                         "https://habr.com/ru/post/578752/#Dispatch%20group"
                      ],
@@ -700,7 +700,7 @@ class Interview {
                      optionB: "Единовременная проверка",
                      optionC: "Итератор массивов",
                      optionD: "",
-                     questionId: 274504854,
+                     id: 274504854,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -721,7 +721,7 @@ class Interview {
                      optionB: "Вручную",
                      optionC: "В AppDelegate",
                      optionD: "",
-                     questionId: 992682217,
+                     id: 992682217,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -742,7 +742,7 @@ class Interview {
                      optionB: "Да",
                      optionC: "Только 4",
                      optionD: "",
-                     questionId: 958458634,
+                     id: 958458634,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -761,7 +761,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 722080406,
+                     id: 722080406,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -780,7 +780,7 @@ class Interview {
                      optionB: "Два",
                      optionC: "По количеству потоков",
                      optionD: "",
-                     questionId: 807039101,
+                     id: 807039101,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -797,7 +797,7 @@ class Interview {
                      optionB: "2",
                      optionC: "Неограниченное",
                      optionD: "",
-                     questionId: 318965895,
+                     id: 318965895,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -814,7 +814,7 @@ class Interview {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 975206389,
+                     id: 975206389,
                      links: [
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
@@ -831,7 +831,7 @@ class Interview {
                      optionB: "userInitiated",
                      optionC: "default",
                      optionD: "utility",
-                     questionId: 148089657,
+                     id: 148089657,
                      links: [
                         "https://habr.com/ru/post/578752"
                      ],
@@ -852,7 +852,7 @@ class Interview {
                      optionB: "Semaphore",
                      optionC: "Group",
                      optionD: "",
-                     questionId: 318426331,
+                     id: 318426331,
                      links: [
                         "https://habr.com/ru/post/578752"
                      ],
@@ -873,7 +873,7 @@ class Interview {
                      optionB: "DispatchQueue",
                      optionC: "Operation",
                      optionD: "",
-                     questionId: 978135201,
+                     id: 978135201,
                      links: [
                         "https://habr.com/ru/post/578752/"
                      ],
@@ -892,7 +892,7 @@ class Interview {
                      optionB: "Одна",
                      optionC: "Три",
                      optionD: "",
-                     questionId: 357472566,
+                     id: 357472566,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -922,7 +922,7 @@ class Interview {
                      optionB: "didFinishLaunchingWithOptions",
                      optionC: "",
                      optionD: "",
-                     questionId: 614223432,
+                     id: 614223432,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
                      ],
@@ -939,7 +939,7 @@ class Interview {
                      optionB: "willFinishLaunchingWithOptions",
                      optionC: "",
                      optionD: "",
-                     questionId: 941269429,
+                     id: 941269429,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
                      ],
@@ -967,7 +967,7 @@ class Interview {
                      """,
                      optionC: "",
                      optionD: "",
-                     questionId: 966969777,
+                     id: 966969777,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -992,7 +992,7 @@ class Interview {
                      optionB: "applicationDidEnterBackground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "applicationWillTerminate",
-                     questionId: 104580000,
+                     id: 104580000,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1009,7 +1009,7 @@ class Interview {
                      optionB: "applicationWillEnterForeground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "",
-                     questionId: 493825556,
+                     id: 493825556,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1026,7 +1026,7 @@ class Interview {
                      optionB: "Inactive",
                      optionC: "Not running",
                      optionD: "",
-                     questionId: 551888796,
+                     id: 551888796,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1039,7 +1039,7 @@ class Interview {
                      optionB: "sceneWillEnterForeground",
                      optionC: "sceneDidEnterBackground",
                      optionD: "sceneDidBecomeActive",
-                     questionId: 156634382,
+                     id: 156634382,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1056,7 +1056,7 @@ class Interview {
                      optionB: "Suspended, Active",
                      optionC: "Background, Inactive",
                      optionD: "",
-                     questionId: 224991714,
+                     id: 224991714,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1075,7 +1075,7 @@ class Interview {
                      optionB: "Background",
                      optionC: "Not running",
                      optionD: "Inactive",
-                     questionId: 917741590,
+                     id: 917741590,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1090,7 +1090,7 @@ class Interview {
                      optionB: "applicationWillResignActive",
                      optionC: "applicationWillEnterForeground",
                      optionD: "",
-                     questionId: 297092320,
+                     id: 297092320,
                      links: [
                         "https://habr.com/ru/post/578752/",
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
@@ -1111,7 +1111,7 @@ class Interview {
                      optionB: "applicationDidEnterBackground",
                      optionC: "applicationDidBecomeActive",
                      optionD: "",
-                     questionId: 979698336,
+                     id: 979698336,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle",
                         "https://habr.com/ru/post/578752/"
@@ -1130,7 +1130,7 @@ class Interview {
                      optionB: "applicationWillResignActive",
                      optionC: "applicationDidEnterBackground",
                      optionD: "",
-                     questionId: 418701548,
+                     id: 418701548,
                      links: [
                         "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle",
                         "https://habr.com/ru/post/578752/"
@@ -1151,7 +1151,7 @@ class Interview {
                      optionB: "loadView()",
                      optionC: "updateViewConstraints()",
                      optionD: "",
-                     questionId: 501142371,
+                     id: 501142371,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1164,7 +1164,7 @@ class Interview {
                      optionB: "Перед viewDidLoad()",
                      optionC: "Перед viewWillLayoutSubviews()",
                      optionD: "",
-                     questionId: 171519758,
+                     id: 171519758,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1177,7 +1177,7 @@ class Interview {
                      optionB: "awakeFromNib()",
                      optionC: "viewWillTransition()",
                      optionD: "deinit()",
-                     questionId: 650973627,
+                     id: 650973627,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1190,7 +1190,7 @@ class Interview {
                      optionB: "updateViewConstraints",
                      optionC: "viewWillLayoutSubviews",
                      optionD: "",
-                     questionId: 675973931,
+                     id: 675973931,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1203,7 +1203,7 @@ class Interview {
                      optionB: "viewDidLayoutSubviews",
                      optionC: "viewWillAppear",
                      optionD: "viewWillDisappear",
-                     questionId: 617491990,
+                     id: 617491990,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1222,7 +1222,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 606229902,
+                     id: 606229902,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1240,7 +1240,7 @@ class Interview {
                      optionB: "viewWillLayoutSubviews()",
                      optionC: "viewDidLoad()",
                      optionD: "",
-                     questionId: 324653727,
+                     id: 324653727,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1257,7 +1257,7 @@ class Interview {
                      optionB: "viewDidDisappear",
                      optionC: "viewDidLayoutSubviews",
                      optionD: "",
-                     questionId: 473148308,
+                     id: 473148308,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1274,7 +1274,7 @@ class Interview {
                      optionB: "viewDidDisappear()",
                      optionC: "deinit()",
                      optionD: "",
-                     questionId: 806955943,
+                     id: 806955943,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1287,7 +1287,7 @@ class Interview {
                      optionB: "viewWillDisappear",
                      optionC: "viewWillTransition",
                      optionD: "",
-                     questionId: 759608492,
+                     id: 759608492,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1304,7 +1304,7 @@ class Interview {
                      optionB: "viewDidDisappear()",
                      optionC: "loadView()",
                      optionD: "viewWillDisappear()",
-                     questionId: 744173788,
+                     id: 744173788,
                      links: [
                         "https://habr.com/ru/post/654517/",
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
@@ -1325,7 +1325,7 @@ class Interview {
                      optionB: "tap",
                      optionC: "sendEvent",
                      optionD: "",
-                     questionId: 216246348,
+                     id: 216246348,
                      links: [
                         "https://medium.com/yandex-maps-mobile/%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC-%D1%83%D0%B4%D0%B0%D1%80-%D1%81-hittest-542653d51a8c"
                      ],
@@ -1342,7 +1342,7 @@ class Interview {
                      optionB: "layoutIfNeeded()",
                      optionC: "",
                      optionD: "",
-                     questionId: 691444550,
+                     id: 691444550,
                      links: [
                         "https://abhimuralidharan.medium.com/ios-swift-setneedslayout-vs-layoutifneeded-vs-layoutsubviews-5a2b486da31c"
                      ],
@@ -1354,7 +1354,7 @@ class Interview {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 220245804,
+                     id: 220245804,
                      links: [
                         "https://abhimuralidharan.medium.com/ios-swift-setneedslayout-vs-layoutifneeded-vs-layoutsubviews-5a2b486da31c"
                      ],
@@ -1366,7 +1366,7 @@ class Interview {
                      optionB: "setNeedsLayout()",
                      optionC: "",
                      optionD: "",
-                     questionId: 905010494,
+                     id: 905010494,
                      links: [
                         "https://abhimuralidharan.medium.com/ios-swift-setneedslayout-vs-layoutifneeded-vs-layoutsubviews-5a2b486da31c"
                      ],
@@ -1378,7 +1378,7 @@ class Interview {
                      optionB: "layoutIfNeeded()",
                      optionC: "",
                      optionD: "",
-                     questionId: 209542147,
+                     id: 209542147,
                      links: [
                         "https://abhimuralidharan.medium.com/ios-swift-setneedslayout-vs-layoutifneeded-vs-layoutsubviews-5a2b486da31c"
                      ],
@@ -1390,7 +1390,7 @@ class Interview {
                      optionB: "bounds",
                      optionC: "",
                      optionD: "",
-                     questionId: 189660363,
+                     id: 189660363,
                      links: [
                         "https://vmityuklyaev.medium.com/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B8%D0%B5-frame-%D0%B8-bounds-%D0%B2-ios-frame-vs-bounds-in-ios-4e5aee5ed477",
                         "https://www.hackingwithswift.com/example-code/uikit/whats-the-difference-between-frame-and-bounds"
@@ -1407,7 +1407,7 @@ class Interview {
                      optionB: "frame",
                      optionC: "",
                      optionD: "",
-                     questionId: 316697448,
+                     id: 316697448,
                      links: [
                         "https://vmityuklyaev.medium.com/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B8%D0%B5-frame-%D0%B8-bounds-%D0%B2-ios-frame-vs-bounds-in-ios-4e5aee5ed477",
                         "https://www.hackingwithswift.com/example-code/uikit/whats-the-difference-between-frame-and-bounds"

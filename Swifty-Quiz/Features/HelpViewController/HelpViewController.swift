@@ -81,7 +81,7 @@ extension HelpViewController {
             )
         } else {
             for question in SelectedTopic.shared.selectedCategory.questionSet {
-                if question.questionId == questionID {
+                if question.id == questionID {
                     helpTextLabel.attributedText = boldTextService.createBoldTextAnswer(
                         question.helpText,
                         fontSize: fontSize

@@ -17,7 +17,7 @@ class DeinitializationSet {
 					 optionB: "init",
 					 optionC: "deinitialization",
 					 optionD: "",
-					 questionId: 976027024,
+					 id: 976027024,
 					 helpText: "deinit. Деинициализатор вызывается перед освобождением экземпляра класса. Вы пишите деинициализаторы с ключевого слова deinit, аналогично как вы пишите инициализаторы с ключевого слова init."),
 
 			Question(question: [
@@ -30,7 +30,7 @@ class DeinitializationSet {
 					 optionB: "Структурные типы",
 					 optionC: "Типы перечислений",
 					 optionD: "Все перечисленные",
-					 questionId: 326086144,
+					 id: 326086144,
 					 helpText: "Классовые типы. Деинициализаторы доступны только для классовых типов."),
 
 			Question(question: [
@@ -42,7 +42,7 @@ class DeinitializationSet {
 					 optionB: "Два",
 					 optionC: "Три",
 					 optionD: "Сколько потребуется",
-					 questionId: 352428798,
+					 id: 352428798,
 					 helpText: "Один. Определения класса могут иметь максимум один деинициализатор на один класс."),
 
 			Question(question: [
@@ -55,7 +55,7 @@ class DeinitializationSet {
 					 optionB: "Да",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 347449025,
+					 id: 347449025,
 					 helpText: "Нет. Деинициализатор не принимает ни одного параметра и пишется без круглых скобок."),
 
 			Question(question: [
@@ -67,7 +67,7 @@ class DeinitializationSet {
 					 optionB: "Да",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 893668063,
+					 id: 893668063,
 					 helpText: "Нет. Деинициализаторы вызываются автоматически прямо перед тем как освобождается экземпляр."),
 
 			Question(question: [
@@ -79,7 +79,7 @@ class DeinitializationSet {
 					 optionB: "Да",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 103456905,
+					 id: 103456905,
 					 helpText: "Нет. У вас нет возможности вызывать деинициализатор самостоятельно."),
 
 			Question(question: [
@@ -92,7 +92,7 @@ class DeinitializationSet {
 					 optionB: "Нет",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 649284586,
+					 id: 649284586,
 					 helpText: "Да. Деинициализаторы суперкласса наследуются их подклассами, и деинициализаторы суперкласса вызываются автоматически в конце реализации деинициализатора подкласса. Деинициализаторы суперклассов всегда вызываются, даже если подкласс не имеет своего деинициализатора."),
 
 			Question(question: [
@@ -105,7 +105,7 @@ class DeinitializationSet {
 					 optionB: "Нет",
 					 optionC: "",
 					 optionD: "",
-					 questionId: 753879101,
+					 id: 753879101,
 					 helpText: "Да. Так как экземпляр не освобождается до тех пор пока не будет вызван деинициализатор, то деинициалиатор может получить доступ ко всем свойствам экземпляра, который он вызывает, и может изменить свое поведение, основываясь на этих свойствах(например, имя файла, который должен быть закрыт).")
 		]
 	}

@@ -17,7 +17,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 618137998,
+                     id: 618137998,
                      helpText: """
                      Да. Изначально Apple создала iPhone с экраном одного размера, и разработчикам не нужно было создавать гибкие интерфейсы, они должны были соответствовать только одному размеру.
                      
@@ -33,7 +33,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 770323841,
+                     id: 770323841,
                      helpText: """
                      Да. Auto Layout динамически вычисляет позиции и размеры всех view в иерархии на основе constraints — ограничений, заданных для всех view в иерархии.
                      
@@ -48,7 +48,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 848679801,
+                     id: 848679801,
                      helpText: """
                      Да. Интерфейс будет перерасчитан. Когда контент вашего приложения изменяется, для нового содержимого может потребоваться другой размер view. Обычно это происходит в приложениях, отображающих текст или изображения.
                      
@@ -63,7 +63,7 @@ class AutoLayout {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 453857944,
+                     id: 453857944,
                      helpText: """
                      Нет. Вы можете использовать маски с автоизменением размеров (autoresizing mask), они определяют, как изменяется фрейм вашего view при изменении фрейма родительского view.
                      
@@ -78,7 +78,7 @@ class AutoLayout {
                      optionB: "Autoresizing mask",
                      optionC: "Никакой",
                      optionD: "",
-                     questionId: 200521003,
+                     id: 200521003,
                      helpText: "Auto Layout. Он определяет ваш пользовательский интерфейс с помощью ряда ограничений (constraints). Ограничения обычно представляют собой отношения между двумя view. Затем Auto Layout вычисляет размер и расположение каждого view на основе этих ограничений. Это создает интерфейсы, которые динамически реагируют как на внутренние, так и на внешние изменения."),
             
             Question(question: ["Обязательно ли нам самим, вручную расставлять элементы интерфейса внутри stack view?"],
@@ -87,7 +87,7 @@ class AutoLayout {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 402933862,
+                     id: 402933862,
                      helpText: "Нет. stack views предоставляют простой способ использовать возможности Auto Layout без введения сложных ограничений (constraints). Один stack view представляет из себя либо строку, либо столбец элементов пользовательского интерфейса (то есть бывает и вертикальным, и горизонтальным)."),
             
             Question(question: ["Какие разновидности stack view бывают?"],
@@ -96,7 +96,7 @@ class AutoLayout {
                      optionB: "Горизонтальные",
                      optionC: "Вертикальные",
                      optionD: "",
-                     questionId: 941057637,
+                     id: 941057637,
                      helpText: "Горизонтальные и вертикальные. Stack views предоставляют простой способ использовать возможности Auto Layout без введения сложных ограничений (constraints). Один stack view представляет из себя либо строку, либо столбец элементов пользовательского интерфейса (то есть бывает и вертикальным, и горизонтальным)."),
             
             Question(question: ["Сколько основных свойств имеет UIStackView?"],
@@ -105,7 +105,7 @@ class AutoLayout {
                      optionB: "3",
                      optionC: "2",
                      optionD: "1",
-                     questionId: 894853573,
+                     id: 894853573,
                      helpText: """
                      4. Внутри stack view - все элементы располагаются на основе его свойств.
                      
@@ -121,7 +121,7 @@ class AutoLayout {
                      optionB: "Distribution",
                      optionC: "Alignment",
                      optionD: "Spacing",
-                     questionId: 356536231,
+                     id: 356536231,
                      helpText: """
                      Axis. Внутри stack view - все элементы располагаются на основе его свойств.
                      
@@ -137,7 +137,7 @@ class AutoLayout {
                      optionB: "Spacing",
                      optionC: "Axis",
                      optionD: "",
-                     questionId: 697503329,
+                     id: 697503329,
                      helpText: """
                      Distribution. Внутри stack view - все элементы располагаются на основе его свойств.
                      
@@ -153,7 +153,7 @@ class AutoLayout {
                      optionB: "Spacing",
                      optionC: "Distribution",
                      optionD: "",
-                     questionId: 833397952,
+                     id: 833397952,
                      helpText: """
                      Alignment. Внутри stack view - все элементы располагаются на основе его свойств.
                      
@@ -169,7 +169,7 @@ class AutoLayout {
                      optionB: "Axis",
                      optionC: "Distribution",
                      optionD: "",
-                     questionId: 222554240,
+                     id: 222554240,
                      helpText: """
                      Spacing. Внутри stack view - все элементы располагаются на основе его свойств.
                      Axis: (только UIStackView) определяет ориентацию представления стека (ось), вертикальную или горизонтальную.
@@ -185,7 +185,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 505206643,
+                     id: 505206643,
                      helpText: """
                      Да. stack view также основывает свой макет на приоритетах упорядоченного содержимого (content-hugging priorities) и приоритетах сопротивления сжатию (compression-resistance priorities).
                      
@@ -198,7 +198,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 460023123,
+                     id: 460023123,
                      helpText: "Да. Для получения максимально удовлетворящих вас результатов, вы можете использовать constraints внутри самого stackView, либо вкладывать несколько stackView в stackView и затем использовать constraints, например: для выравнивания по центру экрана."),
             
             Question(question: ["Swift не поддерживает вложенные stack view, вы не можете поместить один в другой. Правда ли это?"],
@@ -207,7 +207,7 @@ class AutoLayout {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 961339359,
+                     id: 961339359,
                      helpText: "Нет. Вы можете вкладывать несколько stack view один в другой, и затем даже использовать constraints, чтобы получить более сложные макеты, отвечающие вашим требованиям."),
             
             Question(question: ["Apple советует в своей верстке использовать максимально возможное количество stack views. Правда ли это?"],
@@ -216,7 +216,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 445353624,
+                     id: 445353624,
                      helpText: """
                      Да. Согласно Apple Layout Guide: Используйте stack views, чтобы управлять как можно большей частью вашего макета.
                      
@@ -231,7 +231,7 @@ class AutoLayout {
                      optionB: "Можем",
                      optionC: "",
                      optionD: "",
-                     questionId: 389087092,
+                     id: 389087092,
                      helpText: """
                      Не можем. Хотя креативное использование вложенных стеков поможет вам создавать сложные, насыщенные пользовательские интерфейсы, вы не сможете полностью избежать использования ограничений (constraints).
                      
@@ -246,7 +246,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 391912939,
+                     id: 391912939,
                      helpText: "Да. Макет (Layout) вашей иерархии view - определяется как серия линейных уравнений. Каждое ограничение (constraint) представляет собой одно линейное уравнение. Ваша цель - объявить серию уравнений, которая имеет одно и только одно возможное решение."),
             
             Question(question: ["Constraints определяют отношение между двумя элементами интерфейса. Могут ли они определять отношение между двумя атрибутами одного элемента?"],
@@ -255,7 +255,7 @@ class AutoLayout {
                      optionB: "Нет, не могут",
                      optionC: "",
                      optionD: "",
-                     questionId: 648065252,
+                     id: 648065252,
                      helpText: """
                      Да, могут. Большинство constraints определяют отношения между двумя элементами в нашем пользовательском интерфейсе. Эти элементы могут представлять собой view или руководства по макету (layout guides).
                      
@@ -268,7 +268,7 @@ class AutoLayout {
                      optionB: "height, width",
                      optionC: "vertical, horizontal centers",
                      optionD: "",
-                     questionId: 639595138,
+                     id: 639595138,
                      helpText: """
                      leading, trailing, top, bottom. У нас есть несколько основных видов ограничений по атрибутам, например: по четырем краям (передний, задний, верхний и нижний: leading, trailing, top, and bottom), а также высота, ширина (height, width), а также центры по вертикали и горизонтали (vertical and horizontal centers).
                      
@@ -281,7 +281,7 @@ class AutoLayout {
                      optionB: "Да, можем использовать",
                      optionC: "",
                      optionD: "",
-                     questionId: 703293211,
+                     id: 703293211,
                      helpText: """
                      Нет, они не совместимы. Широкий диапазон параметров и атрибутов, доступных для этих линейных уравнений (ограничений), позволяет создавать множество различных типов ограничений. Вы можете определить расстояние между view, выровнять края view, определить относительный размер двух view или даже определить соотношение сторон view.
                      
@@ -296,7 +296,7 @@ class AutoLayout {
                      optionB: "Положение view по Y",
                      optionC: "Высоту view, равную 0",
                      optionD: "",
-                     questionId: 411419846,
+                     id: 411419846,
                      helpText: """
                      Высоту view, равную 40. Данное ограничение устанавливает высоту view равную 40 единицам (Setting a constant height). Значение 0.0 - это Multiplier, другими словами, насколько мы умножаем конечное значение.
                      
@@ -309,7 +309,7 @@ class AutoLayout {
                      optionB: "Ширину кнопки 2",
                      optionC: "Расстояние от края до кнопки 2",
                      optionD: "",
-                     questionId: 585910552,
+                     id: 585910552,
                      helpText: """
                      Расстояние между кнопками 1 и 2. Данное ограничение устанавливает расстояние между кнопкой №1 и кнопкой №2 в 8 пунктов.
                      
@@ -322,7 +322,7 @@ class AutoLayout {
                      optionB: "Кнопка 1 прилипает к кнопке 2",
                      optionC: "Устанавливаем ширину кнопки 2",
                      optionD: "",
-                     questionId: 631310542,
+                     id: 631310542,
                      helpText: """
                      Выравнивания по левому краю. В этом линейном уравнении мы устанавливаем местоположение, а точнее - мы устанавливаем выравнивание двух кнопок по левому краю (Aligning the leading edge of two buttons).
                      
@@ -335,7 +335,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 993025804,
+                     id: 993025804,
                      helpText: """
                      Да. Когда Auto Layout решает эти уравнения, он не просто присваивает значение правой части левой.
                      
@@ -350,7 +350,7 @@ class AutoLayout {
                      optionB: "Нет, только первый",
                      optionC: "Нет, только второй",
                      optionD: "Нет, только третий",
-                     questionId: 393591405,
+                     id: 393591405,
                      helpText: """
                      Да. Как правило, ограничения должны определять как размер, так и положение каждого view. Предполагая, что размер superview уже установлен (например, root view сцены в iOS). Однозначный, удовлетворительный макет требует двух ограничений на view для каждого измерения (вертикальное / горизонтальное).
                      
@@ -365,7 +365,7 @@ class AutoLayout {
                      optionB: "Trailing, width",
                      optionC: "Leading, trailing",
                      optionD: "",
-                     questionId: 813249702,
+                     id: 813249702,
                      helpText: """
                      Leading, width. Первый макет ограничивает левый край (leading) view относительно левого края superview (leading), а также устанавливает view фиксированную ширину (width).
                      
@@ -380,7 +380,7 @@ class AutoLayout {
                      optionB: "Leading, center vertically",
                      optionC: "Leading, width",
                      optionD: "",
-                     questionId: 299860116,
+                     id: 299860116,
                      helpText: """
                      Leading, trailing. Второй макет ограничивает левый край view (leading) относительно левого края superview (leading). Он также ограничивает правый край view (trailing) относительно правого края superview (trailing).
                      
@@ -393,7 +393,7 @@ class AutoLayout {
                      optionB: "Trailing, width",
                      optionC: "Leading, width",
                      optionD: "",
-                     questionId: 318886353,
+                     id: 318886353,
                      helpText: """
                      Leading, center horizontally. Третий макет ограничивает левый край view (leading) относительно левого края superview (leading). Он также выравнивает по центру view и superview (center horizontally in superview).
                      
@@ -408,7 +408,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 686980110,
+                     id: 686980110,
                      helpText: """
                      Да. Вы также можете создать опциональные ограничения. Все ограничения имеют приоритет от 1 до 1000. Ограничения с приоритетом 1000 являются обязательными. Все остальные ограничения опциональны.
                      
@@ -423,7 +423,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 944853746,
+                     id: 944853746,
                      helpText: """
                      Да. Некоторые view имеют естественный размер, опирающийся на их внутренний контент. Это называется их внутренним размером содержимого (intrinsic content size).
                      
@@ -438,7 +438,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 973618276,
+                     id: 973618276,
                      helpText: """
                      Да. Некоторые view имеют естественный размер, опирающийся на их внутренний контент. Это называется их внутренним размером содержимого (intrinsic content size). Например, внутренний размер содержимого кнопки - это размер ее заголовка (title) плюс небольшие отступы (margin).
                      
@@ -451,7 +451,7 @@ class AutoLayout {
                      optionB: "Sliders",
                      optionC: "UIView",
                      optionD: "",
-                     questionId: 843886953,
+                     id: 843886953,
                      helpText: """
                      Labels. Внутренний размер содержимого (intrinsic content size) может определять и высоту и ширину для следующих элементов: Labels, buttons, switches, and text fields.
                      
@@ -464,7 +464,7 @@ class AutoLayout {
                      optionB: "NSView",
                      optionC: "",
                      optionD: "",
-                     questionId: 109278998,
+                     id: 109278998,
                      helpText: """
                      Buttons. Внутренний размер содержимого (intrinsic content size) может определять и высоту и ширину для следующих элементов: Labels, buttons, switches, and text fields. UIView and NSView не имеют внутреннего размера, влияющего на внешний.
                      
@@ -477,7 +477,7 @@ class AutoLayout {
                      optionB: "UIView",
                      optionC: "Sliders",
                      optionD: "",
-                     questionId: 163949451,
+                     id: 163949451,
                      helpText: """
                      Text fields. Внутренний размер содержимого (intrinsic content size) может определять и высоту и ширину для следующих элементов: Labels, buttons, switches, and text fields. UIView and NSView не имеют внутреннего размера, влияющего на внешний.
                      
@@ -492,7 +492,7 @@ class AutoLayout {
                      optionB: "Да",
                      optionC: "",
                      optionD: "",
-                     questionId: 561312641,
+                     id: 561312641,
                      helpText: "Нет. Для Text views с image views - view без текста или изображения не имеет внутреннего размера содержимого. Однако как только вы добавляете изображение, его внутренний размер содержимого устанавливается равным размеру изображения."),
             
             Question(question: ["Имеет ли Image view с изображением свой внутренний размер содержимого (intrinsic content size)?"],
@@ -501,7 +501,7 @@ class AutoLayout {
                      optionB: "Нет, не имеет",
                      optionC: "",
                      optionD: "",
-                     questionId: 922447739,
+                     id: 922447739,
                      helpText: "Да, равный размеру изображения. Для Text views с image views - view без текста или изображения не имеет внутреннего размера содержимого. Однако как только вы добавляете изображение, его внутренний размер содержимого устанавливается равным размеру изображения."),
             
             Question(question: ["При включенном скролле text view не имеет внутреннего размера содержимого. Правда ли это?"],
@@ -510,7 +510,7 @@ class AutoLayout {
                      optionB: "Нет",
                      optionC: "",
                      optionD: "",
-                     questionId: 794849911,
+                     id: 794849911,
                      helpText: """
                      Да. Внутренний размер содержимого text view зависит от контента (текста), от того, включен ли в нем скролл, а также от других ограничений, применяемых к нему.
                      
@@ -525,7 +525,7 @@ class AutoLayout {
                      optionB: "Отталкивают",
                      optionC: "Ни то, ни другое",
                      optionD: "",
-                     questionId: 722296939,
+                     id: 722296939,
                      helpText: """
                      Притягивают. Auto Layout представляет внутренний размер содержимого view с использованием пары ограничений для каждого измерения (вертикального и горизонтального).
                      
@@ -540,7 +540,7 @@ class AutoLayout {
                      optionB: "Притягивают",
                      optionC: "Ни то, ни другое",
                      optionD: "",
-                     questionId: 722296939,
+                     id: 722296939,
                      helpText: """
                      Отталкивают. Auto Layout представляет внутренний размер содержимого view с использованием пары ограничений для каждого измерения (вертикального и горизонтального).
                      

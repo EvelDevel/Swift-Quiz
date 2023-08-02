@@ -19,7 +19,7 @@ class DrawingAndAnimation {
                      optionB: "ViewBuilder",
                      optionC: "Path",
                      optionD: "",
-                     questionId: 320291560,
+                     id: 320291560,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/geometryreader",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-provide-relative-sizes-using-geometryreader",
@@ -43,7 +43,7 @@ class DrawingAndAnimation {
                      optionB: "GeometryReader",
                      optionC: "Text",
                      optionD: "",
-                     questionId: 453982010,
+                     id: 453982010,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/path",
                         "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
@@ -65,7 +65,7 @@ class DrawingAndAnimation {
                      optionB: ".linearGradient",
                      optionC: "",
                      optionD: "",
-                     questionId: 481923730,
+                     id: 481923730,
                      links: [
                         "https://sarunw.com/posts/gradient-in-swiftui",
                         "https://www.swiftanytime.com/colors-and-gradient-in-swiftui/",
@@ -87,7 +87,7 @@ class DrawingAndAnimation {
                      optionB: ".gradient",
                      optionC: ".fill",
                      optionD: "",
-                     questionId: 202976277,
+                     id: 202976277,
                      links: [
                         "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient",
                         "https://sarunw.com/posts/gradient-in-swiftui",
@@ -105,7 +105,7 @@ class DrawingAndAnimation {
                      optionB: "points и shape",
                      optionC: "startPoint, endPoint, shape",
                      optionD: "",
-                     questionId: 595530231,
+                     id: 595530231,
                      links: [
                         "https://sarunw.com/posts/gradient-in-swiftui/#lineargradient",
                         "https://sarunw.com/posts/gradient-in-swiftui",
@@ -123,7 +123,7 @@ class DrawingAndAnimation {
                      optionB: "addRects",
                      optionC: "addPath",
                      optionD: "",
-                     questionId: 622755780,
+                     id: 622755780,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/path/addlines(_:)",
                         "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
@@ -143,7 +143,7 @@ class DrawingAndAnimation {
                      optionB: "addLines",
                      optionC: "addCurve",
                      optionD: "",
-                     questionId: 501601837,
+                     id: 501601837,
                      links: [
                         "https://www.hackingwithswift.com/books/ios-swiftui/creating-custom-paths-with-swiftui",
                         "https://sarunw.com/posts/how-to-draw-custom-paths-and-shapes-in-swiftui/"
@@ -164,7 +164,7 @@ class DrawingAndAnimation {
                      optionB: "addRect",
                      optionC: "addRelativeArc",
                      optionD: "",
-                     questionId: 122340441,
+                     id: 122340441,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/path/addroundedrect(in:cornersize:style:transform:)",
                         "https://schwiftyui.com/swiftui/paths-in-swiftui/"
@@ -189,7 +189,7 @@ class DrawingAndAnimation {
                      optionB: "addArc",
                      optionC: "ellipse",
                      optionD: "",
-                     questionId: 821840989,
+                     id: 821840989,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/path/addellipse(in:transform:)",
                         "https://www.hackingwithswift.com/example-code/core-graphics/how-to-draw-a-circle-using-core-graphics-addellipsein"
@@ -210,7 +210,7 @@ class DrawingAndAnimation {
                      optionB: "addLine",
                      optionC: "beginPath",
                      optionD: "",
-                     questionId: 118990891,
+                     id: 118990891,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/path/move(to:)",
                         "https://developer.apple.com/documentation/swiftui/path/element/move(to:)"
@@ -229,7 +229,7 @@ class DrawingAndAnimation {
                      optionB: ".stroke",
                      optionC: ".radialGradient",
                      optionD: "",
-                     questionId: 789698273,
+                     id: 789698273,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/shape/fill(style:)",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-fill-and-stroke-shapes-at-the-same-time"
@@ -251,7 +251,7 @@ class DrawingAndAnimation {
                      optionB: "Shape",
                      optionC: "Path",
                      optionD: "",
-                     questionId: 698674104,
+                     id: 698674104,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/angle",
                         "https://swiftui-lab.com/trigonometric-recipes-for-swiftui/"
@@ -268,7 +268,7 @@ class DrawingAndAnimation {
                      optionB: "scaleEffect",
                      optionC: "transition",
                      optionD: "",
-                     questionId: 491514774,
+                     id: 491514774,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
@@ -288,7 +288,7 @@ class DrawingAndAnimation {
                      optionB: "По часовой",
                      optionC: "",
                      optionD: "",
-                     questionId: 650979466,
+                     id: 650979466,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
@@ -305,7 +305,7 @@ class DrawingAndAnimation {
                      optionB: "Влево на 90°",
                      optionC: "Вправо на 90°",
                      optionD: "Никак",
-                     questionId: 195234230,
+                     id: 195234230,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-rotate-a-view"
@@ -322,7 +322,7 @@ class DrawingAndAnimation {
                      optionB: ".rotate",
                      optionC: ".easeInOut",
                      optionD: "",
-                     questionId: 854510570,
+                     id: 854510570,
                      links: [
                         "https://habr.com/ru/post/504198/",
                         "https://www.hackingwithswift.com/books/ios-swiftui/customizing-animations-in-swiftui",
@@ -343,7 +343,7 @@ class DrawingAndAnimation {
                      optionB: "animation, view, value",
                      optionC: "",
                      optionD: "",
-                     questionId: 554440557,
+                     id: 554440557,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)",
                         "https://habr.com/ru/post/504198/",
@@ -362,7 +362,7 @@ class DrawingAndAnimation {
                      optionB: "-> Bool",
                      optionC: "-> Animation?",
                      optionD: "",
-                     questionId: 955935092,
+                     id: 955935092,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)"
                      ],
@@ -378,7 +378,7 @@ class DrawingAndAnimation {
                      optionB: ".rotationEffect",
                      optionC: "",
                      optionD: "",
-                     questionId: 119460518,
+                     id: 119460518,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/view/animation(_:value:)",
                         "https://habr.com/ru/post/504198/",
@@ -397,7 +397,7 @@ class DrawingAndAnimation {
                      optionB: ".transition",
                      optionC: ".insertion",
                      optionD: "",
-                     questionId: 987774923,
+                     id: 987774923,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/anytransition/asymmetric(insertion:removal:)",
                         "https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-asymmetric-transitions"
@@ -418,7 +418,7 @@ class DrawingAndAnimation {
                      optionB: "AnyAnimation",
                      optionC: "ContentTransition",
                      optionD: "",
-                     questionId: 987774923,
+                     id: 987774923,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/anytransition/asymmetric(insertion:removal:)"
                      ],
@@ -436,7 +436,7 @@ class DrawingAndAnimation {
                      optionB: "Gradient",
                      optionC: "Path",
                      optionD: "",
-                     questionId: 810341480,
+                     id: 810341480,
                      links: [
                         "https://developer.apple.com/documentation/swiftui/canvas"
                      ],
