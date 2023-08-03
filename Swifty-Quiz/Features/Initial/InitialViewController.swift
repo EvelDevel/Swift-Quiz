@@ -16,7 +16,8 @@ final class InitialViewController: UIViewController {
     @IBOutlet private weak var continueGameButton: UIButton!
     @IBOutlet private weak var topicPicker: UIButton!
     @IBOutlet private weak var logoButton: UIButton!
-    @IBOutlet private weak var shareButton: UIButton!
+    @IBOutlet private weak var statsButton: UIButton!
+    @IBOutlet private weak var totalQuestionsLabel: UILabel!
     
     @IBOutlet private var initialWhiteViews: [UIView]!
     @IBOutlet private var initialButtons: [UIButton]!
@@ -51,6 +52,7 @@ final class InitialViewController: UIViewController {
     private func setup() {
         setupCurrentQuestionSet()
         updateLastGameInfo()
+        updateTotalQuestionLabel()
         updateContinueButton(fromStart: true)
         addShadows()
         
@@ -77,6 +79,10 @@ final class InitialViewController: UIViewController {
             },
             completion: nil
         )
+    }
+    
+    private func updateTotalQuestionLabel() {
+        totalQuestionsLabel.text = "\(RandomSetManager.showAllQuestionsNumber())"
     }
 }
 

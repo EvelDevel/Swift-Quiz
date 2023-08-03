@@ -722,6 +722,108 @@ final class ControlFlowSet {
                      optionD: "",
                      id: 450584946,
                      helpText: "Мы столкнемся с ошибкой. В данном случае мы столкнемся с ошибкой компиляции, поскольку num является константой, и ее нельзя модифицировать (Left side of mutating operator isn't mutable: 'num' is a 'let' constant)."),
+            
+            Question(question: [
+                "Какой блок кода выполнится при версии iOS = 15.0?",
+                "Deployment version установлена как 15.0, какой блок кода выполнится?"
+            ],
+                     image: "ControlFlow43",
+                     optionA: "Second",
+                     optionB: "First",
+                     optionC: "Никакой",
+                     optionD: "",
+                     id: 306408360,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/",
+                        "https://swiftbook.ru/content/languageguide/control-flow/"
+                     ],
+                     helpText: """
+                     Second. Условие доступности в вопросе указывает, что тело if выполняется только на iOS 16.4 и более поздних версиях.
+                     
+                     Последний аргумент, * указывает, что на любой другой платформе, тело if выполнится на минимальной указанной deployment target.
+                     """
+                    ),
+            
+            Question(question: [
+                "Какой блок кода выполнится при версии iOS = 16.5?",
+                "Deployment version установлена как 16.5, какой блок кода выполнится?"
+            ],
+                     image: "ControlFlow43",
+                     optionA: "First",
+                     optionB: "Second",
+                     optionC: "Никакой",
+                     optionD: "",
+                     id: 897729119,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/",
+                        "https://swiftbook.ru/content/languageguide/control-flow/"
+                     ],
+                     helpText: """
+                     First. Условие доступности в вопросе указывает, что тело if выполняется только на iOS 16.4 и более поздних версиях.
+                     
+                     Последний аргумент, * указывает, что на любой другой платформе, тело if выполнится на минимальной указанной deployment target.
+                     """
+                    ),
+            
+            Question(question: [
+                "Можно ли использовать условие доступности #available() через оператор guard?",
+                "Вы можете использовать #available() с оператором guard, чтобы определить доступ к API для всего последующего кода в блоке. Так ли это?",
+                "Можете ли вы использовать такую конструкцию в Swift: guard #available(iOS 16.0, *) else { return }?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 136809908,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/",
+                        "https://swiftbook.ru/content/languageguide/control-flow/"
+                     ],
+                     helpText: """
+                     Да. Когда вы используете условие доступности #available() с оператором guard, это определяет доступность, которая применяется для всего остального кода в этом блоке (например внутри метода).
+                     """
+                    ),
+            
+            Question(question: [
+                "Существует ли в Swift условие проверки на недоступность - #unavailable()?",
+                "Поддерживает ли Свифт проверку на недоступность?"
+            ],
+                     image: "ControlFlow44",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 144042667,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/",
+                        "https://swiftbook.ru/content/languageguide/control-flow/"
+                     ],
+                     helpText: """
+                     Да. Swift поддерживает проверку на недоступность с помощью условия недоступности (unavailability condition).
+                     """
+                    ),
+            
+            Question(question: [
+                "Равнозначны ли эти условия?",
+                "Данный условия идентичны. Так ли это?"
+            ],
+                     image: "ControlFlow44",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 417561395,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/",
+                        "https://swiftbook.ru/content/languageguide/control-flow/"
+                     ],
+                     helpText: """
+                     Да. В дополнение к #available, Swift также поддерживает проверку на недоступность с помощью условия недоступности (unavailability condition). Наши две проверки, по сути, делают одно и то же.
+                     
+                     Использование формы #unavailable помогает сделать ваш код более читаемым, когда проверка содержит только запасной код.
+                     """
+                    )
         ]
     }
 }

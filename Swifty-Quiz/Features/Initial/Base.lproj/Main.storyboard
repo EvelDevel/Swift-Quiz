@@ -319,17 +319,34 @@
                                     <constraint firstAttribute="width" constant="288" id="CB1-jd-ZYu"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="My5-m6-GIU" userLabel="TotalQuestions">
+                                <rect key="frame" x="111" y="620.5" width="153.5" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросов в приложении: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJK-0J-ysX">
+                                        <rect key="frame" x="0.0" y="0.5" width="140.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" name="TextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-0f-rQK">
+                                        <rect key="frame" x="144.5" y="0.0" width="9" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                        <color key="textColor" name="CustomGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dYf-N4-XJ3" userLabel="ScoreLabelsStack">
-                                <rect key="frame" x="150.5" y="632" width="74" height="14.5"/>
+                                <rect key="frame" x="153" y="637" width="69.5" height="14.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счет: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ny8-Bw-pf0">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="56.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-8R-QcX">
-                                        <rect key="frame" x="65" y="0.0" width="9" height="14.5"/>
+                                        <rect key="frame" x="60.5" y="0.0" width="9" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                         <color key="textColor" name="CustomGreen"/>
                                         <nil key="highlightedColor"/>
@@ -351,14 +368,16 @@
                         <viewLayoutGuide key="safeArea" id="WHM-zc-GgI"/>
                         <color key="backgroundColor" name="MainBackground"/>
                         <constraints>
+                            <constraint firstItem="dYf-N4-XJ3" firstAttribute="top" secondItem="My5-m6-GIU" secondAttribute="bottom" constant="2" id="AEX-rU-5sW"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="top" secondItem="4PP-v1-kH7" secondAttribute="bottom" constant="30" id="C0F-fT-JC0"/>
                             <constraint firstItem="4PP-v1-kH7" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="E4n-81-nDe"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="QIE-rK-E9x"/>
+                            <constraint firstItem="My5-m6-GIU" firstAttribute="centerX" secondItem="dYf-N4-XJ3" secondAttribute="centerX" id="R6K-Gv-Arm"/>
                             <constraint firstItem="H2o-wB-HEB" firstAttribute="centerX" secondItem="dYf-N4-XJ3" secondAttribute="centerX" id="Vmw-JK-d22"/>
                             <constraint firstItem="WHM-zc-GgI" firstAttribute="bottom" secondItem="H2o-wB-HEB" secondAttribute="bottom" constant="2" id="eSK-No-4wa"/>
                             <constraint firstItem="VpL-Hy-Br9" firstAttribute="centerY" secondItem="WHM-zc-GgI" secondAttribute="centerY" id="hs6-n2-mIT"/>
                             <constraint firstItem="dYf-N4-XJ3" firstAttribute="centerX" secondItem="WHM-zc-GgI" secondAttribute="centerX" id="prP-OW-Z0a"/>
-                            <constraint firstItem="H2o-wB-HEB" firstAttribute="centerY" secondItem="dYf-N4-XJ3" secondAttribute="centerY" id="yiU-Sf-6ar"/>
+                            <constraint firstItem="H2o-wB-HEB" firstAttribute="centerY" secondItem="dYf-N4-XJ3" secondAttribute="centerY" constant="-5" id="yiU-Sf-6ar"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x8a-no-Hhe"/>
@@ -371,9 +390,10 @@
                         <outlet property="logoButton" destination="rPr-C7-FGY" id="A8u-Ac-tgU"/>
                         <outlet property="scoreLabel" destination="z6w-8R-QcX" id="evI-n4-haz"/>
                         <outlet property="selectedTopic" destination="mKv-or-Ad3" id="YxO-Br-TzT"/>
-                        <outlet property="shareButton" destination="H2o-wB-HEB" id="tD7-3L-5RK"/>
+                        <outlet property="statsButton" destination="H2o-wB-HEB" id="tD7-3L-5RK"/>
                         <outlet property="topicPicker" destination="T1V-ld-fKj" id="B6b-PF-h28"/>
                         <outlet property="totalQuestions" destination="DRB-G0-Ac5" id="dSs-MB-pfU"/>
+                        <outlet property="totalQuestionsLabel" destination="NVS-0f-rQK" id="t19-Zh-gDS"/>
                         <outletCollection property="initialWhiteViews" destination="O4g-5e-qkn" collectionClass="NSMutableArray" id="y40-xE-ZLg"/>
                         <outletCollection property="initialWhiteViews" destination="Jty-Zp-18d" collectionClass="NSMutableArray" id="QIC-jc-Wcv"/>
                         <outletCollection property="initialButtons" destination="SXd-ZC-ZJT" collectionClass="NSMutableArray" id="Sqb-6h-YPd"/>
@@ -447,10 +467,10 @@
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellowOpacity">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96899998188018799" green="0.83499997854232788" blue="0.31799998879432678" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17647058823529413" green="0.19607843137254902" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
