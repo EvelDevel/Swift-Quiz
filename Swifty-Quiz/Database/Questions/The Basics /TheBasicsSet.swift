@@ -4,7 +4,7 @@
 
 import Foundation
 
-class TheBasicsSet {
+final class TheBasicsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Команда, выполняющая одну или несколько операций",

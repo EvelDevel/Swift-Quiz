@@ -4,7 +4,7 @@
 
 import Foundation
 
-class InitializationSet {
+final class InitializationSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

@@ -4,7 +4,7 @@
 
 import Foundation
 
-class BasicsAboutPatternsSet {
+final class BasicsAboutPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что такое паттерн проектирования?"],

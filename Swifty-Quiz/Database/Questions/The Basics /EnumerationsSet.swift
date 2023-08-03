@@ -4,7 +4,7 @@
 
 import Foundation
 
-class EnumerationsSet {
+final class EnumerationsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: ["Каким ключевым словом перечисления обозначаются в коде?",

@@ -9,7 +9,6 @@
 import UIKit
 
 final class ProgressBarTableViewCell: UITableViewCell {
-
     struct CellModel {
         let title: String
         let value: Double

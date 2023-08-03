@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SetsSet {
+final class SetsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Каким должен быть тип значения, чтобы он мог храниться в множестве?",

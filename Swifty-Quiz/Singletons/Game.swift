@@ -4,17 +4,17 @@
 
 import Foundation
 
-class Game {
+final class Game {
     static let shared = Game()
+    var weShowedAlert: Bool = false
     
     private let recordCaretaker = RecordsCaretaker()
     private let settingsCaretaker = SettingsCaretaker()
-    private var weShowedAlert: Bool = false
-    
+
     private(set) var settings: Settings {
         didSet {
             settingsCaretaker.saveSettings(
-                settings: self.settings
+                settings: settings
             )
         }
     }
@@ -22,34 +22,14 @@ class Game {
     private(set) var records: [Record] = [] {
         didSet {
             recordCaretaker.saveRecordsList(
-                records: self.records
+                records: records
             )
         }
     }
     
     private init() {
-        self.records = self.recordCaretaker.getRecordsList()
-        self.settings = self.settingsCaretaker.getSettings()
-    }
-}
-
-
-// MARK: Работа с подсказкой по незавершенной игре
-extension Game {
-    func showSettingsAlertStatus() -> Bool {
-        return self.weShowedAlert
-    }
-    
-    func showTopicAlertStatus() -> Bool {
-        return self.weShowedAlert
-    }
-    
-    func showNewGameAlertStatus() -> Bool {
-        return self.weShowedAlert
-    }
-    
-    func setThatWeShowedAlert() {
-        self.weShowedAlert = true
+        records = recordCaretaker.getRecordsList()
+        settings = settingsCaretaker.getSettings()
     }
 }
 
@@ -92,7 +72,6 @@ extension Game {
 // MARK: - Сохранение настроек
 
 extension Game {
-    
     func saveSettings(_ settings: Settings) {
         self.settings = settings
     }

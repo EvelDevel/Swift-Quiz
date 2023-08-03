@@ -4,7 +4,7 @@
 
 import Foundation
 
-class StructuralPatternsSet {
+final class StructuralPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что лежит в основе структурных паттернов?"],

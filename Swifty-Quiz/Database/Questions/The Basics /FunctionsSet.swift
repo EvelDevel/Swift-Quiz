@@ -4,7 +4,7 @@
 
 import Foundation
 
-class FunctionsSet {
+final class FunctionsSet {
 	static func getQuestions() -> [Question] {
 		return [
             Question(question: ["Какие имена должны быть у функций?"],

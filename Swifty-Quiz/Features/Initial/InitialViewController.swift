@@ -197,8 +197,8 @@ extension InitialViewController {
     }
     
     private func addShadows() {
-        Shadow().addStaticShadows(initialWhiteViews)
-        Shadow().addButtonShadows(initialButtons)
+        ShadowService().addStaticShadows(initialWhiteViews)
+        ShadowService().addButtonShadows(initialButtons)
     }
     
     private func imageTuning(

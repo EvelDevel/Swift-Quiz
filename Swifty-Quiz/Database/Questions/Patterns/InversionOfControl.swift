@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InversionOfControl {
+final class InversionOfControl {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что представляет из себя Инверсия управления?",

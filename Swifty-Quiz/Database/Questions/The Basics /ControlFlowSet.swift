@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ControlFlowSet {
+final class ControlFlowSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Сколько разновидностей цикла поддерживает Swift?",

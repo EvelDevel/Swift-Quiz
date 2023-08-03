@@ -4,7 +4,7 @@
 
 import Foundation
 
-class InheritanceSet {
+final class InheritanceSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

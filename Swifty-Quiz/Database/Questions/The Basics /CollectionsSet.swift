@@ -4,7 +4,7 @@
 
 import Foundation
 
-class CollectionsSet {
+final class CollectionsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Какая из этих строк создаст массив, словарь, или кортеж?"],

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Multithreading {
+final class Multithreading {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

@@ -88,7 +88,7 @@ final class TopicViewController: UIViewController {
 		if Game.shared.records.count != 0
             && Game.shared.records[0].continueGameStatus == true {
 			
-            if Game.shared.showTopicAlertStatus() != true {
+            if !Game.shared.weShowedAlert {
 				let alert = UIAlertController(
                     title: Constants.unfinishedGameTitle,
                     message: Constants.unfinishedGameMessage,
@@ -110,7 +110,7 @@ final class TopicViewController: UIViewController {
                 )
 			}
             
-			Game.shared.setThatWeShowedAlert()
+			Game.shared.weShowedAlert = true
 		}
 	}
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TuplesSet {
+final class TuplesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Должны ли элементы внутри кортежа быть одного и того же типа?"],

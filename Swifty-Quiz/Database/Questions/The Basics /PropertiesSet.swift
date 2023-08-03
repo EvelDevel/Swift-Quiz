@@ -4,7 +4,7 @@
 
 import Foundation
 
-class PropertiesSet {
+final class PropertiesSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

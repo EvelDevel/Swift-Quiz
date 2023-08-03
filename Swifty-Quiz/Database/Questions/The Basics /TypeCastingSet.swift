@@ -4,7 +4,7 @@
 
 import Foundation
 
-class TypeCastingSet {
+final class TypeCastingSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

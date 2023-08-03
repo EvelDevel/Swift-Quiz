@@ -4,7 +4,7 @@
 
 import Foundation
 
-class AdvancedOperatorsSet {
+final class AdvancedOperatorsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

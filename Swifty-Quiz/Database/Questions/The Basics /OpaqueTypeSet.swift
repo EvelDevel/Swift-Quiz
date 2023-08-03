@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OpaqueTypeSet {
+final class OpaqueTypeSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

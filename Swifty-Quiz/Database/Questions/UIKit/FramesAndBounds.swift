@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FramesAndBounds {
+final class FramesAndBounds {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Где находится начало системы координат (origin) в iOS?"],

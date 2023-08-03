@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DepenpencyInjection {
+final class DepenpencyInjection {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Есть ли в Swift нативные библиотеки, которые поддерживают паттерн Dependency Injection из коробки?"],

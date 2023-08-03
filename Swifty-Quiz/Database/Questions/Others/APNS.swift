@@ -8,7 +8,7 @@
 
 import Foundation
 
-class APNS {
+final class APNS {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

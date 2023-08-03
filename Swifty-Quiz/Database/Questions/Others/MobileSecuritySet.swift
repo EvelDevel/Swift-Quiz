@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MobileSecuritySet {
+final class MobileSecuritySet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Соответствие приложения требованиям безопасности MASVS ведет к этому",

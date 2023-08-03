@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ServiceLocator {
+final class ServiceLocator {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["При использовании Service Locator мы внедряем все зависимости извне. Так ли это?"],

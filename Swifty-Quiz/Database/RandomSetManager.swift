@@ -4,7 +4,7 @@
 
 import Foundation
 
-class RandomSetManager {
+final class RandomSetManager {
 	private static var all: [Question] = []
 	private static var guide: [Question] = []
 	private static var patterns: [Question] = []

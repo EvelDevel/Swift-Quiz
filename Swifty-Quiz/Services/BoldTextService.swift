@@ -8,8 +8,7 @@
 
 import UIKit
 
-class BoldTextService {
-    
+final class BoldTextService {
     func createBoldTextAnswer(
         _ text: String,
         fontSize: CGFloat

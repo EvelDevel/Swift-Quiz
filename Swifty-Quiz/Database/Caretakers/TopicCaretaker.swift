@@ -1,29 +1,31 @@
-
 //  Created by Евгений Никитин on 25.04.2020.
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import Foundation
 
-class TopicCaretaker {
+final class TopicCaretaker {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
-    private let key = "topic"
+    private let topicUserDefaultsKey = "topic"
     
     func saveTopic(topic: Topic) {
         do {
-            let data = try self.encoder.encode(topic)
+            let data = try encoder.encode(topic)
             
             UserDefaults.standard.set(
                 data,
-                forKey: key
+                forKey: topicUserDefaultsKey
             )
         } catch {
-            print("We have some problems with saving topic")
+            print("TopicCaretaker, Error encoding topic: \(error)")
         }
     }
     
     func getTopic() -> Topic {
-        guard let data = UserDefaults.standard.data(forKey: key) else {
+        guard let data = UserDefaults.standard.data(
+            forKey: topicUserDefaultsKey
+        ) else {
+            print("TopicCaretaker, Topic data not found in UserDefaults")
             return Topic(
                 questionSet: [],
                 continueQuestionSet: [],
@@ -33,12 +35,12 @@ class TopicCaretaker {
         }
         
         do {
-            return try self.decoder.decode(
+            return try decoder.decode(
                 Topic.self,
                 from: data
             )
         } catch {
-            NSLog("We have some problems with retrieving topic from memory")
+            print("TopicCaretaker, Error decoding topic: \(error)")
             return Topic(
                 questionSet: [],
                 continueQuestionSet: [],

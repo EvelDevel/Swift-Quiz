@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AutoLayout {
+final class AutoLayout {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Auto Layout позволяет вам адаптировать все элементы экрана под разные размеры и режимы отображения. Так ли это?"],

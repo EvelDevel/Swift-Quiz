@@ -4,7 +4,7 @@
 
 import Foundation
 
-class AccessControlSet {
+final class AccessControlSet {
 	static func getQuestions() -> [Question] {
 		return [
             Question(question: [

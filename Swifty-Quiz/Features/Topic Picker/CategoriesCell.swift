@@ -10,14 +10,7 @@ protocol CategoriesCellDelegate: AnyObject {
     func showAlert()
 }
 
-private class Interface {
-    static var borderWidth = 1.0
-    static var borderColor = UIColor.lightGray.cgColor
-}
-
 final class CategoriesCell: UITableViewCell {
-    private var allButtons: [UIButton] = []
-    
     @IBOutlet private var random: [UIButton]!
     @IBOutlet private var swiftui: [UIButton]!
     @IBOutlet private var uikit: [UIButton]!
@@ -25,10 +18,14 @@ final class CategoriesCell: UITableViewCell {
     @IBOutlet private var patterns: [UIButton]!
     @IBOutlet private var others: [UIButton]!
     
-    weak var delegate: CategoriesCellDelegate?
+    private var allButtons: [UIButton] = []
     
     private var currentPosition = SelectedTopic.shared.selectedCategory.topicTag
     private let progress = ProgressService()
+    private var borderWidth = 1.0
+    private var borderColor = UIColor.lightGray.cgColor
+    
+    weak var delegate: CategoriesCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,8 +58,8 @@ final class CategoriesCell: UITableViewCell {
         DispatchQueue.main.async {
             if sender.tag - 1 != self.currentPosition {
                 self.setupProgressToButtons()
-                sender.layer.borderWidth = Interface.borderWidth
-                sender.layer.borderColor = Interface.borderColor
+                sender.layer.borderWidth = self.borderWidth
+                sender.layer.borderColor = self.borderColor
                 
                 SoundPlayer.shared.playSound(sound: .topicAndSettingsButton)
                 
@@ -109,7 +106,7 @@ extension CategoriesCell {
     /// Добавляем тени кнопкам
     func addShadows() {
         DispatchQueue.main.async {
-            Shadow().addTopicButtonShadows(self.allButtons)
+            ShadowService().addTopicButtonShadows(self.allButtons)
         }
     }
     
@@ -508,8 +505,8 @@ extension CategoriesCell {
         default:
             allButtons.forEach { button in
                 if button.tag - 1 == currentTag {
-                    button.layer.borderWidth = Interface.borderWidth
-                    button.layer.borderColor = Interface.borderColor
+                    button.layer.borderWidth = borderWidth
+                    button.layer.borderColor = borderColor
                 }
             }
         }
@@ -518,75 +515,136 @@ extension CategoriesCell {
     /// Get topic name for button
     private func getTopicName(for tag: Int) -> String {
         switch tag {
-        case 1: return CategoriesName.random20.rawValue
-        case 2: return CategoriesName.random50.rawValue
-        case 3: return CategoriesName.random100.rawValue
-        case 4: return CategoriesName.deathMatch.rawValue
+        case 1:
+            return CategoriesName.random20.rawValue
+        case 2:
+            return CategoriesName.random50.rawValue
+        case 3:
+            return CategoriesName.random100.rawValue
+        case 4:
+            return CategoriesName.deathMatch.rawValue
             
-        case 12: return CategoriesName.basic.rawValue
-        case 13: return CategoriesName.integersAndBooleans.rawValue
-        case 14: return CategoriesName.basicOperators.rawValue
-        case 15: return CategoriesName.rangeOperators.rawValue
-        case 16: return CategoriesName.booleanOperators.rawValue
-        case 17: return CategoriesName.stringAndCharacters.rawValue
-        case 18: return CategoriesName.collections.rawValue
-        case 19: return CategoriesName.sets.rawValue
-        case 20: return CategoriesName.dictionaries.rawValue
-        case 21: return CategoriesName.tuples.rawValue
-        case 22: return CategoriesName.controlFlow.rawValue
-        case 23: return CategoriesName.optionals.rawValue
-        case 24: return CategoriesName.functions.rawValue
-        case 25: return CategoriesName.closures.rawValue
-        case 26: return CategoriesName.enums.rawValue
-        case 27: return CategoriesName.structuresAndClasses.rawValue
-        case 28: return CategoriesName.properties.rawValue
-        case 29: return CategoriesName.methods.rawValue
-        case 30: return CategoriesName.subscripts.rawValue
-        case 31: return CategoriesName.inheritance.rawValue
-        case 32: return CategoriesName.initialization.rawValue
-        case 33: return CategoriesName.deinitialization.rawValue
-        case 34: return CategoriesName.errorHandling.rawValue
-        case 35: return CategoriesName.concurrency.rawValue
-        case 36: return CategoriesName.optionalChaining.rawValue
-        case 37: return CategoriesName.arc.rawValue
-        case 38: return CategoriesName.typeCasting.rawValue
-        case 39: return CategoriesName.nestedTypes.rawValue
-        case 40: return CategoriesName.extensions.rawValue
-        case 41: return CategoriesName.opaqueType.rawValue
-        case 42: return CategoriesName.generics.rawValue
-        case 43: return CategoriesName.protocols.rawValue
-        case 44: return CategoriesName.accessControl.rawValue
-        case 45: return CategoriesName.memorySafety.rawValue
-        case 46: return CategoriesName.advancedOperators.rawValue
+        case 12:
+            return CategoriesName.basic.rawValue
+        case 13:
+            return CategoriesName.integersAndBooleans.rawValue
+        case 14:
+            return CategoriesName.basicOperators.rawValue
+        case 15:
+            return CategoriesName.rangeOperators.rawValue
+        case 16:
+            return CategoriesName.booleanOperators.rawValue
+        case 17:
+            return CategoriesName.stringAndCharacters.rawValue
+        case 18:
+            return CategoriesName.collections.rawValue
+        case 19:
+            return CategoriesName.sets.rawValue
+        case 20:
+            return CategoriesName.dictionaries.rawValue
+        case 21:
+            return CategoriesName.tuples.rawValue
+        case 22:
+            return CategoriesName.controlFlow.rawValue
+        case 23:
+            return CategoriesName.optionals.rawValue
+        case 24:
+            return CategoriesName.functions.rawValue
+        case 25:
+            return CategoriesName.closures.rawValue
+        case 26:
+            return CategoriesName.enums.rawValue
+        case 27:
+            return CategoriesName.structuresAndClasses.rawValue
+        case 28:
+            return CategoriesName.properties.rawValue
+        case 29:
+            return CategoriesName.methods.rawValue
+        case 30:
+            return CategoriesName.subscripts.rawValue
+        case 31:
+            return CategoriesName.inheritance.rawValue
+        case 32:
+            return CategoriesName.initialization.rawValue
+        case 33:
+            return CategoriesName.deinitialization.rawValue
+        case 34:
+            return CategoriesName.errorHandling.rawValue
+        case 35:
+            return CategoriesName.concurrency.rawValue
+        case 36:
+            return CategoriesName.optionalChaining.rawValue
+        case 37:
+            return CategoriesName.arc.rawValue
+        case 38:
+            return CategoriesName.typeCasting.rawValue
+        case 39:
+            return CategoriesName.nestedTypes.rawValue
+        case 40:
+            return CategoriesName.extensions.rawValue
+        case 41:
+            return CategoriesName.opaqueType.rawValue
+        case 42:
+            return CategoriesName.generics.rawValue
+        case 43:
+            return CategoriesName.protocols.rawValue
+        case 44:
+            return CategoriesName.accessControl.rawValue
+        case 45:
+            return CategoriesName.memorySafety.rawValue
+        case 46:
+            return CategoriesName.advancedOperators.rawValue
             
-        case 50: return CategoriesName.patterns.rawValue
-        case 51: return CategoriesName.creationalPatterns.rawValue
-        case 52: return CategoriesName.structuralPatterns.rawValue
-        case 53: return CategoriesName.behavioralPatterns.rawValue
-        case 54: return CategoriesName.antipatterns.rawValue
+        case 50:
+            return CategoriesName.patterns.rawValue
+        case 51:
+            return CategoriesName.creationalPatterns.rawValue
+        case 52:
+            return CategoriesName.structuralPatterns.rawValue
+        case 53:
+            return CategoriesName.behavioralPatterns.rawValue
+        case 54:
+            return CategoriesName.antipatterns.rawValue
             
-        case 60: return CategoriesName.extremeProgramming.rawValue
-        case 61: return CategoriesName.masvs.rawValue
-        case 65: return CategoriesName.multithreading.rawValue
+        case 60:
+            return CategoriesName.extremeProgramming.rawValue
+        case 61:
+            return CategoriesName.masvs.rawValue
+        case 65:
+            return CategoriesName.multithreading.rawValue
             
-        case 62: return CategoriesName.controllerLifecycle.rawValue
-        case 63: return CategoriesName.appLifecycle.rawValue
-        case 64: return CategoriesName.boundsAndFrame.rawValue
-        case 66: return CategoriesName.uiview.rawValue
-        case 67: return CategoriesName.autoLayout.rawValue
+        case 62:
+            return CategoriesName.controllerLifecycle.rawValue
+        case 63:
+            return CategoriesName.appLifecycle.rawValue
+        case 64:
+            return CategoriesName.boundsAndFrame.rawValue
+        case 66:
+            return CategoriesName.uiview.rawValue
+        case 67:
+            return CategoriesName.autoLayout.rawValue
             
-        case 68: return CategoriesName.dependencyInjection.rawValue
-        case 69: return CategoriesName.inversionOfControl.rawValue
-        case 70: return CategoriesName.serviceLocator.rawValue
+        case 68:
+            return CategoriesName.dependencyInjection.rawValue
+        case 69:
+            return CategoriesName.inversionOfControl.rawValue
+        case 70:
+            return CategoriesName.serviceLocator.rawValue
             
-        case 71: return CategoriesName.networking.rawValue
+        case 71:
+            return CategoriesName.networking.rawValue
             
-        case 72: return CategoriesName.swiftUIEssentials.rawValue
-        case 73: return CategoriesName.swiftUIDrawing.rawValue
+        case 72:
+            return CategoriesName.swiftUIEssentials.rawValue
+        case 73:
+            return CategoriesName.swiftUIDrawing.rawValue
             
-        case 76: return CategoriesName.apns.rawValue
-        case 78: return CategoriesName.interview.rawValue
-        case 79: return CategoriesName.rxswift.rawValue
+        case 76:
+            return CategoriesName.apns.rawValue
+        case 78:
+            return CategoriesName.interview.rawValue
+        case 79:
+            return CategoriesName.rxswift.rawValue
             
         default:
             return ""

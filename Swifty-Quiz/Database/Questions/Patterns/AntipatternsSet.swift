@@ -4,7 +4,7 @@
 
 import Foundation
 
-class AntipatternsSet {
+final class AntipatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что именно показывают антипаттерны?",

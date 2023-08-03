@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: - Controller
-
 final class StatsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var emptyStatsLabel: UILabel!

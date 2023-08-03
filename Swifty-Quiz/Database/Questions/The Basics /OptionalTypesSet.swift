@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OptionalTypesSet {
+final class OptionalTypesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Мы используем двойной вопросительный знак ?? именно для этого"],

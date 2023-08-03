@@ -9,7 +9,7 @@
 import Foundation
 
 
-class UIViewSet {
+final class UIViewSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Какой из этих методов работает асинхронно?"],

@@ -4,7 +4,7 @@
 
 import Foundation
 
-class GenericsSet {
+final class GenericsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

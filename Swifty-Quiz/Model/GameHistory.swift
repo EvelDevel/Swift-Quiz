@@ -4,7 +4,7 @@
 
 import Foundation
 
-class GameHistory: Codable {
+final class GameHistory: Codable {
     var question: String
     var correctAnswer: String
     var userAnswer: String

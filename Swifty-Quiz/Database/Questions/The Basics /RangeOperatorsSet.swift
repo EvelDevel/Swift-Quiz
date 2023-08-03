@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RangeOperatorsSet {
+final class RangeOperatorsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Какие операторы диапазона есть в Swift?",

@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ProtocolsSet {
+final class ProtocolsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

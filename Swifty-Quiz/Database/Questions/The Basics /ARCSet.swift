@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ARCSet {
+final class ARCSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

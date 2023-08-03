@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AppLifecycleSet {
+final class AppLifecycleSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Какой объект делегата используется в iOS 13 и выше, для обработки событий жизненного цикла вашего приложения?",

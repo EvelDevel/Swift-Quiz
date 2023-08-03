@@ -4,7 +4,7 @@
 
 import Foundation
 
-class StringAndCharactersSet {
+final class StringAndCharactersSet {
 	static func getQuestions() -> [Question] {
 		return [
             

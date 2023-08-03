@@ -4,7 +4,7 @@
 
 import Foundation
 
-class OptionalChainingSet {
+final class OptionalChainingSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

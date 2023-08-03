@@ -4,7 +4,7 @@
 
 import Foundation
 
-class SubscriptsSet {
+final class SubscriptsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

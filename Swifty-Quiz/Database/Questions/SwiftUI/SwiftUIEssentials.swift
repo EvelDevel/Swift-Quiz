@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SwiftUIEssentials {
+final class SwiftUIEssentials {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

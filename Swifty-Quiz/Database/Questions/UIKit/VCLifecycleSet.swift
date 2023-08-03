@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VCLifecycleSet {
+final class VCLifecycleSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что входит в список основных обязанностей UIViewController?",

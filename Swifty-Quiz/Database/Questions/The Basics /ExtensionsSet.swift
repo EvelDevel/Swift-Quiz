@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ExtensionsSet {
+final class ExtensionsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

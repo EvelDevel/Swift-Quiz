@@ -4,7 +4,7 @@
 
 import UIKit
 
-class Shadow {
+final class ShadowService {
     private func addShadow(
         to view: UIView,
         color: UIColor,

@@ -5,7 +5,6 @@
 import UIKit
 
 final class GameHelper {
-    
     /// When we picked "random" set
     /// Shuffle when: change category, finish last random set (quit game)
     /// All other cases - same random set
@@ -63,7 +62,7 @@ final class GameHelper {
         if Game.shared.records.count != 0
             && Game.shared.records[0].continueGameStatus == true
             && continueStatus == false
-            && Game.shared.showNewGameAlertStatus() != true {
+            && !Game.shared.weShowedAlert {
             
             DispatchQueue.main.async {
                 let alert = UIAlertController(
@@ -85,7 +84,7 @@ final class GameHelper {
                 )
             }
             
-            Game.shared.setThatWeShowedAlert()
+            Game.shared.weShowedAlert = true
         }
     }
     

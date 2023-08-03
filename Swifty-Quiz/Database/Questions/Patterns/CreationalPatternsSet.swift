@@ -4,7 +4,7 @@
 
 import Foundation
 
-class CreationalPatternsSet {
+final class CreationalPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что лежит в основе порождающих паттернов?"],

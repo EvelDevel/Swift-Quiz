@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Networking {
+final class Networking {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

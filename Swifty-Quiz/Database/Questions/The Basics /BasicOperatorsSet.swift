@@ -4,7 +4,7 @@
 
 import Foundation
 
-class BasicOperatorsSet {
+final class BasicOperatorsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: ["Минимальная автономная единица, выполняющая команду",

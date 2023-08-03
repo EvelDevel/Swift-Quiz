@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ClosuresSet {
+final class ClosuresSet {
 	static func getQuestions() -> [Question] {
 		return [
             Question(question: ["Является ли данное замыкание валидным в Swift?"],

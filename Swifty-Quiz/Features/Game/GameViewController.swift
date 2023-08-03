@@ -10,11 +10,6 @@ protocol GameViewControllerDelegate: AnyObject {
     func updateInitialView()
 }
 
-enum GameStatus: Int {
-    case finished
-    case notFinished
-}
-
 final class GameViewController: UIViewController {
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var headerTopMargin: NSLayoutConstraint!
@@ -112,8 +107,8 @@ extension GameViewController {
     }
     
     private func addShadows() {
-        Shadow().addStaticShadows(GameComtrollerViews)
-        Shadow().addButtonShadows(answerButtonsCollection)
+        ShadowService().addStaticShadows(GameComtrollerViews)
+        ShadowService().addButtonShadows(answerButtonsCollection)
     }
     
     private func showAlertIfNeeded() {
@@ -163,7 +158,7 @@ extension GameViewController {
             )
             
             buttons.setDefaultButtonsColor(answerButtonsCollection)
-            Shadow().addButtonShadows(answerButtonsCollection)
+            ShadowService().addButtonShadows(answerButtonsCollection)
         }
         
         answerPressed = false
@@ -242,13 +237,13 @@ extension GameViewController {
                     score += 1
                 }
                 
-                Shadow().addGreenShadow(to: sender)
+                ShadowService().addGreenShadow(to: sender)
                 buttons.changeColor(sender: sender, true, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .correctAnswer)
                 dontUpdateQuestionFlag = false
                 answerPressed = true
             } else {
-                Shadow().addRedShadow(to: sender)
+                ShadowService().addRedShadow(to: sender)
                 buttons.changeColor(sender: sender, false, optionA, optionB, optionC, optionD)
                 SoundPlayer.shared.playSound(sound: .error)
                 answerPressed = true

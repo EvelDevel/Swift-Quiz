@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ExtremeProgrammingSet {
+final class ExtremeProgrammingSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что такое экстремальное программирование?"],

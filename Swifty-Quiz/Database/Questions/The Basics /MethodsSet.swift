@@ -4,7 +4,7 @@
 
 import Foundation
 
-class MethodsSet {
+final class MethodsSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: ["Чем отличаются методы от функций?",

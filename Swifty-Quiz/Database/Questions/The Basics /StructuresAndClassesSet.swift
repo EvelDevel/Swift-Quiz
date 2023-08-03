@@ -4,7 +4,7 @@
 
 import Foundation
 
-class StructuresAndClassesSet {
+final class StructuresAndClassesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Какое значение будет у first.value после выполнения кода?"],

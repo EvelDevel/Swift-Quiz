@@ -4,26 +4,28 @@
 
 import Foundation
 
-class SettingsCaretaker {
+final class SettingsCaretaker {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
-    private let key = "settings"
+    private let settingsUserDefaultsKey = "settings"
     
-    func saveSettings(settings: Settings) {
+    func saveSettings(
+        settings: Settings
+    ) {
         do {
-            let data = try self.encoder.encode(settings)
+            let data = try encoder.encode(settings)
             
             UserDefaults.standard.set(
                 data,
-                forKey: key
+                forKey: settingsUserDefaultsKey
             )
         } catch {
-            print("We have some problems with saving settings")
+            print("SettingsCaretaker, Error saving settings: \(error)")
         }
     }
     
     func getSettings() -> Settings {
-        guard let data = UserDefaults.standard.data(forKey: key) else {
+        guard let data = UserDefaults.standard.data(forKey: settingsUserDefaultsKey) else {
             return Settings(
                 questionOrder: 0,
                 questionTextShuffling: 0,
@@ -35,9 +37,9 @@ class SettingsCaretaker {
         }
         
         do {
-            return try self.decoder.decode(Settings.self, from: data)
+            return try decoder.decode(Settings.self, from: data)
         } catch {
-            print("We have some problems with retrieving settings from memory")
+            print("SettingsCaretaker, Error retrieving settings from memory: \(error)")
             return Settings(
                 questionOrder: 0,
                 questionTextShuffling: 0,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RXSwift {
+final class RXSwift {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

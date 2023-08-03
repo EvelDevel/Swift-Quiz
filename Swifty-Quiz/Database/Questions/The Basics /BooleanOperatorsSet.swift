@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BooleanOperatorsSet {
+final class BooleanOperatorsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Сколько стандартных логических операторов поддерживает Swift?",

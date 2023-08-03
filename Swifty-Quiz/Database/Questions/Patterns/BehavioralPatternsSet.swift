@@ -4,7 +4,7 @@
 
 import Foundation
 
-class BehavioralPatternsSet {
+final class BehavioralPatternsSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Что является основой поведенческих паттернов?"],

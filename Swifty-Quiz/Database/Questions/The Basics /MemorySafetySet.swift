@@ -4,7 +4,7 @@
 
 import Foundation
 
-class MemorySafetySet {
+final class MemorySafetySet {
 	static func getQuestions() -> [Question] {
 		return [
             Question(question: [

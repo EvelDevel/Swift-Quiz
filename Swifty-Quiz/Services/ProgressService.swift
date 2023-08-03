@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgressService {
+final class ProgressService {
     private let records = Game.shared.getRecordsList()
     private let success: Double = 100
     

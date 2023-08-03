@@ -4,7 +4,7 @@
 
 import Foundation
 
-class NestedTypesSet {
+final class NestedTypesSet {
 	static func getQuestions() -> [Question] {
 		return [
 			Question(question: [

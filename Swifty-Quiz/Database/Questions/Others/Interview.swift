@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Interview {
+final class Interview {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

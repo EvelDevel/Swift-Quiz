@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IntegersAndBooleansSet {
+final class IntegersAndBooleansSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["Выберите знаковый целочисленный тип данных"],

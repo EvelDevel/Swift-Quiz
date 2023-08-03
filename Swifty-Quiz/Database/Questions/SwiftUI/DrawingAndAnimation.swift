@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DrawingAndAnimation {
+final class DrawingAndAnimation {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [

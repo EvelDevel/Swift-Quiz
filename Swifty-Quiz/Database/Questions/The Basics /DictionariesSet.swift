@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DictionariesSet {
+final class DictionariesSet {
     static func getQuestions() -> [Question] {
         return [
             Question(question: ["В каком варианте создается словарь?"],
