@@ -60,6 +60,7 @@
 		FB37AA3C246D2CCD001E08CE /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3A246D2CCD001E08CE /* CategoriesCell.swift */; };
 		FB37AA3F246D2D7C001E08CE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */; };
 		FB39FCBD24FFAD7200B0685D /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB39FCBC24FFAD7200B0685D /* error.mp3 */; };
+		FB3BC6C92A7FD33A009D20DC /* MacrosSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3BC6C82A7FD33A009D20DC /* MacrosSet.swift */; };
 		FB3F91C72737A1C3008E46C3 /* UIViewSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */; };
 		FB478E8627A3CB2200816CFB /* DepenpencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */; };
 		FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */; };
@@ -193,6 +194,7 @@
 		FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		FB37AA3E246D2D7C001E08CE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		FB39FCBC24FFAD7200B0685D /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
+		FB3BC6C82A7FD33A009D20DC /* MacrosSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacrosSet.swift; sourceTree = "<group>"; };
 		FB3F91C62737A1C3008E46C3 /* UIViewSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSet.swift; sourceTree = "<group>"; };
 		FB478E8527A3CB2200816CFB /* DepenpencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenpencyInjection.swift; sourceTree = "<group>"; };
 		FB478E8927A3CB3B00816CFB /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -582,6 +584,7 @@
 				FB119C28246A5AD7005F5289 /* DeinitializationSet.swift */,
 				FB119C2A246A5AE4005F5289 /* ErrorHandlingSet.swift */,
 				2CD0C332269200EE00871C14 /* ConcurrencySet.swift */,
+				FB3BC6C82A7FD33A009D20DC /* MacrosSet.swift */,
 				FB119C2C246A5AF0005F5289 /* OptionalChainingSet.swift */,
 				FB119C2F246A5B03005F5289 /* TypeCastingSet.swift */,
 				FB119C33246A5B23005F5289 /* NestedTypesSet.swift */,
@@ -904,6 +907,7 @@
 				FB6624E524E014FA008C9CE5 /* GameHistoryViewController.swift in Sources */,
 				2CD0C3232691FE2200871C14 /* IntegersAndBooleansSet.swift in Sources */,
 				FB86ACA02469A3E9002BA8B3 /* ControlFlowSet.swift in Sources */,
+				FB3BC6C92A7FD33A009D20DC /* MacrosSet.swift in Sources */,
 				FB1D0B9924470D7E00E9C56D /* BasicOperatorsSet.swift in Sources */,
 				FB119C32246A5B12005F5289 /* ExtensionsSet.swift in Sources */,
 				FB119C30246A5B03005F5289 /* TypeCastingSet.swift in Sources */,

@@ -86,6 +86,7 @@ final class RandomSetManager {
 			guide.append(contentsOf: AccessControlSet.getQuestions())
 			guide.append(contentsOf: MemorySafetySet.getQuestions())
 			guide.append(contentsOf: AdvancedOperatorsSet.getQuestions())
+            guide.append(contentsOf: MacrosSet.getQuestions())
 		}
         
 		return guide

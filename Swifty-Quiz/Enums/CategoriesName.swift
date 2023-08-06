@@ -49,6 +49,7 @@ enum CategoriesName: String, CaseIterable {
     case accessControl = "Контроль доступа"
     case memorySafety = "Безопасность хранения"
     case advancedOperators = "Продвинутые операторы"
+    case macros = "Макросы"
         
     case patterns = "Паттерны: Общие вопросы"
     case creationalPatterns = "Порождающие паттерны"

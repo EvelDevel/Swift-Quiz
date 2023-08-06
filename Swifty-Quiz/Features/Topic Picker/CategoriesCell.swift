@@ -369,6 +369,12 @@ extension CategoriesCell {
                 category: CategoriesName.advancedOperators.rawValue,
                 tag: tag - 1
             )
+        case 47:
+            SelectedTopic.shared.saveQuestionSet(
+                MacrosSet.getQuestions(),
+                category: CategoriesName.macros.rawValue,
+                tag: tag - 1
+            )
         case 50:
             SelectedTopic.shared.saveQuestionSet(
                 BasicsAboutPatternsSet.getQuestions(),
@@ -594,6 +600,8 @@ extension CategoriesCell {
             return CategoriesName.memorySafety.rawValue
         case 46:
             return CategoriesName.advancedOperators.rawValue
+        case 47:
+            return CategoriesName.macros.rawValue
             
         case 50:
             return CategoriesName.patterns.rawValue

@@ -1124,7 +1124,7 @@
                                         <rect key="frame" x="0.0" y="790" width="382" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-3w-aPC" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="267.5" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <state key="normal" title="Продвинутые операторы">
@@ -1137,6 +1137,22 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gkm-aE-o11"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="47" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amu-Qx-h5D" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                <rect key="frame" x="275.5" y="0.0" width="106.5" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <state key="normal" title="Макросы">
+                                                    <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hTa-GH-6l9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1399,6 +1415,7 @@
                 <outletCollection property="others" destination="5is-zb-ilY" collectionClass="NSMutableArray" id="sOB-Xx-c6R"/>
                 <outletCollection property="others" destination="SuI-TO-d06" collectionClass="NSMutableArray" id="PQq-tP-9FB"/>
                 <outletCollection property="others" destination="bcq-Uu-P6y" collectionClass="NSMutableArray" id="Kga-v4-EPC"/>
+                <outletCollection property="guide" destination="amu-Qx-h5D" collectionClass="NSMutableArray" id="xTA-I8-RgL"/>
             </connections>
             <point key="canvasLocation" x="-368.11594202898556" y="325.11160714285711"/>
         </tableViewCell>
@@ -1497,6 +1514,9 @@
         <designable name="a5J-1Y-qrU">
             <size key="intrinsicContentSize" width="52" height="26"/>
         </designable>
+        <designable name="amu-Qx-h5D">
+            <size key="intrinsicContentSize" width="51" height="26"/>
+        </designable>
         <designable name="bcq-Uu-P6y">
             <size key="intrinsicContentSize" width="38" height="24"/>
         </designable>
@@ -1593,7 +1613,7 @@
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
-            <color red="0.23800000548362732" green="0.28099998831748962" blue="0.335999995470047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17647058823529413" green="0.19607843137254902" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
