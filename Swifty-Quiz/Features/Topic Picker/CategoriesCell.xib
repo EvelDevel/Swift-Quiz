@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="16" width="382" height="1698"/>
+                        <rect key="frame" x="16" y="16" width="382" height="1746"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
@@ -290,7 +290,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                                <rect key="frame" x="0.0" y="416" width="382" height="176"/>
+                                <rect key="frame" x="0.0" y="416" width="382" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -302,16 +302,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-13-vKy" userLabel="Other">
-                                        <rect key="frame" x="0.0" y="40" width="382" height="136"/>
+                                        <rect key="frame" x="0.0" y="40" width="382" height="184"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-vh-iEU" userLabel="03 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-vh-iEU" userLabel="01 Row">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="78" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-TO-d06" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="Собеседование">
+                                                        <state key="normal" title="Собес #1">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -323,11 +323,11 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fpg-Bc-oQK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="79" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-Uu-P6y" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="194.5" y="0.0" width="88.5" height="40"/>
+                                                    <button opaque="NO" tag="80" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-dZ-foo" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="120" y="0.0" width="114.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="RXSwift">
+                                                        <state key="normal" title="Собес #2">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -336,15 +336,15 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5FX-CZ-WWs"/>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uBZ-7j-CoL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="76" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-zb-ilY" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="291" y="0.0" width="91" height="40"/>
+                                                    <button opaque="NO" tag="81" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-Y4-Qbx" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="242.5" y="0.0" width="139.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="APNS">
-                                                            <color key="titleColor" name="TextColor"/>
+                                                        <state key="normal" title="Собеc #3">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -352,7 +352,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZdS-Wh-1H9"/>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lvb-RL-gFx"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -360,11 +360,11 @@
                                                     <constraint firstAttribute="height" constant="40" id="CVN-aT-wT0"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="01 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="02 Row">
                                                 <rect key="frame" x="0.0" y="48" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-0U-VKM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Extreme Programming">
@@ -379,32 +379,8 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8IO-i2-HNY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-gZ-M38" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="184" y="0.0" width="198" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="MASVS, Mobile Security">
-                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wxK-WI-cU9"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="K4m-Rg-J8L"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-3M-N4p" userLabel="02 Row">
-                                                <rect key="frame" x="0.0" y="96" width="382" height="40"/>
-                                                <subviews>
                                                     <button opaque="NO" tag="65" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glQ-a3-f4y" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="195.5" height="40"/>
+                                                        <rect key="frame" x="208.5" y="0.0" width="173.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Многопоточность">
@@ -419,8 +395,56 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0ci-vW-aGo"/>
                                                         </connections>
                                                     </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="K4m-Rg-J8L"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-3M-N4p" userLabel="03 Row">
+                                                <rect key="frame" x="0.0" y="96" width="382" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="76" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-zb-ilY" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="151" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="APNS">
+                                                            <color key="titleColor" name="TextColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZdS-Wh-1H9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="79" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-Uu-P6y" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="159" y="0.0" width="223" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="RXSwift">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5FX-CZ-WWs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Rsd-3D-ht1"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-ST-ztv" userLabel="03 Row">
+                                                <rect key="frame" x="0.0" y="144" width="382" height="40"/>
+                                                <subviews>
                                                     <button opaque="NO" tag="71" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyX-Bb-oP6" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                        <rect key="frame" x="203.5" y="0.0" width="178.5" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Работа с сетью">
@@ -435,9 +459,25 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4wu-qp-9dO"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-gZ-M38" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="192" y="0.0" width="190" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="Mobile Security">
+                                                            <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wxK-WI-cU9"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Rsd-3D-ht1"/>
+                                                    <constraint firstAttribute="height" constant="40" id="zOa-Rk-qgo"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -445,7 +485,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                                <rect key="frame" x="0.0" y="618" width="382" height="830"/>
+                                <rect key="frame" x="0.0" y="666" width="382" height="830"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1163,7 +1203,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="1474" width="382" height="224"/>
+                                <rect key="frame" x="0.0" y="1522" width="382" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1398,8 +1438,6 @@
                 <outletCollection property="patterns" destination="1EE-qQ-BEr" collectionClass="NSMutableArray" id="mH8-PY-4pB"/>
                 <outletCollection property="patterns" destination="1Ja-zl-HbK" collectionClass="NSMutableArray" id="GeV-oa-A6F"/>
                 <outletCollection property="random" destination="evn-nM-Qdi" collectionClass="NSMutableArray" id="AJO-Zl-RY1"/>
-                <outletCollection property="others" destination="glQ-a3-f4y" collectionClass="NSMutableArray" id="5F0-LS-HoH"/>
-                <outletCollection property="others" destination="cfQ-gZ-M38" collectionClass="NSMutableArray" id="eQt-iQ-0YA"/>
                 <outletCollection property="others" destination="Zoq-0U-VKM" collectionClass="NSMutableArray" id="SNf-ia-nt7"/>
                 <outletCollection property="uikit" destination="Idt-q8-6HO" collectionClass="NSMutableArray" id="Wjt-Xo-5SJ"/>
                 <outletCollection property="uikit" destination="3F1-x1-5NR" collectionClass="NSMutableArray" id="ZpL-lx-tGW"/>
@@ -1409,13 +1447,17 @@
                 <outletCollection property="patterns" destination="wFE-s8-1Dd" collectionClass="NSMutableArray" id="DYN-GD-ILC"/>
                 <outletCollection property="patterns" destination="1ll-j0-T1a" collectionClass="NSMutableArray" id="BGV-tY-fLE"/>
                 <outletCollection property="patterns" destination="W0q-vB-BXf" collectionClass="NSMutableArray" id="DEt-UA-dLv"/>
-                <outletCollection property="others" destination="OyX-Bb-oP6" collectionClass="NSMutableArray" id="wsG-c4-iwd"/>
                 <outletCollection property="swiftui" destination="NmD-fO-5so" collectionClass="NSMutableArray" id="j2F-kT-gRj"/>
                 <outletCollection property="swiftui" destination="dc1-vv-q49" collectionClass="NSMutableArray" id="YRu-kz-dmH"/>
-                <outletCollection property="others" destination="5is-zb-ilY" collectionClass="NSMutableArray" id="sOB-Xx-c6R"/>
                 <outletCollection property="others" destination="SuI-TO-d06" collectionClass="NSMutableArray" id="PQq-tP-9FB"/>
-                <outletCollection property="others" destination="bcq-Uu-P6y" collectionClass="NSMutableArray" id="Kga-v4-EPC"/>
                 <outletCollection property="guide" destination="amu-Qx-h5D" collectionClass="NSMutableArray" id="xTA-I8-RgL"/>
+                <outletCollection property="others" destination="bcq-Uu-P6y" collectionClass="NSMutableArray" id="Kga-v4-EPC"/>
+                <outletCollection property="others" destination="cfQ-gZ-M38" collectionClass="NSMutableArray" id="eQt-iQ-0YA"/>
+                <outletCollection property="others" destination="OyX-Bb-oP6" collectionClass="NSMutableArray" id="wsG-c4-iwd"/>
+                <outletCollection property="others" destination="GCt-dZ-foo" collectionClass="NSMutableArray" id="S6W-IL-j9C"/>
+                <outletCollection property="others" destination="5is-zb-ilY" collectionClass="NSMutableArray" id="sOB-Xx-c6R"/>
+                <outletCollection property="others" destination="XU6-Y4-Qbx" collectionClass="NSMutableArray" id="dZh-50-tFr"/>
+                <outletCollection property="others" destination="glQ-a3-f4y" collectionClass="NSMutableArray" id="5F0-LS-HoH"/>
             </connections>
             <point key="canvasLocation" x="-368.11594202898556" y="325.11160714285711"/>
         </tableViewCell>
@@ -1469,6 +1511,9 @@
         <designable name="G39-3i-Oox">
             <size key="intrinsicContentSize" width="82" height="24"/>
         </designable>
+        <designable name="GCt-dZ-foo">
+            <size key="intrinsicContentSize" width="47" height="24"/>
+        </designable>
         <designable name="HLI-Em-zmZ">
             <size key="intrinsicContentSize" width="99" height="26"/>
         </designable>
@@ -1494,13 +1539,16 @@
             <size key="intrinsicContentSize" width="80" height="26"/>
         </designable>
         <designable name="SuI-TO-d06">
-            <size key="intrinsicContentSize" width="80" height="24"/>
+            <size key="intrinsicContentSize" width="46" height="24"/>
         </designable>
         <designable name="W0q-vB-BXf">
             <size key="intrinsicContentSize" width="76" height="24"/>
         </designable>
         <designable name="WhH-am-kbD">
             <size key="intrinsicContentSize" width="161" height="26"/>
+        </designable>
+        <designable name="XU6-Y4-Qbx">
+            <size key="intrinsicContentSize" width="48" height="24"/>
         </designable>
         <designable name="YzE-jG-LN5">
             <size key="intrinsicContentSize" width="95" height="26"/>
@@ -1524,7 +1572,7 @@
             <size key="intrinsicContentSize" width="196" height="26"/>
         </designable>
         <designable name="cfQ-gZ-M38">
-            <size key="intrinsicContentSize" width="117" height="24"/>
+            <size key="intrinsicContentSize" width="75" height="24"/>
         </designable>
         <designable name="dTA-Ih-nNB">
             <size key="intrinsicContentSize" width="68" height="26"/>

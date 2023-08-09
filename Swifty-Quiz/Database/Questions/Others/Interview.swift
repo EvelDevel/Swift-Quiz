@@ -914,6 +914,23 @@ final class Interview {
                      """
                     ),
             
+            Question(question: ["Какой метод AppDelegate будет вызываться, когда приложение переходит из Active состояния в Inactive?"],
+                     image: "",
+                     optionA: "applicationWillResignActive",
+                     optionB: "applicationDidEnterBackground",
+                     optionC: "applicationDidBecomeActive",
+                     optionD: "",
+                     id: 104580000,
+                     links: [
+                        "https://habr.com/ru/post/578752/",
+                        "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
+                     ],
+                     helpText: """
+                     applicationWillResignActive. Когда приложение собирается перейти из состояния Active в состояние Inactive - будет вызываться метод applicationWillResignActive.
+                     
+                     В этом метод можно сохранять текущий статус изменяемых данных.
+                     """),
+            
             Question(question: [
                 "Этот метод позволяет вам выполнять код во время запуска приложения"
             ],
@@ -984,23 +1001,6 @@ final class Interview {
                      - Фоновое состояние - Background state - в этом состоянии, если есть исполняемый код, он будет выполняться, а если исполняемого кода нет или выполнение завершено, приложение будет немедленно приостановлено.
                      
                      - Приостановленное состояние - Suspended state - приложение находится в фоновом режиме (в памяти), но не выполняет код, и если в системе недостаточно памяти, она завершит работу вашего приложения.
-                     """),
-            
-            Question(question: ["Какой метод AppDelegate будет вызываться, когда приложение переходит из Active состояния в Inactive?"],
-                     image: "",
-                     optionA: "applicationWillResignActive",
-                     optionB: "applicationDidEnterBackground",
-                     optionC: "applicationDidBecomeActive",
-                     optionD: "applicationWillTerminate",
-                     id: 104580000,
-                     links: [
-                        "https://habr.com/ru/post/578752/",
-                        "https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle"
-                     ],
-                     helpText: """
-                     applicationWillResignActive. Когда приложение собирается перейти из состояния Active в состояние Inactive - будет вызываться метод applicationWillResignActive.
-                     
-                     В этом метод можно сохранять текущий статус изменяемых данных.
                      """),
             
             Question(question: ["Какой метод AppDelegate будет вызываться, когда приложение переходит в фоновый режим (background)?"],
@@ -1228,7 +1228,7 @@ final class Interview {
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
                      ],
                      helpText: """
-                     Да. Между методами viewDidLayoutSubviews и viewWillLayoutSubviews происходит расстановка автолейаута. 
+                     Да. Между методами viewDidLayoutSubviews и viewWillLayoutSubviews происходит расстановка автолейаута.
                      """
                     ),
             
@@ -1419,6 +1419,8 @@ final class Interview {
                      
                      Точно также система координат view bounds, заботится только о самом view, она ничего не знает о расположении view на superview. Начало координат (точка (0, 0) по умолчанию) — это верхний левый угол view. Любые subviews располагаются в зависимости от этой точки.
                      """),
+            
+            
         ]
     }
 }

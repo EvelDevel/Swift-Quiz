@@ -117,6 +117,8 @@ final class RandomSetManager {
             others.append(contentsOf: Networking.getQuestions())
             others.append(contentsOf: APNS.getQuestions())
             others.append(contentsOf: Interview.getQuestions())
+            others.append(contentsOf: Interview2.getQuestions())
+            others.append(contentsOf: Interview3.getQuestions())
         }
         
         return others

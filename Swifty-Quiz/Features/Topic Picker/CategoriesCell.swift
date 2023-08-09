@@ -507,6 +507,18 @@ extension CategoriesCell {
                 category: CategoriesName.rxswift.rawValue,
                 tag: tag - 1
             )
+        case 80:
+            SelectedTopic.shared.saveQuestionSet(
+                Interview2.getQuestions(),
+                category: CategoriesName.interview2.rawValue,
+                tag: tag - 1
+            )
+        case 81:
+            SelectedTopic.shared.saveQuestionSet(
+                Interview3.getQuestions(),
+                category: CategoriesName.interview3.rawValue,
+                tag: tag - 1
+            )
             
         default:
             allButtons.forEach { button in
@@ -653,6 +665,10 @@ extension CategoriesCell {
             return CategoriesName.interview.rawValue
         case 79:
             return CategoriesName.rxswift.rawValue
+        case 80:
+            return CategoriesName.interview2.rawValue
+        case 81:
+            return CategoriesName.interview3.rawValue
             
         default:
             return ""
