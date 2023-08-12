@@ -11,7 +11,7 @@ protocol CategoriesCellDelegate: AnyObject {
 }
 
 final class CategoriesCell: UITableViewCell {
-    @IBOutlet private var random: [UIButton]!
+    @IBOutlet private var compilations: [UIButton]!
     @IBOutlet private var swiftui: [UIButton]!
     @IBOutlet private var uikit: [UIButton]!
     @IBOutlet private var guide: [UIButton]!
@@ -95,7 +95,7 @@ final class CategoriesCell: UITableViewCell {
 extension CategoriesCell {
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
-        allButtons.append(contentsOf: random)
+        allButtons.append(contentsOf: compilations)
         allButtons.append(contentsOf: guide)
         allButtons.append(contentsOf: patterns)
         allButtons.append(contentsOf: others)

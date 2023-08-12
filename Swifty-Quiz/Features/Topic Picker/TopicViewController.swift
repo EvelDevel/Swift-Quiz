@@ -11,6 +11,7 @@ protocol TopicViewControllerDelegate: AnyObject {
 }
 
 final class TopicViewController: UIViewController {
+    @IBOutlet private weak var playFromTopicsButton: RoundCornerButton!
     @IBOutlet private weak var countValueLabel: UILabel!
     @IBOutlet private weak var countTextLabel: UILabel!
     @IBOutlet private weak var mainTitleLabel: UILabel!
@@ -23,6 +24,8 @@ final class TopicViewController: UIViewController {
     
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
+    
+    var playFromTopicsTapped: (() -> Void)?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -43,7 +46,7 @@ final class TopicViewController: UIViewController {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
 			titleTopMargin.constant = 25
-			headerHeight.constant = 80
+			headerHeight.constant = 110
 		}
 	}
 	/// < 13.0 iOS Navigation
@@ -53,11 +56,16 @@ final class TopicViewController: UIViewController {
 	}
     
     private func setup() {
-        cellRegistration()
+        setupPlayButton()
+        setupCells()
         setupGameInformationUI()
     }
+    
+    private func setupPlayButton() {
+        playFromTopicsButton.isHidden = true
+    }
 
-	func setupGameInformationUI() {
+	private func setupGameInformationUI() {
         let tag = SelectedTopic.shared.selectedCategory.topicTag
         
 		if tag < 10 {
@@ -84,7 +92,7 @@ final class TopicViewController: UIViewController {
         countValueLabel.animateLabelChanges("\(SelectedTopic.shared.selectedCategory.questionSet.count)")
     }
 
-	func showAlertIfNeeded() {
+	private func showAlertIfNeeded() {
 		if Game.shared.records.count != 0
             && Game.shared.records[0].continueGameStatus == true {
 			
@@ -134,14 +142,25 @@ final class TopicViewController: UIViewController {
         
         return "\(counter)"
     }
+    
+    @IBAction private func playButtonTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(sound: .buttonTapped)
+        
+        dismiss(animated: true) { [weak self] in
+            guard let self else {
+                return
+            }
+            
+            playFromTopicsTapped?()
+        }
+    }
 }
 
 
 // MARK: - Table View Handling
 
 extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
-
-	func cellRegistration() {
+	private func setupCells() {
 		tableView.register(
             UINib(
                 nibName: String(
@@ -184,8 +203,11 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - CategoriesCellDelegate
 
 extension TopicViewController: CategoriesCellDelegate {
-
 	func updateSelectedTopic() {
+        UIView.animate(withDuration: 1) {
+            self.playFromTopicsButton.isHidden = false
+        }
+        
         setupGameInformationUI()
 	}
     

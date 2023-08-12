@@ -79,8 +79,8 @@ enum CategoriesName: String, CaseIterable {
     
     case apns = "Apple Push Notification Service"
     case fcm = "Firebase Cloud Messaging"
-    case interview = "Собеседование"
-    case interview2 = "Собеседование #2"
-    case interview3 = "Собеседование #3"
+    case interview = "Junior cобеседование"
+    case interview2 = "Middle собеседование"
+    case interview3 = "Senior собеседование"
     case rxswift = "RXSwift"
 }

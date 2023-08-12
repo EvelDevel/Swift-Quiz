@@ -53,7 +53,7 @@ final class InitialViewController: UIViewController {
         setupCurrentQuestionSet()
         updateLastGameInfo()
         updateTotalQuestionLabel()
-        updateContinueButton(fromStart: true)
+        updateContinueButton()
         addShadows()
         
         imageTuning(button: topicPicker, position: .center)
@@ -166,23 +166,11 @@ extension InitialViewController {
 // MARK: - Interface
 
 extension InitialViewController {
-    private func updateContinueButton(
-        fromStart: Bool
-    ) {
+    private func updateContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
-            if continueGameButton.isHidden == true {
-                if !fromStart {
-                    SoundPlayer.shared.playSound(sound: .showContinueButton)
-                }
-            }
             contentCenter.constant = (UIScreen.main.scale / 2) + showContinueAdditions
             continueGameButton.isHidden = false
         } else {
-            if continueGameButton.isHidden == false {
-                if !fromStart {
-                    SoundPlayer.shared.playSound(sound: .hideContinueButton)
-                }
-            }
             contentCenter.constant = (UIScreen.main.scale / 2) - hideContinueAdditions
             continueGameButton.isHidden = true
         }
@@ -251,6 +239,17 @@ extension InitialViewController {
         case Constants.toTopicSelection:
             let topicView = segue.destination as! TopicViewController
             topicView.delegate = self
+            
+            topicView.playFromTopicsTapped = { [weak self] in
+                guard let self else {
+                    return
+                }
+                
+                self.performSegue(
+                    withIdentifier: Constants.newGame,
+                    sender: self
+                )
+            }
         case Constants.toResultsViewController:
             let recordView = segue.destination as! RecordsViewController
             recordView.delegate = self
@@ -289,7 +288,7 @@ extension InitialViewController: GameViewControllerDelegate,
     }
     
     func updateInitialView() {
-        updateContinueButton(fromStart: false)
+        updateContinueButton()
     }
     
     func categoryWasSelected() {

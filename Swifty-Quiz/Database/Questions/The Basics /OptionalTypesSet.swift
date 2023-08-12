@@ -270,6 +270,49 @@ final class OptionalTypesSet {
                      
                      Если через привязку опционалов вы проверяете структуру, то ее значение будет скопировано, и изменить свойства этой константы вы не сможете.
                      """),
+            
+            Question(question: [
+                "Можем ли мы так разворачивать self?"
+            ],
+                     image: "ARC05",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 875501741,
+                     links: [
+                        "https://digitalbunker.dev/updating-if-guard-let-for-swift-5-7/",
+                        "https://www.swiftbysundell.com/articles/swifts-new-shorthand-optional-unwrapping-syntax/"
+                     ],
+                     helpText: """
+                     Да. После Swift 5.7 вы можете использовать такой синтаксис, без указания дополнительных = self (как и в любых других, подобных случаях, не только с self).
+                     
+                     Такой же принцип работы и с выражением if let, теперь не обязательно писать = значение.
+                     """
+                    ),
+            
+            Question(question: [
+                "Является ли данный способ развернуть опционал валидным?"
+            ],
+                     image: "Optionals01",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "Иногда",
+                     optionD: "",
+                     id: 790037974,
+                     links: [
+                        "https://www.swiftbysundell.com/articles/swifts-new-shorthand-optional-unwrapping-syntax/",
+                        "https://digitalbunker.dev/updating-if-guard-let-for-swift-5-7/"
+                     ],
+                     helpText: """
+                     Да. После Swift 5.7 вы можете использовать подобный синтаксис разворачивания опционалов, без указания дополнительных операторов и исходных значений.
+                     
+                     Например:
+                     guard let title, let body, let recipient else {
+                        return false
+                     }
+                     """
+                    ),
         ]
     }
 }

@@ -795,6 +795,50 @@ final class ClosuresSet {
                      Это пример того, как значимый тип данных может быть передан по ссылке, замыкания всегда захватывают значения по ссылке, а не копированием, даже value type.
                      """
                     ),
+            
+            Question(question: [
+                "Какой тип будет у этого замыкания?"
+            ],
+                     image: "Closures06",
+                     optionA: "(Int) -> Int",
+                     optionB: "(Int) -> Void",
+                     optionC: "(Int) -> Double",
+                     optionD: "((Int) -> Int)?",
+                     id: 209959950,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/closures/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/"
+                     ],
+                     helpText: """
+                     (Int) -> Int. В Swift тип замыкания (closure) может быть определен автоматически на основе контекста, этот процесс называется "выводом типа" (type inference).
+                     
+                     В нашем примере Swift понимает, что замыкание closure принимает один аргумент (переменную num), и возвращает результат операции умножения этой переменной на 2.
+                     
+                     Таким образом, по причине умножения на 2, тип замыкания будет автоматически выведен как (Int) -> Int, где (Int) обозначает тип параметра, а -> Int обозначает тип возвращаемого значения.
+                     """
+                    ),
+            
+            Question(question: [
+                "Является ли данное замыкание валидным? Какой у него тип?"
+            ],
+                     image: "Closures07",
+                     optionA: "Будет ошибка компилятора",
+                     optionB: "(Int) -> Void",
+                     optionC: "(Int) -> Int",
+                     optionD: "",
+                     id: 393977628,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/closures/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/"
+                     ],
+                     helpText: """
+                     Будет ошибка компилятора. В Swift тип замыкания (closure) может быть определен автоматически на основе контекста, этот процесс называется "выводом типа" (type inference).
+                     
+                     В нашем примере Swift не может определить тип замыкания из контекста, поскольку мы не производим с результатом никаких действий.
+                     
+                     Мы получим ошибку - Unable to infer type of a closure parameter 'num' in the current context.
+                     """
+                    ),
 		]
 	}
 }

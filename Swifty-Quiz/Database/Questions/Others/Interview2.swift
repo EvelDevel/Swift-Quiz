@@ -12,19 +12,36 @@ final class Interview2 {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [
-                "000_000_000"
+                "Когда происходит автоматическая расстановка retain / release в ARC?"
             ],
                      image: "",
-                     optionA: "",
-                     optionB: "",
+                     optionA: "На этапе компиляции",
+                     optionB: "В райнтайме",
                      optionC: "",
                      optionD: "",
-                     id: 000_000_000,
+                     id: 504040212,
                      links: [
-                        ""
+                        "https://habr.com/ru/articles/592385/"
                      ],
                      helpText: """
-                     000_000_000
+                     На этапе компиляции. ARC отличается от MRC тем, что компилятор сам расставляет методы retain/release за программиста. Важно понимать, что ARC работает при компиляции, а подсчет ссылок — в рантайме.
+                     """
+                    ),
+            
+            Question(question: [
+                "В какой момент происходит подсчет ссылок в ARC?"
+            ],
+                     image: "",
+                     optionA: "В райнтайме",
+                     optionB: "На этапе компиляции",
+                     optionC: "В дебаг режиме",
+                     optionD: "",
+                     id: 595096940,
+                     links: [
+                        "https://habr.com/ru/articles/592385/"
+                     ],
+                     helpText: """
+                     В рантайме. ARC отличается от MRC тем, что компилятор сам расставляет методы retain/release за программиста. Важно понимать, что ARC работает при компиляции, а подсчет ссылок — уже в рантайме.
                      """
                     ),
         ]
