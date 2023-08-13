@@ -639,6 +639,24 @@ final class ARCSet {
                      Такой же принцип работы и с выражением if let, теперь не обязательно писать = значение.
                      """
                     ),
+            
+            Question(question: [
+                "Имеет ли смысл использовать [weak self] во внутреннем замыкании?"
+            ],
+                     image: "ARC06",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     id: 761189032,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/automatic-reference-counting/",
+                        "https://stackoverflow.com/questions/41991467/where-does-the-weak-self-go"
+                     ],
+                     helpText: """
+                     Нет. Писать weak self во внутреннем замыкании не имеет смысла, поскольку внешнее замыкание уже захватывает self по слабой ссылке.
+                     """
+                    ),
 		]
 	}
 }

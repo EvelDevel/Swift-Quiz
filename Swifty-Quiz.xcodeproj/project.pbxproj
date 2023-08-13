@@ -294,9 +294,6 @@
 		2C85725726803F5C00642E74 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
-				FBE1F5952A833E850038BFF4 /* Interview2.swift */,
-				FBE1F5972A8341650038BFF4 /* Interview3.swift */,
 				2C1CC8302680408800C9F09E /* ExtremeProgrammingSet.swift */,
 				2C6D045E26A150C30071A615 /* MobileSecuritySet.swift */,
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
@@ -334,9 +331,20 @@
 			path = Records;
 			sourceTree = "<group>";
 		};
+		FB1067B02A88C5870099BF8A /* Compilations */ = {
+			isa = PBXGroup;
+			children = (
+				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
+				FBE1F5952A833E850038BFF4 /* Interview2.swift */,
+				FBE1F5972A8341650038BFF4 /* Interview3.swift */,
+			);
+			path = Compilations;
+			sourceTree = "<group>";
+		};
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				FB1067B02A88C5870099BF8A /* Compilations */,
 				FB795CD428A91494001B6CAA /* SwiftUI */,
 				FB5208DA274241BF0058F3F8 /* UIKit */,
 				2C85725726803F5C00642E74 /* Others */,
