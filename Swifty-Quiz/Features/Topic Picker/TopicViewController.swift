@@ -62,7 +62,9 @@ final class TopicViewController: UIViewController {
     }
     
     private func setupPlayButton() {
-        playFromTopicsButton.isHidden = true
+        playFromTopicsButton.backgroundColor = UIColor(named: "BackButton")
+        playFromTopicsButton.setTitleColor(.lightGray, for: .normal)
+        playFromTopicsButton.isEnabled = false
     }
 
 	private func setupGameInformationUI() {
@@ -204,8 +206,10 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension TopicViewController: CategoriesCellDelegate {
 	func updateSelectedTopic() {
-        UIView.animate(withDuration: 1) {
-            self.playFromTopicsButton.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            self.playFromTopicsButton.backgroundColor = UIColor(named: "MainYellowOpacity")
+            self.playFromTopicsButton.setTitleColor(UIColor(named: "TextColor"), for: .normal)
+            self.playFromTopicsButton.isEnabled = true
         }
         
         setupGameInformationUI()
