@@ -12,170 +12,63 @@ final class Multithreading {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [
-                "Можете ли вы сами вручную создать нужное количество потоков для всех ядер процессора и ожидать от них эффективной работы?"
+                "Какие типы очередей бывают в Grand Central Dispatch?"
             ],
                      image: "",
-                     optionA: "Нет",
-                     optionB: "Да",
+                     optionA: "serial, concurrent",
+                     optionB: "main, global",
+                     optionC: "serial, main",
+                     optionD: "",
+                     id: 170561292,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     serial, concurrent. serial (последовательная) – выполняет задачи последовательно (поочередно). До тех пор, пока задача не будет выполнена, поток не приступит к выполнения следующей задачи в очереди.
+                     
+                     concurrent (параллельная) – выполняет задачи параллельно. Задачи, поступающие в concurrent очередь, могут выполняться одновременно на разных потоках.
+                     """
+                    ),
+            
+            Question(question: [
+                "Какая очередь GСD на изображении?"
+            ],
+                     image: "Multithreading13",
+                     optionA: "concurrent",
+                     optionB: "serial",
                      optionC: "",
                      optionD: "",
-                     id: 913002116,
+                     id: 641683535,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
-                     Нет. Вы не можете создать столько потоков, сколько ядер, и ожидать, что программа будет хорошо работать. Вам нужно знать количество ядер, которые можно эффективно использовать, что является сложной задачей. Необходимо, чтобы приложения могли использовать преимущества переменного числа ядер компьютера.
-                     
-                     Объем работы, выполняемой одним приложением, также должен иметь возможность динамического масштабирования в соответствии с изменяющимися условиями системы. И решение должно быть достаточно простым, чтобы не увеличивать объем работы, необходимой для использования преимуществ этих ядер.
-                     
-                     Хорошая новость в том, что ОС Apple предоставляют решение всех этих проблем.
-                     """),
-
+                     concurrent. Параллельная очередь не гарантирует, что задачи будут выполнены в строгом порядке очереди. Таким образом, к примеру, Task 6 начнет свое выполнение не дождавшись выполнения Task 4.
+                     """
+                    ),
             
             Question(question: [
-                "Можем ли мы использовать многопоточность для разграничение групп задач, изолируя их друг от друга на разные потоки по типу задачи?"
+                "Какая очередь GСD на изображении?"
             ],
-                     image: "",
-                     optionA: "Да",
-                     optionB: "Нет",
+                     image: "Multithreading14",
+                     optionA: "serial",
+                     optionB: "concurrent",
                      optionC: "",
                      optionD: "",
-                     id: 471689340,
+                     id: 518203061,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
-                     Да. Есть несколько общих обстоятельств, которые делают использование нескольких потоков полезным, одно из таких: разграничение групп задач - потоки могут использоваться для обеспечения модульности приложения.
-                     
-                     Различные потоки могут использоваться для выполнения группы задач одного и того же типа, изолируя их от потоков выполнения других частей вашей программы, что упрощает представление о текущем состоянии приложения.
-                     """),
-            
-            Question(question: [
-                "Могут ли несколько потоков быть использованы для параллельного выполнения копий одной и той же задачи?"
-            ],
-                     image: "",
-                     optionA: "Да",
-                     optionB: "Нет",
-                     optionC: "",
-                     optionD: "",
-                     id: 417171171,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Да. Есть несколько общих обстоятельств, которые делают использование нескольких потоков полезным,  один из таких: распараллеливание вычислений - несколько потоков могут быть использованы для параллельного выполнения копий одной и той же задачи на подмножестве исходных данных.
-                     """),
-            
-            Question(question: [
-                "Как называется проблема многопоточности, когда несколько потоков одновременно пытаются записывать или читать один участок памяти?"
-            ],
-                     image: "",
-                     optionA: "Race conditions",
-                     optionB: "Deadlock",
-                     optionC: "Resource contention",
-                     optionD: "",
-                     id: 438084199,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Race conditions. Несколько потоков работают с одними и теми же данными (с одним адресом в памяти), например, одновременно читают и записывают в одну переменную (или записывают с нескольких потоков одновременно), результат выполнения серии операций может стать непредсказуемым и зависеть от порядка выполнения потоков.
-                     """),
-            
-            Question(question: [
-                "Несколько потоков, выполняющие разные задачи, пытаясь получить доступ к одним и тем же ресурсам, увеличивают количество времени, необходимое для безопасного получения требуемых ресурсов. Это?"
-            ],
-                     image: "",
-                     optionA: "Resource contention",
-                     optionB: "Deadlock",
-                     optionC: "Starvation",
-                     optionD: "",
-                     id: 471891603,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Resource contention. Конфликт за ресурсы (Resources contention): несколько потоков, которые могут выполнять разные задачи, пытаясь получить доступ к одним и тем же ресурсам, увеличивают количество времени, необходимое для безопасного получения требуемых ресурсов.
-                     
-                     Эти задержки, необходимые для получения необходимых ресурсов, могут привести к неожиданному поведению или могут потребовать структурирования вашей программы для регулирования доступа к этим ресурсам.
-                     """),
-            
-            Question(question: [
-                "Проблема многопоточности, когда возникает ситуация, что поток блокирует критическую часть кода и может полностью остановить цикл выполнения приложения (Run loop)"
-            ],
-                     image: "",
-                     optionA: "Deadlock",
-                     optionB: "Starvation",
-                     optionC: "Resource contention",
-                     optionD: "",
-                     id: 979231211,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Deadlock. Ситуация, когда поток блокирует критическую часть кода и может полностью остановить цикл выполнения приложения (Run loop).
-                     
-                     В контексте GCD вы должны быть очень осторожны при использовании вызовов dispatchQueue.sync {}, так как вы легко можете попасть в ситуации, когда две синхронные операции могут застрять в ожидании друг друга.
-                     """),
-            
-            Question(question: [
-                "Проблема многопоточности, при которой поток никогда не сможет получить доступ к ресурсу или набору ресурсов в определенном порядке, и будет пытаться снова и снова"
-            ],
-                     image: "",
-                     optionA: "Starvation",
-                     optionB: "Deadlock",
-                     optionC: "Non-deterministic and Fairness",
-                     optionD: "",
-                     id: 810946621,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Starvation. Поток никогда не сможет получить доступ к ресурсу или набору ресурсов в определенном порядке, в котором он нуждается по разным причинам, и пытается получить этот доступ снова и снова.
-                     """),
-            
-            Question(question: [
-                "Как называется проблема многопоточности, при которой поток с низким приоритетом удерживает ресурс, который требуется другому потоку с более высоким приоритетом?"
-            ],
-                     image: "",
-                     optionA: "Priority Inversion",
-                     optionB: "Starvation",
-                     optionC: "Race conditions",
-                     optionD: "",
-                     id: 336150198,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Priority Inversion. Поток с низким приоритетом удерживает ресурс, который требуется другому потоку с более высоким приоритетом.
-                     """),
-            
-            Question(question: [
-                "Выберите, что из перечисленного инициализируется атомарно?"
-            ],
-                     image: "",
-                     optionA: "Глобальные переменные",
-                     optionB: "Ленивые свойства",
-                     optionC: "",
-                     optionD: "",
-                     id: 144267610,
-                     links: [
-                        "https://habr.com/ru/articles/320152/",
-                        "https://developer.apple.com/documentation/DISPATCH"
-                     ],
-                     helpText: """
-                     Глобальные переменные. Они инициализируются атомарно (Атомарная операция — операция, которая либо выполняется целиком, либо не выполняется вовсе), нам никогда не потребуется обрабатывать вручную случай, когда несколько потоков пытаются инициализировать одну и ту же глобальную переменную одновременно или беспокоиться о том, что кто-то может увидеть частично инициализированную переменную, пока инициализация все еще продолжается.
-                     
-                     Но важно помнить, что ленивая инициализация свойств не выполняется атомарно, и Swift на данный момент не предоставляет аннотаций или модификаторов для изменения этого поведения.
-                     """),
+                     serial. Serial очередь обрабатывает задачи строго в порядке поступления, при этом задача всегда будет ожидать выполнения в очереди до тех пор, пока поток не освободится от выполнения предыдущей задачи.
+                     """
+                    ),
             
             Question(question: [
                 "Какой вывод мы получим в консоль (чаще всего)?"
@@ -187,7 +80,8 @@ final class Multithreading {
                      optionD: "",
                      id: 419276781,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -211,7 +105,8 @@ final class Multithreading {
                      optionD: "",
                      id: 963670768,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -231,7 +126,8 @@ final class Multithreading {
                      optionD: "",
                      id: 327886983,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -249,7 +145,8 @@ final class Multithreading {
                      optionD: "",
                      id: 123966627,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -273,7 +170,8 @@ final class Multithreading {
                      optionD: "",
                      id: 182964893,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -297,7 +195,8 @@ final class Multithreading {
                      optionD: "",
                      id: 983391725,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -317,7 +216,8 @@ final class Multithreading {
                      optionD: "",
                      id: 333208580,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -335,7 +235,8 @@ final class Multithreading {
                      optionD: "",
                      id: 573336025,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -353,7 +254,8 @@ final class Multithreading {
                      optionD: "",
                      id: 297669734,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -371,7 +273,8 @@ final class Multithreading {
                      optionD: "",
                      id: 149232816,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -395,7 +298,8 @@ final class Multithreading {
                      optionD: "",
                      id: 897743589,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -417,7 +321,8 @@ final class Multithreading {
                      optionD: "",
                      id: 207601445,
                      links: [
-                        "https://habr.com/ru/articles/320152/",
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
                         "https://developer.apple.com/documentation/DISPATCH"
                      ],
                      helpText: """
@@ -430,6 +335,100 @@ final class Multithreading {
                      То есть поток заблокируется, и попытка вывести на нем хоть что-нибудь - не даст никакого результата.
                      """
                     ),
+            
+            Question(question: [
+                "Как называется проблема многопоточности, когда несколько потоков одновременно пытаются записывать или читать один участок памяти?"
+            ],
+                     image: "",
+                     optionA: "Race conditions",
+                     optionB: "Deadlock",
+                     optionC: "Resource contention",
+                     optionD: "",
+                     id: 438084199,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     Race conditions. Несколько потоков работают с одними и теми же данными (с одним адресом в памяти), например, одновременно читают и записывают в одну переменную (или записывают с нескольких потоков одновременно), результат выполнения серии операций может стать непредсказуемым и зависеть от порядка выполнения потоков.
+                     """),
+            
+            Question(question: [
+                "Несколько потоков, выполняющие разные задачи, пытаясь получить доступ к одним и тем же ресурсам, увеличивают количество времени, необходимое для безопасного получения требуемых ресурсов. Это?"
+            ],
+                     image: "",
+                     optionA: "Resource contention",
+                     optionB: "Deadlock",
+                     optionC: "Starvation",
+                     optionD: "",
+                     id: 471891603,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     Resource contention. Конфликт за ресурсы (Resources contention): несколько потоков, которые могут выполнять разные задачи, пытаясь получить доступ к одним и тем же ресурсам, увеличивают количество времени, необходимое для безопасного получения требуемых ресурсов.
+                     
+                     Эти задержки, необходимые для получения необходимых ресурсов, могут привести к неожиданному поведению или могут потребовать структурирования вашей программы для регулирования доступа к этим ресурсам.
+                     """),
+            
+            Question(question: [
+                "Проблема многопоточности, когда возникает ситуация, что поток блокирует критическую часть кода и может полностью остановить цикл выполнения приложения (Run loop)"
+            ],
+                     image: "",
+                     optionA: "Deadlock",
+                     optionB: "Starvation",
+                     optionC: "Resource contention",
+                     optionD: "",
+                     id: 979231211,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     Deadlock. Ситуация, когда поток блокирует критическую часть кода и может полностью остановить цикл выполнения приложения (Run loop).
+                     
+                     В контексте GCD вы должны быть очень осторожны при использовании вызовов dispatchQueue.sync {}, так как вы легко можете попасть в ситуации, когда две синхронные операции могут застрять в ожидании друг друга.
+                     """),
+            
+            Question(question: [
+                "Проблема многопоточности, при которой поток никогда не сможет получить доступ к ресурсу или набору ресурсов в определенном порядке, и будет пытаться снова и снова"
+            ],
+                     image: "",
+                     optionA: "Starvation",
+                     optionB: "Deadlock",
+                     optionC: "Non-deterministic and Fairness",
+                     optionD: "",
+                     id: 810946621,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     Starvation. Поток никогда не сможет получить доступ к ресурсу или набору ресурсов в определенном порядке, в котором он нуждается по разным причинам, и пытается получить этот доступ снова и снова.
+                     """),
+            
+            Question(question: [
+                "Как называется проблема многопоточности, при которой поток с низким приоритетом удерживает ресурс, который требуется другому потоку с более высоким приоритетом?"
+            ],
+                     image: "",
+                     optionA: "Priority Inversion",
+                     optionB: "Starvation",
+                     optionC: "Race conditions",
+                     optionD: "",
+                     id: 336150198,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/articles/578752/",
+                        "https://developer.apple.com/documentation/DISPATCH"
+                     ],
+                     helpText: """
+                     Priority Inversion. Поток с низким приоритетом удерживает ресурс, который требуется другому потоку с более высоким приоритетом.
+                     """),
         ]
     }
 }
