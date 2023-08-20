@@ -205,6 +205,12 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - CategoriesCellDelegate
 
 extension TopicViewController: CategoriesCellDelegate {
+    func presentHelpController() {
+        let controller = InformationViewController()
+        controller.modalPresentationStyle = .overFullScreen
+        present(controller, animated: true)
+    }
+    
 	func updateSelectedTopic() {
         UIView.animate(withDuration: 0.3) {
             self.playFromTopicsButton.backgroundColor = UIColor(named: "MainYellowOpacity")

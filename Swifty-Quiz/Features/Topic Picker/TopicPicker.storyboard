@@ -80,7 +80,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-lk-6Bp" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                         <rect key="frame" x="254" y="83" width="120" height="40"/>
-                                        <color key="backgroundColor" name="MainYellowOpacity"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="i1q-VL-Xah"/>
                                             <constraint firstAttribute="height" constant="40" id="lXj-Px-lYq"/>
@@ -165,9 +165,6 @@
         <image name="ChevroneBigYellow" width="50" height="50"/>
         <namedColor name="MainBackground">
             <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MainYellowOpacity">
-            <color red="0.96899998188018799" green="0.83499997854232788" blue="0.31799998879432678" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.17647058823529413" green="0.19607843137254902" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

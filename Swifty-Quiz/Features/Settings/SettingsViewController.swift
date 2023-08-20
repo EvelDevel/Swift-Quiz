@@ -47,17 +47,10 @@ final class SettingsViewController: UIViewController {
     }
     
     private func setup() {
-        setupViewCornerCurve()
+        setupSeparator()
         setupControlsTintColors()
         setupTargets()
         setupInitialControlsState()
-        setupSeparator()
-    }
-    
-    private func setupViewCornerCurve() {
-        if #available(iOS 13.0, *) {
-            settingsView.layer.cornerCurve = .continuous
-        } else {}
     }
     
     private func setupSeparator() {
