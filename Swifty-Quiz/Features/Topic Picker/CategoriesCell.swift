@@ -120,7 +120,7 @@ extension CategoriesCell {
     func addShadows() {
         DispatchQueue.main.async {
             ShadowService().addTopicButtonShadows(self.allButtons)
-            ShadowService().addButtonShadows([self.helpProjectButton])
+            ShadowService().addTopicButtonShadows([self.helpProjectButton])
         }
     }
     
