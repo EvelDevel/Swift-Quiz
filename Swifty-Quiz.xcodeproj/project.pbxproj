@@ -454,13 +454,13 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		FB3963492A9206FA00173842 /* Donations */ = {
+		FB3963492A9206FA00173842 /* Information */ = {
 			isa = PBXGroup;
 			children = (
 				FB39634A2A9208E900173842 /* InformationViewController.swift */,
 				FB39634B2A9208E900173842 /* InformationViewController.xib */,
 			);
-			path = Donations;
+			path = Information;
 			sourceTree = "<group>";
 		};
 		FB5208DA274241BF0058F3F8 /* UIKit */ = {
@@ -704,7 +704,7 @@
 				FB6624E624E01FEB008C9CE5 /* GameHistory */,
 				FB291D1E26D2169200A40679 /* HelpViewController */,
 				FB3963472A92069D00173842 /* Settings */,
-				FB3963492A9206FA00173842 /* Donations */,
+				FB3963492A9206FA00173842 /* Information */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -1107,7 +1107,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1130,7 +1130,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Evel-Devel.Swifty-Quiz";
 				PRODUCT_NAME = "Свифти-Квиз";
 				PROVISIONING_PROFILE_SPECIFIER = "";

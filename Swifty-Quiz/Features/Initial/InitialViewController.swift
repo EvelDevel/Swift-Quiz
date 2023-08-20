@@ -265,19 +265,16 @@ extension InitialViewController {
 
 // MARK: - Handle delegates
 
-extension InitialViewController: GameViewControllerDelegate,
-                                 TopicViewControllerDelegate,
-                                 RecordsViewControllerDelegate,
-                                 SettingsViewControllerDelegate {
+extension InitialViewController:
+    GameViewControllerDelegate,
+    TopicViewControllerDelegate,
+    RecordsViewControllerDelegate,
+    SettingsViewControllerDelegate {
     
     func showHelpController() {
         let controller = InformationViewController()
         controller.modalPresentationStyle = .overFullScreen
-        
-        present(
-            controller,
-            animated: true
-        )
+        present(controller, animated: true)
     }
     
     func didEndGame(_ result: GameResult) {

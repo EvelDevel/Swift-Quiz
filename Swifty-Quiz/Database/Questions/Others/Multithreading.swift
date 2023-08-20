@@ -337,6 +337,64 @@ final class Multithreading {
                     ),
             
             Question(question: [
+                "Можем ли мы отменять задачи у DispatchWorkItem в GCD с помощью метода cancel?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 868309886,
+                     links: [
+                        "https://habr.com/ru/post/578752/#Dispatch%20group",
+                        "https://habr.com/ru/articles/320152/"
+                     ],
+                     helpText: """
+                     Да. DispatchWorkItem дает нам возможность отменять задачу с помощью метода cancel. Важно понимать, что задачу можно отменить только в том случае, если она на момент отмены ожидает в очереди. Если поток уже начал выполнять задачу, она не будет отменена.
+
+                     Операции Operations можно отменять с помощью их собственного метода cancel() или все операции сразу на определенной OperationQueue. Также можно отменять замыкания в BlockOperation.
+                     """
+                    ),
+
+            Question(question: [
+                "Можем ли мы отменить задачу DispatchWorkItem в GCD, если поток уже начал ее выполнение?"
+            ],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     id: 485515326,
+                     links: [
+                        "https://habr.com/ru/post/578752/#Dispatch%20group",
+                        "https://habr.com/ru/articles/320152/"
+                     ],
+                     helpText: """
+                     Нет. DispatchWorkItem дает нам возможность отменять задачу с помощью метода cancel. Важно понимать, что задачу можно отменить только в том случае, если она на момент отмены ожидает в очереди. Если поток уже начал выполнять задачу, она не будет отменена.
+
+                     Операции Operations можно отменять с помощью их собственного метода cancel() или все операции сразу на определенной OperationQueue. Также можно отменять замыкания в BlockOperation.
+                     """
+                    ),
+
+            Question(question: [
+                "Мы можем отменять задачи в Operations как по отдельности, так и все операции на определенной OperationQueue сразу. Так ли это?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "Только по отдельности",
+                     optionD: "",
+                     id: 732624797,
+                     links: [
+                        "https://habr.com/ru/post/578752/#Dispatch%20group",
+                        "https://habr.com/ru/articles/320152/"
+                     ],
+                     helpText: """
+                     Да. Операции Operations можно отменять с помощью их собственного метода cancel() или все операции сразу на определенной OperationQueue. Также можно отменять замыкания в BlockOperation.
+                     """
+                    ),
+            
+            Question(question: [
                 "Как называется проблема многопоточности, когда несколько потоков одновременно пытаются записывать или читать один участок памяти?"
             ],
                      image: "",
