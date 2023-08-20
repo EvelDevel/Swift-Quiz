@@ -8,6 +8,7 @@ protocol GameViewControllerDelegate: AnyObject {
     func didEndGame(_ result: GameResult)
     func showReviewRequest()
     func updateInitialView()
+    func showHelpController()
 }
 
 final class GameViewController: UIViewController {
@@ -423,8 +424,17 @@ extension GameViewController {
             }
         )
         
+        let helpAction = UIAlertAction(
+            title: Constants.helpActionAlert,
+            style: .destructive,
+            handler: {
+                action in self.showHelpScreen()
+            }
+        )
+        
         alert.addAction(restartAction)
         alert.addAction(quitAction)
+        alert.addAction(helpAction)
         
         present(
             alert,
@@ -458,6 +468,16 @@ extension GameViewController {
         updateQuestion()
         helpCounter = 0
         score = 0
+    }
+    
+    private func showHelpScreen() {
+        self.dismiss(animated: true) { [weak self] in
+            guard let self else {
+                return
+            }
+            
+            self.delegate?.showHelpController()
+        }
     }
 }
 

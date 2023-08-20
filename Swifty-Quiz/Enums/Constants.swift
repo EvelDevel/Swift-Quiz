@@ -62,6 +62,7 @@ class Constants {
     static var scoreTitle = "Ваш счет"
     static var restartActionAlert = "Перезапустить"
     static var quitActionAlert = "Выйти"
+    static var helpActionAlert = "Поддержка проекта"
     
     static var scoreBelow35Message = "Не сдавайтесь, пока результат слабый, но у вас все получится!"
     static var scoreBelow55Message = "Достойный результат, но нужно продолжать работать!"

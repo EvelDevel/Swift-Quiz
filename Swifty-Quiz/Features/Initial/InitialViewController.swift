@@ -270,6 +270,16 @@ extension InitialViewController: GameViewControllerDelegate,
                                  RecordsViewControllerDelegate,
                                  SettingsViewControllerDelegate {
     
+    func showHelpController() {
+        let controller = InformationViewController()
+        controller.modalPresentationStyle = .overFullScreen
+        
+        present(
+            controller,
+            animated: true
+        )
+    }
+    
     func didEndGame(_ result: GameResult) {
         changeLabelWithAnimation(
             label: lastTopic,
