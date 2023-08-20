@@ -18,28 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="2034"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-S2-lKL" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                        <rect key="frame" x="20" y="11" width="374" height="54"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="54" id="MA1-IZ-umN"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Поддержать проект">
-                            <color key="titleColor" red="0.17647058823529413" green="0.19607843137254902" blue="0.17647058823529413" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <action selector="helpProjectTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c3m-b9-URB"/>
-                        </connections>
-                    </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="80" width="382" height="1748"/>
+                        <rect key="frame" x="16" y="16" width="382" height="1748"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-p5-cdl" userLabel="All togheter">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="180"/>
@@ -97,7 +77,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="12"/>
+                                                        <real key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -209,9 +189,9 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eOw-vS-Fzz" userLabel="02 Row">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="72" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-fO-5so" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                    <button opaque="NO" clipsSubviews="YES" tag="72" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-fO-5so" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="SwiftUI Essentials">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,9 +205,9 @@
                                                             <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wzf-B1-HhV"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="73" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-vv-q49" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                    <button opaque="NO" clipsSubviews="YES" tag="73" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-vv-q49" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="168.5" y="0.0" width="213.5" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="Drawing and Animation">
                                                             <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1406,18 +1386,14 @@
                 </subviews>
                 <color key="backgroundColor" name="MainBackground"/>
                 <constraints>
-                    <constraint firstItem="gWC-S2-lKL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CKI-5o-U3h"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="gWC-S2-lKL" secondAttribute="trailing" id="OJ3-mb-upw"/>
                     <constraint firstAttribute="bottom" secondItem="dRJ-1M-yPa" secondAttribute="bottom" constant="25" id="WVO-4R-gi9"/>
-                    <constraint firstItem="dRJ-1M-yPa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="80" id="ahn-bd-L4w"/>
+                    <constraint firstItem="dRJ-1M-yPa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ahn-bd-L4w"/>
                     <constraint firstAttribute="trailing" secondItem="dRJ-1M-yPa" secondAttribute="trailing" constant="16" id="lXH-5w-NSv"/>
-                    <constraint firstItem="gWC-S2-lKL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rCS-tg-i4x"/>
                     <constraint firstItem="dRJ-1M-yPa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zGp-QO-G4M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="helpProjectButton" destination="gWC-S2-lKL" id="aEL-g1-H1j"/>
                 <outletCollection property="compilations" destination="iyP-mf-tY5" collectionClass="NSMutableArray" id="l6b-8v-2Iq"/>
                 <outletCollection property="compilations" destination="sjn-CH-lMo" collectionClass="NSMutableArray" id="o89-eU-Odm"/>
                 <outletCollection property="guide" destination="ttV-U7-ToS" collectionClass="NSMutableArray" id="nvp-wc-h21"/>
@@ -1624,9 +1600,6 @@
         </designable>
         <designable name="gAi-7Y-eFa">
             <size key="intrinsicContentSize" width="87" height="26"/>
-        </designable>
-        <designable name="gWC-S2-lKL">
-            <size key="intrinsicContentSize" width="151" height="32"/>
         </designable>
         <designable name="glQ-a3-f4y">
             <size key="intrinsicContentSize" width="89" height="24"/>

@@ -22,6 +22,8 @@ final class TopicViewController: UIViewController {
     @IBOutlet private weak var successValueLabel: UILabel!
     @IBOutlet private weak var successTextLabel: UILabel!
     
+    @IBOutlet private weak var helpProjectButton: RoundCornerButton!
+    
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
     
@@ -46,7 +48,7 @@ final class TopicViewController: UIViewController {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
 			titleTopMargin.constant = 25
-			headerHeight.constant = 110
+			headerHeight.constant = 172
 		}
 	}
 	/// < 13.0 iOS Navigation
@@ -59,6 +61,7 @@ final class TopicViewController: UIViewController {
         setupPlayButton()
         setupCells()
         setupGameInformationUI()
+        setupShadow()
     }
     
     private func setupPlayButton() {
@@ -92,6 +95,10 @@ final class TopicViewController: UIViewController {
         successTextLabel.animateLabelChanges(Constants.learnedText)
         successValueLabel.animateLabelChanges("\(progress.getProgress(for: SelectedTopic.shared.selectedCategory.topicName).progressRate)%")
         countValueLabel.animateLabelChanges("\(SelectedTopic.shared.selectedCategory.questionSet.count)")
+    }
+    
+    private func setupShadow() {
+        ShadowService().addTopicButtonShadows([helpProjectButton])
     }
 
 	private func showAlertIfNeeded() {
@@ -156,6 +163,16 @@ final class TopicViewController: UIViewController {
             playFromTopicsTapped?()
         }
     }
+    
+    @IBAction func helpProjectTapped(_ sender: Any) {
+        SoundPlayer.shared.playSound(
+            sound: .buttonTapped
+        )
+        
+        let controller = InformationViewController()
+        controller.modalPresentationStyle = .overFullScreen
+        present(controller, animated: true)
+    }
 }
 
 
@@ -205,12 +222,6 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - CategoriesCellDelegate
 
 extension TopicViewController: CategoriesCellDelegate {
-    func presentHelpController() {
-        let controller = InformationViewController()
-        controller.modalPresentationStyle = .overFullScreen
-        present(controller, animated: true)
-    }
-    
 	func updateSelectedTopic() {
         UIView.animate(withDuration: 0.3) {
             self.playFromTopicsButton.backgroundColor = UIColor(named: "MainYellowOpacity")

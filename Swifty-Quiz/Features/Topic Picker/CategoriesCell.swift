@@ -8,7 +8,6 @@ protocol CategoriesCellDelegate: AnyObject {
     func updateSelectedTopic()
     func updateSuccessRate(rate: Int)
     func showAlert()
-    func presentHelpController()
 }
 
 final class CategoriesCell: UITableViewCell {
@@ -18,8 +17,6 @@ final class CategoriesCell: UITableViewCell {
     @IBOutlet private var guide: [UIButton]!
     @IBOutlet private var patterns: [UIButton]!
     @IBOutlet private var others: [UIButton]!
-    
-    @IBOutlet private weak var helpProjectButton: RoundCornerButton!
     
     private var allButtons: [UIButton] = []
     
@@ -52,7 +49,7 @@ final class CategoriesCell: UITableViewCell {
             button.layer.backgroundColor = progress.getProgress(
                 for: getTopicName(for: button.tag)
             ).progressColor
-            
+
             button.layer.borderWidth = 0
         }
     }
@@ -92,14 +89,6 @@ final class CategoriesCell: UITableViewCell {
             }
         }
     }
-    
-    @IBAction func helpProjectTapped(_ sender: Any) {
-        SoundPlayer.shared.playSound(
-            sound: .buttonTapped
-        )
-        
-        delegate?.presentHelpController()
-    }
 }
 
 
@@ -120,7 +109,6 @@ extension CategoriesCell {
     func addShadows() {
         DispatchQueue.main.async {
             ShadowService().addTopicButtonShadows(self.allButtons)
-            ShadowService().addTopicButtonShadows([self.helpProjectButton])
         }
     }
     

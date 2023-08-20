@@ -33,7 +33,7 @@ class InformationViewController: UIViewController {
 extension InformationViewController {
     @IBAction func copyNumTapped(_ sender: Any) {
         SoundPlayer.shared.playSound(
-            sound: .buttonTapped
+            sound: .correctAnswer
         )
         
         UIPasteboard.general.string = "89509996972"

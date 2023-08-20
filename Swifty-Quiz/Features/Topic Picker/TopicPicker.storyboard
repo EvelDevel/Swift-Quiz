@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZC-aw-Mio" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="48" width="390" height="144"/>
+                                <rect key="frame" x="0.0" y="48" width="390" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-Tb-uuD">
-                                        <rect key="frame" x="16" y="50" width="358" height="21.666666666666671"/>
+                                        <rect key="frame" x="16" y="50" width="358" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wO8-f4-hV6">
-                                        <rect key="frame" x="16" y="83.666666666666657" width="358" height="37.333333333333343"/>
+                                        <rect key="frame" x="16" y="80.666666666666657" width="358" height="37.333333333333343"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9KM-7j-y8D" userLabel="CounterLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="15.666666666666666"/>
@@ -79,7 +79,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-lk-6Bp" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                        <rect key="frame" x="254" y="83" width="120" height="40"/>
+                                        <rect key="frame" x="254" y="80" width="120" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="i1q-VL-Xah"/>
@@ -99,11 +99,32 @@
                                             <action selector="playButtonTapped:" destination="89g-57-hW8" eventType="touchUpInside" id="aH6-O4-0mB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-Ho-1tN" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="136" width="358" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="KXp-8k-EdG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Поддержать проект">
+                                            <color key="titleColor" red="0.1764705882" green="0.1960784314" blue="0.1764705882" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="helpProjectTapped:" destination="89g-57-hW8" eventType="touchUpInside" id="1jX-Se-PcQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="MainBackground"/>
                                 <constraints>
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="1yo-ZR-jZh"/>
                                     <constraint firstItem="wO8-f4-hV6" firstAttribute="top" secondItem="fIj-Tb-uuD" secondAttribute="bottom" constant="12" id="3iE-W8-T6H"/>
+                                    <constraint firstAttribute="trailing" secondItem="PMz-Ho-1tN" secondAttribute="trailing" constant="16" id="3ja-jh-Ni8"/>
                                     <constraint firstItem="cOv-lk-6Bp" firstAttribute="bottom" secondItem="wO8-f4-hV6" secondAttribute="bottom" constant="2" id="Eww-Fb-wI1"/>
                                     <constraint firstAttribute="trailing" secondItem="cOv-lk-6Bp" secondAttribute="trailing" constant="16" id="KJF-CB-qdB"/>
                                     <constraint firstItem="fIj-Tb-uuD" firstAttribute="top" secondItem="tjI-qX-KXp" secondAttribute="bottom" constant="15" id="OVn-57-9EC"/>
@@ -111,12 +132,15 @@
                                     <constraint firstItem="wO8-f4-hV6" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="RGF-d1-pQd"/>
                                     <constraint firstItem="tjI-qX-KXp" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" id="Rrz-0x-GZy"/>
                                     <constraint firstAttribute="trailing" secondItem="fIj-Tb-uuD" secondAttribute="trailing" constant="16" id="UoT-dx-zLP"/>
+                                    <constraint firstItem="PMz-Ho-1tN" firstAttribute="leading" secondItem="tZC-aw-Mio" secondAttribute="leading" constant="16" id="cyk-Jv-SkA"/>
+                                    <constraint firstItem="PMz-Ho-1tN" firstAttribute="top" secondItem="cOv-lk-6Bp" secondAttribute="bottom" constant="16" id="kXx-qU-fen"/>
                                     <constraint firstAttribute="trailing" secondItem="wO8-f4-hV6" secondAttribute="trailing" constant="16" id="mKo-Tt-t89"/>
-                                    <constraint firstAttribute="height" constant="144" id="rDC-uH-dL3"/>
+                                    <constraint firstAttribute="height" constant="200" id="rDC-uH-dL3"/>
+                                    <constraint firstAttribute="bottom" secondItem="PMz-Ho-1tN" secondAttribute="bottom" constant="12" id="vvc-FF-sL2"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="98N-qV-2J9" userLabel="Categories">
-                                <rect key="frame" x="0.0" y="192" width="390" height="652"/>
+                                <rect key="frame" x="0.0" y="248" width="390" height="596"/>
                                 <color key="backgroundColor" name="MainBackground"/>
                                 <connections>
                                     <outlet property="dataSource" destination="89g-57-hW8" id="QGI-Z1-qZL"/>
@@ -142,6 +166,7 @@
                         <outlet property="countTextLabel" destination="Jcx-HA-2sg" id="YU0-MR-TKa"/>
                         <outlet property="countValueLabel" destination="6SV-HS-JQg" id="mpJ-HQ-2Kh"/>
                         <outlet property="headerHeight" destination="rDC-uH-dL3" id="AYX-pY-MjH"/>
+                        <outlet property="helpProjectButton" destination="PMz-Ho-1tN" id="0Ld-2w-arW"/>
                         <outlet property="mainTitleLabel" destination="fIj-Tb-uuD" id="PC3-NJ-blp"/>
                         <outlet property="playFromTopicsButton" destination="cOv-lk-6Bp" id="z8A-4o-Uzt"/>
                         <outlet property="successTextLabel" destination="xuc-oA-G5T" id="nzf-dh-8tL"/>
@@ -156,6 +181,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="PMz-Ho-1tN">
+            <size key="intrinsicContentSize" width="151" height="32"/>
+        </designable>
         <designable name="cOv-lk-6Bp">
             <size key="intrinsicContentSize" width="47" height="29"/>
         </designable>
