@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Interview {
+final class InterviewJunior {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [
@@ -351,6 +351,7 @@ final class Interview {
                      optionD: "",
                      id: 274504854,
                      links: [
+                        "https://habr.com/ru/articles/572316/",
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
                      helpText: """
@@ -372,6 +373,7 @@ final class Interview {
                      optionD: "",
                      id: 992682217,
                      links: [
+                        "https://habr.com/ru/articles/572316/",
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
                      helpText: """
@@ -393,6 +395,7 @@ final class Interview {
                      optionD: "",
                      id: 807039101,
                      links: [
+                        "https://habr.com/ru/articles/572316/",
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
                      helpText: """
@@ -410,10 +413,53 @@ final class Interview {
                      optionD: "",
                      id: 318965895,
                      links: [
+                        "https://habr.com/ru/articles/572316/",
                         "https://habr.com/ru/company/otus/blog/590319/"
                      ],
                      helpText: """
-                     1. У каждого потока может быть не болше одного Run Loop. Значит в приложении может быть минимум один Run Loop, а максимум столько, сколько потоков.
+                     1. У каждого потока может быть не болше одного Run Loop.
+                     
+                     Значит в приложении может быть минимум один Run Loop, а максимум столько, сколько потоков.
+                     """
+                    ),
+            
+            Question(question: [
+                "Запускаются ли отдельные Run Loop автоматически для других потоков, кроме главного?"
+            ],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "Только 4",
+                     optionD: "",
+                     id: 958458634,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/company/otus/blog/590319/"
+                     ],
+                     helpText: """
+                     Нет. Run Loop для главного потока запускается автоматически, после запуска функция main().
+
+                     Для других потоков цикл исполнения по умолчанию не запускается. Если вам нужно больше интерактивности с потоками, вы можете вручную настроить и запустить его.
+                     """
+                    ),
+
+            Question(question: [
+                "Можем ли мы вручную настраивать и запускать Run Loop не для других потоков, кроме main?"
+            ],
+                     image: "",
+                     optionA: "Да",
+                     optionB: "Нет",
+                     optionC: "",
+                     optionD: "",
+                     id: 722080406,
+                     links: [
+                        "https://habr.com/ru/articles/572316/",
+                        "https://habr.com/ru/company/otus/blog/590319/"
+                     ],
+                     helpText: """
+                     Да. Run Loop для главного потока запускается автоматически, после запуска функция main().
+
+                     Для других потоков цикл исполнения по умолчанию не запускается. Если вам нужно больше интерактивности с потоками, вы можете вручную настроить и запустить его.
                      """
                     ),
             

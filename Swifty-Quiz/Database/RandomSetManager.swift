@@ -116,9 +116,9 @@ final class RandomSetManager {
             others.append(contentsOf: Multithreading.getQuestions())
             others.append(contentsOf: Networking.getQuestions())
             others.append(contentsOf: APNS.getQuestions())
-            others.append(contentsOf: Interview.getQuestions())
-            others.append(contentsOf: Interview2.getQuestions())
-            others.append(contentsOf: Interview3.getQuestions())
+            others.append(contentsOf: InterviewJunior.getQuestions())
+            others.append(contentsOf: InterviewMiddle.getQuestions())
+            others.append(contentsOf: InterviewSenior.getQuestions())
         }
         
         return others

@@ -499,7 +499,7 @@ extension CategoriesCell {
             )
         case 78:
             SelectedTopic.shared.saveQuestionSet(
-                Interview.getQuestions(),
+                InterviewJunior.getQuestions(),
                 category: CategoriesName.interview.rawValue,
                 tag: tag - 1
             )
@@ -511,13 +511,13 @@ extension CategoriesCell {
             )
         case 80:
             SelectedTopic.shared.saveQuestionSet(
-                Interview2.getQuestions(),
+                InterviewMiddle.getQuestions(),
                 category: CategoriesName.interview2.rawValue,
                 tag: tag - 1
             )
         case 81:
             SelectedTopic.shared.saveQuestionSet(
-                Interview3.getQuestions(),
+                InterviewSenior.getQuestions(),
                 category: CategoriesName.interview3.rawValue,
                 tag: tag - 1
             )

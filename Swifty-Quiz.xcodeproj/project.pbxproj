@@ -120,7 +120,7 @@
 		FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F891247B98E40053166C /* AntipatternsSet.swift */; };
 		FB99F8C2247BA4690053166C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB37AA3B246D2CCD001E08CE /* CategoriesCell.xib */; };
 		FBA3F0E4289E710F0014222F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3F0E3289E710F0014222F /* Networking.swift */; };
-		FBA9D61D297A57E300A6EF3E /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D61C297A57E300A6EF3E /* Interview.swift */; };
+		FBA9D61D297A57E300A6EF3E /* InterviewJunior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D61C297A57E300A6EF3E /* InterviewJunior.swift */; };
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
@@ -131,8 +131,8 @@
 		FBC34FE726E08EEE00120FB4 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC34FE626E08EEE00120FB4 /* GameResult.swift */; };
 		FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC809422903BFC300E043F8 /* SourceViewController.swift */; };
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
-		FBE1F5962A833E850038BFF4 /* Interview2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5952A833E850038BFF4 /* Interview2.swift */; };
-		FBE1F5982A8341650038BFF4 /* Interview3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5972A8341650038BFF4 /* Interview3.swift */; };
+		FBE1F5962A833E850038BFF4 /* InterviewMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */; };
+		FBE1F5982A8341650038BFF4 /* InterviewSenior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */; };
 		FBE79DD32982243100EE613C /* RXSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE79DD22982243100EE613C /* RXSwift.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBF9EECE2A5AD78800433FAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EECD2A5AD78800433FAA /* UIView+Extensions.swift */; };
@@ -255,7 +255,7 @@
 		FB99F88F247B98AE0053166C /* BehavioralPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralPatternsSet.swift; sourceTree = "<group>"; };
 		FB99F891247B98E40053166C /* AntipatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntipatternsSet.swift; sourceTree = "<group>"; };
 		FBA3F0E3289E710F0014222F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		FBA9D61C297A57E300A6EF3E /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
+		FBA9D61C297A57E300A6EF3E /* InterviewJunior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewJunior.swift; sourceTree = "<group>"; };
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 		FBC34FE626E08EEE00120FB4 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		FBC809422903BFC300E043F8 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
-		FBE1F5952A833E850038BFF4 /* Interview2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview2.swift; sourceTree = "<group>"; };
-		FBE1F5972A8341650038BFF4 /* Interview3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview3.swift; sourceTree = "<group>"; };
+		FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewMiddle.swift; sourceTree = "<group>"; };
+		FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSenior.swift; sourceTree = "<group>"; };
 		FBE79DD22982243100EE613C /* RXSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXSwift.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -338,9 +338,9 @@
 		FB1067B02A88C5870099BF8A /* Compilations */ = {
 			isa = PBXGroup;
 			children = (
-				FBA9D61C297A57E300A6EF3E /* Interview.swift */,
-				FBE1F5952A833E850038BFF4 /* Interview2.swift */,
-				FBE1F5972A8341650038BFF4 /* Interview3.swift */,
+				FBA9D61C297A57E300A6EF3E /* InterviewJunior.swift */,
+				FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */,
+				FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */,
 			);
 			path = Compilations;
 			sourceTree = "<group>";
@@ -888,7 +888,7 @@
 				FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */,
 				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
 				FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */,
-				FBA9D61D297A57E300A6EF3E /* Interview.swift in Sources */,
+				FBA9D61D297A57E300A6EF3E /* InterviewJunior.swift in Sources */,
 				2CD0C32F2692009B00871C14 /* TuplesSet.swift in Sources */,
 				2CD0C333269200EE00871C14 /* ConcurrencySet.swift in Sources */,
 				FB0B96A225262192006C986D /* RandomSetManager.swift in Sources */,
@@ -912,7 +912,7 @@
 				FB66D2802A7B4819009C2D5F /* Sounds.swift in Sources */,
 				FB119C36246A5B2F005F5289 /* ProtocolsSet.swift in Sources */,
 				FBA3F0E4289E710F0014222F /* Networking.swift in Sources */,
-				FBE1F5962A833E850038BFF4 /* Interview2.swift in Sources */,
+				FBE1F5962A833E850038BFF4 /* InterviewMiddle.swift in Sources */,
 				FB119C3E246A5B63005F5289 /* ARCSet.swift in Sources */,
 				FB99F88D247B978C0053166C /* StructuralPatternsSet.swift in Sources */,
 				FB119C2B246A5AE4005F5289 /* ErrorHandlingSet.swift in Sources */,
@@ -927,7 +927,7 @@
 				FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */,
 				FB8CDD5627E7530100A79744 /* InversionOfControl.swift in Sources */,
 				FB119C38246A5B3C005F5289 /* GenericsSet.swift in Sources */,
-				FBE1F5982A8341650038BFF4 /* Interview3.swift in Sources */,
+				FBE1F5982A8341650038BFF4 /* InterviewSenior.swift in Sources */,
 				FB119C25246A5AC2005F5289 /* InheritanceSet.swift in Sources */,
 				2CD0C3352692010900871C14 /* OpaqueTypeSet.swift in Sources */,
 				FB00246B294DE13E008110D6 /* SettingEnums.swift in Sources */,

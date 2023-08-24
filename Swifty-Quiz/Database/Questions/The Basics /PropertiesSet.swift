@@ -17,6 +17,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 369566531,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Свойства хранения. Свойства связывают значения с определённым классом, структурой или перечислением. Свойства хранения содержат значения константы или переменной как часть экземпляра, в то время как вычисляемые свойства вычисляют значения, а не хранят их.
                      
@@ -31,6 +35,10 @@ final class PropertiesSet {
 					 optionC: "Приватные свойства",
 					 optionD: "Свойства хранения",
 					 id: 245637039,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Свойства типа. Свойства хранения и вычисляемые свойства обычно связаны с экземплярами конкретного типа. Однако свойства так же могут быть связаны и с типом самим по себе. Такие свойства известны как свойства типа."),
 			
 			Question(question: ["Можем ли мы добавить наблюдателей свойства хранения, для отслеживания изменений по его значению?"],
@@ -40,6 +48,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 392855070,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Да. Вы можете объявить наблюдателя свойства для отслеживания изменений по значению свойства, которые может вызывать пользовательское действие.
                      
@@ -55,6 +67,10 @@ final class PropertiesSet {
 					 optionC: "func",
 					 optionD: "struct",
 					 id: 286848639,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      let. В самой простой форме свойство хранения - константа или переменная, которая хранится как часть экземпляра определенного класса или структуры.
                      
@@ -70,6 +86,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 272208599,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. Вы можете присвоить значение по умолчанию для свойства хранения как часть его определения. Вы так же можете присвоить начальное значение для свойства хранения во время его инициализации. Это даже возможно для постоянных свойств."),
 			
 			Question(question: ["Что произойдет после запуска этого кода?",
@@ -81,6 +101,10 @@ final class PropertiesSet {
 					 optionC: "Ничего не случится",
 					 optionD: "",
 					 id: 997980903,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Столкнемся с ошибкой. Экземпляры FixedRange имеют переменное свойство хранения firstValue и свойство хранения в виде константы length.
                      
@@ -96,6 +120,10 @@ final class PropertiesSet {
 					 optionC: "Ничего не случится",
 					 optionD: "",
 					 id: 112161233,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Изменим значение firstValue. Если вы присваиваете экземпляр ссылочного типа константе (экземпляр класса), то он все еще может менять переменные свойства (var)."),
 			
 			Question(question: ["После запуска данного кода, мы получим такой результат",
@@ -107,6 +135,10 @@ final class PropertiesSet {
 					 optionC: "Ничего не случится",
 					 optionD: "",
 					 id: 679933244,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Столкнемся с ошибкой. Если вы создаете экземпляр структуры и присваиваете его константе, то вы не можете изменять его свойства, даже если они объявлены как переменные.
                      
@@ -123,6 +155,10 @@ final class PropertiesSet {
 					 optionC: "Пассивное свойство",
 					 optionD: "Латентное свойство хранения",
 					 id: 738725659,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Ленивое свойство хранения. Это свойство, начальное значение которого не вычисляется до первого использования."),
 			
 			Question(question: ["Каким ключевым словом обозначаются ленивые свойства хранения?",
@@ -134,6 +170,10 @@ final class PropertiesSet {
 					 optionC: "passive",
 					 optionD: "slow",
 					 id: 191742520,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "lazy. Индикатор ленивого свойства - ключевое слово lazy."),
 			
 			Question(question: ["Как мы должны объявлять свойства ленивого хранения?",
@@ -144,6 +184,10 @@ final class PropertiesSet {
 					 optionC: "Не имеет значения",
 					 optionD: "",
 					 id: 438126592,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Как переменную. Всегда объявляйте свойства ленивого хранения как переменные (с помощью ключевого слова var), потому что ее значение может быть не получено до окончания инициализации.
                      
@@ -158,6 +202,10 @@ final class PropertiesSet {
 					 optionC: "Частичная инициализация",
 					 optionD: "",
 					 id: 685280758,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Отсрочка инициализации. Ленивые свойства полезны, когда исходное значение свойства зависит от внешних факторов, значения которых неизвестны до окончания инициализации.
                      
@@ -171,6 +219,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 313228621,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Нет. Если к свойству обозначенному через модификатор lazy обращаются сразу с нескольких потоков единовременно, и если оно еще не было инициализировано, то нет никакой гарантии того, что оно будет инициализировано всего один раз."),
 			
 			Question(question: ["Эти свойства фактически не хранят значения",
@@ -181,6 +233,10 @@ final class PropertiesSet {
 					 optionC: "Приватные свойства",
 					 optionD: "Свойства хранения",
 					 id: 778404866,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Вычисляемые свойства. В дополнение к свойствам хранения, классам, структурам и перечислениям можно добавить вычисляемые свойства, которые фактически не хранят значения. Вместо этого они предоставляют геттер и опциональный сеттер для получения и установки других свойств косвенно."),
 			
 			Question(question: ["Если сеттер вычисляемого свойства не определяет имени для нового значения, какое имя используется по умолчанию?",
@@ -191,6 +247,10 @@ final class PropertiesSet {
 					 optionC: "newCenter",
 					 optionD: "value",
 					 id: 988350480,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "newValue. Если сеттер вычисляемого свойства не определяет имени для нового значения, то используется имя по умолчанию newValue."),
 			
 			Question(question: ["Как называется вычисляемое свойство имеющее геттер, но не имеющее сеттер?",
@@ -201,6 +261,10 @@ final class PropertiesSet {
 					 optionC: "Неизменяемое свойство",
 					 optionD: "Переменное свойство хранения",
 					 id: 783890223,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Свойство только для чтения. Вычисляемое свойство имеющее геттер, но не имеющее сеттера известно так же как вычисляемое свойство только для чтения. Такое вычисляемое свойство только для чтения возвращает значение и может быть доступно через точечный синтаксис, но не может изменить свое текущее значение."),
 			
 			Question(question: ["Как мы должны объявлять вычисляемые свойства, включая вычисляемые свойства только для чтения?",
@@ -211,6 +275,10 @@ final class PropertiesSet {
 					 optionC: "Не имеет значения",
 					 optionD: "",
 					 id: 267849004,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Как переменные свойства (var). Вы должны объявлять вычисляемые свойства, включая вычисляемые свойства для чтения, как переменные свойства с ключевым словом var, потому что их значение не фиксировано. Ключевое слово let используется только для константных свойств, значение которых не может меняться, после того как было установлено как часть инициализации экземпляра.
                      """),
@@ -223,6 +291,10 @@ final class PropertiesSet {
 					 optionC: "Можем удалить только {}",
 					 optionD: "Можем удалить только get",
 					 id: 426809299,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. Вы можете упростить объявление вычисляемых свойств только для чтения, удаляя ключевое слово get и его скобки."),
 			
 			Question(question: ["Что мы получим в консоль после запуска данного кода?",
@@ -233,6 +305,10 @@ final class PropertiesSet {
 					 optionC: "Столкнемся с ошибкой",
 					 optionD: "Ничего",
 					 id: 568422992,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      40. Этот пример объявляет новую структуру Cuboid, которая представляет 3D прямоугольную коробку с width, height, depth свойствами.
                      
@@ -249,6 +325,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 918997271,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. Наблюдатели свойств вызываются каждый раз, как устанавливается значение свойству, даже если устанавливаемое значение не отличается от старого."),
 			
 			Question(question: ["Выберите правильные наблюдатели свойств"],
@@ -258,6 +338,10 @@ final class PropertiesSet {
 					 optionC: "willSet и didGet",
 					 optionD: "willGet и didSet",
 					 id: 357665770,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "willSet и didSet. У вас есть опция определять один или оба этих наблюдателя свойства: willSet вызывается прямо перед сохранением значения, didSet вызывается сразу после сохранения значения."),
 			
 			Question(question: ["Этот наблюдатель свойств вызывается прямо перед сохранением значения",
@@ -268,6 +352,10 @@ final class PropertiesSet {
 					 optionC: "get",
 					 optionD: "set",
 					 id: 675073742,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "willSet. willSet вызывается прямо перед сохранением значения."),
 			
 			Question(question: ["Этот наблюдатель свойств вызывается сразу после сохранения значения",
@@ -278,6 +366,10 @@ final class PropertiesSet {
 					 optionC: "get",
 					 optionD: "set",
 					 id: 974237056,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "didSet. didSet вызывается сразу после сохранения значения."),
 			
 			Question(question: ["Если вы не станете указывать новое имя параметра при реализации willSet наблюдателя, каким оно будет?"],
@@ -287,6 +379,10 @@ final class PropertiesSet {
 					 optionC: "old",
 					 optionD: "oldValue",
 					 id: 969783702,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      newValue. Если вы реализуете наблюдатель willSet, то он передает новое значение свойства как константный параметр.
                      
@@ -300,6 +396,10 @@ final class PropertiesSet {
 					 optionC: "old",
 					 optionD: "newValue",
 					 id: 584558510,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "oldValue. Если вы реализуете наблюдатель didSet, то ему будет передан параметр-константа, содержащий старое значение свойства. Вы можете задать имя параметру, но если вы этого не сделаете, то он все равно будет доступен через имя параметра по умолчанию oldValue."),
 			
 			Question(question: ["Переменные, которые объявляются вне любой функции, метода, замыкания или контекста типа"],
@@ -309,6 +409,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 315481420,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Глобальные переменные. Глобальные переменные - переменные, которые объявляются вне любой функции, метода, замыкания или контекста типа."),
 			
 			Question(question: ["Переменные, которые объявляются внутри функции, метода или внутри контекста замыкания"],
@@ -318,6 +422,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 315481420,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Локальные переменные. Локальные переменные - переменные, которые объявляются внутри функции, метода или внутри контекста замыкания."),
 			
 			Question(question: ["Являются ли глобальные константы и переменные вычисляемыми отложено?",
@@ -329,6 +437,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 605569471,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. Глобальные константы и переменные всегда являются вычисляемыми отложено, аналогично свойствам ленивого хранения. В отличии от свойств ленивого хранения глобальные константы и переменные не нуждаются в маркере lazy. Локальные константы и переменные никогда не вычисляются отложено."),
 			
 			Question(question: ["Можем ли мы объявлять свойства, которые будут принадлежать самому типу, а не экземплярам этого типа?",
@@ -339,6 +451,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 475511865,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
                      helpText: """
                      Да. Вы можете объявить свойства, которые принадлежат самому типу, а не экземплярам этого типа. Будет всего одна копия этих свойств, и не важно сколько экземпляров вы создадите. Такие свойства называются свойствами типа.
                      
@@ -354,6 +470,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 759894252,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. В отличии от свойств хранения экземпляра, вы должны всегда давать свойствам типов значение по умолчанию. Это потому, что тип сам по себе не имеет инициализатора, который мог бы присвоить значение хранимому свойству типа."),
 			
 			Question(question: ["Гарантирует ли Swift единоразовую инициализацию свойства типа, даже при обращении к нему из нескольких потоков?",
@@ -365,6 +485,10 @@ final class PropertiesSet {
 					 optionC: "",
 					 optionD: "",
 					 id: 810964107,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "Да. Хранимые свойства типа отложено инициализируются при первом обращении к ним. Они гарантировано инициализируются только один раз, даже если они доступны сразу для нескольких потоков. Эти свойства не нуждаются в маркировке lazy."),
 			
 			Question(question: ["Какое ключевое слово используется для объявления свойств типа?",
@@ -375,16 +499,34 @@ final class PropertiesSet {
 					 optionC: "private",
 					 optionD: "public",
 					 id: 157256631,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
 					 helpText: "static. Чтобы объявить свойства типа, используйте ключевое слово static."),
 			
-			Question(question: ["Какое ключевое слово используется для вычисляемых свойств класса, вместо static?"],
+			Question(question: [
+                "Какое ключевое слово используется для вычисляемых свойств класса, вместо static, когда мы хотим разрешать подклассам переопределение?"
+            ],
 					 image: "",
 					 optionA: "class",
 					 optionB: "struct",
 					 optionC: "public",
 					 optionD: "",
 					 id: 569227571,
-					 helpText: "class. Для вычисляемых свойств самого класса, вы должны использовать ключевое слово class вместо static, чтобы разрешать подклассам переопределение инструкций суперкласса"),
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/#Type-Property-Syntax"
+                     ],
+                     helpText: """
+                     class. Для вычисляемых свойств самого класса, вы должны использовать ключевое слово class, чтобы разрешать подклассам переопределение.
+                     
+                     class SomeClass {
+                         class var someProperty: Int {
+                             return 107
+                         }
+                     }
+                     """),
 			
 			Question(question: ["Какое значение мы получим в консоль?"],
 					 image: "Properties37",
@@ -393,7 +535,36 @@ final class PropertiesSet {
 					 optionC: "Ошибка компиляции",
 					 optionD: "",
 					 id: 666371638,
-					 helpText: "true. DidSet не запускается в инициализаторе, поэтому исходное значение p.point.x будет равно 5, что даст true в результате выполнения программы.")
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties"
+                     ],
+					 helpText: "true. DidSet не запускается в инициализаторе, поэтому исходное значение p.point.x будет равно 5, что даст true в результате выполнения программы."),
+            
+            Question(question: [
+                "Можем ли мы явно объявлять свойство типа (static var) как lazy?"
+            ],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     id: 451575642,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/",
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://www.youtube.com/watch?v=Pe_rqOg1IwY"
+                     ],
+                     helpText: """
+                     Нет. Свойства типа отложено инициализируются при первом обращении к ним (уже является lazy).
+                     
+                     Они гарантировано инициализируются только один раз, даже если они доступны сразу для нескольких потоков.
+                     
+                     Если вы явно укажете lazy static var, получите ошибку:
+                     - "'lazy' cannot be used on a computed property" (при попытке присвоить вычисляемому свойству)
+                     - "'lazy' cannot be used on an already-lazy global" (при попытке присвоить хранимому свойству).
+                     """
+                    ),
 		]
 	}
 }

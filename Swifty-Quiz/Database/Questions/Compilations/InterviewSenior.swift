@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Interview3 {
+final class InterviewSenior {
     static func getQuestions() -> [Question] {
         return [
             Question(question: [
@@ -92,6 +92,54 @@ final class Interview3 {
                      Глобальные переменные. Они инициализируются атомарно (Атомарная операция — операция, которая либо выполняется целиком, либо не выполняется вовсе), нам никогда не потребуется обрабатывать вручную случай, когда несколько потоков пытаются инициализировать одну и ту же глобальную переменную одновременно или беспокоиться о том, что кто-то может увидеть частично инициализированную переменную, пока инициализация все еще продолжается.
                      
                      Но важно помнить, что ленивая инициализация свойств не выполняется атомарно, и Swift на данный момент не предоставляет аннотаций или модификаторов для изменения этого поведения.
+                     """),
+            
+            Question(question: [
+                "Можем ли мы явно объявлять свойство типа (static var) как lazy?"
+            ],
+                     image: "",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     id: 425140046,
+                     links: [
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/",
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://www.youtube.com/watch?v=Pe_rqOg1IwY"
+                     ],
+                     helpText: """
+                     Нет. Свойства типа отложено инициализируются при первом обращении к ним (уже является lazy).
+                     
+                     Они гарантировано инициализируются только один раз, даже если они доступны сразу для нескольких потоков.
+                     
+                     Если вы явно укажете lazy static var, получите ошибку:
+                     - "'lazy' cannot be used on a computed property" (при попытке присвоить вычисляемому свойству)
+                     - "'lazy' cannot be used on an already-lazy global" (при попытке присвоить хранимому свойству).
+                     """
+                    ),
+            
+            Question(question: [
+                "Какое ключевое слово используется для вычисляемых свойств класса, вместо static, когда мы хотим разрешать подклассам переопределение?"
+            ],
+                     image: "",
+                     optionA: "class",
+                     optionB: "struct",
+                     optionC: "public",
+                     optionD: "",
+                     id: 843572179,
+                     links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
+                        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/properties/#Type-Property-Syntax"
+                     ],
+                     helpText: """
+                     class. Для вычисляемых свойств самого класса, вы должны использовать ключевое слово class, чтобы разрешать подклассам переопределение.
+                     
+                     class SomeClass {
+                         class var someProperty: Int {
+                             return 107
+                         }
+                     }
                      """),
         ]
     }
