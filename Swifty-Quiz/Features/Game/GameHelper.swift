@@ -71,7 +71,7 @@ final class GameHelper {
                     preferredStyle: .alert
                 )
                 let okAction = UIAlertAction(
-                    title: Constants.continueGameTitle,
+                    title: "Ок",
                     style: .default,
                     handler: { action in }
                 )
