@@ -264,6 +264,23 @@ final class InterviewJunior {
                     ),
             
             Question(question: [
+                "Что из перечисленного относится к Value Type?"
+            ],
+                     image: "",
+                     optionA: "Tuples (Кортежи)",
+                     optionB: "Functions (Функции)",
+                     optionC: "",
+                     optionD: "",
+                     id: 957667891,
+                     links: [
+                        "https://habr.com/ru/post/592385/"
+                     ],
+                     helpText: """
+                     Tuples (Кортежи). К типам значения относятся базовые типы (Int, Double, String), структуры, перечисления (enum), массивы, словари и кортежи.
+                     """
+                    ),
+            
+            Question(question: [
                 "На какие типы делятся очереди (queues) в Swift?"
             ],
                      image: "",
@@ -1091,6 +1108,48 @@ final class InterviewJunior {
                      Вместо множественного наследования Swift предоставляет протоколы, которые могут быть реализованы классами, структурами или перечислениями. Класс может наследовать только один базовый класс, но при этом он может реализовать несколько протоколов.
                      
                      Протоколы позволяют создавать гибкую иерархию функциональности, не ограничивая себя ограничениями множественного наследования.
+                     """
+                    ),
+            
+            Question(question: [
+                "У какого типа замыканий более долгое время жизни?"
+            ],
+                     image: "",
+                     optionA: "Escaping",
+                     optionB: "Non-escaping",
+                     optionC: "",
+                     optionD: "",
+                     id: 341634589,
+                     links: [
+                        "https://swiftbook.ru/post/tutorials/escaping-in-closures-in-swift/",
+                        "https://www.geeksforgeeks.org/escaping-and-non-escaping-closures-in-swift/",
+                        "https://medium.com/swiftcommmunity/what-do-mean-escaping-and-nonescaping-closures-in-swift-d404d721f39d"
+                     ],
+                     helpText: """
+                     Escaping. Escaping замыкания имеют долгое время жизни. Они могут сохраняться и использоваться после завершения выполнения функции, в которую они были переданы.
+
+                     Non-escaping замыкания имеют короткое время жизни. Они могут использоваться только внутри функции и не сохраняются после ее завершения.
+                     """
+                    ),
+            
+            Question(question: [
+                "Если замыкание должно быть выполнено асинхронно, после завершения функции (при работе с сетевыми запросами или анимациями), какой тип мы будем использовать?"
+            ],
+                     image: "",
+                     optionA: "Escaping",
+                     optionB: "Non-escaping",
+                     optionC: "",
+                     optionD: "",
+                     id: 867454757,
+                     links: [
+                        "https://swiftbook.ru/post/tutorials/escaping-in-closures-in-swift/",
+                        "https://www.geeksforgeeks.org/escaping-and-non-escaping-closures-in-swift/",
+                        "https://medium.com/swiftcommmunity/what-do-mean-escaping-and-nonescaping-closures-in-swift-d404d721f39d"
+                     ],
+                     helpText: """
+                     Escaping. Escaping замыкания часто используются, когда замыкание должно быть выполнено асинхронно, после завершения функции, например, при работе с сетевыми запросами или анимациями.
+                     
+                     Non-escaping замыкание используется, когда оно выполняется синхронно внутри функции и не нужно сохранять его для будущего использования.
                      """
                     ),
         ]

@@ -141,6 +141,28 @@ final class InterviewSenior {
                          }
                      }
                      """),
+            
+            Question(question: [
+                "Что мы получим в консоль после запуска кода?"
+            ],
+                     image: "Interview03",
+                     optionA: "[0, 1] [0, 1]",
+                     optionB: "[0] [0, 1]",
+                     optionC: "[0, 1] [0]",
+                     optionD: "",
+                     id: 329364278,
+                     links: [
+                        "https://developer.apple.com/documentation/foundation/nsmutablearray",
+                        "https://stackoverflow.com/questions/25169389/normal-array-in-swift-vs-nsmutablearray"
+                     ],
+                     helpText: """
+                     [0, 1] [0, 1]. В нашем коде используется NSMutableArray, который принадлежит Objective-C, а не нативные Swift-массивы.
+                     
+                     Swift и Objective-C имеют разные подходы к управлению памятью и копированию данных (массив в Objective-C это класс, массив в Swift это структура).
+                     
+                     В этом случае, массив b будет иметь ссылку на тот же объект NSMutableArray, что и массив a. Когда вы добавляете элемент в массив b с помощью метода add(), он будет отображаться в массиве a, и так как оба массива ссылаются на один и тот же объект - мы получим одинаковый результат. 
+                     """
+                    ),
         ]
     }
 }
