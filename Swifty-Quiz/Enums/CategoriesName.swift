@@ -13,6 +13,7 @@ enum CategoriesName: String, CaseIterable {
     case random50 = "50 случайных вопросов"
     case random100 = "100 случайных вопросов"
     case deathMatch = "The Death Match"
+    case allInterview = "Все вопросы собеседований"
         
     case basic = "Основы"
     case integersAndBooleans = "Числовые и логические типы"
@@ -83,4 +84,9 @@ enum CategoriesName: String, CaseIterable {
     case interview2 = "Middle собеседование"
     case interview3 = "Senior собеседование"
     case rxswift = "RXSwift"
+    
+    case interviewIntern = "Стажер"
+    case interviewJuniorPlus = "Junior +"
+    case interviewMiddlePlus = "Middle +"
+    case interviewSeniorPlus = "Senior +"
 }

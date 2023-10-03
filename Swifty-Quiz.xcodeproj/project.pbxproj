@@ -44,6 +44,10 @@
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
+		FB2076C42ACBD577002879FA /* InterviewIntern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C32ACBD577002879FA /* InterviewIntern.swift */; };
+		FB2076C62ACBD59F002879FA /* InterviewJuniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */; };
+		FB2076C82ACBD5B5002879FA /* InterviewMiddlePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */; };
+		FB2076CA2ACBD5CB002879FA /* InterviewSeniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */; };
 		FB23035928D8ADB600F86348 /* APNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035828D8ADB600F86348 /* APNS.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
@@ -178,6 +182,10 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		FB2076C32ACBD577002879FA /* InterviewIntern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewIntern.swift; sourceTree = "<group>"; };
+		FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewJuniorPlus.swift; sourceTree = "<group>"; };
+		FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewMiddlePlus.swift; sourceTree = "<group>"; };
+		FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSeniorPlus.swift; sourceTree = "<group>"; };
 		FB23035828D8ADB600F86348 /* APNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
@@ -335,20 +343,24 @@
 			path = Records;
 			sourceTree = "<group>";
 		};
-		FB1067B02A88C5870099BF8A /* Compilations */ = {
+		FB1067B02A88C5870099BF8A /* Interviews */ = {
 			isa = PBXGroup;
 			children = (
+				FB2076C32ACBD577002879FA /* InterviewIntern.swift */,
 				FBA9D61C297A57E300A6EF3E /* InterviewJunior.swift */,
+				FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */,
 				FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */,
+				FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */,
 				FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */,
+				FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */,
 			);
-			path = Compilations;
+			path = Interviews;
 			sourceTree = "<group>";
 		};
 		FB1D0B952446E76F00E9C56D /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				FB1067B02A88C5870099BF8A /* Compilations */,
+				FB1067B02A88C5870099BF8A /* Interviews */,
 				FB795CD428A91494001B6CAA /* SwiftUI */,
 				FB5208DA274241BF0058F3F8 /* UIKit */,
 				2C85725726803F5C00642E74 /* Others */,
@@ -880,12 +892,14 @@
 				FB2EAC98243EEE0F0098FAC3 /* GameViewController.swift in Sources */,
 				2CD0C3272691FEA300871C14 /* RangeOperatorsSet.swift in Sources */,
 				FB99F892247B98E40053166C /* AntipatternsSet.swift in Sources */,
+				FB2076C62ACBD59F002879FA /* InterviewJuniorPlus.swift in Sources */,
 				FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */,
 				FB00246A294DE13E008110D6 /* SettingsViewController.swift in Sources */,
 				FB554D232741215A00B7696B /* ProgressService.swift in Sources */,
 				FB5BDCF82A6BF74000A7CA0D /* StatsViewController.swift in Sources */,
 				FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */,
 				FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */,
+				FB2076C82ACBD5B5002879FA /* InterviewMiddlePlus.swift in Sources */,
 				FBC34FE426DF8E4800120FB4 /* AppLifecycleSet.swift in Sources */,
 				FB478E8A27A3CB3B00816CFB /* ServiceLocator.swift in Sources */,
 				FBA9D61D297A57E300A6EF3E /* InterviewJunior.swift in Sources */,
@@ -907,6 +921,7 @@
 				FBC1D48A247574730055FF62 /* ShadowService.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
+				FB2076CA2ACBD5CB002879FA /* InterviewSeniorPlus.swift in Sources */,
 				FB5BDCFD2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB66D2802A7B4819009C2D5F /* Sounds.swift in Sources */,
@@ -922,6 +937,7 @@
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
+				FB2076C42ACBD577002879FA /* InterviewIntern.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
 				FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */,

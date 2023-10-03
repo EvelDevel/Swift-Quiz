@@ -62,7 +62,7 @@ final class InitialViewController: UIViewController {
     }
     
     private func updateScoreLabel() {
-        let _ = RandomSetManager.getAllQuestions()
+        let _ = RandomSetManager().getAllQuestions()
         let records = RecordsCaretaker().getRecordsList()
         var score = 0
         
@@ -82,7 +82,7 @@ final class InitialViewController: UIViewController {
     }
     
     private func updateTotalQuestionLabel() {
-        totalQuestionsLabel.text = "\(RandomSetManager.showAllQuestionsNumber())"
+        totalQuestionsLabel.text = "\(RandomSetManager().showAllQuestionsNumber())"
     }
 }
 

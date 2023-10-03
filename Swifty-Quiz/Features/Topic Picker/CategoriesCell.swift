@@ -11,7 +11,8 @@ protocol CategoriesCellDelegate: AnyObject {
 }
 
 final class CategoriesCell: UITableViewCell {
-    @IBOutlet private var compilations: [UIButton]!
+    @IBOutlet private var randoms: [RoundCornerButton]!
+    @IBOutlet private var interviews: [UIButton]!
     @IBOutlet private var swiftui: [UIButton]!
     @IBOutlet private var uikit: [UIButton]!
     @IBOutlet private var guide: [UIButton]!
@@ -97,7 +98,8 @@ final class CategoriesCell: UITableViewCell {
 extension CategoriesCell {
     /// Объединяем аутлеты в пачку
     func appendAllButtons() {
-        allButtons.append(contentsOf: compilations)
+        allButtons.append(contentsOf: randoms)
+        allButtons.append(contentsOf: interviews)
         allButtons.append(contentsOf: guide)
         allButtons.append(contentsOf: patterns)
         allButtons.append(contentsOf: others)
@@ -139,26 +141,32 @@ extension CategoriesCell {
         switch tag {
         case 1:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager.getQuestions(20),
+                RandomSetManager().getQuestions(20),
                 category: CategoriesName.random20.rawValue,
                 tag: tag - 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager.getQuestions(50),
+                RandomSetManager().getQuestions(50),
                 category: CategoriesName.random50.rawValue,
                 tag: tag - 1
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager.getQuestions(100),
+                RandomSetManager().getQuestions(100),
                 category: CategoriesName.random100.rawValue,
                 tag: tag - 1
             )
         case 4:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager.getAllQuestions(),
+                RandomSetManager().getAllQuestions(),
                 category: CategoriesName.deathMatch.rawValue,
+                tag: tag - 1
+            )
+        case 5:
+            SelectedTopic.shared.saveQuestionSet(
+                RandomSetManager().getInterviews(),
+                category: CategoriesName.allInterview.rawValue,
                 tag: tag - 1
             )
         case 12:
@@ -521,6 +529,30 @@ extension CategoriesCell {
                 category: CategoriesName.interview3.rawValue,
                 tag: tag - 1
             )
+        case 82:
+            SelectedTopic.shared.saveQuestionSet(
+                InterviewIntern.getQuestions(),
+                category: CategoriesName.interviewIntern.rawValue,
+                tag: tag - 1
+            )
+        case 83:
+            SelectedTopic.shared.saveQuestionSet(
+                InterviewJuniorPlus.getQuestions(),
+                category: CategoriesName.interviewJuniorPlus.rawValue,
+                tag: tag - 1
+            )
+        case 84:
+            SelectedTopic.shared.saveQuestionSet(
+                InterviewMiddlePlus.getQuestions(),
+                category: CategoriesName.interviewMiddlePlus.rawValue,
+                tag: tag - 1
+            )
+        case 85:
+            SelectedTopic.shared.saveQuestionSet(
+                InterviewSeniorPlus.getQuestions(),
+                category: CategoriesName.interviewSeniorPlus.rawValue,
+                tag: tag - 1
+            )
             
         default:
             allButtons.forEach { button in
@@ -543,6 +575,8 @@ extension CategoriesCell {
             return CategoriesName.random100.rawValue
         case 4:
             return CategoriesName.deathMatch.rawValue
+        case 5:
+            return CategoriesName.allInterview.rawValue
             
         case 12:
             return CategoriesName.basic.rawValue
@@ -671,6 +705,14 @@ extension CategoriesCell {
             return CategoriesName.interview2.rawValue
         case 81:
             return CategoriesName.interview3.rawValue
+        case 82:
+            return CategoriesName.interviewIntern.rawValue
+        case 83:
+            return CategoriesName.interviewJuniorPlus.rawValue
+        case 84:
+            return CategoriesName.interviewMiddlePlus.rawValue
+        case 85:
+            return CategoriesName.interviewSeniorPlus.rawValue
             
         default:
             return ""
