@@ -12,25 +12,25 @@ final class GameHelper {
         switch tag {
         case 0:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(20),
+                RandomSetManager.getQuestions(20),
                 category: CategoriesName.random20.rawValue,
                 tag: 0
             )
         case 1:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(50),
+                RandomSetManager.getQuestions(50),
                 category: CategoriesName.random50.rawValue,
                 tag: 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(100),
+                RandomSetManager.getQuestions(100),
                 category: CategoriesName.random100.rawValue,
                 tag: 2
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getAllQuestions(),
+                RandomSetManager.getAllQuestions(),
                 category: CategoriesName.deathMatch.rawValue,
                 tag: 3
             )

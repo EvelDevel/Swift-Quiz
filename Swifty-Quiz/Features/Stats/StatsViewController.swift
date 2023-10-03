@@ -13,8 +13,8 @@ final class StatsViewController: UIViewController {
     @IBOutlet private weak var emptyStatsLabel: UILabel!
     
     private var records = RecordsCaretaker().getRecordsList()
-    private var allQuestionsCount = RandomSetManager().showAllQuestionsNumber()
-    private var allQuestions = RandomSetManager().getAllQuestions()
+    private var allQuestionsCount = RandomSetManager.showAllQuestionsNumber()
+    private var allQuestions = RandomSetManager.getAllQuestions()
     
     private var statsItems: [[StatsCellType]] = [[]]
     private let sectionHeaderHeight: CGFloat = 32
@@ -32,11 +32,11 @@ final class StatsViewController: UIViewController {
     }
     
     private var wordingsCount: Int {
-        RandomSetManager().getAllQuestions().reduce([]) { $0 + $1.question }.count
+        RandomSetManager.getAllQuestions().reduce([]) { $0 + $1.question }.count
     }
     
     private var imagesCount: Int {
-        return RandomSetManager().getAllQuestions().map { $0.image != "" ? 1 : 0 }.reduce(0, +)
+        return RandomSetManager.getAllQuestions().map { $0.image != "" ? 1 : 0 }.reduce(0, +)
     }
     
     private var allTopicsCount: Int {

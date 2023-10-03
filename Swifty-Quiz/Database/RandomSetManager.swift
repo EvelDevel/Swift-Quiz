@@ -5,21 +5,21 @@
 import Foundation
 
 final class RandomSetManager {
-	private var all: [Question] = []
-    private var allInterviews: [Question] = []
-	private var guide: [Question] = []
-	private var patterns: [Question] = []
-    private var others: [Question] = []
-    private var uikit: [Question] = []
-    private var swiftui: [Question] = []
+	private static var all: [Question] = []
+    private static var allInterviews: [Question] = []
+	private static var guide: [Question] = []
+	private static var patterns: [Question] = []
+    private static var others: [Question] = []
+    private static var uikit: [Question] = []
+    private static var swiftui: [Question] = []
 	
     // Общее количество вопросов в игре
-	func showAllQuestionsNumber() -> Int {
+    static func showAllQuestionsNumber() -> Int {
         return all.count == 0 ? getAllQuestions().count : all.count
 	}
     
     // Массив всех вопросов игры
-    func getAllQuestions() -> [Question] {
+    static func getAllQuestions() -> [Question] {
         if all.isEmpty {
             let lock = NSLock()
             let startTime = CFAbsoluteTimeGetCurrent()
@@ -40,7 +40,7 @@ final class RandomSetManager {
     }
 
     // Обработка через мьютекс
-    private func addQuestions(
+    private static func addQuestions(
         _ all: inout [Question],
         lock: NSLock,
         questions: [Question]
@@ -51,9 +51,8 @@ final class RandomSetManager {
     }
     
     // Массив по собесам
-    func getInterviews() -> [Question] {
+    static func getInterviews() -> [Question] {
         if allInterviews.isEmpty {
-            allInterviews.append(contentsOf: InterviewIntern.getQuestions())
             allInterviews.append(contentsOf: InterviewJunior.getQuestions())
             allInterviews.append(contentsOf: InterviewJuniorPlus.getQuestions())
             allInterviews.append(contentsOf: InterviewMiddle.getQuestions())
@@ -66,7 +65,7 @@ final class RandomSetManager {
     }
 	
     // Массив по руководству
-    func getGuide() -> [Question] {
+    static func getGuide() -> [Question] {
 		if guide.isEmpty {
 			guide.append(contentsOf: TheBasicsSet.getQuestions())
             guide.append(contentsOf: IntegersAndBooleansSet.getQuestions())
@@ -110,7 +109,7 @@ final class RandomSetManager {
 	}
 	
     // Массив по паттернам
-    func getPatterns() -> [Question] {
+    static func getPatterns() -> [Question] {
 		if patterns.isEmpty {
 			patterns.append(contentsOf: BasicsAboutPatternsSet.getQuestions())
 			patterns.append(contentsOf: CreationalPatternsSet.getQuestions())
@@ -126,7 +125,7 @@ final class RandomSetManager {
 	}
     
     // Массив по "Разное"
-    func getOthers() -> [Question] {
+    static func getOthers() -> [Question] {
         if others.isEmpty {
             others.append(contentsOf: ExtremeProgrammingSet.getQuestions())
             others.append(contentsOf: MobileSecuritySet.getQuestions())
@@ -139,7 +138,7 @@ final class RandomSetManager {
     }
     
     // Массив по UIKit
-    func getUIKit() -> [Question] {
+    static func getUIKit() -> [Question] {
         if uikit.isEmpty {
             uikit.append(contentsOf: VCLifecycleSet.getQuestions())
             uikit.append(contentsOf: AppLifecycleSet.getQuestions())
@@ -152,7 +151,7 @@ final class RandomSetManager {
     }
     
     // Массив по СвифтЮай
-    func getswiftUI() -> [Question] {
+    static func getswiftUI() -> [Question] {
         if swiftui.isEmpty {
             swiftui.append(contentsOf: SwiftUIEssentials.getQuestions())
             swiftui.append(contentsOf: DrawingAndAnimation.getQuestions())
@@ -162,7 +161,7 @@ final class RandomSetManager {
     }
     
     // Получить порцию случайных вопросов из общего массива
-    func getQuestions(_ limit: Int) -> [Question] {
+    static func getQuestions(_ limit: Int) -> [Question] {
 		let shuffled = all.isEmpty ? getAllQuestions().shuffled() : all.shuffled()
 		var final: [Question] = []
         

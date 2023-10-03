@@ -141,31 +141,31 @@ extension CategoriesCell {
         switch tag {
         case 1:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(20),
+                RandomSetManager.getQuestions(20),
                 category: CategoriesName.random20.rawValue,
                 tag: tag - 1
             )
         case 2:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(50),
+                RandomSetManager.getQuestions(50),
                 category: CategoriesName.random50.rawValue,
                 tag: tag - 1
             )
         case 3:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getQuestions(100),
+                RandomSetManager.getQuestions(100),
                 category: CategoriesName.random100.rawValue,
                 tag: tag - 1
             )
         case 4:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getAllQuestions(),
+                RandomSetManager.getAllQuestions(),
                 category: CategoriesName.deathMatch.rawValue,
                 tag: tag - 1
             )
         case 5:
             SelectedTopic.shared.saveQuestionSet(
-                RandomSetManager().getInterviews(),
+                RandomSetManager.getInterviews(),
                 category: CategoriesName.allInterview.rawValue,
                 tag: tag - 1
             )
@@ -529,12 +529,7 @@ extension CategoriesCell {
                 category: CategoriesName.interview3.rawValue,
                 tag: tag - 1
             )
-        case 82:
-            SelectedTopic.shared.saveQuestionSet(
-                InterviewIntern.getQuestions(),
-                category: CategoriesName.interviewIntern.rawValue,
-                tag: tag - 1
-            )
+        
         case 83:
             SelectedTopic.shared.saveQuestionSet(
                 InterviewJuniorPlus.getQuestions(),
@@ -705,8 +700,7 @@ extension CategoriesCell {
             return CategoriesName.interview2.rawValue
         case 81:
             return CategoriesName.interview3.rawValue
-        case 82:
-            return CategoriesName.interviewIntern.rawValue
+
         case 83:
             return CategoriesName.interviewJuniorPlus.rawValue
         case 84:

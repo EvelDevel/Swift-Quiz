@@ -85,7 +85,6 @@ enum CategoriesName: String, CaseIterable {
     case interview3 = "Senior собеседование"
     case rxswift = "RXSwift"
     
-    case interviewIntern = "Стажер"
     case interviewJuniorPlus = "Junior +"
     case interviewMiddlePlus = "Middle +"
     case interviewSeniorPlus = "Senior +"

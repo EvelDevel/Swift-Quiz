@@ -44,7 +44,6 @@
 		FB1D0BAF244D918900E9C56D /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BAD244D918900E9C56D /* RecordCell.swift */; };
 		FB1D0BB0244D918900E9C56D /* RecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D0BAE244D918900E9C56D /* RecordCell.xib */; };
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
-		FB2076C42ACBD577002879FA /* InterviewIntern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C32ACBD577002879FA /* InterviewIntern.swift */; };
 		FB2076C62ACBD59F002879FA /* InterviewJuniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */; };
 		FB2076C82ACBD5B5002879FA /* InterviewMiddlePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */; };
 		FB2076CA2ACBD5CB002879FA /* InterviewSeniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */; };
@@ -182,7 +181,6 @@
 		FB1D0BAD244D918900E9C56D /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FB1D0BAE244D918900E9C56D /* RecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCell.xib; sourceTree = "<group>"; };
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		FB2076C32ACBD577002879FA /* InterviewIntern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewIntern.swift; sourceTree = "<group>"; };
 		FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewJuniorPlus.swift; sourceTree = "<group>"; };
 		FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewMiddlePlus.swift; sourceTree = "<group>"; };
 		FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSeniorPlus.swift; sourceTree = "<group>"; };
@@ -346,7 +344,6 @@
 		FB1067B02A88C5870099BF8A /* Interviews */ = {
 			isa = PBXGroup;
 			children = (
-				FB2076C32ACBD577002879FA /* InterviewIntern.swift */,
 				FBA9D61C297A57E300A6EF3E /* InterviewJunior.swift */,
 				FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */,
 				FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */,
@@ -937,7 +934,6 @@
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
-				FB2076C42ACBD577002879FA /* InterviewIntern.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,
 				2CD0C3292691FEF900871C14 /* BooleanOperatorsSet.swift in Sources */,
 				FBC809432903BFC300E043F8 /* SourceViewController.swift in Sources */,
