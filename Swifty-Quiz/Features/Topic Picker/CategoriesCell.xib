@@ -1582,6 +1582,7 @@
                 <outletCollection property="interviews" destination="XU6-Y4-Qbx" collectionClass="NSMutableArray" id="Mxf-59-iga"/>
                 <outletCollection property="interviews" destination="GCt-dZ-foo" collectionClass="NSMutableArray" id="7c0-km-ecJ"/>
                 <outletCollection property="interviews" destination="urZ-oX-Psn" collectionClass="NSMutableArray" id="hdm-9w-bt4"/>
+                <outletCollection property="swiftui" destination="bkj-yH-BeX" collectionClass="NSMutableArray" id="Ses-ve-NyE"/>
             </connections>
             <point key="canvasLocation" x="-368.11594202898556" y="415.84821428571428"/>
         </tableViewCell>
