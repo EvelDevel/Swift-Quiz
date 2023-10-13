@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-1M-yPa">
-                        <rect key="frame" x="16" y="16" width="382" height="1904"/>
+                        <rect key="frame" x="16" y="16" width="382" height="1952"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yqr-Du-BiK" userLabel="Random">
                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
@@ -131,7 +131,7 @@
                                         <rect key="frame" x="0.0" y="40" width="382" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="78" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-TO-d06" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Junior">
@@ -147,10 +147,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="83" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofN-3K-l4p" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="104.5" y="0.0" width="128" height="40"/>
+                                                <rect key="frame" x="107.5" y="0.0" width="119.5" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Junior +">
+                                                <state key="normal" title="Junior+">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -163,7 +163,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="80" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-dZ-foo" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="240.5" y="0.0" width="141.5" height="40"/>
+                                                <rect key="frame" x="235" y="0.0" width="147" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Middle">
@@ -187,10 +187,10 @@
                                         <rect key="frame" x="0.0" y="90" width="382" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="84" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Md-bs-5a1" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Middle +">
+                                                <state key="normal" title="Middle+">
                                                     <color key="titleColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -203,7 +203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="81" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-Y4-Qbx" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="131.5" y="0.0" width="91" height="40"/>
+                                                <rect key="frame" x="129" y="0.0" width="96.5" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Senior">
@@ -219,10 +219,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="85" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urZ-oX-Psn" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="230.5" y="0.0" width="151.5" height="40"/>
+                                                <rect key="frame" x="233.5" y="0.0" width="148.5" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Senior +">
+                                                <state key="normal" title="Senior+">
                                                     <color key="titleColor" name="TextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -266,7 +266,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nfJ-pW-OTC" userLabel="SwiftUI">
-                                <rect key="frame" x="0.0" y="362" width="382" height="80"/>
+                                <rect key="frame" x="0.0" y="362" width="382" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftUI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGH-fd-yED" userLabel="SwiftUI">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -278,9 +278,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdd-Yy-PBl" userLabel="SwiftUIStack">
-                                        <rect key="frame" x="0.0" y="40" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="40" width="382" height="88"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eOw-vS-Fzz" userLabel="02 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eOw-vS-Fzz" userLabel="01">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" tag="72" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-fO-5so" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -320,12 +320,36 @@
                                                     <constraint firstAttribute="height" constant="40" id="Xi7-yG-xbI"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eEj-b8-sbX" userLabel="02">
+                                                <rect key="frame" x="0.0" y="48" width="382" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="86" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-yH-BeX" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <state key="normal" title="Combine">
+                                                            <color key="titleColor" name="TextColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="obE-v6-DE3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="oGz-Wk-Kpp"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lhL-nR-9fo" userLabel="UIKit">
-                                <rect key="frame" x="0.0" y="468" width="382" height="128"/>
+                                <rect key="frame" x="0.0" y="516" width="382" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzH-0I-UIb">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -440,7 +464,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0p-ZD-gEa" userLabel="The Basics">
-                                <rect key="frame" x="0.0" y="622" width="382" height="830"/>
+                                <rect key="frame" x="0.0" y="670" width="382" height="830"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Руководство Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS1-Wq-feW" userLabel="Title : The Basics">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1158,7 +1182,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-EW-zXT" userLabel="Others">
-                                <rect key="frame" x="0.0" y="1478" width="382" height="176"/>
+                                <rect key="frame" x="0.0" y="1526" width="382" height="176"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разное" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-hA-sa1" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1172,7 +1196,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-13-vKy" userLabel="Other">
                                         <rect key="frame" x="0.0" y="40" width="382" height="136"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="02 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-NX-6Qd" userLabel="01">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-0U-VKM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -1212,7 +1236,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="K4m-Rg-J8L"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-3M-N4p" userLabel="03 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Q5-3M-N4p" userLabel="02">
                                                 <rect key="frame" x="0.0" y="48" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="76" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-zb-ilY" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -1252,7 +1276,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Rsd-3D-ht1"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-ST-ztv" userLabel="03 Row">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-ST-ztv" userLabel="03">
                                                 <rect key="frame" x="0.0" y="96" width="382" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="71" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyX-Bb-oP6" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
@@ -1297,7 +1321,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-3J-uz3" userLabel="Patterns">
-                                <rect key="frame" x="0.0" y="1680" width="382" height="224"/>
+                                <rect key="frame" x="0.0" y="1728" width="382" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паттерны" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-H9-Pu8" userLabel="Title : Patterns">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -1585,7 +1609,7 @@
             <size key="intrinsicContentSize" width="30" height="24"/>
         </designable>
         <designable name="6Md-bs-5a1">
-            <size key="intrinsicContentSize" width="42" height="24"/>
+            <size key="intrinsicContentSize" width="39" height="24"/>
         </designable>
         <designable name="9XK-iU-zQQ">
             <size key="intrinsicContentSize" width="94" height="26"/>
@@ -1677,6 +1701,9 @@
         <designable name="bcq-Uu-P6y">
             <size key="intrinsicContentSize" width="38" height="24"/>
         </designable>
+        <designable name="bkj-yH-BeX">
+            <size key="intrinsicContentSize" width="43" height="24"/>
+        </designable>
         <designable name="cBU-t6-J6S">
             <size key="intrinsicContentSize" width="196" height="26"/>
         </designable>
@@ -1714,7 +1741,7 @@
             <size key="intrinsicContentSize" width="102" height="26"/>
         </designable>
         <designable name="ofN-3K-l4p">
-            <size key="intrinsicContentSize" width="40" height="24"/>
+            <size key="intrinsicContentSize" width="36" height="24"/>
         </designable>
         <designable name="paF-mt-dUo">
             <size key="intrinsicContentSize" width="115" height="26"/>
@@ -1738,7 +1765,7 @@
             <size key="intrinsicContentSize" width="123" height="26"/>
         </designable>
         <designable name="urZ-oX-Psn">
-            <size key="intrinsicContentSize" width="41" height="24"/>
+            <size key="intrinsicContentSize" width="37" height="24"/>
         </designable>
         <designable name="wEp-ll-eTI">
             <size key="intrinsicContentSize" width="43" height="26"/>

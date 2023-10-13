@@ -10,6 +10,23 @@ import Foundation
 
 final class InterviewMiddlePlus {
     static func getQuestions() -> [Question] {
-        return []
+        return [
+            Question(question: [
+                "Какой результат получим в консоль?"
+            ],
+                     image: "Interview07",
+                     optionA: "",
+                     optionB: "",
+                     optionC: "",
+                     optionD: "",
+                     id: 416608019,
+                     links: [
+                        ""
+                     ],
+                     helpText: """
+                     text
+                     """
+                    ),
+        ]
     }
 }

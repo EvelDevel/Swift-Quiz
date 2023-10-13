@@ -96,6 +96,7 @@
 		FB781B8A282CCE6900DF1EC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB781B89282CCE6900DF1EC1 /* Constants.swift */; };
 		FB795CD628A914AC001B6CAA /* SwiftUIEssentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */; };
 		FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */; };
+		FB79DCCD2AD97DFB0053BE2E /* RXSwift copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79DCCC2AD97DFB0053BE2E /* RXSwift copy.swift */; };
 		FB7B13E124AA020400CB11C6 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E024AA020400CB11C6 /* GameHelper.swift */; };
 		FB7B13E324AB5DE600CB11C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */; };
 		FB7BCD4C24BC410600B8F6BA /* BasicsAboutPatternsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */; };
@@ -136,7 +137,7 @@
 		FBDECD842484D073004695FB /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDECD832484D073004695FB /* RoundCornerButton.swift */; };
 		FBE1F5962A833E850038BFF4 /* InterviewMiddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */; };
 		FBE1F5982A8341650038BFF4 /* InterviewSenior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */; };
-		FBE79DD32982243100EE613C /* RXSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE79DD22982243100EE613C /* RXSwift.swift */; };
+		FBE79DD32982243100EE613C /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE79DD22982243100EE613C /* Combine.swift */; };
 		FBECDC5E243F310800BD5583 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDC5D243F310800BD5583 /* Question.swift */; };
 		FBF9EECE2A5AD78800433FAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9EECD2A5AD78800433FAA /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -236,6 +237,7 @@
 		FB781B89282CCE6900DF1EC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEssentials.swift; sourceTree = "<group>"; };
 		FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAndAnimation.swift; sourceTree = "<group>"; };
+		FB79DCCC2AD97DFB0053BE2E /* RXSwift copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RXSwift copy.swift"; sourceTree = "<group>"; };
 		FB7B13E024AA020400CB11C6 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		FB7B13E224AB5DE600CB11C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FB7BCD4B24BC410600B8F6BA /* BasicsAboutPatternsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsAboutPatternsSet.swift; sourceTree = "<group>"; };
@@ -274,7 +276,7 @@
 		FBDECD832484D073004695FB /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
 		FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewMiddle.swift; sourceTree = "<group>"; };
 		FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSenior.swift; sourceTree = "<group>"; };
-		FBE79DD22982243100EE613C /* RXSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXSwift.swift; sourceTree = "<group>"; };
+		FBE79DD22982243100EE613C /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
 		FBECDC5A243F2D0500BD5583 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBECDC5D243F310800BD5583 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FBF9EECD2A5AD78800433FAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -309,7 +311,7 @@
 				FBBAF83926EF231A001780C4 /* Multithreading.swift */,
 				FBA3F0E3289E710F0014222F /* Networking.swift */,
 				FB23035828D8ADB600F86348 /* APNS.swift */,
-				FBE79DD22982243100EE613C /* RXSwift.swift */,
+				FB79DCCC2AD97DFB0053BE2E /* RXSwift copy.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -556,6 +558,7 @@
 			children = (
 				FB795CD528A914AC001B6CAA /* SwiftUIEssentials.swift */,
 				FB795CD728A914BD001B6CAA /* DrawingAndAnimation.swift */,
+				FBE79DD22982243100EE613C /* Combine.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -911,7 +914,7 @@
 				FB86ACA62469A410002BA8B3 /* ClosuresSet.swift in Sources */,
 				FB119C34246A5B23005F5289 /* NestedTypesSet.swift in Sources */,
 				FB8606AD24431A9300A692AD /* RecordsViewController.swift in Sources */,
-				FBE79DD32982243100EE613C /* RXSwift.swift in Sources */,
+				FBE79DD32982243100EE613C /* Combine.swift in Sources */,
 				FB795CD828A914BD001B6CAA /* DrawingAndAnimation.swift in Sources */,
 				FB119C23246A5AB3005F5289 /* SubscriptsSet.swift in Sources */,
 				FB5BDD032A6CE4C900A7CA0D /* InformationTableViewCell.swift in Sources */,
@@ -932,6 +935,7 @@
 				FB119C16246A54BC005F5289 /* StructuresAndClassesSet.swift in Sources */,
 				FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */,
 				FB99F890247B98AE0053166C /* BehavioralPatternsSet.swift in Sources */,
+				FB79DCCD2AD97DFB0053BE2E /* RXSwift copy.swift in Sources */,
 				FB119C27246A5ACC005F5289 /* InitializationSet.swift in Sources */,
 				FB66C0532454782B009FADDE /* Topic.swift in Sources */,
 				FB2EAC94243EEE0F0098FAC3 /* AppDelegate.swift in Sources */,

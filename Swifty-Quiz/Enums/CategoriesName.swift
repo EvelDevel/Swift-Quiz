@@ -71,8 +71,6 @@ enum CategoriesName: String, CaseIterable {
     case inversionOfControl = "IoC - Инверсия управления"
     case serviceLocator = "SL - Сервис локатор"
     
-    case networking = "Работа с сетью"
-    
     case swiftUIEssentials = "SwiftUI Essentials"
     case swiftUIDrawing = "Drawing and Animation"
     case swiftUILayout = "App Design and Layout"
@@ -80,12 +78,14 @@ enum CategoriesName: String, CaseIterable {
     
     case apns = "Apple Push Notification Service"
     case fcm = "Firebase Cloud Messaging"
-    case interview = "Junior cобеседование"
-    case interview2 = "Middle собеседование"
-    case interview3 = "Senior собеседование"
-    case rxswift = "RXSwift"
+    case interviewJunior = "Junior cобеседование"
+    case interviewMiddle = "Middle собеседование"
+    case interviewSenior = "Senior собеседование"
+    case interviewJuniorPlus = "Junior+ cобеседование"
+    case interviewMiddlePlus = "Middle+ cобеседование"
+    case interviewSeniorPlus = "Senior+ cобеседование"
     
-    case interviewJuniorPlus = "Junior +"
-    case interviewMiddlePlus = "Middle +"
-    case interviewSeniorPlus = "Senior +"
+    case networking = "Работа с сетью"
+    case rxswift = "RXSwift"
+    case combine = "Combine"
 }

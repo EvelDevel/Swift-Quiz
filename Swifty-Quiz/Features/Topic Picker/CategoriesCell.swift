@@ -508,7 +508,7 @@ extension CategoriesCell {
         case 78:
             SelectedTopic.shared.saveQuestionSet(
                 InterviewJunior.getQuestions(),
-                category: CategoriesName.interview.rawValue,
+                category: CategoriesName.interviewJunior.rawValue,
                 tag: tag - 1
             )
         case 79:
@@ -520,13 +520,13 @@ extension CategoriesCell {
         case 80:
             SelectedTopic.shared.saveQuestionSet(
                 InterviewMiddle.getQuestions(),
-                category: CategoriesName.interview2.rawValue,
+                category: CategoriesName.interviewMiddle.rawValue,
                 tag: tag - 1
             )
         case 81:
             SelectedTopic.shared.saveQuestionSet(
                 InterviewSenior.getQuestions(),
-                category: CategoriesName.interview3.rawValue,
+                category: CategoriesName.interviewSenior.rawValue,
                 tag: tag - 1
             )
         
@@ -546,6 +546,12 @@ extension CategoriesCell {
             SelectedTopic.shared.saveQuestionSet(
                 InterviewSeniorPlus.getQuestions(),
                 category: CategoriesName.interviewSeniorPlus.rawValue,
+                tag: tag - 1
+            )
+        case 86:
+            SelectedTopic.shared.saveQuestionSet(
+                Combine.getQuestions(),
+                category: CategoriesName.combine.rawValue,
                 tag: tag - 1
             )
             
@@ -693,13 +699,13 @@ extension CategoriesCell {
         case 76:
             return CategoriesName.apns.rawValue
         case 78:
-            return CategoriesName.interview.rawValue
+            return CategoriesName.interviewJunior.rawValue
         case 79:
             return CategoriesName.rxswift.rawValue
         case 80:
-            return CategoriesName.interview2.rawValue
+            return CategoriesName.interviewMiddle.rawValue
         case 81:
-            return CategoriesName.interview3.rawValue
+            return CategoriesName.interviewSenior.rawValue
 
         case 83:
             return CategoriesName.interviewJuniorPlus.rawValue
@@ -707,6 +713,8 @@ extension CategoriesCell {
             return CategoriesName.interviewMiddlePlus.rawValue
         case 85:
             return CategoriesName.interviewSeniorPlus.rawValue
+        case 86:
+            return CategoriesName.combine.rawValue
             
         default:
             return ""

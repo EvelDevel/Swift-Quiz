@@ -132,6 +132,7 @@ final class RandomSetManager {
             others.append(contentsOf: Multithreading.getQuestions())
             others.append(contentsOf: Networking.getQuestions())
             others.append(contentsOf: APNS.getQuestions())
+            others.append(contentsOf: Combine.getQuestions())
         }
         
         return others
