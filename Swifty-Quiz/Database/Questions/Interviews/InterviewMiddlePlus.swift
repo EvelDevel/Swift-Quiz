@@ -340,6 +340,7 @@ final class InterviewMiddlePlus {
                      optionD: "",
                      id: 142461121,
                      links: [
+                        "https://swiftbook.ru/content/languageguide/properties/",
                         "https://ios-interview.ru/top-20-middle-ios-interview-questions"
                      ],
                      helpText: """
@@ -361,6 +362,7 @@ final class InterviewMiddlePlus {
                      optionD: "",
                      id: 890776955,
                      links: [
+                        "https://swiftbook.ru/content/language-reference/statements/",
                         "https://ios-interview.ru/top-20-middle-ios-interview-questions"
                      ],
                      helpText: """
@@ -375,13 +377,14 @@ final class InterviewMiddlePlus {
             Question(question: [
                 "Что мы получим в консоль?"
             ],
-                     image: "Interview09",
+                     image: "Interview10",
                      optionA: "2",
                      optionB: "1",
                      optionC: "3",
                      optionD: "",
                      id: 890776955,
                      links: [
+                        "https://swiftbook.ru/content/language-reference/statements/",
                         "https://ios-interview.ru/top-20-middle-ios-interview-questions"
                      ],
                      helpText: """
@@ -390,6 +393,52 @@ final class InterviewMiddlePlus {
                      Оператор выполняет код непосредственно перед тем, как функция, в которой расположен оператор, выйдет за пределы области видимости программы.
                      
                      Поэтому в нашем примере index обновит свое значение уже после того, как сработает оператор return.
+                     """
+                    ),
+            
+            Question(question: [
+                "Выберите самый быстрый тип диспетчеризации в Swift"
+            ],
+                     image: "",
+                     optionA: "Direct Dispatch",
+                     optionB: "Table Dispatch",
+                     optionC: "Message Dispatch",
+                     optionD: "",
+                     id: 938199377,
+                     links: [
+                        "https://habr.com/ru/articles/714830/",
+                        "https://ios-interview.ru/top-20-middle-ios-interview-questions"
+                     ],
+                     helpText: """
+                     Direct Dispatch. Direct Dispatch (Статическая диспетчеризация) - самый быстрый тип диспетчеризации.
+                     
+                     Адрес вызываемой функции определяется во время компиляции, поэтому затраты на такие вызовы минимальны.
+                     
+                     Для использования статической диспетчеризации вы можете пометить методы ключевым словом private или классы ключевым словом final.
+                     """
+                    ),
+            
+            Question(question: [
+                "Какой тип диспетчеризации в Swift является динамическим?"
+            ],
+                     image: "",
+                     optionA: "Table Dispatch",
+                     optionB: "Direct Dispatch",
+                     optionC: "",
+                     optionD: "",
+                     id: 938199377,
+                     links: [
+                        "https://habr.com/ru/articles/714830/",
+                        "https://ios-interview.ru/top-20-middle-ios-interview-questions"
+                     ],
+                     helpText: """
+                     Table Dispatch. Table Dispatch (Динамическая диспетчеризация) — распространенный тип. Адрес вызываемой функции определяется во время выполнения. У каждого подкласса есть собственная таблица с указателем на функцию для каждого метода.
+                     
+                     По мере того как подклассы добавляют к классу новые методы, эти методы добавляются в конец этой таблицы. Затем к таблице обращаются во время выполнения, чтобы определить метод для выполнения. Это и есть динамическая диспетчеризация.
+                     
+                     В Swift данный подтип делится на два подтипа:
+                     Virtual Table — используется при наследовании классов, что приносит дополнительные затраты.
+                     Witness Table — используется для реализации протоколов, наследование отсутствует.
                      """
                     ),
         ]
