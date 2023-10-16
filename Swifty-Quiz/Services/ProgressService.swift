@@ -20,7 +20,7 @@ final class ProgressService {
     func getProgress(
         for topic: String
     ) -> ProgressValue {
-        let mainColor = UIColor(named: "MainYellow") ?? .yellow
+        let mainColor = UIColor(named: "CustomGreen")?.withAlphaComponent(0.5) ?? .clear
         let records = getTopicRecords(for: topic)
         
         var rate: Int
@@ -36,10 +36,10 @@ final class ProgressService {
             let currentRate = getPercentOfCorrectAnswers(records: records)
             let alpha = (Double(currentRate / records.count) / 100)
             
-            if alpha <= 0.15 {
+            if alpha <= 0.3 {
                 color = UIColor.white.cgColor
             } else {
-                color = mainColor.withAlphaComponent(alpha).cgColor
+                color = mainColor.withAlphaComponent(alpha / 2).cgColor
             }
             
             if currentRate != 0 {

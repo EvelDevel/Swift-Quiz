@@ -99,6 +99,7 @@ final class TopicViewController: UIViewController {
     
     private func setupShadow() {
         ShadowService().addTopicButtonShadows([helpProjectButton])
+        ShadowService().addTopicButtonShadows([playFromTopicsButton])
     }
 
 	private func showAlertIfNeeded() {
@@ -224,7 +225,7 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 extension TopicViewController: CategoriesCellDelegate {
 	func updateSelectedTopic() {
         UIView.animate(withDuration: 0.3) {
-            self.playFromTopicsButton.backgroundColor = UIColor(named: "MainYellowOpacity")
+            self.playFromTopicsButton.backgroundColor = .white
             self.playFromTopicsButton.setTitleColor(UIColor(named: "TextColor"), for: .normal)
             self.playFromTopicsButton.isEnabled = true
         }
