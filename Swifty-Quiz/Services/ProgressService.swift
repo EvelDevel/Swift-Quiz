@@ -36,7 +36,7 @@ final class ProgressService {
             let currentRate = getPercentOfCorrectAnswers(records: records)
             let alpha = (Double(currentRate / records.count) / 100)
             
-            if alpha <= 0.3 {
+            if currentRate <= 35 {
                 color = UIColor.white.cgColor
             } else {
                 color = mainColor.withAlphaComponent(alpha / 2).cgColor

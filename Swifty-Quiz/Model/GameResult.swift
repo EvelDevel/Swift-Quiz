@@ -16,3 +16,5 @@ struct GameResult {
     var helpCounter: Int
     var playedNum: Int
 }
+
+//

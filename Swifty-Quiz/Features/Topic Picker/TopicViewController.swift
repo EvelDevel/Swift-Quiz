@@ -98,8 +98,7 @@ final class TopicViewController: UIViewController {
     }
     
     private func setupShadow() {
-        ShadowService().addTopicButtonShadows([helpProjectButton])
-        ShadowService().addTopicButtonShadows([playFromTopicsButton])
+        // ShadowService().addTopicButtonShadows([helpProjectButton])
     }
 
 	private func showAlertIfNeeded() {
