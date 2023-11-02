@@ -46,7 +46,6 @@
 		FB1D0BB22450133200E9C56D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB12450133200E9C56D /* HelpViewController.swift */; };
 		FB2076C62ACBD59F002879FA /* InterviewJuniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */; };
 		FB2076C82ACBD5B5002879FA /* InterviewMiddlePlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */; };
-		FB2076CA2ACBD5CB002879FA /* InterviewSeniorPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */; };
 		FB23035928D8ADB600F86348 /* APNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB23035828D8ADB600F86348 /* APNS.swift */; };
 		FB291CF326C982A800A40679 /* VCLifecycleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB291CF226C982A800A40679 /* VCLifecycleSet.swift */; };
 		FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB291D1F26D2178B00A40679 /* AboutProject.storyboard */; };
@@ -184,7 +183,6 @@
 		FB1D0BB12450133200E9C56D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FB2076C52ACBD59F002879FA /* InterviewJuniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewJuniorPlus.swift; sourceTree = "<group>"; };
 		FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewMiddlePlus.swift; sourceTree = "<group>"; };
-		FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSeniorPlus.swift; sourceTree = "<group>"; };
 		FB23035828D8ADB600F86348 /* APNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS.swift; sourceTree = "<group>"; };
 		FB291CF226C982A800A40679 /* VCLifecycleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLifecycleSet.swift; sourceTree = "<group>"; };
 		FB291D1F26D2178B00A40679 /* AboutProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutProject.storyboard; sourceTree = "<group>"; };
@@ -351,7 +349,6 @@
 				FBE1F5952A833E850038BFF4 /* InterviewMiddle.swift */,
 				FB2076C72ACBD5B5002879FA /* InterviewMiddlePlus.swift */,
 				FBE1F5972A8341650038BFF4 /* InterviewSenior.swift */,
-				FB2076C92ACBD5CB002879FA /* InterviewSeniorPlus.swift */,
 			);
 			path = Interviews;
 			sourceTree = "<group>";
@@ -921,7 +918,6 @@
 				FBC1D48A247574730055FF62 /* ShadowService.swift in Sources */,
 				FB119C29246A5AD7005F5289 /* DeinitializationSet.swift in Sources */,
 				FB23035928D8ADB600F86348 /* APNS.swift in Sources */,
-				FB2076CA2ACBD5CB002879FA /* InterviewSeniorPlus.swift in Sources */,
 				FB5BDCFD2A6BFBB900A7CA0D /* ProgressBarTableViewCell.swift in Sources */,
 				FB5D2BA22737F8E400515B08 /* AutoLayout.swift in Sources */,
 				FB66D2802A7B4819009C2D5F /* Sounds.swift in Sources */,

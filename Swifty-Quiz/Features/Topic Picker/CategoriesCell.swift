@@ -543,12 +543,6 @@ extension CategoriesCell {
                 category: CategoriesName.interviewMiddlePlus.rawValue,
                 tag: tag - 1
             )
-        case 85:
-            SelectedTopic.shared.saveQuestionSet(
-                InterviewSeniorPlus.getQuestions(),
-                category: CategoriesName.interviewSeniorPlus.rawValue,
-                tag: tag - 1
-            )
         case 86:
             SelectedTopic.shared.saveQuestionSet(
                 Combine.getQuestions(),
@@ -712,8 +706,6 @@ extension CategoriesCell {
             return CategoriesName.interviewJuniorPlus.rawValue
         case 84:
             return CategoriesName.interviewMiddlePlus.rawValue
-        case 85:
-            return CategoriesName.interviewSeniorPlus.rawValue
         case 86:
             return CategoriesName.combine.rawValue
             

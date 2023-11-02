@@ -58,7 +58,6 @@ final class RandomSetManager {
             allInterviews.append(contentsOf: InterviewMiddle.getQuestions())
             allInterviews.append(contentsOf: InterviewMiddlePlus.getQuestions())
             allInterviews.append(contentsOf: InterviewSenior.getQuestions())
-            allInterviews.append(contentsOf: InterviewSeniorPlus.getQuestions())
         }
         
         return allInterviews

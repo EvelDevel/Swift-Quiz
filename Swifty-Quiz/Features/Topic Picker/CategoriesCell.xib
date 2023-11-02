@@ -187,7 +187,7 @@
                                         <rect key="frame" x="0.0" y="94" width="382" height="44"/>
                                         <subviews>
                                             <button opaque="NO" tag="84" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Md-bs-5a1" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Middle+">
@@ -203,7 +203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="81" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-Y4-Qbx" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="129" y="0.0" width="96.5" height="44"/>
+                                                <rect key="frame" x="199" y="0.0" width="183" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <state key="normal" title="Senior">
@@ -216,22 +216,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lvb-RL-gFx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="85" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urZ-oX-Psn" userLabel="Собеседование #2" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
-                                                <rect key="frame" x="233.5" y="0.0" width="148.5" height="44"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <state key="normal" title="Senior+">
-                                                    <color key="titleColor" name="TextColor"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="topicButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b9t-mC-z5Q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1581,7 +1565,6 @@
                 <outletCollection property="randoms" destination="rYo-l6-JfJ" collectionClass="NSMutableArray" id="nB1-kZ-LDt"/>
                 <outletCollection property="interviews" destination="XU6-Y4-Qbx" collectionClass="NSMutableArray" id="Mxf-59-iga"/>
                 <outletCollection property="interviews" destination="GCt-dZ-foo" collectionClass="NSMutableArray" id="7c0-km-ecJ"/>
-                <outletCollection property="interviews" destination="urZ-oX-Psn" collectionClass="NSMutableArray" id="hdm-9w-bt4"/>
                 <outletCollection property="swiftui" destination="bkj-yH-BeX" collectionClass="NSMutableArray" id="Ses-ve-NyE"/>
             </connections>
             <point key="canvasLocation" x="-336" y="662"/>
@@ -1764,9 +1747,6 @@
         </designable>
         <designable name="ttV-U7-ToS">
             <size key="intrinsicContentSize" width="123" height="26"/>
-        </designable>
-        <designable name="urZ-oX-Psn">
-            <size key="intrinsicContentSize" width="37" height="24"/>
         </designable>
         <designable name="wEp-ll-eTI">
             <size key="intrinsicContentSize" width="43" height="26"/>
