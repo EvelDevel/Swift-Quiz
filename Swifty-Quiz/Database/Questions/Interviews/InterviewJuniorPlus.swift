@@ -662,6 +662,53 @@ final class InterviewJuniorPlus {
                      Использование let означает, что переменная не может быть изменена после присвоения значения. Поэтому использование weak с let недопустимо в Swift.
                      """
                     ),
+            
+            Question(question: [
+                "Какой метод жизненного цикла View Controller мы можем использовать для того, чтобы установить view программно, без использования Interface Builder?"
+            ],
+                     image: "",
+                     optionA: "loadView",
+                     optionB: "viewDidLoad",
+                     optionC: "viewDidAppear",
+                     optionD: "",
+                     id: 397230803,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     loadView. Вам следует переопределить loadView, если вы хотите создать свой собственный пользовательский интерфейс программно без использования Interface Builder.
+                     
+                     Вы должны создать и назначить view для вашего ViewController таким образом:
+                     
+                     override func loadView() {
+                         super.loadView()
+                         self.view = UIView()
+                     }
+                     """
+                    ),
+            
+            Question(question: [
+                "Самый ранний метод жизненного цикла View Controller, на котором уже известны корректные размеры его вью"
+            ],
+                     image: "",
+                     optionA: "viewWillAppear",
+                     optionB: "viewDidLayoutSubviews",
+                     optionC: "viewDidAppear",
+                     optionD: "",
+                     id: 450205877,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     viewWillAppear. Самый ранний метод жизненного цикла вью контроллера, в котором известны корректные размеры его вью, это viewWillAppear.
+                     
+                     В этом методе вы можете уверенно использовать размеры вью для размещения и настройки элементов интерфейса пользователя.
+                     
+                     В этот момент вью контроллер готов к отображению, и его размеры уже соответствуют окончательному размеру, который будет отображаться на экране.
+                     """
+                    ),
         ]
     }
 }

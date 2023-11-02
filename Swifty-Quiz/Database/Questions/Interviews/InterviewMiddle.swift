@@ -912,6 +912,58 @@ final class InterviewMiddle {
                      После чего мы попадаем в блок didSet, где наше значение прибавляется на 10 (исходный вызов), а потом мы прибавляем к уже установленному свойству еще +100 (так как оно уже доступно для изменений).
                      """
                     ),
+            
+            Question(question: [
+                "В каком самом раннем методе жизненного цикла View Controller известны корректные размеры всех его subviews?"
+            ],
+                     image: "",
+                     optionA: "viewDidLayoutSubviews",
+                     optionB: "viewWillLayoutSubviews",
+                     optionC: "viewWillAppear",
+                     optionD: "",
+                     id: 957679865,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     viewDidLayoutSubviews. Самый ранний метод жизненного цикла вью контроллера, в котором известны корректные размеры всех его сабвью, является метод viewDidLayoutSubviews.
+                     
+                     Этот метод вызывается после того, как система установила фактические размеры всех представлений в иерархии вью контроллера.
+                     
+                     Когда вызывается viewDidLayoutSubviews, размеры всех подпредставлений уже были правильно установлены в соответствии с геометрией и оформлением вью контроллера.
+
+                     Таким образом, viewDidLayoutSubviews представляет собой хорошую точку входа для настройки и настройки размещения сабвью перед их отображением на экране.
+                     """
+                    ),
+            
+            Question(question: [
+                "Как узнать загружена ли view у View Controller?"
+            ],
+                     image: "",
+                     optionA: "Проверить isViewLoaded",
+                     optionB: "Внутри loadView()",
+                     optionC: "Никак",
+                     optionD: "",
+                     id: 422405871,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     Проверить isViewLoaded. Для того чтобы узнать, загружена ли вью во вью контроллере, можно использовать свойство `isViewLoaded`.
+
+                     Например:
+                     
+                     if isViewLoaded {
+                         // Вью загружена
+                     } else {
+                         // Вью еще не загружена
+                     }
+
+                     Вы можете проверить это свойство внутри методов жизненного цикла вью контроллера или в других методах, где вам может понадобиться узнать, загружена ли вью.
+                     """
+                    ),
         ]
     }
 }

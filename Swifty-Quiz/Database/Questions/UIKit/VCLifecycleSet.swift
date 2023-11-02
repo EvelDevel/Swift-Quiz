@@ -708,6 +708,105 @@ final class VCLifecycleSet {
                      Да. Между методами viewDidLayoutSubviews и viewWillLayoutSubviews происходит расстановка автолейаута.
                      """
                     ),
+            
+            Question(question: [
+                "Какой метод жизненного цикла View Controller мы можем использовать для того, чтобы установить view программно, без использования Interface Builder?"
+            ],
+                     image: "",
+                     optionA: "loadView",
+                     optionB: "viewDidLoad",
+                     optionC: "viewDidAppear",
+                     optionD: "",
+                     id: 255151644,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     loadView. Вам следует переопределить loadView, если вы хотите создать свой собственный пользовательский интерфейс программно без использования Interface Builder.
+                     
+                     Вы должны создать и назначить view для вашего ViewController таким образом:
+                     
+                     override func loadView() {
+                         super.loadView()
+                         self.view = UIView()
+                     }
+                     """
+                    ),
+            
+            Question(question: [
+                "Самый ранний метод жизненного цикла View Controller, на котором уже известны корректные размеры его view"
+            ],
+                     image: "",
+                     optionA: "viewWillAppear",
+                     optionB: "viewDidLayoutSubviews",
+                     optionC: "viewDidAppear",
+                     optionD: "",
+                     id: 919285641,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     viewWillAppear. Самый ранний метод жизненного цикла вью контроллера, в котором известны корректные размеры его вью, это viewWillAppear.
+                     
+                     В этом методе вы можете уверенно использовать размеры вью для размещения и настройки элементов интерфейса пользователя.
+                     
+                     В этот момент вью контроллер готов к отображению, и его размеры уже соответствуют окончательному размеру, который будет отображаться на экране.
+                     """
+                    ),
+            
+            Question(question: [
+                "В каком самом раннем методе жизненного цикла View Controller известны корректные размеры всех его subviews?"
+            ],
+                     image: "",
+                     optionA: "viewDidLayoutSubviews",
+                     optionB: "viewWillLayoutSubviews",
+                     optionC: "viewWillAppear",
+                     optionD: "",
+                     id: 352191352,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     viewDidLayoutSubviews. Самый ранний метод жизненного цикла вью контроллера, в котором известны корректные размеры всех его сабвью, является метод viewDidLayoutSubviews.
+                     
+                     Этот метод вызывается после того, как система установила фактические размеры всех представлений в иерархии вью контроллера.
+                     
+                     Когда вызывается viewDidLayoutSubviews, размеры всех подпредставлений уже были правильно установлены в соответствии с геометрией и оформлением вью контроллера.
+
+                     Таким образом, viewDidLayoutSubviews представляет собой хорошую точку входа для настройки и настройки размещения сабвью перед их отображением на экране.
+                     """
+                    ),
+            
+            Question(question: [
+                "Как узнать загружена ли view у View Controller?"
+            ],
+                     image: "",
+                     optionA: "Проверить isViewLoaded",
+                     optionB: "Внутри loadView()",
+                     optionC: "Никак",
+                     optionD: "",
+                     id: 249024622,
+                     links: [
+                        "https://habr.com/ru/articles/654517/",
+                        "https://sparrowcode.io/ru/tutorials/uiviewcontroller-lifecycle"
+                     ],
+                     helpText: """
+                     Проверить isViewLoaded. Для того чтобы узнать, загружена ли вью во вью контроллере, можно использовать свойство `isViewLoaded`.
+
+                     Например:
+                     
+                     if isViewLoaded {
+                         // Вью загружена
+                     } else {
+                         // Вью еще не загружена
+                     }
+
+                     Вы можете проверить это свойство внутри методов жизненного цикла вью контроллера или в других методах, где вам может понадобиться узнать, загружена ли вью.
+                     """
+                    ),
         ]
     }
 }
