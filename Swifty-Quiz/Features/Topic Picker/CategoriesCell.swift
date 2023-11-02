@@ -24,7 +24,7 @@ final class CategoriesCell: UITableViewCell {
     private var currentPosition = SelectedTopic.shared.selectedCategory.topicTag
     private let progress = ProgressService()
     private var borderWidth = 1.0
-    private var borderColor = UIColor.lightGray.cgColor
+    private var borderColor = UIColor.black.withAlphaComponent(0.7).cgColor
     
     weak var delegate: CategoriesCellDelegate?
     
@@ -110,7 +110,8 @@ extension CategoriesCell {
     /// Добавляем тени кнопкам
     func addShadows() {
         DispatchQueue.main.async {
-            ShadowService().addTopicButtonShadows(self.allButtons)
+            // Временно закомментировал, посмотреть какой будет фидбек без теней под кнопками
+            // ShadowService().addTopicButtonShadows(self.allButtons)
         }
     }
     
