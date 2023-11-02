@@ -20,7 +20,7 @@ final class ProgressService {
     func getProgress(
         for topic: String
     ) -> ProgressValue {
-        let mainColor = UIColor(named: "MainYellow")?.withAlphaComponent(0.9) ?? .clear
+        let mainColor = UIColor(named: "MainYellow")?.withAlphaComponent(0.8) ?? .clear
         let records = getTopicRecords(for: topic)
         
         var rate: Int

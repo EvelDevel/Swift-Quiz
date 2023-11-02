@@ -24,7 +24,7 @@ final class CategoriesCell: UITableViewCell {
     private var currentPosition = SelectedTopic.shared.selectedCategory.topicTag
     private let progress = ProgressService()
     private var borderWidth = 1.0
-    private var borderColor = UIColor.black.withAlphaComponent(0.7).cgColor
+    private var borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
     
     weak var delegate: CategoriesCellDelegate?
     

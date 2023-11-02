@@ -441,6 +441,62 @@ final class InterviewMiddlePlus {
                      Witness Table — используется для реализации протоколов, наследование отсутствует.
                      """
                     ),
+            
+            Question(question: [
+                "Скомпилируется ли данный код?"
+            ],
+                     image: "Interview12",
+                     optionA: "Нет",
+                     optionB: "Да",
+                     optionC: "",
+                     optionD: "",
+                     id: 519480210,
+                     links: [
+                        "https://medium.com/@leandromperez/bidirectional-associations-using-value-types-in-swift-548840734047",
+                        
+                     ],
+                     helpText: """
+                     Нет. Структура не может иметь хранимое свойство, которое рекурсивно содержит саму структуру.
+                     
+                     Мы получим ошибку "Value type 'Box' cannot have a stored property that recursively contains it"
+                     """
+                    ),
+            
+            Question(question: [
+                "Что мы получим в консоль?"
+            ],
+                     image: "Interview13",
+                     optionA: "meow, meow",
+                     optionB: "meow, say",
+                     optionC: "say, say",
+                     optionD: "",
+                     id: 783004301,
+                     links: [
+                        "https://swiftbook.org/docs/1496/"
+                     ],
+                     helpText: """
+                     meow, meow. Оба вызова выведут meow, поскольку класс Cat переопределяет внутри себя метод say, так что приведение к протоколу не меняет вывод в консоль.
+                     
+                     В случае, если бы дефолтную реализацию метода в расширении протокола не переопределяли в классе, мы бы получили say, say.
+                     """
+                    ),
+            
+            Question(question: [
+                "Что мы получим в консоль?"
+            ],
+                     image: "Interview14",
+                     optionA: "say, say",
+                     optionB: "meow, say",
+                     optionC: "meow, meow",
+                     optionD: "",
+                     id: 955826323,
+                     links: [
+                        "https://swiftbook.org/docs/1496/"
+                     ],
+                     helpText: """
+                     say, say. В данном случае, мы не переопределяли в классе дефолтную реализацию метода, которая написана в расширении протокола, поэтому мы получаем в консоль say, say.
+                     """
+                    ),
         ]
     }
 }
