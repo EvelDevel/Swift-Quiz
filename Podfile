@@ -6,5 +6,6 @@ target 'Swifty-Quiz' do
   use_frameworks!
 
   pod 'FirebaseAnalytics'
+  pod 'Firebase/Core'
   
 end
