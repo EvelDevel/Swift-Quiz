@@ -3,6 +3,7 @@
 //  Copyright © 2020 Evel-Devel. All rights reserved.
 
 import UIKit
+import Firebase
 import StoreKit
 
 final class InitialViewController: UIViewController {
@@ -29,6 +30,8 @@ final class InitialViewController: UIViewController {
     private let showContinueAdditions = 22.5
     private let hideContinueAdditions = 10.5
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -39,7 +42,7 @@ final class InitialViewController: UIViewController {
         updateScoreLabel()
     }
     
-    @IBAction func shareButtonTapped(_ sender: Any) {
+    @IBAction private func shareButtonTapped(_ sender: Any) {
         let viewController = StatsViewController(
             nibName: String(describing: StatsViewController.self),
             bundle: nil
@@ -48,17 +51,19 @@ final class InitialViewController: UIViewController {
         SoundPlayer.shared.playSound(sound: .buttonTapped)
         present(viewController, animated: true)
     }
-    
+}
+
+
+// MARK: - Setup
+
+extension InitialViewController {
     private func setup() {
         setupCurrentQuestionSet()
-        updateLastGameInfo()
-        updateTotalQuestionLabel()
-        updateContinueButton()
-        addShadows()
-        
-        imageTuning(button: topicPicker, position: .center)
-        imageTuning(button: logoButton, position: .top)
-        SoundPlayer.shared.playSound(sound: .theAppIsLoading)
+        setupLastGameInfo()
+        setupTotalQuestionLabel()
+        setupContinueButton()
+        setupShadows()
+        setupUI()
     }
     
     private func updateScoreLabel() {
@@ -79,17 +84,17 @@ final class InitialViewController: UIViewController {
             },
             completion: nil
         )
+        
+        Analytics.logEvent(
+            Constants.userScore,
+            parameters: ["score": score]
+        )
     }
     
-    private func updateTotalQuestionLabel() {
+    private func setupTotalQuestionLabel() {
         totalQuestionsLabel.text = "\(RandomSetManager.showAllQuestionsNumber())"
     }
-}
-
-
-// MARK: - Information
-
-extension InitialViewController {
+    
     private func setupCurrentQuestionSet() {
         let currentAppVersion = Bundle.main.object(
             forInfoDictionaryKey: Constants.appVersionKey
@@ -116,7 +121,7 @@ extension InitialViewController {
         }
     }
     
-    private func updateLastGameInfo() {
+    private func setupLastGameInfo() {
         let records: [Record] = RecordsCaretaker().getRecordsList()
         
         if records.count != 0 {
@@ -166,7 +171,7 @@ extension InitialViewController {
 // MARK: - Interface
 
 extension InitialViewController {
-    private func updateContinueButton() {
+    private func setupContinueButton() {
         if Game.shared.records.count != 0 && Game.shared.records[0].continueGameStatus == true {
             contentCenter.constant = (UIScreen.main.scale / 2) + showContinueAdditions
             continueGameButton.isHidden = false
@@ -190,9 +195,25 @@ extension InitialViewController {
         updateScoreLabel()
     }
     
-    private func addShadows() {
+    private func setupShadows() {
         ShadowService().addStaticShadows(initialWhiteViews)
         ShadowService().addButtonShadows(initialButtons)
+    }
+    
+    private func setupUI() {
+        imageTuning(
+            button: topicPicker,
+            position: .center
+        )
+        
+        imageTuning(
+            button: logoButton,
+            position: .top
+        )
+        
+        SoundPlayer.shared.playSound(
+            sound: .theAppIsLoading
+        )
     }
     
     private func imageTuning(
@@ -295,7 +316,7 @@ extension InitialViewController:
     }
     
     func updateInitialView() {
-        updateContinueButton()
+        setupContinueButton()
     }
     
     func categoryWasSelected() {
@@ -304,7 +325,7 @@ extension InitialViewController:
     }
     
     func refreshLastGameInfo() {
-        updateLastGameInfo()
+        setupLastGameInfo()
         updateLastGameLabel()
     }
     
