@@ -127,6 +127,7 @@
 		FBAD8EFA2445EFD500494BE7 /* SelectedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */; };
 		FBADAAEF246825560014501E /* CollectionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADAAEE246825560014501E /* CollectionsSet.swift */; };
 		FBB3584524BF229300C33A79 /* AboutProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3584424BF229300C33A79 /* AboutProjectController.swift */; };
+		FBB952622AF7C36400F8CAC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBB952612AF7C36400F8CAC4 /* GoogleService-Info.plist */; };
 		FBBAF83A26EF231A001780C4 /* Multithreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAF83926EF231A001780C4 /* Multithreading.swift */; };
 		FBC1D4842474EE020055FF62 /* AnswerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */; };
 		FBC1D48A247574730055FF62 /* ShadowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1D489247574730055FF62 /* ShadowService.swift */; };
@@ -265,6 +266,7 @@
 		FBAD8EF92445EFD500494BE7 /* SelectedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTopic.swift; sourceTree = "<group>"; };
 		FBADAAEE246825560014501E /* CollectionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSet.swift; sourceTree = "<group>"; };
 		FBB3584424BF229300C33A79 /* AboutProjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectController.swift; sourceTree = "<group>"; };
+		FBB952612AF7C36400F8CAC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBBAF83926EF231A001780C4 /* Multithreading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multithreading.swift; sourceTree = "<group>"; };
 		FBC1D4832474EE020055FF62 /* AnswerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonsView.swift; sourceTree = "<group>"; };
 		FBC1D489247574730055FF62 /* ShadowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowService.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				FB8606B0244458E300A692AD /* Database */,
 				FBDECD7C24839924004695FB /* Assets */,
 				FB2EACA1243EEE130098FAC3 /* Info.plist */,
+				FBB952612AF7C36400F8CAC4 /* GoogleService-Info.plist */,
 			);
 			path = "Swifty-Quiz";
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				FB2EAC8C243EEE0F0098FAC3 /* Sources */,
 				FB2EAC8D243EEE0F0098FAC3 /* Frameworks */,
 				FB2EAC8E243EEE0F0098FAC3 /* Resources */,
+				E385D43DC390E2225538E105 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -800,6 +804,7 @@
 			files = (
 				FB291D2026D2178B00A40679 /* AboutProject.storyboard in Resources */,
 				FB5BDCF92A6BF74000A7CA0D /* StatsViewController.xib in Resources */,
+				FBB952622AF7C36400F8CAC4 /* GoogleService-Info.plist in Resources */,
 				FB39634D2A9208E900173842 /* InformationViewController.xib in Resources */,
 				FB5BDCFE2A6BFBB900A7CA0D /* ProgressBarTableViewCell.xib in Resources */,
 				FB291D2A26D2256A00A40679 /* GameHistory.storyboard in Resources */,
@@ -848,6 +853,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E385D43DC390E2225538E105 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swifty-Quiz/Pods-Swifty-Quiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
