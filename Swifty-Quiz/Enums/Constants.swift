@@ -121,4 +121,7 @@ class Constants {
     
     // Analytics
     static var userScore = "User_Score"
+    static var currentCategory = "Current_Category"
+    static var mainScreenButtonSegue = "Main_Screen_Button_Segue"
+    static var statScreenLaunched = "Stat_Screen_Launched"
 }

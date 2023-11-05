@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 final class StatsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
@@ -126,6 +127,11 @@ final class StatsViewController: UIViewController {
     private func setup() {
         setupData()
         setupTableView()
+        
+        Analytics.logEvent(
+            Constants.statScreenLaunched,
+            parameters: nil
+        )
     }
     
     // MARK: - Data Handling

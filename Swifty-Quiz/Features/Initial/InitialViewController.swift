@@ -119,6 +119,11 @@ extension InitialViewController {
         } else {
             selectedTopic.text = "\(SelectedTopic.shared.selectedCategory.topicName)"
         }
+        
+        Analytics.logEvent(
+            Constants.currentCategory,
+            parameters: ["category": SelectedTopic.shared.selectedCategory.topicName]
+        )
     }
     
     private func setupLastGameInfo() {
@@ -280,6 +285,11 @@ extension InitialViewController {
         default:
             break
         }
+        
+        Analytics.logEvent(
+            Constants.mainScreenButtonSegue,
+            parameters: ["segue": segue.identifier ?? "identifier error"]
+        )
     }
 }
 
