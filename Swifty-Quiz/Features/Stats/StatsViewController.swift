@@ -127,11 +127,6 @@ final class StatsViewController: UIViewController {
     private func setup() {
         setupData()
         setupTableView()
-        
-        Analytics.logEvent(
-            Constants.statScreenLaunched,
-            parameters: nil
-        )
     }
     
     // MARK: - Data Handling

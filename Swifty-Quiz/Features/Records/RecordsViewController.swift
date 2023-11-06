@@ -20,11 +20,12 @@ final class RecordsViewController: UIViewController {
         showAlert()
     }
     
+    private var recordsByDate: [[Record]] = []
     weak var delegate: RecordsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cellRegistration()
+        setup()
     }
 	
 	override func viewDidDisappear(_ animated: Bool) {
@@ -53,11 +54,58 @@ final class RecordsViewController: UIViewController {
     func playTrashSound() {
         SoundPlayer.shared.playSound(sound: .clearRecordsSound)
     }
+    
+    // MARK: - Setup
+    
+    private func setup() {
+        recordsByDate = setupSections()
+        registerCells()
+    }
+
+    private func setupSections() -> [[Record]] {
+        guard !Game.shared.records.isEmpty else {
+            return []
+        }
+        
+        let dictionaryByDate = Dictionary(
+            grouping: Game.shared.records,
+            by: {
+                Calendar.current.startOfDay(
+                    for: $0.date ?? Date()
+                )
+            }
+        )
+        
+        return dictionaryByDate.values.sorted(
+            by: {
+                $0[0].date! > $1[0].date!
+            }
+        )
+    }
+    
+    func registerCells() {
+        tableView.register(
+            UINib(
+                nibName: String(
+                    describing: RecordCell.self
+                ),
+                bundle: nil
+            ),
+            forCellReuseIdentifier: String(
+                describing: RecordCell.self
+            )
+        )
+    }
+    
+    private func deleteRecords() {
+        Game.shared.clearRecords()
+        tableView.reloadData()
+        playTrashSound()
+    }
 }
 
 
 // MARK: - Алерт на очистку рекордов и удаление по свайпу ячейки
-
 extension RecordsViewController {
     func showAlert() {
         if Game.shared.records.count != 0 {
@@ -91,85 +139,58 @@ extension RecordsViewController {
             )
         }
     }
-    
-    func deleteRecords() {
-        Game.shared.clearRecords()
-        tableView.reloadData()
-        playTrashSound()
-    }
-	
-	func tableView(
-        _ tableView: UITableView,
-        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
-    ) -> UISwipeActionsConfiguration? {
-		let reportAction = UIContextualAction(
-            style: .normal,
-            title: Constants.removeRecordsTitle
-        ) { [weak self] action, view, completion in
-            guard let self else {
-                return
-            }
-            
-            Game.shared.deleteOneRecord(
-                index: indexPath.row
-            )
-            
-			tableView.reloadData()
-			
-            self.playTrashSound()
-			
-			if indexPath.row == 0 {
-				Game.shared.updateContinueStatus()
-			}
-		}
-        
-		reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2371389396, blue: 0.1065657165, alpha: 0.5)
-        
-		return UISwipeActionsConfiguration(
-            actions: [reportAction]
-        )
-	}
 }
 
 
 // MARK: - Table View Handling
-
 extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
-    func cellRegistration() {
-        tableView.register(
-            UINib(
-                nibName: String(
-                    describing: RecordCell.self
-                ),
-                bundle: nil
-            ),
-            forCellReuseIdentifier: String(
-                describing: RecordCell.self
-            )
-        )
-    }
-    
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
+    func numberOfSections(
+        in tableView: UITableView
     ) -> Int {
-        return Game.shared.records.count
+        recordsByDate.count
     }
     
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        recordsByDate[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: String(
                 describing: RecordCell.self
             ),
             for: indexPath
         ) as? RecordCell else {
-			return UITableViewCell()
-		}
+            return UITableViewCell()
+        }
         
-		cell.cellIndex = indexPath.row
+        let record = recordsByDate[indexPath.section][indexPath.row]
+        let color: UIColor
+        
+        if record.playedNum! < record.totalQuestion! {
+            color = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
+        } else if record.percentOfCorrectAnswer! < 30 {
+            color = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.7)
+        } else if record.percentOfCorrectAnswer! < 70 {
+            color = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
+        } else {
+            color = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 0.85)
+        }
+        
+        let cellModel = RecordCell.CellModel(
+            percent: record.percentOfCorrectAnswer! < 99
+            ? "\(record.percentOfCorrectAnswer ?? 0)%" : Constants.correctAnswersIs100,
+            color: color,
+            topic: record.topic ?? "",
+            totalQuestions: "\(Constants.recordCellQuestionTitle)\(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)",
+            score: "\(Constants.recordCellScoreTitle)\(record.score ?? 0)"
+        )
+        
+        cell.fill(cellModel)
         return cell
     }
     
@@ -196,5 +217,46 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
                 completion: nil
             )
         }
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let date = recordsByDate[section][0].date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        
+        return formatter.string(from: date ?? Date())
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        let reportAction = UIContextualAction(
+            style: .normal,
+            title: Constants.removeRecordsTitle
+        ) { [weak self] action, view, completion in
+            guard let self else {
+                return
+            }
+            
+            Game.shared.deleteOneRecord(
+                index: indexPath.row
+            )
+            
+            self.playTrashSound()
+            
+            if indexPath.row == 0 {
+                Game.shared.updateContinueStatus()
+            }
+            
+            recordsByDate = setupSections()
+            tableView.reloadData()
+        }
+        
+        reportAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2371389396, blue: 0.1065657165, alpha: 0.5)
+        
+        return UISwipeActionsConfiguration(
+            actions: [reportAction]
+        )
     }
 }

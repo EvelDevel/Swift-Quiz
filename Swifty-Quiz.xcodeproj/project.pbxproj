@@ -336,9 +336,9 @@
 		FB0E0290246CF334005CA792 /* Records */ = {
 			isa = PBXGroup;
 			children = (
+				FBC96F2C280BFF220094FDD2 /* Cells */,
 				FB8606AC24431A9300A692AD /* RecordsViewController.swift */,
 				FB291D2726D224EA00A40679 /* Records.storyboard */,
-				FBC96F2C280BFF220094FDD2 /* Cells */,
 			);
 			path = Records;
 			sourceTree = "<group>";
