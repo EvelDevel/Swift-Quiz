@@ -526,9 +526,9 @@
 		FB6624E624E01FEB008C9CE5 /* GameHistory */ = {
 			isa = PBXGroup;
 			children = (
+				FBC96F2B280BFF010094FDD2 /* Cells */,
 				FB6624E424E014FA008C9CE5 /* GameHistoryViewController.swift */,
 				FB291D2926D2256A00A40679 /* GameHistory.storyboard */,
-				FBC96F2B280BFF010094FDD2 /* Cells */,
 			);
 			path = GameHistory;
 			sourceTree = "<group>";

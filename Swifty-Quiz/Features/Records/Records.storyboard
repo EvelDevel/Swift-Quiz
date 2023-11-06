@@ -85,6 +85,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iVU-aq-WOw"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iVU-aq-WOw" firstAttribute="trailing" secondItem="aXI-DN-LRX" secondAttribute="trailing" id="4FK-tP-m7J"/>
                             <constraint firstItem="uej-49-vP3" firstAttribute="leading" secondItem="iVU-aq-WOw" secondAttribute="leading" constant="16" id="5K2-i8-Mup"/>

@@ -22,7 +22,7 @@ final class TopicViewController: UIViewController {
     @IBOutlet private weak var successValueLabel: UILabel!
     @IBOutlet private weak var successTextLabel: UILabel!
     
-    @IBOutlet private weak var helpProjectButton: RoundCornerButton!
+    // @IBOutlet private weak var helpProjectButton: RoundCornerButton!
     
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
@@ -48,7 +48,7 @@ final class TopicViewController: UIViewController {
 		if #available(iOS 13.0, *) {
 			backButton.isHidden = true
 			titleTopMargin.constant = 25
-			headerHeight.constant = 172
+			headerHeight.constant = 115
 		}
 	}
 	/// < 13.0 iOS Navigation
@@ -164,15 +164,15 @@ final class TopicViewController: UIViewController {
         }
     }
     
-    @IBAction func helpProjectTapped(_ sender: Any) {
-        SoundPlayer.shared.playSound(
-            sound: .buttonTapped
-        )
-        
-        let controller = InformationViewController()
-        controller.modalPresentationStyle = .overFullScreen
-        present(controller, animated: true)
-    }
+//    @IBAction func helpProjectTapped(_ sender: Any) {
+//        SoundPlayer.shared.playSound(
+//            sound: .buttonTapped
+//        )
+//        
+//        let controller = InformationViewController()
+//        controller.modalPresentationStyle = .overFullScreen
+//        present(controller, animated: true)
+//    }
 }
 
 

@@ -155,7 +155,7 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        90
+        94
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -223,9 +223,11 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
         let date = recordsByDate[section][0].date
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM yyyy"
+        formatter.locale = Locale(identifier: "ru_RU")
         
         return formatter.string(from: date ?? Date())
     }
+
     
     func tableView(
         _ tableView: UITableView,

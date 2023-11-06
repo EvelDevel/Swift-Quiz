@@ -9,6 +9,9 @@ protocol GameHistoryCellDelegate: AnyObject {
 }
 
 final class GameHistoryCell: UITableViewCell {
+    // TODO: - REFACTOR
+    // Remove all logic from this cell
+    
 	@IBOutlet private weak var showHintButton: RoundCornerButton!
     @IBOutlet private weak var questionImage: UIImageView!
     @IBOutlet private weak var colorBack: UIView!
