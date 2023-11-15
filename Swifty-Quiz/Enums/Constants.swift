@@ -124,4 +124,21 @@ class Constants {
     static var currentCategory = "Current_Category"
     static var mainScreenButtonSegue = "Main_Screen_Button_Segue"
     static var statScreenLaunched = "Stat_Screen_Launched"
+    
+    // Compliments
+    static let compliments = [
+        "Отличная работа!",
+        "Ты молодец!",
+        "Молодец, так держать!",
+        "Замечательно!",
+        "Ты супер!",
+        "Браво!",
+        "Умница!",
+        "Великолепно!",
+        "Очень хорошо!",
+        "Превосходно!",
+        "Так держать!",
+        "Прекрасная работа!",
+        "Круто!"
+    ]
 }

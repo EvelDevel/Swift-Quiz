@@ -245,7 +245,12 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
         formatter.dateFormat = "dd MMMM yyyy"
         formatter.locale = Locale(identifier: "ru_RU")
         
-        return formatter.string(from: date ?? Date())
+        var goodJob = ""
+        if recordsByDate[section].count >= 3 {
+            goodJob = " - \(Constants.compliments.randomElement() ?? " - Хорошая работа!")"
+        }
+        
+        return formatter.string(from: date ?? Date()) + "\(goodJob)" 
     }
 
     
