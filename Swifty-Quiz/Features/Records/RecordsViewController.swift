@@ -139,6 +139,24 @@ extension RecordsViewController {
             )
         }
     }
+    
+    private func setProperColor(
+        _ record: Record
+    ) -> UIColor {
+        let color: UIColor
+        
+        if record.playedNum! < record.totalQuestion! {
+            color = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
+        } else if record.percentOfCorrectAnswer! < 30 {
+            color = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.7)
+        } else if record.percentOfCorrectAnswer! < 70 {
+            color = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
+        } else {
+            color = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 0.85)
+        }
+        
+        return color
+    }
 }
 
 
@@ -158,7 +176,10 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
         94
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: String(
                 describing: RecordCell.self
@@ -168,29 +189,28 @@ extension RecordsViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
+        let recordsInSection = recordsByDate[indexPath.section].count
         let record = recordsByDate[indexPath.section][indexPath.row]
-        let color: UIColor
+        let total = "\(Constants.recordCellQuestionTitle)\(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)"
+        let score = "\(Constants.recordCellScoreTitle)\(record.score ?? 0)"
         
-        if record.playedNum! < record.totalQuestion! {
-            color = #colorLiteral(red: 0.8938786387, green: 0.8978905678, blue: 0.9102204442, alpha: 1)
-        } else if record.percentOfCorrectAnswer! < 30 {
-            color = #colorLiteral(red: 0.9865071177, green: 0.3565812409, blue: 0.2555966675, alpha: 0.7)
-        } else if record.percentOfCorrectAnswer! < 70 {
-            color = #colorLiteral(red: 1, green: 0.8070752121, blue: 0.1738902499, alpha: 1)
-        } else {
-            color = #colorLiteral(red: 0.1451225281, green: 0.7943774462, blue: 0.4165494442, alpha: 0.85)
-        }
+        let percent = record.percentOfCorrectAnswer! < 99
+        ? "\(record.percentOfCorrectAnswer ?? 0)%"
+        : Constants.correctAnswersIs100
         
-        let cellModel = RecordCell.CellModel(
-            percent: record.percentOfCorrectAnswer! < 99
-            ? "\(record.percentOfCorrectAnswer ?? 0)%" : Constants.correctAnswersIs100,
-            color: color,
+        let model = RecordCell.CellModel(
+            percent: percent,
+            color: setProperColor(record),
             topic: record.topic ?? "",
-            totalQuestions: "\(Constants.recordCellQuestionTitle)\(record.playedNum ?? 0) / \(record.totalQuestion ?? 0)",
-            score: "\(Constants.recordCellScoreTitle)\(record.score ?? 0)"
+            totalQuestions: total,
+            score: score
         )
         
-        cell.fill(cellModel)
+        if recordsInSection >= 3 {
+            cell.setCompleteBackground()
+        }
+        
+        cell.fill(model)
         return cell
     }
     

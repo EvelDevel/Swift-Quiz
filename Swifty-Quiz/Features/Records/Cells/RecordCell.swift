@@ -26,4 +26,16 @@ final class RecordCell: UITableViewCell {
         totalQuestionLabel.text = data.totalQuestions
         scoreLabel.text = data.score
     }
+    
+    func setCompleteBackground() {
+        // TODO: -
+        // Перенести цвет в палитру
+        backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 0.2)
+    }
+    
+    override func prepareForReuse() {
+        // TODO: -
+        // Создать в константах все цвета статиком
+        backgroundColor = UIColor(named: "MainBackground")
+    }
 }
