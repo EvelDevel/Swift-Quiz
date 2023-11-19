@@ -11,7 +11,7 @@ protocol TopicViewControllerDelegate: AnyObject {
 }
 
 final class TopicViewController: UIViewController {
-    @IBOutlet private weak var playFromTopicsButton: RoundCornerButton!
+    @IBOutlet private weak var playButton: RoundCornerButton!
     @IBOutlet private weak var countValueLabel: UILabel!
     @IBOutlet private weak var countTextLabel: UILabel!
     @IBOutlet private weak var mainTitleLabel: UILabel!
@@ -21,8 +21,6 @@ final class TopicViewController: UIViewController {
 	@IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var successValueLabel: UILabel!
     @IBOutlet private weak var successTextLabel: UILabel!
-    
-    // @IBOutlet private weak var helpProjectButton: RoundCornerButton!
     
     weak var delegate: TopicViewControllerDelegate?
     private let progress = ProgressService()
@@ -61,13 +59,12 @@ final class TopicViewController: UIViewController {
         setupPlayButton()
         setupCells()
         setupGameInformationUI()
-        setupShadow()
     }
     
     private func setupPlayButton() {
-        playFromTopicsButton.backgroundColor = UIColor(named: "BackButton")
-        playFromTopicsButton.setTitleColor(.lightGray, for: .normal)
-        playFromTopicsButton.isEnabled = false
+        playButton.backgroundColor = UIColor(named: "BackButton")
+        playButton.setTitleColor(.lightGray, for: .normal)
+        playButton.isEnabled = false
     }
 
 	private func setupGameInformationUI() {
@@ -97,10 +94,6 @@ final class TopicViewController: UIViewController {
         countValueLabel.animateLabelChanges("\(SelectedTopic.shared.selectedCategory.questionSet.count)")
     }
     
-    private func setupShadow() {
-        // ShadowService().addTopicButtonShadows([helpProjectButton])
-    }
-
 	private func showAlertIfNeeded() {
 		if Game.shared.records.count != 0
             && Game.shared.records[0].continueGameStatus == true {
@@ -163,16 +156,6 @@ final class TopicViewController: UIViewController {
             playFromTopicsTapped?()
         }
     }
-    
-//    @IBAction func helpProjectTapped(_ sender: Any) {
-//        SoundPlayer.shared.playSound(
-//            sound: .buttonTapped
-//        )
-//        
-//        let controller = InformationViewController()
-//        controller.modalPresentationStyle = .overFullScreen
-//        present(controller, animated: true)
-//    }
 }
 
 
@@ -224,9 +207,9 @@ extension TopicViewController: UITableViewDataSource, UITableViewDelegate {
 extension TopicViewController: CategoriesCellDelegate {
 	func updateSelectedTopic() {
         UIView.animate(withDuration: 0.3) {
-            self.playFromTopicsButton.backgroundColor = .white
-            self.playFromTopicsButton.setTitleColor(UIColor(named: "TextColor"), for: .normal)
-            self.playFromTopicsButton.isEnabled = true
+            self.playButton.backgroundColor = .white
+            self.playButton.setTitleColor(UIColor(named: "TextColor"), for: .normal)
+            self.playButton.isEnabled = true
         }
         
         setupGameInformationUI()

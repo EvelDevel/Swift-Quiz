@@ -143,7 +143,7 @@
                         <outlet property="countValueLabel" destination="6SV-HS-JQg" id="mpJ-HQ-2Kh"/>
                         <outlet property="headerHeight" destination="rDC-uH-dL3" id="AYX-pY-MjH"/>
                         <outlet property="mainTitleLabel" destination="fIj-Tb-uuD" id="PC3-NJ-blp"/>
-                        <outlet property="playFromTopicsButton" destination="cOv-lk-6Bp" id="z8A-4o-Uzt"/>
+                        <outlet property="playButton" destination="cOv-lk-6Bp" id="z8A-4o-Uzt"/>
                         <outlet property="successTextLabel" destination="xuc-oA-G5T" id="nzf-dh-8tL"/>
                         <outlet property="successValueLabel" destination="y79-O9-bzc" id="W53-Vt-2DO"/>
                         <outlet property="tableView" destination="98N-qV-2J9" id="VgJ-V6-wq5"/>
@@ -164,7 +164,7 @@
         <image name="ChevroneBigDarkYellow" width="50" height="50"/>
         <image name="ChevroneBigYellow" width="50" height="50"/>
         <namedColor name="MainBackground">
-            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.17647058823529413" green="0.19607843137254902" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
