@@ -326,8 +326,8 @@ extension InitialViewController:
     
     func showReviewRequest() {
         let records = Game.shared.records.count
-        if records == 50 || records == 100 || records == 150 {
-            
+        
+        if records == 50 || records == 100 || records == 150 {    
             DispatchQueue.main.asyncAfter(
                 deadline: DispatchTime.now() + 1.0
             ) {
