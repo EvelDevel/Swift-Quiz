@@ -577,7 +577,7 @@ final class InterviewJunior {
                         "https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5"
                      ],
                      helpText: """
-                     viewDidDisappear. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер).
+                     viewDidDisappear. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDisappear (удаляются ненужные данные, ставится на паузу плеер).
                      
                      Разница с viewWillDisappear в том, что первый вызывается до анимации экрана, а второй - после. В этом методе так же необходимо обращаться к суперклассу super.viewDidDisappear.
                      """),

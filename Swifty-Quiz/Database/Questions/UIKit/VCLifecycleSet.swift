@@ -139,7 +139,7 @@ final class VCLifecycleSet {
                      optionD: "",
                      id: 239282554,
                      helpText: """
-                     Да. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер).
+                     Да. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDisappear (удаляются ненужные данные, ставится на паузу плеер).
                      
                      Разница с viewWillDisappear в том, что первый вызывается до анимации экрана, а второй - после. В этом методе так же необходимо обращаться к суперклассу super.viewDidDisappear.
                      """),
@@ -217,7 +217,7 @@ final class VCLifecycleSet {
                      optionD: "",
                      id: 248289859,
                      helpText: """
-                     viewDidDisappear. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDessapear (удаляются ненужные данные, ставится на паузу плеер).
+                     viewDidDisappear. Метод viewDidDisappear оповещает о том, что вью было успешно удалено из иерархии. Область применения похожа на viewWillDisappear (удаляются ненужные данные, ставится на паузу плеер).
                      
                      Разница с viewWillDisappear в том, что первый вызывается до анимации экрана, а второй - после. В этом методе так же необходимо обращаться к суперклассу super.viewDidDisappear.
                      """),
@@ -327,7 +327,7 @@ final class VCLifecycleSet {
                      id: 423110531,
                      helpText: "loadView. Самым первым среди указанных отработает loadView()."),
             
-            Question(question: ["viewWillDessapear вызывается перед удалением вью из иерархии вью контроллера. Так ли это?"],
+            Question(question: ["viewWillDisappear вызывается перед удалением вью из иерархии вью контроллера. Так ли это?"],
                      image: "",
                      optionA: "Да",
                      optionB: "Нет",

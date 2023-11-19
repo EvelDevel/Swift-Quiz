@@ -450,7 +450,7 @@ final class InterviewJuniorPlus {
                     ),
             
             Question(question: [
-                "Поддерживает ли Swift множественное наследование?"
+                "Поддерживает ли Swift множественное наследование классов?"
             ],
                      image: "",
                      optionA: "Нет",
