@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xs9-d7-5PS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xs9-d7-5PS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,6 +77,7 @@
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hhO-1q-oQJ" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="80.5"/>
                                                         <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="optionA"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="А. Первый вариант ответа">
@@ -94,6 +95,7 @@
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-fa-Dhg" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="90.5" width="382" height="80"/>
                                                         <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="optionB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="В. Второй вариант ответа">
@@ -111,6 +113,7 @@
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="urz-g4-9eM" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="180.5" width="382" height="80.5"/>
                                                         <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="optionC"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="Г. Третий вариант ответа">
@@ -128,6 +131,7 @@
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-A5-afB" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="271" width="382" height="80"/>
                                                         <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="optionD"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="Д. Четвертый вариант ответа">
@@ -336,10 +340,10 @@
         <image name="InfoFill" width="50" height="50"/>
         <image name="InfoGray" width="50" height="50"/>
         <namedColor name="MainBackground">
-            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellowOpacity">
-            <color red="0.96862745098039216" green="0.83529411764705885" blue="0.31764705882352939" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96899998188018799" green="0.83499997854232788" blue="0.31799998879432678" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

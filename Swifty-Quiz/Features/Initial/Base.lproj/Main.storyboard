@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKu-aM-NQz">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -122,6 +122,7 @@
                                                     </label>
                                                     <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-ld-fKj" userLabel="Picker">
                                                         <rect key="frame" x="0.0" y="1" width="288" height="64"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="categoryButton"/>
                                                         <color key="tintColor" red="0.23770004510000001" green="0.28147938849999998" blue="0.33557069299999998" alpha="0.79791845029999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="254" minY="20" maxX="10" maxY="20"/>
@@ -228,6 +229,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ZC-ZJT" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
                                                 <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="historyButton"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="История игр">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,6 +247,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsO-B9-8ah" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="240" y="0.0" width="48" height="48"/>
                                                 <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="settingsButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="48" id="MFP-cx-ZJB"/>
                                                 </constraints>
@@ -275,6 +278,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-9e-V5c" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
                                                 <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="gameButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="u18-MC-pOa"/>
                                                 </constraints>
@@ -295,6 +299,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-NM-9Qp" customClass="RoundCornerButton" customModule="Свифти_Квиз" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="66" width="288" height="56"/>
                                                 <color key="backgroundColor" name="MainYellowOpacity"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="continueButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="zg8-CA-eai"/>
                                                 </constraints>
@@ -355,6 +360,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-wB-HEB" userLabel="ShareButton">
                                 <rect key="frame" x="107.5" y="613" width="160" height="52"/>
+                                <accessibility key="accessibilityConfiguration" identifier="statsButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="042-Hx-5qP"/>
                                     <constraint firstAttribute="width" constant="160" id="8wL-3p-saw"/>
@@ -464,7 +470,7 @@
             <color red="0.14499999582767487" green="0.79400002956390381" blue="0.41699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainBackground">
-            <color red="0.9570000171661377" green="0.96100002527236938" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainYellowOpacity">
             <color red="0.96899998188018799" green="0.83499997854232788" blue="0.31799998879432678" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="displayP3"/>
